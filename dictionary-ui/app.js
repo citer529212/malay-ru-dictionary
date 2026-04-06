@@ -186,6 +186,13 @@ function normalizeText(text) {
     .trim();
 }
 
+function normalizeHeadwordLoose(text) {
+  return normalizeText(text)
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function cleanupLine(text) {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -694,9 +701,38 @@ function computeBestAnswer(query) {
     return null;
   }
 
-  const bestEntry = groupEntryResults(searchEntries(query), query)[0];
-  if (bestEntry) {
-    return bestEntry;
+  const qNorm = normalizeText(query);
+  const qWords = qNorm.split(/\s+/).filter(Boolean);
+  const groupedEntries = groupEntryResults(searchEntries(query), query);
+
+  if (groupedEntries.length) {
+    if (qWords.length === 1) {
+      const exactSingle = groupedEntries.find((row) => {
+        if (row._wordCount !== 1) {
+          return false;
+        }
+        return normalizeHeadwordLoose(row.title) === qNorm;
+      });
+      if (exactSingle) {
+        return exactSingle;
+      }
+
+      const nearSingle = groupedEntries.find((row) => {
+        if (row._wordCount !== 1) {
+          return false;
+        }
+        const head = normalizeHeadwordLoose(row.title);
+        return head.startsWith(qNorm) && Math.abs(head.length - qNorm.length) <= 2;
+      });
+      if (nearSingle) {
+        return nearSingle;
+      }
+
+      // Avoid returning phrase-based "best answer" for one-word query.
+      return null;
+    }
+
+    return groupedEntries[0];
   }
 
   return searchFulltext(query)[0] || null;
