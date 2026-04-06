@@ -48,10 +48,10 @@
 
         <div class="search-tools">
           <div class="mode-switch" id="searchModeSwitch">
-            <button type="button" data-mode="all" class="mode-button active" disabled>
+            <button type="button" data-mode="all" class="mode-button" disabled>
               Все
             </button>
-            <button type="button" data-mode="entries" class="mode-button" disabled>
+            <button type="button" data-mode="entries" class="mode-button active" disabled>
               Статьи
             </button>
             <button type="button" data-mode="fulltext" class="mode-button" disabled>
@@ -67,6 +67,13 @@
           </div>
           <p id="statusText">Ожидание загрузки PDF...</p>
         </div>
+      </section>
+
+      <section class="answer card" id="answerCard">
+        <div class="answer-head">Лучший ответ</div>
+        <h2 id="answerTitle">Введите слово для поиска</h2>
+        <p id="answerBody">Загрузите OCR-PDF и начните ввод. Система покажет наиболее точный перевод.</p>
+        <div id="answerMeta" class="answer-meta"></div>
       </section>
 
       <section class="workspace">

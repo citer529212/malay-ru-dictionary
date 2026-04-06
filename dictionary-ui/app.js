@@ -10,6 +10,10 @@ const ui = {
   searchButton: document.getElementById("searchButton"),
   searchModeSwitch: document.getElementById("searchModeSwitch"),
   searchHistory: document.getElementById("searchHistory"),
+  answerCard: document.getElementById("answerCard"),
+  answerTitle: document.getElementById("answerTitle"),
+  answerBody: document.getElementById("answerBody"),
+  answerMeta: document.getElementById("answerMeta"),
   resultCount: document.getElementById("resultCount"),
   resultList: document.getElementById("resultList"),
   statusText: document.getElementById("statusText"),
@@ -37,7 +41,7 @@ const state = {
   zoom: 1,
   renderToken: 0,
   selectedResultId: null,
-  searchMode: "all",
+  searchMode: "entries",
   history: [],
   activeQuery: "",
 };
@@ -247,6 +251,34 @@ function escapeRegExp(text) {
   return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function buildBigrams(text) {
+  const value = normalizeText(text).replace(/\s+/g, "");
+  if (value.length < 2) {
+    return new Set([value]);
+  }
+
+  const grams = new Set();
+  for (let i = 0; i < value.length - 1; i += 1) {
+    grams.add(value.slice(i, i + 2));
+  }
+  return grams;
+}
+
+function jaccardScore(a, b) {
+  if (!a.size || !b.size) {
+    return 0;
+  }
+
+  let inter = 0;
+  a.forEach((token) => {
+    if (b.has(token)) {
+      inter += 1;
+    }
+  });
+
+  return inter / (a.size + b.size - inter);
+}
+
 function highlightText(text, query) {
   const safe = escapeHtml(text);
   if (!query) {
@@ -390,6 +422,14 @@ function deduplicateEntries(entries) {
   return result;
 }
 
+function hydrateEntries(entries) {
+  entries.forEach((entry) => {
+    entry._normTitle = normalizeText(entry.title);
+    entry._normBody = normalizeText(entry.body);
+    entry._grams = buildBigrams(entry._normTitle);
+  });
+}
+
 async function buildTextIndex(cacheKey) {
   const cached = localStorage.getItem(cacheKey);
   if (cached) {
@@ -403,6 +443,7 @@ async function buildTextIndex(cacheKey) {
         state.entries = parsed.entries;
         state.lines = parsed.lines;
         state.pageTexts = parsed.pageTexts;
+        hydrateEntries(state.entries);
         setStatus(
           `Загружен индекс: ${state.entries.length} статей, ${state.lines.length} текстовых строк.`
         );
@@ -450,6 +491,7 @@ async function buildTextIndex(cacheKey) {
   }
 
   state.entries = deduplicateEntries(state.entries);
+  hydrateEntries(state.entries);
 
   const payload = JSON.stringify({
     entries: state.entries,
@@ -495,27 +537,76 @@ function rankMatch(haystack, query) {
 
 function searchEntries(query) {
   if (!query) {
-    return state.entries.slice(0, MAX_RESULTS);
+    return state.entries.slice(0, MAX_RESULTS).map((entry) => ({
+      ...entry,
+      _rank: 10,
+    }));
   }
 
   const q = normalizeText(query);
+  const qGrams = buildBigrams(q);
 
   return state.entries
     .map((entry) => {
-      const titleScore = rankMatch(normalizeText(entry.title), q);
-      const bodyScore = rankMatch(normalizeText(entry.body), q) + 1;
-      const score = Math.min(titleScore, bodyScore);
-      return { score, entry };
+      const titleScore = rankMatch(entry._normTitle, q);
+      const bodyScore = rankMatch(entry._normBody, q) + 1;
+      const directScore = Math.min(titleScore, bodyScore);
+
+      if (directScore < 99) {
+        return { score: directScore, entry };
+      }
+
+      const fuzzy = jaccardScore(entry._grams, qGrams);
+      if (fuzzy >= 0.45) {
+        return { score: 4 + (1 - fuzzy), entry };
+      }
+
+      return { score: 99, entry };
     })
     .filter((row) => row.score < 99)
-    .sort((a, b) => a.score - b.score || a.entry.page - b.entry.page)
+    .sort(
+      (a, b) =>
+        a.score - b.score ||
+        a.entry.title.length - b.entry.title.length ||
+        a.entry.page - b.entry.page
+    )
     .slice(0, MAX_RESULTS)
-    .map((row) => row.entry);
+    .map((row) => ({ ...row.entry, _rank: row.score }));
+}
+
+function groupEntryResults(rows) {
+  const groups = new Map();
+
+  rows.forEach((row) => {
+    const key = row._normTitle || normalizeText(row.title);
+    if (!groups.has(key)) {
+      groups.set(key, {
+        id: `group-${key}`,
+        type: "entry",
+        title: row.title,
+        body: row.body,
+        page: row.page,
+        _rank: row._rank || 10,
+      });
+      return;
+    }
+
+    const current = groups.get(key);
+    if (!current.body.includes(row.body) && current.body.length < 280) {
+      current.body = `${current.body}; ${row.body}`.slice(0, 340);
+    }
+    current.page = Math.min(current.page, row.page);
+    current._rank = Math.min(current._rank, row._rank || 10);
+  });
+
+  return [...groups.values()]
+    .sort((a, b) => a._rank - b._rank || a.page - b.page)
+    .slice(0, MAX_RESULTS);
 }
 
 function searchFulltext(query) {
   if (!query) {
-    return state.lines.slice(0, MAX_RESULTS);
+    return state.lines.slice(0, MAX_RESULTS).map((row) => ({ ...row, _rank: 10 }));
   }
 
   const q = normalizeText(query);
@@ -529,25 +620,59 @@ function searchFulltext(query) {
     .filter((item) => item.score < 99)
     .sort((a, b) => a.score - b.score || a.row.page - b.row.page)
     .slice(0, MAX_RESULTS)
-    .map((item) => item.row);
+    .map((item) => ({ ...item.row, _rank: item.score }));
 }
 
 function mergeResults(query) {
+  const groupedEntries = groupEntryResults(searchEntries(query));
+
   if (state.searchMode === "entries") {
-    return searchEntries(query);
+    return groupedEntries;
   }
 
   if (state.searchMode === "fulltext") {
     return searchFulltext(query);
   }
 
-  const entries = searchEntries(query).map((item) => ({ ...item, scoreBoost: 0 }));
-  const fulltext = searchFulltext(query).map((item) => ({ ...item, scoreBoost: 1 }));
-  const merged = [...entries, ...fulltext]
-    .sort((a, b) => (a.page - b.page) || (a.scoreBoost - b.scoreBoost))
-    .slice(0, MAX_RESULTS);
+  const fulltext = searchFulltext(query);
+  return [...groupedEntries.slice(0, 180), ...fulltext.slice(0, 120)].slice(0, MAX_RESULTS);
+}
 
-  return merged;
+function renderBestAnswer() {
+  const query = state.activeQuery;
+
+  if (!query) {
+    ui.answerTitle.textContent = "Введите слово для поиска";
+    ui.answerBody.textContent =
+      "Начните печатать: сначала показывается самый точный словарный перевод.";
+    ui.answerMeta.innerHTML = "";
+    return;
+  }
+
+  const entryHit = state.results.find((item) => item.type === "entry");
+  const hit = entryHit || state.results[0];
+
+  if (!hit) {
+    ui.answerTitle.textContent = `Ничего не найдено для “${query}”`;
+    ui.answerBody.textContent =
+      "Попробуйте похожее написание или переключите режим на “Весь текст”.";
+    ui.answerMeta.innerHTML = "";
+    return;
+  }
+
+  ui.answerTitle.innerHTML = highlightText(hit.title, query);
+  ui.answerBody.innerHTML = highlightText(hit.body, query);
+  ui.answerMeta.innerHTML = "";
+
+  const typeChip = document.createElement("span");
+  typeChip.className = "answer-chip";
+  typeChip.textContent =
+    hit.type === "entry" ? "словарная статья" : "найдено в полном тексте";
+  ui.answerMeta.append(typeChip);
+
+  const pageMeta = document.createElement("span");
+  pageMeta.textContent = `страница ${hit.page}`;
+  ui.answerMeta.append(pageMeta);
 }
 
 function renderResults() {
@@ -603,6 +728,7 @@ function renderResults() {
 
 function runSearch() {
   if (!state.pdfDoc) {
+    renderBestAnswer();
     return;
   }
 
@@ -612,7 +738,7 @@ function runSearch() {
   state.results = mergeResults(query);
 
   if (!query && state.searchMode === "entries") {
-    state.results = state.entries.slice(0, MAX_RESULTS);
+    state.results = groupEntryResults(state.entries.slice(0, MAX_RESULTS));
   }
 
   if (!query && state.searchMode === "fulltext") {
@@ -620,13 +746,23 @@ function runSearch() {
   }
 
   if (!query && state.searchMode === "all") {
-    state.results = [...state.entries.slice(0, 90), ...state.lines.slice(0, 90)];
+    state.results = [
+      ...groupEntryResults(state.entries.slice(0, 120)),
+      ...state.lines.slice(0, 80),
+    ];
   }
 
   if (query) {
     pushHistory(query);
   }
 
+  if (state.results.length && query) {
+    state.selectedResultId = state.results[0].id;
+    state.currentPage = state.results[0].page;
+    void renderCurrentPage();
+  }
+
+  renderBestAnswer();
   renderResults();
 }
 
@@ -704,3 +840,4 @@ updateModeButtons();
 updateViewerControls();
 updateZoomLabel();
 setProgress(0);
+renderBestAnswer();
