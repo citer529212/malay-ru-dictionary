@@ -8,6 +8,8 @@ const ui = {
   fileMeta: document.getElementById("fileMeta"),
   searchInput: document.getElementById("searchInput"),
   searchButton: document.getElementById("searchButton"),
+  searchModeSwitch: document.getElementById("searchModeSwitch"),
+  searchHistory: document.getElementById("searchHistory"),
   resultCount: document.getElementById("resultCount"),
   resultList: document.getElementById("resultList"),
   statusText: document.getElementById("statusText"),
@@ -21,19 +23,24 @@ const ui = {
   zoomValue: document.getElementById("zoomValue"),
 };
 
+const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
+const MAX_RESULTS = 300;
+const MAX_HISTORY_ITEMS = 8;
+
 const state = {
   pdfDoc: null,
   entries: [],
+  lines: [],
   pageTexts: [],
   results: [],
   currentPage: 1,
   zoom: 1,
   renderToken: 0,
   selectedResultId: null,
+  searchMode: "all",
+  history: [],
+  activeQuery: "",
 };
-
-const TEXT_INDEX_MIN_ENTRIES = 15;
-const MAX_RESULTS = 200;
 
 ui.fileInput.addEventListener("change", async (event) => {
   const [file] = event.target.files || [];
@@ -56,7 +63,28 @@ ui.searchInput.addEventListener("keydown", (event) => {
 let inputDebounceId = null;
 ui.searchInput.addEventListener("input", () => {
   clearTimeout(inputDebounceId);
-  inputDebounceId = setTimeout(runSearch, 130);
+  inputDebounceId = setTimeout(runSearch, 120);
+});
+
+ui.searchModeSwitch.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-mode]");
+  if (!button || button.disabled) {
+    return;
+  }
+
+  state.searchMode = button.dataset.mode;
+  updateModeButtons();
+  runSearch();
+});
+
+ui.searchHistory.addEventListener("click", (event) => {
+  const chip = event.target.closest("button[data-query]");
+  if (!chip || chip.disabled) {
+    return;
+  }
+
+  ui.searchInput.value = chip.dataset.query || "";
+  runSearch();
 });
 
 ui.prevPage.addEventListener("click", () => {
@@ -108,6 +136,20 @@ function setProgress(percent) {
 function setSearchAvailability(available) {
   ui.searchInput.disabled = !available;
   ui.searchButton.disabled = !available;
+
+  ui.searchModeSwitch
+    .querySelectorAll("button")
+    .forEach((button) => (button.disabled = !available));
+
+  ui.searchHistory
+    .querySelectorAll("button")
+    .forEach((button) => (button.disabled = !available));
+}
+
+function updateModeButtons() {
+  ui.searchModeSwitch.querySelectorAll("button[data-mode]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.mode === state.searchMode);
+  });
 }
 
 function updateViewerControls() {
@@ -134,6 +176,7 @@ function normalizeText(text) {
   return text
     .toLowerCase()
     .replace(/[ё]/g, "е")
+    .replace(/[’`´]/g, "'")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -146,22 +189,89 @@ function buildCacheKey(file) {
   return `dictionary-shell:${file.name}:${file.size}:${file.lastModified}`;
 }
 
+function loadHistory() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(SEARCH_HISTORY_KEY) || "[]");
+    if (Array.isArray(parsed)) {
+      state.history = parsed.filter((item) => typeof item === "string");
+    }
+  } catch {
+    state.history = [];
+  }
+
+  renderHistory();
+}
+
+function persistHistory() {
+  localStorage.setItem(SEARCH_HISTORY_KEY, JSON.stringify(state.history));
+}
+
+function pushHistory(query) {
+  if (!query || query.length < 2) {
+    return;
+  }
+
+  state.history = [query, ...state.history.filter((item) => item !== query)].slice(
+    0,
+    MAX_HISTORY_ITEMS
+  );
+
+  persistHistory();
+  renderHistory();
+}
+
+function renderHistory() {
+  ui.searchHistory.innerHTML = "";
+
+  state.history.forEach((query) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "history-chip";
+    chip.dataset.query = query;
+    chip.textContent = query;
+    chip.disabled = !state.pdfDoc;
+    ui.searchHistory.append(chip);
+  });
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightText(text, query) {
+  const safe = escapeHtml(text);
+  if (!query) {
+    return safe;
+  }
+
+  const pattern = escapeRegExp(query);
+  if (!pattern) {
+    return safe;
+  }
+
+  return safe.replace(new RegExp(pattern, "gi"), (match) => `<mark>${match}</mark>`);
+}
+
 function looksLikeHeadword(text) {
   const value = text.trim();
-  if (!value || value.length < 2 || value.length > 64) {
+  if (!value || value.length < 2 || value.length > 72) {
     return false;
   }
 
-  if (!/[a-z]/i.test(value)) {
+  if (!/[a-z]/i.test(value) || /[а-яё]/i.test(value)) {
     return false;
   }
 
-  if (/[а-яё]/i.test(value)) {
-    return false;
-  }
-
-  const words = value.split(/\s+/);
-  return words.length <= 5;
+  return value.split(/\s+/).length <= 6;
 }
 
 function cleanHeadword(text) {
@@ -178,15 +288,26 @@ function extractEntry(line, page, localLineIndex) {
     return null;
   }
 
-  const splitByDash = normalized.split(/\s+[—–-]\s+/);
-  if (splitByDash.length >= 2) {
-    const left = cleanHeadword(splitByDash[0]);
-    const right = splitByDash.slice(1).join(" - ").trim();
+  const candidates = [
+    normalized.split(/\s+[—–-]\s+/),
+    normalized.split(/\s{2,}/),
+    normalized.split(/\s+:\s+/),
+  ];
+
+  for (const split of candidates) {
+    if (split.length < 2) {
+      continue;
+    }
+
+    const left = cleanHeadword(split[0]);
+    const right = split.slice(1).join(" ").trim();
+
     if (looksLikeHeadword(left) && /[а-яё]/i.test(right)) {
       return {
-        id: `${page}-${localLineIndex}-d`,
-        headword: left,
-        translation: right,
+        id: `entry-${page}-${localLineIndex}-${left.slice(0, 8)}`,
+        type: "entry",
+        title: left,
+        body: right,
         page,
       };
     }
@@ -198,23 +319,10 @@ function extractEntry(line, page, localLineIndex) {
     const right = normalized.slice(firstCyr).trim();
     if (looksLikeHeadword(left) && right.length > 1) {
       return {
-        id: `${page}-${localLineIndex}-c`,
-        headword: left,
-        translation: right,
-        page,
-      };
-    }
-  }
-
-  const splitByWideSpaces = normalized.split(/\s{2,}/);
-  if (splitByWideSpaces.length >= 2) {
-    const left = cleanHeadword(splitByWideSpaces[0]);
-    const right = splitByWideSpaces.slice(1).join(" ").trim();
-    if (looksLikeHeadword(left) && /[а-яё]/i.test(right)) {
-      return {
-        id: `${page}-${localLineIndex}-s`,
-        headword: left,
-        translation: right,
+        id: `entry-${page}-${localLineIndex}-c`,
+        type: "entry",
+        title: left,
+        body: right,
         page,
       };
     }
@@ -265,15 +373,39 @@ function groupLines(textItems) {
   return lines;
 }
 
+function deduplicateEntries(entries) {
+  const seen = new Set();
+  const result = [];
+
+  entries.forEach((entry) => {
+    const key = `${normalizeText(entry.title)}|${normalizeText(entry.body)}|${entry.page}`;
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    result.push(entry);
+  });
+
+  return result;
+}
+
 async function buildTextIndex(cacheKey) {
   const cached = localStorage.getItem(cacheKey);
   if (cached) {
     try {
       const parsed = JSON.parse(cached);
-      if (Array.isArray(parsed.entries) && Array.isArray(parsed.pageTexts)) {
+      if (
+        Array.isArray(parsed.entries) &&
+        Array.isArray(parsed.lines) &&
+        Array.isArray(parsed.pageTexts)
+      ) {
         state.entries = parsed.entries;
+        state.lines = parsed.lines;
         state.pageTexts = parsed.pageTexts;
-        setStatus(`Загружен кэш индекса: ${state.entries.length} статей.`);
+        setStatus(
+          `Загружен индекс: ${state.entries.length} статей, ${state.lines.length} текстовых строк.`
+        );
         setProgress(100);
         setSearchAvailability(true);
         runSearch();
@@ -285,6 +417,7 @@ async function buildTextIndex(cacheKey) {
   }
 
   state.entries = [];
+  state.lines = [];
   state.pageTexts = [];
 
   const pageCount = state.pdfDoc.numPages;
@@ -297,6 +430,14 @@ async function buildTextIndex(cacheKey) {
     state.pageTexts.push(lines.join("\n"));
 
     lines.forEach((line, index) => {
+      state.lines.push({
+        id: `line-${pageNum}-${index}`,
+        type: "fulltext",
+        title: `Фрагмент текста`,
+        body: line,
+        page: pageNum,
+      });
+
       const entry = extractEntry(line, pageNum, index);
       if (entry) {
         state.entries.push(entry);
@@ -308,26 +449,48 @@ async function buildTextIndex(cacheKey) {
     setStatus(`Индексация PDF: ${pageNum}/${pageCount} страниц...`);
   }
 
+  state.entries = deduplicateEntries(state.entries);
+
   const payload = JSON.stringify({
     entries: state.entries,
+    lines: state.lines,
     pageTexts: state.pageTexts,
   });
 
-  if (payload.length < 4_000_000) {
+  if (payload.length < 7_000_000) {
     localStorage.setItem(cacheKey, payload);
   }
 
   setSearchAvailability(true);
-
-  if (state.entries.length >= TEXT_INDEX_MIN_ENTRIES) {
-    setStatus(`Готово: проиндексировано ${state.entries.length} статей.`);
-  } else {
-    setStatus(
-      "Текстовых словарных статей почти нет. Доступен fallback-поиск по страницам."
-    );
-  }
+  setStatus(
+    `Готово: ${state.entries.length} статей, ${state.lines.length} OCR-строк доступны для поиска.`
+  );
 
   runSearch();
+}
+
+function rankMatch(haystack, query) {
+  if (!haystack || !query) {
+    return 99;
+  }
+
+  if (haystack === query) {
+    return 0;
+  }
+
+  if (haystack.startsWith(query)) {
+    return 1;
+  }
+
+  if (new RegExp(`(^|\\s)${escapeRegExp(query)}`).test(haystack)) {
+    return 2;
+  }
+
+  if (haystack.includes(query)) {
+    return 3;
+  }
+
+  return 99;
 }
 
 function searchEntries(query) {
@@ -335,63 +498,56 @@ function searchEntries(query) {
     return state.entries.slice(0, MAX_RESULTS);
   }
 
-  const normalized = normalizeText(query);
+  const q = normalizeText(query);
 
-  const scored = state.entries
+  return state.entries
     .map((entry) => {
-      const headword = normalizeText(entry.headword);
-      const translation = normalizeText(entry.translation);
-
-      let score = 9;
-      if (headword === normalized) {
-        score = 0;
-      } else if (headword.startsWith(normalized)) {
-        score = 1;
-      } else if (headword.includes(normalized)) {
-        score = 2;
-      } else if (translation.includes(normalized)) {
-        score = 3;
-      }
-
+      const titleScore = rankMatch(normalizeText(entry.title), q);
+      const bodyScore = rankMatch(normalizeText(entry.body), q) + 1;
+      const score = Math.min(titleScore, bodyScore);
       return { score, entry };
     })
-    .filter((row) => row.score < 9)
-    .sort((a, b) => a.score - b.score || a.entry.headword.localeCompare(b.entry.headword))
+    .filter((row) => row.score < 99)
+    .sort((a, b) => a.score - b.score || a.entry.page - b.entry.page)
     .slice(0, MAX_RESULTS)
     .map((row) => row.entry);
-
-  return scored;
 }
 
-function fallbackSearch(query) {
-  const normalized = normalizeText(query);
-
-  if (!normalized) {
-    return [];
+function searchFulltext(query) {
+  if (!query) {
+    return state.lines.slice(0, MAX_RESULTS);
   }
 
-  const rows = [];
+  const q = normalizeText(query);
 
-  state.pageTexts.forEach((pageText, index) => {
-    const haystack = normalizeText(pageText);
-    const at = haystack.indexOf(normalized);
-    if (at === -1) {
-      return;
-    }
+  return state.lines
+    .map((row) => {
+      const hay = normalizeText(row.body);
+      const score = rankMatch(hay, q);
+      return { score, row };
+    })
+    .filter((item) => item.score < 99)
+    .sort((a, b) => a.score - b.score || a.row.page - b.row.page)
+    .slice(0, MAX_RESULTS)
+    .map((item) => item.row);
+}
 
-    const source = pageText.replace(/\s+/g, " ");
-    const start = Math.max(0, at - 60);
-    const end = Math.min(source.length, at + normalized.length + 120);
+function mergeResults(query) {
+  if (state.searchMode === "entries") {
+    return searchEntries(query);
+  }
 
-    rows.push({
-      id: `fallback-${index + 1}`,
-      headword: `Фрагмент страницы ${index + 1}`,
-      translation: source.slice(start, end),
-      page: index + 1,
-    });
-  });
+  if (state.searchMode === "fulltext") {
+    return searchFulltext(query);
+  }
 
-  return rows.slice(0, MAX_RESULTS);
+  const entries = searchEntries(query).map((item) => ({ ...item, scoreBoost: 0 }));
+  const fulltext = searchFulltext(query).map((item) => ({ ...item, scoreBoost: 1 }));
+  const merged = [...entries, ...fulltext]
+    .sort((a, b) => (a.page - b.page) || (a.scoreBoost - b.scoreBoost))
+    .slice(0, MAX_RESULTS);
+
+  return merged;
 }
 
 function renderResults() {
@@ -406,32 +562,37 @@ function renderResults() {
     return;
   }
 
+  const query = state.activeQuery;
   ui.resultCount.textContent = String(state.results.length);
 
-  for (const entry of state.results) {
+  for (const result of state.results) {
     const item = document.createElement("li");
     item.className = "result-item";
-    if (entry.id === state.selectedResultId) {
+    if (result.id === state.selectedResultId) {
       item.classList.add("active");
     }
 
     const title = document.createElement("p");
     title.className = "result-headword";
-    title.textContent = entry.headword;
+    title.innerHTML = highlightText(result.title, query);
 
     const desc = document.createElement("p");
     desc.className = "result-translation";
-    desc.textContent = entry.translation;
+    desc.innerHTML = highlightText(result.body, query);
+
+    const type = document.createElement("span");
+    type.className = `result-type ${result.type === "fulltext" ? "fulltext" : ""}`;
+    type.textContent = result.type === "fulltext" ? "весь текст" : "словарная статья";
 
     const page = document.createElement("span");
     page.className = "result-page";
-    page.textContent = `Страница ${entry.page}`;
+    page.textContent = `Страница ${result.page}`;
 
-    item.append(title, desc, page);
+    item.append(title, desc, type, page);
 
     item.addEventListener("click", () => {
-      state.selectedResultId = entry.id;
-      state.currentPage = entry.page;
+      state.selectedResultId = result.id;
+      state.currentPage = result.page;
       renderResults();
       void renderCurrentPage();
     });
@@ -446,15 +607,24 @@ function runSearch() {
   }
 
   const query = ui.searchInput.value.trim();
+  state.activeQuery = query;
 
-  if (state.entries.length >= TEXT_INDEX_MIN_ENTRIES) {
-    state.results = searchEntries(query);
-  } else {
-    state.results = fallbackSearch(query);
+  state.results = mergeResults(query);
+
+  if (!query && state.searchMode === "entries") {
+    state.results = state.entries.slice(0, MAX_RESULTS);
   }
 
-  if (!query && state.entries.length >= TEXT_INDEX_MIN_ENTRIES) {
-    state.results = state.entries.slice(0, MAX_RESULTS);
+  if (!query && state.searchMode === "fulltext") {
+    state.results = state.lines.slice(0, MAX_RESULTS);
+  }
+
+  if (!query && state.searchMode === "all") {
+    state.results = [...state.entries.slice(0, 90), ...state.lines.slice(0, 90)];
+  }
+
+  if (query) {
+    pushHistory(query);
   }
 
   renderResults();
@@ -495,11 +665,13 @@ async function renderCurrentPage() {
 async function loadPdfFile(file) {
   setSearchAvailability(false);
   state.entries = [];
+  state.lines = [];
   state.pageTexts = [];
   state.results = [];
   state.selectedResultId = null;
   state.currentPage = 1;
   state.zoom = 1;
+  state.activeQuery = "";
 
   updateZoomLabel();
   ui.resultList.innerHTML = "";
@@ -523,9 +695,12 @@ async function loadPdfFile(file) {
 
   const cacheKey = buildCacheKey(file);
   await buildTextIndex(cacheKey);
+  renderHistory();
 }
 
+loadHistory();
 setSearchAvailability(false);
+updateModeButtons();
 updateViewerControls();
 updateZoomLabel();
 setProgress(0);

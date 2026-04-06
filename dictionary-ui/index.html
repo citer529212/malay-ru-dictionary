@@ -46,6 +46,21 @@
           <button id="searchButton" disabled>Поиск</button>
         </div>
 
+        <div class="search-tools">
+          <div class="mode-switch" id="searchModeSwitch">
+            <button type="button" data-mode="all" class="mode-button active" disabled>
+              Все
+            </button>
+            <button type="button" data-mode="entries" class="mode-button" disabled>
+              Статьи
+            </button>
+            <button type="button" data-mode="fulltext" class="mode-button" disabled>
+              Весь текст
+            </button>
+          </div>
+          <div class="history" id="searchHistory"></div>
+        </div>
+
         <div class="status-block">
           <div class="progress-track" aria-hidden="true">
             <div id="progressBar" class="progress-bar"></div>
@@ -57,7 +72,7 @@
       <section class="workspace">
         <aside class="result-panel card">
           <div class="panel-head">
-            <h2>Найденные статьи</h2>
+            <h2>Результаты поиска</h2>
             <span id="resultCount" class="result-count">0</span>
           </div>
           <ul id="resultList" class="result-list"></ul>
@@ -87,7 +102,7 @@
         <h2>Как это работает</h2>
         <p>
           Если в PDF есть текстовый слой, индекс собирается автоматически и поиск
-          работает как по малайским заголовкам, так и по русским переводам.
+          работает в двух режимах: по словарным статьям и по полному OCR-тексту.
         </p>
         <p>
           Если PDF состоит только из сканов без текста, интерфейс останется
