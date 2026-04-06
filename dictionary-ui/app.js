@@ -545,40 +545,55 @@ function searchEntries(query) {
 
   const q = normalizeText(query);
   const qGrams = buildBigrams(q);
+  const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
 
   return state.entries
     .map((entry) => {
-      const titleScore = rankMatch(entry._normTitle, q);
-      const bodyScore = rankMatch(entry._normBody, q) + 1;
-      const directScore = Math.min(titleScore, bodyScore);
+      const title = entry._normTitle;
+      const body = entry._normBody;
+      const lenDelta = Math.abs((title || "").length - q.length);
+      let score = 99;
 
-      if (directScore < 99) {
-        return { score: directScore, entry };
+      if (title === q) {
+        score = 0;
+      } else if (queryPattern.test(title)) {
+        score = 0.2 + lenDelta / 50;
+      } else if (title.startsWith(q)) {
+        // Prefix matches are useful, but shorter/closer words should rank above derivatives.
+        score = 0.9 + lenDelta / 20;
+      } else if (title.includes(q)) {
+        score = 1.8 + lenDelta / 18;
+      } else if (body.includes(q)) {
+        score = 3.9;
       }
 
       const fuzzy = jaccardScore(entry._grams, qGrams);
-      if (fuzzy >= 0.45) {
-        return { score: 4 + (1 - fuzzy), entry };
+      if (score >= 99 && fuzzy >= 0.65) {
+        score = 5.4 + (1 - fuzzy) * 2;
       }
 
-      return { score: 99, entry };
+      return { score, lenDelta, entry };
     })
     .filter((row) => row.score < 99)
     .sort(
       (a, b) =>
         a.score - b.score ||
+        a.lenDelta - b.lenDelta ||
         a.entry.title.length - b.entry.title.length ||
         a.entry.page - b.entry.page
     )
     .slice(0, MAX_RESULTS)
-    .map((row) => ({ ...row.entry, _rank: row.score }));
+    .map((row) => ({ ...row.entry, _rank: row.score, _lenDelta: row.lenDelta }));
 }
 
-function groupEntryResults(rows) {
+function groupEntryResults(rows, query = "") {
   const groups = new Map();
+  const qNorm = normalizeText(query);
 
   rows.forEach((row) => {
     const key = row._normTitle || normalizeText(row.title);
+    const rowDelta = Math.abs((key || "").length - qNorm.length);
+
     if (!groups.has(key)) {
       groups.set(key, {
         id: `group-${key}`,
@@ -587,6 +602,7 @@ function groupEntryResults(rows) {
         body: row.body,
         page: row.page,
         _rank: row._rank || 10,
+        _lenDelta: Number.isFinite(row._lenDelta) ? row._lenDelta : rowDelta,
       });
       return;
     }
@@ -597,10 +613,14 @@ function groupEntryResults(rows) {
     }
     current.page = Math.min(current.page, row.page);
     current._rank = Math.min(current._rank, row._rank || 10);
+    current._lenDelta = Math.min(
+      current._lenDelta,
+      Number.isFinite(row._lenDelta) ? row._lenDelta : rowDelta
+    );
   });
 
   return [...groups.values()]
-    .sort((a, b) => a._rank - b._rank || a.page - b.page)
+    .sort((a, b) => a._rank - b._rank || a._lenDelta - b._lenDelta || a.page - b.page)
     .slice(0, MAX_RESULTS);
 }
 
@@ -624,7 +644,7 @@ function searchFulltext(query) {
 }
 
 function mergeResults(query) {
-  const groupedEntries = groupEntryResults(searchEntries(query));
+  const groupedEntries = groupEntryResults(searchEntries(query), query);
 
   if (state.searchMode === "entries") {
     return groupedEntries;
@@ -738,7 +758,7 @@ function runSearch() {
   state.results = mergeResults(query);
 
   if (!query && state.searchMode === "entries") {
-    state.results = groupEntryResults(state.entries.slice(0, MAX_RESULTS));
+    state.results = groupEntryResults(state.entries.slice(0, MAX_RESULTS), "");
   }
 
   if (!query && state.searchMode === "fulltext") {
@@ -747,7 +767,7 @@ function runSearch() {
 
   if (!query && state.searchMode === "all") {
     state.results = [
-      ...groupEntryResults(state.entries.slice(0, 120)),
+      ...groupEntryResults(state.entries.slice(0, 120), ""),
       ...state.lines.slice(0, 80),
     ];
   }
