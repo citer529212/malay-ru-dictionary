@@ -547,11 +547,15 @@ function searchEntries(query) {
   const q = normalizeText(query);
   const qGrams = buildBigrams(q);
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
+  const queryWords = q.split(/\s+/).filter(Boolean);
+  const isSingleWordQuery = queryWords.length === 1;
 
   return state.entries
     .map((entry) => {
       const title = entry._normTitle;
       const body = entry._normBody;
+      const titleWords = (title || "").split(/\s+/).filter(Boolean);
+      const titleWordCount = titleWords.length || 1;
       const lenDelta = Math.abs((title || "").length - q.length);
       let score = 99;
 
@@ -573,18 +577,30 @@ function searchEntries(query) {
         score = 5.4 + (1 - fuzzy) * 2;
       }
 
-      return { score, lenDelta, entry };
+      // For one-word queries, prefer one-word headwords over phrases.
+      if (isSingleWordQuery && titleWordCount > 1 && score < 99) {
+        score += 1.3 + Math.min(1.2, (titleWordCount - 1) * 0.45);
+      }
+
+      return { score, lenDelta, titleWordCount, entry };
     })
     .filter((row) => row.score < 99)
     .sort(
       (a, b) =>
         a.score - b.score ||
+        a.titleWordCount - b.titleWordCount ||
         a.lenDelta - b.lenDelta ||
         a.entry.title.length - b.entry.title.length ||
         a.entry.page - b.entry.page
     )
     .slice(0, MAX_RESULTS)
-    .map((row) => ({ ...row.entry, _rank: row.score, _lenDelta: row.lenDelta }));
+    .map((row) => ({
+      ...row.entry,
+      _rank: row.score,
+      _lenDelta: row.lenDelta,
+      _wordCount: row.titleWordCount,
+      _exactTitle: normalizeText(row.entry.title) === q,
+    }));
 }
 
 function groupEntryResults(rows, query = "") {
@@ -604,6 +620,8 @@ function groupEntryResults(rows, query = "") {
         page: row.page,
         _rank: row._rank || 10,
         _lenDelta: Number.isFinite(row._lenDelta) ? row._lenDelta : rowDelta,
+        _wordCount: Number.isFinite(row._wordCount) ? row._wordCount : key.split(/\s+/).length,
+        _exactTitle: Boolean(row._exactTitle),
       });
       return;
     }
@@ -618,10 +636,22 @@ function groupEntryResults(rows, query = "") {
       current._lenDelta,
       Number.isFinite(row._lenDelta) ? row._lenDelta : rowDelta
     );
+    current._wordCount = Math.min(
+      current._wordCount,
+      Number.isFinite(row._wordCount) ? row._wordCount : key.split(/\s+/).length
+    );
+    current._exactTitle = current._exactTitle || Boolean(row._exactTitle);
   });
 
   return [...groups.values()]
-    .sort((a, b) => a._rank - b._rank || a._lenDelta - b._lenDelta || a.page - b.page)
+    .sort(
+      (a, b) =>
+        Number(b._exactTitle) - Number(a._exactTitle) ||
+        a._rank - b._rank ||
+        a._wordCount - b._wordCount ||
+        a._lenDelta - b._lenDelta ||
+        a.page - b.page
+    )
     .slice(0, MAX_RESULTS);
 }
 
@@ -702,6 +732,12 @@ function renderBestAnswer() {
   typeChip.textContent =
     hit.type === "entry" ? "словарная статья (приоритет)" : "найдено в полном тексте";
   ui.answerMeta.append(typeChip);
+
+  if (hit.type === "entry" && !hit._exactTitle) {
+    const nearMeta = document.createElement("span");
+    nearMeta.textContent = "точного заголовка нет, показан ближайший вариант";
+    ui.answerMeta.append(nearMeta);
+  }
 
   const pageMeta = document.createElement("span");
   pageMeta.textContent = `страница ${hit.page}`;
