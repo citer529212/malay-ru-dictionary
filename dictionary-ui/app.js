@@ -28,6 +28,7 @@ const ui = {
 };
 
 const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
+const INDEX_VERSION = "v3-columns";
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
 
@@ -198,7 +199,7 @@ function cleanupLine(text) {
 }
 
 function buildCacheKey(file) {
-  return `dictionary-shell:${file.name}:${file.size}:${file.lastModified}`;
+  return `dictionary-shell:${INDEX_VERSION}:${file.name}:${file.size}:${file.lastModified}`;
 }
 
 function loadHistory() {
@@ -371,7 +372,65 @@ function extractEntry(line, page, localLineIndex) {
   return null;
 }
 
-function groupLines(textItems) {
+function splitIntoColumns(textItems, pageWidth) {
+  if (textItems.length < 80) {
+    return [textItems];
+  }
+
+  const xs = textItems
+    .map((item) => item.transform?.[4] || 0)
+    .filter((x) => Number.isFinite(x));
+
+  if (xs.length < 80) {
+    return [textItems];
+  }
+
+  let c1 = Math.min(...xs);
+  let c2 = Math.max(...xs);
+  if (Math.abs(c2 - c1) < pageWidth * 0.28) {
+    return [textItems];
+  }
+
+  for (let i = 0; i < 8; i += 1) {
+    const g1 = [];
+    const g2 = [];
+    xs.forEach((x) => {
+      if (Math.abs(x - c1) <= Math.abs(x - c2)) {
+        g1.push(x);
+      } else {
+        g2.push(x);
+      }
+    });
+    if (!g1.length || !g2.length) {
+      return [textItems];
+    }
+    c1 = g1.reduce((acc, x) => acc + x, 0) / g1.length;
+    c2 = g2.reduce((acc, x) => acc + x, 0) / g2.length;
+  }
+
+  if (Math.abs(c2 - c1) < pageWidth * 0.28) {
+    return [textItems];
+  }
+
+  const left = [];
+  const right = [];
+  textItems.forEach((item) => {
+    const x = item.transform?.[4] || 0;
+    if (Math.abs(x - c1) <= Math.abs(x - c2)) {
+      left.push(item);
+    } else {
+      right.push(item);
+    }
+  });
+
+  if (left.length < 20 || right.length < 20) {
+    return [textItems];
+  }
+
+  return c1 <= c2 ? [left, right] : [right, left];
+}
+
+function groupLinesSingleColumn(textItems) {
   const buckets = new Map();
 
   for (const item of textItems) {
@@ -409,6 +468,17 @@ function groupLines(textItems) {
       lines.push(joined);
     }
   }
+
+  return lines;
+}
+
+function groupLines(textItems, pageWidth) {
+  const columns = splitIntoColumns(textItems, pageWidth);
+  const lines = [];
+
+  columns.forEach((columnItems) => {
+    lines.push(...groupLinesSingleColumn(columnItems));
+  });
 
   return lines;
 }
@@ -474,7 +544,8 @@ async function buildTextIndex(cacheKey) {
   for (let pageNum = 1; pageNum <= pageCount; pageNum += 1) {
     const page = await state.pdfDoc.getPage(pageNum);
     const content = await page.getTextContent();
-    const lines = groupLines(content.items);
+    const viewport = page.getViewport({ scale: 1 });
+    const lines = groupLines(content.items, viewport.width);
 
     state.pageTexts.push(lines.join("\n"));
 
