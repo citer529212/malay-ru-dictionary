@@ -48,6 +48,15 @@ python3 ./tools/build_dictionary_json_from_sidecar.py \
 После появления `dictionary-ui/data/dictionary.json` интерфейс автоматически
 подхватит JSON-базу и будет искать по ней в приоритете.
 
+## Проверенная база (рекомендуется)
+
+Файл `dictionary-ui/data/dictionary_curated.json` имеет самый высокий приоритет.
+Если он существует, интерфейс работает в режиме только проверенных статей
+(без OCR-фрагментов в выдаче).
+
+Чтобы улучшать качество, добавляйте/правьте записи именно в
+`dictionary_curated.json`.
+
 ## Публикация на GitHub
 
 В репозитории уже добавлен workflow для GitHub Pages:

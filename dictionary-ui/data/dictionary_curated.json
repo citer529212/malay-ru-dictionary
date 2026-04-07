@@ -1,0 +1,31 @@
+{
+  "version": "1",
+  "source": "curated-manual",
+  "entries": [
+    { "id": "cur-1", "title": "agung", "body": "главный; основной; великий", "page": 24, "verified": true },
+    { "id": "cur-2", "title": "hitam", "body": "черный", "page": 44, "verified": true },
+    { "id": "cur-3", "title": "putih", "body": "белый", "page": 820, "verified": true },
+    { "id": "cur-4", "title": "merah", "body": "красный", "page": 620, "verified": true },
+    { "id": "cur-5", "title": "hijau", "body": "зеленый", "page": 344, "verified": true },
+    { "id": "cur-6", "title": "kuning", "body": "желтый", "page": 560, "verified": true },
+    { "id": "cur-7", "title": "biru", "body": "синий; голубой", "page": 94, "verified": true },
+    { "id": "cur-8", "title": "kering", "body": "сухой", "page": 392, "verified": true },
+    { "id": "cur-9", "title": "basah", "body": "мокрый; влажный", "page": 74, "verified": true },
+    { "id": "cur-10", "title": "jadi", "body": "становиться; делаться; быть", "page": 113, "verified": true },
+    { "id": "cur-11", "title": "kemarau", "body": "засуха", "page": 358, "verified": true },
+    { "id": "cur-12", "title": "kanyon", "body": "каньон", "page": 349, "verified": true },
+    { "id": "cur-13", "title": "kapal", "body": "корабль; судно", "page": 349, "verified": true },
+    { "id": "cur-14", "title": "kapak", "body": "топор", "page": 349, "verified": true },
+    { "id": "cur-15", "title": "kapan", "body": "когда", "page": 349, "verified": true },
+    { "id": "cur-16", "title": "karam", "body": "тонуть; затонуть", "page": 346, "verified": true },
+    { "id": "cur-17", "title": "besar", "body": "большой", "page": 78, "verified": true },
+    { "id": "cur-18", "title": "kecil", "body": "маленький", "page": 380, "verified": true },
+    { "id": "cur-19", "title": "baik", "body": "хороший; добрый", "page": 60, "verified": true },
+    { "id": "cur-20", "title": "buruk", "body": "плохой", "page": 108, "verified": true },
+    { "id": "cur-21", "title": "air", "body": "вода", "page": 18, "verified": true },
+    { "id": "cur-22", "title": "api", "body": "огонь", "page": 20, "verified": true },
+    { "id": "cur-23", "title": "tanah", "body": "земля; почва", "page": 934, "verified": true },
+    { "id": "cur-24", "title": "laut", "body": "море", "page": 576, "verified": true },
+    { "id": "cur-25", "title": "langit", "body": "небо", "page": 566, "verified": true }
+  ]
+}

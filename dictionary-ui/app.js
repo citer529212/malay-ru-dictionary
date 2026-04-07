@@ -29,6 +29,7 @@ const ui = {
 
 const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
 const INDEX_VERSION = "v4-columns-context";
+const CURATED_DICTIONARY_URL = "./data/dictionary_curated.json";
 const BUNDLED_DICTIONARY_URL = "./data/dictionary.json";
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
@@ -47,6 +48,7 @@ const state = {
   searchMode: "entries",
   history: [],
   activeQuery: "",
+  curatedOnly: false,
 };
 
 ui.fileInput.addEventListener("change", async (event) => {
@@ -155,6 +157,9 @@ function setSearchAvailability(available) {
 
 function updateModeButtons() {
   ui.searchModeSwitch.querySelectorAll("button[data-mode]").forEach((button) => {
+    if (state.curatedOnly && button.dataset.mode !== "entries") {
+      button.disabled = true;
+    }
     button.classList.toggle("active", button.dataset.mode === state.searchMode);
   });
 }
@@ -560,9 +565,9 @@ function deduplicateEntries(entries) {
   return result;
 }
 
-async function loadBundledDictionary() {
+async function loadDictionaryFromUrl(url, options = {}) {
   try {
-    const response = await fetch(BUNDLED_DICTIONARY_URL, { cache: "no-store" });
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
       return false;
     }
@@ -581,6 +586,7 @@ async function loadBundledDictionary() {
           title: cleanupLine(String(entry.title)),
           body: cleanupLine(String(entry.body)),
           page: Number(entry.page) || 1,
+          verified: Boolean(options.verified || entry.verified),
         }))
     );
     hydrateEntries(state.entries);
@@ -588,6 +594,20 @@ async function loadBundledDictionary() {
   } catch {
     return false;
   }
+}
+
+async function loadBundledDictionary() {
+  const curatedLoaded = await loadDictionaryFromUrl(CURATED_DICTIONARY_URL, {
+    verified: true,
+  });
+  if (curatedLoaded) {
+    state.curatedOnly = true;
+    state.searchMode = "entries";
+    return true;
+  }
+
+  state.curatedOnly = false;
+  return loadDictionaryFromUrl(BUNDLED_DICTIONARY_URL, { verified: false });
 }
 
 function hydrateEntries(entries) {
@@ -749,6 +769,10 @@ function searchEntries(query) {
         score = 5.4 + (1 - fuzzy) * 2;
       }
 
+      if (state.curatedOnly && score > 2.2) {
+        score = 99;
+      }
+
       // For one-word queries, prefer one-word headwords over phrases.
       if (isSingleWordQuery && titleWordCount > 1 && score < 99) {
         score += 1.3 + Math.min(1.2, (titleWordCount - 1) * 0.45);
@@ -853,6 +877,10 @@ function mergeResults(query) {
     return groupedEntries;
   }
 
+  if (state.curatedOnly) {
+    return groupedEntries;
+  }
+
   if (state.searchMode === "fulltext") {
     return searchFulltext(query);
   }
@@ -930,8 +958,11 @@ function renderBestAnswer() {
 
   const typeChip = document.createElement("span");
   typeChip.className = "answer-chip";
-  typeChip.textContent =
-    hit.type === "entry" ? "словарная статья (приоритет)" : "найдено в полном тексте";
+  typeChip.textContent = hit.verified
+    ? "проверенная статья"
+    : hit.type === "entry"
+      ? "словарная статья (приоритет)"
+      : "найдено в полном тексте";
   ui.answerMeta.append(typeChip);
 
   if (hit.type === "entry" && !hit._exactTitle) {
@@ -977,7 +1008,11 @@ function renderResults() {
 
     const type = document.createElement("span");
     type.className = `result-type ${result.type === "fulltext" ? "fulltext" : ""}`;
-    type.textContent = result.type === "fulltext" ? "весь текст" : "словарная статья";
+    type.textContent = result.verified
+      ? "проверенная статья"
+      : result.type === "fulltext"
+        ? "весь текст"
+        : "словарная статья";
 
     const page = document.createElement("span");
     page.className = "result-page";
@@ -1012,11 +1047,11 @@ function runSearch() {
     state.results = groupEntryResults(state.entries.slice(0, MAX_RESULTS), "");
   }
 
-  if (!query && state.searchMode === "fulltext") {
+  if (!state.curatedOnly && !query && state.searchMode === "fulltext") {
     state.results = state.lines.slice(0, MAX_RESULTS);
   }
 
-  if (!query && state.searchMode === "all") {
+  if (!state.curatedOnly && !query && state.searchMode === "all") {
     state.results = [
       ...groupEntryResults(state.entries.slice(0, 120), ""),
       ...state.lines.slice(0, 80),
@@ -1106,8 +1141,13 @@ async function loadPdfFile(file) {
     state.lines = [];
     state.pageTexts = [];
     setSearchAvailability(true);
+    updateModeButtons();
     setProgress(100);
-    setStatus(`Готово: загружена JSON-база (${state.entries.length} словарных статей).`);
+    setStatus(
+      state.curatedOnly
+        ? `Готово: загружена проверенная JSON-база (${state.entries.length} статей).`
+        : `Готово: загружена JSON-база (${state.entries.length} словарных статей).`
+    );
     runSearch();
     renderHistory();
     return;
