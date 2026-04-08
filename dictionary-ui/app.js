@@ -721,11 +721,8 @@ async function loadBundledDictionary() {
 
   let finalEntries = [];
   if (curatedEntries.length) {
-    finalEntries = combineEntriesToTarget(
-      curatedEntries,
-      bundledEntries,
-      TARGET_AUTONOMOUS_ENTRIES
-    );
+    // If curated dictionary exists, load it fully without truncation.
+    finalEntries = deduplicateEntries(curatedEntries);
     state.curatedOnly = true;
     state.searchMode = "entries";
   } else {
