@@ -41063,6 +41063,3506 @@
       "body": "зоология",
       "page": 1,
       "verified": true
+    },
+    {
+      "id": "cur-5867",
+      "title": "berajar",
+      "body": "заниматься действием: учить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5868",
+      "title": "terajar",
+      "body": "быть/оказаться в состоянии: учить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5869",
+      "title": "perajaran",
+      "body": "процесс/сфера действия: учить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5870",
+      "title": "peajar",
+      "body": "исполнитель действия: учить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5871",
+      "title": "berambil",
+      "body": "заниматься действием: брать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5872",
+      "title": "terambil",
+      "body": "быть/оказаться в состоянии: брать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5873",
+      "title": "perambilan",
+      "body": "процесс/сфера действия: брать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5874",
+      "title": "peambil",
+      "body": "исполнитель действия: брать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5875",
+      "title": "berbaca",
+      "body": "заниматься действием: читать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5876",
+      "title": "terbaca",
+      "body": "быть/оказаться в состоянии: читать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5877",
+      "title": "perbacaan",
+      "body": "процесс/сфера действия: читать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5878",
+      "title": "pebaca",
+      "body": "исполнитель действия: читать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5879",
+      "title": "berbantu",
+      "body": "заниматься действием: помогать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5880",
+      "title": "terbantu",
+      "body": "быть/оказаться в состоянии: помогать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5881",
+      "title": "perbantuan",
+      "body": "процесс/сфера действия: помогать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5882",
+      "title": "pebantu",
+      "body": "исполнитель действия: помогать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5883",
+      "title": "berbayar",
+      "body": "заниматься действием: платить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5884",
+      "title": "terbayar",
+      "body": "быть/оказаться в состоянии: платить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5885",
+      "title": "perbayaran",
+      "body": "процесс/сфера действия: платить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5886",
+      "title": "pebayar",
+      "body": "исполнитель действия: платить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5887",
+      "title": "berbelajar",
+      "body": "заниматься действием: учиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5888",
+      "title": "terbelajar",
+      "body": "быть/оказаться в состоянии: учиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5889",
+      "title": "perbelajaran",
+      "body": "процесс/сфера действия: учиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5890",
+      "title": "pebelajar",
+      "body": "исполнитель действия: учиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5891",
+      "title": "berbeli",
+      "body": "заниматься действием: покупать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5892",
+      "title": "terbeli",
+      "body": "быть/оказаться в состоянии: покупать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5893",
+      "title": "perbelian",
+      "body": "процесс/сфера действия: покупать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5894",
+      "title": "pebeli",
+      "body": "исполнитель действия: покупать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5895",
+      "title": "berberi",
+      "body": "заниматься действием: давать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5896",
+      "title": "terberi",
+      "body": "быть/оказаться в состоянии: давать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5897",
+      "title": "perberian",
+      "body": "процесс/сфера действия: давать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5898",
+      "title": "peberi",
+      "body": "исполнитель действия: давать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5899",
+      "title": "berbuat",
+      "body": "заниматься действием: делать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5900",
+      "title": "terbuat",
+      "body": "быть/оказаться в состоянии: делать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5901",
+      "title": "perbuatan",
+      "body": "процесс/сфера действия: делать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5902",
+      "title": "pebuat",
+      "body": "исполнитель действия: делать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5903",
+      "title": "berbuka",
+      "body": "заниматься действием: открывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5904",
+      "title": "perbukaan",
+      "body": "процесс/сфера действия: открывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5905",
+      "title": "pebuka",
+      "body": "исполнитель действия: открывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5906",
+      "title": "tercakap",
+      "body": "быть/оказаться в состоянии: говорить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5907",
+      "title": "percakapan",
+      "body": "процесс/сфера действия: говорить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5908",
+      "title": "pecakap",
+      "body": "исполнитель действия: говорить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5909",
+      "title": "bercari",
+      "body": "заниматься действием: искать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5910",
+      "title": "tercari",
+      "body": "быть/оказаться в состоянии: искать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5911",
+      "title": "percarian",
+      "body": "процесс/сфера действия: искать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5912",
+      "title": "pecari",
+      "body": "исполнитель действия: искать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5913",
+      "title": "bercuba",
+      "body": "заниматься действием: пробовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5914",
+      "title": "tercuba",
+      "body": "быть/оказаться в состоянии: пробовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5915",
+      "title": "pecuba",
+      "body": "исполнитель действия: пробовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5916",
+      "title": "berdengar",
+      "body": "заниматься действием: слушать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5917",
+      "title": "terdengar",
+      "body": "быть/оказаться в состоянии: слушать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5918",
+      "title": "perdengaran",
+      "body": "процесс/сфера действия: слушать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5919",
+      "title": "pedengar",
+      "body": "исполнитель действия: слушать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5920",
+      "title": "berduduk",
+      "body": "заниматься действием: сидеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5921",
+      "title": "terduduk",
+      "body": "быть/оказаться в состоянии: сидеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5922",
+      "title": "perdudukan",
+      "body": "процесс/сфера действия: сидеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5923",
+      "title": "peduduk",
+      "body": "исполнитель действия: сидеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5924",
+      "title": "berfaham",
+      "body": "заниматься действием: понимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5925",
+      "title": "terfaham",
+      "body": "быть/оказаться в состоянии: понимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5926",
+      "title": "perfahaman",
+      "body": "процесс/сфера действия: понимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5927",
+      "title": "pefaham",
+      "body": "исполнитель действия: понимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5928",
+      "title": "berguna",
+      "body": "заниматься действием: использовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5929",
+      "title": "terguna",
+      "body": "быть/оказаться в состоянии: использовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5930",
+      "title": "pergunaan",
+      "body": "процесс/сфера действия: использовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5931",
+      "title": "peguna",
+      "body": "исполнитель действия: использовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5932",
+      "title": "berhabis",
+      "body": "заниматься действием: заканчивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5933",
+      "title": "terhabis",
+      "body": "быть/оказаться в состоянии: заканчивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5934",
+      "title": "perhabisan",
+      "body": "процесс/сфера действия: заканчивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5935",
+      "title": "pehabis",
+      "body": "исполнитель действия: заканчивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5936",
+      "title": "berhantar",
+      "body": "заниматься действием: отправлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5937",
+      "title": "terhantar",
+      "body": "быть/оказаться в состоянии: отправлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5938",
+      "title": "perhantaran",
+      "body": "процесс/сфера действия: отправлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5939",
+      "title": "pehantar",
+      "body": "исполнитель действия: отправлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5940",
+      "title": "berharap",
+      "body": "заниматься действием: надеяться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5941",
+      "title": "terharap",
+      "body": "быть/оказаться в состоянии: надеяться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5942",
+      "title": "perharapan",
+      "body": "процесс/сфера действия: надеяться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5943",
+      "title": "peharap",
+      "body": "исполнитель действия: надеяться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5944",
+      "title": "beringat",
+      "body": "заниматься действием: помнить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5945",
+      "title": "teringat",
+      "body": "быть/оказаться в состоянии: помнить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5946",
+      "title": "peringatan",
+      "body": "процесс/сфера действия: помнить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5947",
+      "title": "peingat",
+      "body": "исполнитель действия: помнить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5948",
+      "title": "berjawab",
+      "body": "заниматься действием: отвечать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5949",
+      "title": "terjawab",
+      "body": "быть/оказаться в состоянии: отвечать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5950",
+      "title": "perjawaban",
+      "body": "процесс/сфера действия: отвечать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5951",
+      "title": "pejawab",
+      "body": "исполнитель действия: отвечать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5952",
+      "title": "berjual",
+      "body": "заниматься действием: продавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5953",
+      "title": "terjual",
+      "body": "быть/оказаться в состоянии: продавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5954",
+      "title": "perjualan",
+      "body": "процесс/сфера действия: продавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5955",
+      "title": "pejual",
+      "body": "исполнитель действия: продавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5956",
+      "title": "terjumpa",
+      "body": "быть/оказаться в состоянии: находить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5957",
+      "title": "pejumpa",
+      "body": "исполнитель действия: находить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5958",
+      "title": "berkawal",
+      "body": "заниматься действием: контролировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5959",
+      "title": "terkawal",
+      "body": "быть/оказаться в состоянии: контролировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5960",
+      "title": "perkawalan",
+      "body": "процесс/сфера действия: контролировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5961",
+      "title": "pekawal",
+      "body": "исполнитель действия: контролировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5962",
+      "title": "berkeluar",
+      "body": "заниматься действием: выходить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5963",
+      "title": "terkeluar",
+      "body": "быть/оказаться в состоянии: выходить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5964",
+      "title": "perkeluaran",
+      "body": "процесс/сфера действия: выходить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5965",
+      "title": "pekeluar",
+      "body": "исполнитель действия: выходить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5966",
+      "title": "berlihat",
+      "body": "заниматься действием: видеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5967",
+      "title": "terlihat",
+      "body": "быть/оказаться в состоянии: видеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5968",
+      "title": "perlihatan",
+      "body": "процесс/сфера действия: видеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5969",
+      "title": "pelihat",
+      "body": "исполнитель действия: видеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5970",
+      "title": "berlupa",
+      "body": "заниматься действием: забывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5971",
+      "title": "perlupaan",
+      "body": "процесс/сфера действия: забывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5972",
+      "title": "pelupa",
+      "body": "исполнитель действия: забывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5973",
+      "title": "bermakan",
+      "body": "заниматься действием: есть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5974",
+      "title": "termakan",
+      "body": "быть/оказаться в состоянии: есть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5975",
+      "title": "permakanan",
+      "body": "процесс/сфера действия: есть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5976",
+      "title": "pemakan",
+      "body": "исполнитель действия: есть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5977",
+      "title": "bermasak",
+      "body": "заниматься действием: готовить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5978",
+      "title": "termasak",
+      "body": "быть/оказаться в состоянии: готовить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5979",
+      "title": "permasakan",
+      "body": "процесс/сфера действия: готовить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5980",
+      "title": "pemasak",
+      "body": "исполнитель действия: готовить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5981",
+      "title": "bermasuk",
+      "body": "заниматься действием: входить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5982",
+      "title": "termasuk",
+      "body": "быть/оказаться в состоянии: входить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5983",
+      "title": "permasukan",
+      "body": "процесс/сфера действия: входить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5984",
+      "title": "pemasuk",
+      "body": "исполнитель действия: входить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5985",
+      "title": "berminum",
+      "body": "заниматься действием: пить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5986",
+      "title": "terminum",
+      "body": "быть/оказаться в состоянии: пить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5987",
+      "title": "perminuman",
+      "body": "процесс/сфера действия: пить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5988",
+      "title": "peminum",
+      "body": "исполнитель действия: пить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5989",
+      "title": "termula",
+      "body": "быть/оказаться в состоянии: начинать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5990",
+      "title": "permulaan",
+      "body": "процесс/сфера действия: начинать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5991",
+      "title": "pemula",
+      "body": "исполнитель действия: начинать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5992",
+      "title": "berpilih",
+      "body": "заниматься действием: выбирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5993",
+      "title": "perpilihan",
+      "body": "процесс/сфера действия: выбирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5994",
+      "title": "pepilih",
+      "body": "исполнитель действия: выбирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5995",
+      "title": "bersimpan",
+      "body": "заниматься действием: хранить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5996",
+      "title": "tersimpan",
+      "body": "быть/оказаться в состоянии: хранить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5997",
+      "title": "persimpanan",
+      "body": "процесс/сфера действия: хранить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5998",
+      "title": "pesimpan",
+      "body": "исполнитель действия: хранить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-5999",
+      "title": "tertanya",
+      "body": "быть/оказаться в состоянии: спрашивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6000",
+      "title": "pertanyaan",
+      "body": "процесс/сфера действия: спрашивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6001",
+      "title": "petanya",
+      "body": "исполнитель действия: спрашивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6002",
+      "title": "bertekan",
+      "body": "заниматься действием: нажимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6003",
+      "title": "tertekan",
+      "body": "быть/оказаться в состоянии: нажимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6004",
+      "title": "pertekanan",
+      "body": "процесс/сфера действия: нажимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6005",
+      "title": "petekan",
+      "body": "исполнитель действия: нажимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6006",
+      "title": "berterima",
+      "body": "заниматься действием: получать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6007",
+      "title": "terterima",
+      "body": "быть/оказаться в состоянии: получать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6008",
+      "title": "perterimaan",
+      "body": "процесс/сфера действия: получать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6009",
+      "title": "peterima",
+      "body": "исполнитель действия: получать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6010",
+      "title": "bertidur",
+      "body": "заниматься действием: спать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6011",
+      "title": "tertidur",
+      "body": "быть/оказаться в состоянии: спать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6012",
+      "title": "pertiduran",
+      "body": "процесс/сфера действия: спать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6013",
+      "title": "petidur",
+      "body": "исполнитель действия: спать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6014",
+      "title": "bertolak",
+      "body": "заниматься действием: отклонять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6015",
+      "title": "tertolak",
+      "body": "быть/оказаться в состоянии: отклонять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6016",
+      "title": "pertolakan",
+      "body": "процесс/сфера действия: отклонять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6017",
+      "title": "petolak",
+      "body": "исполнитель действия: отклонять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6018",
+      "title": "bertulis",
+      "body": "заниматься действием: писать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6019",
+      "title": "tertulis",
+      "body": "быть/оказаться в состоянии: писать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6020",
+      "title": "pertulisan",
+      "body": "процесс/сфера действия: писать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6021",
+      "title": "petulis",
+      "body": "исполнитель действия: писать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6022",
+      "title": "bertunggu",
+      "body": "заниматься действием: ждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6023",
+      "title": "tertunggu",
+      "body": "быть/оказаться в состоянии: ждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6024",
+      "title": "pertungguan",
+      "body": "процесс/сфера действия: ждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6025",
+      "title": "petunggu",
+      "body": "исполнитель действия: ждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6026",
+      "title": "berukur",
+      "body": "заниматься действием: измерять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6027",
+      "title": "terukur",
+      "body": "быть/оказаться в состоянии: измерять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6028",
+      "title": "perukuran",
+      "body": "процесс/сфера действия: измерять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6029",
+      "title": "peukur",
+      "body": "исполнитель действия: измерять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6030",
+      "title": "terubah",
+      "body": "быть/оказаться в состоянии: изменять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6031",
+      "title": "perubahan",
+      "body": "процесс/сфера действия: изменять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6032",
+      "title": "peubah",
+      "body": "исполнитель действия: изменять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6033",
+      "title": "berulang",
+      "body": "заниматься действием: повторять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6034",
+      "title": "terulang",
+      "body": "быть/оказаться в состоянии: повторять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6035",
+      "title": "perulangan",
+      "body": "процесс/сфера действия: повторять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6036",
+      "title": "peulang",
+      "body": "исполнитель действия: повторять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6037",
+      "title": "berurus",
+      "body": "заниматься действием: управлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6038",
+      "title": "terurus",
+      "body": "быть/оказаться в состоянии: управлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6039",
+      "title": "perurusan",
+      "body": "процесс/сфера действия: управлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6040",
+      "title": "peurus",
+      "body": "исполнитель действия: управлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6041",
+      "title": "terlatih",
+      "body": "быть/оказаться в состоянии: тренировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6042",
+      "title": "perlatihan",
+      "body": "процесс/сфера действия: тренировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6043",
+      "title": "pelatih",
+      "body": "исполнитель действия: тренировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6044",
+      "title": "berkira",
+      "body": "заниматься действием: считать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6045",
+      "title": "terkira",
+      "body": "быть/оказаться в состоянии: считать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6046",
+      "title": "perkiraan",
+      "body": "процесс/сфера действия: считать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6047",
+      "title": "pekira",
+      "body": "исполнитель действия: считать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6048",
+      "title": "berrancang",
+      "body": "заниматься действием: планировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6049",
+      "title": "terrancang",
+      "body": "быть/оказаться в состоянии: планировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6050",
+      "title": "perrancangan",
+      "body": "процесс/сфера действия: планировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6051",
+      "title": "perancang",
+      "body": "исполнитель действия: планировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6052",
+      "title": "berrawat",
+      "body": "заниматься действием: лечить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6053",
+      "title": "terrawat",
+      "body": "быть/оказаться в состоянии: лечить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6054",
+      "title": "perrawatan",
+      "body": "процесс/сфера действия: лечить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6055",
+      "title": "perawat",
+      "body": "исполнитель действия: лечить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6056",
+      "title": "berjaga",
+      "body": "заниматься действием: заботиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6057",
+      "title": "terjaga",
+      "body": "быть/оказаться в состоянии: заботиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6058",
+      "title": "perjagaan",
+      "body": "процесс/сфера действия: заботиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6059",
+      "title": "pejaga",
+      "body": "исполнитель действия: заботиться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6060",
+      "title": "berdidik",
+      "body": "заниматься действием: воспитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6061",
+      "title": "terdidik",
+      "body": "быть/оказаться в состоянии: воспитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6062",
+      "title": "perdidikan",
+      "body": "процесс/сфера действия: воспитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6063",
+      "title": "pedidik",
+      "body": "исполнитель действия: воспитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6064",
+      "title": "berangkat",
+      "body": "заниматься действием: поднимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6065",
+      "title": "terangkat",
+      "body": "быть/оказаться в состоянии: поднимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6066",
+      "title": "perangkatan",
+      "body": "процесс/сфера действия: поднимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6067",
+      "title": "peangkat",
+      "body": "исполнитель действия: поднимать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6068",
+      "title": "berturun",
+      "body": "заниматься действием: спускать; снижать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6069",
+      "title": "terturun",
+      "body": "быть/оказаться в состоянии: спускать; снижать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6070",
+      "title": "perturunan",
+      "body": "процесс/сфера действия: спускать; снижать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6071",
+      "title": "peturun",
+      "body": "исполнитель действия: спускать; снижать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6072",
+      "title": "bertutup",
+      "body": "заниматься действием: закрывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6073",
+      "title": "pertutupan",
+      "body": "процесс/сфера действия: закрывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6074",
+      "title": "petutup",
+      "body": "исполнитель действия: закрывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6075",
+      "title": "berbalik",
+      "body": "заниматься действием: возвращаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6076",
+      "title": "terbalik",
+      "body": "быть/оказаться в состоянии: возвращаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6077",
+      "title": "perbalikan",
+      "body": "процесс/сфера действия: возвращаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6078",
+      "title": "pebalik",
+      "body": "исполнитель действия: возвращаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6079",
+      "title": "terjalan",
+      "body": "быть/оказаться в состоянии: идти",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6080",
+      "title": "pejalan",
+      "body": "исполнитель действия: идти",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6081",
+      "title": "terlari",
+      "body": "быть/оказаться в состоянии: бежать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6082",
+      "title": "perlarian",
+      "body": "процесс/сфера действия: бежать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6083",
+      "title": "pelari",
+      "body": "исполнитель действия: бежать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6084",
+      "title": "berrehat",
+      "body": "заниматься действием: отдыхать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6085",
+      "title": "terrehat",
+      "body": "быть/оказаться в состоянии: отдыхать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6086",
+      "title": "perrehatan",
+      "body": "процесс/сфера действия: отдыхать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6087",
+      "title": "perehat",
+      "body": "исполнитель действия: отдыхать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6088",
+      "title": "bersorot",
+      "body": "заниматься действием: подсвечивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6089",
+      "title": "tersorot",
+      "body": "быть/оказаться в состоянии: подсвечивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6090",
+      "title": "persorotan",
+      "body": "процесс/сфера действия: подсвечивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6091",
+      "title": "pesorot",
+      "body": "исполнитель действия: подсвечивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6092",
+      "title": "berpapar",
+      "body": "заниматься действием: показывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6093",
+      "title": "terpapar",
+      "body": "быть/оказаться в состоянии: показывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6094",
+      "title": "perpaparan",
+      "body": "процесс/сфера действия: показывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6095",
+      "title": "pepapar",
+      "body": "исполнитель действия: показывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6096",
+      "title": "berselidik",
+      "body": "заниматься действием: исследовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6097",
+      "title": "terselidik",
+      "body": "быть/оказаться в состоянии: исследовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6098",
+      "title": "perselidikan",
+      "body": "процесс/сфера действия: исследовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6099",
+      "title": "peselidik",
+      "body": "исполнитель действия: исследовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6100",
+      "title": "terbincang",
+      "body": "быть/оказаться в состоянии: обсуждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6101",
+      "title": "pebincang",
+      "body": "исполнитель действия: обсуждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6102",
+      "title": "bersetuju",
+      "body": "заниматься действием: соглашаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6103",
+      "title": "tersetuju",
+      "body": "быть/оказаться в состоянии: соглашаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6104",
+      "title": "persetujuan",
+      "body": "процесс/сфера действия: соглашаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6105",
+      "title": "pesetuju",
+      "body": "исполнитель действия: соглашаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6106",
+      "title": "berasing",
+      "body": "заниматься действием: изолировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6107",
+      "title": "terasing",
+      "body": "быть/оказаться в состоянии: изолировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6108",
+      "title": "perasingan",
+      "body": "процесс/сфера действия: изолировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6109",
+      "title": "peasing",
+      "body": "исполнитель действия: изолировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6110",
+      "title": "berhimpun",
+      "body": "заниматься действием: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6111",
+      "title": "pehimpun",
+      "body": "исполнитель действия: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6112",
+      "title": "berpandu",
+      "body": "заниматься действием: вести",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6113",
+      "title": "terpandu",
+      "body": "быть/оказаться в состоянии: вести",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6114",
+      "title": "perpanduan",
+      "body": "процесс/сфера действия: вести",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6115",
+      "title": "pepandu",
+      "body": "исполнитель действия: вести",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6116",
+      "title": "berhitung",
+      "body": "заниматься действием: подсчитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6117",
+      "title": "terhitung",
+      "body": "быть/оказаться в состоянии: подсчитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6118",
+      "title": "perhitungan",
+      "body": "процесс/сфера действия: подсчитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6119",
+      "title": "pehitung",
+      "body": "исполнитель действия: подсчитывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6120",
+      "title": "bertafsir",
+      "body": "заниматься действием: толковать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6121",
+      "title": "tertafsir",
+      "body": "быть/оказаться в состоянии: толковать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6122",
+      "title": "pertafsiran",
+      "body": "процесс/сфера действия: толковать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6123",
+      "title": "petafsir",
+      "body": "исполнитель действия: толковать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6124",
+      "title": "bersusun",
+      "body": "заниматься действием: упорядочивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6125",
+      "title": "tersusun",
+      "body": "быть/оказаться в состоянии: упорядочивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6126",
+      "title": "persusunan",
+      "body": "процесс/сфера действия: упорядочивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6127",
+      "title": "pesusun",
+      "body": "исполнитель действия: упорядочивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6128",
+      "title": "berpimpin",
+      "body": "заниматься действием: руководить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6129",
+      "title": "terpimpin",
+      "body": "быть/оказаться в состоянии: руководить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6130",
+      "title": "perpimpinan",
+      "body": "процесс/сфера действия: руководить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6131",
+      "title": "pepimpin",
+      "body": "исполнитель действия: руководить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6132",
+      "title": "bersebar",
+      "body": "заниматься действием: распространять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6133",
+      "title": "tersebar",
+      "body": "быть/оказаться в состоянии: распространять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6134",
+      "title": "persebaran",
+      "body": "процесс/сфера действия: распространять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6135",
+      "title": "pesebar",
+      "body": "исполнитель действия: распространять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6136",
+      "title": "berimbang",
+      "body": "заниматься действием: взвешивать; балансировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6137",
+      "title": "terimbang",
+      "body": "быть/оказаться в состоянии: взвешивать; балансировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6138",
+      "title": "perimbangan",
+      "body": "процесс/сфера действия: взвешивать; балансировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6139",
+      "title": "peimbang",
+      "body": "исполнитель действия: взвешивать; балансировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6140",
+      "title": "bersaring",
+      "body": "заниматься действием: фильтровать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6141",
+      "title": "tersaring",
+      "body": "быть/оказаться в состоянии: фильтровать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6142",
+      "title": "persaringan",
+      "body": "процесс/сфера действия: фильтровать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6143",
+      "title": "pesaring",
+      "body": "исполнитель действия: фильтровать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6144",
+      "title": "bertanam",
+      "body": "заниматься действием: сажать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6145",
+      "title": "tertanam",
+      "body": "быть/оказаться в состоянии: сажать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6146",
+      "title": "pertanaman",
+      "body": "процесс/сфера действия: сажать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6147",
+      "title": "petanam",
+      "body": "исполнитель действия: сажать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6148",
+      "title": "berlukis",
+      "body": "заниматься действием: рисовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6149",
+      "title": "terlukis",
+      "body": "быть/оказаться в состоянии: рисовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6150",
+      "title": "perlukisan",
+      "body": "процесс/сфера действия: рисовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6151",
+      "title": "pelukis",
+      "body": "исполнитель действия: рисовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6152",
+      "title": "bercuci",
+      "body": "заниматься действием: мыть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6153",
+      "title": "tercuci",
+      "body": "быть/оказаться в состоянии: мыть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6154",
+      "title": "percucian",
+      "body": "процесс/сфера действия: мыть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6155",
+      "title": "pecuci",
+      "body": "исполнитель действия: мыть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6156",
+      "title": "berbasuh",
+      "body": "заниматься действием: стирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6157",
+      "title": "terbasuh",
+      "body": "быть/оказаться в состоянии: стирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6158",
+      "title": "perbasuhan",
+      "body": "процесс/сфера действия: стирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6159",
+      "title": "pebasuh",
+      "body": "исполнитель действия: стирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6160",
+      "title": "berbubar",
+      "body": "заниматься действием: распускать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6161",
+      "title": "terbubar",
+      "body": "быть/оказаться в состоянии: распускать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6162",
+      "title": "perbubaran",
+      "body": "процесс/сфера действия: распускать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6163",
+      "title": "pebubar",
+      "body": "исполнитель действия: распускать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6164",
+      "title": "berhukum",
+      "body": "заниматься действием: наказывать; судить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6165",
+      "title": "terhukum",
+      "body": "быть/оказаться в состоянии: наказывать; судить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6166",
+      "title": "perhukuman",
+      "body": "процесс/сфера действия: наказывать; судить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6167",
+      "title": "pehukum",
+      "body": "исполнитель действия: наказывать; судить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6168",
+      "title": "bersah",
+      "body": "заниматься действием: подтверждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6169",
+      "title": "tersah",
+      "body": "быть/оказаться в состоянии: подтверждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6170",
+      "title": "persahan",
+      "body": "процесс/сфера действия: подтверждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6171",
+      "title": "pesah",
+      "body": "исполнитель действия: подтверждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6172",
+      "title": "bersunting",
+      "body": "заниматься действием: редактировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6173",
+      "title": "tersunting",
+      "body": "быть/оказаться в состоянии: редактировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6174",
+      "title": "persuntingan",
+      "body": "процесс/сфера действия: редактировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6175",
+      "title": "pesunting",
+      "body": "исполнитель действия: редактировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6176",
+      "title": "beraudit",
+      "body": "заниматься действием: аудировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6177",
+      "title": "teraudit",
+      "body": "быть/оказаться в состоянии: аудировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6178",
+      "title": "perauditan",
+      "body": "процесс/сфера действия: аудировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6179",
+      "title": "peaudit",
+      "body": "исполнитель действия: аудировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6180",
+      "title": "beruji",
+      "body": "заниматься действием: тестировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6181",
+      "title": "teruji",
+      "body": "быть/оказаться в состоянии: тестировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6182",
+      "title": "perujian",
+      "body": "процесс/сфера действия: тестировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6183",
+      "title": "peuji",
+      "body": "исполнитель действия: тестировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6184",
+      "title": "bertimbang",
+      "body": "заниматься действием: взвешивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6185",
+      "title": "tertimbang",
+      "body": "быть/оказаться в состоянии: взвешивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6186",
+      "title": "pertimbangan",
+      "body": "процесс/сфера действия: взвешивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6187",
+      "title": "petimbang",
+      "body": "исполнитель действия: взвешивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6188",
+      "title": "berhubung",
+      "body": "заниматься действием: связывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6189",
+      "title": "terhubung",
+      "body": "быть/оказаться в состоянии: связывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6190",
+      "title": "perhubungan",
+      "body": "процесс/сфера действия: связывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6191",
+      "title": "pehubung",
+      "body": "исполнитель действия: связывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6192",
+      "title": "bernilai",
+      "body": "заниматься действием: оценивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6193",
+      "title": "ternilai",
+      "body": "быть/оказаться в состоянии: оценивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6194",
+      "title": "pernilaian",
+      "body": "процесс/сфера действия: оценивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6195",
+      "title": "penilai",
+      "body": "исполнитель действия: оценивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6196",
+      "title": "berserah",
+      "body": "заниматься действием: передавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6197",
+      "title": "terserah",
+      "body": "быть/оказаться в состоянии: передавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6198",
+      "title": "perserahan",
+      "body": "процесс/сфера действия: передавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6199",
+      "title": "peserah",
+      "body": "исполнитель действия: передавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6200",
+      "title": "berpungut",
+      "body": "заниматься действием: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6201",
+      "title": "terpungut",
+      "body": "быть/оказаться в состоянии: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6202",
+      "title": "perpungutan",
+      "body": "процесс/сфера действия: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6203",
+      "title": "pepungut",
+      "body": "исполнитель действия: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6204",
+      "title": "berpadam",
+      "body": "заниматься действием: гасить; удалять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6205",
+      "title": "terpadam",
+      "body": "быть/оказаться в состоянии: гасить; удалять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6206",
+      "title": "perpadaman",
+      "body": "процесс/сфера действия: гасить; удалять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6207",
+      "title": "pepadam",
+      "body": "исполнитель действия: гасить; удалять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6208",
+      "title": "bertukar",
+      "body": "заниматься действием: менять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6209",
+      "title": "tertukar",
+      "body": "быть/оказаться в состоянии: менять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6210",
+      "title": "pertukaran",
+      "body": "процесс/сфера действия: менять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6211",
+      "title": "petukar",
+      "body": "исполнитель действия: менять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6212",
+      "title": "berpajak",
+      "body": "заниматься действием: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6213",
+      "title": "terpajak",
+      "body": "быть/оказаться в состоянии: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6214",
+      "title": "perpajakan",
+      "body": "процесс/сфера действия: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6215",
+      "title": "pepajak",
+      "body": "исполнитель действия: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6216",
+      "title": "bersewa",
+      "body": "заниматься действием: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6217",
+      "title": "tersewa",
+      "body": "быть/оказаться в состоянии: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6218",
+      "title": "persewaan",
+      "body": "процесс/сфера действия: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6219",
+      "title": "pesewa",
+      "body": "исполнитель действия: арендовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6220",
+      "title": "sebaik",
+      "body": "такой же хороший",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6221",
+      "title": "kebaikan",
+      "body": "свойство/состояние: хороший",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6222",
+      "title": "seburuk",
+      "body": "такой же плохой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6223",
+      "title": "terburuk",
+      "body": "наиболее плохой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6224",
+      "title": "keburukan",
+      "body": "свойство/состояние: плохой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6225",
+      "title": "sebesar",
+      "body": "такой же большой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6226",
+      "title": "terbesar",
+      "body": "наиболее большой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6227",
+      "title": "kebesaran",
+      "body": "свойство/состояние: большой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6228",
+      "title": "sekecil",
+      "body": "такой же маленький",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6229",
+      "title": "terkecil",
+      "body": "наиболее маленький",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6230",
+      "title": "kekecilan",
+      "body": "свойство/состояние: маленький",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6231",
+      "title": "sepanjang",
+      "body": "такой же длинный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6232",
+      "title": "terpanjang",
+      "body": "наиболее длинный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6233",
+      "title": "kepanjangan",
+      "body": "свойство/состояние: длинный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6234",
+      "title": "sependek",
+      "body": "такой же короткий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6235",
+      "title": "terpendek",
+      "body": "наиболее короткий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6236",
+      "title": "kependekan",
+      "body": "свойство/состояние: короткий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6237",
+      "title": "setinggi",
+      "body": "такой же высокий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6238",
+      "title": "tertinggi",
+      "body": "наиболее высокий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6239",
+      "title": "ketinggian",
+      "body": "свойство/состояние: высокий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6240",
+      "title": "serendah",
+      "body": "такой же низкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6241",
+      "title": "terrendah",
+      "body": "наиболее низкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6242",
+      "title": "kerendahan",
+      "body": "свойство/состояние: низкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6243",
+      "title": "secepat",
+      "body": "такой же быстрый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6244",
+      "title": "tercepat",
+      "body": "наиболее быстрый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6245",
+      "title": "kecepatan",
+      "body": "свойство/состояние: быстрый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6246",
+      "title": "selambat",
+      "body": "такой же медленный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6247",
+      "title": "terlambat",
+      "body": "наиболее медленный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6248",
+      "title": "kelambatan",
+      "body": "свойство/состояние: медленный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6249",
+      "title": "semudah",
+      "body": "такой же легкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6250",
+      "title": "termudah",
+      "body": "наиболее легкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6251",
+      "title": "sesukar",
+      "body": "такой же сложный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6252",
+      "title": "tersukar",
+      "body": "наиболее сложный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6253",
+      "title": "kesukaran",
+      "body": "свойство/состояние: сложный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6254",
+      "title": "semahal",
+      "body": "такой же дорогой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6255",
+      "title": "termahal",
+      "body": "наиболее дорогой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6256",
+      "title": "kemahalan",
+      "body": "свойство/состояние: дорогой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6257",
+      "title": "semurah",
+      "body": "такой же дешевый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6258",
+      "title": "termurah",
+      "body": "наиболее дешевый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6259",
+      "title": "kemurahan",
+      "body": "свойство/состояние: дешевый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6260",
+      "title": "sekuat",
+      "body": "такой же сильный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6261",
+      "title": "terkuat",
+      "body": "наиболее сильный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6262",
+      "title": "selemah",
+      "body": "такой же слабый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6263",
+      "title": "terlemah",
+      "body": "наиболее слабый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6264",
+      "title": "sepanas",
+      "body": "такой же горячий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6265",
+      "title": "terpanas",
+      "body": "наиболее горячий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6266",
+      "title": "kepanasan",
+      "body": "свойство/состояние: горячий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6267",
+      "title": "sesejuk",
+      "body": "такой же холодный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6268",
+      "title": "tersejuk",
+      "body": "наиболее холодный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6269",
+      "title": "kesejukan",
+      "body": "свойство/состояние: холодный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6270",
+      "title": "sebersih",
+      "body": "такой же чистый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6271",
+      "title": "terbersih",
+      "body": "наиболее чистый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6272",
+      "title": "sekotor",
+      "body": "такой же грязный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6273",
+      "title": "terkotor",
+      "body": "наиболее грязный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6274",
+      "title": "kekotoran",
+      "body": "свойство/состояние: грязный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6275",
+      "title": "secantik",
+      "body": "такой же красивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6276",
+      "title": "tercantik",
+      "body": "наиболее красивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6277",
+      "title": "kecantikan",
+      "body": "свойство/состояние: красивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6278",
+      "title": "sehodoh",
+      "body": "такой же некрасивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6279",
+      "title": "terhodoh",
+      "body": "наиболее некрасивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6280",
+      "title": "kehodohan",
+      "body": "свойство/состояние: некрасивый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6281",
+      "title": "setenang",
+      "body": "такой же спокойный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6282",
+      "title": "tertenang",
+      "body": "наиболее спокойный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6283",
+      "title": "sesibuk",
+      "body": "такой же занятый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6284",
+      "title": "tersibuk",
+      "body": "наиболее занятый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6285",
+      "title": "sekosong",
+      "body": "такой же пустой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6286",
+      "title": "terkosong",
+      "body": "наиболее пустой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6287",
+      "title": "sepenuh",
+      "body": "такой же полный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6288",
+      "title": "terpenuh",
+      "body": "наиболее полный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6289",
+      "title": "kepenuhan",
+      "body": "свойство/состояние: полный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6290",
+      "title": "terawal",
+      "body": "наиболее ранний",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6291",
+      "title": "keawalan",
+      "body": "свойство/состояние: ранний",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6292",
+      "title": "selewat",
+      "body": "такой же поздний",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6293",
+      "title": "terlewat",
+      "body": "наиболее поздний",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6294",
+      "title": "setepat",
+      "body": "такой же точный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6295",
+      "title": "tertepat",
+      "body": "наиболее точный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6296",
+      "title": "sedekat",
+      "body": "такой же близкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6297",
+      "title": "terdekat",
+      "body": "наиболее близкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6298",
+      "title": "kedekatan",
+      "body": "свойство/состояние: близкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6299",
+      "title": "sejauh",
+      "body": "такой же далекий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6300",
+      "title": "terjauh",
+      "body": "наиболее далекий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6301",
+      "title": "kejauhan",
+      "body": "свойство/состояние: далекий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6302",
+      "title": "seselamat",
+      "body": "такой же безопасный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6303",
+      "title": "terselamat",
+      "body": "наиболее безопасный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6304",
+      "title": "sepenting",
+      "body": "такой же важный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6305",
+      "title": "terpenting",
+      "body": "наиболее важный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6306",
+      "title": "sebaru",
+      "body": "такой же новый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6307",
+      "title": "terbaru",
+      "body": "наиболее новый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6308",
+      "title": "kebaruan",
+      "body": "свойство/состояние: новый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6309",
+      "title": "selama",
+      "body": "такой же старый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6310",
+      "title": "terlama",
+      "body": "наиболее старый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6311",
+      "title": "kelamaan",
+      "body": "свойство/состояние: старый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6312",
+      "title": "sehitam",
+      "body": "такой же черный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6313",
+      "title": "terhitam",
+      "body": "наиболее черный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6314",
+      "title": "kehitaman",
+      "body": "свойство/состояние: черный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6315",
+      "title": "seputih",
+      "body": "такой же белый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6316",
+      "title": "terputih",
+      "body": "наиболее белый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6317",
+      "title": "keputihan",
+      "body": "свойство/состояние: белый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6318",
+      "title": "semerah",
+      "body": "такой же красный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6319",
+      "title": "termerah",
+      "body": "наиболее красный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6320",
+      "title": "kemerahan",
+      "body": "свойство/состояние: красный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6321",
+      "title": "sebiru",
+      "body": "такой же синий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6322",
+      "title": "terbiru",
+      "body": "наиболее синий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6323",
+      "title": "kebiruan",
+      "body": "свойство/состояние: синий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6324",
+      "title": "sehijau",
+      "body": "такой же зеленый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6325",
+      "title": "terhijau",
+      "body": "наиболее зеленый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6326",
+      "title": "kehijauan",
+      "body": "свойство/состояние: зеленый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6327",
+      "title": "sekuning",
+      "body": "такой же желтый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6328",
+      "title": "terkuning",
+      "body": "наиболее желтый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6329",
+      "title": "kekuningan",
+      "body": "свойство/состояние: желтый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6330",
+      "title": "sekelabu",
+      "body": "такой же серый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6331",
+      "title": "terkelabu",
+      "body": "наиболее серый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6332",
+      "title": "kekelabuan",
+      "body": "свойство/состояние: серый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6333",
+      "title": "segembira",
+      "body": "такой же радостный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6334",
+      "title": "tergembira",
+      "body": "наиболее радостный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6335",
+      "title": "sesedih",
+      "body": "такой же грустный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6336",
+      "title": "tersedih",
+      "body": "наиболее грустный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6337",
+      "title": "kesedihan",
+      "body": "свойство/состояние: грустный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6338",
+      "title": "semarah",
+      "body": "такой же сердитый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6339",
+      "title": "termarah",
+      "body": "наиболее сердитый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6340",
+      "title": "kemarahan",
+      "body": "свойство/состояние: сердитый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6341",
+      "title": "setakut",
+      "body": "такой же испуганный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6342",
+      "title": "tertakut",
+      "body": "наиболее испуганный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6343",
+      "title": "sepasti",
+      "body": "такой же уверенный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6344",
+      "title": "terpasti",
+      "body": "наиболее уверенный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6345",
+      "title": "semungkin",
+      "body": "такой же возможный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6346",
+      "title": "termungkin",
+      "body": "наиболее возможный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6347",
+      "title": "selapang",
+      "body": "такой же просторный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6348",
+      "title": "terlapang",
+      "body": "наиболее просторный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6349",
+      "title": "kelapangan",
+      "body": "свойство/состояние: просторный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6350",
+      "title": "sesempit",
+      "body": "такой же узкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6351",
+      "title": "tersempit",
+      "body": "наиболее узкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6352",
+      "title": "sehalus",
+      "body": "такой же тонкий; изящный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6353",
+      "title": "terhalus",
+      "body": "наиболее тонкий; изящный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6354",
+      "title": "kehalusan",
+      "body": "свойство/состояние: тонкий; изящный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6355",
+      "title": "sekasar",
+      "body": "такой же грубый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6356",
+      "title": "terkasar",
+      "body": "наиболее грубый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6357",
+      "title": "kekasaran",
+      "body": "свойство/состояние: грубый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6358",
+      "title": "selicin",
+      "body": "такой же гладкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6359",
+      "title": "terlicin",
+      "body": "наиболее гладкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6360",
+      "title": "kelicinan",
+      "body": "свойство/состояние: гладкий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6361",
+      "title": "setajam",
+      "body": "такой же острый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6362",
+      "title": "tertajam",
+      "body": "наиболее острый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6363",
+      "title": "ketajaman",
+      "body": "свойство/состояние: острый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6364",
+      "title": "setumpul",
+      "body": "такой же тупой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6365",
+      "title": "tertumpul",
+      "body": "наиболее тупой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-6366",
+      "title": "ketumpulan",
+      "body": "свойство/состояние: тупой",
+      "page": 1,
+      "verified": true
     }
   ]
 }
