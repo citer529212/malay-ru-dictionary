@@ -68818,6 +68818,1546 @@
       "body": "процесс/роль: поливать",
       "page": 1,
       "verified": true
+    },
+    {
+      "id": "cur-9832",
+      "title": "persisteman",
+      "body": "роль/функция: система",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9833",
+      "title": "persketsaan",
+      "body": "роль/функция: эскиз",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9834",
+      "title": "persloganan",
+      "body": "роль/функция: слоган",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9835",
+      "title": "persokongan",
+      "body": "роль/функция: поддерживать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9836",
+      "title": "persolatkan",
+      "body": "процесс/роль: совершать джаназа-намаз",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9837",
+      "title": "persorbanan",
+      "body": "роль/функция: тюрбан",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9838",
+      "title": "perspesifik",
+      "body": "процесс/роль: конкретный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9839",
+      "title": "perstabilan",
+      "body": "роль/функция: стабильный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9840",
+      "title": "perstagnasi",
+      "body": "процесс/роль: стагнация",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9841",
+      "title": "perstatikan",
+      "body": "роль/функция: статический",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9842",
+      "title": "perstigmaan",
+      "body": "роль/функция: стигма",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9843",
+      "title": "perstrategi",
+      "body": "процесс/роль: стратегия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9844",
+      "title": "persubjekan",
+      "body": "роль/функция: предмет",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9845",
+      "title": "persubtajuk",
+      "body": "процесс/роль: подзаголовок",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9846",
+      "title": "persufiksan",
+      "body": "роль/функция: суффикс",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9847",
+      "title": "persukatann",
+      "body": "процесс/роль: измерение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9848",
+      "title": "persuksesan",
+      "body": "роль/функция: успех",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9849",
+      "title": "persulingan",
+      "body": "роль/функция: флейта",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9850",
+      "title": "persultanan",
+      "body": "роль/функция: султан",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9851",
+      "title": "persumbaran",
+      "body": "роль/функция: хвастливый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9852",
+      "title": "persumberan",
+      "body": "роль/функция: источник",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9853",
+      "title": "persumpahan",
+      "body": "роль/функция: клятва",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9854",
+      "title": "persundalan",
+      "body": "роль/функция: распутница",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9855",
+      "title": "persuntikan",
+      "body": "роль/функция: вводить инъекцию",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9856",
+      "title": "persuntukan",
+      "body": "роль/функция: тупой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9857",
+      "title": "persuplemen",
+      "body": "процесс/роль: добавка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9858",
+      "title": "persuporter",
+      "body": "процесс/роль: болельщик",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9859",
+      "title": "persuspekan",
+      "body": "роль/функция: подозреваемый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9860",
+      "title": "persyarahan",
+      "body": "процесс/роль: лекция",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9861",
+      "title": "persyaratan",
+      "body": "роль/функция: условие",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9862",
+      "title": "persyarikat",
+      "body": "процесс/роль: компания",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9863",
+      "title": "persyirikan",
+      "body": "роль/функция: ширк",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9864",
+      "title": "persyukuran",
+      "body": "роль/функция: благодарность",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9865",
+      "title": "pertabletan",
+      "body": "роль/функция: планшет",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9866",
+      "title": "pertabrakan",
+      "body": "процесс/роль: столкновение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9867",
+      "title": "pertabungan",
+      "body": "роль/функция: фонд",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9868",
+      "title": "pertadbiran",
+      "body": "роль/функция: управлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9869",
+      "title": "pertahfizan",
+      "body": "роль/функция: заучивание Корана",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9870",
+      "title": "pertahsilan",
+      "body": "роль/функция: получение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9871",
+      "title": "pertajdidan",
+      "body": "роль/функция: обновление",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9872",
+      "title": "pertakbiran",
+      "body": "роль/функция: такбир",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9873",
+      "title": "pertakdiran",
+      "body": "роль/функция: судьба",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9874",
+      "title": "pertakhtaan",
+      "body": "роль/функция: трон",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9875",
+      "title": "pertaklimat",
+      "body": "процесс/роль: брифинг",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9876",
+      "title": "pertaklukan",
+      "body": "роль/функция: подчиняться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9877",
+      "title": "pertakrifan",
+      "body": "роль/функция: определение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9878",
+      "title": "pertaksiran",
+      "body": "процесс/роль: оценка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9879",
+      "title": "pertakungan",
+      "body": "процесс/роль: водохранилище",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9880",
+      "title": "pertambahan",
+      "body": "роль/функция: добавлять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9881",
+      "title": "pertambakan",
+      "body": "роль/функция: насыпь",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9882",
+      "title": "pertambatan",
+      "body": "роль/функция: привязывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9883",
+      "title": "pertambunan",
+      "body": "роль/функция: полный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9884",
+      "title": "pertampakan",
+      "body": "роль/функция: видимый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9885",
+      "title": "pertampilan",
+      "body": "роль/функция: появляться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9886",
+      "title": "pertandatan",
+      "body": "роль/функция: подпись",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9887",
+      "title": "pertandukan",
+      "body": "роль/функция: рог",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9888",
+      "title": "pertanggaan",
+      "body": "роль/функция: лестница",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9889",
+      "title": "pertangisan",
+      "body": "роль/функция: плач",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9890",
+      "title": "pertangkian",
+      "body": "роль/функция: бак",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9891",
+      "title": "pertanzilan",
+      "body": "роль/функция: ниспослание",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9892",
+      "title": "pertarbiyah",
+      "body": "процесс/роль: воспитание",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9893",
+      "title": "pertargetan",
+      "body": "роль/функция: цель",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9894",
+      "title": "pertasbihan",
+      "body": "роль/функция: тасбих",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9895",
+      "title": "pertasrifan",
+      "body": "роль/функция: спряжение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9896",
+      "title": "pertebingan",
+      "body": "роль/функция: берег",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9897",
+      "title": "pertegangan",
+      "body": "роль/функция: напряженный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9898",
+      "title": "pertehnikan",
+      "body": "роль/функция: техника",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9899",
+      "title": "perteknikan",
+      "body": "роль/функция: техника",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9900",
+      "title": "pertembakan",
+      "body": "роль/функция: стрелять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9901",
+      "title": "pertembokan",
+      "body": "роль/функция: стена",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9902",
+      "title": "pertempahan",
+      "body": "роль/функция: бронировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9903",
+      "title": "pertempatan",
+      "body": "роль/функция: место",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9904",
+      "title": "pertempayan",
+      "body": "процесс/роль: большой кувшин",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9905",
+      "title": "pertempohan",
+      "body": "роль/функция: срок",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9906",
+      "title": "pertemporal",
+      "body": "процесс/роль: временной",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9907",
+      "title": "pertenangan",
+      "body": "роль/функция: спокойный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9908",
+      "title": "pertengikan",
+      "body": "роль/функция: прогорклый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9909",
+      "title": "pertengokan",
+      "body": "роль/функция: смотреть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9910",
+      "title": "pertepatkan",
+      "body": "процесс/роль: уточнять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9911",
+      "title": "pertepungan",
+      "body": "роль/функция: мука",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9912",
+      "title": "pertetapkan",
+      "body": "процесс/роль: назначить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9913",
+      "title": "pertimbalan",
+      "body": "роль/функция: свинец",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9914",
+      "title": "pertindakan",
+      "body": "роль/функция: действовать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9915",
+      "title": "pertohmahan",
+      "body": "роль/функция: клевета",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9916",
+      "title": "pertokohkan",
+      "body": "процесс/роль: выдвигать как фигуру",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9917",
+      "title": "pertolongan",
+      "body": "роль/функция: помогите",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9918",
+      "title": "pertonjolan",
+      "body": "роль/функция: выделяться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9919",
+      "title": "pertopengan",
+      "body": "роль/функция: маска",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9920",
+      "title": "pertrayekan",
+      "body": "роль/функция: маршрут",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9921",
+      "title": "pertribunan",
+      "body": "роль/функция: трибуна",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9922",
+      "title": "pertudingan",
+      "body": "процесс/роль: обвинение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9923",
+      "title": "pertukangan",
+      "body": "процесс/роль: ремесло",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9924",
+      "title": "pertulangan",
+      "body": "роль/функция: кость",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9925",
+      "title": "pertumbuhan",
+      "body": "роль/функция: расти",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9926",
+      "title": "pertumbukan",
+      "body": "процесс/роль: столкновение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9927",
+      "title": "pertumpahan",
+      "body": "роль/функция: проливаться",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9928",
+      "title": "pertunjukan",
+      "body": "роль/функция: показывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9929",
+      "title": "perturbinan",
+      "body": "роль/функция: турбина",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9930",
+      "title": "pertuturkan",
+      "body": "процесс/роль: рассказывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9931",
+      "title": "perundangan",
+      "body": "роль/функция: приглашать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9932",
+      "title": "perunggahan",
+      "body": "процесс/роль: загрузка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9933",
+      "title": "perunggulan",
+      "body": "роль/функция: выдающийся",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9934",
+      "title": "perungkapan",
+      "body": "процесс/роль: выражение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9935",
+      "title": "peruntungan",
+      "body": "роль/функция: прибыль",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9936",
+      "title": "pervaksinan",
+      "body": "роль/функция: вакцина",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9937",
+      "title": "pervektoran",
+      "body": "роль/функция: вектор",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9938",
+      "title": "perverbalan",
+      "body": "роль/функция: вербальный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9939",
+      "title": "perwarnakan",
+      "body": "процесс/роль: окрашивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9940",
+      "title": "perwenangan",
+      "body": "роль/функция: полномочие",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9941",
+      "title": "perwewenang",
+      "body": "процесс/роль: полномочия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9942",
+      "title": "perwujudkan",
+      "body": "процесс/роль: создавать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9943",
+      "title": "perzahirkan",
+      "body": "процесс/роль: выражать явно",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9944",
+      "title": "perzarrahan",
+      "body": "роль/функция: частица",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9945",
+      "title": "pesaringkan",
+      "body": "каузативно-направленная форма: исполнитель действия: фильтровать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9946",
+      "title": "pesimpankan",
+      "body": "каузативно-направленная форма: исполнитель действия: хранить",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9947",
+      "title": "petafsirkan",
+      "body": "каузативно-направленная форма: исполнитель действия: толковать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9948",
+      "title": "petunggukan",
+      "body": "каузативно-направленная форма: исполнитель действия: ждать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9949",
+      "title": "pindahankan",
+      "body": "каузативно-направленная форма: перевод",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9950",
+      "title": "pinjamankan",
+      "body": "каузативно-направленная форма: кредит",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9951",
+      "title": "prihatinkan",
+      "body": "каузативно-направленная форма: заботливый",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9952",
+      "title": "provinsikan",
+      "body": "каузативно-направленная форма: провинция",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9953",
+      "title": "pulangankan",
+      "body": "каузативно-направленная форма: возврат товара",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9954",
+      "title": "rakitkankan",
+      "body": "каузативно-направленная форма: собирать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9955",
+      "title": "rambutankan",
+      "body": "каузативно-направленная форма: рамбутан",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9956",
+      "title": "redupkankan",
+      "body": "каузативно-направленная форма: приглушать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9957",
+      "title": "remehkankan",
+      "body": "каузативно-направленная форма: недооценивать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9958",
+      "title": "rentasankan",
+      "body": "каузативно-направленная форма: пересечение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9959",
+      "title": "restorankan",
+      "body": "каузативно-направленная форма: ресторан",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9960",
+      "title": "rujukkankan",
+      "body": "каузативно-направленная форма: ссылать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9961",
+      "title": "rumitkankan",
+      "body": "каузативно-направленная форма: усложнять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9962",
+      "title": "sakitkankan",
+      "body": "каузативно-направленная форма: причинять боль",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9963",
+      "title": "sandarankan",
+      "body": "каузативно-направленная форма: резервная копия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9964",
+      "title": "silinderkan",
+      "body": "каузативно-направленная форма: цилиндр",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9965",
+      "title": "simpanankan",
+      "body": "каузативно-направленная форма: сбережения",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9966",
+      "title": "sintesiskan",
+      "body": "каузативно-направленная форма: синтез",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9967",
+      "title": "siramkankan",
+      "body": "каузативно-направленная форма: поливать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9968",
+      "title": "solatkankan",
+      "body": "каузативно-направленная форма: совершать джаназа-намаз",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9969",
+      "title": "stagnasikan",
+      "body": "каузативно-направленная форма: стагнация",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9970",
+      "title": "strategikan",
+      "body": "каузативно-направленная форма: стратегия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9971",
+      "title": "sukatannkan",
+      "body": "каузативно-направленная форма: измерение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9972",
+      "title": "sumbarankan",
+      "body": "каузативно-направленная форма: хвастовство",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9973",
+      "title": "suplemenkan",
+      "body": "каузативно-направленная форма: добавка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9974",
+      "title": "suporterkan",
+      "body": "каузативно-направленная форма: болельщик",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9975",
+      "title": "syarahankan",
+      "body": "каузативно-направленная форма: лекция",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9976",
+      "title": "syarikatkan",
+      "body": "каузативно-направленная форма: компания",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9977",
+      "title": "tabrakankan",
+      "body": "каузативно-направленная форма: столкновение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9978",
+      "title": "tafsirankan",
+      "body": "каузативно-направленная форма: толкование",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9979",
+      "title": "taklimatkan",
+      "body": "каузативно-направленная форма: брифинг",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9980",
+      "title": "taksirankan",
+      "body": "каузативно-направленная форма: оценка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9981",
+      "title": "takungankan",
+      "body": "каузативно-направленная форма: водохранилище",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9982",
+      "title": "tambahankan",
+      "body": "каузативно-направленная форма: дополнение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9983",
+      "title": "tambatankan",
+      "body": "каузативно-направленная форма: швартовка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9984",
+      "title": "tandukankan",
+      "body": "каузативно-направленная форма: удар головой",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9985",
+      "title": "tarbiyahkan",
+      "body": "каузативно-направленная форма: воспитание",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9986",
+      "title": "tempahankan",
+      "body": "каузативно-направленная форма: бронь",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9987",
+      "title": "tempayankan",
+      "body": "каузативно-направленная форма: большой кувшин",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9988",
+      "title": "temporalkan",
+      "body": "каузативно-направленная форма: временной",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9989",
+      "title": "tepatkankan",
+      "body": "каузативно-направленная форма: уточнять",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9990",
+      "title": "terabnormal",
+      "body": "результативная/степенная форма: ненормальный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9991",
+      "title": "teraktifkan",
+      "body": "результативная/степенная форма: активировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9992",
+      "title": "terambulans",
+      "body": "результативная/степенная форма: скорая помощь",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9993",
+      "title": "terartistik",
+      "body": "результативная/степенная форма: художественный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9994",
+      "title": "terasingkan",
+      "body": "результативная/степенная форма: изолировать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9995",
+      "title": "teratmosfer",
+      "body": "результативная/степенная форма: атмосфера",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9996",
+      "title": "terbajingan",
+      "body": "результативная/степенная форма: негодяй",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9997",
+      "title": "terbarangan",
+      "body": "результативная/степенная форма: товары",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9998",
+      "title": "terbelakang",
+      "body": "результативная/степенная форма: зад",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-9999",
+      "title": "terbenarkan",
+      "body": "результативная/степенная форма: разрешать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10000",
+      "title": "terbirokrat",
+      "body": "результативная/степенная форма: бюрократ",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10001",
+      "title": "terbolehkah",
+      "body": "результативная/степенная форма: можно ли",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10002",
+      "title": "tercadangan",
+      "body": "результативная/степенная форма: подсказка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10003",
+      "title": "tercawangan",
+      "body": "результативная/степенная форма: ветка",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10004",
+      "title": "tercendawan",
+      "body": "результативная/степенная форма: гриб",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10005",
+      "title": "terdekatkan",
+      "body": "результативная/степенная форма: приближать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10006",
+      "title": "terdemokrat",
+      "body": "результативная/степенная форма: демократ",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10007",
+      "title": "terekspresi",
+      "body": "результативная/степенная форма: выражение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10008",
+      "title": "terfalsafah",
+      "body": "результативная/степенная форма: философия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10009",
+      "title": "terfestival",
+      "body": "результативная/степенная форма: фестиваль",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10010",
+      "title": "tergelincir",
+      "body": "результативная/степенная форма: соскальзывать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10011",
+      "title": "tergemilang",
+      "body": "результативная/степенная форма: блестящий",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10012",
+      "title": "tergolongan",
+      "body": "результативная/степенная форма: группа",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10013",
+      "title": "terhalangan",
+      "body": "результативная/степенная форма: препятствие",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10014",
+      "title": "terhospital",
+      "body": "результативная/степенная форма: больница",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10015",
+      "title": "terimportir",
+      "body": "результативная/степенная форма: импортер",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10016",
+      "title": "terindustri",
+      "body": "результативная/степенная форма: индустрия",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10017",
+      "title": "teringatkan",
+      "body": "результативная/степенная форма: напоминать",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10018",
+      "title": "terinklusif",
+      "body": "результативная/степенная форма: инклюзивный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10019",
+      "title": "terinsentif",
+      "body": "результативная/степенная форма: стимул",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10020",
+      "title": "terinsurans",
+      "body": "результативная/степенная форма: страхование",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10021",
+      "title": "terintegral",
+      "body": "результативная/степенная форма: интегральный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10022",
+      "title": "terintensif",
+      "body": "результативная/степенная форма: интенсивный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10023",
+      "title": "terinternet",
+      "body": "результативная/степенная форма: интернет",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10024",
+      "title": "terjambatan",
+      "body": "результативная/степенная форма: мост",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10025",
+      "title": "terjaringan",
+      "body": "результативная/степенная форма: сеть",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10026",
+      "title": "terjembatan",
+      "body": "результативная/степенная форма: мост",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10027",
+      "title": "terkalendar",
+      "body": "результативная/степенная форма: календарь",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10028",
+      "title": "terkalender",
+      "body": "результативная/степенная форма: календарь",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10029",
+      "title": "terkalkulus",
+      "body": "результативная/степенная форма: калькулюс",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10030",
+      "title": "terkampanye",
+      "body": "результативная/степенная форма: кампания",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10031",
+      "title": "terkardigan",
+      "body": "результативная/степенная форма: кардиган",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10032",
+      "title": "terkarnival",
+      "body": "результативная/степенная форма: карнавал",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10033",
+      "title": "terkatedral",
+      "body": "результативная/степенная форма: собор",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10034",
+      "title": "terkognitif",
+      "body": "результативная/степенная форма: когнитивный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10035",
+      "title": "terkomitmen",
+      "body": "результативная/степенная форма: обязательство",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10036",
+      "title": "terkomponen",
+      "body": "результативная/степенная форма: компонент",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10037",
+      "title": "terkompromi",
+      "body": "результативная/степенная форма: компромисс",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10038",
+      "title": "terkomputer",
+      "body": "результативная/степенная форма: компьютер",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10039",
+      "title": "terkonvensi",
+      "body": "результативная/степенная форма: конвенция",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10040",
+      "title": "terkorporat",
+      "body": "результативная/степенная форма: корпоративный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10041",
+      "title": "terkosmetik",
+      "body": "результативная/степенная форма: косметика",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10042",
+      "title": "terkritikal",
+      "body": "результативная/степенная форма: критический",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10043",
+      "title": "terlamanweb",
+      "body": "результативная/степенная форма: веб-страница",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10044",
+      "title": "terlampiran",
+      "body": "результативная/степенная форма: приложение",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10045",
+      "title": "termadrasah",
+      "body": "результативная/степенная форма: медресе",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10046",
+      "title": "termahirkan",
+      "body": "результативная/степенная форма: совершенствовать навык",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10047",
+      "title": "termahkamah",
+      "body": "результативная/степенная форма: суд",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10048",
+      "title": "termaklumat",
+      "body": "результативная/степенная форма: информация",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10049",
+      "title": "termarginal",
+      "body": "результативная/степенная форма: маргинальный",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10050",
+      "title": "termaslahat",
+      "body": "результативная/степенная форма: польза",
+      "page": 1,
+      "verified": true
+    },
+    {
+      "id": "cur-10051",
+      "title": "termatlamat",
+      "body": "результативная/степенная форма: цель",
+      "page": 1,
+      "verified": true
     }
   ]
 }
