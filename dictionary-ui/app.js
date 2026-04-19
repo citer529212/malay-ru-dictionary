@@ -92,6 +92,12 @@ ui.searchInput.addEventListener("input", () => {
   clearTimeout(inputDebounceId);
   inputDebounceId = setTimeout(runSearch, 120);
 });
+ui.searchInput.addEventListener("search", runSearch);
+ui.searchInput.addEventListener("change", runSearch);
+ui.searchInput.addEventListener("paste", () => {
+  clearTimeout(inputDebounceId);
+  inputDebounceId = setTimeout(runSearch, 30);
+});
 
 ui.searchModeSwitch.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-mode]");
@@ -1349,7 +1355,7 @@ function renderResults() {
 }
 
 function runSearch() {
-  const query = ui.searchInput.value.trim();
+  const query = cleanupLine(ui.searchInput.value || "");
   state.activeQuery = query;
   state.bestAnswer = computeBestAnswer(query);
 
