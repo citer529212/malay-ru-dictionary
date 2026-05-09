@@ -358,6 +358,18 @@ def run_referent_analysis(
     ref_countries_allowed = set(getattr(referent_core, "REF_COUNTRIES", ["China", "USA", "Russia"]))
     evi_coarse_allowed = set(getattr(referent_core, "EVI_COARSE_ALLOWED", {-2, -1, 0, 1, 2}))
     scored = scored[scored["ref_country"].isin(ref_countries_allowed)].copy()
+    # Backward compatibility with older referent modules / column schemas.
+    if "EVI" not in scored.columns:
+        scored["EVI"] = 0
+    if "EVI_raw" not in scored.columns:
+        scored["EVI_raw"] = pd.to_numeric(scored["EVI"], errors="coerce").fillna(0).astype(int) * 5
+    if "EVI_norm" not in scored.columns:
+        scored["EVI_norm"] = pd.to_numeric(scored["EVI_raw"], errors="coerce").fillna(0.0) / 5.0
+    if "IP" not in scored.columns:
+        scored["IP"] = 0.0
+    for col in ["IDI", "EMI", "MTI", "N_content", "referent_salience"]:
+        if col not in scored.columns:
+            scored[col] = 0.0 if col != "N_content" else 0
     scored.loc[(scored["N_content"] <= 0), ["IDI", "EMI", "MTI", "IP"]] = 0.0
     scored.loc[(~scored["EVI"].isin(evi_coarse_allowed)), "EVI"] = 0
     scored.loc[(~scored["EVI_raw"].between(-10, 10)), ["EVI_raw", "EVI_norm", "IP"]] = [0, 0.0, 0.0]
