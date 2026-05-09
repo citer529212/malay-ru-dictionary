@@ -10,6 +10,7 @@ import re
 import sys
 import tempfile
 import zipfile
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -29,6 +30,18 @@ try:
     import media_analyzer_referent as referent_core
 except Exception:
     referent_core = None
+try:
+    from calibration.calibration_builder import CalibrationBuilder
+    from calibration.calibration_lexicon_expander import apply_verified_terms_to_lexicons
+    from calibration.calibration_metrics import add_percentiles as calibration_add_percentiles
+    from calibration.calibration_ui import render_main_tabs as render_calibration_panel
+    from calibration.calibration_ui import render_sidebar_controls as render_calibration_sidebar
+except Exception:
+    CalibrationBuilder = None
+    apply_verified_terms_to_lexicons = None
+    calibration_add_percentiles = None
+    render_calibration_panel = None
+    render_calibration_sidebar = None
 
 APP_BUILD = "2026-05-08-18:35"
 
@@ -503,6 +516,10 @@ def run_referent_analysis(
     ip_formula_mode: str = "updated",
     aggregation_mode: str = "weighted by S_r",
     percentile_basis: str = "full corpus",
+    calibration_texts_df: Optional[pd.DataFrame] = None,
+    calibration_filter: str = "full_calibration_corpus",
+    use_empirical_percentile_interpretation: bool = True,
+    lexicon_version: str = "default",
 ):
     if referent_core is None:
         raise RuntimeError("referent analyzer module is unavailable")
@@ -577,6 +594,7 @@ def run_referent_analysis(
     scored["EMI_percent_value"] = scored["EMI_raw"] * 100.0
     scored["MTI_percent_value"] = scored["MTI_raw"] * 100.0
     scored["EVI_explanation"] = scored.get("evi_explanation", "")
+    scored["lexicon_version_used"] = str(lexicon_version)
 
     # Aggregation weights
     if str(aggregation_mode).startswith("weighted"):
@@ -589,16 +607,66 @@ def run_referent_analysis(
         scored.loc[pd.to_numeric(scored["N_content"], errors="coerce").fillna(0) <= 0, "aggregation_weight"] = 0.0
 
     # Percentiles
-    scored = _assign_percentiles(scored, "IDI_raw", "IDI_percentile", percentile_basis)
-    scored = _assign_percentiles(scored, "EMI_raw", "EMI_percentile", percentile_basis)
-    scored = _assign_percentiles(scored, "MTI_raw", "MTI_percentile", percentile_basis)
-    scored = _assign_percentiles(scored, "IP_i", "IP_percentile", percentile_basis)
-    scored = _assign_percentiles(scored, "IP_abs_i", "IP_abs_percentile", percentile_basis)
-    scored["IDI_level_empirical"] = scored["IDI_percentile"].map(_empirical_level)
-    scored["EMI_level_empirical"] = scored["EMI_percentile"].map(_empirical_level)
-    scored["MTI_level_empirical"] = scored["MTI_percentile"].map(_empirical_level)
-    scored["IP_level_empirical"] = scored["IP_percentile"].map(_empirical_level)
-    scored["IP_abs_level_empirical"] = scored["IP_abs_percentile"].map(_empirical_level)
+    if (
+        use_empirical_percentile_interpretation
+        and calibration_add_percentiles is not None
+        and calibration_texts_df is not None
+        and not calibration_texts_df.empty
+    ):
+        base = calibration_texts_df.copy()
+        if calibration_filter == "neutral_news_only":
+            base = base[base.get("calibration_type", "") == "neutral_news"]
+        elif calibration_filter == "political_news_only":
+            base = base[base.get("calibration_type", "") == "standard_political_news"]
+        elif calibration_filter == "same_language_only" and "language" in scored.columns and "language" in base.columns:
+            lang_mode = str(scored["language"].mode().iloc[0]) if not scored["language"].dropna().empty else ""
+            base = base[base["language"] == lang_mode]
+        elif calibration_filter == "same_ref_country_only" and "ref_country" in scored.columns and "ref_country" in base.columns:
+            refs = set(scored["ref_country"].dropna().astype(str).tolist())
+            base = base[base["ref_country"].astype(str).isin(refs)]
+        if base.empty:
+            base = calibration_texts_df.copy()
+
+        scored = calibration_add_percentiles(scored, base)
+        # alias naming used in dashboard
+        rename_map = {
+            "IDI_percentile": "IDI_percentile",
+            "EMI_percentile": "EMI_percentile",
+            "MTI_percentile": "MTI_percentile",
+            "IP_percentile": "IP_percentile",
+            "IP_abs_percentile": "IP_abs_percentile",
+            "IDI_empirical_level": "IDI_empirical_level",
+            "EMI_empirical_level": "EMI_empirical_level",
+            "MTI_empirical_level": "MTI_empirical_level",
+            "IP_empirical_level": "IP_empirical_level",
+            "IP_abs_empirical_level": "IP_abs_empirical_level",
+        }
+        for k, v in rename_map.items():
+            if k in scored.columns and v not in scored.columns:
+                scored[v] = scored[k]
+    else:
+        scored = _assign_percentiles(scored, "IDI_raw", "IDI_percentile", percentile_basis)
+        scored = _assign_percentiles(scored, "EMI_raw", "EMI_percentile", percentile_basis)
+        scored = _assign_percentiles(scored, "MTI_raw", "MTI_percentile", percentile_basis)
+        scored = _assign_percentiles(scored, "IP_i", "IP_percentile", percentile_basis)
+        scored = _assign_percentiles(scored, "IP_abs_i", "IP_abs_percentile", percentile_basis)
+        scored["IDI_empirical_level"] = scored["IDI_percentile"].map(_empirical_level)
+        scored["EMI_empirical_level"] = scored["EMI_percentile"].map(_empirical_level)
+        scored["MTI_empirical_level"] = scored["MTI_percentile"].map(_empirical_level)
+        scored["IP_empirical_level"] = scored["IP_percentile"].map(_empirical_level)
+        scored["IP_abs_empirical_level"] = scored["IP_abs_percentile"].map(_empirical_level)
+
+    # Backward-compatible level aliases
+    if "IDI_level_empirical" not in scored.columns and "IDI_empirical_level" in scored.columns:
+        scored["IDI_level_empirical"] = scored["IDI_empirical_level"]
+    if "EMI_level_empirical" not in scored.columns and "EMI_empirical_level" in scored.columns:
+        scored["EMI_level_empirical"] = scored["EMI_empirical_level"]
+    if "MTI_level_empirical" not in scored.columns and "MTI_empirical_level" in scored.columns:
+        scored["MTI_level_empirical"] = scored["MTI_empirical_level"]
+    if "IP_level_empirical" not in scored.columns and "IP_empirical_level" in scored.columns:
+        scored["IP_level_empirical"] = scored["IP_empirical_level"]
+    if "IP_abs_level_empirical" not in scored.columns and "IP_abs_empirical_level" in scored.columns:
+        scored["IP_abs_level_empirical"] = scored["IP_abs_empirical_level"]
 
     # Round storage precision (do not visually collapse later)
     for c in ["IDI_raw", "EMI_raw", "MTI_raw", "IP_i", "IP_abs_i", "IP_context", "IP_context_abs", "EVI_norm", "Discursive_energy"]:
@@ -688,6 +756,20 @@ def run_referent_analysis(
     by_outlet = _agg_table(["outlet_name", "media_country", "ref_country"])
     by_media_ref = _agg_table(["media_country", "ref_country"])
     matrix = by_media_ref.copy()
+    # Required summary aliases for calibrated reporting
+    if "IP_final" in matrix.columns:
+        matrix["mean_IP"] = matrix["IP_final"]
+    if "IP_abs_final" in matrix.columns:
+        matrix["mean_abs_IP"] = matrix["IP_abs_final"]
+    matrix["interpretation_summary"] = matrix.apply(
+        lambda r: (
+            f"IDI pctl={float(r.get('mean_IDI_percentile', 0.0)):.1f}; "
+            f"EMI pctl={float(r.get('mean_EMI_percentile', 0.0)):.1f}; "
+            f"MTI pctl={float(r.get('mean_MTI_percentile', 0.0)):.1f}; "
+            f"IP_abs pctl={float(r.get('mean_IP_abs_percentile', 0.0)):.1f}"
+        ),
+        axis=1,
+    )
 
     flagged = referent_core.build_flagged_cases(scored) if hasattr(referent_core, "build_flagged_cases") else pd.DataFrame()
     if not scored.empty:
@@ -844,6 +926,26 @@ def _evi_mode_ru(mode: str) -> str:
     return mapping.get(m, m)
 
 
+def _percentile_basis_ru_to_internal(label: str) -> str:
+    m = {
+        "Весь корпус": "full corpus",
+        "По стране медиа": "selected media_country",
+        "По референту": "selected ref_country",
+        "Страна медиа × референт": "media_country × ref_country",
+    }
+    return m.get(label, "full corpus")
+
+
+def _percentile_basis_internal_to_ru(value: str) -> str:
+    m = {
+        "full corpus": "весь корпус",
+        "selected media_country": "по стране медиа",
+        "selected ref_country": "по референту",
+        "media_country × ref_country": "страна медиа × референт",
+    }
+    return m.get((value or "").strip(), str(value))
+
+
 def _collect_terms(series: pd.Series) -> List[str]:
     terms: List[str] = []
     for val in series.fillna("").astype(str).tolist():
@@ -994,6 +1096,9 @@ def show_referent_dashboard(
         df_ref["EVI_norm"] = pd.to_numeric(df_ref["EVI_raw"], errors="coerce").fillna(0.0) / 5.0
 
     st.subheader(f"Анализ референта: {ref_country}")
+    if "lexicon_version_used" in df_ref.columns:
+        lv = str(df_ref["lexicon_version_used"].dropna().astype(str).iloc[0]) if not df_ref["lexicon_version_used"].dropna().empty else "default"
+        st.caption(f"Lexicon version used: `{lv}`")
     fmt_raw = f".{int(display_precision)}f"
     fmt_pct = ".4f"
     fmt_ip = ".6f"
@@ -1093,7 +1198,7 @@ def show_referent_dashboard(
     st.caption(
         f"Режим EVI: `{evi_mode}` — {_evi_mode_ru(evi_mode)} "
         f"Технические упоминания {'исключены' if exclude_technical_mentions else 'учтены'} в итоговых цифрах. "
-        f"База процентилей: {percentile_basis}."
+        f"База процентилей: {_percentile_basis_internal_to_ru(percentile_basis)}."
     )
     tabs = st.tabs(
         [
@@ -1108,93 +1213,93 @@ def show_referent_dashboard(
     with tabs[0]:
         st.markdown("**Идеологизированность (IDI)**")
         st.caption("Доля идеологических маркеров среди знаменательных слов контекста.")
-        st.metric("IDI_raw", format(idi, fmt_raw))
+        st.metric("IDI (сырая доля)", format(idi, fmt_raw))
         if show_percent_values:
-            st.metric("IDI_percent_value", f"{idi*100:{fmt_pct}}%")
+            st.metric("IDI (%)", f"{idi*100:{fmt_pct}}%")
         if show_empirical_percentiles and "IDI_percentile" in metric_df.columns:
-            st.metric("IDI_percentile", f"{float(metric_df['IDI_percentile'].mean()):.1f}")
+            st.metric("IDI (эмпирический процентиль)", f"{float(metric_df['IDI_percentile'].mean()):.1f}")
         st.info(f"Уровень: {density_level(idi)}. Чем выше IDI, тем сильнее текст рамочно направляет интерпретацию.")
         with st.expander("Формула и объяснение", expanded=False):
             st.code("IDI = N_ideol / N_content", language="text")
             st.code(f"IDI = {int(n_ideol_sum)} / {int(n_content_sum)} = {idi:.3f}", language="text")
             st.write("`N_ideol` — число идеологических маркеров, `N_content` — знаменательные слова.")
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            st.plotly_chart(px.histogram(df_ref, x="IDI", nbins=20, template="plotly_dark", title="Распределение IDI"), use_container_width=True)
-        with cc2:
-            idi_by_outlet = df_ref.groupby("outlet_name", as_index=False)["IDI"].mean().sort_values("IDI", ascending=False)
-            st.plotly_chart(px.bar(idi_by_outlet, x="outlet_name", y="IDI", template="plotly_dark", title="IDI по источникам"), use_container_width=True)
-        with st.expander("Примеры из корпуса (развернуть)", expanded=False):
+        with st.expander("Подробнее: графики и примеры", expanded=False):
+            cc1, cc2 = st.columns(2)
+            with cc1:
+                st.plotly_chart(px.histogram(df_ref, x="IDI", nbins=20, template="plotly_dark", title="Распределение IDI"), use_container_width=True)
+            with cc2:
+                idi_by_outlet = df_ref.groupby("outlet_name", as_index=False)["IDI"].mean().sort_values("IDI", ascending=False)
+                st.plotly_chart(px.bar(idi_by_outlet, x="outlet_name", y="IDI", template="plotly_dark", title="IDI по источникам"), use_container_width=True)
             _render_proof_contexts(df_ref, "found_ideol_markers", "Контексты с идеологическими маркерами")
 
     with tabs[1]:
         st.markdown("**Эмоциональность (EMI)**")
         st.caption("Взвешенная доля эмоциональных маркеров (слабые/средние/сильные).")
-        st.metric("EMI_raw", format(emi, fmt_raw))
+        st.metric("EMI (сырая доля)", format(emi, fmt_raw))
         if show_percent_values:
-            st.metric("EMI_percent_value", f"{emi*100:{fmt_pct}}%")
+            st.metric("EMI (%)", f"{emi*100:{fmt_pct}}%")
         if show_empirical_percentiles and "EMI_percentile" in metric_df.columns:
-            st.metric("EMI_percentile", f"{float(metric_df['EMI_percentile'].mean()):.1f}")
+            st.metric("EMI (эмпирический процентиль)", f"{float(metric_df['EMI_percentile'].mean()):.1f}")
         st.info(f"Уровень: {density_level(emi)}. Чем выше EMI, тем сильнее эмоциональное давление текста.")
         with st.expander("Формула и объяснение", expanded=False):
             st.code("EMI = (1/3*N_e_w + 2/3*N_e_m + 1*N_e_s) / N_content", language="text")
             st.code(f"EMI = {weighted_emotion_sum:.2f} / {int(n_content_sum)} = {emi:.3f}", language="text")
             st.write("Сильные маркеры вносят наибольший вклад, слабые — наименьший.")
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            st.plotly_chart(px.histogram(df_ref, x="EMI", nbins=20, template="plotly_dark", title="Распределение EMI"), use_container_width=True)
-        with cc2:
-            emo_break = pd.DataFrame(
-                [{"layer": "weak", "count": int(df_ref["N_e_w"].sum())}, {"layer": "medium", "count": int(df_ref["N_e_m"].sum())}, {"layer": "strong", "count": int(df_ref["N_e_s"].sum())}]
-            )
-            st.plotly_chart(px.bar(emo_break, x="layer", y="count", template="plotly_dark", title="Структура эмоциональных маркеров"), use_container_width=True)
-        with st.expander("Примеры из корпуса (развернуть)", expanded=False):
+        with st.expander("Подробнее: графики и примеры", expanded=False):
+            cc1, cc2 = st.columns(2)
+            with cc1:
+                st.plotly_chart(px.histogram(df_ref, x="EMI", nbins=20, template="plotly_dark", title="Распределение EMI"), use_container_width=True)
+            with cc2:
+                emo_break = pd.DataFrame(
+                    [{"layer": "weak", "count": int(df_ref["N_e_w"].sum())}, {"layer": "medium", "count": int(df_ref["N_e_m"].sum())}, {"layer": "strong", "count": int(df_ref["N_e_s"].sum())}]
+                )
+                st.plotly_chart(px.bar(emo_break, x="layer", y="count", template="plotly_dark", title="Структура эмоциональных маркеров"), use_container_width=True)
             _render_proof_contexts(df_ref, "found_emotional_markers", "Контексты с эмоциональными маркерами")
 
     with tabs[2]:
         st.markdown("**Метафоричность (MTI)**")
         st.caption("Доля метафорических единиц среди знаменательных слов.")
-        st.metric("MTI_raw", format(mti, fmt_raw))
+        st.metric("MTI (сырая доля)", format(mti, fmt_raw))
         if show_percent_values:
-            st.metric("MTI_percent_value", f"{mti*100:{fmt_pct}}%")
+            st.metric("MTI (%)", f"{mti*100:{fmt_pct}}%")
         if show_empirical_percentiles and "MTI_percentile" in metric_df.columns:
-            st.metric("MTI_percentile", f"{float(metric_df['MTI_percentile'].mean()):.1f}")
+            st.metric("MTI (эмпирический процентиль)", f"{float(metric_df['MTI_percentile'].mean()):.1f}")
         st.info(f"Уровень: {density_level(mti)}. Чем выше MTI, тем сильнее образная подача политической реальности.")
         with st.expander("Формула и объяснение", expanded=False):
             st.code("MTI = N_met / N_content", language="text")
             st.code(f"MTI = {int(n_met_sum)} / {int(n_content_sum)} = {mti:.3f}", language="text")
             st.write("Метафоры создают когнитивные рамки восприятия политических событий.")
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            st.plotly_chart(px.histogram(df_ref, x="MTI", nbins=20, template="plotly_dark", title="Распределение MTI"), use_container_width=True)
-        with cc2:
-            mti_year = df_ref.groupby("date", as_index=False)["MTI"].mean().head(60)
-            st.plotly_chart(px.line(mti_year, x="date", y="MTI", template="plotly_dark", title="Динамика MTI (по дате)"), use_container_width=True)
-        with st.expander("Примеры из корпуса (развернуть)", expanded=False):
+        with st.expander("Подробнее: графики и примеры", expanded=False):
+            cc1, cc2 = st.columns(2)
+            with cc1:
+                st.plotly_chart(px.histogram(df_ref, x="MTI", nbins=20, template="plotly_dark", title="Распределение MTI"), use_container_width=True)
+            with cc2:
+                mti_year = df_ref.groupby("date", as_index=False)["MTI"].mean().head(60)
+                st.plotly_chart(px.line(mti_year, x="date", y="MTI", template="plotly_dark", title="Динамика MTI (по дате)"), use_container_width=True)
             _render_proof_contexts(df_ref, "found_metaphor_markers", "Контексты с метафорическими маркерами")
 
     with tabs[3]:
         st.markdown("**Оценочный вектор (EVI_r)**")
         st.caption("EVI_raw от -10 до +10, нормирование: EVI_norm = EVI_raw / 5.")
         col_a, col_b, col_c = st.columns(3)
-        col_a.metric("EVI_raw (mean)", f"{evi_raw:.1f}")
-        col_b.metric("EVI_norm (mean)", f"{evi_norm:.4f}")
-        col_c.metric("EVI coarse", f"{evi_coarse}")
+        col_a.metric("EVI_raw (среднее)", f"{evi_raw:.1f}")
+        col_b.metric("EVI_norm (среднее)", f"{evi_norm:.4f}")
+        col_c.metric("EVI coarse (справочно)", f"{evi_coarse}")
         st.info(f"Интерпретация: {evi_level(evi_norm)} отношение к референту.")
         with st.expander("Формула и объяснение", expanded=False):
             st.code("EVI_raw = P_r - N_r", language="text")
             st.code("EVI_norm = EVI_raw / 5", language="text")
             st.code(f"EVI_raw(mean) = {evi_raw:.3f}; EVI_norm(mean) = {evi_norm:.3f}", language="text")
             st.write("`P_r` — позитивные сигналы, `N_r` — негативные сигналы относительно выбранного референта.")
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            evi_dist = df_ref.groupby("EVI_raw", as_index=False).size().rename(columns={"size": "contexts"}).sort_values("EVI_raw")
-            st.plotly_chart(px.bar(evi_dist, x="EVI_raw", y="contexts", template="plotly_dark", title="Распределение EVI_raw"), use_container_width=True)
-        with cc2:
-            score_df = df_ref[["positive_score", "negative_score"]].mean().reset_index()
-            score_df.columns = ["component", "mean_score"]
-            st.plotly_chart(px.bar(score_df, x="component", y="mean_score", template="plotly_dark", title="Средний вклад P_r и N_r"), use_container_width=True)
-        with st.expander("Примеры из корпуса и пояснения (развернуть)", expanded=False):
+        with st.expander("Подробнее: графики и доказательства", expanded=False):
+            cc1, cc2 = st.columns(2)
+            with cc1:
+                evi_dist = df_ref.groupby("EVI_raw", as_index=False).size().rename(columns={"size": "contexts"}).sort_values("EVI_raw")
+                st.plotly_chart(px.bar(evi_dist, x="EVI_raw", y="contexts", template="plotly_dark", title="Распределение EVI_raw"), use_container_width=True)
+            with cc2:
+                score_df = df_ref[["positive_score", "negative_score"]].mean().reset_index()
+                score_df.columns = ["component", "mean_score"]
+                st.plotly_chart(px.bar(score_df, x="component", y="mean_score", template="plotly_dark", title="Средний вклад P_r и N_r"), use_container_width=True)
             cols = [
                 c
                 for c in [
@@ -1236,8 +1341,13 @@ def show_referent_dashboard(
         col_c.metric("Контексты в расчете", f"{contexts_analyzed}")
         if show_empirical_percentiles and "IP_percentile" in metric_df.columns and "IP_abs_percentile" in metric_df.columns:
             p1, p2 = st.columns(2)
-            p1.metric("IP_percentile", f"{float(metric_df['IP_percentile'].mean()):.1f}")
-            p2.metric("IP_abs_percentile", f"{float(metric_df['IP_abs_percentile'].mean()):.1f}")
+            if contexts_analyzed > 0:
+                p1.metric("IP (эмпирический процентиль)", f"{float(metric_df['IP_percentile'].mean()):.1f}")
+                p2.metric("IP_abs (эмпирический процентиль)", f"{float(metric_df['IP_abs_percentile'].mean()):.1f}")
+            else:
+                p1.metric("IP (эмпирический процентиль)", "н/д")
+                p2.metric("IP_abs (эмпирический процентиль)", "н/д")
+                st.caption("Процентили не рассчитываются, когда нет контекстов в итоговом агрегировании.")
         st.metric("Итоговый знак имиджа", _sign_label(ip_formula))
         st.info(
             f"Как читать: сейчас это **{ip_level(ip_formula)}**. "
@@ -1271,16 +1381,19 @@ def show_referent_dashboard(
                 "`S_i` — вес значимости контекста для образа страны. "
                 "Технические упоминания (например, просто локация в подписи) дают нулевой вес и не искажают итог."
             )
-            st.write(f"contexts_analyzed={contexts_analyzed}, contexts_excluded={contexts_excluded}, technical_mentions_excluded={technical_mentions_excluded}")
+            st.write(
+                f"Контекстов в расчете: {contexts_analyzed}; исключено: {contexts_excluded}; "
+                f"технических исключено: {technical_mentions_excluded}"
+            )
             if warning_msg:
                 st.warning(str(warning_msg))
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            st.plotly_chart(px.histogram(df_ref, x="IP_context", nbins=20, template="plotly_dark", title="Распределение IP_context"), use_container_width=True)
-        with cc2:
-            ip_year = df_ref.groupby("date", as_index=False)["IP_context"].mean().head(60)
-            st.plotly_chart(px.line(ip_year, x="date", y="IP_context", template="plotly_dark", title="Динамика IP_context"), use_container_width=True)
-        with st.expander("Примеры из корпуса (развернуть)", expanded=False):
+        with st.expander("Подробнее: графики и примеры", expanded=False):
+            cc1, cc2 = st.columns(2)
+            with cc1:
+                st.plotly_chart(px.histogram(df_ref, x="IP_context", nbins=20, template="plotly_dark", title="Распределение IP_context"), use_container_width=True)
+            with cc2:
+                ip_year = df_ref.groupby("date", as_index=False)["IP_context"].mean().head(60)
+                st.plotly_chart(px.line(ip_year, x="date", y="IP_context", template="plotly_dark", title="Динамика IP_context"), use_container_width=True)
             _render_proof_contexts(df_ref, "matched_keywords", "Контексты для расчета IP")
 
     if show_salience_diagnostics:
@@ -1289,128 +1402,130 @@ def show_referent_dashboard(
             if sal_cols:
                 st.dataframe(df_ref[sal_cols].head(40), use_container_width=True)
 
-    st.markdown("### Анализ по категориям ключевых слов")
-    cat_rows = []
-    for _, r in df_ref.iterrows():
-        cats = [x.strip() for x in str(r.get("keyword_category", "other")).split(";") if x.strip()]
-        if not cats:
-            cats = ["other"]
-        for cat in cats:
-            cat_rows.append(
-                {
-                    "category": cat,
-                    "IDI": r["IDI"],
-                    "EMI": r["EMI"],
-                    "MTI": r["MTI"],
-                    "EVI_raw": r.get("EVI_raw", 0),
-                    "EVI_norm": r.get("EVI_norm", 0),
-                    "S_r": r.get("referent_salience", 1),
-                    "IP_context": r.get("IP_context", 0),
-                    "IP_context_abs": r.get("IP_context_abs", 0),
-                    "aggregation_weight": r.get("aggregation_weight", 0),
-                }
-            )
-    cat_df = pd.DataFrame(cat_rows)
-    if not cat_df.empty:
-        cat_agg = (
-            cat_df.groupby("category", as_index=False)
-            .agg(
-                contexts=("category", "count"),
-                IDI=("IDI", "mean"),
-                EMI=("EMI", "mean"),
-                MTI=("MTI", "mean"),
-                EVI_raw=("EVI_raw", "mean"),
-                EVI_norm=("EVI_norm", "mean"),
-                S_r=("S_r", "mean"),
-                IP_context=("IP_context", "mean"),
-                IP_context_abs=("IP_context_abs", "mean"),
-                aggregation_weight=("aggregation_weight", "mean"),
-            )
-            .sort_values("contexts", ascending=False)
-        )
-        st.dataframe(cat_agg, use_container_width=True)
-        fig_cat = px.bar(cat_agg, x="category", y="IP_context", color="contexts", template="plotly_dark", title="IP_context по категориям ключевых слов")
-        st.plotly_chart(fig_cat, use_container_width=True)
-
-    st.markdown("### Итоговая интерпретация")
+    st.markdown("### Краткий итог")
     st.info(
         f"Формируемый имидж референта: **{_sign_label(ip_formula)}** "
         f"(IP_final={ip_formula:.4f}, IP_abs_final={ip_abs_formula:.4f})."
     )
-    with st.expander("Формулы и как читать итог", expanded=False):
-        st.code("IDI = N_ideol / N_content", language="text")
-        st.code("EMI = (1/3*N_e_w + 2/3*N_e_m + N_e_s) / N_content", language="text")
-        st.code("MTI = N_met / N_content", language="text")
-        st.code("EVI_raw = P_r - N_r;  EVI_norm = EVI_raw / 5", language="text")
-        st.code("IP_i = EVI_norm_i × (1 + IDI_i + EMI_i + MTI_i)", language="text")
-        st.code("IP_final = Σ(S_i × IP_i) / ΣS_i", language="text")
-        st.write("Плюс IP = позитивный образ, минус IP = негативный образ, модуль IP = сила воздействия.")
 
-    frame_df, strategy_df = _dominant_frames_and_strategies(df_ref)
-    st.markdown("### Доминирующие фреймы и дискурсивные стратегии")
-    f1, f2 = st.columns(2)
-    with f1:
-        st.markdown("**Фреймы**")
-        if frame_df.empty:
-            st.caption("Выраженные фреймы не выявлены.")
-        else:
-            st.dataframe(frame_df.head(8), use_container_width=True)
-            st.plotly_chart(px.bar(frame_df.head(8), x="frame", y="score", template="plotly_dark", title="Топ фреймов"), use_container_width=True)
-    with f2:
-        st.markdown("**Стратегии**")
-        if strategy_df.empty:
-            st.caption("Выраженные стратегии не выявлены.")
-        else:
-            st.dataframe(strategy_df.head(8), use_container_width=True)
-            st.plotly_chart(px.bar(strategy_df.head(8), x="strategy", y="score", template="plotly_dark", title="Топ стратегий"), use_container_width=True)
+    with st.expander("Подробные материалы (категории, фреймы, стратегии, контексты)", expanded=False):
+        st.markdown("#### Анализ по категориям ключевых слов")
+        cat_rows = []
+        for _, r in df_ref.iterrows():
+            cats = [x.strip() for x in str(r.get("keyword_category", "other")).split(";") if x.strip()]
+            if not cats:
+                cats = ["other"]
+            for cat in cats:
+                cat_rows.append(
+                    {
+                        "category": cat,
+                        "IDI": r["IDI"],
+                        "EMI": r["EMI"],
+                        "MTI": r["MTI"],
+                        "EVI_raw": r.get("EVI_raw", 0),
+                        "EVI_norm": r.get("EVI_norm", 0),
+                        "S_r": r.get("referent_salience", 1),
+                        "IP_context": r.get("IP_context", 0),
+                        "IP_context_abs": r.get("IP_context_abs", 0),
+                        "aggregation_weight": r.get("aggregation_weight", 0),
+                    }
+                )
+        cat_df = pd.DataFrame(cat_rows)
+        if not cat_df.empty:
+            cat_agg = (
+                cat_df.groupby("category", as_index=False)
+                .agg(
+                    contexts=("category", "count"),
+                    IDI=("IDI", "mean"),
+                    EMI=("EMI", "mean"),
+                    MTI=("MTI", "mean"),
+                    EVI_raw=("EVI_raw", "mean"),
+                    EVI_norm=("EVI_norm", "mean"),
+                    S_r=("S_r", "mean"),
+                    IP_context=("IP_context", "mean"),
+                    IP_context_abs=("IP_context_abs", "mean"),
+                    aggregation_weight=("aggregation_weight", "mean"),
+                )
+                .sort_values("contexts", ascending=False)
+            )
+            st.dataframe(cat_agg, use_container_width=True)
+            fig_cat = px.bar(cat_agg, x="category", y="IP_context", color="contexts", template="plotly_dark", title="IP_context по категориям ключевых слов")
+            st.plotly_chart(fig_cat, use_container_width=True)
 
-    if use_calibration_anchors and (out_dir / "calibration_report.xlsx").exists():
-        st.markdown("### Calibration Anchors")
-        cal = pd.read_excel(out_dir / "calibration_report.xlsx")
-        st.dataframe(cal, use_container_width=True)
-        if not cal.empty and "mean_IP_abs" in cal.columns:
-            base = float(cal["mean_IP_abs"].min()) if float(cal["mean_IP_abs"].min()) > 0 else 1e-9
-            ratio = float(ip_abs_formula / base)
-            st.info(f"Сила текущего подкорпуса относительно минимального calibration-baseline: x{ratio:.2f}.")
+        with st.expander("Формулы и как читать итог", expanded=False):
+            st.code("IDI = N_ideol / N_content", language="text")
+            st.code("EMI = (1/3*N_e_w + 2/3*N_e_m + N_e_s) / N_content", language="text")
+            st.code("MTI = N_met / N_content", language="text")
+            st.code("EVI_raw = P_r - N_r;  EVI_norm = EVI_raw / 5", language="text")
+            st.code("IP_i = EVI_norm_i × (1 + IDI_i + EMI_i + MTI_i)", language="text")
+            st.code("IP_final = Σ(S_i × IP_i) / ΣS_i", language="text")
+            st.write("Плюс IP = позитивный образ, минус IP = негативный образ, модуль IP = сила воздействия.")
 
-    st.markdown("### Контексты и объяснения")
-    ctx_cols = [
-        c
-        for c in [
-            "context_id",
-            "doc_id",
-            "ref_country",
-            "matched_keywords",
-            "referent_salience",
-            "salience_label",
-            "positive_score",
-            "negative_score",
-            "EVI_raw",
-            "EVI_norm",
-            "discursive_energy",
-            "IP_context",
-            "IP_context_abs",
-            "aggregation_weight",
-            "IP_formula_version",
-            "evi_explanation",
+        frame_df, strategy_df = _dominant_frames_and_strategies(df_ref)
+        st.markdown("#### Доминирующие фреймы и дискурсивные стратегии")
+        f1, f2 = st.columns(2)
+        with f1:
+            st.markdown("**Фреймы**")
+            if frame_df.empty:
+                st.caption("Выраженные фреймы не выявлены.")
+            else:
+                st.dataframe(frame_df.head(8), use_container_width=True)
+                st.plotly_chart(px.bar(frame_df.head(8), x="frame", y="score", template="plotly_dark", title="Топ фреймов"), use_container_width=True)
+        with f2:
+            st.markdown("**Стратегии**")
+            if strategy_df.empty:
+                st.caption("Выраженные стратегии не выявлены.")
+            else:
+                st.dataframe(strategy_df.head(8), use_container_width=True)
+                st.plotly_chart(px.bar(strategy_df.head(8), x="strategy", y="score", template="plotly_dark", title="Топ стратегий"), use_container_width=True)
+
+        if use_calibration_anchors and (out_dir / "calibration_report.xlsx").exists():
+            st.markdown("#### Calibration Anchors")
+            cal = pd.read_excel(out_dir / "calibration_report.xlsx")
+            st.dataframe(cal, use_container_width=True)
+            if not cal.empty and "mean_IP_abs" in cal.columns:
+                base = float(cal["mean_IP_abs"].min()) if float(cal["mean_IP_abs"].min()) > 0 else 1e-9
+                ratio = float(ip_abs_formula / base)
+                st.info(f"Сила текущего подкорпуса относительно минимального calibration-baseline: x{ratio:.2f}.")
+
+        st.markdown("#### Контексты и объяснения")
+        ctx_cols = [
+            c
+            for c in [
+                "context_id",
+                "doc_id",
+                "ref_country",
+                "matched_keywords",
+                "referent_salience",
+                "salience_label",
+                "positive_score",
+                "negative_score",
+                "EVI_raw",
+                "EVI_norm",
+                "discursive_energy",
+                "IP_context",
+                "IP_context_abs",
+                "aggregation_weight",
+                "IP_formula_version",
+                "evi_explanation",
+            ]
+            if c in df_ref.columns
         ]
-        if c in df_ref.columns
-    ]
-    st.dataframe(df_ref[ctx_cols].head(100), use_container_width=True)
-    st.markdown("**Highlighted contexts (пруфы по каждому контексту)**")
-    for _, r in df_ref.head(20).iterrows():
-        terms = _split_marker_cell(str(r.get("matched_keywords", "")))
-        terms += _split_marker_cell(str(r.get("positive_evidence_terms", "")))
-        terms += _split_marker_cell(str(r.get("negative_evidence_terms", "")))
-        terms = [t for t in sorted(set(terms)) if t]
-        st.caption(
-            f"{r.get('context_id','')} | ref={r.get('ref_country','')} | "
-            f"S_r={r.get('referent_salience','')} | EVI_raw={r.get('EVI_raw','')} | IP_i={r.get('IP_context','')}"
-        )
-        st.markdown(
-            f"<div style='padding:10px;border:1px solid #334155;border-radius:8px;line-height:1.6'>{_highlight_terms_html(str(r.get('context_text','')), terms)}</div>",
-            unsafe_allow_html=True,
-        )
+        st.dataframe(df_ref[ctx_cols].head(100), use_container_width=True)
+        st.markdown("**Подсвеченные контексты (пруфы)**")
+        for _, r in df_ref.head(20).iterrows():
+            terms = _split_marker_cell(str(r.get("matched_keywords", "")))
+            terms += _split_marker_cell(str(r.get("positive_evidence_terms", "")))
+            terms += _split_marker_cell(str(r.get("negative_evidence_terms", "")))
+            terms = [t for t in sorted(set(terms)) if t]
+            st.caption(
+                f"{r.get('context_id','')} | ref={r.get('ref_country','')} | "
+                f"S_r={r.get('referent_salience','')} | EVI_raw={r.get('EVI_raw','')} | IP_i={r.get('IP_context','')}"
+            )
+            st.markdown(
+                f"<div style='padding:10px;border:1px solid #334155;border-radius:8px;line-height:1.6'>{_highlight_terms_html(str(r.get('context_text','')), terms)}</div>",
+                unsafe_allow_html=True,
+            )
 
 
 def zip_dir_bytes(dir_path: Path) -> bytes:
@@ -1963,6 +2078,7 @@ def main() -> None:
     st.title("Mediatext analyzator")
     st.caption(f"Индикаторная модель лингвопрагматического анализа воздействующего потенциала политического медиатекста. Build: {APP_BUILD}")
 
+    calibration_sidebar_state: Dict[str, object] = {}
     with st.sidebar:
         st.header("Параметры")
         min_year = st.number_input("Минимальный год", min_value=2000, max_value=2100, value=2022)
@@ -1989,10 +2105,17 @@ def main() -> None:
         top_n_logodds = 120
 
         if analysis_mode == "Референтный (China/USA/Russia)":
+            evi_mode_labels = {
+                "fine": "fine — точная шкала (-10..+10)",
+                "coarse": "coarse — укрупненная шкала (-2..+2)",
+                "suggested": "suggested — автоподсказка",
+                "manual": "manual — из вашего CSV",
+            }
             referent_evi_mode = st.selectbox(
                 "EVI режим (референтный анализ)",
                 options=["fine", "coarse", "suggested", "manual"],
                 index=0,
+                format_func=lambda v: evi_mode_labels.get(v, v),
                 help="fine: EVI_raw -10..10; coarse: legacy -2..2 с маппингом; suggested: авто-rubric; manual: из evi_manual.csv",
             )
             referent_target = st.selectbox(
@@ -2011,27 +2134,54 @@ def main() -> None:
                 value=True,
                 help="Если включено, контексты с S_r=0 не входят в итоговые агрегированные метрики.",
             )
-            show_evi_rubric_details = st.toggle("Показывать детали расчета EVI", value=False)
-            show_salience_diagnostics = st.toggle("Показывать диагностику значимости (S_r)", value=True)
-            display_precision = st.selectbox("Display precision", options=[4, 6, 8], index=1)
-            show_percent_values = st.toggle("Show percent values", value=True)
-            show_empirical_percentiles = st.toggle("Show empirical percentiles", value=True)
-            percentile_basis = st.selectbox(
-                "Percentile basis",
-                options=["full corpus", "selected media_country", "selected ref_country", "media_country × ref_country"],
-                index=0,
-            )
-            ip_formula_mode = st.selectbox(
-                "IP formula mode",
-                options=["updated: EVI_norm * (1 + IDI + EMI + MTI)", "legacy: (IDI + EMI + MTI) * EVI_norm"],
-                index=0,
-            )
-            aggregation_mode = st.selectbox(
-                "Aggregation mode",
-                options=["weighted by S_r", "unweighted valid contexts"],
-                index=0,
-            )
-            use_calibration_anchors = st.toggle("Use calibration anchors in interpretation", value=False)
+            show_evi_rubric_details = False
+            show_salience_diagnostics = False
+            # Базовые значения по умолчанию: понятный режим для неспециалиста.
+            display_precision = 6
+            show_percent_values = True
+            show_empirical_percentiles = True
+            percentile_basis = "full corpus"
+            ip_formula_mode = "updated: EVI_norm * (1 + IDI + EMI + MTI)"
+            aggregation_mode = "weighted by S_r"
+            use_calibration_anchors = False
+
+            with st.expander("Расширенные настройки методики", expanded=False):
+                st.caption("Меняйте только при методической необходимости. Базовые настройки подходят для большинства задач.")
+                display_precision = st.selectbox("Точность вывода (знаков после запятой)", options=[4, 6, 8], index=1)
+                show_percent_values = st.toggle("Показывать процентные значения (raw × 100)", value=True)
+                show_empirical_percentiles = st.toggle("Показывать эмпирические процентили", value=True)
+                percentile_basis_label = st.selectbox(
+                    "База для процентилей",
+                    options=["Весь корпус", "По стране медиа", "По референту", "Страна медиа × референт"],
+                    index=0,
+                )
+                percentile_basis = _percentile_basis_ru_to_internal(percentile_basis_label)
+                ip_formula_label = st.selectbox(
+                    "Формула IP",
+                    options=[
+                        "Обновленная: EVI_norm × (1 + IDI + EMI + MTI)",
+                        "Legacy: (IDI + EMI + MTI) × EVI_norm",
+                    ],
+                    index=0,
+                )
+                ip_formula_mode = (
+                    "updated: EVI_norm * (1 + IDI + EMI + MTI)"
+                    if ip_formula_label.startswith("Обновленная")
+                    else "legacy: (IDI + EMI + MTI) * EVI_norm"
+                )
+                aggregation_mode_label = st.selectbox(
+                    "Режим агрегации",
+                    options=["Взвешенный по S_r", "Невзвешенный (валидные контексты)"],
+                    index=0,
+                )
+                aggregation_mode = (
+                    "weighted by S_r"
+                    if aggregation_mode_label.startswith("Взвешенный")
+                    else "unweighted valid contexts"
+                )
+                use_calibration_anchors = st.toggle("Использовать калибровочные тексты в интерпретации", value=False)
+                show_evi_rubric_details = st.toggle("Показывать детали расчета EVI", value=False)
+                show_salience_diagnostics = st.toggle("Показывать диагностику значимости (S_r)", value=False)
             st.caption("Для manual режима загрузите evi_manual.csv ниже в основном окне.")
         else:
             exclude_technical_mentions = True
@@ -2062,6 +2212,9 @@ def main() -> None:
                 colloc_window = st.number_input("Collocation окно", min_value=2, max_value=15, value=5)
                 colloc_min = st.number_input("Collocation min cooc", min_value=2, max_value=100, value=5)
                 top_n_logodds = st.number_input("Top log-odds токенов", min_value=30, max_value=500, value=120)
+
+        if render_calibration_sidebar is not None:
+            calibration_sidebar_state = render_calibration_sidebar()
 
     col1, col2 = st.columns(2)
     with col1:
@@ -2112,8 +2265,14 @@ def main() -> None:
         manual_year = st.number_input("Год ручного текста", min_value=2000, max_value=2100, value=2026)
 
     run_btn = st.button("Запустить анализ", type="primary")
+    cal_action_requested = bool(
+        calibration_sidebar_state.get("build_btn", False)
+        or calibration_sidebar_state.get("recalc_btn", False)
+        or calibration_sidebar_state.get("extract_btn", False)
+        or calibration_sidebar_state.get("reload_btn", False)
+    )
 
-    if run_btn:
+    if run_btn or cal_action_requested:
         prog_box = st.empty()
         prog_bar = st.progress(0, text="Подготовка анализа: 0%")
         prog_box.markdown("**Статус анализа корпуса:** 0%")
@@ -2135,7 +2294,7 @@ def main() -> None:
         prog_bar.progress(20, text="Файлы загружены и подготовлены: 20%")
         prog_box.markdown("**Статус анализа корпуса:** 20%")
 
-        if not file_items:
+        if run_btn and not file_items:
             st.error("Не найдено входных текстов. Загрузите ZIP/файлы или вставьте текст вручную.")
             return
 
@@ -2145,7 +2304,77 @@ def main() -> None:
             prog_bar.progress(35, text="Предобработка корпуса: 35%")
             prog_box.markdown("**Статус анализа корпуса:** 35%")
 
-            if analysis_mode == "Референтный (China/USA/Russia)":
+            calibration_texts_df = pd.DataFrame()
+            calibration_dir = out_dir / "calibration"
+            calibration_baseline = str(calibration_sidebar_state.get("baseline", "full_calibration_corpus"))
+            cal_interpretation_mode = str(calibration_sidebar_state.get("interpretation_mode", "use_empirical_percentiles"))
+            use_empirical_calibration = bool(calibration_sidebar_state.get("use_empirical", True))
+            if cal_interpretation_mode == "use_theoretical_interpretation":
+                use_empirical_calibration = False
+            show_calibration_diagnostics = bool(calibration_sidebar_state.get("show_flags", True))
+            cal_sources_upload = calibration_sidebar_state.get("sources_yaml_upload")
+            cal_files_upload = calibration_sidebar_state.get("files_upload")
+            cal_build_btn = bool(calibration_sidebar_state.get("build_btn", False))
+            cal_recalc_btn = bool(calibration_sidebar_state.get("recalc_btn", False))
+            cal_extract_btn = bool(calibration_sidebar_state.get("extract_btn", False))
+            cal_reload_btn = bool(calibration_sidebar_state.get("reload_btn", False))
+
+            if CalibrationBuilder is not None and (use_empirical_calibration or cal_build_btn or cal_recalc_btn or cal_extract_btn):
+                try:
+                    calibration_dir.mkdir(parents=True, exist_ok=True)
+                    builder = CalibrationBuilder(dict_dir=out_dir / "referent_dicts", lexicons_dir=ROOT_DIR / "lexicons")
+                    cal_sources = []
+
+                    if cal_sources_upload is not None:
+                        yaml_path = calibration_dir / "calibration_sources_uploaded.yaml"
+                        yaml_path.write_bytes(cal_sources_upload.getvalue())
+                        cal_sources.extend(builder.load_sources(yaml_path))
+                    else:
+                        default_yaml = ROOT_DIR / "calibration" / "calibration_sources.yaml"
+                        if default_yaml.exists():
+                            cal_sources.extend(builder.load_sources(default_yaml))
+
+                    if cal_files_upload:
+                        manual_dir = calibration_dir / "manual_uploads"
+                        manual_dir.mkdir(parents=True, exist_ok=True)
+                        for f in cal_files_upload:
+                            (manual_dir / f.name).write_bytes(f.getvalue())
+                        from calibration.calibration_schema import CalibrationSource
+
+                        cal_sources.append(
+                            CalibrationSource(
+                                source_name="Uploaded Calibration Files",
+                                mode="local",
+                                language="en",
+                                calibration_type="standard_political_news",
+                                expected_indicator_focus="mixed",
+                                path=str(manual_dir),
+                                enabled=True,
+                            )
+                        )
+
+                    if cal_sources:
+                        artifacts = builder.run(
+                            sources=cal_sources,
+                            base_dir=ROOT_DIR,
+                            output_dir=calibration_dir,
+                        )
+                        if cal_extract_btn:
+                            st.info(f"Dictionary candidates extracted: {len(artifacts.candidate_terms_df)}")
+                        p_cal = calibration_dir / "calibration_texts.csv"
+                        if p_cal.exists():
+                            calibration_texts_df = pd.read_csv(p_cal)
+                    if cal_reload_btn and apply_verified_terms_to_lexicons is not None:
+                        version = apply_verified_terms_to_lexicons(
+                            lexicons_dir=ROOT_DIR / "lexicons",
+                            target_dict_dir=out_dir / "referent_dicts",
+                            version_tag=datetime.now().strftime("%Y%m%d_%H%M%S"),
+                        )
+                        st.session_state["lexicon_version"] = version
+                except Exception as cal_err:
+                    st.warning(f"Calibration pipeline warning: {cal_err}")
+
+            if run_btn and analysis_mode == "Референтный (China/USA/Russia)":
                 if referent_core is None:
                     st.error("Референтный модуль не найден. Добавьте media_analyzer_referent.py в корень проекта.")
                     return
@@ -2179,6 +2408,10 @@ def main() -> None:
                         ip_formula_mode=ip_formula_mode,
                         aggregation_mode=aggregation_mode,
                         percentile_basis=percentile_basis,
+                        calibration_texts_df=calibration_texts_df if not calibration_texts_df.empty else None,
+                        calibration_filter=calibration_baseline,
+                        use_empirical_percentile_interpretation=use_empirical_calibration,
+                        lexicon_version=str(st.session_state.get("lexicon_version", "default")),
                     )
                 except Exception as e:
                     st.exception(e)
@@ -2201,6 +2434,8 @@ def main() -> None:
                     percentile_basis=percentile_basis,
                     use_calibration_anchors=use_calibration_anchors,
                 )
+                if render_calibration_panel is not None and show_calibration_diagnostics:
+                    render_calibration_panel(calibration_dir, ROOT_DIR / "lexicons")
 
                 with st.expander("Технические таблицы (референтный режим)"):
                     for preview_name in [
@@ -2219,7 +2454,7 @@ def main() -> None:
                     if p_dist.exists():
                         st.markdown("**distribution_stats.xlsx**")
                         st.caption("Содержит распределения IDI/EMI/MTI/IP/IP_abs по выбранной базе процентилей.")
-            else:
+            elif run_btn:
                 docs = build_docs(file_items, int(min_year), int(max_year), use_lemma=use_lemma)
                 if not docs:
                     st.error("После предобработки не осталось документов в указанном диапазоне лет.")
@@ -2276,15 +2511,24 @@ def main() -> None:
                     with st.expander("DEBUG"):
                         st.write({"build": APP_BUILD, "docs_for_indicator_charts": len(analyzed_doc_objs)})
 
-            out_zip = zip_dir_bytes(out_dir)
-            prog_bar.progress(100, text="Анализ завершён: 100%")
-            prog_box.markdown("**Статус анализа корпуса:** 100%")
-            st.download_button(
-                label="Скачать результаты анализа (ZIP)",
-                data=out_zip,
-                file_name="mediatext_analyzator_output.zip",
-                mime="application/zip",
-            )
+            else:
+                # calibration-only workflow
+                prog_bar.progress(100, text="Калибровка завершена: 100%")
+                prog_box.markdown("**Статус калибровки:** 100%")
+                st.success("Калибровочный корпус обновлён.")
+                if render_calibration_panel is not None:
+                    render_calibration_panel(calibration_dir, ROOT_DIR / "lexicons")
+
+            if run_btn:
+                out_zip = zip_dir_bytes(out_dir)
+                prog_bar.progress(100, text="Анализ завершён: 100%")
+                prog_box.markdown("**Статус анализа корпуса:** 100%")
+                st.download_button(
+                    label="Скачать результаты анализа (ZIP)",
+                    data=out_zip,
+                    file_name="mediatext_analyzator_output.zip",
+                    mime="application/zip",
+                )
 
 
 if __name__ == "__main__":
