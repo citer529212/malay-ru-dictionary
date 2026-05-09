@@ -392,10 +392,14 @@ def run_referent_analysis(
     scored["IP"] = scored["IP_context"]
 
     if hasattr(referent_core, "aggregate_outputs"):
-        by_article, by_outlet, by_media_ref, matrix = referent_core.aggregate_outputs(
-            scored,
-            exclude_technical_mentions=exclude_technical_mentions,
-        )
+        try:
+            by_article, by_outlet, by_media_ref, matrix = referent_core.aggregate_outputs(
+                scored,
+                exclude_technical_mentions=exclude_technical_mentions,
+            )
+        except TypeError:
+            # Older module signature without exclude_technical_mentions.
+            by_article, by_outlet, by_media_ref, matrix = referent_core.aggregate_outputs(scored)
     else:
         # Minimal fallback aggregation.
         work = scored.copy()
