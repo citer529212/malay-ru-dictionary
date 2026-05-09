@@ -742,11 +742,9 @@ def show_referent_dashboard(
     mti = float(n_met_sum / n_content_sum)
     evi_raw = float(metric_df["EVI_raw"].mean()) if "EVI_raw" in metric_df.columns and not metric_df.empty else 0.0
     evi_norm = float(metric_df["EVI_norm"].mean()) if "EVI_norm" in metric_df.columns and not metric_df.empty else 0.0
-    salience_mean = float(metric_df["referent_salience"].mean()) if "referent_salience" in metric_df.columns and not metric_df.empty else 0.0
     evi_coarse = int(_dominant_discrete_evi(metric_df["EVI"])) if "EVI" in metric_df.columns and not metric_df.empty else 0
     ip_formula = float(agg["IP_final"])
     ip_abs_formula = float(agg["IP_abs_final"])
-    ip_unweighted = float(agg["mean_IP_unweighted"])
     contexts_analyzed = int(agg["contexts_analyzed"])
     contexts_excluded = int(agg["contexts_excluded"])
     technical_mentions_excluded = int((df_ref["aggregation_weight"] == 0).sum())
@@ -786,6 +784,9 @@ def show_referent_dashboard(
         if av < 3.0:
             return "заметное воздействие"
         return "сильное воздействие"
+
+    zero_evi_share = float((metric_df["EVI_raw"] == 0).mean()) if not metric_df.empty else 1.0
+    zero_weight_share = float((df_ref["aggregation_weight"] == 0).mean()) if not df_ref.empty else 1.0
 
     st.markdown("### Индикаторы и доказательства")
     st.caption(
@@ -918,26 +919,36 @@ def show_referent_dashboard(
         col_a, col_b, col_c = st.columns(3)
         col_a.metric("Итоговый индекс имиджа (IP_final)", f"{ip_formula:.6f}")
         col_b.metric("Сила воздействия без знака (IP_abs_final)", f"{ip_abs_formula:.6f}")
-        col_c.metric("Средний индекс без весов", f"{ip_unweighted:.6f}")
+        col_c.metric("Контексты в расчете", f"{contexts_analyzed}")
         st.metric("Итоговый знак имиджа", _sign_label(ip_formula))
         st.info(
             f"Как читать: сейчас это **{ip_level(ip_formula)}**. "
             f"`IP_final` отвечает за направление (положительный/отрицательный), "
             f"`IP_abs_final` — за силу воздействия (насколько ярко выражен образ)."
         )
+        if abs(ip_formula) < 1e-12:
+            reasons = []
+            if zero_evi_share > 0.8:
+                reasons.append("у большинства контекстов оценка EVI близка к нейтральной (EVI_raw = 0)")
+            if zero_weight_share > 0.8:
+                reasons.append("большая доля контекстов исключена весом S_r (технические/фоновые упоминания)")
+            if contexts_analyzed == 0:
+                reasons.append("после фильтрации не осталось контекстов для агрегирования")
+            if not reasons:
+                reasons.append("положительные и отрицательные контексты взаимно компенсировались")
+            st.warning("Почему IP=0: " + "; ".join(reasons) + ".")
         with st.expander("Пояснение простыми словами", expanded=True):
             st.markdown(
                 "- `Итоговый индекс имиджа (IP_final)`: главный результат. "
                 "Плюс = скорее позитивный образ, минус = скорее негативный.\n"
                 "- `Сила воздействия без знака (IP_abs_final)`: насколько сильное воздействие, "
                 "даже если в корпусе есть и плюс, и минус.\n"
-                "- `Средний индекс без весов`: техническая справка для сравнения с взвешенной оценкой.\n"
+                "- `Контексты в расчете`: сколько контекстов реально вошло в итог после фильтров.\n"
                 "- `Итоговый знак имиджа`: быстрый ответ, какой образ доминирует."
             )
         with st.expander("Формула и объяснение", expanded=False):
             st.code("IP_i = EVI_norm_i × (1 + IDI_i + EMI_i + MTI_i)", language="text")
             st.code("IP_final = Σ(S_i × IP_i) / ΣS_i", language="text")
-            st.code("IP_old_context (diagnostic) = (IDI_i + EMI_i + MTI_i) × EVI_norm_i", language="text")
             st.write(
                 "`S_i` — вес значимости контекста для образа страны. "
                 "Технические упоминания (например, просто локация в подписи) дают нулевой вес и не искажают итог."
@@ -979,7 +990,6 @@ def show_referent_dashboard(
                     "IP_context": r.get("IP_context", 0),
                     "IP_context_abs": r.get("IP_context_abs", 0),
                     "aggregation_weight": r.get("aggregation_weight", 0),
-                    "IP_old_context": r.get("IP_old_context", 0),
                 }
             )
     cat_df = pd.DataFrame(cat_rows)
@@ -997,7 +1007,6 @@ def show_referent_dashboard(
                 IP_context=("IP_context", "mean"),
                 IP_context_abs=("IP_context_abs", "mean"),
                 aggregation_weight=("aggregation_weight", "mean"),
-                IP_old_context=("IP_old_context", "mean"),
             )
             .sort_values("contexts", ascending=False)
         )
@@ -1055,7 +1064,6 @@ def show_referent_dashboard(
             "IP_context",
             "IP_context_abs",
             "aggregation_weight",
-            "IP_old_context",
             "IP_formula_version",
             "evi_explanation",
         ]
