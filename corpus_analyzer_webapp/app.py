@@ -378,15 +378,74 @@ def run_referent_analysis(
     for col in ["IDI", "EMI", "MTI"]:
         scored[col] = scored[col].clip(lower=0.0, upper=1.0)
     scored["EVI_norm"] = scored["EVI_raw"] / 5.0
-    scored = referent_core.compute_context_ip(scored)
+    if hasattr(referent_core, "compute_context_ip"):
+        scored = referent_core.compute_context_ip(scored)
+    else:
+        # Local fallback for older cloud module versions.
+        scored["discursive_energy"] = scored["IDI"] + scored["EMI"] + scored["MTI"]
+        scored["IP_context"] = scored["EVI_norm"] * (1.0 + scored["discursive_energy"])
+        scored.loc[scored["EVI_norm"] == 0.0, "IP_context"] = 0.0
+        scored["IP_context_abs"] = scored["IP_context"].abs()
+        scored["IP_old_context"] = scored["discursive_energy"] * scored["EVI_norm"]
+        scored["aggregation_weight"] = scored["referent_salience"].clip(lower=0.0, upper=1.0)
+        scored["IP_formula_version"] = "EVI_norm_times_1_plus_energy_weighted_by_salience"
     scored["IP"] = scored["IP_context"]
 
-    by_article, by_outlet, by_media_ref, matrix = referent_core.aggregate_outputs(
-        scored,
-        exclude_technical_mentions=exclude_technical_mentions,
-    )
-    flagged = referent_core.build_flagged_cases(scored)
-    referent_core.save_outputs(scored, by_article, by_outlet, by_media_ref, matrix, flagged, out_dir)
+    if hasattr(referent_core, "aggregate_outputs"):
+        by_article, by_outlet, by_media_ref, matrix = referent_core.aggregate_outputs(
+            scored,
+            exclude_technical_mentions=exclude_technical_mentions,
+        )
+    else:
+        # Minimal fallback aggregation.
+        work = scored.copy()
+        if exclude_technical_mentions:
+            work.loc[work.get("is_technical_mention", False) == True, "aggregation_weight"] = 0.0
+        valid = work[work["aggregation_weight"] > 0].copy()
+        def agg(keys: List[str]) -> pd.DataFrame:
+            rows = []
+            for vals, g in work.groupby(keys, dropna=False):
+                if not isinstance(vals, tuple):
+                    vals = (vals,)
+                row = {k: v for k, v in zip(keys, vals)}
+                gv = g[g["aggregation_weight"] > 0]
+                if gv.empty:
+                    row.update({"mean_IDI": 0.0, "mean_EMI": 0.0, "mean_MTI": 0.0, "mean_EVI_raw": 0.0, "mean_EVI_norm": 0.0, "IP_final": 0.0, "mean_abs_IP": 0.0, "contexts_analyzed": 0, "contexts_excluded": int(len(g)), "number_of_contexts": int(len(g))})
+                else:
+                    w = gv["aggregation_weight"]
+                    ip = gv["IP_context"]
+                    row.update(
+                        {
+                            "mean_IDI": float(gv["IDI"].mean()),
+                            "mean_EMI": float(gv["EMI"].mean()),
+                            "mean_MTI": float(gv["MTI"].mean()),
+                            "mean_EVI_raw": float(gv["EVI_raw"].mean()),
+                            "mean_EVI_norm": float(gv["EVI_norm"].mean()),
+                            "IP_final": float((ip * w).sum() / w.sum()),
+                            "mean_abs_IP": float((ip.abs() * w).sum() / w.sum()),
+                            "contexts_analyzed": int(len(gv)),
+                            "contexts_excluded": int((g["aggregation_weight"] == 0).sum()),
+                            "number_of_contexts": int(len(g)),
+                        }
+                    )
+                rows.append(row)
+            return pd.DataFrame(rows)
+        by_article = agg(["doc_id", "ref_country", "media_country", "outlet_name"])
+        by_outlet = agg(["outlet_name", "media_country", "ref_country"])
+        by_media_ref = agg(["media_country", "ref_country"])
+        matrix = by_media_ref.copy()
+    flagged = referent_core.build_flagged_cases(scored) if hasattr(referent_core, "build_flagged_cases") else pd.DataFrame()
+    if hasattr(referent_core, "save_outputs"):
+        referent_core.save_outputs(scored, by_article, by_outlet, by_media_ref, matrix, flagged, out_dir)
+    else:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        scored.to_csv(out_dir / "contexts_full.csv", index=False)
+        by_article.to_csv(out_dir / "aggregated_by_article.csv", index=False)
+        by_outlet.to_csv(out_dir / "aggregated_by_outlet.csv", index=False)
+        by_media_ref.to_csv(out_dir / "aggregated_by_media_country_and_ref_country.csv", index=False)
+        flagged.to_csv(out_dir / "flagged_cases.csv", index=False)
+        with pd.ExcelWriter(out_dir / "summary_matrix.xlsx", engine="openpyxl") as xw:
+            matrix.to_excel(xw, index=False, sheet_name="summary_matrix")
 
     return {
         "docs": len(docs),
@@ -589,8 +648,24 @@ def show_referent_dashboard(
     c2.metric("Статьи", int(df_ref["doc_id"].nunique()))
     c3.metric("Источники", int(df_ref["outlet_name"].nunique()))
 
-    df_ref = referent_core.compute_context_ip(df_ref)
-    agg = referent_core.weighted_aggregate_ip(df_ref)
+    if hasattr(referent_core, "compute_context_ip"):
+        df_ref = referent_core.compute_context_ip(df_ref)
+    else:
+        df_ref["discursive_energy"] = df_ref["IDI"] + df_ref["EMI"] + df_ref["MTI"]
+        df_ref["IP_context"] = df_ref["EVI_norm"] * (1.0 + df_ref["discursive_energy"])
+        df_ref["IP_context_abs"] = df_ref["IP_context"].abs()
+        df_ref["IP_old_context"] = df_ref["discursive_energy"] * df_ref["EVI_norm"]
+        df_ref["aggregation_weight"] = df_ref["referent_salience"].clip(lower=0.0, upper=1.0)
+    if hasattr(referent_core, "weighted_aggregate_ip"):
+        agg = referent_core.weighted_aggregate_ip(df_ref)
+    else:
+        valid_tmp = df_ref[df_ref["aggregation_weight"] > 0].copy()
+        if valid_tmp.empty:
+            agg = {"IP_final": 0.0, "IP_abs_final": 0.0, "mean_IP_unweighted": 0.0, "contexts_analyzed": 0, "contexts_excluded": int(len(df_ref)), "warning": "No substantive referent contexts after salience filtering"}
+        else:
+            w = valid_tmp["aggregation_weight"]
+            ip = valid_tmp["IP_context"]
+            agg = {"IP_final": float((ip * w).sum() / w.sum()), "IP_abs_final": float((ip.abs() * w).sum() / w.sum()), "mean_IP_unweighted": float(ip.mean()), "contexts_analyzed": int(len(valid_tmp)), "contexts_excluded": int((df_ref["aggregation_weight"] == 0).sum()), "warning": None}
     valid = df_ref[df_ref["aggregation_weight"] > 0].copy()
 
     n_content_sum = max(float(valid["N_content"].sum()), 1.0) if not valid.empty else 1.0
@@ -1598,6 +1673,9 @@ def main() -> None:
     run_btn = st.button("Запустить анализ", type="primary")
 
     if run_btn:
+        prog_box = st.empty()
+        prog_bar = st.progress(0, text="Подготовка анализа: 0%")
+        prog_box.markdown("**Статус анализа корпуса:** 0%")
         file_items = []
         if zip_upload is not None:
             file_items.extend(read_zip_corpus_files(zip_upload.getvalue()))
@@ -1613,6 +1691,8 @@ def main() -> None:
             fingerprint = f"{n}|{len(t)}|{content_md5}"
             uniq[fingerprint] = (n, t)
         file_items = list(uniq.values())
+        prog_bar.progress(20, text="Файлы загружены и подготовлены: 20%")
+        prog_box.markdown("**Статус анализа корпуса:** 20%")
 
         if not file_items:
             st.error("Не найдено входных текстов. Загрузите ZIP/файлы или вставьте текст вручную.")
@@ -1621,6 +1701,8 @@ def main() -> None:
         with tempfile.TemporaryDirectory(prefix="sea_media_analysis_") as tmp:
             out_dir = Path(tmp) / "analysis_output"
             out_dir.mkdir(parents=True, exist_ok=True)
+            prog_bar.progress(35, text="Предобработка корпуса: 35%")
+            prog_box.markdown("**Статус анализа корпуса:** 35%")
 
             if analysis_mode == "Референтный (China/USA/Russia)":
                 if referent_core is None:
@@ -1639,6 +1721,8 @@ def main() -> None:
                     metaphor_review_path = out_dir / "metaphor_review.csv"
                     metaphor_review_path.write_bytes(referent_metaphor_review_upload.getvalue())
                 try:
+                    prog_bar.progress(55, text="Референтный анализ выполняется: 55%")
+                    prog_box.markdown("**Статус анализа корпуса:** 55%")
                     stats = run_referent_analysis(
                         input_df=input_df,
                         out_dir=out_dir,
@@ -1652,6 +1736,8 @@ def main() -> None:
                     return
 
                 st.success(f"Готово. Документов: {stats['docs']}, контекстов: {stats['contexts']}, flagged: {stats['flagged']}")
+                prog_bar.progress(85, text="Формирование визуализаций: 85%")
+                prog_box.markdown("**Статус анализа корпуса:** 85%")
                 show_referent_dashboard(
                     out_dir=out_dir,
                     default_ref=referent_target,
@@ -1681,6 +1767,8 @@ def main() -> None:
                     return
 
                 try:
+                    prog_bar.progress(55, text="Корпусный анализ выполняется: 55%")
+                    prog_box.markdown("**Статус анализа корпуса:** 55%")
                     dedup_stats, analyzed_docs, analyzed_doc_objs = run_analysis(
                         docs=docs,
                         out_dir=out_dir,
@@ -1699,6 +1787,8 @@ def main() -> None:
                     return
 
                 st.success(f"Готово. Проанализировано документов: {analyzed_docs}")
+                prog_bar.progress(85, text="Формирование визуализаций: 85%")
+                prog_box.markdown("**Статус анализа корпуса:** 85%")
                 if analysis_mode == "Расширенный (корпусный)":
                     st.json(dedup_stats)
 
@@ -1728,6 +1818,8 @@ def main() -> None:
                         st.write({"build": APP_BUILD, "docs_for_indicator_charts": len(analyzed_doc_objs)})
 
             out_zip = zip_dir_bytes(out_dir)
+            prog_bar.progress(100, text="Анализ завершён: 100%")
+            prog_box.markdown("**Статус анализа корпуса:** 100%")
             st.download_button(
                 label="Скачать результаты анализа (ZIP)",
                 data=out_zip,
