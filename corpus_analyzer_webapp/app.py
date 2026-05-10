@@ -20,7 +20,10 @@ import plotly.graph_objects as go
 import streamlit as st
 from docx import Document
 from pypdf import PdfReader
-from corpus_analyzer_webapp.formula_traces import build_context_formula_traces, traces_to_dataframe
+try:
+    from corpus_analyzer_webapp.formula_traces import build_context_formula_traces, traces_to_dataframe
+except Exception:
+    from formula_traces import build_context_formula_traces, traces_to_dataframe
 
 # Reuse your strict analyzer core
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -46,7 +49,7 @@ except Exception as _calibration_import_exc:
     render_calibration_sidebar = None
     CALIBRATION_IMPORT_ERROR = f"Calibration modules import failed: {_calibration_import_exc}"
 
-APP_BUILD = "2026-05-10-01:46"
+APP_BUILD = "2026-05-10-20:58"
 APP_DIR = Path(__file__).resolve().parent
 DEFAULT_CALIBRATION_TEXTS_PATH = APP_DIR / "default_calibration_texts.csv"
 DEFAULT_CALIBRATION_CONTEXTS_PATH = APP_DIR / "default_calibration_contexts.csv"
@@ -492,11 +495,16 @@ def _distribution_stats(df: pd.DataFrame, col: str, basis_mode: str) -> pd.DataF
 
 def _read_calibration_df(path: Path) -> pd.DataFrame:
     ext = path.suffix.lower()
-    if ext == ".csv":
-        df = pd.read_csv(path)
-    elif ext in {".xlsx", ".xls"}:
-        df = pd.read_excel(path)
-    else:
+    try:
+        if ext == ".csv":
+            df = pd.read_csv(path)
+        elif ext in {".xlsx", ".xls"}:
+            df = pd.read_excel(path)
+        else:
+            return pd.DataFrame()
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+    except Exception:
         return pd.DataFrame()
     if df.empty:
         return df
@@ -508,6 +516,47 @@ def _read_calibration_df(path: Path) -> pd.DataFrame:
     if "calibration_id" not in df.columns:
         df["calibration_id"] = [f"cal_{i+1:06d}" for i in range(len(df))]
     return df
+
+
+def _safe_read_csv(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+    except Exception:
+        return pd.DataFrame()
+
+
+def _source_has_data(src: object, base_dir: Path) -> bool:
+    mode = str(getattr(src, "mode", "")).strip().lower()
+    if mode == "local":
+        raw_path = str(getattr(src, "path", "") or "").strip()
+        if not raw_path:
+            return False
+        p = Path(raw_path)
+        if not p.is_absolute():
+            p = (base_dir / p).resolve()
+        if p.is_file():
+            return True
+        if not p.exists() or not p.is_dir():
+            return False
+        for ext in ("*.txt", "*.md", "*.docx", "*.pdf", "*.csv", "*.xlsx", "*.xls", "*.json"):
+            if any(p.rglob(ext)):
+                return True
+        return False
+    if mode == "url_list":
+        raw = str(getattr(src, "url_csv_path", "") or "").strip()
+        if not raw:
+            return False
+        p = Path(raw)
+        if not p.is_absolute():
+            p = (base_dir / p).resolve()
+        return p.exists() and p.is_file()
+    if mode == "rss":
+        return bool(str(getattr(src, "rss_url", "") or "").strip())
+    return False
 
 
 def _compute_calibration_report(cal_df: pd.DataFrame, dict_dir: Path, ip_formula_mode: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
@@ -2602,9 +2651,10 @@ def main() -> None:
             calibration_texts_df = pd.DataFrame()
             calibration_contexts_df = pd.DataFrame()
             calibration_dir = out_dir / "calibration"
+            calibration_dir.mkdir(parents=True, exist_ok=True)
             calibration_baseline = str(calibration_sidebar_state.get("baseline", "full_calibration_corpus"))
             cal_interpretation_mode = str(calibration_sidebar_state.get("interpretation_mode", "use_empirical_percentiles"))
-            use_empirical_calibration = bool(calibration_sidebar_state.get("use_empirical", True))
+            use_empirical_calibration = bool(calibration_sidebar_state.get("use_percentiles", True))
             if cal_interpretation_mode == "use_theoretical_interpretation":
                 use_empirical_calibration = False
             show_calibration_diagnostics = bool(calibration_sidebar_state.get("show_flags", True))
@@ -2617,15 +2667,15 @@ def main() -> None:
 
             # Default packaged calibration corpus for Streamlit Cloud / no-upload mode.
             if DEFAULT_CALIBRATION_TEXTS_PATH.exists():
-                try:
-                    calibration_texts_df = pd.read_csv(DEFAULT_CALIBRATION_TEXTS_PATH)
-                except Exception:
-                    calibration_texts_df = pd.DataFrame()
+                calibration_texts_df = _safe_read_csv(DEFAULT_CALIBRATION_TEXTS_PATH)
             if DEFAULT_CALIBRATION_CONTEXTS_PATH.exists():
-                try:
-                    calibration_contexts_df = pd.read_csv(DEFAULT_CALIBRATION_CONTEXTS_PATH)
-                except Exception:
-                    calibration_contexts_df = pd.DataFrame()
+                calibration_contexts_df = _safe_read_csv(DEFAULT_CALIBRATION_CONTEXTS_PATH)
+
+            # Mirror bundled baseline into per-run temp folder so calibration UI tabs can display it.
+            if not calibration_texts_df.empty and not (calibration_dir / "calibration_texts.csv").exists():
+                calibration_texts_df.to_csv(calibration_dir / "calibration_texts.csv", index=False)
+            if not calibration_contexts_df.empty and not (calibration_dir / "calibration_contexts.csv").exists():
+                calibration_contexts_df.to_csv(calibration_dir / "calibration_contexts.csv", index=False)
 
             needs_build = (
                 calibration_texts_df.empty
@@ -2635,7 +2685,6 @@ def main() -> None:
             )
             if CalibrationBuilder is not None and (cal_build_btn or cal_recalc_btn or cal_extract_btn or needs_build):
                 try:
-                    calibration_dir.mkdir(parents=True, exist_ok=True)
                     builder = CalibrationBuilder(dict_dir=out_dir / "referent_dicts", lexicons_dir=ROOT_DIR / "lexicons")
                     cal_sources = []
 
@@ -2667,9 +2716,13 @@ def main() -> None:
                             )
                         )
 
-                    if cal_sources:
+                    valid_sources = [s for s in cal_sources if _source_has_data(s, ROOT_DIR)]
+                    if cal_sources and not valid_sources and (cal_build_btn or cal_recalc_btn):
+                        st.info("Локальные calibration-источники не найдены в среде запуска. Используется встроенный baseline.")
+
+                    if valid_sources:
                         artifacts = builder.run(
-                            sources=cal_sources,
+                            sources=valid_sources,
                             base_dir=ROOT_DIR,
                             output_dir=calibration_dir,
                         )
@@ -2678,9 +2731,11 @@ def main() -> None:
                         p_cal = calibration_dir / "calibration_texts.csv"
                         p_cal_ctx = calibration_dir / "calibration_contexts.csv"
                         if p_cal.exists():
-                            calibration_texts_df = pd.read_csv(p_cal)
+                            calibration_texts_df = _safe_read_csv(p_cal)
                         if p_cal_ctx.exists():
-                            calibration_contexts_df = pd.read_csv(p_cal_ctx)
+                            calibration_contexts_df = _safe_read_csv(p_cal_ctx)
+                    elif cal_extract_btn:
+                        st.info("Нет доступных источников для извлечения кандидатов. Загрузите файлы в 'Upload local calibration files'.")
                     if cal_reload_btn and apply_verified_terms_to_lexicons is not None:
                         version = apply_verified_terms_to_lexicons(
                             lexicons_dir=ROOT_DIR / "lexicons",
@@ -2777,7 +2832,16 @@ def main() -> None:
                         p = out_dir / preview_name
                         if p.exists():
                             st.markdown(f"**{preview_name}**")
-                            st.dataframe(pd.read_csv(p).head(20), use_container_width=True)
+                            try:
+                                df_preview = pd.read_csv(p)
+                                if df_preview.empty:
+                                    st.info("Файл существует, но таблица пока пустая.")
+                                else:
+                                    st.dataframe(df_preview.head(20), use_container_width=True)
+                            except pd.errors.EmptyDataError:
+                                st.warning("Файл CSV пустой (0 строк данных).")
+                            except Exception as e:
+                                st.warning(f"Не удалось прочитать CSV: {e}")
                     p_dist = out_dir / "distribution_stats.xlsx"
                     if p_dist.exists():
                         st.markdown("**distribution_stats.xlsx**")
