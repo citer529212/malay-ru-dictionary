@@ -241,9 +241,65 @@ function normalizeText(text) {
 
 function normalizeHeadwordLoose(text) {
   return normalizeText(text)
-    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/[^a-zа-яё0-9\s-]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeRussianStem(word) {
+  const w = normalizeText(word || "");
+  if (!/^[а-яё-]+$/i.test(w)) {
+    return w;
+  }
+  if (w.length <= 4) {
+    return w;
+  }
+
+  const endings = [
+    "иями",
+    "ями",
+    "ами",
+    "ого",
+    "ему",
+    "ому",
+    "его",
+    "ыми",
+    "ими",
+    "иях",
+    "ах",
+    "ях",
+    "ой",
+    "ий",
+    "ый",
+    "ая",
+    "ое",
+    "ее",
+    "ую",
+    "юю",
+    "ов",
+    "ев",
+    "ом",
+    "ем",
+    "ам",
+    "ям",
+    "ах",
+    "ях",
+    "ы",
+    "и",
+    "а",
+    "я",
+    "у",
+    "ю",
+    "е",
+    "о",
+  ];
+
+  for (const ending of endings) {
+    if (w.endsWith(ending) && w.length - ending.length >= 3) {
+      return w.slice(0, -ending.length);
+    }
+  }
+  return w;
 }
 
 function cleanupLine(text) {
@@ -937,6 +993,8 @@ function searchEntries(query) {
   }
 
   const q = normalizeText(query);
+  const qLoose = normalizeHeadwordLoose(query);
+  const qStem = normalizeRussianStem(qLoose);
   const qGrams = buildBigrams(q);
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
   const queryWords = q.split(/\s+/).filter(Boolean);
@@ -945,13 +1003,15 @@ function searchEntries(query) {
   return state.entries
     .map((entry) => {
       const title = entry._normTitle;
+      const titleLoose = normalizeHeadwordLoose(entry.title);
+      const titleStem = normalizeRussianStem(titleLoose);
       const body = entry._normBody;
       const titleWords = (title || "").split(/\s+/).filter(Boolean);
       const titleWordCount = titleWords.length || 1;
       const lenDelta = Math.abs((title || "").length - q.length);
       let score = 99;
 
-      if (title === q) {
+      if (title === q || titleLoose === qLoose || (qStem && titleStem === qStem)) {
         score = 0;
       } else if (queryPattern.test(title)) {
         score = 0.2 + lenDelta / 50;
@@ -1004,6 +1064,9 @@ function searchEntries(query) {
       _lenDelta: row.lenDelta,
       _wordCount: row.titleWordCount,
       _exactTitle: normalizeText(row.entry.title) === q,
+      _exactLoose: normalizeHeadwordLoose(row.entry.title) === qLoose,
+      _exactStem:
+        normalizeRussianStem(normalizeHeadwordLoose(row.entry.title)) === qStem && qStem.length >= 3,
     }));
 }
 
@@ -1026,6 +1089,8 @@ function groupEntryResults(rows, query = "") {
         _lenDelta: Number.isFinite(row._lenDelta) ? row._lenDelta : rowDelta,
         _wordCount: Number.isFinite(row._wordCount) ? row._wordCount : key.split(/\s+/).length,
         _exactTitle: Boolean(row._exactTitle),
+        _exactLoose: Boolean(row._exactLoose),
+        _exactStem: Boolean(row._exactStem),
       });
       return;
     }
@@ -1045,11 +1110,15 @@ function groupEntryResults(rows, query = "") {
       Number.isFinite(row._wordCount) ? row._wordCount : key.split(/\s+/).length
     );
     current._exactTitle = current._exactTitle || Boolean(row._exactTitle);
+    current._exactLoose = current._exactLoose || Boolean(row._exactLoose);
+    current._exactStem = current._exactStem || Boolean(row._exactStem);
   });
 
   return [...groups.values()]
     .sort(
       (a, b) =>
+        Number(b._exactLoose) - Number(a._exactLoose) ||
+        Number(b._exactStem) - Number(a._exactStem) ||
         Number(b._exactTitle) - Number(a._exactTitle) ||
         a._rank - b._rank ||
         a._wordCount - b._wordCount ||
@@ -1103,6 +1172,8 @@ function computeBestAnswer(query) {
   }
 
   const qNorm = normalizeText(query);
+  const qLoose = normalizeHeadwordLoose(query);
+  const qStem = normalizeRussianStem(qLoose);
   const qWords = qNorm.split(/\s+/).filter(Boolean);
   const groupedEntries = groupEntryResults(searchEntries(query), query);
 
@@ -1112,7 +1183,10 @@ function computeBestAnswer(query) {
         if (row._wordCount !== 1) {
           return false;
         }
-        return normalizeHeadwordLoose(row.title) === qNorm;
+        return (
+          normalizeHeadwordLoose(row.title) === qLoose ||
+          (qStem.length >= 3 && normalizeRussianStem(normalizeHeadwordLoose(row.title)) === qStem)
+        );
       });
       if (exactSingle) {
         return exactSingle;
