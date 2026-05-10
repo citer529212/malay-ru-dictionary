@@ -185,6 +185,12 @@ h2 {
   gap: 9px;
 }
 
+.direction-switch {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .mode-switch {
   display: flex;
   gap: 8px;

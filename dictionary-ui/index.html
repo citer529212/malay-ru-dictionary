@@ -21,8 +21,9 @@
         <p class="eyebrow">Электронный словарь</p>
         <h1>Большой малайско-русский словарь Т.В.Дорофеева Е.С.Кукушкина В.А.Погадаев</h1>
         <p class="hero-text">
-          Словарь работает автономно сразу после открытия сайта. Загрузка PDF
-          нужна только для просмотра сканов страниц.
+          Сайт работает автономно и поддерживает оба направления:
+          малайско-русский и русско-малайский словари. Загрузка PDF нужна
+          только для просмотра сканов страниц.
         </p>
       </header>
 
@@ -40,13 +41,21 @@
           <input
             id="searchInput"
             type="search"
-            placeholder="Введите слово на малайском или русском"
+            placeholder="Введите слово и выберите направление перевода"
             disabled
           />
           <button id="searchButton" disabled>Поиск</button>
         </div>
 
         <div class="search-tools">
+          <div class="direction-switch" id="directionSwitch">
+            <button type="button" data-direction="ms-ru" class="mode-button active">
+              Малайский → Русский
+            </button>
+            <button type="button" data-direction="ru-ms" class="mode-button">
+              Русский → Малайский
+            </button>
+          </div>
           <div class="mode-switch" id="searchModeSwitch">
             <button type="button" data-mode="all" class="mode-button" disabled>
               Все
@@ -108,12 +117,12 @@
       <section class="note card">
         <h2>Как это работает</h2>
         <p>
-          Поиск работает по встроенной проверенной JSON-базе и не требует
-          загрузки PDF.
+          Поиск работает по встроенным JSON-базам двух словарей:
+          малайско-русского и русско-малайского, без обязательной загрузки PDF.
         </p>
         <p>
-          При желании можно загрузить PDF только для просмотра страниц в
-          правой панели.
+          Выберите направление перевода кнопками над режимами поиска.
+          PDF можно загрузить только для просмотра страниц в правой панели.
         </p>
       </section>
     </main>

@@ -8,6 +8,7 @@ const ui = {
   fileMeta: document.getElementById("fileMeta"),
   searchInput: document.getElementById("searchInput"),
   searchButton: document.getElementById("searchButton"),
+  directionSwitch: document.getElementById("directionSwitch"),
   searchModeSwitch: document.getElementById("searchModeSwitch"),
   searchHistory: document.getElementById("searchHistory"),
   answerCard: document.getElementById("answerCard"),
@@ -29,8 +30,14 @@ const ui = {
 
 const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
 const INDEX_VERSION = "v4-columns-context";
-const CURATED_DICTIONARY_URL = "./data/dictionary_curated.json";
-const BUNDLED_DICTIONARY_URL = "./data/dictionary.json";
+const CURATED_DICTIONARY_URLS = {
+  "ms-ru": "./data/dictionary_curated.json",
+  "ru-ms": "./data/dictionary_ru_ms_curated.json",
+};
+const BUNDLED_DICTIONARY_URLS = {
+  "ms-ru": "./data/dictionary.json",
+  "ru-ms": "./data/dictionary_ru_ms.json",
+};
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
@@ -50,6 +57,7 @@ const state = {
   history: [],
   activeQuery: "",
   curatedOnly: false,
+  direction: "ms-ru",
 };
 
 ui.fileInput.addEventListener("change", async (event) => {
@@ -84,6 +92,31 @@ ui.searchModeSwitch.addEventListener("click", (event) => {
 
   state.searchMode = button.dataset.mode;
   updateModeButtons();
+  runSearch();
+});
+
+ui.directionSwitch.addEventListener("click", async (event) => {
+  const button = event.target.closest("button[data-direction]");
+  if (!button || button.disabled) {
+    return;
+  }
+  const nextDirection = button.dataset.direction;
+  if (!nextDirection || nextDirection === state.direction) {
+    return;
+  }
+  state.direction = nextDirection;
+  updateDirectionButtons();
+  setStatus("Переключение словарного направления...");
+  setProgress(40);
+  const loaded = await loadBundledDictionary();
+  if (!loaded) {
+    setStatus("Не удалось загрузить словарную базу для выбранного направления.");
+    setSearchAvailability(false);
+    return;
+  }
+  setSearchAvailability(true);
+  setProgress(100);
+  state.selectedResultId = null;
   runSearch();
 });
 
@@ -162,6 +195,15 @@ function updateModeButtons() {
       button.disabled = true;
     }
     button.classList.toggle("active", button.dataset.mode === state.searchMode);
+  });
+}
+
+function updateDirectionButtons() {
+  if (!ui.directionSwitch) {
+    return;
+  }
+  ui.directionSwitch.querySelectorAll("button[data-direction]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.direction === state.direction);
   });
 }
 
@@ -706,11 +748,11 @@ function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
 }
 
 async function loadBundledDictionary() {
-  const curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URL, {
+  const curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
     verified: true,
     idPrefix: "curated",
   });
-  const bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URL, {
+  const bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
     verified: false,
     idPrefix: "bundle",
   });
@@ -1347,10 +1389,11 @@ async function initAutonomousDictionary() {
   setProgress(100);
   setStatus(
     state.curatedOnly
-      ? `Автономный режим: загружено ${state.entries.length} проверенных словарных статей.`
-      : `Автономный режим: загружено ${state.entries.length} словарных статей.`
+      ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
+      : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`
   );
   runSearch();
 }
 
 void initAutonomousDictionary();
+updateDirectionButtons();
