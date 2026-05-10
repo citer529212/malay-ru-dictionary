@@ -49,10 +49,17 @@ except Exception as _calibration_import_exc:
     render_calibration_sidebar = None
     CALIBRATION_IMPORT_ERROR = f"Calibration modules import failed: {_calibration_import_exc}"
 
-APP_BUILD = "2026-05-10-20:58"
+APP_BUILD = "2026-05-10-21:06"
 APP_DIR = Path(__file__).resolve().parent
 DEFAULT_CALIBRATION_TEXTS_PATH = APP_DIR / "default_calibration_texts.csv"
 DEFAULT_CALIBRATION_CONTEXTS_PATH = APP_DIR / "default_calibration_contexts.csv"
+DEFAULT_CALIBRATION_DISTRIBUTIONS_PATH = APP_DIR / "default_calibration_distributions.csv"
+DEFAULT_CALIBRATION_REPORT_PATH = APP_DIR / "default_calibration_report.md"
+DEFAULT_CALIBRATION_CANDIDATES_PATH = APP_DIR / "default_candidate_terms.csv"
+DEFAULT_CALIBRATION_FLAGS_PATH = APP_DIR / "default_calibration_quality_flags.csv"
+DEFAULT_CALIBRATION_VERIFIED_PATH = APP_DIR / "default_verified_terms.csv"
+DEFAULT_CALIBRATION_REJECTED_PATH = APP_DIR / "default_rejected_terms.csv"
+DEFAULT_CALIBRATION_CHANGELOG_PATH = APP_DIR / "default_dictionary_change_log.csv"
 
 PROGRESS_STAGES = {
     "init": (3, "Инициализация анализа: проверка входных данных, параметров и выбранных референтов."),
@@ -527,6 +534,28 @@ def _safe_read_csv(path: Path) -> pd.DataFrame:
         return pd.DataFrame()
     except Exception:
         return pd.DataFrame()
+
+
+def _mirror_default_calibration_assets(calibration_dir: Path) -> None:
+    calibration_dir.mkdir(parents=True, exist_ok=True)
+    to_copy = [
+        (DEFAULT_CALIBRATION_TEXTS_PATH, calibration_dir / "calibration_texts.csv"),
+        (DEFAULT_CALIBRATION_CONTEXTS_PATH, calibration_dir / "calibration_contexts.csv"),
+        (DEFAULT_CALIBRATION_DISTRIBUTIONS_PATH, calibration_dir / "calibration_distributions.csv"),
+        (DEFAULT_CALIBRATION_REPORT_PATH, calibration_dir / "calibration_report.md"),
+        (DEFAULT_CALIBRATION_CANDIDATES_PATH, calibration_dir / "candidate_terms.csv"),
+        (DEFAULT_CALIBRATION_FLAGS_PATH, calibration_dir / "calibration_quality_flags.csv"),
+        (DEFAULT_CALIBRATION_VERIFIED_PATH, calibration_dir / "verified_terms.csv"),
+        (DEFAULT_CALIBRATION_REJECTED_PATH, calibration_dir / "rejected_terms.csv"),
+        (DEFAULT_CALIBRATION_CHANGELOG_PATH, calibration_dir / "dictionary_change_log.csv"),
+    ]
+    for src, dst in to_copy:
+        if src.exists() and not dst.exists():
+            try:
+                dst.write_bytes(src.read_bytes())
+            except Exception:
+                # Keep app resilient in read-only / transient FS modes.
+                pass
 
 
 def _source_has_data(src: object, base_dir: Path) -> bool:
@@ -2652,6 +2681,7 @@ def main() -> None:
             calibration_contexts_df = pd.DataFrame()
             calibration_dir = out_dir / "calibration"
             calibration_dir.mkdir(parents=True, exist_ok=True)
+            _mirror_default_calibration_assets(calibration_dir)
             calibration_baseline = str(calibration_sidebar_state.get("baseline", "full_calibration_corpus"))
             cal_interpretation_mode = str(calibration_sidebar_state.get("interpretation_mode", "use_empirical_percentiles"))
             use_empirical_calibration = bool(calibration_sidebar_state.get("use_percentiles", True))
@@ -2672,9 +2702,9 @@ def main() -> None:
                 calibration_contexts_df = _safe_read_csv(DEFAULT_CALIBRATION_CONTEXTS_PATH)
 
             # Mirror bundled baseline into per-run temp folder so calibration UI tabs can display it.
-            if not calibration_texts_df.empty and not (calibration_dir / "calibration_texts.csv").exists():
+            if not calibration_texts_df.empty:
                 calibration_texts_df.to_csv(calibration_dir / "calibration_texts.csv", index=False)
-            if not calibration_contexts_df.empty and not (calibration_dir / "calibration_contexts.csv").exists():
+            if not calibration_contexts_df.empty:
                 calibration_contexts_df.to_csv(calibration_dir / "calibration_contexts.csv", index=False)
 
             needs_build = (

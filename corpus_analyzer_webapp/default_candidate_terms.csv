@@ -1,0 +1,19 @@
+candidate_term,lemma,language,proposed_dictionary,proposed_category,frequency,contexts_count,example_contexts,cooccurring_ref_countries,polarity_hint,confidence_score,status,emotion_type,intensity_level,weight,metaphor_model,source_domain,target_domain,conventionality,default_strength,pattern_type,salience_value
+battle,battle,id,metaphor_markers,metaphor,9,1,"Berikut daftar lengkap nominasi Golden Globes 2026:
+Film Terbaik – Drama Frankenstein Hamnet It Was Just an Accident The Secret Agent Sentimental Value Sinners
+Film Terbaik – Musikal atau Komedi Blue Moon Bugonia Marty Supreme No Other Choice Nouvelle Vague One Battle After Anoth",USA,mixed,0.74,candidate,,,,politics_as_war,war,politics,conventional,strong,,
+development,development,id,ideological_markers,ideological,2,2,"Hanya saja, seiring perjalanan waktu, berbagai faktor, mulai dari pembebasan lahan, perubahan desain, hingga kenaikan harga bahan konstruksi yang mendorong cost overrun hingga mencapai sekitar US$7,2 miliar atau setara Rp116 triliun. Sebagian besar pembiayaan berasal dari pinjama || Bukan untuk menyesali keputusan masa lalu, tetapi untuk memastikan agar investasi besar ini benar-benar memberi nilai tambah bagi perekonomian dan generasi mendatang. Proyek kereta cepat Jakarta–Bandung sejatinya dirancang dengan biaya awal sekitar US$6 miliar. Hanya saja, seirin",China;USA,mixed,0.72,candidate,,,,,,,,,,
+hope,hope,id,emotional_markers,emotional,3,3,"Title: Kimberly-Clark Mulai Kemitraan Global yang Ditingkatkan Untuk Majukan Perawatan Penting Bagi 24 Juta Perempuan & Anak Perempuan
+Source: Antara
+CountryRef: USA
+Term: USA
+Date: 2025-10-10T08:04:17+07:00
+Year: 2025
+URL: https://www.antaranews.com/berita/5165469/kimberly-clark || ""Kami juga tahu bahwa perubahan yang langgeng dapat terjadi bila anak laki-laki terlibat sebagai teman. Kemitraan kami dengan Kimberly-Clark membantu menghilangkan hal tabu yang berbahaya dan memastikan setiap anak dapat belajar, memimpin, mengambil keputusan, dan berkembang.""
+Ke || Title: Kimberly-Clark Mulai Kemitraan Global yang Ditingkatkan Untuk Majukan Perawatan Penting Bagi 24 Juta Perempuan & Anak Perempuan
+Source: Antara
+CountryRef: USA
+Term: USA
+Date: 2025-10-10T08:04:17+07:00
+Year: 2025
+URL: https://www.antaranews.com/berita/5165469/kimberly-clark",China;USA,positive,0.75,candidate,hope,medium,0.67,,,,,,,

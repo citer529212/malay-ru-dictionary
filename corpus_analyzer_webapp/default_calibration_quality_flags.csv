@@ -1,0 +1,17 @@
+calibration_id,issue_type,severity,explanation,recommended_action
+GLOBAL,category_imbalance,medium,"max=12, min=4",balance categories
+cal_local_manual_standard_political_news_set_rebuilt_000009_000009,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_crisis_report_set_rebuilt_000001_000001,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_crisis_report_set_rebuilt_000002_000002,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_crisis_report_set_rebuilt_000006_000006,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_opinion_editorial_set_rebuilt_000004_000004,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_propaganda_like_text_set_rebuilt_000002_000002,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_propaganda_like_text_set_rebuilt_000003_000003,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_highly_emotional_text_set_rebuilt_000001_000001,no_ref_country_detected,medium,ref_country is empty,provide ref_country or text with referent mention
+cal_local_manual_crisis_report_set_rebuilt_000003_000003,outlier,medium,IDI_raw > p99 and >3*median,manual review only
+cal_local_manual_opinion_editorial_set_rebuilt_000002_000002,outlier,medium,IDI_raw > p99 and >3*median,manual review only
+cal_local_manual_analytical_article_set_rebuilt_000007_000007,outlier,medium,EMI_raw > p99 and >3*median,manual review only
+cal_local_manual_ideological_mobilization_set_rebuilt_000005_000005,outlier,medium,EMI_raw > p99 and >3*median,manual review only
+cal_local_manual_ideological_mobilization_set_rebuilt_000005_000005,outlier,medium,MTI_raw > p99 and >3*median,manual review only
+cal_local_manual_highly_emotional_text_set_rebuilt_000003_000003,outlier,medium,MTI_raw > p99 and >3*median,manual review only
+cal_local_manual_propaganda_like_text_set_rebuilt_000004_000004,outlier,medium,IP_abs_context > p99 and >3*median,manual review only
