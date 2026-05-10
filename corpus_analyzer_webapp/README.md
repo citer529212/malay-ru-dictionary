@@ -59,7 +59,7 @@ streamlit run corpus_analyzer_webapp/app.py
 - Почему percentiles лучше теоретического min/max:
   - percentiles дают эмпирическую относительную позицию внутри реального корпуса, а не абстрактную шкалу.
 - EVI как базовый оценочный вектор:
-  - `EVI_raw ∈ [-10; +10]`, `EVI_norm = EVI_raw / 5`.
+  - `EVI ∈ [-10; +10]`, `EVI_norm = EVI / 10`.
 - IDI/EMI/MTI как усилители:
   - `Discursive_energy = IDI + EMI + MTI`.
 - Формула IP на уровне контекста:
