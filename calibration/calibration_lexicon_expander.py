@@ -126,7 +126,7 @@ def ensure_lexicon_files(lexicons_dir: Path) -> None:
     lexicons_dir.mkdir(parents=True, exist_ok=True)
     for name, cols in LEXICON_SCHEMAS.items():
         p = lexicons_dir / name
-        if not p.exists():
+        if (not p.exists()) or (p.exists() and p.stat().st_size == 0):
             pd.DataFrame(columns=cols).to_csv(p, index=False)
 
 

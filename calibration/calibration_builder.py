@@ -32,6 +32,17 @@ except Exception:  # pragma: no cover
     PdfReader = None
 
 
+def _read_csv_safe(path: Path) -> pd.DataFrame:
+    if not path.exists():
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+    except Exception:
+        return pd.DataFrame()
+
+
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -577,9 +588,9 @@ class CalibrationBuilder:
             texts_df["quality_flags"] = texts_df["quality_flags_new"].where(texts_df["quality_flags_new"].notna(), texts_df.get("quality_flags", ""))
             texts_df = texts_df.drop(columns=[c for c in ["quality_flags_new"] if c in texts_df.columns])
 
-        verified_df = pd.read_csv(self.lexicons_dir / "verified_terms.csv") if (self.lexicons_dir / "verified_terms.csv").exists() else pd.DataFrame()
-        rejected_df = pd.read_csv(self.lexicons_dir / "rejected_terms.csv") if (self.lexicons_dir / "rejected_terms.csv").exists() else pd.DataFrame()
-        change_log_df = pd.read_csv(self.lexicons_dir / "dictionary_change_log.csv") if (self.lexicons_dir / "dictionary_change_log.csv").exists() else pd.DataFrame()
+        verified_df = _read_csv_safe(self.lexicons_dir / "verified_terms.csv")
+        rejected_df = _read_csv_safe(self.lexicons_dir / "rejected_terms.csv")
+        change_log_df = _read_csv_safe(self.lexicons_dir / "dictionary_change_log.csv")
 
         report_md = self.build_report(texts_df, contexts_df, dists_df, candidates_df, flags_df)
 

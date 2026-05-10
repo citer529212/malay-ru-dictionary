@@ -6,6 +6,24 @@ from typing import Dict
 
 import pandas as pd
 
+EMPTY_EXPORT_SCHEMAS = {
+    "candidate_terms": [
+        "candidate_term","lemma","language","proposed_dictionary","proposed_category","frequency","contexts_count","example_contexts","cooccurring_ref_countries","polarity_hint","confidence_score","status","emotion_type","intensity_level","weight","metaphor_model","source_domain","target_domain","conventionality","default_strength","pattern_type","salience_value",
+    ],
+    "verified_terms": [
+        "candidate_term","lemma","language","proposed_dictionary","proposed_category","frequency","contexts_count","example_contexts","cooccurring_ref_countries","polarity_hint","confidence_score","status","emotion_type","intensity_level","weight","metaphor_model","source_domain","target_domain","conventionality","default_strength","pattern_type","salience_value","note",
+    ],
+    "rejected_terms": [
+        "candidate_term","lemma","language","proposed_dictionary","proposed_category","frequency","contexts_count","example_contexts","cooccurring_ref_countries","polarity_hint","confidence_score","status","emotion_type","intensity_level","weight","metaphor_model","source_domain","target_domain","conventionality","default_strength","pattern_type","salience_value","note",
+    ],
+    "dictionary_change_log": [
+        "timestamp","user_action","term","dictionary","old_value","new_value","reason","examples","source",
+    ],
+    "quality_flags": [
+        "calibration_id","issue_type","severity","explanation","recommended_action",
+    ],
+}
+
 
 def _round_df(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
@@ -25,6 +43,16 @@ def _round_df(df: pd.DataFrame) -> pd.DataFrame:
     for c in out.columns:
         if c.endswith("percentile"):
             out[c] = pd.to_numeric(out[c], errors="coerce").round(2)
+    return out
+
+
+def _ensure_columns(df: pd.DataFrame, cols: list[str]) -> pd.DataFrame:
+    if df is None or df.empty:
+        return pd.DataFrame(columns=cols)
+    out = df.copy()
+    for c in cols:
+        if c not in out.columns:
+            out[c] = ""
     return out
 
 
@@ -73,11 +101,11 @@ def export_all(
     paths["rejected_terms_csv"] = out_dir / "rejected_terms.csv"
     paths["dictionary_change_log_csv"] = out_dir / "dictionary_change_log.csv"
     paths["calibration_quality_flags_csv"] = out_dir / "calibration_quality_flags.csv"
-    candidate_df.to_csv(paths["candidate_terms_csv"], index=False)
-    verified_df.to_csv(paths["verified_terms_csv"], index=False)
-    rejected_df.to_csv(paths["rejected_terms_csv"], index=False)
-    change_log_df.to_csv(paths["dictionary_change_log_csv"], index=False)
-    quality_flags_df.to_csv(paths["calibration_quality_flags_csv"], index=False)
+    _ensure_columns(candidate_df, EMPTY_EXPORT_SCHEMAS["candidate_terms"]).to_csv(paths["candidate_terms_csv"], index=False)
+    _ensure_columns(verified_df, EMPTY_EXPORT_SCHEMAS["verified_terms"]).to_csv(paths["verified_terms_csv"], index=False)
+    _ensure_columns(rejected_df, EMPTY_EXPORT_SCHEMAS["rejected_terms"]).to_csv(paths["rejected_terms_csv"], index=False)
+    _ensure_columns(change_log_df, EMPTY_EXPORT_SCHEMAS["dictionary_change_log"]).to_csv(paths["dictionary_change_log_csv"], index=False)
+    _ensure_columns(quality_flags_df, EMPTY_EXPORT_SCHEMAS["quality_flags"]).to_csv(paths["calibration_quality_flags_csv"], index=False)
 
     paths["calibration_report_md"] = out_dir / "calibration_report.md"
     paths["calibration_report_md"].write_text(report_md, encoding="utf-8")
