@@ -302,6 +302,42 @@ function normalizeRussianStem(word) {
   return w;
 }
 
+function normalizeRussianSearchKey(word) {
+  let w = normalizeRussianStem(normalizeHeadwordLoose(word));
+  // OCR-friendly normalization for close Russian variants.
+  w = w.replace(/ь/g, "").replace(/й/g, "и");
+  w = w.replace(/([бвгджзклмнпрстфхцчшщ])\1$/u, "$1");
+  return w;
+}
+
+function levenshteinDistance(a, b) {
+  if (a === b) {
+    return 0;
+  }
+  if (!a.length) {
+    return b.length;
+  }
+  if (!b.length) {
+    return a.length;
+  }
+
+  const dp = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  for (let i = 0; i <= a.length; i += 1) dp[i][0] = i;
+  for (let j = 0; j <= b.length; j += 1) dp[0][j] = j;
+
+  for (let i = 1; i <= a.length; i += 1) {
+    for (let j = 1; j <= b.length; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+  return dp[a.length][b.length];
+}
+
 function cleanupLine(text) {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -995,6 +1031,7 @@ function searchEntries(query) {
   const q = normalizeText(query);
   const qLoose = normalizeHeadwordLoose(query);
   const qStem = normalizeRussianStem(qLoose);
+  const qRuKey = normalizeRussianSearchKey(qLoose);
   const qGrams = buildBigrams(q);
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
   const queryWords = q.split(/\s+/).filter(Boolean);
@@ -1005,13 +1042,19 @@ function searchEntries(query) {
       const title = entry._normTitle;
       const titleLoose = normalizeHeadwordLoose(entry.title);
       const titleStem = normalizeRussianStem(titleLoose);
+      const titleRuKey = normalizeRussianSearchKey(titleLoose);
       const body = entry._normBody;
       const titleWords = (title || "").split(/\s+/).filter(Boolean);
       const titleWordCount = titleWords.length || 1;
       const lenDelta = Math.abs((title || "").length - q.length);
       let score = 99;
 
-      if (title === q || titleLoose === qLoose || (qStem && titleStem === qStem)) {
+      if (
+        title === q ||
+        titleLoose === qLoose ||
+        (qStem && titleStem === qStem) ||
+        (qRuKey && titleRuKey === qRuKey)
+      ) {
         score = 0;
       } else if (queryPattern.test(title)) {
         score = 0.2 + lenDelta / 50;
@@ -1067,6 +1110,9 @@ function searchEntries(query) {
       _exactLoose: normalizeHeadwordLoose(row.entry.title) === qLoose,
       _exactStem:
         normalizeRussianStem(normalizeHeadwordLoose(row.entry.title)) === qStem && qStem.length >= 3,
+      _exactRuKey:
+        normalizeRussianSearchKey(normalizeHeadwordLoose(row.entry.title)) === qRuKey &&
+        qRuKey.length >= 3,
     }));
 }
 
@@ -1091,6 +1137,7 @@ function groupEntryResults(rows, query = "") {
         _exactTitle: Boolean(row._exactTitle),
         _exactLoose: Boolean(row._exactLoose),
         _exactStem: Boolean(row._exactStem),
+        _exactRuKey: Boolean(row._exactRuKey),
       });
       return;
     }
@@ -1112,11 +1159,13 @@ function groupEntryResults(rows, query = "") {
     current._exactTitle = current._exactTitle || Boolean(row._exactTitle);
     current._exactLoose = current._exactLoose || Boolean(row._exactLoose);
     current._exactStem = current._exactStem || Boolean(row._exactStem);
+    current._exactRuKey = current._exactRuKey || Boolean(row._exactRuKey);
   });
 
   return [...groups.values()]
     .sort(
       (a, b) =>
+        Number(b._exactRuKey) - Number(a._exactRuKey) ||
         Number(b._exactLoose) - Number(a._exactLoose) ||
         Number(b._exactStem) - Number(a._exactStem) ||
         Number(b._exactTitle) - Number(a._exactTitle) ||
@@ -1174,6 +1223,7 @@ function computeBestAnswer(query) {
   const qNorm = normalizeText(query);
   const qLoose = normalizeHeadwordLoose(query);
   const qStem = normalizeRussianStem(qLoose);
+  const qRuKey = normalizeRussianSearchKey(qLoose);
   const qWords = qNorm.split(/\s+/).filter(Boolean);
   const groupedEntries = groupEntryResults(searchEntries(query), query);
 
@@ -1185,7 +1235,9 @@ function computeBestAnswer(query) {
         }
         return (
           normalizeHeadwordLoose(row.title) === qLoose ||
-          (qStem.length >= 3 && normalizeRussianStem(normalizeHeadwordLoose(row.title)) === qStem)
+          (qStem.length >= 3 && normalizeRussianStem(normalizeHeadwordLoose(row.title)) === qStem) ||
+          (qRuKey.length >= 3 &&
+            normalizeRussianSearchKey(normalizeHeadwordLoose(row.title)) === qRuKey)
         );
       });
       if (exactSingle) {
@@ -1203,8 +1255,23 @@ function computeBestAnswer(query) {
         return nearSingle;
       }
 
+      // If OCR produced a near-lemma one-word variant, still show it as best candidate.
+      const nearestSingle = groupedEntries.find((row) => {
+        if (row._wordCount !== 1) {
+          return false;
+        }
+        const key = normalizeRussianSearchKey(normalizeHeadwordLoose(row.title));
+        if (!qRuKey || !key || qRuKey.length < 3) {
+          return false;
+        }
+        return levenshteinDistance(key, qRuKey) <= 1;
+      });
+      if (nearestSingle) {
+        return nearestSingle;
+      }
+
       // Avoid returning phrase-based "best answer" for one-word query.
-      return null;
+      return groupedEntries[0]._wordCount === 1 ? groupedEntries[0] : null;
     }
 
     return groupedEntries[0];
