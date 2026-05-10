@@ -117,6 +117,11 @@ ui.directionSwitch.addEventListener("click", async (event) => {
   setSearchAvailability(true);
   setProgress(100);
   state.selectedResultId = null;
+  setStatus(
+    state.curatedOnly
+      ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
+      : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`
+  );
   runSearch();
 });
 
@@ -308,6 +313,19 @@ function normalizeRussianSearchKey(word) {
   w = w.replace(/ь/g, "").replace(/й/g, "и");
   w = w.replace(/([бвгджзклмнпрстфхцчшщ])\1$/u, "$1");
   return w;
+}
+
+function detectQueryScript(query) {
+  const q = query || "";
+  const lat = (q.match(/[a-z]/gi) || []).length;
+  const cyr = (q.match(/[а-яё]/gi) || []).length;
+  if (lat > cyr && lat >= 2) {
+    return "latin";
+  }
+  if (cyr > lat && cyr >= 2) {
+    return "cyrillic";
+  }
+  return "mixed";
 }
 
 function levenshteinDistance(a, b) {
@@ -1270,8 +1288,8 @@ function computeBestAnswer(query) {
         return nearestSingle;
       }
 
-      // Avoid returning phrase-based "best answer" for one-word query.
-      return groupedEntries[0]._wordCount === 1 ? groupedEntries[0] : null;
+      // Even without exact match, return the top relevant dictionary candidate.
+      return groupedEntries[0];
     }
 
     return groupedEntries[0];
@@ -1294,9 +1312,18 @@ function renderBestAnswer() {
   const hit = state.bestAnswer;
 
   if (!hit) {
+    const script = detectQueryScript(query);
     ui.answerTitle.textContent = `Точного словарного совпадения нет: “${query}”`;
-    ui.answerBody.textContent =
-      "Попробуйте другое написание. Фрагменты OCR не показываются как лучший ответ, чтобы не вводить в заблуждение.";
+    if (state.direction === "ru-ms" && script === "latin") {
+      ui.answerBody.textContent =
+        "Запрос похож на малайский (латиница). Переключите направление на «Малайский → Русский» для точного словарного ответа.";
+    } else if (state.direction === "ms-ru" && script === "cyrillic") {
+      ui.answerBody.textContent =
+        "Запрос похож на русский (кириллица). Переключите направление на «Русский → Малайский» для точного словарного ответа.";
+    } else {
+      ui.answerBody.textContent =
+        "Попробуйте другое написание. Фрагменты OCR не показываются как лучший ответ, чтобы не вводить в заблуждение.";
+    }
     ui.answerMeta.innerHTML = "";
     return;
   }
