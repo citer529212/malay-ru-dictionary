@@ -10,6 +10,8 @@ const ui = {
   searchButton: document.getElementById("searchButton"),
   directionSwitch: document.getElementById("directionSwitch"),
   searchModeSwitch: document.getElementById("searchModeSwitch"),
+  serviceToggle: document.getElementById("serviceToggle"),
+  serviceToggleWrap: document.getElementById("serviceToggleWrap"),
   searchHistory: document.getElementById("searchHistory"),
   answerCard: document.getElementById("answerCard"),
   answerTitle: document.getElementById("answerTitle"),
@@ -33,6 +35,10 @@ const INDEX_VERSION = "v4-columns-context";
 const CURATED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_curated.json",
   "ru-ms": "./data/dictionary_ru_ms_curated.json",
+};
+const SERVICE_DICTIONARY_URLS = {
+  "ms-ru": "",
+  "ru-ms": "./data/dictionary_ru_ms_service.json",
 };
 const BUNDLED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary.json",
@@ -58,6 +64,7 @@ const state = {
   activeQuery: "",
   curatedOnly: false,
   direction: "ms-ru",
+  includeServiceEntries: false,
 };
 
 ui.fileInput.addEventListener("change", async (event) => {
@@ -105,7 +112,14 @@ ui.directionSwitch.addEventListener("click", async (event) => {
     return;
   }
   state.direction = nextDirection;
+  if (state.direction !== "ru-ms") {
+    state.includeServiceEntries = false;
+    if (ui.serviceToggle) {
+      ui.serviceToggle.checked = false;
+    }
+  }
   updateDirectionButtons();
+  updateServiceToggleVisibility();
   setStatus("Переключение словарного направления...");
   setProgress(40);
   const loaded = await loadBundledDictionary();
@@ -124,6 +138,19 @@ ui.directionSwitch.addEventListener("click", async (event) => {
   );
   runSearch();
 });
+
+if (ui.serviceToggle) {
+  ui.serviceToggle.addEventListener("change", async () => {
+    state.includeServiceEntries = Boolean(ui.serviceToggle.checked);
+    setStatus("Обновление словарной базы...");
+    const loaded = await loadBundledDictionary();
+    if (!loaded) {
+      setStatus("Не удалось обновить словарную базу.");
+      return;
+    }
+    runSearch();
+  });
+}
 
 ui.searchHistory.addEventListener("click", (event) => {
   const chip = event.target.closest("button[data-query]");
@@ -210,6 +237,13 @@ function updateDirectionButtons() {
   ui.directionSwitch.querySelectorAll("button[data-direction]").forEach((button) => {
     button.classList.toggle("active", button.dataset.direction === state.direction);
   });
+}
+
+function updateServiceToggleVisibility() {
+  if (!ui.serviceToggleWrap) {
+    return;
+  }
+  ui.serviceToggleWrap.style.display = state.direction === "ru-ms" ? "inline-flex" : "none";
 }
 
 function updateViewerControls() {
@@ -899,6 +933,13 @@ async function loadBundledDictionary() {
     verified: true,
     idPrefix: "curated",
   });
+  let serviceEntries = [];
+  if (state.direction === "ru-ms" && state.includeServiceEntries && SERVICE_DICTIONARY_URLS["ru-ms"]) {
+    serviceEntries = await fetchDictionaryEntries(SERVICE_DICTIONARY_URLS["ru-ms"], {
+      verified: false,
+      idPrefix: "service",
+    });
+  }
   let bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
     verified: false,
     idPrefix: "bundle",
@@ -906,6 +947,7 @@ async function loadBundledDictionary() {
 
   if (state.direction === "ru-ms") {
     curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
+    serviceEntries = serviceEntries.filter(isRuMsEntryQuality);
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
   }
 
@@ -916,7 +958,7 @@ async function loadBundledDictionary() {
   let finalEntries = [];
   if (curatedEntries.length) {
     // If curated dictionary exists, load it fully without truncation.
-    finalEntries = deduplicateEntries(curatedEntries);
+    finalEntries = deduplicateEntries([...curatedEntries, ...serviceEntries]);
     state.curatedOnly = true;
     state.searchMode = "entries";
   } else {
@@ -1578,6 +1620,7 @@ async function loadPdfFile(file) {
 loadHistory();
 setSearchAvailability(false);
 updateModeButtons();
+updateServiceToggleVisibility();
 updateViewerControls();
 updateZoomLabel();
 setProgress(0);
