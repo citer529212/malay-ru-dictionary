@@ -820,6 +820,43 @@ function isSupplementEntryQuality(entry) {
   return true;
 }
 
+function isRuMsEntryQuality(entry) {
+  const title = cleanupLine(entry.title || "").toLowerCase();
+  const body = cleanupLine(entry.body || "");
+
+  if (!title || !body) {
+    return false;
+  }
+  if (title.length < 3 || title.length > 30) {
+    return false;
+  }
+  if (!/^[а-яё][а-яё\- ]+$/i.test(title)) {
+    return false;
+  }
+  if ((title.match(/\s+/g) || []).length > 1) {
+    return false;
+  }
+
+  const lat = (body.match(/[a-z]/gi) || []).length;
+  const cyr = (body.match(/[а-яё]/gi) || []).length;
+  if (lat < 3) {
+    return false;
+  }
+  if (!/[a-z]{3,}/i.test(body)) {
+    return false;
+  }
+  if (cyr > Math.max(8, lat * 0.3)) {
+    return false;
+  }
+  if (/[{}[\]<>^|]/.test(body)) {
+    return false;
+  }
+  if (title.length <= 4 && !/[аеёиоуыэюя]/i.test(title)) {
+    return false;
+  }
+  return true;
+}
+
 function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
   const result = [];
   const seen = new Set();
@@ -858,14 +895,19 @@ function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
 }
 
 async function loadBundledDictionary() {
-  const curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
+  let curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
     verified: true,
     idPrefix: "curated",
   });
-  const bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
+  let bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
     verified: false,
     idPrefix: "bundle",
   });
+
+  if (state.direction === "ru-ms") {
+    curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
+    bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
+  }
 
   if (!curatedEntries.length && !bundledEntries.length) {
     return false;
