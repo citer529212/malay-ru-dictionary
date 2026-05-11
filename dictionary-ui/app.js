@@ -36,6 +36,10 @@ const CURATED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_curated.json",
   "ru-ms": "./data/dictionary_ru_ms_curated.json",
 };
+const GOLD_DICTIONARY_URLS = {
+  "ms-ru": "",
+  "ru-ms": "./data/dictionary_ru_ms_gold.json",
+};
 const SERVICE_DICTIONARY_URLS = {
   "ms-ru": "",
   "ru-ms": "./data/dictionary_ru_ms_service.json",
@@ -967,6 +971,13 @@ function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
 }
 
 async function loadBundledDictionary() {
+  let goldEntries = [];
+  if (state.direction === "ru-ms" && GOLD_DICTIONARY_URLS["ru-ms"]) {
+    goldEntries = await fetchDictionaryEntries(GOLD_DICTIONARY_URLS["ru-ms"], {
+      verified: true,
+      idPrefix: "gold",
+    });
+  }
   let curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
     verified: true,
     idPrefix: "curated",
@@ -989,23 +1000,25 @@ async function loadBundledDictionary() {
         ...entry,
         title: normalizeRuTitleOcr(entry.title),
       }));
+    goldEntries = normalizeRuEntries(goldEntries);
     curatedEntries = normalizeRuEntries(curatedEntries);
     serviceEntries = normalizeRuEntries(serviceEntries);
     bundledEntries = normalizeRuEntries(bundledEntries);
 
+    goldEntries = goldEntries.filter(isRuMsEntryQuality);
     curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
     serviceEntries = serviceEntries.filter(isRuMsEntryQuality);
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
   }
 
-  if (!curatedEntries.length && !bundledEntries.length) {
+  if (!goldEntries.length && !curatedEntries.length && !bundledEntries.length) {
     return false;
   }
 
   let finalEntries = [];
-  if (curatedEntries.length) {
+  if (goldEntries.length || curatedEntries.length) {
     // If curated dictionary exists, load it fully without truncation.
-    finalEntries = deduplicateEntries([...curatedEntries, ...serviceEntries]);
+    finalEntries = deduplicateEntries([...goldEntries, ...curatedEntries, ...serviceEntries]);
     state.curatedOnly = true;
     state.searchMode = "entries";
   } else {
