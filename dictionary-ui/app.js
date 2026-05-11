@@ -349,6 +349,44 @@ function normalizeRussianSearchKey(word) {
   return w;
 }
 
+function normalizeRuTitleOcr(text) {
+  const map = {
+    A: "А",
+    B: "В",
+    C: "С",
+    E: "Е",
+    H: "Н",
+    K: "К",
+    M: "М",
+    O: "О",
+    P: "Р",
+    T: "Т",
+    X: "Х",
+    Y: "У",
+    a: "а",
+    c: "с",
+    e: "е",
+    o: "о",
+    p: "р",
+    x: "х",
+    y: "у",
+    k: "к",
+    m: "м",
+    t: "т",
+    h: "н",
+    u: "и",
+    n: "п",
+    r: "г",
+    v: "у",
+    w: "ш",
+  };
+  const normalized = String(text || "")
+    .split("")
+    .map((ch) => map[ch] || ch)
+    .join("");
+  return cleanupLine(normalized);
+}
+
 function detectQueryScript(query) {
   const q = query || "";
   const lat = (q.match(/[a-z]/gi) || []).length;
@@ -855,7 +893,7 @@ function isSupplementEntryQuality(entry) {
 }
 
 function isRuMsEntryQuality(entry) {
-  const title = cleanupLine(entry.title || "").toLowerCase();
+  const title = normalizeRuTitleOcr(entry.title || "").toLowerCase();
   const body = cleanupLine(entry.body || "");
 
   if (!title || !body) {
@@ -946,6 +984,15 @@ async function loadBundledDictionary() {
   });
 
   if (state.direction === "ru-ms") {
+    const normalizeRuEntries = (list) =>
+      list.map((entry) => ({
+        ...entry,
+        title: normalizeRuTitleOcr(entry.title),
+      }));
+    curatedEntries = normalizeRuEntries(curatedEntries);
+    serviceEntries = normalizeRuEntries(serviceEntries);
+    bundledEntries = normalizeRuEntries(bundledEntries);
+
     curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
     serviceEntries = serviceEntries.filter(isRuMsEntryQuality);
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
@@ -1165,6 +1212,15 @@ function searchEntries(query) {
         score = 0.9 + lenDelta / 20;
       } else if (title.includes(q)) {
         score = 1.8 + lenDelta / 18;
+      } else if (
+        state.direction === "ru-ms" &&
+        qRuKey &&
+        titleRuKey &&
+        qRuKey.length >= 4 &&
+        titleRuKey.length >= 4 &&
+        levenshteinDistance(qRuKey, titleRuKey) <= 2
+      ) {
+        score = 2.6 + levenshteinDistance(qRuKey, titleRuKey) * 0.2 + lenDelta / 30;
       } else if (body.includes(q)) {
         score = 3.9;
       }
