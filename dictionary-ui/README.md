@@ -78,3 +78,51 @@ git push -u origin main
 ```
 
 3. На GitHub зайдите в `Settings -> Pages` и убедитесь, что источник настроен на `GitHub Actions`.
+
+## Pipeline v2 (рекомендуется для качества)
+
+Новый конвейер строит структурированную базу и сразу считает качество.
+
+### 1) Подготовить sidecar-тексты
+
+Для каждого OCR-PDF нужен TXT sidecar (разделитель страниц `\f`).
+
+### 2) Запустить сборку
+
+```bash
+cd "dictionary-ui"
+python3 ./tools/build_dictionary_pipeline_v2.py \
+  --ms-ru-sidecar "/ABS/PATH/malay_ru_sidecar.txt" \
+  --ru-ms-sidecar "/ABS/PATH/russian_malay_sidecar.txt" \
+  --output-dir "./data" \
+  --report "./data/dictionary_pipeline_report.json"
+```
+
+Или сразу от OCR-PDF (без ручного sidecar):
+
+```bash
+cd "dictionary-ui"
+python3 ./tools/build_dictionary_pipeline_v2.py \
+  --ms-ru-pdf "/ABS/PATH/malay_ru_ocr.pdf" \
+  --ru-ms-pdf "/ABS/PATH/russian_malay_ocr.pdf" \
+  --output-dir "./data" \
+  --report "./data/dictionary_pipeline_report.json"
+```
+
+### 3) Что получится
+
+- `data/dictionary_curated.json` (малайско-русский)
+- `data/dictionary_ru_ms_curated.json` (русско-малайский)
+- `data/dictionary_pipeline_report.json` (метрики)
+
+В отчёте будут:
+- число кандидатов
+- число принятых/отбракованных
+- итоговый размер базы
+- покрытие контрольного набора частых слов
+
+### 4) Как повышать качество дальше
+
+1. Поднимать качество OCR страниц с плохим сканом и пересобирать.
+2. Добавлять в `dictionary_ru_ms_gold.json` частотные слова, которых нет в OCR.
+3. Повторять сборку и смотреть прирост `coverage_pct` в отчёте.
