@@ -1182,6 +1182,10 @@ function computeBodyNoisePenalty(entry) {
   return penalty;
 }
 
+function isGoldEntry(entry) {
+  return String(entry.id || "").startsWith("ru-gold-");
+}
+
 function searchEntries(query) {
   if (!query) {
     return state.entries.slice(0, MAX_RESULTS).map((entry) => ({
@@ -1249,6 +1253,14 @@ function searchEntries(query) {
 
       if (score < 99 && entry.verified) {
         score = Math.max(0, score - 0.18);
+      }
+
+      if (
+        state.direction === "ru-ms" &&
+        isGoldEntry(entry) &&
+        (title === q || titleLoose === qLoose || (qRuKey && titleRuKey === qRuKey))
+      ) {
+        score = Math.max(-2, score - 2);
       }
 
       if (score < 99) {
