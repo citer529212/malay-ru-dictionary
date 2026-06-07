@@ -1438,26 +1438,13 @@ function computeBestAnswer(query) {
         return nearSingle;
       }
 
-      // If OCR produced a near-lemma one-word variant, still show it as best candidate.
-      const nearestSingle = groupedEntries.find((row) => {
-        if (row._wordCount !== 1) {
-          return false;
-        }
-        const key = normalizeRussianSearchKey(normalizeHeadwordLoose(row.title));
-        if (!qRuKey || !key || qRuKey.length < 3) {
-          return false;
-        }
-        return levenshteinDistance(key, qRuKey) <= 1;
-      });
-      if (nearestSingle) {
-        return nearestSingle;
-      }
-
-      // Even without exact match, return the top relevant dictionary candidate.
-      return groupedEntries[0];
+      return null;
     }
 
-    return groupedEntries[0];
+    const exactPhrase = groupedEntries.find(
+      (row) => row._exactTitle || row._exactLoose || row._exactStem || row._exactRuKey
+    );
+    return exactPhrase || null;
   }
 
   return null;

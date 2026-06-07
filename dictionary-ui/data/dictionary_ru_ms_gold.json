@@ -138,6 +138,12 @@
     { "id": "ru-gold-133", "type": "entry", "title": "семь", "body": "tujuh", "page": 0, "verified": true },
     { "id": "ru-gold-134", "type": "entry", "title": "восемь", "body": "lapan", "page": 0, "verified": true },
     { "id": "ru-gold-135", "type": "entry", "title": "девять", "body": "sembilan", "page": 0, "verified": true },
-    { "id": "ru-gold-136", "type": "entry", "title": "десять", "body": "sepuluh", "page": 0, "verified": true }
+    { "id": "ru-gold-136", "type": "entry", "title": "десять", "body": "sepuluh", "page": 0, "verified": true },
+    { "id": "ru-gold-137", "type": "entry", "title": "пьян", "body": "mabuk", "page": 0, "verified": true },
+    { "id": "ru-gold-138", "type": "entry", "title": "пьяный", "body": "mabuk", "page": 0, "verified": true },
+    { "id": "ru-gold-139", "type": "entry", "title": "пьянство", "body": "kemabukan; ketagihan arak", "page": 0, "verified": true },
+    { "id": "ru-gold-140", "type": "entry", "title": "алкоголь", "body": "alkohol; arak", "page": 0, "verified": true },
+    { "id": "ru-gold-141", "type": "entry", "title": "вино", "body": "wain", "page": 0, "verified": true },
+    { "id": "ru-gold-142", "type": "entry", "title": "пиво", "body": "bir", "page": 0, "verified": true }
   ]
 }
