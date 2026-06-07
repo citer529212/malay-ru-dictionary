@@ -1321,6 +1321,7 @@ function groupEntryResults(rows, query = "") {
         _exactLoose: Boolean(row._exactLoose),
         _exactStem: Boolean(row._exactStem),
         _exactRuKey: Boolean(row._exactRuKey),
+        _gold: isGoldEntry(row),
       });
       return;
     }
@@ -1343,6 +1344,7 @@ function groupEntryResults(rows, query = "") {
     current._exactLoose = current._exactLoose || Boolean(row._exactLoose);
     current._exactStem = current._exactStem || Boolean(row._exactStem);
     current._exactRuKey = current._exactRuKey || Boolean(row._exactRuKey);
+    current._gold = current._gold || isGoldEntry(row);
   });
 
   return [...groups.values()]
@@ -1429,6 +1431,9 @@ function computeBestAnswer(query) {
 
       const nearSingle = groupedEntries.find((row) => {
         if (row._wordCount !== 1) {
+          return false;
+        }
+        if (!row._gold) {
           return false;
         }
         const head = normalizeHeadwordLoose(row.title);
