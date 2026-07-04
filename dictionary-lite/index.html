@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#b92f3a" />
+    <title>Малайско-русский словарь Lite</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <p class="eyebrow">Офлайн-словарь Lite</p>
+        <h1>Малайско-русский словарь</h1>
+        <p class="subtitle">Быстрая локальная версия для простых Windows-ноутбуков: без PDF, CDN и тяжёлых библиотек.</p>
+      </header>
+
+      <section class="search-panel" aria-labelledby="searchTitle">
+        <h2 id="searchTitle" class="visually-hidden">Поиск по словарю</h2>
+        <label class="field-label" for="search">Слово для перевода</label>
+        <div class="search-row">
+          <input id="search" type="search" autocomplete="off" spellcheck="false" inputmode="search" />
+          <button id="clearSearch" type="button" aria-label="Очистить поиск">Очистить</button>
+        </div>
+
+        <div class="direction-row" aria-label="Направление перевода">
+          <button type="button" data-direction="ms-ru" aria-pressed="true">Малайский → Русский</button>
+          <button type="button" data-direction="ru-ms" aria-pressed="false">Русский → Малайский</button>
+          <button id="swapDirection" type="button">Сменить</button>
+        </div>
+
+        <div class="utility-row">
+          <button id="themeToggle" type="button">Тёмная тема</button>
+          <p id="status" class="status" role="status" aria-live="polite">Загрузка словаря...</p>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-labelledby="resultsTitle">
+        <div class="results-head">
+          <h2 id="resultsTitle">Результаты</h2>
+          <p id="resultCount" aria-live="polite">Введите минимум 2 символа.</p>
+        </div>
+        <ol id="results" class="results"></ol>
+      </section>
+    </main>
+
+    <script src="./search-core.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

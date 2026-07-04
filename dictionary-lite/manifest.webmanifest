@@ -1,0 +1,14 @@
+{
+  "name": "Малайско-русский словарь Lite",
+  "short_name": "Словарь Lite",
+  "description": "Лёгкая офлайн-версия малайско-русского и русско-малайского словаря.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#b92f3a",
+  "background_color": "#fff7f7",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,236 @@
+:root {
+  color-scheme: light;
+  --bg: #fff7f7;
+  --panel: #ffffff;
+  --text: #241114;
+  --muted: #6d5559;
+  --border: #efd3d6;
+  --accent: #c73340;
+  --accent-strong: #a51f2c;
+  --accent-soft: #ffe3e6;
+  --focus: #215dff;
+  --shadow: 0 10px 24px rgba(80, 20, 28, 0.08);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #170d10;
+    --panel: #221316;
+    --text: #fff3f4;
+    --muted: #d5b7bb;
+    --border: #4a2a2f;
+    --accent: #ff6975;
+    --accent-strong: #ff8790;
+    --accent-soft: #3a1d22;
+    --focus: #8db3ff;
+    --shadow: none;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #170d10;
+  --panel: #221316;
+  --text: #fff3f4;
+  --muted: #d5b7bb;
+  --border: #4a2a2f;
+  --accent: #ff6975;
+  --accent-strong: #ff8790;
+  --accent-soft: #3a1d22;
+  --focus: #8db3ff;
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  min-height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.6rem 0.9rem;
+}
+
+button:hover,
+button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.shell {
+  width: min(100% - 24px, 720px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.header,
+.search-panel,
+.results-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 8vw, 3.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.subtitle,
+.status,
+#resultCount {
+  color: var(--muted);
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+#search {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--text);
+  padding: 0 14px;
+  font-size: 1.08rem;
+}
+
+.direction-row,
+.utility-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.status {
+  margin: 0;
+  min-height: 1.5em;
+}
+
+.results-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.results-head h2,
+.results-head p {
+  margin-bottom: 12px;
+}
+
+.results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.result-card,
+.empty-state {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 88%, var(--accent-soft));
+  padding: 14px;
+}
+
+.result-card h2 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.result-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+mark {
+  border-radius: 5px;
+  background: #ffe08a;
+  color: #2a1600;
+  padding: 0 0.1em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .shell { width: min(100% - 16px, 720px); padding-top: 12px; }
+  .header,
+  .search-panel,
+  .results-panel { border-radius: 18px; padding: 16px; }
+  .search-row { grid-template-columns: 1fr; }
+  .direction-row button,
+  .utility-row button { flex: 1 1 100%; }
+  .results-head { display: block; }
+}

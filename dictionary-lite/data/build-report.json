@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-07-04T01:41:27.491Z",
+  "report": [
+    {
+      "direction": "ms-ru",
+      "sourceFiles": [
+        "dictionary-ui/data/dictionary_curated.json"
+      ],
+      "sourceEntries": 59622,
+      "outputEntries": 59622,
+      "removedDuplicates": 0,
+      "skippedInvalid": 0,
+      "sourceBytes": 12425237,
+      "outputBytes": 3444479
+    },
+    {
+      "direction": "ru-ms",
+      "sourceFiles": [
+        "dictionary-ui/data/dictionary_ru_ms_gold.json",
+        "dictionary-ui/data/dictionary_ru_ms_curated.json"
+      ],
+      "sourceEntries": 49160,
+      "outputEntries": 48841,
+      "removedDuplicates": 319,
+      "skippedInvalid": 0,
+      "sourceBytes": 9114891,
+      "outputBytes": 2242511
+    }
+  ]
+}
