@@ -933,6 +933,31 @@ function isRuMsEntryQuality(entry) {
   return true;
 }
 
+function isRuMsGoldEntryQuality(entry) {
+  const title = normalizeRuTitleOcr(entry.title || "").toLowerCase();
+  const body = cleanupLine(entry.body || "");
+
+  if (!title || !body) {
+    return false;
+  }
+  if (title.length < 2 || title.length > 90) {
+    return false;
+  }
+  if (!/^[а-яё][а-яё\- ]+$/i.test(title)) {
+    return false;
+  }
+  if (title.split(/\s+/).length > 6) {
+    return false;
+  }
+  if (!/[a-z]{2,}/i.test(body)) {
+    return false;
+  }
+  if (/[{}[\]<>^|]/.test(body)) {
+    return false;
+  }
+  return true;
+}
+
 function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
   const result = [];
   const seen = new Set();
@@ -1005,7 +1030,7 @@ async function loadBundledDictionary() {
     serviceEntries = normalizeRuEntries(serviceEntries);
     bundledEntries = normalizeRuEntries(bundledEntries);
 
-    goldEntries = goldEntries.filter(isRuMsEntryQuality);
+    goldEntries = goldEntries.filter(isRuMsGoldEntryQuality);
     curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
     serviceEntries = serviceEntries.filter(isRuMsEntryQuality);
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
