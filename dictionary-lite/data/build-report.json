@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T01:41:27.491Z",
+  "generatedAt": "2026-09-05T21:01:38.227Z",
   "report": [
     {
       "direction": "ms-ru",
@@ -19,12 +19,12 @@
         "dictionary-ui/data/dictionary_ru_ms_gold.json",
         "dictionary-ui/data/dictionary_ru_ms_curated.json"
       ],
-      "sourceEntries": 49160,
-      "outputEntries": 48841,
-      "removedDuplicates": 319,
+      "sourceEntries": 49352,
+      "outputEntries": 49029,
+      "removedDuplicates": 323,
       "skippedInvalid": 0,
-      "sourceBytes": 9114891,
-      "outputBytes": 2242511
+      "sourceBytes": 9551238,
+      "outputBytes": 2252994
     }
   ]
 }

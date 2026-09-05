@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'malay-dictionary-lite-v1';
+const CACHE_NAME = 'malay-dictionary-lite-v2';
 const APP_PREFIX = 'malay-dictionary-lite-';
 const ASSETS = [
   './',
