@@ -717,7 +717,7 @@ async function loadDictionaryFromUrl(url, options = {}) {
           type: "entry",
           title: cleanupLine(String(entry.title)),
           body: cleanupLine(String(entry.body)),
-          page: Number(entry.page) || 1,
+          page: Number.isFinite(Number(entry.page)) ? Number(entry.page) : 1,
           verified: Boolean(options.verified || entry.verified),
         }))
     );
@@ -734,7 +734,7 @@ function normalizeIncomingEntry(entry, fallbackId, options = {}) {
     type: "entry",
     title: cleanupLine(String(entry.title || "")),
     body: cleanupLine(String(entry.body || "")),
-    page: Number(entry.page) || 1,
+    page: Number.isFinite(Number(entry.page)) ? Number(entry.page) : 1,
     verified: Boolean(options.verified || entry.verified),
   };
 }
@@ -1441,15 +1441,25 @@ function renderBestAnswer() {
       : "найдено в полном тексте";
   ui.answerMeta.append(typeChip);
 
-  if (hit.type === "entry" && !hit._exactTitle) {
+  if (hit._nearRuKey) {
     const nearMeta = document.createElement("span");
-    nearMeta.textContent = "точного заголовка нет, показан ближайший вариант";
+    nearMeta.textContent = `исправлена опечатка: «${query}» → «${hit.title}»`;
     ui.answerMeta.append(nearMeta);
+  } else if (hit._exactRuKey && !hit._exactLoose) {
+    const formMeta = document.createElement("span");
+    formMeta.textContent = `распознана словоформа: «${query}» → «${hit.title}»`;
+    ui.answerMeta.append(formMeta);
+  } else if (hit._exactTitle || hit._exactLoose) {
+    const exactMeta = document.createElement("span");
+    exactMeta.textContent = "точное совпадение";
+    ui.answerMeta.append(exactMeta);
   }
 
-  const pageMeta = document.createElement("span");
-  pageMeta.textContent = `страница ${hit.page}`;
-  ui.answerMeta.append(pageMeta);
+  if (hit.page > 0) {
+    const pageMeta = document.createElement("span");
+    pageMeta.textContent = `страница ${hit.page}`;
+    ui.answerMeta.append(pageMeta);
+  }
 }
 
 function renderResults() {
@@ -1490,15 +1500,17 @@ function renderResults() {
         ? "весь текст"
         : "словарная статья";
 
-    const page = document.createElement("span");
-    page.className = "result-page";
-    page.textContent = `Страница ${result.page}`;
-
-    item.append(title, desc, type, page);
+    item.append(title, desc, type);
+    if (result.page > 0) {
+      const page = document.createElement("span");
+      page.className = "result-page";
+      page.textContent = `Страница ${result.page}`;
+      item.append(page);
+    }
 
     item.addEventListener("click", () => {
       state.selectedResultId = result.id;
-      state.currentPage = result.page;
+      if (result.page > 0) state.currentPage = result.page;
       renderResults();
       if (state.pdfDoc) {
         void renderCurrentPage();
@@ -1537,7 +1549,7 @@ function runSearch() {
 
   if (state.bestAnswer && query) {
     state.selectedResultId = state.bestAnswer.id;
-    state.currentPage = state.bestAnswer.page;
+    if (state.bestAnswer.page > 0) state.currentPage = state.bestAnswer.page;
     if (state.pdfDoc) {
       void renderCurrentPage();
     }
