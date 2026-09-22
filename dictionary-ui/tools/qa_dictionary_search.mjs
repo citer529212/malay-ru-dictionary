@@ -4,6 +4,11 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  levenshteinDistance,
+  normalizeRussianSearchKey,
+  russianTypoDistanceLimit,
+} from "../search-core.js";
 
 const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
@@ -116,12 +121,47 @@ function validateNoCuratedOverride(goldByTitle, curatedEntries) {
   return new Set(conflicts).size;
 }
 
+function validateRussianQueryNormalization() {
+  const equivalentForms = [
+    ["беспилотники", "беспилотник"],
+    ["беспилотниками", "беспилотник"],
+    ["санкциями", "санкции"],
+    ["специальной военной операции", "специальная военная операция"],
+    ["воздушной тревоги", "воздушная тревога"],
+  ];
+
+  for (const [query, headword] of equivalentForms) {
+    assert.equal(
+      normalizeRussianSearchKey(query),
+      normalizeRussianSearchKey(headword),
+      `Russian form does not resolve to its headword: ${query}`
+    );
+  }
+
+  const allowedTypos = [
+    ["беспелотник", "беспилотник"],
+    ["кибератка", "кибератака"],
+    ["специальная военая операция", "специальная военная операция"],
+  ];
+  for (const [query, headword] of allowedTypos) {
+    const queryKey = normalizeRussianSearchKey(query);
+    const distance = levenshteinDistance(queryKey, normalizeRussianSearchKey(headword));
+    assert.ok(
+      distance <= russianTypoDistanceLimit(queryKey),
+      `Safe typo is outside the correction threshold: ${query}`
+    );
+  }
+
+  assert.equal(russianTypoDistanceLimit("дом"), 0, "Short words must not use fuzzy correction");
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
 const goldByTitle = validateGold(gold);
 
 validateFixtures(goldByTitle);
+validateRussianQueryNormalization();
 const protectedConflicts = validateNoCuratedOverride(goldByTitle, curatedRuMs);
 
 console.log("Dictionary QA passed");
@@ -129,4 +169,5 @@ console.log(`Gold RU-MS entries: ${gold.length}`);
 console.log(`Curated RU-MS entries: ${curatedRuMs.length}`);
 console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
+console.log("Russian morphology and safe typo checks: 9");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);

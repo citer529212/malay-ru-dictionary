@@ -1,4 +1,12 @@
 import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.min.mjs";
+import {
+  levenshteinDistance,
+  normalizeHeadwordLoose,
+  normalizeRussianSearchKey,
+  normalizeRussianStem,
+  normalizeText,
+  russianTypoDistanceLimit,
+} from "./search-core.js?v=1";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.worker.min.mjs";
@@ -273,86 +281,6 @@ function formatSize(bytes) {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
-function normalizeText(text) {
-  return text
-    .toLowerCase()
-    .replace(/[ё]/g, "е")
-    .replace(/[’`´]/g, "'")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function normalizeHeadwordLoose(text) {
-  return normalizeText(text)
-    .replace(/[^a-zа-яё0-9\s-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function normalizeRussianStem(word) {
-  const w = normalizeText(word || "");
-  if (!/^[а-яё-]+$/i.test(w)) {
-    return w;
-  }
-  if (w.length <= 4) {
-    return w;
-  }
-
-  const endings = [
-    "иями",
-    "ями",
-    "ами",
-    "ого",
-    "ему",
-    "ому",
-    "его",
-    "ыми",
-    "ими",
-    "иях",
-    "ах",
-    "ях",
-    "ой",
-    "ий",
-    "ый",
-    "ая",
-    "ое",
-    "ее",
-    "ую",
-    "юю",
-    "ов",
-    "ев",
-    "ом",
-    "ем",
-    "ам",
-    "ям",
-    "ах",
-    "ях",
-    "ы",
-    "и",
-    "а",
-    "я",
-    "у",
-    "ю",
-    "е",
-    "о",
-  ];
-
-  for (const ending of endings) {
-    if (w.endsWith(ending) && w.length - ending.length >= 3) {
-      return w.slice(0, -ending.length);
-    }
-  }
-  return w;
-}
-
-function normalizeRussianSearchKey(word) {
-  let w = normalizeRussianStem(normalizeHeadwordLoose(word));
-  // OCR-friendly normalization for close Russian variants.
-  w = w.replace(/ь/g, "").replace(/й/g, "и");
-  w = w.replace(/([бвгджзклмнпрстфхцчшщ])\1$/u, "$1");
-  return w;
-}
-
 function normalizeRuTitleOcr(text) {
   const map = {
     A: "А",
@@ -402,34 +330,6 @@ function detectQueryScript(query) {
     return "cyrillic";
   }
   return "mixed";
-}
-
-function levenshteinDistance(a, b) {
-  if (a === b) {
-    return 0;
-  }
-  if (!a.length) {
-    return b.length;
-  }
-  if (!b.length) {
-    return a.length;
-  }
-
-  const dp = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
-  for (let i = 0; i <= a.length; i += 1) dp[i][0] = i;
-  for (let j = 0; j <= b.length; j += 1) dp[0][j] = j;
-
-  for (let i = 1; i <= a.length; i += 1) {
-    for (let j = 1; j <= b.length; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      dp[i][j] = Math.min(
-        dp[i - 1][j] + 1,
-        dp[i][j - 1] + 1,
-        dp[i - 1][j - 1] + cost
-      );
-    }
-  }
-  return dp[a.length][b.length];
 }
 
 function cleanupLine(text) {
@@ -1234,6 +1134,9 @@ function searchEntries(query) {
       const titleLoose = normalizeHeadwordLoose(entry.title);
       const titleStem = normalizeRussianStem(titleLoose);
       const titleRuKey = normalizeRussianSearchKey(titleLoose);
+      const ruKeyDistance =
+        qRuKey && titleRuKey ? levenshteinDistance(qRuKey, titleRuKey) : Number.POSITIVE_INFINITY;
+      const typoLimit = russianTypoDistanceLimit(qRuKey);
       const body = entry._normBody;
       const titleWords = (title || "").split(/\s+/).filter(Boolean);
       const titleWordCount = titleWords.length || 1;
@@ -1260,9 +1163,9 @@ function searchEntries(query) {
         titleRuKey &&
         qRuKey.length >= 4 &&
         titleRuKey.length >= 4 &&
-        levenshteinDistance(qRuKey, titleRuKey) <= 2
+        ruKeyDistance <= 2
       ) {
-        score = 2.6 + levenshteinDistance(qRuKey, titleRuKey) * 0.2 + lenDelta / 30;
+        score = 2.6 + ruKeyDistance * 0.2 + lenDelta / 30;
       } else if (body.includes(q)) {
         score = 3.9;
       }
@@ -1297,7 +1200,7 @@ function searchEntries(query) {
         score += 1.3 + Math.min(1.2, (titleWordCount - 1) * 0.45);
       }
 
-      return { score, lenDelta, titleWordCount, entry };
+      return { score, lenDelta, titleWordCount, ruKeyDistance, typoLimit, entry };
     })
     .filter((row) => row.score < 99)
     .sort(
@@ -1321,6 +1224,12 @@ function searchEntries(query) {
       _exactRuKey:
         normalizeRussianSearchKey(normalizeHeadwordLoose(row.entry.title)) === qRuKey &&
         qRuKey.length >= 3,
+      _nearRuKey:
+        state.direction === "ru-ms" &&
+        isGoldEntry(row.entry) &&
+        row.typoLimit > 0 &&
+        row.ruKeyDistance > 0 &&
+        row.ruKeyDistance <= row.typoLimit,
     }));
 }
 
@@ -1346,6 +1255,7 @@ function groupEntryResults(rows, query = "") {
         _exactLoose: Boolean(row._exactLoose),
         _exactStem: Boolean(row._exactStem),
         _exactRuKey: Boolean(row._exactRuKey),
+        _nearRuKey: Boolean(row._nearRuKey),
         _gold: isGoldEntry(row),
       });
       return;
@@ -1369,6 +1279,7 @@ function groupEntryResults(rows, query = "") {
     current._exactLoose = current._exactLoose || Boolean(row._exactLoose);
     current._exactStem = current._exactStem || Boolean(row._exactStem);
     current._exactRuKey = current._exactRuKey || Boolean(row._exactRuKey);
+    current._nearRuKey = current._nearRuKey || Boolean(row._nearRuKey);
     current._gold = current._gold || isGoldEntry(row);
   });
 
@@ -1379,6 +1290,7 @@ function groupEntryResults(rows, query = "") {
         Number(b._exactLoose) - Number(a._exactLoose) ||
         Number(b._exactStem) - Number(a._exactStem) ||
         Number(b._exactTitle) - Number(a._exactTitle) ||
+        Number(b._nearRuKey) - Number(a._nearRuKey) ||
         a._rank - b._rank ||
         a._wordCount - b._wordCount ||
         a._lenDelta - b._lenDelta ||
@@ -1447,7 +1359,8 @@ function computeBestAnswer(query) {
           normalizeHeadwordLoose(row.title) === qLoose ||
           (qStem.length >= 3 && normalizeRussianStem(normalizeHeadwordLoose(row.title)) === qStem) ||
           (qRuKey.length >= 3 &&
-            normalizeRussianSearchKey(normalizeHeadwordLoose(row.title)) === qRuKey)
+            normalizeRussianSearchKey(normalizeHeadwordLoose(row.title)) === qRuKey) ||
+          (row._gold && row._nearRuKey)
         );
       });
       if (exactSingle) {
@@ -1472,7 +1385,12 @@ function computeBestAnswer(query) {
     }
 
     const exactPhrase = groupedEntries.find(
-      (row) => row._exactTitle || row._exactLoose || row._exactStem || row._exactRuKey
+      (row) =>
+        row._exactTitle ||
+        row._exactLoose ||
+        row._exactStem ||
+        row._exactRuKey ||
+        (row._gold && row._nearRuKey)
     );
     return exactPhrase || null;
   }
