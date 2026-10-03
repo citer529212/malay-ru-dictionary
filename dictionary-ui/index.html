@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Большой малайско-русский словарь</title>
+    <title>Малайско-русский и русско-малайский электронный словарь</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,35 +18,32 @@
 
     <main class="app-shell">
       <header class="hero card">
-        <p class="eyebrow">Электронный словарь</p>
-        <h1>Большой малайско-русский словарь Т.В.Дорофеева Е.С.Кукушкина В.А.Погадаев</h1>
+        <div class="hero-kicker">
+          <p class="eyebrow">Kamus elektronik · Электронный словарь</p>
+          <p class="build-version">Версия 2026.10.03 · поиск v5</p>
+        </div>
+        <h1>Малайско-русский и русско-малайский электронный словарь</h1>
         <p class="hero-text">
-          Сайт работает автономно и поддерживает оба направления:
-          малайско-русский и русско-малайский словари. Загрузка PDF нужна
-          только для просмотра сканов страниц.
+          Введите слово на русском или малайском языке. Направление определяется
+          автоматически, а наиболее точная проверенная статья показывается первой.
         </p>
-        <p class="build-version">Версия 2026.10.03 · поиск v4</p>
+        <p class="developers">Разработчики: <strong>Чернобаев Б.Д.</strong> и <strong>Михина А.А.</strong></p>
       </header>
 
       <section class="controls card">
-        <div class="controls-top">
-          <label class="upload-button" for="pdfFile">
-            <input id="pdfFile" type="file" accept="application/pdf,.pdf" />
-            <span>Выбрать PDF словаря</span>
-          </label>
-
-          <div class="file-meta" id="fileMeta">PDF не загружен (необязательно)</div>
-        </div>
-
+        <p class="search-label">Поиск перевода</p>
         <div class="search-row">
           <input
             id="searchInput"
             type="search"
-            placeholder="Введите слово и выберите направление перевода"
+            placeholder="Например: rumah, большой, беспилотник..."
+            autocomplete="off"
             disabled
           />
           <button id="searchButton" disabled>Поиск</button>
         </div>
+
+        <div id="suggestions" class="suggestions" aria-live="polite"></div>
 
         <div class="search-tools">
           <div class="direction-switch" id="directionSwitch">
@@ -57,21 +54,6 @@
               Русский → Малайский
             </button>
           </div>
-          <div class="mode-switch" id="searchModeSwitch">
-            <button type="button" data-mode="all" class="mode-button" disabled>
-              Все
-            </button>
-            <button type="button" data-mode="entries" class="mode-button active" disabled>
-              Статьи
-            </button>
-            <button type="button" data-mode="fulltext" class="mode-button" disabled>
-              Весь текст
-            </button>
-          </div>
-          <label class="service-toggle" id="serviceToggleWrap">
-            <input id="serviceToggle" type="checkbox" />
-            <span>Показывать служебные статьи (ru→ms)</span>
-          </label>
           <div class="history" id="searchHistory"></div>
         </div>
 
@@ -90,48 +72,39 @@
         <div id="answerMeta" class="answer-meta"></div>
       </section>
 
-      <section class="workspace">
-        <aside class="result-panel card">
+      <section class="workspace card">
+        <div class="result-panel">
           <div class="panel-head">
-            <h2>Результаты поиска</h2>
+            <div>
+              <p class="section-kicker">Словарные статьи</p>
+              <h2>Другие результаты</h2>
+            </div>
             <span id="resultCount" class="result-count">0</span>
           </div>
           <ul id="resultList" class="result-list"></ul>
-        </aside>
-
-        <section class="viewer card">
-          <div class="viewer-toolbar">
-            <div class="pager">
-              <button id="prevPage" disabled>Назад</button>
-              <span id="pageLabel">Страница -/-</span>
-              <button id="nextPage" disabled>Вперед</button>
-            </div>
-            <div class="zoom-controls">
-              <button id="zoomOut" disabled>-</button>
-              <span id="zoomValue">100%</span>
-              <button id="zoomIn" disabled>+</button>
-            </div>
-          </div>
-
-          <div class="canvas-frame">
-            <canvas id="pdfCanvas"></canvas>
-          </div>
-        </section>
+        </div>
       </section>
 
-      <section class="note card">
-        <h2>Как это работает</h2>
-        <p>
-          Поиск работает по встроенным JSON-базам двух словарей:
-          малайско-русского и русско-малайского, без обязательной загрузки PDF.
-        </p>
-        <p>
-          Выберите направление перевода кнопками над режимами поиска.
-          PDF можно загрузить только для просмотра страниц в правой панели.
-        </p>
+      <section class="sources card">
+        <div class="sources-heading">
+          <p class="section-kicker">Библиографическая основа</p>
+          <h2>Словарь составлен на основе двух изданий</h2>
+        </div>
+        <div class="source-grid">
+          <article class="source-item">
+            <span>MS → RU</span>
+            <p>«Большой малайско-русский словарь»</p>
+            <strong>Т.В. Дорофеева, Е.С. Кукушкина, В.А. Погадаев</strong>
+          </article>
+          <article class="source-item">
+            <span>RU → MS</span>
+            <p>«Русско-малайзийский словарь»</p>
+            <strong>В.А. Погадаев, Н.В. Ротт</strong>
+          </article>
+        </div>
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=search-v4"></script>
+    <script type="module" src="./app.js?v=search-v5"></script>
   </body>
 </html>

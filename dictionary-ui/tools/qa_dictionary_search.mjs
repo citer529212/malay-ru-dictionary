@@ -187,6 +187,18 @@ function validateFrequencyBaseline(entries) {
   assert.equal(digest, FREQUENCY_BASELINE_SHA256, "Top-100 frequency baseline changed");
 }
 
+function validateModernInterface() {
+  const html = fs.readFileSync(path.join(projectDir, "index.html"), "utf8");
+  const appSource = fs.readFileSync(path.join(projectDir, "app.js"), "utf8");
+  assert.match(html, /Чернобаев Б\.Д\./);
+  assert.match(html, /Михина А\.А\./);
+  assert.match(html, /Большой малайско-русский словарь/);
+  assert.match(html, /Русско-малайзийский словарь/);
+  assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
+  assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
+  assert.match(appSource, /function renderSuggestions\(query\)/);
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
@@ -196,6 +208,7 @@ validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateDirectionDetection();
 validateFrequencyBaseline(gold);
+validateModernInterface();
 const protectedConflicts = validateNoCuratedOverride(goldByTitle, curatedRuMs);
 
 console.log("Dictionary QA passed");
@@ -206,4 +219,5 @@ console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Automatic direction checks: 7");
 console.log("Protected frequency baseline: 100 entries");
+console.log("Modern no-upload interface checks: passed");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);

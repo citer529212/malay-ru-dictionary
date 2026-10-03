@@ -1,4 +1,3 @@
-import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.min.mjs";
 import {
   detectQueryScript,
   directionForQuery,
@@ -10,18 +9,11 @@ import {
   russianTypoDistanceLimit,
 } from "./search-core.js?v=2";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.worker.min.mjs";
-
 const ui = {
-  fileInput: document.getElementById("pdfFile"),
-  fileMeta: document.getElementById("fileMeta"),
   searchInput: document.getElementById("searchInput"),
   searchButton: document.getElementById("searchButton"),
   directionSwitch: document.getElementById("directionSwitch"),
-  searchModeSwitch: document.getElementById("searchModeSwitch"),
-  serviceToggle: document.getElementById("serviceToggle"),
-  serviceToggleWrap: document.getElementById("serviceToggleWrap"),
+  suggestions: document.getElementById("suggestions"),
   searchHistory: document.getElementById("searchHistory"),
   answerCard: document.getElementById("answerCard"),
   answerTitle: document.getElementById("answerTitle"),
@@ -31,17 +23,9 @@ const ui = {
   resultList: document.getElementById("resultList"),
   statusText: document.getElementById("statusText"),
   progressBar: document.getElementById("progressBar"),
-  pdfCanvas: document.getElementById("pdfCanvas"),
-  pageLabel: document.getElementById("pageLabel"),
-  prevPage: document.getElementById("prevPage"),
-  nextPage: document.getElementById("nextPage"),
-  zoomOut: document.getElementById("zoomOut"),
-  zoomIn: document.getElementById("zoomIn"),
-  zoomValue: document.getElementById("zoomValue"),
 };
 
 const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
-const INDEX_VERSION = "v4-columns-context";
 const CURATED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_curated.json",
   "ru-ms": "./data/dictionary_ru_ms_curated.json",
@@ -63,14 +47,10 @@ const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
 
 const state = {
-  pdfDoc: null,
   entries: [],
   lines: [],
   pageTexts: [],
   results: [],
-  currentPage: 1,
-  zoom: 1,
-  renderToken: 0,
   selectedResultId: null,
   bestAnswer: null,
   searchMode: "entries",
@@ -80,15 +60,6 @@ const state = {
   direction: "ms-ru",
   includeServiceEntries: false,
 };
-
-ui.fileInput.addEventListener("change", async (event) => {
-  const [file] = event.target.files || [];
-  if (!file) {
-    return;
-  }
-
-  await loadPdfFile(file);
-});
 
 ui.searchButton.addEventListener("click", () => void requestSearch());
 
@@ -105,17 +76,6 @@ ui.searchInput.addEventListener("input", () => {
   inputDebounceId = setTimeout(() => void requestSearch(), 160);
 });
 
-ui.searchModeSwitch.addEventListener("click", (event) => {
-  const button = event.target.closest("button[data-mode]");
-  if (!button || button.disabled) {
-    return;
-  }
-
-  state.searchMode = button.dataset.mode;
-  updateModeButtons();
-  runSearch();
-});
-
 let switchingDirection = false;
 
 async function switchDirection(nextDirection, options = {}) {
@@ -128,10 +88,8 @@ async function switchDirection(nextDirection, options = {}) {
   state.direction = nextDirection;
   if (state.direction !== "ru-ms") {
     state.includeServiceEntries = false;
-    if (ui.serviceToggle) ui.serviceToggle.checked = false;
   }
   updateDirectionButtons();
-  updateServiceToggleVisibility();
   setStatus(
     automatic ? "Автоматически выбираем направление перевода..." : "Переключение словарного направления..."
   );
@@ -141,7 +99,6 @@ async function switchDirection(nextDirection, options = {}) {
   if (!loaded) {
     state.direction = previousDirection;
     updateDirectionButtons();
-    updateServiceToggleVisibility();
     switchingDirection = false;
     setStatus("Не удалось загрузить словарную базу для выбранного направления.");
     setSearchAvailability(false);
@@ -149,7 +106,6 @@ async function switchDirection(nextDirection, options = {}) {
   }
   switchingDirection = false;
   setSearchAvailability(true);
-  updateModeButtons();
   setProgress(100);
   state.selectedResultId = null;
   setStatus(
@@ -183,19 +139,6 @@ ui.directionSwitch.addEventListener("click", async (event) => {
   await switchDirection(button.dataset.direction, { runAfter: true, automatic: false });
 });
 
-if (ui.serviceToggle) {
-  ui.serviceToggle.addEventListener("change", async () => {
-    state.includeServiceEntries = Boolean(ui.serviceToggle.checked);
-    setStatus("Обновление словарной базы...");
-    const loaded = await loadBundledDictionary();
-    if (!loaded) {
-      setStatus("Не удалось обновить словарную базу.");
-      return;
-    }
-    runSearch();
-  });
-}
-
 ui.searchHistory.addEventListener("click", (event) => {
   const chip = event.target.closest("button[data-query]");
   if (!chip || chip.disabled) {
@@ -206,43 +149,6 @@ ui.searchHistory.addEventListener("click", (event) => {
   void requestSearch();
 });
 
-ui.prevPage.addEventListener("click", () => {
-  if (!state.pdfDoc || state.currentPage <= 1) {
-    return;
-  }
-
-  state.currentPage -= 1;
-  void renderCurrentPage();
-});
-
-ui.nextPage.addEventListener("click", () => {
-  if (!state.pdfDoc || state.currentPage >= state.pdfDoc.numPages) {
-    return;
-  }
-
-  state.currentPage += 1;
-  void renderCurrentPage();
-});
-
-ui.zoomIn.addEventListener("click", () => {
-  if (!state.pdfDoc) {
-    return;
-  }
-
-  state.zoom = Math.min(state.zoom + 0.15, 2.4);
-  updateZoomLabel();
-  void renderCurrentPage();
-});
-
-ui.zoomOut.addEventListener("click", () => {
-  if (!state.pdfDoc) {
-    return;
-  }
-
-  state.zoom = Math.max(state.zoom - 0.15, 0.55);
-  updateZoomLabel();
-  void renderCurrentPage();
-});
 
 function setStatus(message) {
   ui.statusText.textContent = message;
@@ -256,22 +162,9 @@ function setSearchAvailability(available) {
   ui.searchInput.disabled = !available;
   ui.searchButton.disabled = !available;
 
-  ui.searchModeSwitch
-    .querySelectorAll("button")
-    .forEach((button) => (button.disabled = !available));
-
   ui.searchHistory
     .querySelectorAll("button")
     .forEach((button) => (button.disabled = !available));
-}
-
-function updateModeButtons() {
-  ui.searchModeSwitch.querySelectorAll("button[data-mode]").forEach((button) => {
-    if (state.curatedOnly && button.dataset.mode !== "entries") {
-      button.disabled = true;
-    }
-    button.classList.toggle("active", button.dataset.mode === state.searchMode);
-  });
 }
 
 function updateDirectionButtons() {
@@ -281,36 +174,6 @@ function updateDirectionButtons() {
   ui.directionSwitch.querySelectorAll("button[data-direction]").forEach((button) => {
     button.classList.toggle("active", button.dataset.direction === state.direction);
   });
-}
-
-function updateServiceToggleVisibility() {
-  if (!ui.serviceToggleWrap) {
-    return;
-  }
-  ui.serviceToggleWrap.style.display = state.direction === "ru-ms" ? "inline-flex" : "none";
-}
-
-function updateViewerControls() {
-  const hasPdf = Boolean(state.pdfDoc);
-  ui.prevPage.disabled = !hasPdf || state.currentPage <= 1;
-  ui.nextPage.disabled = !hasPdf || state.currentPage >= state.pdfDoc.numPages;
-  ui.zoomOut.disabled = !hasPdf;
-  ui.zoomIn.disabled = !hasPdf;
-  if (!hasPdf) {
-    ui.pageLabel.textContent = "PDF не загружен";
-  }
-}
-
-function updateZoomLabel() {
-  ui.zoomValue.textContent = `${Math.round(state.zoom * 100)}%`;
-}
-
-function formatSize(bytes) {
-  if (bytes < 1024 * 1024) {
-    return `${(bytes / 1024).toFixed(1)} KB`;
-  }
-
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
 function normalizeRuTitleOcr(text) {
@@ -353,10 +216,6 @@ function normalizeRuTitleOcr(text) {
 
 function cleanupLine(text) {
   return text.replace(/\s+/g, " ").trim();
-}
-
-function buildCacheKey(file) {
-  return `dictionary-shell:${INDEX_VERSION}:${file.name}:${file.size}:${file.lastModified}`;
 }
 
 function loadHistory() {
@@ -983,92 +842,6 @@ function hydrateEntries(entries) {
   });
 }
 
-async function buildTextIndex(cacheKey) {
-  const cached = localStorage.getItem(cacheKey);
-  if (cached) {
-    try {
-      const parsed = JSON.parse(cached);
-      if (
-        Array.isArray(parsed.entries) &&
-        Array.isArray(parsed.lines) &&
-        Array.isArray(parsed.pageTexts)
-      ) {
-        state.entries = parsed.entries;
-        state.lines = parsed.lines;
-        state.pageTexts = parsed.pageTexts;
-        hydrateEntries(state.entries);
-        setStatus(
-          `Загружен индекс: ${state.entries.length} статей, ${state.lines.length} текстовых строк.`
-        );
-        setProgress(100);
-        setSearchAvailability(true);
-        runSearch();
-        return;
-      }
-    } catch {
-      localStorage.removeItem(cacheKey);
-    }
-  }
-
-  state.entries = [];
-  state.lines = [];
-  state.pageTexts = [];
-
-  const pageCount = state.pdfDoc.numPages;
-
-  for (let pageNum = 1; pageNum <= pageCount; pageNum += 1) {
-    const page = await state.pdfDoc.getPage(pageNum);
-    const content = await page.getTextContent();
-    const viewport = page.getViewport({ scale: 1 });
-    const lines = groupLines(content.items, viewport.width);
-
-    state.pageTexts.push(lines.join("\n"));
-
-    for (let index = 0; index < lines.length; index += 1) {
-      const line = lines[index];
-      state.lines.push({
-        id: `line-${pageNum}-${index}`,
-        type: "fulltext",
-        title: `Фрагмент текста`,
-        body: line,
-        page: pageNum,
-      });
-
-      let entry = extractEntry(line, pageNum, index);
-      if (!entry) {
-        entry = extractEntryWithContext(lines, index, pageNum);
-      }
-      if (entry) {
-        state.entries.push(entry);
-      }
-    }
-
-    const percent = Math.round((pageNum / pageCount) * 100);
-    setProgress(percent);
-    setStatus(`Индексация PDF: ${pageNum}/${pageCount} страниц...`);
-  }
-
-  state.entries = deduplicateEntries(state.entries);
-  hydrateEntries(state.entries);
-
-  const payload = JSON.stringify({
-    entries: state.entries,
-    lines: state.lines,
-    pageTexts: state.pageTexts,
-  });
-
-  if (payload.length < 7_000_000) {
-    localStorage.setItem(cacheKey, payload);
-  }
-
-  setSearchAvailability(true);
-  setStatus(
-    `Готово: ${state.entries.length} статей, ${state.lines.length} OCR-строк доступны для поиска.`
-  );
-
-  runSearch();
-}
-
 function rankMatch(haystack, query) {
   if (!haystack || !query) {
     return 99;
@@ -1529,14 +1302,34 @@ function renderResults() {
 
     item.addEventListener("click", () => {
       state.selectedResultId = result.id;
-      if (result.page > 0) state.currentPage = result.page;
       renderResults();
-      if (state.pdfDoc) {
-        void renderCurrentPage();
-      }
     });
 
     ui.resultList.append(item);
+  }
+}
+
+function renderSuggestions(query) {
+  ui.suggestions.innerHTML = "";
+  if (!query || query.length < 2) return;
+
+  const seen = new Set();
+  for (const result of state.results) {
+    const title = String(result.title || "").trim();
+    const key = normalizeText(title);
+    if (!title || seen.has(key)) continue;
+    seen.add(key);
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "suggestion-chip";
+    button.textContent = title;
+    button.addEventListener("click", () => {
+      ui.searchInput.value = title;
+      void requestSearch();
+    });
+    ui.suggestions.append(button);
+    if (seen.size >= 8) break;
   }
 }
 
@@ -1544,23 +1337,7 @@ function runSearch() {
   const query = ui.searchInput.value.trim();
   state.activeQuery = query;
   state.bestAnswer = computeBestAnswer(query);
-
-  state.results = mergeResults(query);
-
-  if (!query && state.searchMode === "entries") {
-    state.results = groupEntryResults(state.entries.slice(0, MAX_RESULTS), "");
-  }
-
-  if (!state.curatedOnly && !query && state.searchMode === "fulltext") {
-    state.results = state.lines.slice(0, MAX_RESULTS);
-  }
-
-  if (!state.curatedOnly && !query && state.searchMode === "all") {
-    state.results = [
-      ...groupEntryResults(state.entries.slice(0, 120), ""),
-      ...state.lines.slice(0, 80),
-    ];
-  }
+  state.results = query.length >= 2 ? mergeResults(query) : [];
 
   if (query) {
     pushHistory(query);
@@ -1568,108 +1345,15 @@ function runSearch() {
 
   if (state.bestAnswer && query) {
     state.selectedResultId = state.bestAnswer.id;
-    if (state.bestAnswer.page > 0) state.currentPage = state.bestAnswer.page;
-    if (state.pdfDoc) {
-      void renderCurrentPage();
-    }
   }
 
   renderBestAnswer();
   renderResults();
-}
-
-async function renderCurrentPage() {
-  if (!state.pdfDoc) {
-    return;
-  }
-
-  state.currentPage = Math.max(1, Math.min(state.currentPage, state.pdfDoc.numPages));
-  updateViewerControls();
-
-  const token = ++state.renderToken;
-  const page = await state.pdfDoc.getPage(state.currentPage);
-  const viewport = page.getViewport({ scale: state.zoom });
-  const canvas = ui.pdfCanvas;
-  const context = canvas.getContext("2d");
-  const outputScale = window.devicePixelRatio || 1;
-
-  canvas.width = Math.floor(viewport.width * outputScale);
-  canvas.height = Math.floor(viewport.height * outputScale);
-  canvas.style.width = `${Math.floor(viewport.width)}px`;
-  canvas.style.height = `${Math.floor(viewport.height)}px`;
-
-  context.setTransform(outputScale, 0, 0, outputScale, 0, 0);
-  context.clearRect(0, 0, canvas.width, canvas.height);
-
-  await page.render({ canvasContext: context, viewport }).promise;
-
-  if (token !== state.renderToken) {
-    return;
-  }
-
-  ui.pageLabel.textContent = `Страница ${state.currentPage}/${state.pdfDoc.numPages}`;
-}
-
-async function loadPdfFile(file) {
-  setSearchAvailability(false);
-  state.entries = [];
-  state.lines = [];
-  state.pageTexts = [];
-  state.results = [];
-  state.selectedResultId = null;
-  state.bestAnswer = null;
-  state.currentPage = 1;
-  state.zoom = 1;
-  state.activeQuery = "";
-
-  updateZoomLabel();
-  ui.resultList.innerHTML = "";
-  ui.resultCount.textContent = "0";
-
-  ui.fileMeta.textContent = `${file.name} (${formatSize(file.size)})`;
-
-  setStatus("Загрузка PDF...");
-  setProgress(8);
-
-  const bytes = await file.arrayBuffer();
-  const loadingTask = pdfjsLib.getDocument({ data: bytes });
-
-  state.pdfDoc = await loadingTask.promise;
-
-  setStatus(`PDF загружен: ${state.pdfDoc.numPages} страниц.`);
-  setProgress(14);
-
-  await renderCurrentPage();
-  updateViewerControls();
-
-  const bundledLoaded = await loadBundledDictionary();
-  if (bundledLoaded) {
-    state.lines = [];
-    state.pageTexts = [];
-    setSearchAvailability(true);
-    updateModeButtons();
-    setProgress(100);
-    setStatus(
-      state.curatedOnly
-        ? `Готово: загружена проверенная JSON-база (${state.entries.length} статей).`
-        : `Готово: загружена JSON-база (${state.entries.length} словарных статей).`
-    );
-    runSearch();
-    renderHistory();
-    return;
-  }
-
-  const cacheKey = buildCacheKey(file);
-  await buildTextIndex(cacheKey);
-  renderHistory();
+  renderSuggestions(query);
 }
 
 loadHistory();
 setSearchAvailability(false);
-updateModeButtons();
-updateServiceToggleVisibility();
-updateViewerControls();
-updateZoomLabel();
 setProgress(0);
 renderBestAnswer();
 
@@ -1684,7 +1368,6 @@ async function initAutonomousDictionary() {
   }
 
   setSearchAvailability(true);
-  updateModeButtons();
   renderHistory();
   setProgress(100);
   setStatus(
