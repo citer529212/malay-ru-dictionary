@@ -69,3 +69,19 @@ export function russianTypoDistanceLimit(key) {
   if (compactLength >= 5) return 1;
   return 0;
 }
+
+export function detectQueryScript(query) {
+  const value = String(query || "");
+  const latin = (value.match(/[a-z]/gi) || []).length;
+  const cyrillic = (value.match(/[а-яё]/gi) || []).length;
+  if (latin > cyrillic && latin >= 2) return "latin";
+  if (cyrillic > latin && cyrillic >= 2) return "cyrillic";
+  return "mixed";
+}
+
+export function directionForQuery(query) {
+  const script = detectQueryScript(query);
+  if (script === "cyrillic") return "ru-ms";
+  if (script === "latin") return "ms-ru";
+  return null;
+}

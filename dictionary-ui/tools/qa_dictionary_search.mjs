@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
 import assert from "node:assert/strict";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  detectQueryScript,
+  directionForQuery,
   levenshteinDistance,
   normalizeRussianSearchKey,
   russianTypoDistanceLimit,
@@ -13,6 +16,8 @@ import {
 const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
 const dataDir = path.join(projectDir, "data");
+const FREQUENCY_BASELINE_SHA256 =
+  "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
 
 const fixtures = [
   ["золотой", /emas/i],
@@ -118,6 +123,8 @@ function validateNoCuratedOverride(goldByTitle, curatedEntries) {
   assert.match(appSource, /deduplicateEntries\(\[\.\.\.goldEntries, \.\.\.curatedEntries/);
   assert.match(appSource, /goldEntries = goldEntries\.filter\(isRuMsGoldEntryQuality\)/);
   assert.match(appSource, /isGoldEntry\(entry\)/);
+  assert.match(appSource, /const inferredDirection = directionForQuery\(query\)/);
+  assert.match(appSource, /switchDirection\(inferredDirection/);
   return new Set(conflicts).size;
 }
 
@@ -155,6 +162,31 @@ function validateRussianQueryNormalization() {
   assert.equal(russianTypoDistanceLimit("дом"), 0, "Short words must not use fuzzy correction");
 }
 
+function validateDirectionDetection() {
+  const cases = [
+    ["дом", "cyrillic", "ru-ms"],
+    ["специальная военная операция", "cyrillic", "ru-ms"],
+    ["rumah", "latin", "ms-ru"],
+    ["pesawat tanpa pemandu", "latin", "ms-ru"],
+    ["ПВО", "cyrillic", "ru-ms"],
+    ["QR оплата", "cyrillic", "ru-ms"],
+    ["123", "mixed", null],
+  ];
+  for (const [query, script, direction] of cases) {
+    assert.equal(detectQueryScript(query), script, `Wrong script detection: ${query}`);
+    assert.equal(directionForQuery(query), direction, `Wrong direction detection: ${query}`);
+  }
+}
+
+function validateFrequencyBaseline(entries) {
+  const canonical = entries
+    .slice(0, 100)
+    .map((entry) => `${normalize(entry.title)}|${String(entry.body).trim().toLowerCase()}`)
+    .join("\n");
+  const digest = crypto.createHash("sha256").update(canonical).digest("hex");
+  assert.equal(digest, FREQUENCY_BASELINE_SHA256, "Top-100 frequency baseline changed");
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
@@ -162,6 +194,8 @@ const goldByTitle = validateGold(gold);
 
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
+validateDirectionDetection();
+validateFrequencyBaseline(gold);
 const protectedConflicts = validateNoCuratedOverride(goldByTitle, curatedRuMs);
 
 console.log("Dictionary QA passed");
@@ -170,4 +204,6 @@ console.log(`Curated RU-MS entries: ${curatedRuMs.length}`);
 console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
+console.log("Automatic direction checks: 7");
+console.log("Protected frequency baseline: 100 entries");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);

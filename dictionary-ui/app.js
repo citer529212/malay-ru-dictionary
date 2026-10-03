@@ -1,12 +1,14 @@
 import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.min.mjs";
 import {
+  detectQueryScript,
+  directionForQuery,
   levenshteinDistance,
   normalizeHeadwordLoose,
   normalizeRussianSearchKey,
   normalizeRussianStem,
   normalizeText,
   russianTypoDistanceLimit,
-} from "./search-core.js?v=1";
+} from "./search-core.js?v=2";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.5.136/build/pdf.worker.min.mjs";
@@ -88,19 +90,19 @@ ui.fileInput.addEventListener("change", async (event) => {
   await loadPdfFile(file);
 });
 
-ui.searchButton.addEventListener("click", runSearch);
+ui.searchButton.addEventListener("click", () => void requestSearch());
 
 ui.searchInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
-    runSearch();
+    void requestSearch();
   }
 });
 
 let inputDebounceId = null;
 ui.searchInput.addEventListener("input", () => {
   clearTimeout(inputDebounceId);
-  inputDebounceId = setTimeout(runSearch, 120);
+  inputDebounceId = setTimeout(() => void requestSearch(), 160);
 });
 
 ui.searchModeSwitch.addEventListener("click", (event) => {
@@ -114,41 +116,71 @@ ui.searchModeSwitch.addEventListener("click", (event) => {
   runSearch();
 });
 
+let switchingDirection = false;
+
+async function switchDirection(nextDirection, options = {}) {
+  const { runAfter = true, automatic = false } = options;
+  if (!nextDirection || nextDirection === state.direction) return true;
+  if (switchingDirection) return false;
+
+  switchingDirection = true;
+  const previousDirection = state.direction;
+  state.direction = nextDirection;
+  if (state.direction !== "ru-ms") {
+    state.includeServiceEntries = false;
+    if (ui.serviceToggle) ui.serviceToggle.checked = false;
+  }
+  updateDirectionButtons();
+  updateServiceToggleVisibility();
+  setStatus(
+    automatic ? "Автоматически выбираем направление перевода..." : "Переключение словарного направления..."
+  );
+  setSearchAvailability(false);
+  setProgress(40);
+  const loaded = await loadBundledDictionary();
+  if (!loaded) {
+    state.direction = previousDirection;
+    updateDirectionButtons();
+    updateServiceToggleVisibility();
+    switchingDirection = false;
+    setStatus("Не удалось загрузить словарную базу для выбранного направления.");
+    setSearchAvailability(false);
+    return false;
+  }
+  switchingDirection = false;
+  setSearchAvailability(true);
+  updateModeButtons();
+  setProgress(100);
+  state.selectedResultId = null;
+  setStatus(
+    `${automatic ? "Направление определено автоматически. " : ""}` +
+      (state.curatedOnly
+        ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
+        : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`)
+  );
+  if (runAfter) runSearch();
+  return true;
+}
+
+async function requestSearch() {
+  const query = ui.searchInput.value.trim();
+  const inferredDirection = directionForQuery(query);
+  if (inferredDirection && inferredDirection !== state.direction) {
+    const switched = await switchDirection(inferredDirection, {
+      runAfter: false,
+      automatic: true,
+    });
+    if (!switched) return;
+  }
+  runSearch();
+}
+
 ui.directionSwitch.addEventListener("click", async (event) => {
   const button = event.target.closest("button[data-direction]");
   if (!button || button.disabled) {
     return;
   }
-  const nextDirection = button.dataset.direction;
-  if (!nextDirection || nextDirection === state.direction) {
-    return;
-  }
-  state.direction = nextDirection;
-  if (state.direction !== "ru-ms") {
-    state.includeServiceEntries = false;
-    if (ui.serviceToggle) {
-      ui.serviceToggle.checked = false;
-    }
-  }
-  updateDirectionButtons();
-  updateServiceToggleVisibility();
-  setStatus("Переключение словарного направления...");
-  setProgress(40);
-  const loaded = await loadBundledDictionary();
-  if (!loaded) {
-    setStatus("Не удалось загрузить словарную базу для выбранного направления.");
-    setSearchAvailability(false);
-    return;
-  }
-  setSearchAvailability(true);
-  setProgress(100);
-  state.selectedResultId = null;
-  setStatus(
-    state.curatedOnly
-      ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
-      : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`
-  );
-  runSearch();
+  await switchDirection(button.dataset.direction, { runAfter: true, automatic: false });
 });
 
 if (ui.serviceToggle) {
@@ -171,7 +203,7 @@ ui.searchHistory.addEventListener("click", (event) => {
   }
 
   ui.searchInput.value = chip.dataset.query || "";
-  runSearch();
+  void requestSearch();
 });
 
 ui.prevPage.addEventListener("click", () => {
@@ -319,19 +351,6 @@ function normalizeRuTitleOcr(text) {
   return cleanupLine(normalized);
 }
 
-function detectQueryScript(query) {
-  const q = query || "";
-  const lat = (q.match(/[a-z]/gi) || []).length;
-  const cyr = (q.match(/[а-яё]/gi) || []).length;
-  if (lat > cyr && lat >= 2) {
-    return "latin";
-  }
-  if (cyr > lat && cyr >= 2) {
-    return "cyrillic";
-  }
-  return "mixed";
-}
-
 function cleanupLine(text) {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -380,7 +399,7 @@ function renderHistory() {
     chip.className = "history-chip";
     chip.dataset.query = query;
     chip.textContent = query;
-    chip.disabled = !state.pdfDoc;
+    chip.disabled = ui.searchInput.disabled;
     ui.searchHistory.append(chip);
   });
 }
