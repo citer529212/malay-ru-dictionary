@@ -850,10 +850,13 @@ async function loadBundledDictionary() {
       idPrefix: "service",
     });
   }
-  let bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
-    verified: false,
-    idPrefix: "bundle",
-  });
+  let bundledEntries = [];
+  if (!goldEntries.length && !curatedEntries.length) {
+    bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
+      verified: false,
+      idPrefix: "bundle",
+    });
+  }
 
   if (state.direction === "ru-ms") {
     const normalizeRuEntries = (list) =>

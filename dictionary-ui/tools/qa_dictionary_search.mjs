@@ -258,6 +258,7 @@ function validateModernInterface() {
   assert.match(appSource, /downloadMissingQueries\("csv"\)/);
   assert.match(appSource, /function isBestAnswerQuality\(entry\)/);
   assert.match(appSource, /if \(!isBestAnswerQuality\(row\)\) return false/);
+  assert.match(appSource, /if \(!goldEntries\.length && !curatedEntries\.length\)/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
