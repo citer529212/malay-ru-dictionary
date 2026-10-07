@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import {
   detectQueryScript,
   directionForQuery,
+  generateMalayBaseCandidates,
   levenshteinDistance,
   normalizeRussianSearchKey,
   russianTypoDistanceLimit,
@@ -162,6 +163,60 @@ function validateRussianQueryNormalization() {
   assert.equal(russianTypoDistanceLimit("дом"), 0, "Short words must not use fuzzy correction");
 }
 
+function validateMalayMorphology(msRuTitles) {
+  const cases = [
+    ["menulis", "tulis"],
+    ["membaca", "baca"],
+    ["mengambil", "ambil"],
+    ["berjalan", "jalan"],
+    ["pekerjaan", "kerja"],
+    ["menyapu", "sapu"],
+    ["memakai", "pakai"],
+    ["rumah-rumah", "rumah"],
+    ["dibacakan", "baca"],
+  ];
+
+  for (const [query, expectedBase] of cases) {
+    const candidates = generateMalayBaseCandidates(query);
+    assert.ok(candidates.includes(expectedBase), `Malay base was not generated: ${query}`);
+    assert.ok(msRuTitles.has(expectedBase), `Malay base is absent from the dictionary: ${expectedBase}`);
+    assert.ok(!candidates.includes(query), `Derived Malay candidates contain the original query: ${query}`);
+  }
+}
+
+function validateBidirectionalFrequencyCoverage(goldEntries, msRuEntries) {
+  const ruMs = goldEntries.slice(0, 50);
+  const msRu = msRuEntries.slice(0, 50);
+  assert.equal(ruMs.length, 50, "RU-MS frequency set must contain 50 entries");
+  assert.equal(msRu.length, 50, "MS-RU frequency set must contain 50 entries");
+
+  for (const entry of ruMs) {
+    assert.match(entry.title, /[а-яё]/i, `RU-MS frequency headword is not Russian: ${entry.title}`);
+    assert.match(entry.body, /[a-z]/i, `RU-MS frequency translation is missing: ${entry.title}`);
+  }
+  for (const entry of msRu) {
+    assert.match(entry.title, /^[a-z][a-z .'-]*$/i, `MS-RU frequency headword is invalid: ${entry.title}`);
+    assert.match(entry.body, /[а-яё]/i, `MS-RU frequency translation is missing: ${entry.title}`);
+  }
+}
+
+function validateMalayGold(entries) {
+  const expected = new Map([
+    ["tulis", /писать/i], ["baca", /читать/i], ["ambil", /брать/i],
+    ["jalan", /дорога|идти/i], ["kerja", /работа/i], ["sapu", /подметать/i],
+    ["pakai", /использовать|носить/i], ["rumah", /дом/i],
+    ["menulis", /писать/i], ["membaca", /читать/i], ["mengambil", /брать/i],
+    ["berjalan", /идти|ходить/i], ["pekerjaan", /работа/i], ["menyapu", /подметать/i],
+    ["memakai", /использовать|носить/i], ["rumah-rumah", /дома/i],
+    ["dibacakan", /прочитанным/i],
+  ]);
+  assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
+  for (const entry of entries) {
+    assert.ok(entry.verified, `MS-RU gold entry is not verified: ${entry.title}`);
+    assert.match(entry.body, expected.get(normalize(entry.title)), `Wrong MS-RU gold translation: ${entry.title}`);
+  }
+}
+
 function validateDirectionDetection() {
   const cases = [
     ["дом", "cyrillic", "ru-ms"],
@@ -197,15 +252,27 @@ function validateModernInterface() {
   assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
   assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
   assert.match(appSource, /function renderSuggestions\(query\)/);
+  assert.match(appSource, /MISSING_QUERIES_KEY/);
+  assert.match(appSource, /localStorage\.setItem\(MISSING_QUERIES_KEY/);
+  assert.match(appSource, /downloadMissingQueries\("json"\)/);
+  assert.match(appSource, /downloadMissingQueries\("csv"\)/);
+  assert.match(appSource, /function isBestAnswerQuality\(entry\)/);
+  assert.match(appSource, /if \(!isBestAnswerQuality\(row\)\) return false/);
+  assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
+  assert.match(html, /saveMissingButton/);
 }
 
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
+const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
 const goldByTitle = validateGold(gold);
 
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
+validateMalayGold(msRuGold);
+validateMalayMorphology(new Set([...msRuGold, ...curatedMsRu].map((entry) => normalize(entry.title))));
+validateBidirectionalFrequencyCoverage(gold, curatedMsRu);
 validateDirectionDetection();
 validateFrequencyBaseline(gold);
 validateModernInterface();
@@ -217,7 +284,10 @@ console.log(`Curated RU-MS entries: ${curatedRuMs.length}`);
 console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
+console.log("Malay morphology checks: 9");
+console.log("Bidirectional frequency checks: 50 RU-MS + 50 MS-RU");
 console.log("Automatic direction checks: 7");
 console.log("Protected frequency baseline: 100 entries");
 console.log("Modern no-upload interface checks: passed");
+console.log("Local missing-query export checks: passed");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);

@@ -46,6 +46,51 @@ export function normalizeRussianSearchKey(value) {
     .join(" ");
 }
 
+function addMalayCandidate(result, value) {
+  const candidate = normalizeHeadwordLoose(value);
+  if (/^[a-z][a-z-]{2,}$/i.test(candidate)) result.add(candidate);
+}
+
+export function generateMalayBaseCandidates(value) {
+  const word = normalizeHeadwordLoose(value);
+  const result = new Set();
+  if (!/^[a-z][a-z-]{2,}$/i.test(word)) return [];
+
+  const repeated = word.match(/^([a-z]+)-\1$/i);
+  if (repeated) addMalayCandidate(result, repeated[1]);
+
+  const forms = new Set([word]);
+  const suffixes = ["kan", "an", "i"];
+  for (const suffix of suffixes) {
+    if (word.endsWith(suffix) && word.length - suffix.length >= 3) {
+      const withoutSuffix = word.slice(0, -suffix.length);
+      forms.add(withoutSuffix);
+      addMalayCandidate(result, withoutSuffix);
+    }
+  }
+
+  for (const form of forms) {
+    const directPrefixes = ["meng", "men", "mem", "meny", "ber", "bel", "ter", "per", "pel", "pen", "pem", "peng", "peny", "di", "ke", "se", "pe"];
+    for (const prefix of directPrefixes) {
+      if (form.startsWith(prefix) && form.length - prefix.length >= 3) {
+        addMalayCandidate(result, form.slice(prefix.length));
+      }
+    }
+
+    if (/^men[aeiou]/.test(form)) addMalayCandidate(result, `t${form.slice(3)}`);
+    if (/^mem[aeiou]/.test(form)) addMalayCandidate(result, `p${form.slice(3)}`);
+    if (/^meny[aeiou]/.test(form)) addMalayCandidate(result, `s${form.slice(4)}`);
+    if (/^meng[aeiou]/.test(form)) addMalayCandidate(result, form.slice(4));
+    if (/^pen[aeiou]/.test(form)) addMalayCandidate(result, `t${form.slice(3)}`);
+    if (/^pem[aeiou]/.test(form)) addMalayCandidate(result, `p${form.slice(3)}`);
+    if (/^peny[aeiou]/.test(form)) addMalayCandidate(result, `s${form.slice(4)}`);
+    if (/^peng[aeiou]/.test(form)) addMalayCandidate(result, form.slice(4));
+  }
+
+  result.delete(word);
+  return [...result];
+}
+
 export function levenshteinDistance(a, b) {
   if (a === b) return 0;
   if (!a.length) return b.length;

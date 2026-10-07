@@ -1,13 +1,14 @@
 import {
   detectQueryScript,
   directionForQuery,
+  generateMalayBaseCandidates,
   levenshteinDistance,
   normalizeHeadwordLoose,
   normalizeRussianSearchKey,
   normalizeRussianStem,
   normalizeText,
   russianTypoDistanceLimit,
-} from "./search-core.js?v=2";
+} from "./search-core.js?v=3";
 
 const ui = {
   searchInput: document.getElementById("searchInput"),
@@ -23,15 +24,21 @@ const ui = {
   resultList: document.getElementById("resultList"),
   statusText: document.getElementById("statusText"),
   progressBar: document.getElementById("progressBar"),
+  missingActions: document.getElementById("missingActions"),
+  saveMissingButton: document.getElementById("saveMissingButton"),
+  exportMissingJsonButton: document.getElementById("exportMissingJsonButton"),
+  exportMissingCsvButton: document.getElementById("exportMissingCsvButton"),
+  missingCount: document.getElementById("missingCount"),
 };
 
 const SEARCH_HISTORY_KEY = "dictionary-shell:search-history:v2";
+const MISSING_QUERIES_KEY = "dictionary-shell:missing-queries:v1";
 const CURATED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_curated.json",
   "ru-ms": "./data/dictionary_ru_ms_curated.json",
 };
 const GOLD_DICTIONARY_URLS = {
-  "ms-ru": "",
+  "ms-ru": "./data/dictionary_ms_ru_gold.json",
   "ru-ms": "./data/dictionary_ru_ms_gold.json",
 };
 const SERVICE_DICTIONARY_URLS = {
@@ -59,7 +66,58 @@ const state = {
   curatedOnly: false,
   direction: "ms-ru",
   includeServiceEntries: false,
+  missingQueries: [],
 };
+
+function loadMissingQueries() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(MISSING_QUERIES_KEY) || "[]");
+    state.missingQueries = Array.isArray(parsed) ? parsed.filter((row) => row?.query) : [];
+  } catch {
+    state.missingQueries = [];
+  }
+  updateMissingCount();
+}
+
+function updateMissingCount() {
+  ui.missingCount.textContent = state.missingQueries.length
+    ? `Сохранено локально: ${state.missingQueries.length}`
+    : "Список хранится только на этом устройстве";
+}
+
+function saveMissingQuery() {
+  const query = state.activeQuery.trim();
+  if (!query || state.bestAnswer) return;
+  const key = `${state.direction}|${normalizeText(query)}`;
+  if (!state.missingQueries.some((row) => `${row.direction}|${normalizeText(row.query)}` === key)) {
+    state.missingQueries.push({ query, direction: state.direction, savedAt: new Date().toISOString() });
+    localStorage.setItem(MISSING_QUERIES_KEY, JSON.stringify(state.missingQueries));
+  }
+  updateMissingCount();
+  ui.saveMissingButton.textContent = "Слово сохранено";
+}
+
+function downloadMissingQueries(format) {
+  if (!state.missingQueries.length) return;
+  const isCsv = format === "csv";
+  const content = isCsv
+    ? ["query,direction,savedAt", ...state.missingQueries.map((row) =>
+        [row.query, row.direction, row.savedAt]
+          .map((value) => `"${String(value).replace(/"/g, '""')}"`)
+          .join(",")
+      )].join("\n")
+    : JSON.stringify({ exportedAt: new Date().toISOString(), entries: state.missingQueries }, null, 2);
+  const blob = new Blob([content], { type: isCsv ? "text/csv;charset=utf-8" : "application/json" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `dictionary-missing-queries.${format}`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+ui.saveMissingButton.addEventListener("click", saveMissingQuery);
+ui.exportMissingJsonButton.addEventListener("click", () => downloadMissingQueries("json"));
+ui.exportMissingCsvButton.addEventListener("click", () => downloadMissingQueries("csv"));
 
 ui.searchButton.addEventListener("click", () => void requestSearch());
 
@@ -111,7 +169,7 @@ async function switchDirection(nextDirection, options = {}) {
   setStatus(
     `${automatic ? "Направление определено автоматически. " : ""}` +
       (state.curatedOnly
-        ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
+        ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} отобранных словарных статей.`
         : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`)
   );
   if (runAfter) runSearch();
@@ -775,14 +833,14 @@ function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
 
 async function loadBundledDictionary() {
   let goldEntries = [];
-  if (state.direction === "ru-ms" && GOLD_DICTIONARY_URLS["ru-ms"]) {
-    goldEntries = await fetchDictionaryEntries(GOLD_DICTIONARY_URLS["ru-ms"], {
+  if (GOLD_DICTIONARY_URLS[state.direction]) {
+    goldEntries = await fetchDictionaryEntries(GOLD_DICTIONARY_URLS[state.direction], {
       verified: true,
       idPrefix: "gold",
     });
   }
   let curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
-    verified: true,
+    verified: false,
     idPrefix: "curated",
   });
   let serviceEntries = [];
@@ -900,7 +958,21 @@ function computeBodyNoisePenalty(entry) {
 }
 
 function isGoldEntry(entry) {
-  return String(entry.id || "").startsWith("ru-gold-");
+  return /^(ru|ms)-gold-/.test(String(entry.id || ""));
+}
+
+function isBestAnswerQuality(entry) {
+  if (entry?._gold || isGoldEntry(entry)) return true;
+  const body = String(entry?.body || "").trim();
+  if (body.length < 2 || body.length > 260 || /[{}[\]<>_|^]/.test(body)) return false;
+
+  const expectedLetters = state.direction === "ms-ru" ? /[а-яё]/gi : /[a-z]/gi;
+  if ((body.match(expectedLetters) || []).length < 3) return false;
+
+  // OCR often cuts an entry in the middle of a short word at a column or page boundary.
+  if (body.length > 18 && /(?:^|[\s;,:])[^\s;,:]{1,2}$/u.test(body)) return false;
+  if (/\b(?:nan|undefined|null)\b/i.test(body)) return false;
+  return true;
 }
 
 function searchEntries(query) {
@@ -916,6 +988,7 @@ function searchEntries(query) {
   const qStem = normalizeRussianStem(qLoose);
   const qRuKey = normalizeRussianSearchKey(qLoose);
   const qGrams = buildBigrams(q);
+  const malayBaseCandidates = state.direction === "ms-ru" ? generateMalayBaseCandidates(qLoose) : [];
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
   const queryWords = q.split(/\s+/).filter(Boolean);
   const isSingleWordQuery = queryWords.length === 1;
@@ -926,6 +999,7 @@ function searchEntries(query) {
       const titleLoose = normalizeHeadwordLoose(entry.title);
       const titleStem = normalizeRussianStem(titleLoose);
       const titleRuKey = normalizeRussianSearchKey(titleLoose);
+      const malayBaseIndex = malayBaseCandidates.indexOf(titleLoose);
       const ruKeyDistance =
         qRuKey && titleRuKey ? levenshteinDistance(qRuKey, titleRuKey) : Number.POSITIVE_INFINITY;
       const typoLimit = russianTypoDistanceLimit(qRuKey);
@@ -936,12 +1010,16 @@ function searchEntries(query) {
       let score = 99;
 
       if (
-        title === q ||
-        titleLoose === qLoose ||
+        title === q || titleLoose === qLoose
+      ) {
+        score = 0;
+      } else if (
         (qStem && titleStem === qStem) ||
         (qRuKey && titleRuKey === qRuKey)
       ) {
-        score = 0;
+        score = state.direction === "ru-ms" ? 0.25 : 99;
+      } else if (state.direction === "ms-ru" && malayBaseIndex >= 0) {
+        score = 0.55 + malayBaseIndex * 0.03;
       } else if (queryPattern.test(title)) {
         score = 0.2 + lenDelta / 50;
       } else if (title.startsWith(q)) {
@@ -957,7 +1035,9 @@ function searchEntries(query) {
         titleRuKey.length >= 4 &&
         ruKeyDistance <= 2
       ) {
-        score = 2.6 + ruKeyDistance * 0.2 + lenDelta / 30;
+        score = isGoldEntry(entry)
+          ? 1.65 + ruKeyDistance * 0.1 + lenDelta / 40
+          : 2.6 + ruKeyDistance * 0.2 + lenDelta / 30;
       } else if (body.includes(q)) {
         score = 3.9;
       }
@@ -1022,6 +1102,9 @@ function searchEntries(query) {
         row.typoLimit > 0 &&
         row.ruKeyDistance > 0 &&
         row.ruKeyDistance <= row.typoLimit,
+      _malayBase:
+        state.direction === "ms-ru" &&
+        generateMalayBaseCandidates(qLoose).includes(normalizeHeadwordLoose(row.entry.title)),
     }));
 }
 
@@ -1048,13 +1131,19 @@ function groupEntryResults(rows, query = "") {
         _exactStem: Boolean(row._exactStem),
         _exactRuKey: Boolean(row._exactRuKey),
         _nearRuKey: Boolean(row._nearRuKey),
+        _malayBase: Boolean(row._malayBase),
         _gold: isGoldEntry(row),
+        verified: Boolean(row.verified),
       });
       return;
     }
 
     const current = groups.get(key);
-    if (!current.body.includes(row.body) && current.body.length < 280) {
+    if (isGoldEntry(row) && !current._gold) {
+      current.body = row.body;
+      current.page = row.page;
+      current._gold = true;
+    } else if (!current._gold && !current.body.includes(row.body) && current.body.length < 280) {
       current.body = `${current.body}; ${row.body}`.slice(0, 340);
     }
     current.page = Math.min(current.page, row.page);
@@ -1072,7 +1161,9 @@ function groupEntryResults(rows, query = "") {
     current._exactStem = current._exactStem || Boolean(row._exactStem);
     current._exactRuKey = current._exactRuKey || Boolean(row._exactRuKey);
     current._nearRuKey = current._nearRuKey || Boolean(row._nearRuKey);
+    current._malayBase = current._malayBase || Boolean(row._malayBase);
     current._gold = current._gold || isGoldEntry(row);
+    current.verified = current.verified || Boolean(row.verified);
   });
 
   return [...groups.values()]
@@ -1083,6 +1174,7 @@ function groupEntryResults(rows, query = "") {
         Number(b._exactStem) - Number(a._exactStem) ||
         Number(b._exactTitle) - Number(a._exactTitle) ||
         Number(b._nearRuKey) - Number(a._nearRuKey) ||
+        Number(b._malayBase) - Number(a._malayBase) ||
         a._rank - b._rank ||
         a._wordCount - b._wordCount ||
         a._lenDelta - b._lenDelta ||
@@ -1147,12 +1239,14 @@ function computeBestAnswer(query) {
         if (row._wordCount !== 1) {
           return false;
         }
+        if (!isBestAnswerQuality(row)) return false;
         return (
           normalizeHeadwordLoose(row.title) === qLoose ||
           (qStem.length >= 3 && normalizeRussianStem(normalizeHeadwordLoose(row.title)) === qStem) ||
           (qRuKey.length >= 3 &&
             normalizeRussianSearchKey(normalizeHeadwordLoose(row.title)) === qRuKey) ||
-          (row._gold && row._nearRuKey)
+          (row._gold && row._nearRuKey) ||
+          (row._gold && row._malayBase)
         );
       });
       if (exactSingle) {
@@ -1178,11 +1272,13 @@ function computeBestAnswer(query) {
 
     const exactPhrase = groupedEntries.find(
       (row) =>
-        row._exactTitle ||
-        row._exactLoose ||
-        row._exactStem ||
-        row._exactRuKey ||
-        (row._gold && row._nearRuKey)
+        isBestAnswerQuality(row) &&
+        (row._exactTitle ||
+          row._exactLoose ||
+          row._exactStem ||
+          row._exactRuKey ||
+          (row._gold && row._malayBase) ||
+          (row._gold && row._nearRuKey))
     );
     return exactPhrase || null;
   }
@@ -1198,6 +1294,7 @@ function renderBestAnswer() {
     ui.answerBody.textContent =
       "Начните печатать: сначала показывается самый точный словарный перевод.";
     ui.answerMeta.innerHTML = "";
+    ui.missingActions.hidden = true;
     return;
   }
 
@@ -1217,12 +1314,16 @@ function renderBestAnswer() {
         "Попробуйте другое написание. Фрагменты OCR не показываются как лучший ответ, чтобы не вводить в заблуждение.";
     }
     ui.answerMeta.innerHTML = "";
+    ui.missingActions.hidden = false;
+    ui.saveMissingButton.textContent = "Сохранить отсутствующее слово";
+    updateMissingCount();
     return;
   }
 
   ui.answerTitle.innerHTML = highlightText(hit.title, query);
   ui.answerBody.innerHTML = highlightText(hit.body, query);
   ui.answerMeta.innerHTML = "";
+  ui.missingActions.hidden = true;
 
   const typeChip = document.createElement("span");
   typeChip.className = "answer-chip";
@@ -1237,6 +1338,10 @@ function renderBestAnswer() {
     const nearMeta = document.createElement("span");
     nearMeta.textContent = `исправлена опечатка: «${query}» → «${hit.title}»`;
     ui.answerMeta.append(nearMeta);
+  } else if (hit._malayBase) {
+    const formMeta = document.createElement("span");
+    formMeta.textContent = `распознана малайская словоформа: «${query}» → «${hit.title}»`;
+    ui.answerMeta.append(formMeta);
   } else if (hit._exactRuKey && !hit._exactLoose) {
     const formMeta = document.createElement("span");
     formMeta.textContent = `распознана словоформа: «${query}» → «${hit.title}»`;
@@ -1353,6 +1458,7 @@ function runSearch() {
 }
 
 loadHistory();
+loadMissingQueries();
 setSearchAvailability(false);
 setProgress(0);
 renderBestAnswer();
@@ -1372,7 +1478,7 @@ async function initAutonomousDictionary() {
   setProgress(100);
   setStatus(
     state.curatedOnly
-      ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} проверенных словарных статей.`
+      ? `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} отобранных словарных статей.`
       : `Автономный режим (${state.direction === "ms-ru" ? "малайско-русский" : "русско-малайский"}): загружено ${state.entries.length} словарных статей.`
   );
   runSearch();

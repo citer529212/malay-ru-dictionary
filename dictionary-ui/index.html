@@ -20,7 +20,7 @@
       <header class="hero card">
         <div class="hero-kicker">
           <p class="eyebrow">Kamus elektronik · Электронный словарь</p>
-          <p class="build-version">Версия 2026.10.03 · поиск v5</p>
+          <p class="build-version">Версия 2026.10.07 · поиск v6</p>
         </div>
         <h1>Малайско-русский и русско-малайский электронный словарь</h1>
         <p class="hero-text">
@@ -70,6 +70,12 @@
         <h2 id="answerTitle">Введите слово для поиска</h2>
         <p id="answerBody">Начните ввод. Система покажет наиболее точный перевод.</p>
         <div id="answerMeta" class="answer-meta"></div>
+        <div id="missingActions" class="missing-actions" hidden>
+          <button id="saveMissingButton" type="button">Сохранить отсутствующее слово</button>
+          <button id="exportMissingJsonButton" type="button" class="secondary-button">Экспорт JSON</button>
+          <button id="exportMissingCsvButton" type="button" class="secondary-button">Экспорт CSV</button>
+          <span id="missingCount"></span>
+        </div>
       </section>
 
       <section class="workspace card">
@@ -105,6 +111,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=search-v5"></script>
+    <script type="module" src="./app.js?v=search-v6"></script>
   </body>
 </html>

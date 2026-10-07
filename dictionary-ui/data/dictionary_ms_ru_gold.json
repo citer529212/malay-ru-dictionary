@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "direction": "ms-ru",
+  "entries": [
+    { "id": "ms-gold-tulis", "title": "tulis", "body": "писать; письмо", "page": 1, "verified": true },
+    { "id": "ms-gold-baca", "title": "baca", "body": "читать; чтение", "page": 1, "verified": true },
+    { "id": "ms-gold-ambil", "title": "ambil", "body": "брать; взять", "page": 1, "verified": true },
+    { "id": "ms-gold-jalan", "title": "jalan", "body": "дорога; идти; ходить", "page": 1, "verified": true },
+    { "id": "ms-gold-kerja", "title": "kerja", "body": "работа; работать", "page": 1, "verified": true },
+    { "id": "ms-gold-sapu", "title": "sapu", "body": "подметать; метла", "page": 1, "verified": true },
+    { "id": "ms-gold-pakai", "title": "pakai", "body": "использовать; носить", "page": 1, "verified": true },
+    { "id": "ms-gold-rumah", "title": "rumah", "body": "дом", "page": 1, "verified": true },
+    { "id": "ms-gold-menulis", "title": "menulis", "body": "писать", "page": 1, "verified": true },
+    { "id": "ms-gold-membaca", "title": "membaca", "body": "читать", "page": 1, "verified": true },
+    { "id": "ms-gold-mengambil", "title": "mengambil", "body": "брать; взять", "page": 1, "verified": true },
+    { "id": "ms-gold-berjalan", "title": "berjalan", "body": "идти; ходить", "page": 1, "verified": true },
+    { "id": "ms-gold-pekerjaan", "title": "pekerjaan", "body": "работа; занятие; должность", "page": 1, "verified": true },
+    { "id": "ms-gold-menyapu", "title": "menyapu", "body": "подметать", "page": 1, "verified": true },
+    { "id": "ms-gold-memakai", "title": "memakai", "body": "использовать; носить", "page": 1, "verified": true },
+    { "id": "ms-gold-rumah-rumah", "title": "rumah-rumah", "body": "дома; несколько домов", "page": 1, "verified": true },
+    { "id": "ms-gold-dibacakan", "title": "dibacakan", "body": "быть прочитанным вслух", "page": 1, "verified": true }
+  ]
+}
