@@ -92,7 +92,7 @@ h2 { margin: 4px 0 0; font-size: 1.04rem; }
 mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; }
 
 .sources { padding: clamp(22px, 3vw, 32px); animation: rise 680ms ease-out both; }
-.source-grid { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.source-grid { margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .source-item { padding: 18px; border-left: 5px solid var(--sun); border-radius: 12px; background: #fffef8; }
 .source-item span { color: var(--forest-2); font-size: 0.75rem; font-weight: 700; }
 .source-item p { margin: 8px 0 5px; font-family: "Unbounded", sans-serif; font-size: 0.92rem; }
@@ -103,6 +103,7 @@ mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; 
 @media (max-width: 900px) {
   body { padding: 14px; }
   .result-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .source-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {

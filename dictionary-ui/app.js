@@ -41,6 +41,10 @@ const GOLD_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_ms_ru_gold.json",
   "ru-ms": "./data/dictionary_ru_ms_gold.json",
 };
+const SPECIALIZED_DICTIONARY_URLS = {
+  "ms-ru": "./data/dictionary_ms_ru_specialized.json",
+  "ru-ms": "",
+};
 const SERVICE_DICTIONARY_URLS = {
   "ms-ru": "",
   "ru-ms": "./data/dictionary_ru_ms_service.json",
@@ -672,6 +676,8 @@ function normalizeIncomingEntry(entry, fallbackId, options = {}) {
     body: cleanupLine(String(entry.body || "")),
     page: Number.isFinite(Number(entry.page)) ? Number(entry.page) : 1,
     verified: Boolean(options.verified || entry.verified),
+    source: String(entry.source || options.source || ""),
+    trusted: Boolean(options.trusted || entry.trusted),
   };
 }
 
@@ -839,6 +845,15 @@ async function loadBundledDictionary() {
       idPrefix: "gold",
     });
   }
+  let specializedEntries = [];
+  if (SPECIALIZED_DICTIONARY_URLS[state.direction]) {
+    specializedEntries = await fetchDictionaryEntries(SPECIALIZED_DICTIONARY_URLS[state.direction], {
+      verified: true,
+      trusted: true,
+      source: "malaysian-russian-ready-docx",
+      idPrefix: "specialized",
+    });
+  }
   let curatedEntries = await fetchDictionaryEntries(CURATED_DICTIONARY_URLS[state.direction], {
     verified: false,
     idPrefix: "curated",
@@ -851,7 +866,7 @@ async function loadBundledDictionary() {
     });
   }
   let bundledEntries = [];
-  if (!goldEntries.length && !curatedEntries.length) {
+  if (!goldEntries.length && !specializedEntries.length && !curatedEntries.length) {
     bundledEntries = await fetchDictionaryEntries(BUNDLED_DICTIONARY_URLS[state.direction], {
       verified: false,
       idPrefix: "bundle",
@@ -875,14 +890,19 @@ async function loadBundledDictionary() {
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
   }
 
-  if (!goldEntries.length && !curatedEntries.length && !bundledEntries.length) {
+  if (!goldEntries.length && !specializedEntries.length && !curatedEntries.length && !bundledEntries.length) {
     return false;
   }
 
   let finalEntries = [];
-  if (goldEntries.length || curatedEntries.length) {
+  if (goldEntries.length || specializedEntries.length || curatedEntries.length) {
     // If curated dictionary exists, load it fully without truncation.
-    finalEntries = deduplicateEntries([...goldEntries, ...curatedEntries, ...serviceEntries]);
+    finalEntries = deduplicateEntries([
+      ...goldEntries,
+      ...specializedEntries,
+      ...curatedEntries,
+      ...serviceEntries,
+    ]);
     state.curatedOnly = true;
     state.searchMode = "entries";
   } else {
@@ -962,6 +982,10 @@ function computeBodyNoisePenalty(entry) {
 
 function isGoldEntry(entry) {
   return /^(ru|ms)-gold-/.test(String(entry.id || ""));
+}
+
+function isTrustedEntry(entry) {
+  return isGoldEntry(entry) || Boolean(entry?.trusted) || String(entry?.id || "").startsWith("ms-source-docx-");
 }
 
 function isBestAnswerQuality(entry) {
@@ -1136,17 +1160,19 @@ function groupEntryResults(rows, query = "") {
         _nearRuKey: Boolean(row._nearRuKey),
         _malayBase: Boolean(row._malayBase),
         _gold: isGoldEntry(row),
+        _trusted: isTrustedEntry(row),
         verified: Boolean(row.verified),
       });
       return;
     }
 
     const current = groups.get(key);
-    if (isGoldEntry(row) && !current._gold) {
+    if (isTrustedEntry(row) && !current._trusted) {
       current.body = row.body;
       current.page = row.page;
-      current._gold = true;
-    } else if (!current._gold && !current.body.includes(row.body) && current.body.length < 280) {
+      current._gold = isGoldEntry(row);
+      current._trusted = true;
+    } else if (!current._trusted && !current.body.includes(row.body) && current.body.length < 280) {
       current.body = `${current.body}; ${row.body}`.slice(0, 340);
     }
     current.page = Math.min(current.page, row.page);
@@ -1166,6 +1192,7 @@ function groupEntryResults(rows, query = "") {
     current._nearRuKey = current._nearRuKey || Boolean(row._nearRuKey);
     current._malayBase = current._malayBase || Boolean(row._malayBase);
     current._gold = current._gold || isGoldEntry(row);
+    current._trusted = current._trusted || isTrustedEntry(row);
     current.verified = current.verified || Boolean(row.verified);
   });
 
@@ -1249,7 +1276,7 @@ function computeBestAnswer(query) {
           (qRuKey.length >= 3 &&
             normalizeRussianSearchKey(normalizeHeadwordLoose(row.title)) === qRuKey) ||
           (row._gold && row._nearRuKey) ||
-          (row._gold && row._malayBase)
+          (row._trusted && row._malayBase)
         );
       });
       if (exactSingle) {
@@ -1280,7 +1307,7 @@ function computeBestAnswer(query) {
           row._exactLoose ||
           row._exactStem ||
           row._exactRuKey ||
-          (row._gold && row._malayBase) ||
+          (row._trusted && row._malayBase) ||
           (row._gold && row._nearRuKey))
     );
     return exactPhrase || null;

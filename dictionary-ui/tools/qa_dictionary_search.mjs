@@ -121,12 +121,53 @@ function validateNoCuratedOverride(goldByTitle, curatedEntries) {
 
   // Loading order and the explicit gold score must keep all these conflicts below gold.
   const appSource = fs.readFileSync(path.join(projectDir, "app.js"), "utf8");
-  assert.match(appSource, /deduplicateEntries\(\[\.\.\.goldEntries, \.\.\.curatedEntries/);
+  assert.match(appSource, /\.\.\.goldEntries,\s+\.\.\.specializedEntries,\s+\.\.\.curatedEntries/s);
   assert.match(appSource, /goldEntries = goldEntries\.filter\(isRuMsGoldEntryQuality\)/);
   assert.match(appSource, /isGoldEntry\(entry\)/);
   assert.match(appSource, /const inferredDirection = directionForQuery\(query\)/);
   assert.match(appSource, /switchDirection\(inferredDirection/);
   return new Set(conflicts).size;
+}
+
+function validateSpecializedDocx(entries, payload) {
+  assert.equal(payload.direction, "ms-ru", "Specialized DOCX has wrong direction");
+  assert.equal(payload.entry_count, 4683, "Specialized DOCX metadata count changed");
+  assert.equal(entries.length, 4683, "Specialized DOCX import is incomplete");
+
+  const ids = new Set();
+  const titles = new Set();
+  for (const entry of entries) {
+    assert.ok(entry.id.startsWith("ms-source-docx-"), `Wrong specialized id: ${entry.id}`);
+    assert.ok(!ids.has(entry.id), `Duplicate specialized id: ${entry.id}`);
+    ids.add(entry.id);
+    const title = normalize(entry.title);
+    assert.ok(title && entry.body.trim(), `Empty specialized row: ${entry.id}`);
+    assert.ok(!titles.has(title), `Duplicate specialized title: ${entry.title}`);
+    titles.add(title);
+    assert.equal(entry.source, "malaysian-russian-ready-docx", `Wrong source: ${entry.title}`);
+  }
+
+  const byTitle = new Map(entries.map((entry) => [normalize(entry.title), entry]));
+  const samples = [
+    ["aci torsion", /торсион/i],
+    ["agensi perisikan", /спецслужба/i],
+    ["gencatan senjata", /прекращение огня/i],
+    ["dron", /^дрон$/i],
+    ["uav", /беспилотник/i],
+    ["kapal induk pesawat udara", /авианосец/i],
+    ["pesawat tanpa pemandu", /беспилотный летательный аппарат/i],
+    ["zon larangan terbang", /запретная зона/i],
+  ];
+  for (const [title, expected] of samples) {
+    assert.ok(byTitle.has(title), `Missing specialized term: ${title}`);
+    assert.match(byTitle.get(title).body, expected, `Wrong specialized translation: ${title}`);
+  }
+
+  const sourceAnomalies = entries.filter(
+    (entry) => /[а-яё]/i.test(entry.title) || !/[а-яё]/i.test(entry.body)
+  );
+  assert.equal(sourceAnomalies.length, 5, "Review the known source anomalies");
+  return sourceAnomalies.length;
 }
 
 function validateRussianQueryNormalization() {
@@ -249,6 +290,8 @@ function validateModernInterface() {
   assert.match(html, /Михина А\.А\./);
   assert.match(html, /Большой малайско-русский словарь/);
   assert.match(html, /Русско-малайзийский словарь/);
+  assert.match(html, /Дополнительная специализированная база/);
+  assert.match(html, /4 683 статьи/);
   assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
   assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
   assert.match(appSource, /function renderSuggestions\(query\)/);
@@ -258,13 +301,18 @@ function validateModernInterface() {
   assert.match(appSource, /downloadMissingQueries\("csv"\)/);
   assert.match(appSource, /function isBestAnswerQuality\(entry\)/);
   assert.match(appSource, /if \(!isBestAnswerQuality\(row\)\) return false/);
-  assert.match(appSource, /if \(!goldEntries\.length && !curatedEntries\.length\)/);
+  assert.match(
+    appSource,
+    /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
+  );
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
 
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
+const specializedPayload = readJson("dictionary_ms_ru_specialized.json");
+const specializedMsRu = specializedPayload.entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
 const goldByTitle = validateGold(gold);
@@ -272,6 +320,7 @@ const goldByTitle = validateGold(gold);
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
+const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
 validateMalayMorphology(new Set([...msRuGold, ...curatedMsRu].map((entry) => normalize(entry.title))));
 validateBidirectionalFrequencyCoverage(gold, curatedMsRu);
 validateDirectionDetection();
@@ -286,6 +335,8 @@ console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
+console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
+console.log(`Preserved source anomalies: ${specializedAnomalies}`);
 console.log("Bidirectional frequency checks: 50 RU-MS + 50 MS-RU");
 console.log("Automatic direction checks: 7");
 console.log("Protected frequency baseline: 100 entries");
