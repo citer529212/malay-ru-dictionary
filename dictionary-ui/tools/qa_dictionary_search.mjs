@@ -351,7 +351,10 @@ function validateModernInterface() {
   assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-3"/);
   assert.match(appSource, /cache: "force-cache"/);
   assert.match(appSource, /titleBuckets: new Map\(\)/);
-  assert.match(appSource, /function indexedEntriesForQuery\(queryLoose, malayBaseCandidates = \[\]\)/);
+  assert.match(
+    appSource,
+    /function indexedEntriesForQuery\(queryLoose, malayBaseCandidates = \[\], russianKey = ""\)/
+  );
   assert.match(appSource, /return indexedEntries/);
   assert.match(appSource, /dataset\.candidateCount = String\(state\.lastCandidateCount\)/);
   assert.match(appSource, /function mergeResults\(query, preparedEntries = null\)/);
@@ -366,6 +369,11 @@ function validateModernInterface() {
   assert.match(appSource, /const cachedDictionary = state\.dictionaryCache\.get\(cacheKey\)/);
   assert.match(appSource, /state\.dictionaryCache\.set\(cacheKey,/);
   assert.match(appSource, /state\.titleBuckets = cachedDictionary\.titleBuckets/);
+  assert.match(appSource, /titlePrefixBuckets: new Map\(\)/);
+  assert.match(appSource, /exactTitleKeys: new Set\(\)/);
+  assert.match(appSource, /russianTitleKeys: new Set\(\)/);
+  assert.match(appSource, /const usePrefixIndex = hasReliableAnchor/);
+  assert.match(appSource, /indexedEntriesForQuery\(qLoose, malayBaseCandidates, qRuKey\)/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }

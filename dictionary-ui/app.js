@@ -73,6 +73,9 @@ const state = {
   includeServiceEntries: false,
   missingQueries: [],
   titleBuckets: new Map(),
+  titlePrefixBuckets: new Map(),
+  exactTitleKeys: new Set(),
+  russianTitleKeys: new Set(),
   lastCandidateCount: 0,
   dictionaryCache: new Map(),
   lastLoadFromCache: false,
@@ -864,6 +867,9 @@ async function loadBundledDictionary() {
   if (cachedDictionary) {
     state.entries = cachedDictionary.entries;
     state.titleBuckets = cachedDictionary.titleBuckets;
+    state.titlePrefixBuckets = cachedDictionary.titlePrefixBuckets;
+    state.exactTitleKeys = cachedDictionary.exactTitleKeys;
+    state.russianTitleKeys = cachedDictionary.russianTitleKeys;
     state.curatedOnly = cachedDictionary.curatedOnly;
     state.searchMode = cachedDictionary.searchMode;
     state.lastLoadFromCache = true;
@@ -950,6 +956,9 @@ async function loadBundledDictionary() {
   state.dictionaryCache.set(cacheKey, {
     entries: state.entries,
     titleBuckets: state.titleBuckets,
+    titlePrefixBuckets: state.titlePrefixBuckets,
+    exactTitleKeys: state.exactTitleKeys,
+    russianTitleKeys: state.russianTitleKeys,
     curatedOnly: state.curatedOnly,
     searchMode: state.searchMode,
   });
@@ -958,24 +967,44 @@ async function loadBundledDictionary() {
 
 function hydrateEntries(entries) {
   state.titleBuckets = new Map();
+  state.titlePrefixBuckets = new Map();
+  state.exactTitleKeys = new Set();
+  state.russianTitleKeys = new Set();
   entries.forEach((entry) => {
     entry._normTitle = normalizeText(entry.title);
     entry._normBody = normalizeText(entry.body);
     entry._grams = buildBigrams(entry._normTitle);
-    const firstCharacter = normalizeHeadwordLoose(entry.title).charAt(0);
+    const looseTitle = normalizeHeadwordLoose(entry.title);
+    const firstCharacter = looseTitle.charAt(0);
+    const titlePrefix = looseTitle.slice(0, 2);
     if (firstCharacter) {
       if (!state.titleBuckets.has(firstCharacter)) state.titleBuckets.set(firstCharacter, []);
       state.titleBuckets.get(firstCharacter).push(entry);
     }
+    if (titlePrefix.length === 2) {
+      if (!state.titlePrefixBuckets.has(titlePrefix)) state.titlePrefixBuckets.set(titlePrefix, []);
+      state.titlePrefixBuckets.get(titlePrefix).push(entry);
+    }
+    if (looseTitle) state.exactTitleKeys.add(looseTitle);
+    const russianKey = normalizeRussianSearchKey(looseTitle);
+    if (russianKey) state.russianTitleKeys.add(russianKey);
   });
 }
 
-function indexedEntriesForQuery(queryLoose, malayBaseCandidates = []) {
-  const initials = new Set([queryLoose, ...malayBaseCandidates].map((value) => value.charAt(0)));
+function indexedEntriesForQuery(queryLoose, malayBaseCandidates = [], russianKey = "") {
+  const searchForms = [...new Set([queryLoose, ...malayBaseCandidates].filter(Boolean))];
+  const hasReliableAnchor =
+    searchForms.some((value) => state.exactTitleKeys.has(value)) ||
+    Boolean(russianKey && state.russianTitleKeys.has(russianKey));
+  const usePrefixIndex = hasReliableAnchor && searchForms.some((value) => value.length >= 2);
+  const bucketMap = usePrefixIndex ? state.titlePrefixBuckets : state.titleBuckets;
+  const bucketKeys = new Set(
+    searchForms.map((value) => (usePrefixIndex && value.length >= 2 ? value.slice(0, 2) : value.charAt(0)))
+  );
   const candidates = [];
   const seen = new Set();
-  for (const initial of initials) {
-    for (const entry of state.titleBuckets.get(initial) || []) {
+  for (const bucketKey of bucketKeys) {
+    for (const entry of bucketMap.get(bucketKey) || []) {
       if (seen.has(entry.id)) continue;
       seen.add(entry.id);
       candidates.push(entry);
@@ -1083,7 +1112,7 @@ function searchEntries(query) {
   const qRuKey = normalizeRussianSearchKey(qLoose);
   const qGrams = buildBigrams(q);
   const malayBaseCandidates = state.direction === "ms-ru" ? generateMalayBaseCandidates(qLoose) : [];
-  const indexedEntries = indexedEntriesForQuery(qLoose, malayBaseCandidates);
+  const indexedEntries = indexedEntriesForQuery(qLoose, malayBaseCandidates, qRuKey);
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
   const queryWords = q.split(/\s+/).filter(Boolean);
   const isSingleWordQuery = queryWords.length === 1;
