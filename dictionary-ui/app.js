@@ -1293,8 +1293,8 @@ function searchFulltext(query) {
     .map((item) => ({ ...item.row, _rank: item.score }));
 }
 
-function mergeResults(query) {
-  const groupedEntries = groupEntryResults(searchEntries(query), query);
+function mergeResults(query, preparedEntries = null) {
+  const groupedEntries = preparedEntries || groupEntryResults(searchEntries(query), query);
 
   if (state.searchMode === "entries") {
     return groupedEntries;
@@ -1312,7 +1312,7 @@ function mergeResults(query) {
   return [...groupedEntries.slice(0, 180), ...fulltext.slice(0, 120)].slice(0, MAX_RESULTS);
 }
 
-function computeBestAnswer(query) {
+function computeBestAnswer(query, preparedEntries = null) {
   if (!query) {
     return null;
   }
@@ -1322,7 +1322,7 @@ function computeBestAnswer(query) {
   const qStem = normalizeRussianStem(qLoose);
   const qRuKey = normalizeRussianSearchKey(qLoose);
   const qWords = qNorm.split(/\s+/).filter(Boolean);
-  const groupedEntries = groupEntryResults(searchEntries(query), query);
+  const groupedEntries = preparedEntries || groupEntryResults(searchEntries(query), query);
 
   if (groupedEntries.length) {
     if (qWords.length === 1) {
@@ -1532,8 +1532,9 @@ function renderSuggestions(query) {
 function runSearch() {
   const query = ui.searchInput.value.trim();
   state.activeQuery = query;
-  state.bestAnswer = computeBestAnswer(query);
-  state.results = query.length >= 2 ? mergeResults(query) : [];
+  const groupedEntries = query ? groupEntryResults(searchEntries(query), query) : [];
+  state.bestAnswer = computeBestAnswer(query, groupedEntries);
+  state.results = query.length >= 2 ? mergeResults(query, groupedEntries) : [];
   ui.resultList.dataset.candidateCount = String(state.lastCandidateCount);
 
   if (query) {

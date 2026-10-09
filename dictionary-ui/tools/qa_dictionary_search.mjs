@@ -354,6 +354,14 @@ function validateModernInterface() {
   assert.match(appSource, /function indexedEntriesForQuery\(queryLoose, malayBaseCandidates = \[\]\)/);
   assert.match(appSource, /return indexedEntries/);
   assert.match(appSource, /dataset\.candidateCount = String\(state\.lastCandidateCount\)/);
+  assert.match(appSource, /function mergeResults\(query, preparedEntries = null\)/);
+  assert.match(appSource, /function computeBestAnswer\(query, preparedEntries = null\)/);
+  assert.match(
+    appSource,
+    /const groupedEntries = query \? groupEntryResults\(searchEntries\(query\), query\) : \[\]/
+  );
+  assert.match(appSource, /computeBestAnswer\(query, groupedEntries\)/);
+  assert.match(appSource, /mergeResults\(query, groupedEntries\)/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
