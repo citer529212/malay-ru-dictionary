@@ -19,6 +19,10 @@ const projectDir = path.resolve(toolDir, "..");
 const dataDir = path.join(projectDir, "data");
 const FREQUENCY_BASELINE_SHA256 =
   "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
+const RU_MS_FREQUENCY_500_SHA256 =
+  "6a8d6692ff4a571236761a3f75dea7fbc90ee4af7bdb6285421b4f3f68f9a69b";
+const MS_RU_FREQUENCY_500_SHA256 =
+  "a83182a0c1ce9c0f1621ab27352f37f7726570120803245085c21296e691c33a";
 
 const fixtures = [
   ["золотой", /emas/i],
@@ -268,19 +272,40 @@ function validateMalayMorphology(msRuTitles) {
 }
 
 function validateBidirectionalFrequencyCoverage(goldEntries, msRuEntries) {
-  const ruMs = goldEntries.slice(0, 50);
-  const msRu = msRuEntries.slice(0, 50);
-  assert.equal(ruMs.length, 50, "RU-MS frequency set must contain 50 entries");
-  assert.equal(msRu.length, 50, "MS-RU frequency set must contain 50 entries");
+  const ruMs = goldEntries.slice(0, 500);
+  const msRu = msRuEntries.slice(0, 500);
+  assert.equal(ruMs.length, 500, "RU-MS frequency set must contain 500 entries");
+  assert.equal(msRu.length, 500, "MS-RU frequency set must contain 500 entries");
+
+  const validateUniqueTitles = (entries, direction) => {
+    const titles = entries.map((entry) => normalize(entry.title));
+    assert.equal(new Set(titles).size, entries.length, `${direction} frequency set has duplicate titles`);
+  };
+  validateUniqueTitles(ruMs, "RU-MS");
+  validateUniqueTitles(msRu, "MS-RU");
 
   for (const entry of ruMs) {
     assert.match(entry.title, /[а-яё]/i, `RU-MS frequency headword is not Russian: ${entry.title}`);
     assert.match(entry.body, /[a-z]/i, `RU-MS frequency translation is missing: ${entry.title}`);
+    assert.doesNotMatch(entry.body, /[{}[\]<>_|^]|\b(?:nan|undefined|null)\b/i);
   }
   for (const entry of msRu) {
     assert.match(entry.title, /^[a-z][a-z .'-]*$/i, `MS-RU frequency headword is invalid: ${entry.title}`);
     assert.match(entry.body, /[а-яё]/i, `MS-RU frequency translation is missing: ${entry.title}`);
+    assert.doesNotMatch(entry.body, /[{}[\]<>_|^]|\b(?:nan|undefined|null)\b/i);
   }
+}
+
+function validateExpandedFrequencyBaselines(ruMsEntries, msRuEntries) {
+  const digest = (entries) => {
+    const canonical = entries
+      .slice(0, 500)
+      .map((entry) => `${normalize(entry.title)}|${String(entry.body).trim().toLowerCase()}`)
+      .join("\n");
+    return crypto.createHash("sha256").update(canonical).digest("hex");
+  };
+  assert.equal(digest(ruMsEntries), RU_MS_FREQUENCY_500_SHA256, "RU-MS top-500 baseline changed");
+  assert.equal(digest(msRuEntries), MS_RU_FREQUENCY_500_SHA256, "MS-RU top-500 baseline changed");
 }
 
 function validateMalayGold(entries) {
@@ -395,6 +420,7 @@ const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specialize
 validateSpecializedReverse(specializedRuMs, specializedReversePayload);
 validateMalayMorphology(new Set([...msRuGold, ...curatedMsRu].map((entry) => normalize(entry.title))));
 validateBidirectionalFrequencyCoverage(gold, curatedMsRu);
+validateExpandedFrequencyBaselines(gold, curatedMsRu);
 validateDirectionDetection();
 validateFrequencyBaseline(gold);
 validateModernInterface();
@@ -411,9 +437,9 @@ console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
 console.log(`Specialized reverse relations: ${specializedReversePayload.relation_count}`);
-console.log("Bidirectional frequency checks: 50 RU-MS + 50 MS-RU");
+console.log("Bidirectional frequency checks: 500 RU-MS + 500 MS-RU");
 console.log("Automatic direction checks: 7");
-console.log("Protected frequency baseline: 100 entries");
+console.log("Protected frequency baseline: 1000 entries");
 console.log("Modern no-upload interface checks: passed");
 console.log("Local missing-query export checks: passed");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);
