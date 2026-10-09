@@ -58,6 +58,28 @@ const fixtures = [
   ["санкции", /sekatan/i],
   ["военнопленный", /tawanan perang/i],
   ["кибератака", /serangan siber/i],
+  ["скачать", /^muat turun$/i],
+  ["пользователь", /^pengguna$/i],
+  ["сервер", /^pelayan$/i],
+  ["видеозвонок", /^panggilan video$/i],
+  ["искусственный интеллект", /^kecerdasan buatan$/i],
+  ["нейронная сеть", /^rangkaian neural$/i],
+  ["программное обеспечение", /^perisian$/i],
+  ["спутник", /^satelit$/i],
+  ["QR-код", /^kod QR$/i],
+  ["видеоконференция", /^persidangan video$/i],
+  ["киберугроза", /^ancaman siber$/i],
+  ["вредоносная программа", /^perisian hasad$/i],
+  ["электромобиль", /^kereta elektrik$/i],
+  ["зарядная станция", /^stesen pengecasan$/i],
+  ["онлайн-платеж", /^pembayaran dalam talian$/i],
+  ["стриминг", /^penstriman$/i],
+  ["контент", /^kandungan$/i],
+  ["обновить", /^kemas kini$/i],
+  ["обновление", /^kemas kini$/i],
+  ["поисковая система", /^enjin carian$/i],
+  ["веб-страница", /^halaman web$/i],
+  ["фишинг", /^pancingan data$/i],
 ];
 
 function readJson(name) {
@@ -373,7 +395,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-3"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-9"/);
   assert.match(appSource, /cache: "force-cache"/);
   assert.match(appSource, /titleBuckets: new Map\(\)/);
   assert.match(
