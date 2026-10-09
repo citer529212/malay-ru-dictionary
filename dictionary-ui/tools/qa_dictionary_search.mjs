@@ -339,6 +339,18 @@ function validateMalayGold(entries) {
     ["berjalan", /идти|ходить/i], ["pekerjaan", /работа/i], ["menyapu", /подметать/i],
     ["memakai", /использовать|носить/i], ["rumah-rumah", /дома/i],
     ["dibacakan", /прочитанным/i],
+    ["muat turun", /скачать/i], ["pengguna", /^пользователь$/i],
+    ["pelayan", /сервер/i], ["panggilan video", /^видеозвонок$/i],
+    ["kecerdasan buatan", /^искусственный интеллект$/i],
+    ["rangkaian neural", /^нейронная сеть$/i], ["perisian", /^программное обеспечение$/i],
+    ["satelit", /^спутник$/i], ["kod qr", /^qr-код$/i],
+    ["persidangan video", /^видеоконференция$/i], ["ancaman siber", /^киберугроза$/i],
+    ["perisian hasad", /^вредоносная программа$/i], ["kereta elektrik", /^электромобиль$/i],
+    ["stesen pengecasan", /^зарядная станция$/i],
+    ["pembayaran dalam talian", /^онлайн-платёж$/i], ["penstriman", /стриминг/i],
+    ["kandungan", /контент/i], ["kemas kini", /обновление/i],
+    ["enjin carian", /^поисковая система$/i], ["halaman web", /^веб-страница$/i],
+    ["pancingan data", /фишинг/i],
   ]);
   assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
   for (const entry of entries) {
@@ -395,7 +407,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-9"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-10"/);
   assert.match(appSource, /cache: "force-cache"/);
   assert.match(appSource, /titleBuckets: new Map\(\)/);
   assert.match(
@@ -450,6 +462,7 @@ const protectedConflicts = validateNoCuratedOverride(goldByTitle, curatedRuMs);
 
 console.log("Dictionary QA passed");
 console.log(`Gold RU-MS entries: ${gold.length}`);
+console.log(`Gold MS-RU entries: ${msRuGold.length}`);
 console.log(`Curated RU-MS entries: ${curatedRuMs.length}`);
 console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);

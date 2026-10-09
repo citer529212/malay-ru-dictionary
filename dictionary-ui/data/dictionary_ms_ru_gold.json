@@ -18,6 +18,27 @@
     { "id": "ms-gold-menyapu", "title": "menyapu", "body": "подметать", "page": 1, "verified": true },
     { "id": "ms-gold-memakai", "title": "memakai", "body": "использовать; носить", "page": 1, "verified": true },
     { "id": "ms-gold-rumah-rumah", "title": "rumah-rumah", "body": "дома; несколько домов", "page": 1, "verified": true },
-    { "id": "ms-gold-dibacakan", "title": "dibacakan", "body": "быть прочитанным вслух", "page": 1, "verified": true }
+    { "id": "ms-gold-dibacakan", "title": "dibacakan", "body": "быть прочитанным вслух", "page": 1, "verified": true },
+    { "id": "ms-gold-muat-turun", "title": "muat turun", "body": "скачать; загрузить из сети", "page": 0, "verified": true },
+    { "id": "ms-gold-pengguna", "title": "pengguna", "body": "пользователь", "page": 0, "verified": true },
+    { "id": "ms-gold-pelayan", "title": "pelayan", "body": "сервер; обслуживающее устройство", "page": 0, "verified": true },
+    { "id": "ms-gold-panggilan-video", "title": "panggilan video", "body": "видеозвонок", "page": 0, "verified": true },
+    { "id": "ms-gold-kecerdasan-buatan", "title": "kecerdasan buatan", "body": "искусственный интеллект", "page": 0, "verified": true },
+    { "id": "ms-gold-rangkaian-neural", "title": "rangkaian neural", "body": "нейронная сеть", "page": 0, "verified": true },
+    { "id": "ms-gold-perisian", "title": "perisian", "body": "программное обеспечение", "page": 0, "verified": true },
+    { "id": "ms-gold-satelit", "title": "satelit", "body": "спутник", "page": 0, "verified": true },
+    { "id": "ms-gold-kod-qr", "title": "kod QR", "body": "QR-код", "page": 0, "verified": true },
+    { "id": "ms-gold-persidangan-video", "title": "persidangan video", "body": "видеоконференция", "page": 0, "verified": true },
+    { "id": "ms-gold-ancaman-siber", "title": "ancaman siber", "body": "киберугроза", "page": 0, "verified": true },
+    { "id": "ms-gold-perisian-hasad", "title": "perisian hasad", "body": "вредоносная программа", "page": 0, "verified": true },
+    { "id": "ms-gold-kereta-elektrik", "title": "kereta elektrik", "body": "электромобиль", "page": 0, "verified": true },
+    { "id": "ms-gold-stesen-pengecasan", "title": "stesen pengecasan", "body": "зарядная станция", "page": 0, "verified": true },
+    { "id": "ms-gold-pembayaran-dalam-talian", "title": "pembayaran dalam talian", "body": "онлайн-платёж", "page": 0, "verified": true },
+    { "id": "ms-gold-penstriman", "title": "penstriman", "body": "стриминг; потоковая передача", "page": 0, "verified": true },
+    { "id": "ms-gold-kandungan", "title": "kandungan", "body": "содержание; контент", "page": 0, "verified": true },
+    { "id": "ms-gold-kemas-kini", "title": "kemas kini", "body": "обновление; обновить", "page": 0, "verified": true },
+    { "id": "ms-gold-enjin-carian", "title": "enjin carian", "body": "поисковая система", "page": 0, "verified": true },
+    { "id": "ms-gold-halaman-web", "title": "halaman web", "body": "веб-страница", "page": 0, "verified": true },
+    { "id": "ms-gold-pancingan-data", "title": "pancingan data", "body": "фишинг; кража данных обманом", "page": 0, "verified": true }
   ]
 }
