@@ -72,6 +72,8 @@ const state = {
   direction: "ms-ru",
   includeServiceEntries: false,
   missingQueries: [],
+  titleBuckets: new Map(),
+  lastCandidateCount: 0,
 };
 
 function loadMissingQueries() {
@@ -935,11 +937,32 @@ async function loadBundledDictionary() {
 }
 
 function hydrateEntries(entries) {
+  state.titleBuckets = new Map();
   entries.forEach((entry) => {
     entry._normTitle = normalizeText(entry.title);
     entry._normBody = normalizeText(entry.body);
     entry._grams = buildBigrams(entry._normTitle);
+    const firstCharacter = normalizeHeadwordLoose(entry.title).charAt(0);
+    if (firstCharacter) {
+      if (!state.titleBuckets.has(firstCharacter)) state.titleBuckets.set(firstCharacter, []);
+      state.titleBuckets.get(firstCharacter).push(entry);
+    }
   });
+}
+
+function indexedEntriesForQuery(queryLoose, malayBaseCandidates = []) {
+  const initials = new Set([queryLoose, ...malayBaseCandidates].map((value) => value.charAt(0)));
+  const candidates = [];
+  const seen = new Set();
+  for (const initial of initials) {
+    for (const entry of state.titleBuckets.get(initial) || []) {
+      if (seen.has(entry.id)) continue;
+      seen.add(entry.id);
+      candidates.push(entry);
+    }
+  }
+  state.lastCandidateCount = candidates.length;
+  return candidates;
 }
 
 function rankMatch(haystack, query) {
@@ -1040,11 +1063,12 @@ function searchEntries(query) {
   const qRuKey = normalizeRussianSearchKey(qLoose);
   const qGrams = buildBigrams(q);
   const malayBaseCandidates = state.direction === "ms-ru" ? generateMalayBaseCandidates(qLoose) : [];
+  const indexedEntries = indexedEntriesForQuery(qLoose, malayBaseCandidates);
   const queryPattern = new RegExp(`\\b${escapeRegExp(q)}\\b`);
   const queryWords = q.split(/\s+/).filter(Boolean);
   const isSingleWordQuery = queryWords.length === 1;
 
-  return state.entries
+  return indexedEntries
     .map((entry) => {
       const title = entry._normTitle;
       const titleLoose = normalizeHeadwordLoose(entry.title);
@@ -1510,6 +1534,7 @@ function runSearch() {
   state.activeQuery = query;
   state.bestAnswer = computeBestAnswer(query);
   state.results = query.length >= 2 ? mergeResults(query) : [];
+  ui.resultList.dataset.candidateCount = String(state.lastCandidateCount);
 
   if (query) {
     pushHistory(query);

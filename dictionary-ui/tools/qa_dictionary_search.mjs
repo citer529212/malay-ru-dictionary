@@ -350,6 +350,10 @@ function validateModernInterface() {
   );
   assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-3"/);
   assert.match(appSource, /cache: "force-cache"/);
+  assert.match(appSource, /titleBuckets: new Map\(\)/);
+  assert.match(appSource, /function indexedEntriesForQuery\(queryLoose, malayBaseCandidates = \[\]\)/);
+  assert.match(appSource, /return indexedEntries/);
+  assert.match(appSource, /dataset\.candidateCount = String\(state\.lastCandidateCount\)/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
