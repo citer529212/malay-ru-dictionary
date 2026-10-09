@@ -43,7 +43,7 @@ const GOLD_DICTIONARY_URLS = {
 };
 const SPECIALIZED_DICTIONARY_URLS = {
   "ms-ru": "./data/dictionary_ms_ru_specialized.json",
-  "ru-ms": "",
+  "ru-ms": "./data/dictionary_ru_ms_specialized_reverse.json",
 };
 const SERVICE_DICTIONARY_URLS = {
   "ms-ru": "",
@@ -56,6 +56,7 @@ const BUNDLED_DICTIONARY_URLS = {
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
+const DICTIONARY_DATA_VERSION = "2026-10-09-v6-3";
 
 const state = {
   entries: [],
@@ -683,7 +684,10 @@ function normalizeIncomingEntry(entry, fallbackId, options = {}) {
 
 async function fetchDictionaryEntries(url, options = {}) {
   try {
-    const response = await fetch(url, { cache: "no-store" });
+    const separator = url.includes("?") ? "&" : "?";
+    const response = await fetch(`${url}${separator}v=${DICTIONARY_DATA_VERSION}`, {
+      cache: "force-cache",
+    });
     if (!response.ok) {
       return [];
     }
@@ -800,6 +804,19 @@ function isRuMsGoldEntryQuality(entry) {
   return true;
 }
 
+function isRuMsSpecializedEntryQuality(entry) {
+  const title = normalizeRuTitleOcr(entry.title || "").toLowerCase();
+  const body = cleanupLine(entry.body || "");
+  return (
+    title.length >= 2 &&
+    title.length <= 140 &&
+    /^[а-яё][а-яё\- ().,/]+$/i.test(title) &&
+    /[a-z]{2,}/i.test(body) &&
+    body.length <= 1200 &&
+    !/[{}[\]<>^|]/.test(body)
+  );
+}
+
 function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
   const result = [];
   const seen = new Set();
@@ -880,11 +897,13 @@ async function loadBundledDictionary() {
         title: normalizeRuTitleOcr(entry.title),
       }));
     goldEntries = normalizeRuEntries(goldEntries);
+    specializedEntries = normalizeRuEntries(specializedEntries);
     curatedEntries = normalizeRuEntries(curatedEntries);
     serviceEntries = normalizeRuEntries(serviceEntries);
     bundledEntries = normalizeRuEntries(bundledEntries);
 
     goldEntries = goldEntries.filter(isRuMsGoldEntryQuality);
+    specializedEntries = specializedEntries.filter(isRuMsSpecializedEntryQuality);
     curatedEntries = curatedEntries.filter(isRuMsEntryQuality);
     serviceEntries = serviceEntries.filter(isRuMsEntryQuality);
     bundledEntries = bundledEntries.filter(isRuMsEntryQuality);
@@ -985,13 +1004,18 @@ function isGoldEntry(entry) {
 }
 
 function isTrustedEntry(entry) {
-  return isGoldEntry(entry) || Boolean(entry?.trusted) || String(entry?.id || "").startsWith("ms-source-docx-");
+  return (
+    isGoldEntry(entry) ||
+    Boolean(entry?.trusted) ||
+    /^(ms-source-docx-|ru-source-reverse-)/.test(String(entry?.id || ""))
+  );
 }
 
 function isBestAnswerQuality(entry) {
   if (entry?._gold || isGoldEntry(entry)) return true;
   const body = String(entry?.body || "").trim();
-  if (body.length < 2 || body.length > 260 || /[{}[\]<>_|^]/.test(body)) return false;
+  const maxBodyLength = entry?._trusted || isTrustedEntry(entry) ? 1200 : 260;
+  if (body.length < 2 || body.length > maxBodyLength || /[{}[\]<>_|^]/.test(body)) return false;
 
   const expectedLetters = state.direction === "ms-ru" ? /[а-яё]/gi : /[a-z]/gi;
   if ((body.match(expectedLetters) || []).length < 3) return false;
@@ -1167,11 +1191,24 @@ function groupEntryResults(rows, query = "") {
     }
 
     const current = groups.get(key);
-    if (isTrustedEntry(row) && !current._trusted) {
+    if (isGoldEntry(row) && !current._gold) {
+      current.body = row.body;
+      current.page = row.page;
+      current._gold = true;
+      current._trusted = true;
+    } else if (isTrustedEntry(row) && !current._trusted) {
       current.body = row.body;
       current.page = row.page;
       current._gold = isGoldEntry(row);
       current._trusted = true;
+    } else if (
+      current._trusted &&
+      !current._gold &&
+      isTrustedEntry(row) &&
+      !current.body.includes(row.body) &&
+      current.body.length < 900
+    ) {
+      current.body = `${current.body}; ${row.body}`.slice(0, 1200);
     } else if (!current._trusted && !current.body.includes(row.body) && current.body.length < 280) {
       current.body = `${current.body}; ${row.body}`.slice(0, 340);
     }

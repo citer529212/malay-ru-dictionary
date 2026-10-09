@@ -132,18 +132,19 @@ function validateNoCuratedOverride(goldByTitle, curatedEntries) {
 function validateSpecializedDocx(entries, payload) {
   assert.equal(payload.direction, "ms-ru", "Specialized DOCX has wrong direction");
   assert.equal(payload.entry_count, 4683, "Specialized DOCX metadata count changed");
+  assert.equal(payload.unique_title_count, 4681, "Specialized title count changed");
+  assert.equal(payload.corrected_source_rows, 12, "Specialized correction count changed");
   assert.equal(entries.length, 4683, "Specialized DOCX import is incomplete");
 
   const ids = new Set();
-  const titles = new Set();
+  const titleCounts = new Map();
   for (const entry of entries) {
     assert.ok(entry.id.startsWith("ms-source-docx-"), `Wrong specialized id: ${entry.id}`);
     assert.ok(!ids.has(entry.id), `Duplicate specialized id: ${entry.id}`);
     ids.add(entry.id);
     const title = normalize(entry.title);
     assert.ok(title && entry.body.trim(), `Empty specialized row: ${entry.id}`);
-    assert.ok(!titles.has(title), `Duplicate specialized title: ${entry.title}`);
-    titles.add(title);
+    titleCounts.set(title, (titleCounts.get(title) || 0) + 1);
     assert.equal(entry.source, "malaysian-russian-ready-docx", `Wrong source: ${entry.title}`);
   }
 
@@ -163,11 +164,52 @@ function validateSpecializedDocx(entries, payload) {
     assert.match(byTitle.get(title).body, expected, `Wrong specialized translation: ${title}`);
   }
 
+  const duplicateTitles = [...titleCounts].filter(([, count]) => count > 1);
+  assert.deepEqual(
+    duplicateTitles.map(([title]) => title).sort(),
+    ["pengawalan", "pertahanan"],
+    "Unexpected specialized duplicate titles"
+  );
+
   const sourceAnomalies = entries.filter(
     (entry) => /[а-яё]/i.test(entry.title) || !/[а-яё]/i.test(entry.body)
   );
-  assert.equal(sourceAnomalies.length, 5, "Review the known source anomalies");
+  assert.equal(sourceAnomalies.length, 0, "Corrected source anomalies returned");
   return sourceAnomalies.length;
+}
+
+function validateSpecializedReverse(entries, payload) {
+  assert.equal(payload.direction, "ru-ms", "Specialized reverse index has wrong direction");
+  assert.equal(payload.entry_count, 5582, "Specialized reverse entry count changed");
+  assert.equal(payload.relation_count, 6105, "Specialized reverse relation count changed");
+  assert.equal(entries.length, payload.entry_count, "Specialized reverse index is incomplete");
+
+  const titles = new Set();
+  const byTitle = new Map();
+  for (const entry of entries) {
+    const title = normalize(entry.title);
+    assert.ok(!titles.has(title), `Duplicate reverse title: ${entry.title}`);
+    titles.add(title);
+    assert.match(title, /[а-яё]/i, `Reverse title is not Russian: ${entry.title}`);
+    assert.match(entry.body, /[a-z]/i, `Reverse translation is missing: ${entry.title}`);
+    assert.equal(entry.source, "reverse-index-from-malaysian-russian-ready-docx");
+    byTitle.set(title, entry.body);
+  }
+
+  const samples = [
+    ["прекращение огня", /gencatan senjata/i],
+    ["беспилотник", /pesawat tanpa pemandu.*UAV/i],
+    ["авианосец", /kapal induk pesawat udara/i],
+    ["запретная зона для полетов", /zon larangan terbang/i],
+    ["спецслужба", /agensi perisikan/i],
+    ["огневая мощь оружия", /daya tembak senjata/i],
+    ["динамика боя", /dinamik pertempuran/i],
+    ["охрана", /pengawal.*pengawalan/i],
+  ];
+  for (const [title, expected] of samples) {
+    assert.ok(byTitle.has(title), `Missing reverse term: ${title}`);
+    assert.match(byTitle.get(title), expected, `Wrong reverse translation: ${title}`);
+  }
 }
 
 function validateRussianQueryNormalization() {
@@ -292,6 +334,7 @@ function validateModernInterface() {
   assert.match(html, /Русско-малайзийский словарь/);
   assert.match(html, /Дополнительная специализированная база/);
   assert.match(html, /4 683 статьи/);
+  assert.match(html, /5 582 обратных заголовка/);
   assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
   assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
   assert.match(appSource, /function renderSuggestions\(query\)/);
@@ -305,6 +348,8 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-3"/);
+  assert.match(appSource, /cache: "force-cache"/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
@@ -313,6 +358,8 @@ const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
 const specializedPayload = readJson("dictionary_ms_ru_specialized.json");
 const specializedMsRu = specializedPayload.entries;
+const specializedReversePayload = readJson("dictionary_ru_ms_specialized_reverse.json");
+const specializedRuMs = specializedReversePayload.entries;
 const curatedRuMs = readJson("dictionary_ru_ms_curated.json").entries;
 const curatedMsRu = readJson("dictionary_curated.json").entries;
 const goldByTitle = validateGold(gold);
@@ -321,6 +368,7 @@ validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
 const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
+validateSpecializedReverse(specializedRuMs, specializedReversePayload);
 validateMalayMorphology(new Set([...msRuGold, ...curatedMsRu].map((entry) => normalize(entry.title))));
 validateBidirectionalFrequencyCoverage(gold, curatedMsRu);
 validateDirectionDetection();
@@ -336,7 +384,9 @@ console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
-console.log(`Preserved source anomalies: ${specializedAnomalies}`);
+console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
+console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
+console.log(`Specialized reverse relations: ${specializedReversePayload.relation_count}`);
 console.log("Bidirectional frequency checks: 50 RU-MS + 50 MS-RU");
 console.log("Automatic direction checks: 7");
 console.log("Protected frequency baseline: 100 entries");

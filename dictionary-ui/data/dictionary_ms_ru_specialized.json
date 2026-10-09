@@ -3,6 +3,8 @@
   "direction": "ms-ru",
   "source": "малайзийско_русский_словарь_готовый.docx",
   "entry_count": 4683,
+  "unique_title_count": 4681,
+  "corrected_source_rows": 12,
   "entries": [
     {
       "id": "ms-source-docx-01-0001",
@@ -4799,7 +4801,7 @@
     {
       "id": "ms-source-docx-04-0022",
       "title": "daya tembak senjata",
-      "body": "укрепленный район",
+      "body": "огневая мощь оружия",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -4807,7 +4809,7 @@
     {
       "id": "ms-source-docx-04-0023",
       "title": "daya tujah, tujahan",
-      "body": "штатное расписание",
+      "body": "тяга; сила тяги",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -4950,8 +4952,8 @@
     },
     {
       "id": "ms-source-docx-04-0041",
-      "title": "didiplin ketat",
-      "body": "железная дисциплина",
+      "title": "disiplin ketat",
+      "body": "строгая дисциплина",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -4991,7 +4993,7 @@
     {
       "id": "ms-source-docx-04-0046",
       "title": "dinamik pertempuran",
-      "body": "диоптр",
+      "body": "динамика боя",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -13863,7 +13865,7 @@
     {
       "id": "ms-source-docx-12-0027",
       "title": "langkah-langkah yang sewajarnya",
-      "body": "langkah-langkah yang sewajarnya",
+      "body": "надлежащие меры",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -20358,8 +20360,8 @@
     },
     {
       "id": "ms-source-docx-16-0242",
-      "title": "pelitup muka мед.",
-      "body": "маска",
+      "title": "pelitup muka",
+      "body": "маска (мед.)",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -23254,8 +23256,8 @@
     },
     {
       "id": "ms-source-docx-16-0604",
-      "title": "pengawalan ( действие )",
-      "body": "охрана",
+      "title": "pengawalan",
+      "body": "охрана (действие)",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -27806,8 +27808,8 @@
     },
     {
       "id": "ms-source-docx-16-1173",
-      "title": "pertahanan ( оборона )",
-      "body": "защита",
+      "title": "pertahanan",
+      "body": "защита; оборона",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -28750,8 +28752,8 @@
     },
     {
       "id": "ms-source-docx-16-1291",
-      "title": "pimpinan; kawalan ( контроль )",
-      "body": "руководство, ( контроль )",
+      "title": "pimpinan; kawalan",
+      "body": "руководство; контроль",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -37159,7 +37161,7 @@
     {
       "id": "ms-source-docx-24-0003",
       "title": "zat beracun perengsa",
-      "body": "ее вещество раздражающего действия",
+      "body": "отравляющее вещество раздражающего действия",
       "page": 0,
       "verified": true,
       "source": "malaysian-russian-ready-docx"
@@ -37294,7 +37296,7 @@
     },
     {
       "id": "ms-source-docx-24-0020",
-      "title": "zon larangam",
+      "title": "zon larangan",
       "body": "запретная зона",
       "page": 0,
       "verified": true,
