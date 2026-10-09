@@ -74,6 +74,8 @@ const state = {
   missingQueries: [],
   titleBuckets: new Map(),
   lastCandidateCount: 0,
+  dictionaryCache: new Map(),
+  lastLoadFromCache: false,
 };
 
 function loadMissingQueries() {
@@ -857,6 +859,18 @@ function combineEntriesToTarget(curatedEntries, bundledEntries, targetCount) {
 }
 
 async function loadBundledDictionary() {
+  const cacheKey = `${state.direction}:${state.includeServiceEntries ? "service" : "standard"}`;
+  const cachedDictionary = state.dictionaryCache.get(cacheKey);
+  if (cachedDictionary) {
+    state.entries = cachedDictionary.entries;
+    state.titleBuckets = cachedDictionary.titleBuckets;
+    state.curatedOnly = cachedDictionary.curatedOnly;
+    state.searchMode = cachedDictionary.searchMode;
+    state.lastLoadFromCache = true;
+    return state.entries.length > 0;
+  }
+
+  state.lastLoadFromCache = false;
   let goldEntries = [];
   if (GOLD_DICTIONARY_URLS[state.direction]) {
     goldEntries = await fetchDictionaryEntries(GOLD_DICTIONARY_URLS[state.direction], {
@@ -933,6 +947,12 @@ async function loadBundledDictionary() {
 
   state.entries = deduplicateEntries(finalEntries);
   hydrateEntries(state.entries);
+  state.dictionaryCache.set(cacheKey, {
+    entries: state.entries,
+    titleBuckets: state.titleBuckets,
+    curatedOnly: state.curatedOnly,
+    searchMode: state.searchMode,
+  });
   return state.entries.length > 0;
 }
 

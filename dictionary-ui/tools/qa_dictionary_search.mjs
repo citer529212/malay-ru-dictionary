@@ -362,6 +362,10 @@ function validateModernInterface() {
   );
   assert.match(appSource, /computeBestAnswer\(query, groupedEntries\)/);
   assert.match(appSource, /mergeResults\(query, groupedEntries\)/);
+  assert.match(appSource, /dictionaryCache: new Map\(\)/);
+  assert.match(appSource, /const cachedDictionary = state\.dictionaryCache\.get\(cacheKey\)/);
+  assert.match(appSource, /state\.dictionaryCache\.set\(cacheKey,/);
+  assert.match(appSource, /state\.titleBuckets = cachedDictionary\.titleBuckets/);
   assert.doesNotMatch(appSource, /navigator\.sendBeacon|fetch\([^)]*missing/i);
   assert.match(html, /saveMissingButton/);
 }
