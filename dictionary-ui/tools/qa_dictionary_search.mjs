@@ -20,7 +20,7 @@ const dataDir = path.join(projectDir, "data");
 const FREQUENCY_BASELINE_SHA256 =
   "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
 const RU_MS_FREQUENCY_500_SHA256 =
-  "c0efd4a36c7f050d6d4e5271fbf539624bede0932ad4b781abbb317588f3fc1b";
+  "e3aecaee91e8961cb7f74816bce2feccc82aec16d044994a94cc7f001f5cbbdf";
 const MS_RU_FREQUENCY_500_SHA256 =
   "a83182a0c1ce9c0f1621ab27352f37f7726570120803245085c21296e691c33a";
 
@@ -66,6 +66,16 @@ const fixtures = [
   ["поле", /padang.*ladang.*medan/i],
   ["лист", /daun.*helaian/i],
   ["мышь", /tikus.*tetikus/i],
+  ["окно", /tingkap.*tetingkap/i],
+  ["почта", /pos.*pejabat pos.*e-mel/i],
+  ["плата", /bayaran.*papan litar/i],
+  ["ручка", /pen.*pemegang/i],
+  ["перевод", /terjemahan.*pemindahan.*pindahan wang/i],
+  ["номер", /nombor.*bilik/i],
+  ["срок", /tempoh.*tarikh akhir/i],
+  ["корень", /akar.*punca/i],
+  ["курс", /kursus.*kadar pertukaran.*haluan/i],
+  ["снять", /menanggalkan.*mengambil gambar.*menyewa.*mengeluarkan/i],
   ["скачать", /^muat turun$/i],
   ["пользователь", /^pengguna$/i],
   ["сервер", /^pelayan$/i],
@@ -362,6 +372,10 @@ function validateMalayGold(entries) {
     ["buat", /делать|создавать/i], ["bawa", /нести|везти/i], ["kepala", /голова/i],
     ["mata", /глаз/i], ["kaki", /нога/i], ["tangan", /рука/i],
     ["hati", /печень|сердце/i], ["bulan", /луна|месяц/i], ["masa", /время/i],
+    ["naik", /подниматься/i], ["turun", /спускаться/i], ["buka", /открывать/i],
+    ["tutup", /закрывать/i], ["masuk", /входить/i], ["keluar", /выходить/i],
+    ["tinggal", /жить/i], ["datang", /приходить/i], ["balik", /возвращаться/i],
+    ["besar", /большой/i],
   ]);
   assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
   for (const entry of entries) {
@@ -380,6 +394,12 @@ function validateStructuredEntries(ruMsEntries, msRuEntries) {
     ["ru-ms:лист", 2], ["ru-ms:мышь", 2],
     ["ms-ru:mata", 2], ["ms-ru:kaki", 2], ["ms-ru:tangan", 2],
     ["ms-ru:hati", 2], ["ms-ru:bulan", 2], ["ms-ru:masa", 2],
+    ["ru-ms:окно", 2], ["ru-ms:почта", 3], ["ru-ms:плата", 2],
+    ["ru-ms:ручка", 2], ["ru-ms:перевод", 3], ["ru-ms:номер", 2],
+    ["ru-ms:срок", 2], ["ru-ms:корень", 2], ["ru-ms:курс", 3], ["ru-ms:снять", 4],
+    ["ms-ru:naik", 3], ["ms-ru:turun", 3], ["ms-ru:buka", 2],
+    ["ms-ru:tutup", 2], ["ms-ru:masuk", 2], ["ms-ru:keluar", 2],
+    ["ms-ru:tinggal", 3], ["ms-ru:datang", 2], ["ms-ru:balik", 2], ["ms-ru:besar", 2],
   ]);
   const pools = [["ru-ms", ruMsEntries], ["ms-ru", msRuEntries]];
   for (const [direction, entries] of pools) {
@@ -449,7 +469,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-12"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-13"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
