@@ -20,7 +20,7 @@ const dataDir = path.join(projectDir, "data");
 const FREQUENCY_BASELINE_SHA256 =
   "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
 const RU_MS_FREQUENCY_500_SHA256 =
-  "cdcfe39129fe3e88fdbe81d96ca822785a31e044c00a6bce4d835f02ff3756ff";
+  "c0efd4a36c7f050d6d4e5271fbf539624bede0932ad4b781abbb317588f3fc1b";
 const MS_RU_FREQUENCY_500_SHA256 =
   "a83182a0c1ce9c0f1621ab27352f37f7726570120803245085c21296e691c33a";
 
@@ -58,6 +58,14 @@ const fixtures = [
   ["санкции", /sekatan/i],
   ["военнопленный", /tawanan perang/i],
   ["кибератака", /serangan siber/i],
+  ["облако", /awan.*storan awan/i],
+  ["лук", /bawang.*busur/i],
+  ["ключ", /kunci.*mata air/i],
+  ["мир", /dunia.*keamanan/i],
+  ["глава", /bab.*ketua/i],
+  ["поле", /padang.*ladang.*medan/i],
+  ["лист", /daun.*helaian/i],
+  ["мышь", /tikus.*tetikus/i],
   ["скачать", /^muat turun$/i],
   ["пользователь", /^pengguna$/i],
   ["сервер", /^pelayan$/i],
@@ -352,6 +360,8 @@ function validateMalayGold(entries) {
     ["enjin carian", /^поисковая система$/i], ["halaman web", /^веб-страница$/i],
     ["pancingan data", /фишинг/i],
     ["buat", /делать|создавать/i], ["bawa", /нести|везти/i], ["kepala", /голова/i],
+    ["mata", /глаз/i], ["kaki", /нога/i], ["tangan", /рука/i],
+    ["hati", /печень|сердце/i], ["bulan", /луна|месяц/i], ["masa", /время/i],
   ]);
   assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
   for (const entry of entries) {
@@ -365,6 +375,11 @@ function validateStructuredEntries(ruMsEntries, msRuEntries) {
     ["ru-ms:язык", 2], ["ru-ms:операция", 2], ["ru-ms:зарядка", 3], ["ru-ms:сеть", 2],
     ["ms-ru:jalan", 2], ["ms-ru:ambil", 2], ["ms-ru:buat", 2],
     ["ms-ru:bawa", 2], ["ms-ru:kepala", 2],
+    ["ru-ms:облако", 2], ["ru-ms:лук", 2], ["ru-ms:ключ", 3],
+    ["ru-ms:мир", 2], ["ru-ms:глава", 2], ["ru-ms:поле", 3],
+    ["ru-ms:лист", 2], ["ru-ms:мышь", 2],
+    ["ms-ru:mata", 2], ["ms-ru:kaki", 2], ["ms-ru:tangan", 2],
+    ["ms-ru:hati", 2], ["ms-ru:bulan", 2], ["ms-ru:masa", 2],
   ]);
   const pools = [["ru-ms", ruMsEntries], ["ms-ru", msRuEntries]];
   for (const [direction, entries] of pools) {
@@ -434,7 +449,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-11"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-12"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
