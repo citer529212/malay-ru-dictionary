@@ -130,3 +130,46 @@ export function directionForQuery(query) {
   if (script === "latin") return "ms-ru";
   return null;
 }
+
+export function findStructuredSenseIndex(entry, query) {
+  const q = normalizeHeadwordLoose(query);
+  const title = normalizeHeadwordLoose(entry?.title);
+  const senses = Array.isArray(entry?.senses) ? entry.senses : [];
+  if (!q || !title || !senses.length || q === title) return -1;
+
+  const normalizedSenses = senses.map((sense) => ({
+    label: normalizeHeadwordLoose(sense?.label),
+    translation: normalizeHeadwordLoose(sense?.translation),
+    example: normalizeHeadwordLoose(sense?.example),
+    exampleTranslation: normalizeHeadwordLoose(sense?.exampleTranslation),
+  }));
+
+  const exactExampleIndex = normalizedSenses.findIndex((sense) =>
+    [sense.example, sense.exampleTranslation].some(
+      (value) => value && (value === q || value.includes(q) || q.includes(value))
+    )
+  );
+  if (exactExampleIndex >= 0) return exactExampleIndex;
+
+  const titleWords = new Set(title.split(/\s+/).filter(Boolean));
+  const contextTokens = q
+    .split(/\s+/)
+    .filter((token) => token.length >= 3 && !titleWords.has(token));
+  const containsHeadword = q.startsWith(`${title} `) || q.endsWith(` ${title}`);
+  if (!containsHeadword || !contextTokens.length) return -1;
+
+  let bestIndex = -1;
+  let bestScore = 0;
+  normalizedSenses.forEach((sense, index) => {
+    const searchable = `${sense.label} ${sense.translation} ${sense.example} ${sense.exampleTranslation}`;
+    const score = contextTokens.reduce(
+      (total, token) => total + (searchable.includes(token) ? 1 : 0),
+      0
+    );
+    if (score > bestScore) {
+      bestIndex = index;
+      bestScore = score;
+    }
+  });
+  return bestScore > 0 ? bestIndex : -1;
+}

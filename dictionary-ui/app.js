@@ -1,6 +1,7 @@
 import {
   detectQueryScript,
   directionForQuery,
+  findStructuredSenseIndex,
   generateMalayBaseCandidates,
   levenshteinDistance,
   normalizeHeadwordLoose,
@@ -8,7 +9,7 @@ import {
   normalizeRussianStem,
   normalizeText,
   russianTypoDistanceLimit,
-} from "./search-core.js?v=3";
+} from "./search-core.js?v=4";
 
 const ui = {
   searchInput: document.getElementById("searchInput"),
@@ -57,7 +58,7 @@ const BUNDLED_DICTIONARY_URLS = {
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
-const DICTIONARY_DATA_VERSION = "2026-10-10-v6-13";
+const DICTIONARY_DATA_VERSION = "2026-10-10-v6-14";
 
 const state = {
   entries: [],
@@ -1135,12 +1136,15 @@ function searchEntries(query) {
       const titleWords = (title || "").split(/\s+/).filter(Boolean);
       const titleWordCount = titleWords.length || 1;
       const lenDelta = Math.abs((title || "").length - q.length);
+      const matchedSenseIndex = findStructuredSenseIndex(entry, q);
       let score = 99;
 
       if (
         title === q || titleLoose === qLoose
       ) {
         score = 0;
+      } else if (matchedSenseIndex >= 0) {
+        score = 0.35;
       } else if (
         (qStem && titleStem === qStem) ||
         (qRuKey && titleRuKey === qRuKey)
@@ -1200,7 +1204,7 @@ function searchEntries(query) {
         score += 1.3 + Math.min(1.2, (titleWordCount - 1) * 0.45);
       }
 
-      return { score, lenDelta, titleWordCount, ruKeyDistance, typoLimit, entry };
+      return { score, lenDelta, titleWordCount, ruKeyDistance, typoLimit, matchedSenseIndex, entry };
     })
     .filter((row) => row.score < 99)
     .sort(
@@ -1233,6 +1237,7 @@ function searchEntries(query) {
       _malayBase:
         state.direction === "ms-ru" &&
         generateMalayBaseCandidates(qLoose).includes(normalizeHeadwordLoose(row.entry.title)),
+      _matchedSenseIndex: row.matchedSenseIndex,
     }));
 }
 
@@ -1260,6 +1265,7 @@ function groupEntryResults(rows, query = "") {
         _exactRuKey: Boolean(row._exactRuKey),
         _nearRuKey: Boolean(row._nearRuKey),
         _malayBase: Boolean(row._malayBase),
+        _matchedSenseIndex: Number.isInteger(row._matchedSenseIndex) ? row._matchedSenseIndex : -1,
         _gold: isGoldEntry(row),
         _trusted: isTrustedEntry(row),
         verified: Boolean(row.verified),
@@ -1311,6 +1317,9 @@ function groupEntryResults(rows, query = "") {
     current._exactRuKey = current._exactRuKey || Boolean(row._exactRuKey);
     current._nearRuKey = current._nearRuKey || Boolean(row._nearRuKey);
     current._malayBase = current._malayBase || Boolean(row._malayBase);
+    if (current._matchedSenseIndex < 0 && Number.isInteger(row._matchedSenseIndex)) {
+      current._matchedSenseIndex = row._matchedSenseIndex;
+    }
     current._gold = current._gold || isGoldEntry(row);
     current._trusted = current._trusted || isTrustedEntry(row);
     current.verified = current.verified || Boolean(row.verified);
@@ -1430,7 +1439,10 @@ function computeBestAnswer(query, preparedEntries = null) {
           (row._trusted && row._malayBase) ||
           (row._gold && row._nearRuKey))
     );
-    return exactPhrase || null;
+    const contextualPhrase = groupedEntries.find(
+      (row) => row._matchedSenseIndex >= 0 && row._trusted && isBestAnswerQuality(row)
+    );
+    return exactPhrase || contextualPhrase || null;
   }
 
   return null;
@@ -1477,7 +1489,16 @@ function renderBestAnswer() {
   }
 
   ui.answerTitle.innerHTML = highlightText(hit.title, query);
-  const structuredSenses = Array.isArray(hit.senses) ? hit.senses.filter((sense) => sense?.translation) : [];
+  const structuredSenses = Array.isArray(hit.senses)
+    ? hit.senses
+        .map((sense, originalIndex) => ({ ...sense, originalIndex }))
+        .filter((sense) => sense?.translation)
+        .sort(
+          (a, b) =>
+            Number(b.originalIndex === hit._matchedSenseIndex) -
+            Number(a.originalIndex === hit._matchedSenseIndex)
+        )
+    : [];
   ui.answerBody.hidden = structuredSenses.length > 0;
   ui.answerDetails.hidden = structuredSenses.length === 0;
   ui.answerDetails.innerHTML = "";
@@ -1487,7 +1508,10 @@ function renderBestAnswer() {
       senseItem.className = "answer-sense";
       const senseHeading = document.createElement("div");
       senseHeading.className = "sense-heading";
-      senseHeading.textContent = `${index + 1}. ${sense.label || hit.partOfSpeech || "значение"}`;
+      const isContextMatch = sense.originalIndex === hit._matchedSenseIndex;
+      senseHeading.textContent = `${index + 1}. ${sense.label || hit.partOfSpeech || "значение"}${
+        isContextMatch ? " · подходит к запросу" : ""
+      }`;
       const translation = document.createElement("p");
       translation.className = "sense-translation";
       translation.textContent = sense.translation;
@@ -1520,6 +1544,13 @@ function renderBestAnswer() {
       ? "словарная статья (приоритет)"
       : "найдено в полном тексте";
   ui.answerMeta.append(typeChip);
+
+  if (hit._matchedSenseIndex >= 0) {
+    const contextChip = document.createElement("span");
+    contextChip.className = "answer-chip detail-chip";
+    contextChip.textContent = "значение выбрано по контексту";
+    ui.answerMeta.append(contextChip);
+  }
 
   for (const label of [hit.partOfSpeech, hit.domain].filter(Boolean)) {
     const detailChip = document.createElement("span");

@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import {
   detectQueryScript,
   directionForQuery,
+  findStructuredSenseIndex,
   generateMalayBaseCandidates,
   levenshteinDistance,
   normalizeRussianSearchKey,
@@ -469,7 +470,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-13"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-14"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
@@ -501,6 +502,26 @@ function validateModernInterface() {
   assert.match(html, /saveMissingButton/);
 }
 
+function validateContextualSenses(ruEntries, msEntries) {
+  const cases = [
+    [ruEntries, "снять деньги", "снять", /mengeluarkan/i],
+    [ruEntries, "снять квартиру", "снять", /menyewa/i],
+    [ruEntries, "ключ от двери", "ключ", /^kunci$/i],
+    [ruEntries, "компьютерная мышь", "мышь", /tetikus/i],
+    [msEntries, "naik bas", "naik", /транспорте/i],
+    [msEntries, "harga naik", "naik", /расти/i],
+    [msEntries, "bulan depan", "bulan", /^месяц$/i],
+    [msEntries, "kaki meja", "kaki", /ножка/i],
+  ];
+  for (const [entries, query, title, expected] of cases) {
+    const entry = entries.find((item) => normalize(item.title) === title);
+    assert.ok(entry, `Missing structured entry: ${title}`);
+    const senseIndex = findStructuredSenseIndex(entry, query);
+    assert.ok(senseIndex >= 0, `No contextual sense for: ${query}`);
+    assert.match(entry.senses[senseIndex].translation, expected, `Wrong contextual sense: ${query}`);
+  }
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
 const specializedPayload = readJson("dictionary_ms_ru_specialized.json");
@@ -514,6 +535,7 @@ const goldByTitle = validateGold(gold);
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
+validateContextualSenses(gold, msRuGold);
 const structuredEntryCount = validateStructuredEntries(gold, msRuGold);
 const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
 validateSpecializedReverse(specializedRuMs, specializedReversePayload);
@@ -534,6 +556,7 @@ console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
+console.log("Contextual phrase checks: 8");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
