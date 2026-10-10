@@ -20,7 +20,7 @@ const dataDir = path.join(projectDir, "data");
 const FREQUENCY_BASELINE_SHA256 =
   "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
 const RU_MS_FREQUENCY_500_SHA256 =
-  "6a8d6692ff4a571236761a3f75dea7fbc90ee4af7bdb6285421b4f3f68f9a69b";
+  "cdcfe39129fe3e88fdbe81d96ca822785a31e044c00a6bce4d835f02ff3756ff";
 const MS_RU_FREQUENCY_500_SHA256 =
   "a83182a0c1ce9c0f1621ab27352f37f7726570120803245085c21296e691c33a";
 
@@ -351,12 +351,39 @@ function validateMalayGold(entries) {
     ["kandungan", /контент/i], ["kemas kini", /обновление/i],
     ["enjin carian", /^поисковая система$/i], ["halaman web", /^веб-страница$/i],
     ["pancingan data", /фишинг/i],
+    ["buat", /делать|создавать/i], ["bawa", /нести|везти/i], ["kepala", /голова/i],
   ]);
   assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
   for (const entry of entries) {
     assert.ok(entry.verified, `MS-RU gold entry is not verified: ${entry.title}`);
     assert.match(entry.body, expected.get(normalize(entry.title)), `Wrong MS-RU gold translation: ${entry.title}`);
   }
+}
+
+function validateStructuredEntries(ruMsEntries, msRuEntries) {
+  const expected = new Map([
+    ["ru-ms:язык", 2], ["ru-ms:операция", 2], ["ru-ms:зарядка", 3], ["ru-ms:сеть", 2],
+    ["ms-ru:jalan", 2], ["ms-ru:ambil", 2], ["ms-ru:buat", 2],
+    ["ms-ru:bawa", 2], ["ms-ru:kepala", 2],
+  ]);
+  const pools = [["ru-ms", ruMsEntries], ["ms-ru", msRuEntries]];
+  for (const [direction, entries] of pools) {
+    const byTitle = new Map(entries.map((entry) => [normalize(entry.title), entry]));
+    for (const [key, senseCount] of expected) {
+      const [expectedDirection, title] = key.split(":");
+      if (expectedDirection !== direction) continue;
+      const entry = byTitle.get(title);
+      assert.ok(entry, `Missing structured entry: ${key}`);
+      assert.ok(entry.partOfSpeech, `Missing part of speech: ${key}`);
+      assert.ok(entry.domain, `Missing domain: ${key}`);
+      assert.equal(entry.senses?.length, senseCount, `Wrong sense count: ${key}`);
+      assert.ok(entry.senses.some((sense) => sense.example && sense.exampleTranslation), `Missing example: ${key}`);
+      for (const sense of entry.senses) {
+        assert.ok(sense.label && sense.translation, `Incomplete structured sense: ${key}`);
+      }
+    }
+  }
+  return expected.size;
 }
 
 function validateDirectionDetection() {
@@ -407,7 +434,9 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-09-v6-10"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-11"/);
+  assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
+  assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
   assert.match(appSource, /titleBuckets: new Map\(\)/);
   assert.match(
@@ -450,6 +479,7 @@ const goldByTitle = validateGold(gold);
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
+const structuredEntryCount = validateStructuredEntries(gold, msRuGold);
 const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
 validateSpecializedReverse(specializedRuMs, specializedReversePayload);
 validateMalayMorphology(new Set([...msRuGold, ...curatedMsRu].map((entry) => normalize(entry.title))));
@@ -463,6 +493,7 @@ const protectedConflicts = validateNoCuratedOverride(goldByTitle, curatedRuMs);
 console.log("Dictionary QA passed");
 console.log(`Gold RU-MS entries: ${gold.length}`);
 console.log(`Gold MS-RU entries: ${msRuGold.length}`);
+console.log(`Structured gold entries: ${structuredEntryCount}`);
 console.log(`Curated RU-MS entries: ${curatedRuMs.length}`);
 console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);

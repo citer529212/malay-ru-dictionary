@@ -68,6 +68,14 @@ h2 { margin: 4px 0 0; font-size: 1.04rem; }
 .answer-head { color: var(--forest-2); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .answer h2 { font-size: clamp(1.35rem, 2.5vw, 2rem); }
 .answer p { margin: 0; color: #3f5149; font-size: 1.02rem; }
+.answer-details { position: relative; z-index: 1; display: grid; gap: 10px; margin: 4px 0; }
+.answer-details[hidden] { display: none; }
+.answer-sense { padding: 13px 15px; border-left: 4px solid var(--sun); border-radius: 10px; background: #fffef8; }
+.sense-heading { color: var(--forest-2); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.answer .sense-translation { margin-top: 5px; color: var(--ink); font-size: 1.05rem; font-weight: 700; }
+.answer .sense-example { margin-top: 8px; color: var(--forest); font-style: italic; }
+.answer .sense-example-translation { margin-top: 2px; color: var(--muted); font-size: 0.9rem; }
+.answer-chip.detail-chip { background: rgba(40, 91, 73, 0.1); }
 .answer-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: 0.82rem; }
 .answer-chip, .result-type { display: inline-flex; padding: 4px 9px; border-radius: 999px; background: var(--sun-soft); color: var(--forest); font-size: 0.74rem; font-weight: 700; }
 .missing-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 7px; }

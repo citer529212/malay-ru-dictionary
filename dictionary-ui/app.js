@@ -19,6 +19,7 @@ const ui = {
   answerCard: document.getElementById("answerCard"),
   answerTitle: document.getElementById("answerTitle"),
   answerBody: document.getElementById("answerBody"),
+  answerDetails: document.getElementById("answerDetails"),
   answerMeta: document.getElementById("answerMeta"),
   resultCount: document.getElementById("resultCount"),
   resultList: document.getElementById("resultList"),
@@ -56,7 +57,7 @@ const BUNDLED_DICTIONARY_URLS = {
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
-const DICTIONARY_DATA_VERSION = "2026-10-09-v6-10";
+const DICTIONARY_DATA_VERSION = "2026-10-10-v6-11";
 
 const state = {
   entries: [],
@@ -686,6 +687,9 @@ function normalizeIncomingEntry(entry, fallbackId, options = {}) {
     verified: Boolean(options.verified || entry.verified),
     source: String(entry.source || options.source || ""),
     trusted: Boolean(options.trusted || entry.trusted),
+    partOfSpeech: String(entry.partOfSpeech || ""),
+    domain: String(entry.domain || ""),
+    senses: Array.isArray(entry.senses) ? entry.senses : [],
   };
 }
 
@@ -1259,6 +1263,9 @@ function groupEntryResults(rows, query = "") {
         _gold: isGoldEntry(row),
         _trusted: isTrustedEntry(row),
         verified: Boolean(row.verified),
+        partOfSpeech: row.partOfSpeech || "",
+        domain: row.domain || "",
+        senses: Array.isArray(row.senses) ? row.senses : [],
       });
       return;
     }
@@ -1269,6 +1276,9 @@ function groupEntryResults(rows, query = "") {
       current.page = row.page;
       current._gold = true;
       current._trusted = true;
+      current.partOfSpeech = row.partOfSpeech || "";
+      current.domain = row.domain || "";
+      current.senses = Array.isArray(row.senses) ? row.senses : [];
     } else if (isTrustedEntry(row) && !current._trusted) {
       current.body = row.body;
       current.page = row.page;
@@ -1434,6 +1444,9 @@ function renderBestAnswer() {
     ui.answerBody.textContent =
       "Начните печатать: сначала показывается самый точный словарный перевод.";
     ui.answerMeta.innerHTML = "";
+    ui.answerBody.hidden = false;
+    ui.answerDetails.hidden = true;
+    ui.answerDetails.innerHTML = "";
     ui.missingActions.hidden = true;
     return;
   }
@@ -1454,6 +1467,9 @@ function renderBestAnswer() {
         "Попробуйте другое написание. Фрагменты OCR не показываются как лучший ответ, чтобы не вводить в заблуждение.";
     }
     ui.answerMeta.innerHTML = "";
+    ui.answerBody.hidden = false;
+    ui.answerDetails.hidden = true;
+    ui.answerDetails.innerHTML = "";
     ui.missingActions.hidden = false;
     ui.saveMissingButton.textContent = "Сохранить отсутствующее слово";
     updateMissingCount();
@@ -1461,7 +1477,38 @@ function renderBestAnswer() {
   }
 
   ui.answerTitle.innerHTML = highlightText(hit.title, query);
-  ui.answerBody.innerHTML = highlightText(hit.body, query);
+  const structuredSenses = Array.isArray(hit.senses) ? hit.senses.filter((sense) => sense?.translation) : [];
+  ui.answerBody.hidden = structuredSenses.length > 0;
+  ui.answerDetails.hidden = structuredSenses.length === 0;
+  ui.answerDetails.innerHTML = "";
+  if (structuredSenses.length) {
+    structuredSenses.forEach((sense, index) => {
+      const senseItem = document.createElement("article");
+      senseItem.className = "answer-sense";
+      const senseHeading = document.createElement("div");
+      senseHeading.className = "sense-heading";
+      senseHeading.textContent = `${index + 1}. ${sense.label || hit.partOfSpeech || "значение"}`;
+      const translation = document.createElement("p");
+      translation.className = "sense-translation";
+      translation.textContent = sense.translation;
+      senseItem.append(senseHeading, translation);
+      if (sense.example) {
+        const example = document.createElement("p");
+        example.className = "sense-example";
+        example.textContent = sense.example;
+        senseItem.append(example);
+      }
+      if (sense.exampleTranslation) {
+        const exampleTranslation = document.createElement("p");
+        exampleTranslation.className = "sense-example-translation";
+        exampleTranslation.textContent = sense.exampleTranslation;
+        senseItem.append(exampleTranslation);
+      }
+      ui.answerDetails.append(senseItem);
+    });
+  } else {
+    ui.answerBody.innerHTML = highlightText(hit.body, query);
+  }
   ui.answerMeta.innerHTML = "";
   ui.missingActions.hidden = true;
 
@@ -1473,6 +1520,13 @@ function renderBestAnswer() {
       ? "словарная статья (приоритет)"
       : "найдено в полном тексте";
   ui.answerMeta.append(typeChip);
+
+  for (const label of [hit.partOfSpeech, hit.domain].filter(Boolean)) {
+    const detailChip = document.createElement("span");
+    detailChip.className = "answer-chip detail-chip";
+    detailChip.textContent = label;
+    ui.answerMeta.append(detailChip);
+  }
 
   if (hit._nearRuKey) {
     const nearMeta = document.createElement("span");

@@ -4,8 +4,8 @@
   "entries": [
     { "id": "ms-gold-tulis", "title": "tulis", "body": "писать; письмо", "page": 1, "verified": true },
     { "id": "ms-gold-baca", "title": "baca", "body": "читать; чтение", "page": 1, "verified": true },
-    { "id": "ms-gold-ambil", "title": "ambil", "body": "брать; взять", "page": 1, "verified": true },
-    { "id": "ms-gold-jalan", "title": "jalan", "body": "дорога; идти; ходить", "page": 1, "verified": true },
+    { "id": "ms-gold-ambil", "title": "ambil", "body": "брать; взять; получать", "page": 1, "verified": true, "partOfSpeech": "глагол", "domain": "общеупотребительное", "senses": [{ "label": "основное значение", "translation": "брать; взять", "example": "Ambil buku ini.", "exampleTranslation": "Возьмите эту книгу." }, { "label": "переносное значение", "translation": "получать; выбирать; забирать" }] },
+    { "id": "ms-gold-jalan", "title": "jalan", "body": "дорога; путь; идти; двигаться; работать", "page": 1, "verified": true, "partOfSpeech": "существительное / глагол", "domain": "общеупотребительное", "senses": [{ "label": "существительное", "translation": "дорога; путь; направление", "example": "Jalan ini panjang.", "exampleTranslation": "Эта дорога длинная." }, { "label": "глагол", "translation": "идти; двигаться; работать (о механизме)", "example": "Kereta itu berjalan perlahan.", "exampleTranslation": "Машина движется медленно." }] },
     { "id": "ms-gold-kerja", "title": "kerja", "body": "работа; работать", "page": 1, "verified": true },
     { "id": "ms-gold-sapu", "title": "sapu", "body": "подметать; метла", "page": 1, "verified": true },
     { "id": "ms-gold-pakai", "title": "pakai", "body": "использовать; носить", "page": 1, "verified": true },
@@ -39,6 +39,9 @@
     { "id": "ms-gold-kemas-kini", "title": "kemas kini", "body": "обновление; обновить", "page": 0, "verified": true },
     { "id": "ms-gold-enjin-carian", "title": "enjin carian", "body": "поисковая система", "page": 0, "verified": true },
     { "id": "ms-gold-halaman-web", "title": "halaman web", "body": "веб-страница", "page": 0, "verified": true },
-    { "id": "ms-gold-pancingan-data", "title": "pancingan data", "body": "фишинг; кража данных обманом", "page": 0, "verified": true }
+    { "id": "ms-gold-pancingan-data", "title": "pancingan data", "body": "фишинг; кража данных обманом", "page": 0, "verified": true },
+    { "id": "ms-gold-buat", "title": "buat", "body": "делать; создавать; изготавливать", "page": 0, "verified": true, "partOfSpeech": "глагол", "domain": "общеупотребительное", "senses": [{ "label": "основное значение", "translation": "делать; создавать", "example": "Apa yang awak buat?", "exampleTranslation": "Что вы делаете?" }, { "label": "изготовление", "translation": "изготавливать; производить" }] },
+    { "id": "ms-gold-bawa", "title": "bawa", "body": "нести; везти; приносить", "page": 0, "verified": true, "partOfSpeech": "глагол", "domain": "общеупотребительное", "senses": [{ "label": "перемещение", "translation": "нести; везти", "example": "Bawa dokumen ini.", "exampleTranslation": "Принесите этот документ." }, { "label": "направленное действие", "translation": "приносить; приводить; доставлять" }] },
+    { "id": "ms-gold-kepala", "title": "kepala", "body": "голова; глава; руководитель", "page": 0, "verified": true, "partOfSpeech": "существительное", "domain": "общеупотребительное", "senses": [{ "label": "часть тела", "translation": "голова", "example": "Saya sakit kepala.", "exampleTranslation": "У меня болит голова." }, { "label": "руководство", "translation": "глава; руководитель; начальник" }] }
   ]
 }
