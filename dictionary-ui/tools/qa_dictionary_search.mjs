@@ -19,9 +19,9 @@ const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
 const dataDir = path.join(projectDir, "data");
 const FREQUENCY_BASELINE_SHA256 =
-  "42390eb04356a59bb0b2bb70cd1a8523b41a250dd1892da2e726c5b47a1b62d6";
+  "953ec25f16fa26a988bf9bd647fbaf379ddb97e638c97456174689e131b60bd3";
 const RU_MS_FREQUENCY_500_SHA256 =
-  "e3aecaee91e8961cb7f74816bce2feccc82aec16d044994a94cc7f001f5cbbdf";
+  "1c91d24e33a81bb5767f1d6b0036438165aa60ba89acc59b12b630b484bead4b";
 const MS_RU_FREQUENCY_500_SHA256 =
   "a83182a0c1ce9c0f1621ab27352f37f7726570120803245085c21296e691c33a";
 
@@ -376,7 +376,10 @@ function validateMalayGold(entries) {
     ["naik", /подниматься/i], ["turun", /спускаться/i], ["buka", /открывать/i],
     ["tutup", /закрывать/i], ["masuk", /входить/i], ["keluar", /выходить/i],
     ["tinggal", /жить/i], ["datang", /приходить/i], ["balik", /возвращаться/i],
-    ["besar", /большой/i],
+    ["besar", /большой/i], ["orang", /человек/i], ["anak", /ребёнок/i],
+    ["makan", /есть/i], ["pasang", /устанавливать/i], ["dalam", /внутри/i],
+    ["atas", /над/i], ["bawah", /под/i], ["keras", /твёрдый/i],
+    ["ringan", /лёгкий/i], ["jatuh", /падать/i],
   ]);
   assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
   for (const entry of entries) {
@@ -401,6 +404,13 @@ function validateStructuredEntries(ruMsEntries, msRuEntries) {
     ["ms-ru:naik", 3], ["ms-ru:turun", 3], ["ms-ru:buka", 2],
     ["ms-ru:tutup", 2], ["ms-ru:masuk", 2], ["ms-ru:keluar", 2],
     ["ms-ru:tinggal", 3], ["ms-ru:datang", 2], ["ms-ru:balik", 2], ["ms-ru:besar", 2],
+    ["ru-ms:банк", 2], ["ru-ms:карта", 2], ["ru-ms:дело", 3],
+    ["ru-ms:свет", 3], ["ru-ms:время", 3], ["ru-ms:дорога", 2],
+    ["ru-ms:связь", 3], ["ru-ms:станция", 2],
+    ["ms-ru:orang", 2], ["ms-ru:anak", 3], ["ms-ru:makan", 2],
+    ["ms-ru:pasang", 4], ["ms-ru:dalam", 3], ["ms-ru:atas", 3],
+    ["ms-ru:bawah", 3], ["ms-ru:keras", 3], ["ms-ru:ringan", 2],
+    ["ms-ru:jatuh", 4],
   ]);
   const pools = [["ru-ms", ruMsEntries], ["ms-ru", msRuEntries]];
   for (const [direction, entries] of pools) {
@@ -470,7 +480,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-14"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-15"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
@@ -512,6 +522,24 @@ function validateContextualSenses(ruEntries, msEntries) {
     [msEntries, "harga naik", "naik", /расти/i],
     [msEntries, "bulan depan", "bulan", /^месяц$/i],
     [msEntries, "kaki meja", "kaki", /ножка/i],
+    [ruEntries, "банк данных", "банк", /^pangkalan data$/i],
+    [ruEntries, "банковская карта", "карта", /^kad$/i],
+    [ruEntries, "уголовное дело", "дело", /^kes$/i],
+    [ruEntries, "включить свет", "свет", /^lampu$/i],
+    [ruEntries, "время отправления", "время", /^waktu$/i],
+    [ruEntries, "долгая дорога", "дорога", /^perjalanan$/i],
+    [ruEntries, "мобильная связь", "связь", /^komunikasi$/i],
+    [ruEntries, "полицейская станция", "станция", /^balai$/i],
+    [msEntries, "tiga orang pelajar", "orang", /^человек$/i],
+    [msEntries, "anak sungai", "anak", /приток/i],
+    [msEntries, "makan masa", "makan", /отнимать/i],
+    [msEntries, "pasang lampu", "pasang", /^включать$/i],
+    [msEntries, "laut dalam", "dalam", /^глубокий$/i],
+    [msEntries, "atas permintaan", "atas", /основании/i],
+    [msEntries, "di bawah pimpinan", "bawah", /руководством/i],
+    [msEntries, "suara keras", "keras", /^громкий$/i],
+    [msEntries, "kecederaan ringan", "ringan", /травм|незначительный|лёгкий/i],
+    [msEntries, "jatuh cinta", "jatuh", /^влюбляться$/i],
   ];
   for (const [entries, query, title, expected] of cases) {
     const entry = entries.find((item) => normalize(item.title) === title);
@@ -556,7 +584,7 @@ console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
-console.log("Contextual phrase checks: 8");
+console.log("Contextual phrase checks: 26");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
