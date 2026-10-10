@@ -151,21 +151,46 @@ export function findStructuredSenseIndex(entry, query) {
   );
   if (exactExampleIndex >= 0) return exactExampleIndex;
 
-  const titleWords = new Set(title.split(/\s+/).filter(Boolean));
-  const contextTokens = q
-    .split(/\s+/)
-    .filter((token) => token.length >= 3 && !titleWords.has(token));
-  const containsHeadword = q.startsWith(`${title} `) || q.endsWith(` ${title}`);
+  const queryTokens = q.split(/\s+/).filter(Boolean);
+  const titleWords = title.split(/\s+/).filter(Boolean);
+  let headwordTokenIndex = -1;
+  if (titleWords.length === 1) {
+    const titleWord = titleWords[0];
+    headwordTokenIndex = queryTokens.findIndex((token) => {
+      if (token === titleWord) return true;
+      if (/^[а-яё-]+$/i.test(titleWord) && /^[а-яё-]+$/i.test(token)) {
+        const titleKey = normalizeRussianSearchKey(titleWord);
+        const tokenKey = normalizeRussianSearchKey(token);
+        return (
+          titleKey === tokenKey ||
+          (titleKey.length >= 4 &&
+            tokenKey.length >= 4 &&
+            levenshteinDistance(titleKey, tokenKey) <= 1)
+        );
+      }
+      return generateMalayBaseCandidates(token).includes(titleWord);
+    });
+  }
+  const containsHeadword =
+    headwordTokenIndex >= 0 || q.startsWith(`${title} `) || q.endsWith(` ${title}`);
+  const contextTokens = queryTokens.filter(
+    (token, index) => token.length >= 3 && index !== headwordTokenIndex && !titleWords.includes(token)
+  );
   if (!containsHeadword || !contextTokens.length) return -1;
 
   let bestIndex = -1;
   let bestScore = 0;
   normalizedSenses.forEach((sense, index) => {
     const searchable = `${sense.label} ${sense.translation} ${sense.example} ${sense.exampleTranslation}`;
-    const score = contextTokens.reduce(
-      (total, token) => total + (searchable.includes(token) ? 1 : 0),
-      0
-    );
+    const searchableRussianKeys = normalizeRussianSearchKey(searchable).split(/\s+/);
+    const score = contextTokens.reduce((total, token) => {
+      if (searchable.includes(token)) return total + 1;
+      if (/^[а-яё-]+$/i.test(token)) {
+        const tokenKey = normalizeRussianSearchKey(token);
+        if (tokenKey.length >= 3 && searchableRussianKeys.includes(tokenKey)) return total + 1;
+      }
+      return total;
+    }, 0);
     if (score > bestScore) {
       bestIndex = index;
       bestScore = score;

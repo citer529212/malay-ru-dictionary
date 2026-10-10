@@ -58,7 +58,7 @@ const BUNDLED_DICTIONARY_URLS = {
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
 const MAX_HISTORY_ITEMS = 8;
-const DICTIONARY_DATA_VERSION = "2026-10-10-v6-15";
+const DICTIONARY_DATA_VERSION = "2026-10-10-v6-16";
 
 const state = {
   entries: [],
@@ -78,6 +78,7 @@ const state = {
   titlePrefixBuckets: new Map(),
   exactTitleKeys: new Set(),
   russianTitleKeys: new Set(),
+  structuredEntries: [],
   lastCandidateCount: 0,
   dictionaryCache: new Map(),
   lastLoadFromCache: false,
@@ -875,6 +876,7 @@ async function loadBundledDictionary() {
     state.titlePrefixBuckets = cachedDictionary.titlePrefixBuckets;
     state.exactTitleKeys = cachedDictionary.exactTitleKeys;
     state.russianTitleKeys = cachedDictionary.russianTitleKeys;
+    state.structuredEntries = cachedDictionary.structuredEntries;
     state.curatedOnly = cachedDictionary.curatedOnly;
     state.searchMode = cachedDictionary.searchMode;
     state.lastLoadFromCache = true;
@@ -964,6 +966,7 @@ async function loadBundledDictionary() {
     titlePrefixBuckets: state.titlePrefixBuckets,
     exactTitleKeys: state.exactTitleKeys,
     russianTitleKeys: state.russianTitleKeys,
+    structuredEntries: state.structuredEntries,
     curatedOnly: state.curatedOnly,
     searchMode: state.searchMode,
   });
@@ -975,6 +978,7 @@ function hydrateEntries(entries) {
   state.titlePrefixBuckets = new Map();
   state.exactTitleKeys = new Set();
   state.russianTitleKeys = new Set();
+  state.structuredEntries = [];
   entries.forEach((entry) => {
     entry._normTitle = normalizeText(entry.title);
     entry._normBody = normalizeText(entry.body);
@@ -993,6 +997,7 @@ function hydrateEntries(entries) {
     if (looseTitle) state.exactTitleKeys.add(looseTitle);
     const russianKey = normalizeRussianSearchKey(looseTitle);
     if (russianKey) state.russianTitleKeys.add(russianKey);
+    if (Array.isArray(entry.senses) && entry.senses.length) state.structuredEntries.push(entry);
   });
 }
 
@@ -1014,6 +1019,11 @@ function indexedEntriesForQuery(queryLoose, malayBaseCandidates = [], russianKey
       seen.add(entry.id);
       candidates.push(entry);
     }
+  }
+  for (const entry of state.structuredEntries) {
+    if (seen.has(entry.id)) continue;
+    seen.add(entry.id);
+    candidates.push(entry);
   }
   state.lastCandidateCount = candidates.length;
   return candidates;

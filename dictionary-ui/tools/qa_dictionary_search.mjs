@@ -480,7 +480,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-15"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-16"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
@@ -540,6 +540,11 @@ function validateContextualSenses(ruEntries, msEntries) {
     [msEntries, "suara keras", "keras", /^громкий$/i],
     [msEntries, "kecederaan ringan", "ringan", /травм|незначительный|лёгкий/i],
     [msEntries, "jatuh cinta", "jatuh", /^влюбляться$/i],
+    [ruEntries, "банковской картой", "карта", /^kad$/i],
+    [ruEntries, "ключом от двери", "ключ", /^kunci$/i],
+    [ruEntries, "снял деньги", "снять", /^mengeluarkan$/i],
+    [msEntries, "memasang lampu", "pasang", /^включать$/i],
+    [msEntries, "memakan masa", "makan", /отнимать/i],
   ];
   for (const [entries, query, title, expected] of cases) {
     const entry = entries.find((item) => normalize(item.title) === title);
@@ -584,7 +589,7 @@ console.log(`Curated MS-RU entries: ${curatedMsRu.length}`);
 console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
-console.log("Contextual phrase checks: 26");
+console.log("Contextual phrase checks: 31");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
