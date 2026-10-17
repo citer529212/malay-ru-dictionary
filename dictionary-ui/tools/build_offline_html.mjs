@@ -9,9 +9,6 @@ import { fileURLToPath } from "node:url";
 const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
 const outputDir = path.resolve(projectDir, "..", "Dictionary-Offline-HTML");
-const outputName = "Malay-Russian-Dictionary-Offline-v6.16.html";
-const packageName = "Malay-Russian-Dictionary-Offline-v6.16.zip";
-
 const dataFiles = [
   "data/dictionary_ms_ru_gold.json",
   "data/dictionary_ms_ru_specialized.json",
@@ -20,8 +17,25 @@ const dataFiles = [
   "data/dictionary_ru_ms_specialized_reverse.json",
   "data/dictionary_ru_ms_curated.json",
   "data/dictionary_ru_ms_service.json",
-  "data/dictionary.json",
-  "data/dictionary_ru_ms.json",
+];
+
+const profiles = [
+  {
+    id: "full",
+    label: "Full",
+    description: "полная база с максимальным охватом",
+    outputName: "Malay-Russian-Dictionary-Offline-v6.16.html",
+    packageName: "Malay-Russian-Dictionary-Offline-v6.16.zip",
+    curatedLimit: Number.POSITIVE_INFINITY,
+  },
+  {
+    id: "lite",
+    label: "Lite",
+    description: "облегчённая база для слабых ноутбуков",
+    outputName: "Malay-Russian-Dictionary-Offline-Lite-v6.16.html",
+    packageName: "Malay-Russian-Dictionary-Offline-Lite-v6.16.zip",
+    curatedLimit: 15_000,
+  },
 ];
 
 function read(relativePath) {
@@ -46,13 +60,6 @@ const dataPayloads = new Map(
     .filter((relativePath) => fs.existsSync(path.join(projectDir, relativePath)))
     .map((relativePath) => [relativePath, JSON.parse(read(relativePath))])
 );
-
-const embeddedData = [...dataPayloads.entries()]
-  .map(([relativePath, payload]) => {
-    const compactJson = JSON.stringify(payload);
-    return `<script type="application/json" id="${dataId(relativePath)}">${scriptSafeJson(compactJson)}</script>`;
-  })
-  .join("\n");
 
 const offlineLoader = `
 const OFFLINE_DATA_IDS = ${JSON.stringify(
@@ -84,37 +91,16 @@ if (!offlineApp.includes("OFFLINE_DATA_IDS")) {
   throw new Error("Could not replace fetchDictionaryEntries in app.js");
 }
 
-html = html
-  .replace(
-    /\s*<link rel="preconnect"[\s\S]*?<\/head>/u,
-    () => `\n    <style>${css}</style>\n  </head>`
-  )
-  .replace(
-    /<script type="module" src="\.\/app\.js\?v=[^"]+"><\/script>/u,
-    () => `${embeddedData}\n<script>\n${searchCore}\n${offlineApp}\n</script>`
-  )
-  .replace(
-    "Версия 2026.10.10 · словоформы в контексте v6.16",
-    "Офлайн-версия 6.16 · один HTML · без интернета"
-  );
-
-if (/https?:\/\//i.test(html)) {
-  throw new Error("Offline HTML still contains a network URL");
-}
-
 fs.mkdirSync(outputDir, { recursive: true });
-const outputPath = path.join(outputDir, outputName);
-fs.writeFileSync(outputPath, html);
-const hash = crypto.createHash("sha256").update(fs.readFileSync(outputPath)).digest("hex");
-const hashPath = `${outputPath}.sha256`;
+const legacyManifestPath = path.join(outputDir, "MANIFEST.json");
+if (fs.existsSync(legacyManifestPath)) fs.unlinkSync(legacyManifestPath);
 const readmePath = path.join(outputDir, "README.txt");
-const manifestPath = path.join(outputDir, "MANIFEST.json");
-const packagePath = path.join(outputDir, packageName);
-fs.writeFileSync(hashPath, `${hash}  ${outputName}\n`);
 fs.writeFileSync(
   readmePath,
   `МАЛАЙСКО-РУССКИЙ И РУССКО-МАЛАЙСКИЙ СЛОВАРЬ — ОФЛАЙН\n\n` +
-    `1. Перенесите файл ${outputName} на любой ноутбук.\n` +
+    `FULL: максимальный словарный охват.\n` +
+    `LITE: ускоренный запуск на слабых ноутбуках, все gold- и специализированные статьи сохранены.\n\n` +
+    `1. Перенесите выбранный HTML либо соответствующий ZIP на любой ноутбук.\n` +
     `2. Откройте его двойным щелчком в Chrome, Edge, Firefox или Safari.\n` +
     `3. Интернет, установка и локальный сервер не требуются.\n\n` +
     `Можно переносить один HTML либо весь ZIP-пакет.\n` +
@@ -122,46 +108,94 @@ fs.writeFileSync(
     `Разработчики: Чернобаев Б.Д., Михина А.А.\n`
 );
 
-const manifest = {
-  product: "Малайско-русский и русско-малайский электронный словарь",
-  version: "6.16",
-  format: "single-file-offline-html",
-  network_required: false,
-  html_file: outputName,
-  html_bytes: fs.statSync(outputPath).size,
-  html_sha256: hash,
-  sources: Object.fromEntries(
-    [...dataPayloads.entries()].map(([relativePath, payload]) => [
-      relativePath,
-      Array.isArray(payload.entries) ? payload.entries.length : 0,
-    ])
-  ),
-};
-fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-
-if (fs.existsSync(packagePath)) fs.unlinkSync(packagePath);
-const zipResult = spawnSync(
-  "zip",
-  ["-j", "-9", packagePath, outputPath, hashPath, readmePath, manifestPath],
-  { encoding: "utf8" }
-);
-if (zipResult.status !== 0) {
-  throw new Error(`Could not create ZIP package: ${zipResult.stderr || zipResult.stdout}`);
+function payloadsForProfile(profile) {
+  return new Map(
+    [...dataPayloads.entries()].map(([relativePath, payload]) => {
+      if (!relativePath.includes("curated") || !Number.isFinite(profile.curatedLimit)) {
+        return [relativePath, payload];
+      }
+      return [
+        relativePath,
+        { ...payload, entries: payload.entries.slice(0, profile.curatedLimit) },
+      ];
+    })
+  );
 }
-const packageHash = crypto.createHash("sha256").update(fs.readFileSync(packagePath)).digest("hex");
-fs.writeFileSync(`${packagePath}.sha256`, `${packageHash}  ${packageName}\n`);
 
-console.log(
-  JSON.stringify(
-    {
+function buildProfile(profile) {
+  const profilePayloads = payloadsForProfile(profile);
+  const embeddedData = [...profilePayloads.entries()]
+    .map(([relativePath, payload]) => {
+      const compactJson = JSON.stringify(payload);
+      return `<script type="application/json" id="${dataId(relativePath)}">${scriptSafeJson(compactJson)}</script>`;
+    })
+    .join("\n");
+
+  const profileHtml = html
+    .replace(
+      /\s*<link rel="preconnect"[\s\S]*?<\/head>/u,
+      () => `\n    <style>${css}</style>\n  </head>`
+    )
+    .replace(
+      /<script type="module" src="\.\/app\.js\?v=[^"]+"><\/script>/u,
+      () => `${embeddedData}\n<script>\n${searchCore}\n${offlineApp}\n</script>`
+    )
+    .replace(
+      "Версия 2026.10.10 · словоформы в контексте v6.16",
+      `Офлайн ${profile.label} 6.16 · один HTML · без интернета`
+    );
+  if (/https?:\/\//i.test(profileHtml)) {
+    throw new Error(`${profile.label} HTML still contains a network URL`);
+  }
+
+  const outputPath = path.join(outputDir, profile.outputName);
+  fs.writeFileSync(outputPath, profileHtml);
+  const hash = crypto.createHash("sha256").update(fs.readFileSync(outputPath)).digest("hex");
+  const hashPath = `${outputPath}.sha256`;
+  const manifestPath = path.join(outputDir, `MANIFEST-${profile.label.toUpperCase()}.json`);
+  const packagePath = path.join(outputDir, profile.packageName);
+  fs.writeFileSync(hashPath, `${hash}  ${profile.outputName}\n`);
+
+  const manifest = {
+    product: "Малайско-русский и русско-малайский электронный словарь",
+    version: "6.16",
+    profile: profile.id,
+    description: profile.description,
+    format: "single-file-offline-html",
+    network_required: false,
+    html_file: profile.outputName,
+    html_bytes: fs.statSync(outputPath).size,
+    html_sha256: hash,
+    sources: Object.fromEntries(
+      [...profilePayloads.entries()].map(([relativePath, payload]) => [
+        relativePath,
+        Array.isArray(payload.entries) ? payload.entries.length : 0,
+      ])
+    ),
+  };
+  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+
+  if (fs.existsSync(packagePath)) fs.unlinkSync(packagePath);
+  const zipResult = spawnSync(
+    "zip",
+    ["-j", "-9", packagePath, outputPath, hashPath, readmePath, manifestPath],
+    { encoding: "utf8" }
+  );
+  if (zipResult.status !== 0) {
+    throw new Error(`Could not create ${profile.label} ZIP: ${zipResult.stderr || zipResult.stdout}`);
+  }
+  const packageHash = crypto.createHash("sha256").update(fs.readFileSync(packagePath)).digest("hex");
+  fs.writeFileSync(`${packagePath}.sha256`, `${packageHash}  ${profile.packageName}\n`);
+
+  return {
+      profile: profile.id,
       outputPath,
       bytes: fs.statSync(outputPath).size,
       sha256: hash,
       packagePath,
       packageBytes: fs.statSync(packagePath).size,
       packageSha256: packageHash,
-    },
-    null,
-    2
-  )
-);
+  };
+}
+
+console.log(JSON.stringify(profiles.map(buildProfile), null, 2));
