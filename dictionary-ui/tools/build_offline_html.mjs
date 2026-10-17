@@ -24,16 +24,16 @@ const profiles = [
     id: "full",
     label: "Full",
     description: "полная база с максимальным охватом",
-    outputName: "Malay-Russian-Dictionary-Offline-v6.16.html",
-    packageName: "Malay-Russian-Dictionary-Offline-v6.16.zip",
+    outputName: "Malay-Russian-Dictionary-Offline-v6.17.html",
+    packageName: "Malay-Russian-Dictionary-Offline-v6.17.zip",
     curatedLimit: Number.POSITIVE_INFINITY,
   },
   {
     id: "lite",
     label: "Lite",
     description: "облегчённая база для слабых ноутбуков",
-    outputName: "Malay-Russian-Dictionary-Offline-Lite-v6.16.html",
-    packageName: "Malay-Russian-Dictionary-Offline-Lite-v6.16.zip",
+    outputName: "Malay-Russian-Dictionary-Offline-Lite-v6.17.html",
+    packageName: "Malay-Russian-Dictionary-Offline-Lite-v6.17.zip",
     curatedLimit: 15_000,
   },
 ];
@@ -141,8 +141,8 @@ function buildProfile(profile) {
       () => `${embeddedData}\n<script>\n${searchCore}\n${offlineApp}\n</script>`
     )
     .replace(
-      "Версия 2026.10.10 · словоформы в контексте v6.16",
-      `Офлайн ${profile.label} 6.16 · один HTML · без интернета`
+      "Версия 2026.10.17 · двунаправленный разговорник v6.17",
+      `Офлайн ${profile.label} 6.17 · один HTML · без интернета`
     );
   if (/https?:\/\//i.test(profileHtml)) {
     throw new Error(`${profile.label} HTML still contains a network URL`);
@@ -158,7 +158,7 @@ function buildProfile(profile) {
 
   const manifest = {
     product: "Малайско-русский и русско-малайский электронный словарь",
-    version: "6.16",
+    version: "6.17",
     profile: profile.id,
     description: profile.description,
     format: "single-file-offline-html",

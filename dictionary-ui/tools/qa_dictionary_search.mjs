@@ -381,10 +381,13 @@ function validateMalayGold(entries) {
     ["atas", /над/i], ["bawah", /под/i], ["keras", /твёрдый/i],
     ["ringan", /лёгкий/i], ["jatuh", /падать/i],
   ]);
-  assert.equal(entries.length, expected.size, "Unexpected MS-RU gold size");
-  for (const entry of entries) {
+  assert.ok(entries.length >= expected.size, "MS-RU gold lost protected entries");
+  const byTitle = new Map(entries.map((entry) => [normalize(entry.title), entry]));
+  for (const [title, translation] of expected) {
+    const entry = byTitle.get(title);
+    assert.ok(entry, `Missing protected MS-RU gold entry: ${title}`);
     assert.ok(entry.verified, `MS-RU gold entry is not verified: ${entry.title}`);
-    assert.match(entry.body, expected.get(normalize(entry.title)), `Wrong MS-RU gold translation: ${entry.title}`);
+    assert.match(entry.body, translation, `Wrong MS-RU gold translation: ${entry.title}`);
   }
 }
 
@@ -480,7 +483,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-10-v6-16"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-17-v6-17"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
@@ -555,6 +558,39 @@ function validateContextualSenses(ruEntries, msEntries) {
   }
 }
 
+function validatePhrasebookLayer(ruEntries, msEntries) {
+  const msPhrases = msEntries.filter((entry) => entry.domain === "разговорник");
+  const ruByTitle = new Map(ruEntries.map((entry) => [normalize(entry.title), entry]));
+  const msByTitle = new Map(msEntries.map((entry) => [normalize(entry.title), entry]));
+  assert.ok(msPhrases.length >= 100, `Phrasebook layer is too small: ${msPhrases.length}`);
+
+  for (const entry of msPhrases) {
+    const reverse = ruByTitle.get(normalize(entry.body));
+    assert.ok(reverse, `Missing Russian phrase: ${entry.body}`);
+    const translations = String(reverse.body).split(";").map(normalize);
+    assert.ok(translations.includes(normalize(entry.title)), `Broken phrase pair: ${entry.body}`);
+    assert.ok(entry.verified && reverse.verified, `Unverified phrase pair: ${entry.title}`);
+  }
+
+  const checks = [
+    ["доброе утро", "selamat pagi"],
+    ["как дела", "apa khabar"],
+    ["я не понимаю", "saya tidak faham"],
+    ["сколько это стоит", "berapa harganya"],
+    ["где туалет", "di mana tandas"],
+    ["вызвать такси", "panggil teksi"],
+    ["мне нужна помощь", "saya perlukan bantuan"],
+    ["вызовите врача", "panggil doktor"],
+    ["я потерял паспорт", "saya kehilangan pasport"],
+    ["оплата картой", "bayaran dengan kad"],
+  ];
+  for (const [russian, malay] of checks) {
+    const translations = String(ruByTitle.get(russian)?.body || "").split(";").map(normalize);
+    assert.ok(translations.includes(malay), `Wrong phrase translation: ${russian}`);
+    assert.equal(normalize(msByTitle.get(malay)?.body), russian, `Wrong reverse translation: ${malay}`);
+  }
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
 const specializedPayload = readJson("dictionary_ms_ru_specialized.json");
@@ -568,6 +604,7 @@ const goldByTitle = validateGold(gold);
 validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
+validatePhrasebookLayer(gold, msRuGold);
 validateContextualSenses(gold, msRuGold);
 const structuredEntryCount = validateStructuredEntries(gold, msRuGold);
 const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
@@ -590,6 +627,7 @@ console.log(`Reference searches: ${fixtures.length}`);
 console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
 console.log("Contextual phrase checks: 31");
+console.log("Bidirectional phrasebook checks: 100+10");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
