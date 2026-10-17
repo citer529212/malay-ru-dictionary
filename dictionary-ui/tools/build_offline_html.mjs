@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import crypto from "node:crypto";
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,6 +10,7 @@ const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
 const outputDir = path.resolve(projectDir, "..", "Dictionary-Offline-HTML");
 const outputName = "Malay-Russian-Dictionary-Offline-v6.16.html";
+const packageName = "Malay-Russian-Dictionary-Offline-v6.16.zip";
 
 const dataFiles = [
   "data/dictionary_ms_ru_gold.json",
@@ -39,12 +41,16 @@ const css = read("styles.css");
 const searchCore = read("search-core.js").replace(/\bexport\s+(?=function\s)/g, "");
 const app = read("app.js").replace(/^import\s*\{[\s\S]*?\}\s*from\s*"\.\/search-core\.js\?v=\d+";\s*/u, "");
 
-const embeddedData = dataFiles
-  .filter((relativePath) => fs.existsSync(path.join(projectDir, relativePath)))
-  .map((relativePath) => {
-    const json = read(relativePath);
-    JSON.parse(json);
-    return `<script type="application/json" id="${dataId(relativePath)}">${scriptSafeJson(json)}</script>`;
+const dataPayloads = new Map(
+  dataFiles
+    .filter((relativePath) => fs.existsSync(path.join(projectDir, relativePath)))
+    .map((relativePath) => [relativePath, JSON.parse(read(relativePath))])
+);
+
+const embeddedData = [...dataPayloads.entries()]
+  .map(([relativePath, payload]) => {
+    const compactJson = JSON.stringify(payload);
+    return `<script type="application/json" id="${dataId(relativePath)}">${scriptSafeJson(compactJson)}</script>`;
   })
   .join("\n");
 
@@ -100,15 +106,62 @@ fs.mkdirSync(outputDir, { recursive: true });
 const outputPath = path.join(outputDir, outputName);
 fs.writeFileSync(outputPath, html);
 const hash = crypto.createHash("sha256").update(fs.readFileSync(outputPath)).digest("hex");
-fs.writeFileSync(`${outputPath}.sha256`, `${hash}  ${outputName}\n`);
+const hashPath = `${outputPath}.sha256`;
+const readmePath = path.join(outputDir, "README.txt");
+const manifestPath = path.join(outputDir, "MANIFEST.json");
+const packagePath = path.join(outputDir, packageName);
+fs.writeFileSync(hashPath, `${hash}  ${outputName}\n`);
 fs.writeFileSync(
-  path.join(outputDir, "README.txt"),
+  readmePath,
   `МАЛАЙСКО-РУССКИЙ И РУССКО-МАЛАЙСКИЙ СЛОВАРЬ — ОФЛАЙН\n\n` +
     `1. Перенесите файл ${outputName} на любой ноутбук.\n` +
     `2. Откройте его двойным щелчком в Chrome, Edge, Firefox или Safari.\n` +
     `3. Интернет, установка и локальный сервер не требуются.\n\n` +
-    `Файл .sha256 нужен только для проверки целостности архива.\n` +
+    `Можно переносить один HTML либо весь ZIP-пакет.\n` +
+    `Файл .sha256 нужен только для проверки целостности HTML.\n` +
     `Разработчики: Чернобаев Б.Д., Михина А.А.\n`
 );
 
-console.log(JSON.stringify({ outputPath, bytes: fs.statSync(outputPath).size, sha256: hash }, null, 2));
+const manifest = {
+  product: "Малайско-русский и русско-малайский электронный словарь",
+  version: "6.16",
+  format: "single-file-offline-html",
+  network_required: false,
+  html_file: outputName,
+  html_bytes: fs.statSync(outputPath).size,
+  html_sha256: hash,
+  sources: Object.fromEntries(
+    [...dataPayloads.entries()].map(([relativePath, payload]) => [
+      relativePath,
+      Array.isArray(payload.entries) ? payload.entries.length : 0,
+    ])
+  ),
+};
+fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+
+if (fs.existsSync(packagePath)) fs.unlinkSync(packagePath);
+const zipResult = spawnSync(
+  "zip",
+  ["-j", "-9", packagePath, outputPath, hashPath, readmePath, manifestPath],
+  { encoding: "utf8" }
+);
+if (zipResult.status !== 0) {
+  throw new Error(`Could not create ZIP package: ${zipResult.stderr || zipResult.stdout}`);
+}
+const packageHash = crypto.createHash("sha256").update(fs.readFileSync(packagePath)).digest("hex");
+fs.writeFileSync(`${packagePath}.sha256`, `${packageHash}  ${packageName}\n`);
+
+console.log(
+  JSON.stringify(
+    {
+      outputPath,
+      bytes: fs.statSync(outputPath).size,
+      sha256: hash,
+      packagePath,
+      packageBytes: fs.statSync(packagePath).size,
+      packageSha256: packageHash,
+    },
+    null,
+    2
+  )
+);
