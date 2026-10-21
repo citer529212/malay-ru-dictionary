@@ -26,6 +26,10 @@ const ui = {
   answerMeta: document.getElementById("answerMeta"),
   resultCount: document.getElementById("resultCount"),
   resultList: document.getElementById("resultList"),
+  contextMode: document.getElementById("contextMode"),
+  contextTopic: document.getElementById("contextTopic"),
+  contextSummary: document.getElementById("contextSummary"),
+  resetContextFilters: document.getElementById("resetContextFilters"),
   statusText: document.getElementById("statusText"),
   progressBar: document.getElementById("progressBar"),
   missingActions: document.getElementById("missingActions"),
@@ -1606,7 +1610,9 @@ function renderResults() {
   if (!state.results.length) {
     const emptyItem = document.createElement("li");
     emptyItem.className = "result-item";
-    emptyItem.textContent = "Совпадений пока нет.";
+    emptyItem.textContent = ui.contextMode.value === "context" && state.activeQuery
+      ? "Нет примеров по выбранным условиям. Сбросьте фильтры или измените запрос."
+      : "Совпадений пока нет.";
     ui.resultList.append(emptyItem);
     ui.resultCount.textContent = "0";
     return;
@@ -1640,7 +1646,7 @@ function renderResults() {
 
     item.append(title, desc, type);
     if (result._context) {
-      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение"][result._contextKind]}`;
+      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение", "выражение со словом"][result._contextKind]}`;
       const context = document.createElement("div");
       context.className = "parallel-context";
       for (const example of result._context.examples) {
@@ -1655,6 +1661,21 @@ function renderResults() {
       source.textContent = "Учебный пример · перевод из проверенной базы";
       context.append(source);
       item.append(context);
+      const details = document.createElement("details");
+      details.className = "context-details";
+      const summary = document.createElement("summary");
+      summary.textContent = "Словоформы и источник перевода";
+      details.append(summary);
+      const forms = document.createElement("p");
+      forms.textContent = `Русские формы: ${result._context.forms.ru.join(" · ")}`;
+      const malayForms = document.createElement("p");
+      malayForms.textContent = `Малайская форма: ${result._context.forms.ms.join(" · ")}`;
+      const provenance = document.createElement("p");
+      provenance.textContent = `Предоставленная проверенная статья «${result._context.verification.sourceTitle}» → ${result._context.verification.sourceTranslation}. Код статьи: ${result._context.verification.sourceEntryId}. Примеры составлены для корпуса.`;
+      details.append(forms, malayForms, provenance);
+      // Expanding a disclosure must not rebuild the result list and collapse it.
+      details.addEventListener("click", event => event.stopPropagation());
+      item.append(details);
     }
     if (result.page > 0) {
       const page = document.createElement("span");
@@ -1696,15 +1717,53 @@ function renderSuggestions(query) {
   }
 }
 
+function initializeContextFilters() {
+  const topics = [...new Set(contextCorpus.filter(row => row.verified).map(row => row.topic))]
+    .sort((a, b) => a.localeCompare(b, "ru"));
+  for (const topic of topics) {
+    const option = document.createElement("option");
+    option.value = topic;
+    option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
+    ui.contextTopic.append(option);
+  }
+  ui.contextMode.addEventListener("change", () => {
+    if (ui.contextMode.value === "all") ui.contextTopic.value = "";
+    runSearch();
+  });
+  ui.contextTopic.addEventListener("change", () => {
+    if (ui.contextTopic.value) ui.contextMode.value = "context";
+    runSearch();
+  });
+  ui.resetContextFilters.addEventListener("click", () => {
+    ui.contextMode.value = "all";
+    ui.contextTopic.value = "";
+    runSearch();
+  });
+}
+
+function renderContextSummary(contextHits) {
+  const examples = contextHits.reduce((total, hit) => total + hit._context.examples.length, 0);
+  ui.contextSummary.textContent = !state.activeQuery ? "Ищите выражение или отдельное слово: вода → горячая вода, питьевая вода."
+    : contextHits.length ? `Выражений с примерами: ${contextHits.length} · параллельных примеров: ${examples}`
+    : "В корпусе нет примеров для этого запроса и выбранной темы.";
+  if (ui.contextMode.value === "context") ui.contextSummary.textContent += " Точный словарный ответ выше сохраняется.";
+  ui.resetContextFilters.hidden = ui.contextMode.value === "all" && !ui.contextTopic.value;
+}
+
 function runSearch() {
   const query = ui.searchInput.value.trim();
   state.activeQuery = query;
   const groupedEntries = query ? groupEntryResults(searchEntries(query), query) : [];
-  const contextHits = searchContextCorpus(contextCorpus, query, state.direction);
-  state.results = query.length >= 2
-    ? mergeContextResults(query, contextHits, mergeResults(query, groupedEntries)).slice(0, MAX_RESULTS) : [];
-  const first = state.results[0];
-  state.bestAnswer = first?._context ? first : computeBestAnswer(query, groupedEntries);
+  const allContextHits = searchContextCorpus(contextCorpus, query, state.direction);
+  const contextHits = ui.contextTopic.value
+    ? allContextHits.filter(hit => hit.domain === ui.contextTopic.value) : allContextHits;
+  const mergedResults = mergeContextResults(query, allContextHits, mergeResults(query, groupedEntries));
+  // The exact dictionary answer remains independent of discovery filters.
+  const first = mergedResults[0];
+  state.bestAnswer = first?._context && first._contextKind < 3 ? first : computeBestAnswer(query, groupedEntries);
+  state.results = query.length < 2 ? [] : ui.contextMode.value === "context"
+    ? contextHits.slice(0, MAX_RESULTS) : mergedResults.slice(0, MAX_RESULTS);
+  renderContextSummary(contextHits);
   ui.resultList.dataset.candidateCount = String(state.lastCandidateCount);
 
   if (query) {
@@ -1720,6 +1779,7 @@ function runSearch() {
   renderSuggestions(query);
 }
 
+initializeContextFilters();
 loadHistory();
 loadMissingQueries();
 setSearchAvailability(false);

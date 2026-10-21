@@ -32,6 +32,13 @@ export const contextCorpus = [
         "ruExpression": "зубной врач",
         "msExpression": "doktor gigi",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мне нужен зубной врач.",
+        "ms": "Saya perlukan doktor gigi.",
+        "ruExpression": "зубной врач",
+        "msExpression": "doktor gigi",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -51,7 +58,7 @@ export const contextCorpus = [
         "berus gigi"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -64,6 +71,13 @@ export const contextCorpus = [
       {
         "ru": "Мне нужна новая зубная щетка.",
         "ms": "Saya perlukan berus gigi yang baharu.",
+        "ruExpression": "зубная щетка",
+        "msExpression": "berus gigi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Эта зубная щетка слишком жёсткая.",
+        "ms": "Berus gigi ini terlalu keras.",
         "ruExpression": "зубная щетка",
         "msExpression": "berus gigi",
         "origin": "original_teaching_example"
@@ -102,6 +116,13 @@ export const contextCorpus = [
         "ruExpression": "сильного дождя",
         "msExpression": "hujan lebat",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сильный дождь начался вечером.",
+        "ms": "Hujan lebat bermula pada waktu petang.",
+        "ruExpression": "сильный дождь",
+        "msExpression": "hujan lebat",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -121,7 +142,7 @@ export const contextCorpus = [
         "mesin basuh"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -134,6 +155,13 @@ export const contextCorpus = [
       {
         "ru": "Наша стиральная машина сломалась.",
         "ms": "Mesin basuh kami rosak.",
+        "ruExpression": "стиральная машина",
+        "msExpression": "mesin basuh",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стиральная машина стоит на кухне.",
+        "ms": "Mesin basuh terletak di dapur.",
         "ruExpression": "стиральная машина",
         "msExpression": "mesin basuh",
         "origin": "original_teaching_example"
@@ -172,6 +200,13 @@ export const contextCorpus = [
         "ruExpression": "номер комнаты",
         "msExpression": "nombor bilik",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я забыл номер комнаты.",
+        "ms": "Saya terlupa nombor bilik.",
+        "ruExpression": "номер комнаты",
+        "msExpression": "nombor bilik",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -191,7 +226,7 @@ export const contextCorpus = [
         "krim pelindung matahari"
       ]
     },
-    "topic": "природа",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -204,6 +239,13 @@ export const contextCorpus = [
       {
         "ru": "Не забудьте взять солнцезащитный крем.",
         "ms": "Jangan lupa membawa krim pelindung matahari.",
+        "ruExpression": "солнцезащитный крем",
+        "msExpression": "krim pelindung matahari",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы купили солнцезащитный крем в аптеке.",
+        "ms": "Kami membeli krim pelindung matahari di farmasi.",
         "ruExpression": "солнцезащитный крем",
         "msExpression": "krim pelindung matahari",
         "origin": "original_teaching_example"
@@ -226,7 +268,7 @@ export const contextCorpus = [
         "harga tiket"
       ]
     },
-    "topic": "финансы",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -239,6 +281,13 @@ export const contextCorpus = [
       {
         "ru": "Цена билета включает багаж.",
         "ms": "Harga tiket termasuk bagasi.",
+        "ruExpression": "цена билета",
+        "msExpression": "harga tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Где указана цена билета?",
+        "ms": "Di manakah harga tiket dinyatakan?",
         "ruExpression": "цена билета",
         "msExpression": "harga tiket",
         "origin": "original_teaching_example"
@@ -277,6 +326,13 @@ export const contextCorpus = [
         "ruExpression": "страница сайта",
         "msExpression": "halaman web",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните страницу сайта.",
+        "ms": "Simpan halaman web itu.",
+        "ruExpression": "страницу сайта",
+        "msExpression": "halaman web",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -296,7 +352,7 @@ export const contextCorpus = [
         "haiwan peliharaan"
       ]
     },
-    "topic": "быт",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -309,6 +365,13 @@ export const contextCorpus = [
       {
         "ru": "У нас есть домашнее животное.",
         "ms": "Kami mempunyai haiwan peliharaan.",
+        "ruExpression": "домашнее животное",
+        "msExpression": "haiwan peliharaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Это домашнее животное принадлежит моей сестре.",
+        "ms": "Haiwan peliharaan ini milik kakak saya.",
         "ruExpression": "домашнее животное",
         "msExpression": "haiwan peliharaan",
         "origin": "original_teaching_example"
@@ -347,6 +410,13 @@ export const contextCorpus = [
         "ruExpression": "кокосовая пальма",
         "msExpression": "pokok kelapa",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кокосовая пальма даёт тень.",
+        "ms": "Pokok kelapa memberikan teduhan.",
+        "ruExpression": "кокосовая пальма",
+        "msExpression": "pokok kelapa",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -382,6 +452,13 @@ export const contextCorpus = [
         "ruExpression": "банановое дерево",
         "msExpression": "pokok pisang",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы посадили банановое дерево в саду.",
+        "ms": "Kami menanam pokok pisang di kebun.",
+        "ruExpression": "банановое дерево",
+        "msExpression": "pokok pisang",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -412,8 +489,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем круг друзей.",
-        "ms": "Kami membincangkan kalangan kawan.",
+        "ru": "У неё широкий круг друзей.",
+        "ms": "Dia mempunyai kalangan kawan yang luas.",
+        "ruExpression": "круг друзей",
+        "msExpression": "kalangan kawan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мой круг друзей постепенно расширяется.",
+        "ms": "Kalangan kawan saya semakin luas.",
         "ruExpression": "круг друзей",
         "msExpression": "kalangan kawan",
         "origin": "original_teaching_example"
@@ -452,6 +536,13 @@ export const contextCorpus = [
         "ruExpression": "питьевая вода",
         "msExpression": "air minuman",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Питьевая вода доступна в зале ожидания.",
+        "ms": "Air minuman disediakan di ruang menunggu.",
+        "ruExpression": "питьевая вода",
+        "msExpression": "air minuman",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -487,6 +578,13 @@ export const contextCorpus = [
         "ruExpression": "минеральная вода",
         "msExpression": "air mineral",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я купил минеральную воду в магазине.",
+        "ms": "Saya membeli air mineral di kedai.",
+        "ruExpression": "минеральную воду",
+        "msExpression": "air mineral",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -506,7 +604,7 @@ export const contextCorpus = [
         "lubang kunci"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -517,9 +615,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о замочной скважине.",
-        "ms": "Kami bercakap tentang lubang kunci.",
+        "ru": "В замочной скважине застрял ключ.",
+        "ms": "Kunci tersangkut di dalam lubang kunci.",
         "ruExpression": "замочной скважине",
+        "msExpression": "lubang kunci",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Замочная скважина покрылась пылью.",
+        "ms": "Lubang kunci diliputi habuk.",
+        "ruExpression": "замочная скважина",
         "msExpression": "lubang kunci",
         "origin": "original_teaching_example"
       }
@@ -557,6 +662,13 @@ export const contextCorpus = [
         "ruExpression": "ручка двери",
         "msExpression": "pemegang pintu",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Держитесь за ручку двери.",
+        "ms": "Pegang pemegang pintu.",
+        "ruExpression": "ручку двери",
+        "msExpression": "pemegang pintu",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -576,7 +688,7 @@ export const contextCorpus = [
         "bahan pencuci"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -589,6 +701,13 @@ export const contextCorpus = [
       {
         "ru": "Мы купили моющее средство.",
         "ms": "Kami membeli bahan pencuci.",
+        "ruExpression": "моющее средство",
+        "msExpression": "bahan pencuci",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Это моющее средство хранится в шкафу.",
+        "ms": "Bahan pencuci ini disimpan di dalam almari.",
         "ruExpression": "моющее средство",
         "msExpression": "bahan pencuci",
         "origin": "original_teaching_example"
@@ -622,8 +741,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается веревка для белья.",
-        "ms": "Artikel itu menyebut tali jemuran.",
+        "ru": "Во дворе натянута веревка для белья.",
+        "ms": "Tali jemuran dipasang di halaman.",
+        "ruExpression": "веревка для белья",
+        "msExpression": "tali jemuran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Веревка для белья порвалась.",
+        "ms": "Tali jemuran putus.",
         "ruExpression": "веревка для белья",
         "msExpression": "tali jemuran",
         "origin": "original_teaching_example"
@@ -646,7 +772,7 @@ export const contextCorpus = [
         "papan seterika"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -657,9 +783,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о гладильной доске.",
-        "ms": "Kami bercakap tentang papan seterika.",
-        "ruExpression": "гладильной доске",
+        "ru": "Гладильная доска стоит рядом со шкафом.",
+        "ms": "Papan seterika terletak di sebelah almari.",
+        "ruExpression": "гладильная доска",
+        "msExpression": "papan seterika",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сложите гладильную доску после использования.",
+        "ms": "Lipat papan seterika selepas digunakan.",
+        "ruExpression": "гладильную доску",
         "msExpression": "papan seterika",
         "origin": "original_teaching_example"
       }
@@ -697,6 +830,13 @@ export const contextCorpus = [
         "ruExpression": "размер одежды",
         "msExpression": "saiz pakaian",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я не знаю её размер одежды.",
+        "ms": "Saya tidak tahu saiz pakaian dia.",
+        "ruExpression": "размер одежды",
+        "msExpression": "saiz pakaian",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -716,7 +856,7 @@ export const contextCorpus = [
         "tajuk e-mel"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -730,6 +870,13 @@ export const contextCorpus = [
         "ru": "Тема письма должна быть короткой.",
         "ms": "Tajuk e-mel mestilah ringkas.",
         "ruExpression": "тема письма",
+        "msExpression": "tajuk e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В теме письма укажите номер заказа.",
+        "ms": "Nyatakan nombor pesanan dalam tajuk e-mel.",
+        "ruExpression": "теме письма",
         "msExpression": "tajuk e-mel",
         "origin": "original_teaching_example"
       }
@@ -751,7 +898,7 @@ export const contextCorpus = [
         "peta kawasan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -765,6 +912,13 @@ export const contextCorpus = [
         "ru": "Для похода нужна карта местности.",
         "ms": "Peta kawasan diperlukan untuk kembara.",
         "ruExpression": "карта местности",
+        "msExpression": "peta kawasan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Гид показал нам карту местности.",
+        "ms": "Pemandu pelancong menunjukkan peta kawasan kepada kami.",
+        "ruExpression": "карту местности",
         "msExpression": "peta kawasan",
         "origin": "original_teaching_example"
       }
@@ -786,7 +940,7 @@ export const contextCorpus = [
         "alam sekitar"
       ]
     },
-    "topic": "еда",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -799,6 +953,13 @@ export const contextCorpus = [
       {
         "ru": "В школе мы говорим об окружающей среде.",
         "ms": "Di sekolah kami bercakap tentang alam sekitar.",
+        "ruExpression": "окружающей среде",
+        "msExpression": "alam sekitar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы должны заботиться об окружающей среде.",
+        "ms": "Kita perlu menjaga alam sekitar.",
         "ruExpression": "окружающей среде",
         "msExpression": "alam sekitar",
         "origin": "original_teaching_example"
@@ -832,8 +993,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем правило дорожного движения.",
-        "ms": "Kami membincangkan peraturan lalu lintas.",
+        "ru": "Это правило дорожного движения действует и для велосипедистов.",
+        "ms": "Peraturan lalu lintas ini juga terpakai kepada penunggang basikal.",
+        "ruExpression": "правило дорожного движения",
+        "msExpression": "peraturan lalu lintas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Учитель объяснил правило дорожного движения.",
+        "ms": "Guru menerangkan peraturan lalu lintas.",
         "ruExpression": "правило дорожного движения",
         "msExpression": "peraturan lalu lintas",
         "origin": "original_teaching_example"
@@ -872,6 +1040,13 @@ export const contextCorpus = [
         "ruExpression": "свидетельство о рождении",
         "msExpression": "sijil kelahiran",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия свидетельства о рождении уже готова.",
+        "ms": "Salinan sijil kelahiran sudah siap.",
+        "ruExpression": "свидетельства о рождении",
+        "msExpression": "sijil kelahiran",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -907,6 +1082,13 @@ export const contextCorpus = [
         "ruExpression": "свидетельство о браке",
         "msExpression": "sijil perkahwinan",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Свидетельство о браке хранится дома.",
+        "ms": "Sijil perkahwinan disimpan di rumah.",
+        "ruExpression": "свидетельство о браке",
+        "msExpression": "sijil perkahwinan",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -937,9 +1119,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о переводе денег.",
-        "ms": "Kami bercakap tentang pemindahan wang.",
-        "ruExpression": "переводе денег",
+        "ru": "Перевод денег займёт один день.",
+        "ms": "Pemindahan wang akan mengambil masa sehari.",
+        "ruExpression": "перевод денег",
+        "msExpression": "pemindahan wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Банк подтвердил перевод денег.",
+        "ms": "Bank telah mengesahkan pemindahan wang.",
+        "ruExpression": "перевод денег",
         "msExpression": "pemindahan wang",
         "origin": "original_teaching_example"
       }
@@ -961,7 +1150,7 @@ export const contextCorpus = [
         "kad debit"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -975,6 +1164,13 @@ export const contextCorpus = [
         "ru": "Моя дебетовая карта потерялась.",
         "ms": "Kad debit saya hilang.",
         "ruExpression": "дебетовая карта",
+        "msExpression": "kad debit",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Срок действия дебетовой карты истекает в декабре.",
+        "ms": "Tempoh sah kad debit akan tamat pada bulan Disember.",
+        "ruExpression": "дебетовой карты",
         "msExpression": "kad debit",
         "origin": "original_teaching_example"
       }
@@ -996,7 +1192,7 @@ export const contextCorpus = [
         "kad kredit"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1010,6 +1206,13 @@ export const contextCorpus = [
         "ru": "Эта кредитная карта больше не действует.",
         "ms": "Kad kredit ini tidak lagi sah.",
         "ruExpression": "кредитная карта",
+        "msExpression": "kad kredit",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я оставил кредитную карту дома.",
+        "ms": "Saya tertinggal kad kredit di rumah.",
+        "ruExpression": "кредитную карту",
         "msExpression": "kad kredit",
         "origin": "original_teaching_example"
       }
@@ -1031,7 +1234,7 @@ export const contextCorpus = [
         "waktu rehat makan tengah hari"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1042,9 +1245,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается обеденный перерыв.",
-        "ms": "Artikel itu menyebut waktu rehat makan tengah hari.",
+        "ru": "Обеденный перерыв начинается в час.",
+        "ms": "Waktu rehat makan tengah hari bermula pada pukul satu.",
         "ruExpression": "обеденный перерыв",
+        "msExpression": "waktu rehat makan tengah hari",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Во время обеденного перерыва офис закрыт.",
+        "ms": "Pejabat ditutup pada waktu rehat makan tengah hari.",
+        "ruExpression": "обеденного перерыва",
         "msExpression": "waktu rehat makan tengah hari",
         "origin": "original_teaching_example"
       }
@@ -1066,7 +1276,7 @@ export const contextCorpus = [
         "penghantaran barang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1080,6 +1290,13 @@ export const contextCorpus = [
         "ru": "Доставка товара займёт два дня.",
         "ms": "Penghantaran barang akan mengambil masa dua hari.",
         "ruExpression": "доставка товара",
+        "msExpression": "penghantaran barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы договорились о доставке товара.",
+        "ms": "Kami telah bersetuju tentang penghantaran barang.",
+        "ruExpression": "доставке товара",
         "msExpression": "penghantaran barang",
         "origin": "original_teaching_example"
       }
@@ -1101,7 +1318,7 @@ export const contextCorpus = [
         "tayar ganti"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1114,6 +1331,13 @@ export const contextCorpus = [
       {
         "ru": "В машине есть запасное колесо.",
         "ms": "Di dalam kereta ada tayar ganti.",
+        "ruExpression": "запасное колесо",
+        "msExpression": "tayar ganti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Механик проверил запасное колесо.",
+        "ms": "Mekanik memeriksa tayar ganti.",
         "ruExpression": "запасное колесо",
         "msExpression": "tayar ganti",
         "origin": "original_teaching_example"
@@ -1136,7 +1360,7 @@ export const contextCorpus = [
         "tali pinggang keledar"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1149,6 +1373,13 @@ export const contextCorpus = [
       {
         "ru": "Пристегните ремень безопасности.",
         "ms": "Pasang tali pinggang keledar.",
+        "ruExpression": "ремень безопасности",
+        "msExpression": "tali pinggang keledar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ремень безопасности не застёгивается.",
+        "ms": "Tali pinggang keledar tidak dapat dipasang.",
         "ruExpression": "ремень безопасности",
         "msExpression": "tali pinggang keledar",
         "origin": "original_teaching_example"
@@ -1171,7 +1402,7 @@ export const contextCorpus = [
         "papan tanda jalan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1184,6 +1415,13 @@ export const contextCorpus = [
       {
         "ru": "Водитель заметил дорожный знак.",
         "ms": "Pemandu itu ternampak papan tanda jalan.",
+        "ruExpression": "дорожный знак",
+        "msExpression": "papan tanda jalan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Этот дорожный знак плохо виден ночью.",
+        "ms": "Papan tanda jalan ini sukar dilihat pada waktu malam.",
         "ruExpression": "дорожный знак",
         "msExpression": "papan tanda jalan",
         "origin": "original_teaching_example"
@@ -1217,8 +1455,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о кольцевой дороге.",
-        "ms": "Kami bercakap tentang jalan lingkaran.",
+        "ru": "Кольцевая дорога проходит вокруг города.",
+        "ms": "Jalan lingkaran mengelilingi bandar.",
+        "ruExpression": "кольцевая дорога",
+        "msExpression": "jalan lingkaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы поехали по кольцевой дороге.",
+        "ms": "Kami melalui jalan lingkaran.",
         "ruExpression": "кольцевой дороге",
         "msExpression": "jalan lingkaran",
         "origin": "original_teaching_example"
@@ -1241,7 +1486,7 @@ export const contextCorpus = [
         "selekoh berbahaya"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1252,9 +1497,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем опасный поворот.",
-        "ms": "Kami membincangkan selekoh berbahaya.",
+        "ru": "Впереди опасный поворот.",
+        "ms": "Terdapat selekoh berbahaya di hadapan.",
         "ruExpression": "опасный поворот",
+        "msExpression": "selekoh berbahaya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Водитель снизил скорость перед опасным поворотом.",
+        "ms": "Pemandu memperlahankan kenderaan sebelum selekoh berbahaya.",
+        "ruExpression": "опасным поворотом",
         "msExpression": "selekoh berbahaya",
         "origin": "original_teaching_example"
       }
@@ -1276,7 +1528,7 @@ export const contextCorpus = [
         "kereta bomba"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1290,6 +1542,13 @@ export const contextCorpus = [
         "ru": "Пожарная машина уже прибыла.",
         "ms": "Kereta bomba sudah tiba.",
         "ruExpression": "пожарная машина",
+        "msExpression": "kereta bomba",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пропустите пожарную машину.",
+        "ms": "Beri laluan kepada kereta bomba.",
+        "ruExpression": "пожарную машину",
         "msExpression": "kereta bomba",
         "origin": "original_teaching_example"
       }
@@ -1311,7 +1570,7 @@ export const contextCorpus = [
         "pintu keluar kecemasan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1322,8 +1581,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается запасной выход.",
-        "ms": "Artikel itu menyebut pintu keluar kecemasan.",
+        "ru": "Запасной выход находится слева.",
+        "ms": "Pintu keluar kecemasan terletak di sebelah kiri.",
+        "ruExpression": "запасной выход",
+        "msExpression": "pintu keluar kecemasan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Не закрывайте запасной выход.",
+        "ms": "Jangan tutup pintu keluar kecemasan.",
         "ruExpression": "запасной выход",
         "msExpression": "pintu keluar kecemasan",
         "origin": "original_teaching_example"
@@ -1362,6 +1628,13 @@ export const contextCorpus = [
         "ruExpression": "номер телефона",
         "msExpression": "nombor telefon",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мой номер телефона изменился.",
+        "ms": "Nombor telefon saya telah berubah.",
+        "ruExpression": "номер телефона",
+        "msExpression": "nombor telefon",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -1396,6 +1669,13 @@ export const contextCorpus = [
         "ruExpression": "социальная сеть",
         "msExpression": "rangkaian sosial",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я редко использую эту социальную сеть.",
+        "ms": "Saya jarang menggunakan rangkaian sosial ini.",
+        "ruExpression": "социальную сеть",
+        "msExpression": "rangkaian sosial",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -1415,7 +1695,7 @@ export const contextCorpus = [
         "akar kata"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1426,8 +1706,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это корень слова.",
-        "ms": "Ini akar kata.",
+        "ru": "Найдите корень слова.",
+        "ms": "Cari akar kata.",
+        "ruExpression": "корень слова",
+        "msExpression": "akar kata",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Учитель подчеркнул корень слова.",
+        "ms": "Guru menggariskan akar kata.",
         "ruExpression": "корень слова",
         "msExpression": "akar kata",
         "origin": "original_teaching_example"
@@ -1450,7 +1737,7 @@ export const contextCorpus = [
         "bentuk kata"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1461,8 +1748,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается форма слова.",
-        "ms": "Artikel itu menyebut bentuk kata.",
+        "ru": "Эта форма слова встречается редко.",
+        "ms": "Bentuk kata ini jarang digunakan.",
+        "ruExpression": "форма слова",
+        "msExpression": "bentuk kata",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В тексте используется другая форма слова.",
+        "ms": "Bentuk kata yang lain digunakan dalam teks itu.",
         "ruExpression": "форма слова",
         "msExpression": "bentuk kata",
         "origin": "original_teaching_example"
@@ -1501,6 +1795,13 @@ export const contextCorpus = [
         "ruExpression": "начальная школа",
         "msExpression": "sekolah rendah",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Эта начальная школа открылась в прошлом году.",
+        "ms": "Sekolah rendah ini dibuka pada tahun lalu.",
+        "ruExpression": "начальная школа",
+        "msExpression": "sekolah rendah",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -1531,8 +1832,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем среднюю школу.",
-        "ms": "Kami membincangkan sekolah menengah.",
+        "ru": "Средняя школа находится за парком.",
+        "ms": "Sekolah menengah terletak di belakang taman.",
+        "ruExpression": "средняя школа",
+        "msExpression": "sekolah menengah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мой брат ходит в среднюю школу.",
+        "ms": "Adik lelaki saya bersekolah di sekolah menengah.",
         "ruExpression": "среднюю школу",
         "msExpression": "sekolah menengah",
         "origin": "original_teaching_example"
@@ -1571,6 +1879,13 @@ export const contextCorpus = [
         "ruExpression": "расписание занятий",
         "msExpression": "jadual kelas",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте расписание занятий на сайте.",
+        "ms": "Semak jadual kelas di laman web.",
+        "ruExpression": "расписание занятий",
+        "msExpression": "jadual kelas",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -1590,7 +1905,7 @@ export const contextCorpus = [
         "kerja rumah"
       ]
     },
-    "topic": "быт",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1603,6 +1918,13 @@ export const contextCorpus = [
       {
         "ru": "Я уже выполнил домашнее задание.",
         "ms": "Saya sudah menyiapkan kerja rumah.",
+        "ruExpression": "домашнее задание",
+        "msExpression": "kerja rumah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Учитель проверяет домашнее задание.",
+        "ms": "Guru sedang menyemak kerja rumah.",
         "ruExpression": "домашнее задание",
         "msExpression": "kerja rumah",
         "origin": "original_teaching_example"
@@ -1636,9 +1958,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о папке документов.",
-        "ms": "Kami bercakap tentang folder dokumen.",
-        "ruExpression": "папке документов",
+        "ru": "Папка документов лежит на столе.",
+        "ms": "Folder dokumen terletak di atas meja.",
+        "ruExpression": "папка документов",
+        "msExpression": "folder dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я взял папку документов на встречу.",
+        "ms": "Saya membawa folder dokumen ke pertemuan itu.",
+        "ruExpression": "папку документов",
         "msExpression": "folder dokumen",
         "origin": "original_teaching_example"
       }
@@ -1660,7 +1989,7 @@ export const contextCorpus = [
         "terjemahan dokumen"
       ]
     },
-    "topic": "финансы",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1671,8 +2000,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем перевод документа.",
-        "ms": "Kami membincangkan terjemahan dokumen.",
+        "ru": "Перевод документа будет готов завтра.",
+        "ms": "Terjemahan dokumen akan siap esok.",
+        "ruExpression": "перевод документа",
+        "msExpression": "terjemahan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы проверили перевод документа.",
+        "ms": "Kami telah menyemak terjemahan dokumen.",
         "ruExpression": "перевод документа",
         "msExpression": "terjemahan dokumen",
         "origin": "original_teaching_example"
@@ -1695,7 +2031,7 @@ export const contextCorpus = [
         "permit tinggal"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1706,9 +2042,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это вид на жительство.",
-        "ms": "Ini permit tinggal.",
+        "ru": "Мой вид на жительство действителен до июня.",
+        "ms": "Permit tinggal saya sah sehingga bulan Jun.",
         "ruExpression": "вид на жительство",
+        "msExpression": "permit tinggal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Срок действия вида на жительство истёк.",
+        "ms": "Tempoh sah permit tinggal telah tamat.",
+        "ruExpression": "вида на жительство",
         "msExpression": "permit tinggal",
         "origin": "original_teaching_example"
       }
@@ -1730,7 +2073,7 @@ export const contextCorpus = [
         "nombor pendaftaran"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1741,8 +2084,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается регистрационный номер.",
-        "ms": "Artikel itu menyebut nombor pendaftaran.",
+        "ru": "Введите регистрационный номер.",
+        "ms": "Masukkan nombor pendaftaran.",
+        "ruExpression": "регистрационный номер",
+        "msExpression": "nombor pendaftaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Регистрационный номер указан в письме.",
+        "ms": "Nombor pendaftaran dinyatakan dalam surat.",
         "ruExpression": "регистрационный номер",
         "msExpression": "nombor pendaftaran",
         "origin": "original_teaching_example"
@@ -1776,9 +2126,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об анкете заявителя.",
-        "ms": "Kami bercakap tentang borang pemohon.",
-        "ruExpression": "анкете заявителя",
+        "ru": "Анкета заявителя заполнена не полностью.",
+        "ms": "Borang pemohon belum diisi dengan lengkap.",
+        "ruExpression": "анкета заявителя",
+        "msExpression": "borang pemohon",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Подпишите анкету заявителя.",
+        "ms": "Tandatangani borang pemohon.",
+        "ruExpression": "анкету заявителя",
         "msExpression": "borang pemohon",
         "origin": "original_teaching_example"
       }
@@ -1800,7 +2157,7 @@ export const contextCorpus = [
         "nombor giliran"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1811,8 +2168,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем очередной номер.",
-        "ms": "Kami membincangkan nombor giliran.",
+        "ru": "На экране появился очередной номер.",
+        "ms": "Nombor giliran seterusnya dipaparkan pada skrin.",
+        "ruExpression": "очередной номер",
+        "msExpression": "nombor giliran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник вызвал очередной номер.",
+        "ms": "Petugas memanggil nombor giliran seterusnya.",
         "ruExpression": "очередной номер",
         "msExpression": "nombor giliran",
         "origin": "original_teaching_example"
@@ -1835,7 +2199,7 @@ export const contextCorpus = [
         "khidmat sokongan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1846,9 +2210,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это служба поддержки.",
-        "ms": "Ini khidmat sokongan.",
+        "ru": "Служба поддержки ответила на мой вопрос.",
+        "ms": "Khidmat sokongan telah menjawab soalan saya.",
         "ruExpression": "служба поддержки",
+        "msExpression": "khidmat sokongan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обратитесь в службу поддержки.",
+        "ms": "Hubungi khidmat sokongan.",
+        "ruExpression": "службу поддержки",
         "msExpression": "khidmat sokongan",
         "origin": "original_teaching_example"
       }
@@ -1870,7 +2241,7 @@ export const contextCorpus = [
         "sokongan teknikal"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1881,8 +2252,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается техническая поддержка.",
-        "ms": "Artikel itu menyebut sokongan teknikal.",
+        "ru": "Техническая поддержка работает круглосуточно.",
+        "ms": "Sokongan teknikal tersedia sepanjang masa.",
+        "ruExpression": "техническая поддержка",
+        "msExpression": "sokongan teknikal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Нам нужна техническая поддержка.",
+        "ms": "Kami memerlukan sokongan teknikal.",
         "ruExpression": "техническая поддержка",
         "msExpression": "sokongan teknikal",
         "origin": "original_teaching_example"
@@ -1905,7 +2283,7 @@ export const contextCorpus = [
         "buku aduan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -1916,9 +2294,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о жалобной книге.",
-        "ms": "Kami bercakap tentang buku aduan.",
-        "ruExpression": "жалобной книге",
+        "ru": "У администратора есть жалобная книга.",
+        "ms": "Buku aduan ada pada pentadbir.",
+        "ruExpression": "жалобная книга",
+        "msExpression": "buku aduan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Посетитель попросил жалобную книгу.",
+        "ms": "Pengunjung meminta buku aduan.",
+        "ruExpression": "жалобную книгу",
         "msExpression": "buku aduan",
         "origin": "original_teaching_example"
       }
@@ -1956,6 +2341,13 @@ export const contextCorpus = [
         "ruExpression": "форма заявки",
         "msExpression": "borang permohonan",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Форма заявки содержит три раздела.",
+        "ms": "Borang permohonan mengandungi tiga bahagian.",
+        "ruExpression": "форма заявки",
+        "msExpression": "borang permohonan",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -1984,8 +2376,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это печать организации.",
-        "ms": "Ini cap organisasi.",
+        "ru": "На документе нужна печать организации.",
+        "ms": "Cap organisasi diperlukan pada dokumen itu.",
+        "ruExpression": "печать организации",
+        "msExpression": "cap organisasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Печать организации хранится у секретаря.",
+        "ms": "Cap organisasi disimpan oleh setiausaha.",
         "ruExpression": "печать организации",
         "msExpression": "cap organisasi",
         "origin": "original_teaching_example"
@@ -2019,9 +2418,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается мастер по ремонту.",
-        "ms": "Artikel itu menyebut tukang baiki.",
+        "ru": "Мастер по ремонту придёт завтра утром.",
+        "ms": "Tukang baiki akan datang esok pagi.",
         "ruExpression": "мастер по ремонту",
+        "msExpression": "tukang baiki",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы ждём мастера по ремонту.",
+        "ms": "Kami sedang menunggu tukang baiki.",
+        "ruExpression": "мастера по ремонту",
         "msExpression": "tukang baiki",
         "origin": "original_teaching_example"
       }
@@ -2043,7 +2449,7 @@ export const contextCorpus = [
         "kawasan terbuka"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2054,9 +2460,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об открытой площадке.",
-        "ms": "Kami bercakap tentang kawasan terbuka.",
-        "ruExpression": "открытой площадке",
+        "ru": "За зданием есть открытая площадка.",
+        "ms": "Terdapat kawasan terbuka di belakang bangunan.",
+        "ruExpression": "открытая площадка",
+        "msExpression": "kawasan terbuka",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Открытая площадка используется для занятий.",
+        "ms": "Kawasan terbuka digunakan untuk aktiviti pembelajaran.",
+        "ruExpression": "открытая площадка",
         "msExpression": "kawasan terbuka",
         "origin": "original_teaching_example"
       }
@@ -2088,9 +2501,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем домашнюю сеть.",
-        "ms": "Kami membincangkan rangkaian rumah.",
-        "ruExpression": "домашнюю сеть",
+        "ru": "Домашняя сеть защищена паролем.",
+        "ms": "Rangkaian rumah dilindungi kata laluan.",
+        "ruExpression": "домашняя сеть",
+        "msExpression": "rangkaian rumah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я подключил принтер к домашней сети.",
+        "ms": "Saya menyambungkan pencetak ke rangkaian rumah.",
+        "ruExpression": "домашней сети",
         "msExpression": "rangkaian rumah",
         "origin": "original_teaching_example"
       }
@@ -2123,6 +2543,13 @@ export const contextCorpus = [
       {
         "ru": "Сегодня скорость интернета очень низкая.",
         "ms": "Kelajuan internet sangat rendah hari ini.",
+        "ruExpression": "скорость интернета",
+        "msExpression": "kelajuan internet",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Приложение измеряет скорость интернета.",
+        "ms": "Aplikasi itu mengukur kelajuan internet.",
         "ruExpression": "скорость интернета",
         "msExpression": "kelajuan internet",
         "origin": "original_teaching_example"
@@ -2161,6 +2588,13 @@ export const contextCorpus = [
         "ruExpression": "слабый сигнал",
         "msExpression": "isyarat lemah",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Из-за слабого сигнала звонок прервался.",
+        "ms": "Panggilan terputus kerana isyarat lemah.",
+        "ruExpression": "слабого сигнала",
+        "msExpression": "isyarat lemah",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -2180,7 +2614,7 @@ export const contextCorpus = [
         "kedatangan tukang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2191,9 +2625,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о приезде мастера.",
-        "ms": "Kami bercakap tentang kedatangan tukang.",
-        "ruExpression": "приезде мастера",
+        "ru": "Приезд мастера назначен на утро.",
+        "ms": "Kedatangan tukang dijadualkan pada waktu pagi.",
+        "ruExpression": "приезд мастера",
+        "msExpression": "kedatangan tukang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подтвердили время приезда мастера.",
+        "ms": "Kami telah mengesahkan masa kedatangan tukang.",
+        "ruExpression": "приезда мастера",
         "msExpression": "kedatangan tukang",
         "origin": "original_teaching_example"
       }
@@ -2215,7 +2656,7 @@ export const contextCorpus = [
         "bahagian jualan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2226,8 +2667,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем отдел продаж.",
-        "ms": "Kami membincangkan bahagian jualan.",
+        "ru": "Отдел продаж находится на втором этаже.",
+        "ms": "Bahagian jualan terletak di tingkat dua.",
+        "ruExpression": "отдел продаж",
+        "msExpression": "bahagian jualan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Позвоните в отдел продаж.",
+        "ms": "Hubungi bahagian jualan.",
         "ruExpression": "отдел продаж",
         "msExpression": "bahagian jualan",
         "origin": "original_teaching_example"
@@ -2250,7 +2698,7 @@ export const contextCorpus = [
         "perkhidmatan penghantaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2263,6 +2711,13 @@ export const contextCorpus = [
       {
         "ru": "Служба доставки работает каждый день.",
         "ms": "Perkhidmatan penghantaran beroperasi setiap hari.",
+        "ruExpression": "служба доставки",
+        "msExpression": "perkhidmatan penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сегодня служба доставки не работает.",
+        "ms": "Perkhidmatan penghantaran tidak beroperasi hari ini.",
         "ruExpression": "служба доставки",
         "msExpression": "perkhidmatan penghantaran",
         "origin": "original_teaching_example"
@@ -2285,7 +2740,7 @@ export const contextCorpus = [
         "resit barang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2296,8 +2751,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается товарный чек.",
-        "ms": "Artikel itu menyebut resit barang.",
+        "ru": "Сохраните товарный чек.",
+        "ms": "Simpan resit barang.",
+        "ruExpression": "товарный чек",
+        "msExpression": "resit barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Товарный чек лежит в пакете.",
+        "ms": "Resit barang ada di dalam beg.",
         "ruExpression": "товарный чек",
         "msExpression": "resit barang",
         "origin": "original_teaching_example"
@@ -2320,7 +2782,7 @@ export const contextCorpus = [
         "resit elektronik"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2331,9 +2793,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об электронном чеке.",
-        "ms": "Kami bercakap tentang resit elektronik.",
-        "ruExpression": "электронном чеке",
+        "ru": "Электронный чек отправлен на почту.",
+        "ms": "Resit elektronik telah dihantar melalui e-mel.",
+        "ruExpression": "электронный чек",
+        "msExpression": "resit elektronik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я не получил электронный чек.",
+        "ms": "Saya belum menerima resit elektronik.",
+        "ruExpression": "электронный чек",
         "msExpression": "resit elektronik",
         "origin": "original_teaching_example"
       }
@@ -2355,7 +2824,7 @@ export const contextCorpus = [
         "barang baru"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2366,8 +2835,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем новый товар.",
-        "ms": "Kami membincangkan barang baru.",
+        "ru": "Новый товар поступит в пятницу.",
+        "ms": "Barang baru akan tiba pada hari Jumaat.",
+        "ruExpression": "новый товар",
+        "msExpression": "barang baru",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Покупатель рассматривает новый товар.",
+        "ms": "Pelanggan sedang melihat barang baru.",
         "ruExpression": "новый товар",
         "msExpression": "barang baru",
         "origin": "original_teaching_example"
@@ -2389,7 +2865,7 @@ export const contextCorpus = [
         "arahan penggunaan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2400,9 +2876,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это инструкция по применению.",
-        "ms": "Ini arahan penggunaan.",
+        "ru": "Инструкция по применению находится внутри коробки.",
+        "ms": "Arahan penggunaan terdapat di dalam kotak.",
         "ruExpression": "инструкция по применению",
+        "msExpression": "arahan penggunaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сначала прочитайте инструкцию по применению.",
+        "ms": "Baca arahan penggunaan terlebih dahulu.",
+        "ruExpression": "инструкцию по применению",
         "msExpression": "arahan penggunaan",
         "origin": "original_teaching_example"
       }
@@ -2435,8 +2918,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается свободный номер.",
-        "ms": "Artikel itu menyebut bilik kosong.",
+        "ru": "У вас есть свободный номер?",
+        "ms": "Adakah anda mempunyai bilik kosong?",
+        "ruExpression": "свободный номер",
+        "msExpression": "bilik kosong",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы ищем свободный номер на одну ночь.",
+        "ms": "Kami sedang mencari bilik kosong untuk satu malam.",
         "ruExpression": "свободный номер",
         "msExpression": "bilik kosong",
         "origin": "original_teaching_example"
@@ -2505,8 +2995,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем двухместный номер.",
-        "ms": "Kami membincangkan bilik dua orang.",
+        "ru": "Мы забронировали двухместный номер.",
+        "ms": "Kami telah menempah bilik dua orang.",
+        "ruExpression": "двухместный номер",
+        "msExpression": "bilik dua orang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Двухместный номер стоит дороже одноместного.",
+        "ms": "Bilik dua orang lebih mahal daripada bilik seorang.",
         "ruExpression": "двухместный номер",
         "msExpression": "bilik dua orang",
         "origin": "original_teaching_example"
@@ -2540,8 +3037,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это одноместный номер.",
-        "ms": "Ini bilik seorang.",
+        "ru": "Мне нужен одноместный номер.",
+        "ms": "Saya perlukan bilik seorang.",
+        "ruExpression": "одноместный номер",
+        "msExpression": "bilik seorang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Одноместный номер находится на третьем этаже.",
+        "ms": "Bilik seorang terletak di tingkat tiga.",
         "ruExpression": "одноместный номер",
         "msExpression": "bilik seorang",
         "origin": "original_teaching_example"
@@ -2564,7 +3068,7 @@ export const contextCorpus = [
         "pemandangan laut"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2577,6 +3081,13 @@ export const contextCorpus = [
       {
         "ru": "Из окна открывается вид на море.",
         "ms": "Terdapat pemandangan laut dari tingkap.",
+        "ruExpression": "вид на море",
+        "msExpression": "pemandangan laut",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мне нравится вид на море с балкона.",
+        "ms": "Saya suka pemandangan laut dari balkoni.",
         "ruExpression": "вид на море",
         "msExpression": "pemandangan laut",
         "origin": "original_teaching_example"
@@ -2610,9 +3121,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об уборке номера.",
-        "ms": "Kami bercakap tentang pembersihan bilik.",
-        "ruExpression": "уборке номера",
+        "ru": "Уборка номера включена в стоимость.",
+        "ms": "Pembersihan bilik termasuk dalam harga.",
+        "ruExpression": "уборка номера",
+        "msExpression": "pembersihan bilik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Уборка номера начинается после десяти.",
+        "ms": "Pembersihan bilik bermula selepas pukul sepuluh.",
+        "ruExpression": "уборка номера",
         "msExpression": "pembersihan bilik",
         "origin": "original_teaching_example"
       }
@@ -2633,7 +3151,7 @@ export const contextCorpus = [
         "katil tambahan"
       ]
     },
-    "topic": "здоровье",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2644,9 +3162,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем дополнительную кровать.",
-        "ms": "Kami membincangkan katil tambahan.",
-        "ruExpression": "дополнительную кровать",
+        "ru": "Нам нужна дополнительная кровать.",
+        "ms": "Kami perlukan katil tambahan.",
+        "ruExpression": "дополнительная кровать",
+        "msExpression": "katil tambahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дополнительная кровать уже стоит в номере.",
+        "ms": "Katil tambahan sudah ada di dalam bilik.",
+        "ruExpression": "дополнительная кровать",
         "msExpression": "katil tambahan",
         "origin": "original_teaching_example"
       }
@@ -2668,7 +3193,7 @@ export const contextCorpus = [
         "katil bayi"
       ]
     },
-    "topic": "здоровье",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2682,6 +3207,13 @@ export const contextCorpus = [
         "ru": "В номере есть детская кроватка.",
         "ms": "Terdapat katil bayi di dalam bilik.",
         "ruExpression": "детская кроватка",
+        "msExpression": "katil bayi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы заранее заказали детскую кроватку.",
+        "ms": "Kami telah menempah katil bayi lebih awal.",
+        "ruExpression": "детскую кроватку",
         "msExpression": "katil bayi",
         "origin": "original_teaching_example"
       }
@@ -2714,9 +3246,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается ресторан гостиницы.",
-        "ms": "Artikel itu menyebut restoran hotel.",
+        "ru": "Ресторан гостиницы открыт до десяти вечера.",
+        "ms": "Restoran hotel dibuka sehingga pukul sepuluh malam.",
         "ruExpression": "ресторан гостиницы",
+        "msExpression": "restoran hotel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы ужинали в ресторане гостиницы.",
+        "ms": "Kami makan malam di restoran hotel.",
+        "ruExpression": "ресторане гостиницы",
         "msExpression": "restoran hotel",
         "origin": "original_teaching_example"
       }
@@ -2738,7 +3277,7 @@ export const contextCorpus = [
         "kaunter pendaftaran"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2749,8 +3288,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о стойке регистрации.",
-        "ms": "Kami bercakap tentang kaunter pendaftaran.",
+        "ru": "Стойка регистрации находится у входа.",
+        "ms": "Kaunter pendaftaran terletak berhampiran pintu masuk.",
+        "ruExpression": "стойка регистрации",
+        "msExpression": "kaunter pendaftaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Подойдите к стойке регистрации.",
+        "ms": "Sila pergi ke kaunter pendaftaran.",
         "ruExpression": "стойке регистрации",
         "msExpression": "kaunter pendaftaran",
         "origin": "original_teaching_example"
@@ -2785,9 +3331,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем чистое бельё.",
-        "ms": "Kami membincangkan kain bersih.",
-        "ruExpression": "чистое бельё",
+        "ru": "В шкафу лежит чистое белье.",
+        "ms": "Kain bersih ada di dalam almari.",
+        "ruExpression": "чистое белье",
+        "msExpression": "kain bersih",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Принесите чистое белье в номер.",
+        "ms": "Bawa kain bersih ke bilik.",
+        "ruExpression": "чистое белье",
         "msExpression": "kain bersih",
         "origin": "original_teaching_example"
       }
@@ -2809,7 +3362,7 @@ export const contextCorpus = [
         "daftar keluar lewat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2820,9 +3373,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это поздний выезд.",
-        "ms": "Ini daftar keluar lewat.",
+        "ru": "Возможен ли поздний выезд?",
+        "ms": "Adakah daftar keluar lewat dibenarkan?",
         "ruExpression": "поздний выезд",
+        "msExpression": "daftar keluar lewat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы договорились о позднем выезде.",
+        "ms": "Kami telah membuat persetujuan untuk daftar keluar lewat.",
+        "ruExpression": "позднем выезде",
         "msExpression": "daftar keluar lewat",
         "origin": "original_teaching_example"
       }
@@ -2844,7 +3404,7 @@ export const contextCorpus = [
         "daftar masuk awal"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -2855,8 +3415,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается ранний заезд.",
-        "ms": "Artikel itu menyebut daftar masuk awal.",
+        "ru": "Ранний заезд нужно согласовать заранее.",
+        "ms": "Daftar masuk awal perlu diatur terlebih dahulu.",
+        "ruExpression": "ранний заезд",
+        "msExpression": "daftar masuk awal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "За ранний заезд взимается дополнительная плата.",
+        "ms": "Bayaran tambahan dikenakan untuk daftar masuk awal.",
         "ruExpression": "ранний заезд",
         "msExpression": "daftar masuk awal",
         "origin": "original_teaching_example"
@@ -2890,9 +3457,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о госте отеля.",
-        "ms": "Kami bercakap tentang tetamu hotel.",
-        "ruExpression": "госте отеля",
+        "ru": "Гость отеля оставил ключ у администратора.",
+        "ms": "Tetamu hotel meninggalkan kunci pada penyambut tetamu.",
+        "ruExpression": "гость отеля",
+        "msExpression": "tetamu hotel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Гость отеля попросил вызвать такси.",
+        "ms": "Tetamu hotel meminta teksi dipanggil.",
+        "ruExpression": "гость отеля",
         "msExpression": "tetamu hotel",
         "origin": "original_teaching_example"
       }
@@ -2925,8 +3499,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем основное блюдо.",
-        "ms": "Kami membincangkan hidangan utama.",
+        "ru": "Основное блюдо подадут через десять минут.",
+        "ms": "Hidangan utama akan dihidangkan dalam masa sepuluh minit.",
+        "ruExpression": "основное блюдо",
+        "msExpression": "hidangan utama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я ещё не выбрал основное блюдо.",
+        "ms": "Saya belum memilih hidangan utama.",
         "ruExpression": "основное блюдо",
         "msExpression": "hidangan utama",
         "origin": "original_teaching_example"
@@ -2960,8 +3541,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это еда навынос.",
-        "ms": "Ini makanan bungkus.",
+        "ru": "Здесь продаётся еда навынос.",
+        "ms": "Makanan bungkus dijual di sini.",
+        "ruExpression": "еда навынос",
+        "msExpression": "makanan bungkus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Еда навынос уже готова.",
+        "ms": "Makanan bungkus sudah siap.",
         "ruExpression": "еда навынос",
         "msExpression": "makanan bungkus",
         "origin": "original_teaching_example"
@@ -2995,8 +3583,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается доставка еды.",
-        "ms": "Artikel itu menyebut penghantaran makanan.",
+        "ru": "Доставка еды доступна до полуночи.",
+        "ms": "Penghantaran makanan tersedia sehingga tengah malam.",
+        "ruExpression": "доставка еды",
+        "msExpression": "penghantaran makanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сколько стоит доставка еды?",
+        "ms": "Berapakah kos penghantaran makanan?",
         "ruExpression": "доставка еды",
         "msExpression": "penghantaran makanan",
         "origin": "original_teaching_example"
@@ -3029,9 +3624,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о регистрации на рейс.",
-        "ms": "Kami bercakap tentang daftar masuk penerbangan.",
-        "ruExpression": "регистрации на рейс",
+        "ru": "Регистрация на рейс заканчивается через час.",
+        "ms": "Daftar masuk penerbangan akan ditutup dalam masa sejam.",
+        "ruExpression": "регистрация на рейс",
+        "msExpression": "daftar masuk penerbangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Регистрация на рейс уже открыта.",
+        "ms": "Daftar masuk penerbangan sudah dibuka.",
+        "ruExpression": "регистрация на рейс",
         "msExpression": "daftar masuk penerbangan",
         "origin": "original_teaching_example"
       }
@@ -3064,9 +3666,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем стойку регистрации рейса.",
-        "ms": "Kami membincangkan kaunter daftar masuk.",
-        "ruExpression": "стойку регистрации рейса",
+        "ru": "Стойка регистрации рейса находится в другом зале.",
+        "ms": "Kaunter daftar masuk terletak di dewan yang lain.",
+        "ruExpression": "стойка регистрации рейса",
+        "msExpression": "kaunter daftar masuk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "У стойки регистрации рейса образовалась очередь.",
+        "ms": "Barisan terbentuk di kaunter daftar masuk.",
+        "ruExpression": "стойки регистрации рейса",
         "msExpression": "kaunter daftar masuk",
         "origin": "original_teaching_example"
       }
@@ -3088,7 +3697,7 @@ export const contextCorpus = [
         "pintu berlepas"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3099,8 +3708,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это выход на посадку.",
-        "ms": "Ini pintu berlepas.",
+        "ru": "Выход на посадку изменился.",
+        "ms": "Pintu berlepas telah berubah.",
+        "ruExpression": "выход на посадку",
+        "msExpression": "pintu berlepas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На табло указан выход на посадку.",
+        "ms": "Pintu berlepas dinyatakan pada papan maklumat.",
         "ruExpression": "выход на посадку",
         "msExpression": "pintu berlepas",
         "origin": "original_teaching_example"
@@ -3134,8 +3750,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается номер выхода.",
-        "ms": "Artikel itu menyebut nombor pintu.",
+        "ru": "Проверьте номер выхода на табло.",
+        "ms": "Semak nombor pintu pada papan maklumat.",
+        "ruExpression": "номер выхода",
+        "msExpression": "nombor pintu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер выхода указан в посадочном талоне.",
+        "ms": "Nombor pintu dinyatakan pada pas masuk pesawat.",
         "ruExpression": "номер выхода",
         "msExpression": "nombor pintu",
         "origin": "original_teaching_example"
@@ -3157,7 +3780,7 @@ export const contextCorpus = [
         "bagasi tangan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3170,6 +3793,13 @@ export const contextCorpus = [
       {
         "ru": "Моя ручная кладь очень лёгкая.",
         "ms": "Bagasi tangan saya sangat ringan.",
+        "ruExpression": "ручная кладь",
+        "msExpression": "bagasi tangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ручная кладь должна поместиться под сиденьем.",
+        "ms": "Bagasi tangan mesti muat di bawah tempat duduk.",
         "ruExpression": "ручная кладь",
         "msExpression": "bagasi tangan",
         "origin": "original_teaching_example"
@@ -3203,9 +3833,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем багажную ленту.",
-        "ms": "Kami membincangkan tali sawat bagasi.",
-        "ruExpression": "багажную ленту",
+        "ru": "Багажная лента ещё не движется.",
+        "ms": "Tali sawat bagasi belum bergerak.",
+        "ruExpression": "багажная лента",
+        "msExpression": "tali sawat bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Эта багажная лента предназначена для нашего рейса.",
+        "ms": "Tali sawat bagasi ini untuk penerbangan kami.",
+        "ruExpression": "багажная лента",
         "msExpression": "tali sawat bagasi",
         "origin": "original_teaching_example"
       }
@@ -3226,7 +3863,7 @@ export const contextCorpus = [
         "pengisytiharan kastam"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3240,6 +3877,13 @@ export const contextCorpus = [
         "ru": "Таможенная декларация уже заполнена.",
         "ms": "Pengisytiharan kastam sudah diisi.",
         "ruExpression": "таможенная декларация",
+        "msExpression": "pengisytiharan kastam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Подпишите таможенную декларацию.",
+        "ms": "Tandatangani pengisytiharan kastam.",
+        "ruExpression": "таможенную декларацию",
         "msExpression": "pengisytiharan kastam",
         "origin": "original_teaching_example"
       }
@@ -3262,7 +3906,7 @@ export const contextCorpus = [
         "lorong hijau"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3273,8 +3917,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается зеленый коридор.",
-        "ms": "Artikel itu menyebut lorong hijau.",
+        "ru": "Зеленый коридор находится справа.",
+        "ms": "Lorong hijau terletak di sebelah kanan.",
+        "ruExpression": "зеленый коридор",
+        "msExpression": "lorong hijau",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пассажир прошёл через зеленый коридор.",
+        "ms": "Penumpang melalui lorong hijau.",
         "ruExpression": "зеленый коридор",
         "msExpression": "lorong hijau",
         "origin": "original_teaching_example"
@@ -3297,7 +3948,7 @@ export const contextCorpus = [
         "lorong merah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3308,9 +3959,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о красном коридоре.",
-        "ms": "Kami bercakap tentang lorong merah.",
-        "ruExpression": "красном коридоре",
+        "ru": "Красный коридор находится слева.",
+        "ms": "Lorong merah terletak di sebelah kiri.",
+        "ruExpression": "красный коридор",
+        "msExpression": "lorong merah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пассажир направился в красный коридор.",
+        "ms": "Penumpang menuju ke lorong merah.",
+        "ruExpression": "красный коридор",
         "msExpression": "lorong merah",
         "origin": "original_teaching_example"
       }
@@ -3332,7 +3990,7 @@ export const contextCorpus = [
         "tempat tidur bawah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3343,8 +4001,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем нижнюю полку.",
-        "ms": "Kami membincangkan tempat tidur bawah.",
+        "ru": "В купе свободна нижняя полка.",
+        "ms": "Tempat tidur bawah di dalam kompartmen masih kosong.",
+        "ruExpression": "нижняя полка",
+        "msExpression": "tempat tidur bawah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я забронировал нижнюю полку.",
+        "ms": "Saya telah menempah tempat tidur bawah.",
         "ruExpression": "нижнюю полку",
         "msExpression": "tempat tidur bawah",
         "origin": "original_teaching_example"
@@ -3367,7 +4032,7 @@ export const contextCorpus = [
         "tempat tidur atas"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3378,8 +4043,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это верхняя полка.",
-        "ms": "Ini tempat tidur atas.",
+        "ru": "Верхняя полка уже занята.",
+        "ms": "Tempat tidur atas sudah digunakan.",
+        "ruExpression": "верхняя полка",
+        "msExpression": "tempat tidur atas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мне досталась верхняя полка.",
+        "ms": "Saya mendapat tempat tidur atas.",
         "ruExpression": "верхняя полка",
         "msExpression": "tempat tidur atas",
         "origin": "original_teaching_example"
@@ -3413,8 +4085,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается билетная касса.",
-        "ms": "Artikel itu menyebut kaunter tiket.",
+        "ru": "Билетная касса открывается в семь утра.",
+        "ms": "Kaunter tiket dibuka pada pukul tujuh pagi.",
+        "ruExpression": "билетная касса",
+        "msExpression": "kaunter tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Билетная касса находится у входа на вокзал.",
+        "ms": "Kaunter tiket terletak berhampiran pintu masuk stesen.",
         "ruExpression": "билетная касса",
         "msExpression": "kaunter tiket",
         "origin": "original_teaching_example"
@@ -3448,9 +4127,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о проверке билетов.",
-        "ms": "Kami bercakap tentang pemeriksaan tiket.",
-        "ruExpression": "проверке билетов",
+        "ru": "Проверка билетов начнётся через пять минут.",
+        "ms": "Pemeriksaan tiket akan bermula dalam masa lima minit.",
+        "ruExpression": "проверка билетов",
+        "msExpression": "pemeriksaan tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После проверки билетов мы прошли на платформу.",
+        "ms": "Selepas pemeriksaan tiket kami masuk ke platform.",
+        "ruExpression": "проверки билетов",
         "msExpression": "pemeriksaan tiket",
         "origin": "original_teaching_example"
       }
@@ -3483,9 +4169,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем карту метро.",
-        "ms": "Kami membincangkan peta metro.",
-        "ruExpression": "карту метро",
+        "ru": "Карта метро висит у входа.",
+        "ms": "Peta metro dipaparkan berhampiran pintu masuk.",
+        "ruExpression": "карта метро",
+        "msExpression": "peta metro",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "У вас есть карта метро?",
+        "ms": "Adakah anda mempunyai peta metro?",
+        "ruExpression": "карта метро",
         "msExpression": "peta metro",
         "origin": "original_teaching_example"
       }
@@ -3517,8 +4210,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это линия метро.",
-        "ms": "Ini laluan metro.",
+        "ru": "Эта линия метро соединяет центр с аэропортом.",
+        "ms": "Laluan metro ini menghubungkan pusat bandar dengan lapangan terbang.",
+        "ruExpression": "линия метро",
+        "msExpression": "laluan metro",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Линия метро временно закрыта.",
+        "ms": "Laluan metro ditutup buat sementara waktu.",
         "ruExpression": "линия метро",
         "msExpression": "laluan metro",
         "origin": "original_teaching_example"
@@ -3540,7 +4240,7 @@ export const contextCorpus = [
         "stesen pertukaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3574,7 +4274,7 @@ export const contextCorpus = [
         "stesen terakhir"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3608,7 +4308,7 @@ export const contextCorpus = [
         "stesen seterusnya"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3643,7 +4343,7 @@ export const contextCorpus = [
         "perhentian seterusnya"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3713,7 +4413,7 @@ export const contextCorpus = [
         "pondok tol"
       ]
     },
-    "topic": "финансы",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3782,7 +4482,7 @@ export const contextCorpus = [
         "pentadbiran bandar"
       ]
     },
-    "topic": "природа",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3817,7 +4517,7 @@ export const contextCorpus = [
         "majlis bandaraya"
       ]
     },
-    "topic": "природа",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3851,7 +4551,7 @@ export const contextCorpus = [
         "pentadbiran daerah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3920,7 +4620,7 @@ export const contextCorpus = [
         "balai bomba"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -3955,7 +4655,7 @@ export const contextCorpus = [
         "wad hospital"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4060,7 +4760,7 @@ export const contextCorpus = [
         "taman permainan kanak-kanak"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4095,7 +4795,7 @@ export const contextCorpus = [
         "taman hiburan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4130,7 +4830,7 @@ export const contextCorpus = [
         "taman botani"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4165,7 +4865,7 @@ export const contextCorpus = [
         "taman negara"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4235,7 +4935,7 @@ export const contextCorpus = [
         "penjaja jalanan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4270,7 +4970,7 @@ export const contextCorpus = [
         "pasar malam"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4305,7 +5005,7 @@ export const contextCorpus = [
         "pentas teater"
       ]
     },
-    "topic": "финансы",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4340,7 +5040,7 @@ export const contextCorpus = [
         "tirai pentas"
       ]
     },
-    "topic": "финансы",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4375,7 +5075,7 @@ export const contextCorpus = [
         "terjemahan sari kata"
       ]
     },
-    "topic": "финансы",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4410,7 +5110,7 @@ export const contextCorpus = [
         "masuk berbayar"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4444,7 +5144,7 @@ export const contextCorpus = [
         "pendaftaran peserta"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4479,7 +5179,7 @@ export const contextCorpus = [
         "tetamu program"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4514,7 +5214,7 @@ export const contextCorpus = [
         "atur cara acara"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4549,7 +5249,7 @@ export const contextCorpus = [
         "rehat antara bahagian"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4584,7 +5284,7 @@ export const contextCorpus = [
         "pengadil perlawanan"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4619,7 +5319,7 @@ export const contextCorpus = [
         "tendangan bola"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4654,7 +5354,7 @@ export const contextCorpus = [
         "pertahanan pasukan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4689,7 +5389,7 @@ export const contextCorpus = [
         "kapten pasukan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4724,7 +5424,7 @@ export const contextCorpus = [
         "jersi pasukan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4759,7 +5459,7 @@ export const contextCorpus = [
         "kecederaan atlet"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4794,7 +5494,7 @@ export const contextCorpus = [
         "permainan papan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4829,7 +5529,7 @@ export const contextCorpus = [
         "permainan komputer"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4864,7 +5564,7 @@ export const contextCorpus = [
         "laluan kembara"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4934,7 +5634,7 @@ export const contextCorpus = [
         "topeng renang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -4969,7 +5669,7 @@ export const contextCorpus = [
         "jaket keselamatan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5075,7 +5775,7 @@ export const contextCorpus = [
         "bahan licin"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5109,7 +5809,7 @@ export const contextCorpus = [
         "kain lembut"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5144,7 +5844,7 @@ export const contextCorpus = [
         "pakaian hangat"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5179,7 +5879,7 @@ export const contextCorpus = [
         "pakaian ringan"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5284,7 +5984,7 @@ export const contextCorpus = [
         "uniform tentera"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5319,7 +6019,7 @@ export const contextCorpus = [
         "rupa lucu"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5354,7 +6054,7 @@ export const contextCorpus = [
         "pisau dapur"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5389,7 +6089,7 @@ export const contextCorpus = [
         "papan pemotong"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5424,7 +6124,7 @@ export const contextCorpus = [
         "pinggan leper"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5459,7 +6159,7 @@ export const contextCorpus = [
         "pinggan kotor"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -5494,7 +6194,7 @@ export const contextCorpus = [
         "pinggan bersih"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6160,7 +6860,7 @@ export const contextCorpus = [
         "kesan sampingan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6195,7 +6895,7 @@ export const contextCorpus = [
         "jarum suntikan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6265,7 +6965,7 @@ export const contextCorpus = [
         "kerusi roda"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6335,7 +7035,7 @@ export const contextCorpus = [
         "keracunan makanan"
       ]
     },
-    "topic": "еда",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6473,7 +7173,7 @@ export const contextCorpus = [
         "ladang teh"
       ]
     },
-    "topic": "еда",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6543,7 +7243,7 @@ export const contextCorpus = [
         "pokok lada"
       ]
     },
-    "topic": "быт",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6578,7 +7278,7 @@ export const contextCorpus = [
         "ayam itik"
       ]
     },
-    "topic": "быт",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6613,7 +7313,7 @@ export const contextCorpus = [
         "tapak sulaiman"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "природа",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6648,7 +7348,7 @@ export const contextCorpus = [
         "program berita"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6681,7 +7381,7 @@ export const contextCorpus = [
         "rakaman siaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6750,7 +7450,7 @@ export const contextCorpus = [
         "salinan sandaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -6785,7 +7485,7 @@ export const contextCorpus = [
         "kata kunci"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7027,7 +7727,7 @@ export const contextCorpus = [
         "storan awan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7062,7 +7762,7 @@ export const contextCorpus = [
         "mesin daftar tunai"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7482,7 +8182,7 @@ export const contextCorpus = [
         "pengesahan pendapatan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7517,7 +8217,7 @@ export const contextCorpus = [
         "penyata pendapatan"
       ]
     },
-    "topic": "документы и общество",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7865,7 +8565,7 @@ export const contextCorpus = [
         "saham syarikat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7935,7 +8635,7 @@ export const contextCorpus = [
         "mesyuarat perniagaan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -7970,7 +8670,7 @@ export const contextCorpus = [
         "pelanggan projek"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8004,7 +8704,7 @@ export const contextCorpus = [
         "salinan kontrak"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8039,7 +8739,7 @@ export const contextCorpus = [
         "kontrak asal"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8073,7 +8773,7 @@ export const contextCorpus = [
         "reputasi perniagaan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8108,7 +8808,7 @@ export const contextCorpus = [
         "buku rekod pelajar"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8143,7 +8843,7 @@ export const contextCorpus = [
         "nombor pelajar"
       ]
     },
-    "topic": "путешествия",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8247,7 +8947,7 @@ export const contextCorpus = [
         "kerja makmal"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8527,7 +9227,7 @@ export const contextCorpus = [
         "pemprosesan data"
       ]
     },
-    "topic": "технологии",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8562,7 +9262,7 @@ export const contextCorpus = [
         "jadual data"
       ]
     },
-    "topic": "технологии",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8631,7 +9331,7 @@ export const contextCorpus = [
         "bahagian utama"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8665,7 +9365,7 @@ export const contextCorpus = [
         "bahagian penutup"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8733,7 +9433,7 @@ export const contextCorpus = [
         "perbincangan hasil"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8838,7 +9538,7 @@ export const contextCorpus = [
         "borang penilaian"
       ]
     },
-    "topic": "финансы",
+    "topic": "образование",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8908,7 +9608,7 @@ export const contextCorpus = [
         "perbicaraan mahkamah"
       ]
     },
-    "topic": "еда",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8943,7 +9643,7 @@ export const contextCorpus = [
         "mangsa jenayah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -8978,7 +9678,7 @@ export const contextCorpus = [
         "penyelesaian damai"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9187,7 +9887,7 @@ export const contextCorpus = [
         "yayasan kebajikan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9222,7 +9922,7 @@ export const contextCorpus = [
         "perkhidmatan sosial"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9257,7 +9957,7 @@ export const contextCorpus = [
         "jaminan sosial"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9327,7 +10027,7 @@ export const contextCorpus = [
         "pelan bangunan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9362,7 +10062,7 @@ export const contextCorpus = [
         "ruang tangga"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9502,7 +10202,7 @@ export const contextCorpus = [
         "rumah kayu"
       ]
     },
-    "topic": "природа",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9537,7 +10237,7 @@ export const contextCorpus = [
         "mangga kunci"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9607,7 +10307,7 @@ export const contextCorpus = [
         "pita pengukur"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9642,7 +10342,7 @@ export const contextCorpus = [
         "alat aras"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9781,7 +10481,7 @@ export const contextCorpus = [
         "kad imigresen"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9851,7 +10551,7 @@ export const contextCorpus = [
         "pegawai imigresen"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -9989,7 +10689,7 @@ export const contextCorpus = [
         "terjemahan notari"
       ]
     },
-    "topic": "финансы",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10164,7 +10864,7 @@ export const contextCorpus = [
         "nombor kes"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10199,7 +10899,7 @@ export const contextCorpus = [
         "keterangan kejadian"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10305,7 +11005,7 @@ export const contextCorpus = [
         "kaunter maklumat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10515,7 +11215,7 @@ export const contextCorpus = [
         "nombor kad"
       ]
     },
-    "topic": "путешествия",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10550,7 +11250,7 @@ export const contextCorpus = [
         "nombor penjejakan"
       ]
     },
-    "topic": "путешествия",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10585,7 +11285,7 @@ export const contextCorpus = [
         "penghantaran kurier"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10620,7 +11320,7 @@ export const contextCorpus = [
         "tarikh penghantaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10653,7 +11353,7 @@ export const contextCorpus = [
         "kos penghantaran"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -10968,7 +11668,7 @@ export const contextCorpus = [
         "nombor permohonan"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11283,7 +11983,7 @@ export const contextCorpus = [
         "pakaian kotor"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11318,7 +12018,7 @@ export const contextCorpus = [
         "pakaian bersih"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11388,7 +12088,7 @@ export const contextCorpus = [
         "air panas"
       ]
     },
-    "topic": "еда",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11423,7 +12123,7 @@ export const contextCorpus = [
         "air sejuk"
       ]
     },
-    "topic": "еда",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11458,7 +12158,7 @@ export const contextCorpus = [
         "tekanan air lemah"
       ]
     },
-    "topic": "еда",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11493,7 +12193,7 @@ export const contextCorpus = [
         "tekanan air kuat"
       ]
     },
-    "topic": "еда",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11528,7 +12228,7 @@ export const contextCorpus = [
         "bateri habis"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -11598,7 +12298,7 @@ export const contextCorpus = [
         "kunci simpanan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12086,7 +12786,7 @@ export const contextCorpus = [
         "kesesakan jalan raya"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12296,7 +12996,7 @@ export const contextCorpus = [
         "stesen kereta api"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12398,7 +13098,7 @@ export const contextCorpus = [
         "tambang perjalanan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12433,7 +13133,7 @@ export const contextCorpus = [
         "peta bandar"
       ]
     },
-    "topic": "природа",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12468,7 +13168,7 @@ export const contextCorpus = [
         "pusat bandar"
       ]
     },
-    "topic": "финансы",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12503,7 +13203,7 @@ export const contextCorpus = [
         "pinggir bandar"
       ]
     },
-    "topic": "природа",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12538,7 +13238,7 @@ export const contextCorpus = [
         "lintasan pejalan kaki"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12678,7 +13378,7 @@ export const contextCorpus = [
         "barang mahal"
       ]
     },
-    "topic": "путешествия",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12714,7 +13414,7 @@ export const contextCorpus = [
         "barang murah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12749,7 +13449,7 @@ export const contextCorpus = [
         "kad diskaun"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12889,7 +13589,7 @@ export const contextCorpus = [
         "warna lain"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12924,7 +13624,7 @@ export const contextCorpus = [
         "saiz lain"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12959,7 +13659,7 @@ export const contextCorpus = [
         "saiz kecil"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -12994,7 +13694,7 @@ export const contextCorpus = [
         "saiz besar"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13029,7 +13729,7 @@ export const contextCorpus = [
         "saiz sederhana"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13064,7 +13764,7 @@ export const contextCorpus = [
         "barang asli"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13099,7 +13799,7 @@ export const contextCorpus = [
         "resit pembelian"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13134,7 +13834,7 @@ export const contextCorpus = [
         "pembungkusan hadiah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13204,7 +13904,7 @@ export const contextCorpus = [
         "bekalan baharu"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13239,7 +13939,7 @@ export const contextCorpus = [
         "nombor pesanan"
       ]
     },
-    "topic": "путешествия",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13274,7 +13974,7 @@ export const contextCorpus = [
         "jadual kerja"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13309,7 +14009,7 @@ export const contextCorpus = [
         "syif malam"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13344,7 +14044,7 @@ export const contextCorpus = [
         "syif siang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13379,7 +14079,7 @@ export const contextCorpus = [
         "kenaikan gaji"
       ]
     },
-    "topic": "финансы",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13414,7 +14114,7 @@ export const contextCorpus = [
         "pekerja tetap"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13449,7 +14149,7 @@ export const contextCorpus = [
         "pekerja sementara"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13484,7 +14184,7 @@ export const contextCorpus = [
         "kerja jarak jauh"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13519,7 +14219,7 @@ export const contextCorpus = [
         "pengalaman kerja"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13554,7 +14254,7 @@ export const contextCorpus = [
         "agenda mesyuarat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13729,7 +14429,7 @@ export const contextCorpus = [
         "status perkahwinan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13764,7 +14464,7 @@ export const contextCorpus = [
         "tarikh lahir"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -13834,7 +14534,7 @@ export const contextCorpus = [
         "rakan sekerja"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14184,7 +14884,7 @@ export const contextCorpus = [
         "jalan kering"
       ]
     },
-    "topic": "путешествия",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14219,7 +14919,7 @@ export const contextCorpus = [
         "jalan basah"
       ]
     },
-    "topic": "путешествия",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14322,7 +15022,7 @@ export const contextCorpus = [
         "perbezaan masa"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14357,7 +15057,7 @@ export const contextCorpus = [
         "minggu bekerja"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "работа и бизнес",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14427,7 +15127,7 @@ export const contextCorpus = [
         "pertemuan pertama"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14462,7 +15162,7 @@ export const contextCorpus = [
         "pertemuan terakhir"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14497,7 +15197,7 @@ export const contextCorpus = [
         "pertemuan singkat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14532,7 +15232,7 @@ export const contextCorpus = [
         "pertemuan lama"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "культура и спорт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14672,7 +15372,7 @@ export const contextCorpus = [
         "saiz baju kemeja"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14707,7 +15407,7 @@ export const contextCorpus = [
         "pakaian basah"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14742,7 +15442,7 @@ export const contextCorpus = [
         "pakaian kering"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14777,7 +15477,7 @@ export const contextCorpus = [
         "noda pada pakaian"
       ]
     },
-    "topic": "быт",
+    "topic": "одежда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14916,7 +15616,7 @@ export const contextCorpus = [
         "rangkaian mudah alih"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -14950,7 +15650,7 @@ export const contextCorpus = [
         "rangkaian lemah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15090,7 +15790,7 @@ export const contextCorpus = [
         "mod kapal terbang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15509,7 +16209,7 @@ export const contextCorpus = [
         "ringgit Malaysia"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15544,7 +16244,7 @@ export const contextCorpus = [
         "kadar dolar"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15579,7 +16279,7 @@ export const contextCorpus = [
         "kadar euro"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "финансы",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15930,7 +16630,7 @@ export const contextCorpus = [
         "nombor polis"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -15965,7 +16665,7 @@ export const contextCorpus = [
         "nombor kecemasan"
       ]
     },
-    "topic": "путешествия",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16000,7 +16700,7 @@ export const contextCorpus = [
         "perkhidmatan penyelamat"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16034,7 +16734,7 @@ export const contextCorpus = [
         "barang hilang"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16069,7 +16769,7 @@ export const contextCorpus = [
         "kamera pengawasan"
       ]
     },
-    "topic": "еда",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16102,7 +16802,7 @@ export const contextCorpus = [
         "rakaman kamera"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "технологии",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16171,7 +16871,7 @@ export const contextCorpus = [
         "salinan laporan rasmi"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16206,7 +16906,7 @@ export const contextCorpus = [
         "kawasan berbahaya"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16240,7 +16940,7 @@ export const contextCorpus = [
         "kawasan persendirian"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16345,7 +17045,7 @@ export const contextCorpus = [
         "had cecair"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "путешествия",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16415,7 +17115,7 @@ export const contextCorpus = [
         "jurubahasa di balai polis"
       ]
     },
-    "topic": "финансы",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16553,7 +17253,7 @@ export const contextCorpus = [
         "dapur berkongsi"
       ]
     },
-    "topic": "еда",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16586,7 +17286,7 @@ export const contextCorpus = [
         "bilik mandi berkongsi"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16619,7 +17319,7 @@ export const contextCorpus = [
         "bilik mandi sendiri"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16689,7 +17389,7 @@ export const contextCorpus = [
         "apartmen yang senyap"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16724,7 +17424,7 @@ export const contextCorpus = [
         "apartmen yang bising"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "быт",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -16969,7 +17669,7 @@ export const contextCorpus = [
         "daging mentah"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "еда",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17074,7 +17774,7 @@ export const contextCorpus = [
         "sakit-sakit badan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17109,7 +17809,7 @@ export const contextCorpus = [
         "penurunan berat badan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17144,7 +17844,7 @@ export const contextCorpus = [
         "rehat di tempat tidur"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17179,7 +17879,7 @@ export const contextCorpus = [
         "sijil cuti sakit"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17249,7 +17949,7 @@ export const contextCorpus = [
         "tempoh rawatan"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17319,7 +18019,7 @@ export const contextCorpus = [
         "keputusan ujian"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "здоровье",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",
@@ -17389,7 +18089,7 @@ export const contextCorpus = [
         "fail peribadi"
       ]
     },
-    "topic": "общеупотребительное",
+    "topic": "документы и общество",
     "verified": true,
     "verification": {
       "basis": "provided_verified_gold",

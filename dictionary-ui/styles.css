@@ -130,3 +130,12 @@ mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; 
 .parallel-context small { color: #52645b; }
 .parallel-context mark, .sense-example mark, .sense-example-translation mark { background: #ffe59a; color: #162c24; border-radius: .15em; padding: .05em .12em; }
 .result-type { white-space: normal; overflow-wrap: anywhere; }
+
+.context-filters { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; padding: 0 1rem; }
+.context-filters label { display: grid; gap: .35rem; flex: 1 1 180px; color: #36564a; font-size: .85rem; font-weight: 600; }
+.context-filters select { width: 100%; min-width: 0; border: 1px solid #b8c9c1; border-radius: .65rem; padding: .7rem; background: #fffef8; color: #173c30; font: inherit; }
+.context-reset { min-height: 42px; padding: .65rem .9rem; background: #e5eee8; color: #173c30; border: 1px solid #b8c9c1; border-radius: .65rem; font: inherit; cursor: pointer; }
+.context-summary { padding: 0 1rem; color: #52645b; font-size: .85rem; line-height: 1.6; }
+.context-details { margin-top: .8rem; font-size: .85rem; line-height: 1.6; overflow-wrap: anywhere; }
+.context-details summary { cursor: pointer; color: #245a46; font-weight: 600; }
+.context-details p { margin: .6rem 0; }

@@ -2,21 +2,38 @@ import { normalizeHeadwordLoose, directionForQuery } from './search-core.js?v=4'
 
 const key = normalizeHeadwordLoose;
 const contained = (text, phrase) => (` ${text} `).includes(` ${phrase} `);
+const contextIndexes = new WeakMap();
+
+function contextIndex(corpus, lang) {
+  let indexes = contextIndexes.get(corpus);
+  if (!indexes) {
+    indexes = new Map();
+    contextIndexes.set(corpus, indexes);
+  }
+  if (!indexes.has(lang)) {
+    indexes.set(lang, corpus.map(entry => ({
+      entry, head: key(entry[lang]),
+      forms: [...new Set([entry[lang], ...(entry.forms[lang] || [])])]
+        .map(text => ({text, normalized:key(text)}))
+        .sort((a, b) => b.normalized.split(' ').length - a.normalized.split(' ').length || b.text.length - a.text.length),
+    })));
+  }
+  return indexes.get(lang);
+}
 
 // Only explicit, reviewed forms are accepted; heuristic stemming cannot invent a phrase.
-export function searchContextCorpus(corpus, query, direction = directionForQuery(query)) {
-  if (!direction || !key(query)) return [];
+export function searchContextCorpus(corpus, query, direction = directionForQuery(query), options = {}) {
+  if (!['ru-ms', 'ms-ru'].includes(direction) || !key(query)) return [];
   const lang = direction === 'ru-ms' ? 'ru' : 'ms';
   const other = lang === 'ru' ? 'ms' : 'ru';
   const q = key(query);
-  return corpus.flatMap(entry => {
-    if (!entry.verified) return [];
-    const forms = [...new Set([entry[lang], ...(entry.forms[lang] || [])])];
-    const matches = forms.filter(form => contained(q, key(form)));
-    if (!matches.length) return [];
-    matches.sort((a, b) => key(b).split(' ').length - key(a).split(' ').length || b.length - a.length);
-    const matched = matches[0];
-    const matchKind = q === key(entry[lang]) ? 0 : matches.some(form => key(form) === q) ? 1 : 2;
+  return contextIndex(corpus, lang).flatMap(({entry, head, forms}) => {
+    if (!entry.verified || (options.topic && entry.topic !== options.topic)) return [];
+    const matches = forms.filter(form => contained(q, form.normalized));
+    const related = !matches.length && options.includeRelated !== false && forms.some(form => contained(form.normalized, q));
+    if (!matches.length && !related) return [];
+    const matched = matches[0]?.text || entry[lang];
+    const matchKind = q === head ? 0 : matches.some(form => form.normalized === q) ? 1 : matches.length ? 2 : 3;
     return [{
       id: entry.id, type: 'entry', title: entry[lang], body: entry[other],
       verified: true, page: 0, domain: entry.topic,

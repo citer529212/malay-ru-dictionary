@@ -53,11 +53,44 @@ for (const row of contextCorpus) {
     }
   }
 }
+assert.equal(contextCorpus.reduce((sum, row) => sum + row.examples.length, 0), 600);
+const enriched = contextCorpus.filter(row => row.examples.length >= 2);
+assert.equal(enriched.length, 100);
+for (const row of enriched) {
+  assert.equal(new Set(row.examples.map(example => key(example.ru))).size, row.examples.length);
+  assert.equal(new Set(row.examples.map(example => key(example.ms))).size, row.examples.length);
+  for (const example of row.examples) {
+    assert.doesNotMatch(example.ru, /^Мы (?:говорим|обсуждаем)|^В статье упоминается/);
+  }
+}
+const waterResults = searchContextCorpus(contextCorpus, 'вода');
+assert.ok(waterResults.some(hit => hit.title === 'горячая вода' && hit._contextKind === 3));
+assert.ok(searchContextCorpus(contextCorpus, 'воды').some(hit => hit.title === 'питьевая вода'));
+assert.ok(searchContextCorpus(contextCorpus, 'air').some(hit => hit.title === 'air panas'));
+assert.equal(searchContextCorpus(contextCorpus, 'водопровод').some(hit => hit.title === 'горячая вода'), false);
+assert.equal(searchContextCorpus(contextCorpus, 'airborne').length, 0);
+assert.equal(searchContextCorpus(contextCorpus, 'вода', 'ru-ms', {includeRelated:false}).length, 0);
+assert.equal(searchContextCorpus(contextCorpus, 'вода', 'invalid').length, 0);
+const topicResults = searchContextCorpus(contextCorpus, 'номер', 'ru-ms', {topic:'путешествия'});
+assert.ok(topicResults.length > 0);
+assert.ok(topicResults.every(hit => hit.domain === 'путешествия'));
+assert.equal(searchContextCorpus(contextCorpus, 'номер комнаты', 'ru-ms', {topic:'одежда'}).length, 0);
+assert.equal(contextCorpus.find(row => row.ru === 'администрация города').topic, 'документы и общество');
+assert.equal(contextCorpus.find(row => row.ru === 'горный хребет').topic, 'природа');
+const waterGold = {id:'gold-water',title:'вода',body:'air',verified:true};
+assert.equal(mergeContextResults('вода',waterResults,[waterGold])[0].id,waterGold.id);
+const waterForm = {...waterGold, _exactRuKey:true};
+assert.equal(mergeContextResults('воды',searchContextCorpus(contextCorpus,'воды'),[waterForm])[0].id,waterForm.id);
+
 const fixtures = read('./context-fixtures.json');
 assert.ok(fixtures.length >= 100);
 for (const [ru, ms] of fixtures) {
   assert.equal(searchContextCorpus(contextCorpus, ru)[0].body, ms);
   assert.equal(searchContextCorpus(contextCorpus, ms)[0].body, ru);
+  const ruWord = ru.split(" ")[0];
+  const msWord = ms.split(" ")[0];
+  assert.ok(searchContextCorpus(contextCorpus, ruWord).some(hit => hit.title === ru && hit.body === ms), `Related Russian: ${ruWord} → ${ru}`);
+  assert.ok(searchContextCorpus(contextCorpus, msWord).some(hit => hit.title === ms && hit.body === ru), `Related Malay: ${msWord} → ${ms}`);
 }
 // Independent ranking, token boundaries, false positives and HTML-safety checks.
 const phrase = contextCorpus.find(r => r.ru === 'номер комнаты');
@@ -83,4 +116,4 @@ assert.equal(searchContextCorpus(contextCorpus,' НОМЕР, КОМНАТЫ! ')[
 assert.equal(highlightContext('berus gigitan','berus gigi'),'berus gigitan');
 assert.equal(highlightContext('<script>x</script> air mineral','air mineral'),'&lt;script&gt;x&lt;/script&gt; <mark>air mineral</mark>');
 assert.equal(highlightContext('Зубная щётка','зубная щетка'),'<mark>Зубная щётка</mark>');
-console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,protectedFiles,rankingAndSafety:'passed'},null,2));
+console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,relatedFixturesPerDirection:fixtures.length,protectedFiles,enrichedExpressions:enriched.length,relatedSearchAndTopics:'passed',rankingAndSafety:'passed'},null,2));

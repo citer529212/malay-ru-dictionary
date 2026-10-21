@@ -20,7 +20,7 @@
       <header class="hero card">
         <div class="hero-kicker">
           <p class="eyebrow">Kamus elektronik · Электронный словарь</p>
-          <p class="build-version">Версия 2026.10.21 · контекстный корпус · 500 выражений</p>
+          <p class="build-version">Версия 2026.10.21 · 500 выражений · 600 примеров</p>
         </div>
         <h1>Малайско-русский и русско-малайский электронный словарь</h1>
         <p class="hero-text">
@@ -88,6 +88,19 @@
             </div>
             <span id="resultCount" class="result-count">0</span>
           </div>
+          <div class="context-filters">
+            <label for="contextMode">Выдача
+              <select id="contextMode">
+                <option value="all">Весь словарь</option>
+                <option value="context">Только с примерами</option>
+              </select>
+            </label>
+            <label for="contextTopic">Тема примеров
+              <select id="contextTopic"><option value="">Все темы</option></select>
+            </label>
+            <button id="resetContextFilters" type="button" class="context-reset" hidden>Сбросить фильтры</button>
+          </div>
+          <p id="contextSummary" class="context-summary" aria-live="polite"></p>
           <ul id="resultList" class="result-list"></ul>
         </div>
       </section>
@@ -122,6 +135,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=context-1"></script>
+    <script type="module" src="./app.js?v=context-2"></script>
   </body>
 </html>
