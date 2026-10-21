@@ -687,3 +687,6 @@ console.log("Protected frequency baseline: 1000 entries");
 console.log("Modern no-upload interface checks: passed");
 console.log("Local missing-query export checks: passed");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);
+
+// Context corpus regressions also run in the existing publication QA workflow.
+await import('./qa_context_corpus.mjs');

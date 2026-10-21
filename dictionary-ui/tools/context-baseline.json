@@ -1,0 +1,16 @@
+{
+  "app.js": "b90d60e5fb652dfe9fa254a23b8bdc040c0acd6005cbaaa0ed33cc57d1a8c171",
+  "search-core.js": "7c8924640e32286fe245bc3e3d4e3bc36cd97ee7a3522284e7d296eed9b3ba37",
+  "styles.css": "707f823b58263697dd2384e5b497627dea4f71af6fa18d1b6195fc9157af4768",
+  "index.html": "52988462944f37f5145f2ea5ad93664aeb6788a63c4c438eda0a6eba5560b76d",
+  "README.md": "a166abc682e56074fe870792a6f932d95a4244db28ea66e60419125448cdf684",
+  "tools/build_offline_html.mjs": "89a0b6250576f88c49a759f1c92ff98bac3817fca33eb9823e0f34db275b0d93",
+  "data/dictionary_ru_ms_service.json": "94dec19f3eb51c3f018603b64ebae4df3dcd35529c53c53b9e3d40704f536566",
+  "data/dictionary_ru_ms_specialized_reverse.json": "af8cc974b6428e4d11ac8bd7fa6a3b0667e8534e9bb75f6b774fdc56e3f88d77",
+  "data/dictionary_ru_ms_gold.json": "55f189b3b3fa7a3aba4aa84960446dc5af16758fb11e86ea72dc302c1fcbf7d1",
+  "data/dictionary_curated.json": "9e5d897faf440f8e4a04096eebffbdad0c3508118082c22a82dec29868a45d35",
+  "data/dictionary_ms_ru_gold.json": "2fe8372dbbb9f2b42cc8886b93fcc65a78d965ec03bad75503225b4ce7030fae",
+  "data/dictionary_ru_ms_curated.json": "10b7b35a3d245e2fb9e4269ac848959c527a343ce3edc7fb0e8c370f890b04ae",
+  "data/dictionary_ru_ms.json": "4f1483296e9f0d073c0f1cb0e9e51dd427c4afce8fc23e8b902deb6dd04bc026",
+  "data/dictionary_ms_ru_specialized.json": "579a179a99fbea0a7c945e45408b7c3674596ef347a5294d60baace3e2886889"
+}

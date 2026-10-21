@@ -1,3 +1,5 @@
+import { contextCorpus } from './data/context-corpus.js';
+import { searchContextCorpus, mergeContextResults, highlightContext } from './context-core.js';
 import {
   detectQueryScript,
   directionForQuery,
@@ -1529,13 +1531,17 @@ function renderBestAnswer() {
       if (sense.example) {
         const example = document.createElement("p");
         example.className = "sense-example";
-        example.textContent = sense.example;
+        example.innerHTML = hit._context
+          ? highlightContext(sense.example, hit._context.examples[index][`${hit._contextLanguage}Expression`])
+          : highlightText(sense.example, query);
         senseItem.append(example);
       }
       if (sense.exampleTranslation) {
         const exampleTranslation = document.createElement("p");
         exampleTranslation.className = "sense-example-translation";
-        exampleTranslation.textContent = sense.exampleTranslation;
+        exampleTranslation.innerHTML = hit._context
+          ? highlightContext(sense.exampleTranslation, hit._context.examples[index][`${hit._contextLanguage === "ru" ? "ms" : "ru"}Expression`])
+          : highlightText(sense.exampleTranslation, query);
         senseItem.append(exampleTranslation);
       }
       ui.answerDetails.append(senseItem);
@@ -1633,6 +1639,23 @@ function renderResults() {
         : "словарная статья";
 
     item.append(title, desc, type);
+    if (result._context) {
+      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение"][result._contextKind]}`;
+      const context = document.createElement("div");
+      context.className = "parallel-context";
+      for (const example of result._context.examples) {
+        for (const lang of [result._contextLanguage, result._contextLanguage === "ru" ? "ms" : "ru"]) {
+          const sentence = document.createElement("p");
+          sentence.lang = lang;
+          sentence.innerHTML = highlightContext(example[lang], example[`${lang}Expression`]);
+          context.append(sentence);
+        }
+      }
+      const source = document.createElement("small");
+      source.textContent = "Учебный пример · перевод из проверенной базы";
+      context.append(source);
+      item.append(context);
+    }
     if (result.page > 0) {
       const page = document.createElement("span");
       page.className = "result-page";
@@ -1677,8 +1700,11 @@ function runSearch() {
   const query = ui.searchInput.value.trim();
   state.activeQuery = query;
   const groupedEntries = query ? groupEntryResults(searchEntries(query), query) : [];
-  state.bestAnswer = computeBestAnswer(query, groupedEntries);
-  state.results = query.length >= 2 ? mergeResults(query, groupedEntries) : [];
+  const contextHits = searchContextCorpus(contextCorpus, query, state.direction);
+  state.results = query.length >= 2
+    ? mergeContextResults(query, contextHits, mergeResults(query, groupedEntries)).slice(0, MAX_RESULTS) : [];
+  const first = state.results[0];
+  state.bestAnswer = first?._context ? first : computeBestAnswer(query, groupedEntries);
   ui.resultList.dataset.candidateCount = String(state.lastCandidateCount);
 
   if (query) {

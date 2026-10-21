@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const toolDir = path.dirname(fileURLToPath(import.meta.url));
 const projectDir = path.resolve(toolDir, "..");
-const outputDir = path.resolve(projectDir, "..", "Dictionary-Offline-HTML");
+const outputDir = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(projectDir, "..", "Dictionary-Offline-HTML");
 const dataFiles = [
   "data/dictionary_ms_ru_gold.json",
   "data/dictionary_ms_ru_specialized.json",
@@ -53,7 +53,8 @@ function dataId(relativePath) {
 let html = read("index.html");
 const css = read("styles.css");
 const searchCore = read("search-core.js").replace(/\bexport\s+(?=function\s)/g, "");
-const app = read("app.js").replace(/^import\s*\{[\s\S]*?\}\s*from\s*"\.\/search-core\.js\?v=\d+";\s*/u, "");
+const contextCode = read("data/context-corpus.js").replace("export const contextCorpus", "const contextCorpus") + "\n" + read("context-core.js").replace(/^import[^\n]+\n/gm, "").replace(/\bexport\s+(?=function\s)/g, "");
+const app = contextCode + "\n" + read("app.js").replace(/^import[^\n]+;\n/gm, "").replace(/^import\s*\{[\s\S]*?\}\s*from\s*"\.\/search-core\.js\?v=\d+";\s*/u, "");
 
 const dataPayloads = new Map(
   dataFiles

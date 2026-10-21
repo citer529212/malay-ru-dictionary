@@ -1,0 +1,402 @@
+[
+  [
+    "зубной врач",
+    "doktor gigi"
+  ],
+  [
+    "зубная щетка",
+    "berus gigi"
+  ],
+  [
+    "сильный дождь",
+    "hujan lebat"
+  ],
+  [
+    "стиральная машина",
+    "mesin basuh"
+  ],
+  [
+    "номер комнаты",
+    "nombor bilik"
+  ],
+  [
+    "солнцезащитный крем",
+    "krim pelindung matahari"
+  ],
+  [
+    "цена билета",
+    "harga tiket"
+  ],
+  [
+    "страница сайта",
+    "halaman web"
+  ],
+  [
+    "домашнее животное",
+    "haiwan peliharaan"
+  ],
+  [
+    "кокосовая пальма",
+    "pokok kelapa"
+  ],
+  [
+    "банановое дерево",
+    "pokok pisang"
+  ],
+  [
+    "круг друзей",
+    "kalangan kawan"
+  ],
+  [
+    "питьевая вода",
+    "air minuman"
+  ],
+  [
+    "минеральная вода",
+    "air mineral"
+  ],
+  [
+    "замочная скважина",
+    "lubang kunci"
+  ],
+  [
+    "ручка двери",
+    "pemegang pintu"
+  ],
+  [
+    "моющее средство",
+    "bahan pencuci"
+  ],
+  [
+    "веревка для белья",
+    "tali jemuran"
+  ],
+  [
+    "гладильная доска",
+    "papan seterika"
+  ],
+  [
+    "размер одежды",
+    "saiz pakaian"
+  ],
+  [
+    "тема письма",
+    "tajuk e-mel"
+  ],
+  [
+    "карта местности",
+    "peta kawasan"
+  ],
+  [
+    "окружающая среда",
+    "alam sekitar"
+  ],
+  [
+    "правило дорожного движения",
+    "peraturan lalu lintas"
+  ],
+  [
+    "свидетельство о рождении",
+    "sijil kelahiran"
+  ],
+  [
+    "свидетельство о браке",
+    "sijil perkahwinan"
+  ],
+  [
+    "перевод денег",
+    "pemindahan wang"
+  ],
+  [
+    "дебетовая карта",
+    "kad debit"
+  ],
+  [
+    "кредитная карта",
+    "kad kredit"
+  ],
+  [
+    "обеденный перерыв",
+    "waktu rehat makan tengah hari"
+  ],
+  [
+    "доставка товара",
+    "penghantaran barang"
+  ],
+  [
+    "запасное колесо",
+    "tayar ganti"
+  ],
+  [
+    "ремень безопасности",
+    "tali pinggang keledar"
+  ],
+  [
+    "дорожный знак",
+    "papan tanda jalan"
+  ],
+  [
+    "кольцевая дорога",
+    "jalan lingkaran"
+  ],
+  [
+    "опасный поворот",
+    "selekoh berbahaya"
+  ],
+  [
+    "пожарная машина",
+    "kereta bomba"
+  ],
+  [
+    "запасной выход",
+    "pintu keluar kecemasan"
+  ],
+  [
+    "номер телефона",
+    "nombor telefon"
+  ],
+  [
+    "социальная сеть",
+    "rangkaian sosial"
+  ],
+  [
+    "корень слова",
+    "akar kata"
+  ],
+  [
+    "форма слова",
+    "bentuk kata"
+  ],
+  [
+    "начальная школа",
+    "sekolah rendah"
+  ],
+  [
+    "средняя школа",
+    "sekolah menengah"
+  ],
+  [
+    "расписание занятий",
+    "jadual kelas"
+  ],
+  [
+    "домашнее задание",
+    "kerja rumah"
+  ],
+  [
+    "папка документов",
+    "folder dokumen"
+  ],
+  [
+    "перевод документа",
+    "terjemahan dokumen"
+  ],
+  [
+    "вид на жительство",
+    "permit tinggal"
+  ],
+  [
+    "регистрационный номер",
+    "nombor pendaftaran"
+  ],
+  [
+    "анкета заявителя",
+    "borang pemohon"
+  ],
+  [
+    "очередной номер",
+    "nombor giliran"
+  ],
+  [
+    "служба поддержки",
+    "khidmat sokongan"
+  ],
+  [
+    "техническая поддержка",
+    "sokongan teknikal"
+  ],
+  [
+    "жалобная книга",
+    "buku aduan"
+  ],
+  [
+    "форма заявки",
+    "borang permohonan"
+  ],
+  [
+    "печать организации",
+    "cap organisasi"
+  ],
+  [
+    "мастер по ремонту",
+    "tukang baiki"
+  ],
+  [
+    "открытая площадка",
+    "kawasan terbuka"
+  ],
+  [
+    "домашняя сеть",
+    "rangkaian rumah"
+  ],
+  [
+    "скорость интернета",
+    "kelajuan internet"
+  ],
+  [
+    "слабый сигнал",
+    "isyarat lemah"
+  ],
+  [
+    "приезд мастера",
+    "kedatangan tukang"
+  ],
+  [
+    "отдел продаж",
+    "bahagian jualan"
+  ],
+  [
+    "служба доставки",
+    "perkhidmatan penghantaran"
+  ],
+  [
+    "товарный чек",
+    "resit barang"
+  ],
+  [
+    "электронный чек",
+    "resit elektronik"
+  ],
+  [
+    "новый товар",
+    "barang baru"
+  ],
+  [
+    "инструкция по применению",
+    "arahan penggunaan"
+  ],
+  [
+    "свободный номер",
+    "bilik kosong"
+  ],
+  [
+    "занятый номер",
+    "bilik penuh"
+  ],
+  [
+    "двухместный номер",
+    "bilik dua orang"
+  ],
+  [
+    "одноместный номер",
+    "bilik seorang"
+  ],
+  [
+    "вид на море",
+    "pemandangan laut"
+  ],
+  [
+    "уборка номера",
+    "pembersihan bilik"
+  ],
+  [
+    "дополнительная кровать",
+    "katil tambahan"
+  ],
+  [
+    "детская кроватка",
+    "katil bayi"
+  ],
+  [
+    "ресторан гостиницы",
+    "restoran hotel"
+  ],
+  [
+    "стойка регистрации",
+    "kaunter pendaftaran"
+  ],
+  [
+    "чистое белье",
+    "kain bersih"
+  ],
+  [
+    "поздний выезд",
+    "daftar keluar lewat"
+  ],
+  [
+    "ранний заезд",
+    "daftar masuk awal"
+  ],
+  [
+    "гость отеля",
+    "tetamu hotel"
+  ],
+  [
+    "основное блюдо",
+    "hidangan utama"
+  ],
+  [
+    "еда навынос",
+    "makanan bungkus"
+  ],
+  [
+    "доставка еды",
+    "penghantaran makanan"
+  ],
+  [
+    "регистрация на рейс",
+    "daftar masuk penerbangan"
+  ],
+  [
+    "стойка регистрации рейса",
+    "kaunter daftar masuk"
+  ],
+  [
+    "выход на посадку",
+    "pintu berlepas"
+  ],
+  [
+    "номер выхода",
+    "nombor pintu"
+  ],
+  [
+    "ручная кладь",
+    "bagasi tangan"
+  ],
+  [
+    "багажная лента",
+    "tali sawat bagasi"
+  ],
+  [
+    "таможенная декларация",
+    "pengisytiharan kastam"
+  ],
+  [
+    "зеленый коридор",
+    "lorong hijau"
+  ],
+  [
+    "красный коридор",
+    "lorong merah"
+  ],
+  [
+    "нижняя полка",
+    "tempat tidur bawah"
+  ],
+  [
+    "верхняя полка",
+    "tempat tidur atas"
+  ],
+  [
+    "билетная касса",
+    "kaunter tiket"
+  ],
+  [
+    "проверка билетов",
+    "pemeriksaan tiket"
+  ],
+  [
+    "карта метро",
+    "peta metro"
+  ]
+]

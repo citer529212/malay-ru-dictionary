@@ -123,3 +123,10 @@ mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; 
   .result-list, .source-grid { grid-template-columns: 1fr; }
   .result-list { max-height: 600px; }
 }
+
+/* Parallel contexts preserve readable line lengths on narrow screens. */
+.parallel-context { margin-top: .8rem; padding: .8rem; background: #f2f7f4; border-radius: .7rem; overflow-wrap: anywhere; }
+.parallel-context p { margin: 0 0 .55rem; line-height: 1.65; }
+.parallel-context small { color: #52645b; }
+.parallel-context mark, .sense-example mark, .sense-example-translation mark { background: #ffe59a; color: #162c24; border-radius: .15em; padding: .05em .12em; }
+.result-type { white-space: normal; overflow-wrap: anywhere; }
