@@ -483,7 +483,7 @@ function validateModernInterface() {
     appSource,
     /if \(!goldEntries\.length && !specializedEntries\.length && !curatedEntries\.length\)/
   );
-  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-17-v6-17"/);
+  assert.match(appSource, /DICTIONARY_DATA_VERSION = "2026-10-21-v6-18"/);
   assert.match(appSource, /answerDetails: document\.getElementById\("answerDetails"\)/);
   assert.match(appSource, /structuredSenses\.forEach/);
   assert.match(appSource, /cache: "force-cache"/);
@@ -591,6 +591,53 @@ function validatePhrasebookLayer(ruEntries, msEntries) {
   }
 }
 
+function validateClothingAndFoodLayer(ruEntries, msEntries) {
+  const ruByTitle = new Map(ruEntries.map((entry) => [normalize(entry.title), entry]));
+  const protectedAlternatives = new Map([
+    ["рубашка", "baju"],
+    ["брюки", "seluar"],
+    ["курица", "ayam"],
+  ]);
+  const thematic = msEntries.filter((entry) => entry.domain === "одежда" || entry.domain === "еда");
+  const counts = thematic.reduce((result, entry) => {
+    result[entry.domain] = (result[entry.domain] || 0) + 1;
+    return result;
+  }, {});
+  assert.equal(counts["одежда"], 100, "Incomplete clothing layer");
+  assert.equal(counts["еда"], 100, "Incomplete food layer");
+
+  for (const entry of thematic) {
+    const reverse = ruByTitle.get(normalize(entry.body));
+    assert.ok(reverse, `Missing Russian thematic entry: ${entry.body}`);
+    const translations = String(reverse.body).split(";").map(normalize);
+    const protectedTranslation = protectedAlternatives.get(normalize(entry.body));
+    assert.ok(
+      translations.includes(normalize(entry.title)) || translations.includes(protectedTranslation),
+      `Broken thematic pair: ${entry.body}`,
+    );
+    assert.ok(entry.verified && reverse.verified, `Unverified thematic pair: ${entry.title}`);
+  }
+
+  const checks = [
+    ["нижнее белье", "pakaian dalam"],
+    ["примерочная", "bilik persalinan"],
+    ["размер обуви", "saiz kasut"],
+    ["водонепроницаемая ткань", "kain kalis air"],
+    ["короткий рукав", "lengan pendek"],
+    ["рис готовый", "nasi"],
+    ["рис сырой", "beras"],
+    ["репчатый лук", "bawang besar"],
+    ["халяльная еда", "makanan halal"],
+    ["заказать навынос", "pesan untuk dibawa pulang"],
+  ];
+  const msByTitle = new Map(msEntries.map((entry) => [normalize(entry.title), entry]));
+  for (const [russian, malay] of checks) {
+    const translations = String(ruByTitle.get(russian)?.body || "").split(";").map(normalize);
+    assert.ok(translations.includes(normalize(malay)), `Wrong thematic translation: ${russian}`);
+    assert.equal(normalize(msByTitle.get(normalize(malay))?.body), normalize(russian), `Wrong thematic reverse: ${malay}`);
+  }
+}
+
 const gold = readJson("dictionary_ru_ms_gold.json").entries;
 const msRuGold = readJson("dictionary_ms_ru_gold.json").entries;
 const specializedPayload = readJson("dictionary_ms_ru_specialized.json");
@@ -605,6 +652,7 @@ validateFixtures(goldByTitle);
 validateRussianQueryNormalization();
 validateMalayGold(msRuGold);
 validatePhrasebookLayer(gold, msRuGold);
+validateClothingAndFoodLayer(gold, msRuGold);
 validateContextualSenses(gold, msRuGold);
 const structuredEntryCount = validateStructuredEntries(gold, msRuGold);
 const specializedAnomalies = validateSpecializedDocx(specializedMsRu, specializedPayload);
@@ -628,6 +676,7 @@ console.log("Russian morphology and safe typo checks: 9");
 console.log("Malay morphology checks: 9");
 console.log("Contextual phrase checks: 31");
 console.log("Bidirectional phrasebook checks: 100+10");
+console.log("Clothing and food checks: 200+10");
 console.log(`Specialized DOCX entries: ${specializedMsRu.length}`);
 console.log(`Corrected source anomalies remaining: ${specializedAnomalies}`);
 console.log(`Specialized reverse entries: ${specializedRuMs.length}`);
