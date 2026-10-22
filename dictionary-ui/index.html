@@ -103,8 +103,20 @@
           </div>
           <div class="context-library-tools">
             <button id="exportContextFavorites" type="button" disabled>Скачать подборку JSON</button>
+            <button id="importContextFavorites" type="button">Восстановить из JSON</button>
+            <input id="contextImportFile" type="file" accept=".json,application/json" hidden />
             <span id="contextFavoriteStatus" role="status">Сохранённые выражения остаются на этом устройстве.</span>
           </div>
+          <section id="contextImportPreview" class="context-import-preview" aria-labelledby="contextImportHeading" hidden>
+            <h3 id="contextImportHeading">Восстановление подборки</h3>
+            <p id="contextImportSummary" role="status"></p>
+            <ul id="contextImportExamples"></ul>
+            <p>Будут добавлены только выражения из текущего корпуса. Сохранённые записи останутся в подборке.</p>
+            <div class="context-import-actions">
+              <button id="applyContextImport" type="button">Добавить в подборку</button>
+              <button id="cancelContextImport" type="button">Отмена</button>
+            </div>
+          </section>
           <p id="contextSummary" class="context-summary" aria-live="polite"></p>
           <ul id="resultList" class="result-list"></ul>
           <div class="result-paging">
@@ -144,6 +156,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=context-4"></script>
+    <script type="module" src="./app.js?v=context-5"></script>
   </body>
 </html>

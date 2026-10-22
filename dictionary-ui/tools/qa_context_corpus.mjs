@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { contextCorpus } from '../data/context-corpus.js';
-import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites } from '../context-core.js';
+import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites, planContextFavoritesImport } from '../context-core.js';
 import { directionForQuery, normalizeHeadwordLoose as key } from '../search-core.js';
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const gold = read('../data/dictionary_ru_ms_gold.json').entries;
@@ -110,6 +110,42 @@ assert.ok(exportedSelection.entries.every(row=>row.verification.sourceEntryId));
 assert.deepEqual(JSON.parse(serializeContextFavorites([],contextCorpus)).entries,[]);
 assert.equal(JSON.stringify(contextCorpus),unchangedCorpus);
 
+const fullSelectionText = serializeContextFavorites(contextCorpus.map(row=>row.id),contextCorpus);
+assert.equal(planContextFavoritesImport(fullSelectionText,contextCorpus).acceptedIds.length,500);
+const selectionText = serializeContextFavorites(['context-0005','context-0015'],contextCorpus);
+const selectionPayload = JSON.parse(selectionText);
+const importPlan = planContextFavoritesImport(selectionText,contextCorpus,['context-0005','context-0001']);
+assert.deepEqual(importPlan.acceptedIds,['context-0005','context-0015']);
+assert.deepEqual(importPlan.ids,['context-0005','context-0001','context-0015']);
+assert.equal(importPlan.addedCount,1);
+assert.equal(importPlan.alreadySavedCount,1);
+assert.equal(planContextFavoritesImport(selectionText,contextCorpus,importPlan.ids).addedCount,0);
+const noisyImport = {...selectionPayload,entries:[...selectionPayload.entries, selectionPayload.entries[0],
+  {...selectionPayload.entries[1],id:'unknown-id'}, {...selectionPayload.entries[0],ms:'tampered'},null,{id:1}]};
+const noisyPlan = planContextFavoritesImport(JSON.stringify(noisyImport),contextCorpus);
+assert.deepEqual(noisyPlan.acceptedIds,['context-0005','context-0015']);
+assert.equal(noisyPlan.totalCount,7);
+assert.equal(noisyPlan.duplicateCount,1);
+assert.equal(noisyPlan.unknownCount,1);
+assert.equal(noisyPlan.conflictCount,1);
+assert.equal(noisyPlan.invalidCount,2);
+assert.throws(()=>planContextFavoritesImport('{',contextCorpus),/JSON/);
+assert.throws(()=>planContextFavoritesImport('null',contextCorpus),/поддерживаемый/);
+assert.throws(()=>planContextFavoritesImport(JSON.stringify({...selectionPayload,schemaVersion:2}),contextCorpus),/поддерживаемый/);
+assert.throws(()=>planContextFavoritesImport(JSON.stringify({...selectionPayload,source:'other-corpus'}),contextCorpus),/поддерживаемый/);
+assert.throws(()=>planContextFavoritesImport(JSON.stringify({...selectionPayload,entries:{}}),contextCorpus),/поддерживаемый/);
+assert.throws(()=>planContextFavoritesImport(JSON.stringify({...selectionPayload,entries:Array(2001).fill(null)}),contextCorpus),/2000/);
+assert.throws(()=>planContextFavoritesImport('я'.repeat(1_000_001),contextCorpus),/2 МБ/);
+assert.deepEqual(planContextFavoritesImport('\uFEFF'+selectionText,contextCorpus).acceptedIds,['context-0005','context-0015']);
+const untrustedExamples = {...selectionPayload,entries:[{...selectionPayload.entries[0],examples:[{ru:'<script>external()</script>'}]}]};
+assert.deepEqual(planContextFavoritesImport(JSON.stringify(untrustedExamples),contextCorpus).acceptedIds,['context-0005']);
+assert.equal(JSON.stringify(contextCorpus),unchangedCorpus);
+for(const changed of [{verified:false},{ru:'<img src=x>'},{verification:{sourceEntryId:'other'}}]) {
+ const rejected=planContextFavoritesImport(JSON.stringify({...selectionPayload,entries:[{...selectionPayload.entries[0],...changed}]}),contextCorpus);
+ assert.equal(rejected.acceptedIds.length,0);
+ assert.equal(rejected.conflictCount,1);
+}
+
 const exampleSearches = [
   ['застрял', 'замочная скважина'], ['tersangkut', 'lubang kunci'],
   ['прошлой неделе', 'домашний интернет'], ['sejak semalam', 'internet rumah'],
@@ -168,4 +204,4 @@ assert.equal(searchContextCorpus(contextCorpus,' НОМЕР, КОМНАТЫ! ')[
 assert.equal(highlightContext('berus gigitan','berus gigi'),'berus gigitan');
 assert.equal(highlightContext('<script>x</script> air mineral','air mineral'),'&lt;script&gt;x&lt;/script&gt; <mark>air mineral</mark>');
 assert.equal(highlightContext('Зубная щётка','зубная щетка'),'<mark>Зубная щётка</mark>');
-console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,relatedFixturesPerDirection:fixtures.length,protectedFiles,enrichedExpressions:enriched.length,relatedSearchAndTopics:'passed',exampleSearchAndOrdering:'passed',catalogueAndFavorites:'passed',rankingAndSafety:'passed'},null,2));
+console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,relatedFixturesPerDirection:fixtures.length,protectedFiles,enrichedExpressions:enriched.length,relatedSearchAndTopics:'passed',exampleSearchAndOrdering:'passed',catalogueAndFavorites:'passed',selectionImport:'passed',rankingAndSafety:'passed'},null,2));

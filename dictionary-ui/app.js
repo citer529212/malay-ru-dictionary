@@ -1,5 +1,5 @@
 import { contextCorpus } from './data/context-corpus.js';
-import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites } from './context-core.js';
+import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites, planContextFavoritesImport } from './context-core.js';
 import {
   detectQueryScript,
   directionForQuery,
@@ -31,6 +31,13 @@ const ui = {
   contextSummary: document.getElementById("contextSummary"),
   savedContextOption: document.getElementById("savedContextOption"),
   exportContextFavorites: document.getElementById("exportContextFavorites"),
+  importContextFavorites: document.getElementById("importContextFavorites"),
+  contextImportFile: document.getElementById("contextImportFile"),
+  contextImportPreview: document.getElementById("contextImportPreview"),
+  contextImportSummary: document.getElementById("contextImportSummary"),
+  contextImportExamples: document.getElementById("contextImportExamples"),
+  applyContextImport: document.getElementById("applyContextImport"),
+  cancelContextImport: document.getElementById("cancelContextImport"),
   contextFavoriteStatus: document.getElementById("contextFavoriteStatus"),
   shownResultCount: document.getElementById("shownResultCount"),
   showMoreResults: document.getElementById("showMoreResults"),
@@ -81,6 +88,7 @@ const state = {
   visibleResultCount: RESULT_PAGE_SIZE,
   resetResultScroll: false,
   contextFavorites: new Set(),
+  pendingContextImport: null,
   selectedResultId: null,
   bestAnswer: null,
   searchMode: "entries",
@@ -112,6 +120,7 @@ function loadContextFavorites() {
 function updateContextFavoritesControls() {
   ui.savedContextOption.textContent = `Сохранённые (${state.contextFavorites.size})`;
   ui.exportContextFavorites.disabled = state.contextFavorites.size === 0;
+  if (state.pendingContextImport) renderContextImportPreview();
 }
 
 function toggleContextFavorite(id, button) {
@@ -141,6 +150,91 @@ function exportContextFavorites() {
   link.download = "dictionary-context-selection.json";
   link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+let contextImportSequence = 0;
+
+function cancelContextImport() {
+  contextImportSequence++;
+  state.pendingContextImport = null;
+  ui.contextImportPreview.hidden = true;
+  ui.contextImportFile.value = "";
+  ui.importContextFavorites.disabled = false;
+}
+
+function renderContextImportPreview() {
+  const plan = state.pendingContextImport;
+  if (!plan) return;
+  const addedCount = plan.acceptedIds.filter(id => !state.contextFavorites.has(id)).length;
+  const alreadySaved = plan.acceptedIds.length - addedCount;
+  const notes = [
+    plan.duplicateCount ? `Дубликатов в файле: ${plan.duplicateCount}.` : "",
+    plan.unknownCount ? `Неизвестных: ${plan.unknownCount}.` : "",
+    plan.conflictCount ? `Несовпадающих переводов или источников: ${plan.conflictCount}.` : "",
+    plan.invalidCount ? `Некорректных записей: ${plan.invalidCount}.` : "",
+  ].filter(Boolean);
+  ui.contextImportSummary.textContent = `Совпало с корпусом: ${plan.acceptedIds.length}. Новых для подборки: ${addedCount}. Уже сохранено: ${alreadySaved}. ${notes.join(" ")}`.trim();
+  ui.contextImportExamples.innerHTML = "";
+  for (const id of plan.acceptedIds.slice(0, 5)) {
+    const row = contextCorpus.find(entry => entry.id === id);
+    const item = document.createElement("li");
+    item.textContent = `${row.ru} → ${row.ms}`;
+    ui.contextImportExamples.append(item);
+  }
+  if (plan.acceptedIds.length > 5) {
+    const remaining = document.createElement("li");
+    remaining.textContent = `Ещё выражений: ${plan.acceptedIds.length - 5}.`;
+    ui.contextImportExamples.append(remaining);
+  }
+  ui.applyContextImport.textContent = `Добавить выражений: ${addedCount}`;
+  ui.applyContextImport.disabled = addedCount === 0;
+  ui.contextImportPreview.hidden = false;
+}
+
+async function readContextImport() {
+  const sequence = ++contextImportSequence;
+  state.pendingContextImport = null;
+  ui.contextImportPreview.hidden = true;
+  const file = ui.contextImportFile.files?.[0];
+  if (!file) return;
+  ui.importContextFavorites.disabled = true;
+  try {
+    if (file.size > 2_000_000) throw new Error("Файл подборки должен быть не больше 2 МБ.");
+    const text = await file.text();
+    if (sequence !== contextImportSequence) return;
+    state.pendingContextImport = planContextFavoritesImport(text, contextCorpus, [...state.contextFavorites]);
+    renderContextImportPreview();
+    ui.contextFavoriteStatus.textContent = "Проверьте подборку перед добавлением.";
+  } catch (error) {
+    if (sequence === contextImportSequence) ui.contextFavoriteStatus.textContent = error.message || "Не удалось прочитать файл подборки.";
+  } finally {
+    if (sequence === contextImportSequence) {
+      ui.importContextFavorites.disabled = false;
+      ui.contextImportFile.value = "";
+    }
+  }
+}
+
+function applyContextImport() {
+  const plan = state.pendingContextImport;
+  if (!plan) return;
+  // Rebase on the current selection in case it changed while the preview was open.
+  const ids = normalizeContextFavorites([...state.contextFavorites, ...plan.acceptedIds], contextCorpus);
+  const addedCount = ids.length - state.contextFavorites.size;
+  if (!addedCount) return;
+  try { localStorage.setItem(CONTEXT_FAVORITES_KEY, JSON.stringify(ids)); }
+  catch {
+    ui.contextFavoriteStatus.textContent = "Браузер не разрешил сохранить подборку. Предыдущие записи не изменены.";
+    return;
+  }
+  state.contextFavorites = new Set(ids);
+  cancelContextImport();
+  updateContextFavoritesControls();
+  ui.contextMode.value = "saved";
+  ui.contextTopic.value = "";
+  ui.searchInput.value = "";
+  void requestSearch();
+  ui.contextFavoriteStatus.textContent = `Добавлено выражений: ${addedCount}. Всего в подборке: ${ids.length}.`;
 }
 
 function loadMissingQueries() {
@@ -251,6 +345,8 @@ async function switchDirection(nextDirection, options = {}) {
 }
 
 async function requestSearch() {
+  clearTimeout(inputDebounceId);
+  inputDebounceId = null;
   const query = ui.searchInput.value.trim();
   const inferredDirection = directionForQuery(query);
   if (inferredDirection && inferredDirection !== state.direction) {
@@ -268,6 +364,8 @@ ui.directionSwitch.addEventListener("click", async (event) => {
   if (!button || button.disabled) {
     return;
   }
+  clearTimeout(inputDebounceId);
+  inputDebounceId = null;
   await switchDirection(button.dataset.direction, { runAfter: true, automatic: false });
 });
 
@@ -1795,6 +1893,13 @@ function renderSuggestions(query) {
 
 function initializeContextFilters() {
   ui.exportContextFavorites.addEventListener("click", exportContextFavorites);
+  ui.importContextFavorites.addEventListener("click", () => {
+    ui.contextImportFile.value = "";
+    ui.contextImportFile.click();
+  });
+  ui.contextImportFile.addEventListener("change", () => void readContextImport());
+  ui.applyContextImport.addEventListener("click", applyContextImport);
+  ui.cancelContextImport.addEventListener("click", cancelContextImport);
   ui.showMoreResults.addEventListener("click", () => {
     state.visibleResultCount += RESULT_PAGE_SIZE;
     renderResults();
@@ -1809,16 +1914,16 @@ function initializeContextFilters() {
   }
   ui.contextMode.addEventListener("change", () => {
     if (ui.contextMode.value === "all") ui.contextTopic.value = "";
-    runSearch();
+    void requestSearch();
   });
   ui.contextTopic.addEventListener("change", () => {
     if (ui.contextTopic.value && ui.contextMode.value === "all") ui.contextMode.value = "context";
-    runSearch();
+    void requestSearch();
   });
   ui.resetContextFilters.addEventListener("click", () => {
     ui.contextMode.value = "all";
     ui.contextTopic.value = "";
-    runSearch();
+    void requestSearch();
   });
 }
 

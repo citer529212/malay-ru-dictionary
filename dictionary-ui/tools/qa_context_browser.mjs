@@ -108,6 +108,13 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  assert.ok(await page.locator('#resultList > li').first().locator('details').evaluate(element=>element.open));
  await page.locator('#resultList > li').first().scrollIntoViewIfNeeded();
  await page.screenshot({path:`${outputDir}/${viewport.width}-source.png`,fullPage:false});
+ await page.locator('#searchInput').fill('air panas');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#directionSwitch .active').dataset.direction==='ms-ru');
+ await page.locator('#searchInput').fill('горячая вода');
+ await page.locator('#contextMode').selectOption('context');
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='горячая вода' && document.querySelector('#directionSwitch .active').dataset.direction==='ru-ms');
+ results.push({viewport,scenario:'filter-preserves-auto-language-detection',passed:true});
  await page.locator('#searchInput').fill('');
  await page.locator('#searchButton').click();
  await page.locator('#contextMode').selectOption('context');
@@ -116,6 +123,8 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  const initialIds=await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId));
  await page.locator('#resultList > li').first().locator('details summary').click();
  await page.locator('#showMoreResults').click();
+ // The old 160 ms input debounce must not reset an explicit catalogue action.
+ await page.waitForTimeout(200);
  assert.equal(await page.locator('#resultList > li').count(),48);
  assert.ok(await page.locator('#resultList > li').first().locator('details').evaluate(element=>element.open));
  assert.deepEqual((await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId))).slice(0,24),initialIds);
@@ -176,6 +185,85 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  assert.ok((await page.locator('#contextFavoriteStatus').textContent()).includes('не разрешил'));
  await page.evaluate(()=>{Storage.prototype.setItem=window.contextOriginalSetItem;});
  results.push({viewport,scenario:'favorite-removal-and-storage-failure',passed:true});
+ const preservedId=await page.locator('#resultList > li').first().getAttribute('data-result-id');
+ assert.notEqual(preservedId,savedId);
+ await page.locator('.context-save').first().click();
+ const selectionJson=JSON.stringify(selection);
+ async function chooseSelection(text,name='selection.json',picker=false) {
+  const file={name,mimeType:'application/json',buffer:Buffer.from(text)};
+  if(picker) {
+   const chooserPromise=page.waitForEvent('filechooser');
+   await page.locator('#importContextFavorites').click();
+   await (await chooserPromise).setFiles(file);
+  } else await page.locator('#contextImportFile').setInputFiles(file);
+  await page.waitForFunction(()=>!document.querySelector('#importContextFavorites').disabled);
+ }
+ await chooseSelection(selectionJson,'selection.json',true);
+ assert.equal(await page.locator('#contextImportPreview').isVisible(),true);
+ assert.ok((await page.locator('#contextImportSummary').textContent()).includes('Новых для подборки: 1'));
+ assert.equal(await page.locator('#savedContextOption').textContent(),'Сохранённые (1)');
+ await page.locator('#contextImportPreview').scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Import preview overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-import-preview.png`,fullPage:false});
+ await page.locator('#cancelContextImport').click();
+ assert.equal(await page.locator('#contextImportPreview').isVisible(),false);
+ assert.equal(await page.locator('#savedContextOption').textContent(),'Сохранённые (1)');
+ results.push({viewport,scenario:'selection-import-preview-and-cancel',passed:true});
+ await chooseSelection(selectionJson);
+ await page.locator('#applyContextImport').click();
+ assert.equal(await page.locator('#contextMode').inputValue(),'saved');
+ assert.equal(await page.locator('#resultCount').textContent(),'2');
+ const mergedIds=await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId));
+ assert.ok(mergedIds.includes(savedId)&&mergedIds.includes(preservedId));
+ await chooseSelection(selectionJson);
+ assert.equal(await page.locator('#applyContextImport').isDisabled(),true);
+ assert.ok((await page.locator('#contextImportSummary').textContent()).includes('Новых для подборки: 0'));
+ await page.locator('#cancelContextImport').click();
+ results.push({viewport,scenario:'selection-import-merge-and-repeat',passed:true});
+ await chooseSelection('{broken');
+ assert.equal(await page.locator('#contextImportPreview').isVisible(),false);
+ assert.ok((await page.locator('#contextFavoriteStatus').textContent()).includes('JSON'));
+ assert.equal(await page.locator('#resultCount').textContent(),'2');
+ await chooseSelection(JSON.stringify({...selection,schemaVersion:999}));
+ assert.ok((await page.locator('#contextFavoriteStatus').textContent()).includes('не поддерживаемый'));
+ await chooseSelection('x'.repeat(2_000_001));
+ assert.ok((await page.locator('#contextFavoriteStatus').textContent()).includes('2 МБ'));
+ results.push({viewport,scenario:'selection-import-invalid-and-oversize',passed:true});
+ await chooseSelection(JSON.stringify({...selection,entries:[{...selection.entries[0],ru:'<img src=x onerror=alert(1)>'}]}));
+ assert.equal(await page.locator('#applyContextImport').isDisabled(),true);
+ assert.ok((await page.locator('#contextImportSummary').textContent()).includes('Несовпадающих переводов или источников: 1'));
+ assert.equal(await page.locator('#contextImportPreview img').count(),0);
+ await page.locator('#cancelContextImport').click();
+ results.push({viewport,scenario:'selection-import-tampering-rejected',passed:true});
+ // A storage failure during import must retain the entire previous selection.
+ await page.locator('#contextMode').selectOption('context');
+ const thirdRow=page.locator('#resultList > li').filter({hasNot:page.locator('.context-save[aria-pressed="true"]')}).first();
+ const thirdId=await thirdRow.getAttribute('data-result-id');
+ const thirdButton=page.locator(`#resultList > li[data-result-id="${thirdId}"] .context-save`);
+ await thirdButton.click();
+ const thirdDownloadPromise=page.waitForEvent('download');
+ await page.locator('#exportContextFavorites').click();
+ const thirdDownload=await thirdDownloadPromise;
+ const threeSelection=fs.readFileSync(await thirdDownload.path(),'utf8');
+ await thirdButton.click();
+ await chooseSelection(threeSelection);
+ assert.equal(await page.locator('#applyContextImport').isEnabled(),true);
+ await page.evaluate(()=>{
+  window.contextOriginalSetItem=Storage.prototype.setItem;
+  Storage.prototype.setItem=function(key,value){
+   if(key==='dictionary-shell:corpus-favorites:v1') throw new DOMException('Storage denied','SecurityError');
+   return window.contextOriginalSetItem.call(this,key,value);
+  };
+ });
+ await page.locator('#applyContextImport').click();
+ assert.equal(await page.locator('#savedContextOption').textContent(),'Сохранённые (2)');
+ assert.equal(await page.locator('#contextImportPreview').isVisible(),true);
+ assert.ok((await page.locator('#contextFavoriteStatus').textContent()).includes('Предыдущие записи не изменены'));
+ await page.evaluate(()=>{Storage.prototype.setItem=window.contextOriginalSetItem;});
+ await page.locator('#applyContextImport').click();
+ assert.equal(await page.locator('#resultCount').textContent(),'3');
+ assert.ok((await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId))).includes(thirdId));
+ results.push({viewport,scenario:'selection-import-storage-failure-and-retry',passed:true});
  await page.close();
 }
 // Both packaged profiles must execute with networking disabled.
@@ -214,6 +302,18 @@ for(const profile of ['','-Lite']) {
  await page.waitForFunction(()=>!document.querySelector('#searchInput').disabled);
  await page.locator('#contextMode').selectOption('saved');
  assert.equal(await page.locator('#resultCount').textContent(),'1');
+ const offlineSavedId=await page.locator('#resultList > li').first().getAttribute('data-result-id');
+ const offlineDownloadPromise=page.waitForEvent('download');
+ await page.locator('#exportContextFavorites').click();
+ const offlineDownload=await offlineDownloadPromise;
+ const offlineSelection=fs.readFileSync(await offlineDownload.path());
+ await page.locator('.context-save').click();
+ assert.equal(await page.locator('#resultCount').textContent(),'0');
+ await page.locator('#contextImportFile').setInputFiles({name:'offline-selection.json',mimeType:'application/json',buffer:offlineSelection});
+ await page.waitForFunction(()=>!document.querySelector('#contextImportPreview').hidden);
+ await page.locator('#applyContextImport').click();
+ assert.equal(await page.locator('#resultCount').textContent(),'1');
+ assert.equal(await page.locator('#resultList > li').first().getAttribute('data-result-id'),offlineSavedId);
  results.push({offline:profile||'Full',passed:true});
  await page.close();
 }

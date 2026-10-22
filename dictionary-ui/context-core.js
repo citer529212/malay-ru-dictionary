@@ -109,3 +109,36 @@ export function serializeContextFavorites(ids, corpus) {
   return JSON.stringify({schemaVersion:1, source:'dictionary-context-corpus',
     entries:corpus.filter(row => selected.has(row.id))}, null, 2);
 }
+
+// Imported files select canonical records; their translations/examples never enter the corpus.
+export function planContextFavoritesImport(text, corpus, existingIds = []) {
+  if (typeof text !== 'string' || new TextEncoder().encode(text).byteLength > 2_000_000) {
+    throw new Error('Файл подборки должен быть не больше 2 МБ.');
+  }
+  let payload;
+  try { payload = JSON.parse(text.replace(/^\uFEFF/, '')); }
+  catch { throw new Error('Не удалось прочитать JSON подборки.'); }
+  if (!payload || payload.schemaVersion !== 1 || payload.source !== 'dictionary-context-corpus' || !Array.isArray(payload.entries)) {
+    throw new Error('Это не поддерживаемый файл подборки словаря.');
+  }
+  if (payload.entries.length > 2000) throw new Error('В файле слишком много записей: допустимо не больше 2000.');
+  const canonical = new Map(corpus.filter(row => row.verified).map(row => [row.id, row]));
+  const accepted = new Set();
+  let invalidCount = 0, unknownCount = 0, conflictCount = 0, duplicateCount = 0;
+  for (const row of payload.entries) {
+    if (!row || typeof row !== 'object' || Array.isArray(row) || typeof row.id !== 'string') { invalidCount++; continue; }
+    const original = canonical.get(row.id);
+    if (!original) { unknownCount++; continue; }
+    if (row.ru !== original.ru || row.ms !== original.ms || row.verified !== true || row.verification?.sourceEntryId !== original.verification.sourceEntryId) {
+      conflictCount++; continue;
+    }
+    if (accepted.has(row.id)) duplicateCount++; else accepted.add(row.id);
+  }
+  const existing = normalizeContextFavorites(existingIds, corpus);
+  const existingSet = new Set(existing);
+  const acceptedIds = [...accepted];
+  const addedCount = acceptedIds.filter(id => !existingSet.has(id)).length;
+  return {acceptedIds, ids:[...new Set([...existing, ...acceptedIds])], addedCount,
+    alreadySavedCount:acceptedIds.length - addedCount, duplicateCount, invalidCount, unknownCount, conflictCount,
+    totalCount:payload.entries.length};
+}

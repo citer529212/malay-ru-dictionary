@@ -470,7 +470,10 @@ function validateModernInterface() {
   assert.match(html, /Дополнительная специализированная база/);
   assert.match(html, /4 683 статьи/);
   assert.match(html, /5 582 обратных заголовка/);
-  assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
+  // The sole file input restores local selections; dictionary/PDF uploads stay absent.
+  assert.match(html, /<input id="contextImportFile" type="file" accept="\.json,application\/json" hidden \/>/);
+  const htmlWithoutSelectionImport = html.replace(/<input id="contextImportFile"[^>]*>/u, "");
+  assert.doesNotMatch(htmlWithoutSelectionImport, /type="file"|Выбрать PDF|pdfCanvas/);
   assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
   assert.match(appSource, /function renderSuggestions\(query\)/);
   assert.match(appSource, /MISSING_QUERIES_KEY/);
@@ -684,7 +687,7 @@ console.log(`Specialized reverse relations: ${specializedReversePayload.relation
 console.log("Bidirectional frequency checks: 500 RU-MS + 500 MS-RU");
 console.log("Automatic direction checks: 7");
 console.log("Protected frequency baseline: 1000 entries");
-console.log("Modern no-upload interface checks: passed");
+console.log("Dictionary interface and local selection restore checks: passed");
 console.log("Local missing-query export checks: passed");
 console.log(`Gold titles protected from conflicting OCR entries: ${protectedConflicts}`);
 
