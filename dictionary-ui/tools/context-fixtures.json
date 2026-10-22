@@ -398,5 +398,405 @@
   [
     "карта метро",
     "peta metro"
+  ],
+  [
+    "станция пересадки",
+    "stesen pertukaran"
+  ],
+  [
+    "конечная станция",
+    "stesen terakhir"
+  ],
+  [
+    "следующая станция",
+    "stesen seterusnya"
+  ],
+  [
+    "следующая остановка",
+    "perhentian seterusnya"
+  ],
+  [
+    "платная дорога",
+    "jalan bertol"
+  ],
+  [
+    "пункт оплаты",
+    "pondok tol"
+  ],
+  [
+    "карта оплаты",
+    "kad bayaran"
+  ],
+  [
+    "администрация города",
+    "pentadbiran bandar"
+  ],
+  [
+    "городской совет",
+    "majlis bandaraya"
+  ],
+  [
+    "районная администрация",
+    "pentadbiran daerah"
+  ],
+  [
+    "здание суда",
+    "bangunan mahkamah"
+  ],
+  [
+    "пожарная часть",
+    "balai bomba"
+  ],
+  [
+    "больничная палата",
+    "wad hospital"
+  ],
+  [
+    "частная клиника",
+    "klinik swasta"
+  ],
+  [
+    "государственная больница",
+    "hospital kerajaan"
+  ],
+  [
+    "детская площадка",
+    "taman permainan kanak-kanak"
+  ],
+  [
+    "парк развлечений",
+    "taman hiburan"
+  ],
+  [
+    "ботанический сад",
+    "taman botani"
+  ],
+  [
+    "национальный парк",
+    "taman negara"
+  ],
+  [
+    "торговый центр",
+    "pusat beli-belah"
+  ],
+  [
+    "уличный торговец",
+    "penjaja jalanan"
+  ],
+  [
+    "ночная ярмарка",
+    "pasar malam"
+  ],
+  [
+    "сцена театра",
+    "pentas teater"
+  ],
+  [
+    "занавес сцены",
+    "tirai pentas"
+  ],
+  [
+    "перевод субтитров",
+    "terjemahan sari kata"
+  ],
+  [
+    "регистрация участников",
+    "pendaftaran peserta"
+  ],
+  [
+    "гость программы",
+    "tetamu program"
+  ],
+  [
+    "программа мероприятия",
+    "atur cara acara"
+  ],
+  [
+    "перерыв между частями",
+    "rehat antara bahagian"
+  ],
+  [
+    "судья матча",
+    "pengadil perlawanan"
+  ],
+  [
+    "удар по мячу",
+    "tendangan bola"
+  ],
+  [
+    "защита команды",
+    "pertahanan pasukan"
+  ],
+  [
+    "капитан команды",
+    "kapten pasukan"
+  ],
+  [
+    "форма команды",
+    "jersi pasukan"
+  ],
+  [
+    "травма спортсмена",
+    "kecederaan atlet"
+  ],
+  [
+    "настольная игра",
+    "permainan papan"
+  ],
+  [
+    "компьютерная игра",
+    "permainan komputer"
+  ],
+  [
+    "маршрут похода",
+    "laluan kembara"
+  ],
+  [
+    "подножие горы",
+    "kaki gunung"
+  ],
+  [
+    "маска для плавания",
+    "topeng renang"
+  ],
+  [
+    "спасательный жилет",
+    "jaket keselamatan"
+  ],
+  [
+    "нижнее белье",
+    "pakaian dalam"
+  ],
+  [
+    "размер обуви",
+    "saiz kasut"
+  ],
+  [
+    "гладкий материал",
+    "bahan licin"
+  ],
+  [
+    "мягкая ткань",
+    "kain lembut"
+  ],
+  [
+    "теплая одежда",
+    "pakaian hangat"
+  ],
+  [
+    "легкая одежда",
+    "pakaian ringan"
+  ],
+  [
+    "официальная одежда",
+    "pakaian rasmi"
+  ],
+  [
+    "рабочая одежда",
+    "pakaian kerja"
+  ],
+  [
+    "военная форма",
+    "uniform tentera"
+  ],
+  [
+    "кухонный нож",
+    "pisau dapur"
+  ],
+  [
+    "разделочная доска",
+    "papan pemotong"
+  ],
+  [
+    "плоская тарелка",
+    "pinggan leper"
+  ],
+  [
+    "грязная посуда",
+    "pinggan kotor"
+  ],
+  [
+    "чистая посуда",
+    "pinggan bersih"
+  ],
+  [
+    "рыбный соус",
+    "sos ikan"
+  ],
+  [
+    "горячая еда",
+    "makanan panas"
+  ],
+  [
+    "холодная еда",
+    "makanan sejuk"
+  ],
+  [
+    "уличная еда",
+    "makanan jalanan"
+  ],
+  [
+    "национальная кухня",
+    "masakan kebangsaan"
+  ],
+  [
+    "малайская кухня",
+    "masakan Melayu"
+  ],
+  [
+    "рисовая каша",
+    "bubur nasi"
+  ],
+  [
+    "куриный суп",
+    "sup ayam"
+  ],
+  [
+    "овощной суп",
+    "sup sayur"
+  ],
+  [
+    "мясной суп",
+    "sup daging"
+  ],
+  [
+    "рыбный суп",
+    "sup ikan"
+  ],
+  [
+    "печеная рыба",
+    "ikan bakar"
+  ],
+  [
+    "жареная курица",
+    "ayam goreng"
+  ],
+  [
+    "прием у врача",
+    "janji temu doktor"
+  ],
+  [
+    "регистратор больницы",
+    "petugas pendaftaran hospital"
+  ],
+  [
+    "карта пациента",
+    "rekod pesakit"
+  ],
+  [
+    "жалоба пациента",
+    "aduan pesakit"
+  ],
+  [
+    "побочный эффект",
+    "kesan sampingan"
+  ],
+  [
+    "игла шприца",
+    "jarum suntikan"
+  ],
+  [
+    "анализ крови",
+    "ujian darah"
+  ],
+  [
+    "инвалидная коляска",
+    "kerusi roda"
+  ],
+  [
+    "пищевое отравление",
+    "keracunan makanan"
+  ],
+  [
+    "укус комара",
+    "gigitan nyamuk"
+  ],
+  [
+    "аллергическая реакция",
+    "reaksi alahan"
+  ],
+  [
+    "горный хребет",
+    "banjaran gunung"
+  ],
+  [
+    "чайная плантация",
+    "ladang teh"
+  ],
+  [
+    "кофейное дерево",
+    "pokok kopi"
+  ],
+  [
+    "перечное растение",
+    "pokok lada"
+  ],
+  [
+    "домашняя птица",
+    "ayam itik"
+  ],
+  [
+    "морская звезда",
+    "tapak sulaiman"
+  ],
+  [
+    "новостная программа",
+    "program berita"
+  ],
+  [
+    "запись эфира",
+    "rakaman siaran"
+  ],
+  [
+    "папка с файлами",
+    "folder fail"
+  ],
+  [
+    "резервная копия",
+    "salinan sandaran"
+  ],
+  [
+    "ключевое слово",
+    "kata kunci"
+  ],
+  [
+    "результат поиска",
+    "hasil carian"
+  ],
+  [
+    "история поиска",
+    "sejarah carian"
+  ],
+  [
+    "подключение к интернету",
+    "sambungan internet"
+  ],
+  [
+    "мобильный интернет",
+    "internet mudah alih"
+  ],
+  [
+    "домашний интернет",
+    "internet rumah"
+  ],
+  [
+    "скорость загрузки",
+    "kelajuan muat turun"
+  ],
+  [
+    "облачное хранилище",
+    "storan awan"
+  ],
+  [
+    "кассовый аппарат",
+    "mesin daftar tunai"
+  ],
+  [
+    "оплата наличными",
+    "bayaran tunai"
+  ],
+  [
+    "оплата онлайн",
+    "bayaran dalam talian"
   ]
 ]

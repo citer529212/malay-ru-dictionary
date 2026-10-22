@@ -4251,9 +4251,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается станция пересадки.",
-        "ms": "Artikel itu menyebut stesen pertukaran.",
+        "ru": "Станция пересадки находится в центре города.",
+        "ms": "Stesen pertukaran terletak di pusat bandar.",
         "ruExpression": "станция пересадки",
+        "msExpression": "stesen pertukaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы встретились на станции пересадки.",
+        "ms": "Kami bertemu di stesen pertukaran.",
+        "ruExpression": "станции пересадки",
         "msExpression": "stesen pertukaran",
         "origin": "original_teaching_example"
       }
@@ -4285,9 +4292,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о конечной станции.",
-        "ms": "Kami bercakap tentang stesen terakhir.",
-        "ruExpression": "конечной станции",
+        "ru": "Это конечная станция нашего маршрута.",
+        "ms": "Ini stesen terakhir bagi laluan kami.",
+        "ruExpression": "конечная станция",
+        "msExpression": "stesen terakhir",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Поезд прибыл на конечную станцию.",
+        "ms": "Kereta api tiba di stesen terakhir.",
+        "ruExpression": "конечную станцию",
         "msExpression": "stesen terakhir",
         "origin": "original_teaching_example"
       }
@@ -4319,9 +4333,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем следующую станцию.",
-        "ms": "Kami membincangkan stesen seterusnya.",
-        "ruExpression": "следующую станцию",
+        "ru": "Следующая станция находится под землёй.",
+        "ms": "Stesen seterusnya terletak di bawah tanah.",
+        "ruExpression": "следующая станция",
+        "msExpression": "stesen seterusnya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Как называется следующая станция?",
+        "ms": "Apakah nama stesen seterusnya?",
+        "ruExpression": "следующая станция",
         "msExpression": "stesen seterusnya",
         "origin": "original_teaching_example"
       }
@@ -4354,9 +4375,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это следующая остановка.",
-        "ms": "Ini perhentian seterusnya.",
+        "ru": "Следующая остановка находится у музея.",
+        "ms": "Perhentian seterusnya terletak berhampiran muzium.",
         "ruExpression": "следующая остановка",
+        "msExpression": "perhentian seterusnya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я выйду на следующей остановке.",
+        "ms": "Saya akan turun di perhentian seterusnya.",
+        "ruExpression": "следующей остановке",
         "msExpression": "perhentian seterusnya",
         "origin": "original_teaching_example"
       }
@@ -4389,9 +4417,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается платная дорога.",
-        "ms": "Artikel itu menyebut jalan bertol.",
+        "ru": "Эта платная дорога ведёт к аэропорту.",
+        "ms": "Jalan bertol ini menuju ke lapangan terbang.",
         "ruExpression": "платная дорога",
+        "msExpression": "jalan bertol",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы решили ехать по платной дороге.",
+        "ms": "Kami memutuskan untuk melalui jalan bertol.",
+        "ruExpression": "платной дороге",
         "msExpression": "jalan bertol",
         "origin": "original_teaching_example"
       }
@@ -4424,9 +4459,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о пункте оплаты.",
-        "ms": "Kami bercakap tentang pondok tol.",
-        "ruExpression": "пункте оплаты",
+        "ru": "Пункт оплаты находится за мостом.",
+        "ms": "Pondok tol terletak selepas jambatan.",
+        "ruExpression": "пункт оплаты",
+        "msExpression": "pondok tol",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перед пунктом оплаты образовалась очередь.",
+        "ms": "Barisan terbentuk sebelum pondok tol.",
+        "ruExpression": "пунктом оплаты",
         "msExpression": "pondok tol",
         "origin": "original_teaching_example"
       }
@@ -4459,8 +4501,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем карту оплаты.",
-        "ms": "Kami membincangkan kad bayaran.",
+        "ru": "Карта оплаты лежит в кошельке.",
+        "ms": "Kad bayaran ada di dalam dompet.",
+        "ruExpression": "карта оплаты",
+        "msExpression": "kad bayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я забыл карту оплаты дома.",
+        "ms": "Saya tertinggal kad bayaran di rumah.",
         "ruExpression": "карту оплаты",
         "msExpression": "kad bayaran",
         "origin": "original_teaching_example"
@@ -4493,9 +4542,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это администрация города.",
-        "ms": "Ini pentadbiran bandar.",
+        "ru": "Администрация города объявила о ремонте улицы.",
+        "ms": "Pentadbiran bandar mengumumkan pembaikan jalan.",
         "ruExpression": "администрация города",
+        "msExpression": "pentadbiran bandar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Письмо направлено в администрацию города.",
+        "ms": "Surat itu dihantar kepada pentadbiran bandar.",
+        "ruExpression": "администрацию города",
         "msExpression": "pentadbiran bandar",
         "origin": "original_teaching_example"
       }
@@ -4528,9 +4584,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается городской совет.",
-        "ms": "Artikel itu menyebut majlis bandaraya.",
+        "ru": "Городской совет обсудит новый проект.",
+        "ms": "Majlis bandaraya akan membincangkan projek baharu.",
         "ruExpression": "городской совет",
+        "msExpression": "majlis bandaraya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Представитель городского совета выступил на встрече.",
+        "ms": "Wakil majlis bandaraya berucap dalam pertemuan itu.",
+        "ruExpression": "городского совета",
         "msExpression": "majlis bandaraya",
         "origin": "original_teaching_example"
       }
@@ -4562,9 +4625,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о районной администрации.",
-        "ms": "Kami bercakap tentang pentadbiran daerah.",
-        "ruExpression": "районной администрации",
+        "ru": "Районная администрация принимает заявления по утрам.",
+        "ms": "Pentadbiran daerah menerima permohonan pada waktu pagi.",
+        "ruExpression": "районная администрация",
+        "msExpression": "pentadbiran daerah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Документы переданы в районную администрацию.",
+        "ms": "Dokumen telah diserahkan kepada pentadbiran daerah.",
+        "ruExpression": "районную администрацию",
         "msExpression": "pentadbiran daerah",
         "origin": "original_teaching_example"
       }
@@ -4597,9 +4667,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем здание суда.",
-        "ms": "Kami membincangkan bangunan mahkamah.",
+        "ru": "Здание суда находится напротив библиотеки.",
+        "ms": "Bangunan mahkamah terletak bertentangan dengan perpustakaan.",
         "ruExpression": "здание суда",
+        "msExpression": "bangunan mahkamah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "У здания суда собрались журналисты.",
+        "ms": "Wartawan berkumpul di hadapan bangunan mahkamah.",
+        "ruExpression": "здания суда",
         "msExpression": "bangunan mahkamah",
         "origin": "original_teaching_example"
       }
@@ -4631,9 +4708,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это пожарная часть.",
-        "ms": "Ini balai bomba.",
+        "ru": "Пожарная часть находится рядом с вокзалом.",
+        "ms": "Balai bomba terletak berhampiran stesen kereta api.",
         "ruExpression": "пожарная часть",
+        "msExpression": "balai bomba",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дети посетили пожарную часть во время экскурсии.",
+        "ms": "Kanak-kanak melawat balai bomba semasa lawatan itu.",
+        "ruExpression": "пожарную часть",
         "msExpression": "balai bomba",
         "origin": "original_teaching_example"
       }
@@ -4666,9 +4750,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается больничная палата.",
-        "ms": "Artikel itu menyebut wad hospital.",
+        "ru": "Больничная палата находится на втором этаже.",
+        "ms": "Wad hospital terletak di tingkat dua.",
         "ruExpression": "больничная палата",
+        "msExpression": "wad hospital",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Посетители ждут у больничной палаты.",
+        "ms": "Pelawat menunggu di luar wad hospital.",
+        "ruExpression": "больничной палаты",
         "msExpression": "wad hospital",
         "origin": "original_teaching_example"
       }
@@ -4701,9 +4792,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о частной клинике.",
-        "ms": "Kami bercakap tentang klinik swasta.",
-        "ruExpression": "частной клинике",
+        "ru": "Частная клиника открывается в девять утра.",
+        "ms": "Klinik swasta dibuka pada pukul sembilan pagi.",
+        "ruExpression": "частная клиника",
+        "msExpression": "klinik swasta",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы позвонили в частную клинику.",
+        "ms": "Kami menelefon klinik swasta.",
+        "ruExpression": "частную клинику",
         "msExpression": "klinik swasta",
         "origin": "original_teaching_example"
       }
@@ -4736,9 +4834,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем государственную больницу.",
-        "ms": "Kami membincangkan hospital kerajaan.",
-        "ruExpression": "государственную больницу",
+        "ru": "Государственная больница находится за рекой.",
+        "ms": "Hospital kerajaan terletak di seberang sungai.",
+        "ruExpression": "государственная больница",
+        "msExpression": "hospital kerajaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Автобус останавливается у государственной больницы.",
+        "ms": "Bas berhenti berhampiran hospital kerajaan.",
+        "ruExpression": "государственной больницы",
         "msExpression": "hospital kerajaan",
         "origin": "original_teaching_example"
       }
@@ -4771,8 +4876,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это детская площадка.",
-        "ms": "Ini taman permainan kanak-kanak.",
+        "ru": "Во дворе появилась новая детская площадка.",
+        "ms": "Taman permainan kanak-kanak yang baharu dibina di halaman.",
+        "ruExpression": "детская площадка",
+        "msExpression": "taman permainan kanak-kanak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После дождя детская площадка пустует.",
+        "ms": "Taman permainan kanak-kanak lengang selepas hujan.",
         "ruExpression": "детская площадка",
         "msExpression": "taman permainan kanak-kanak",
         "origin": "original_teaching_example"
@@ -4806,8 +4918,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается парк развлечений.",
-        "ms": "Artikel itu menyebut taman hiburan.",
+        "ru": "Парк развлечений закрывается в восемь вечера.",
+        "ms": "Taman hiburan ditutup pada pukul lapan malam.",
+        "ruExpression": "парк развлечений",
+        "msExpression": "taman hiburan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы купили билеты в парк развлечений.",
+        "ms": "Kami membeli tiket ke taman hiburan.",
         "ruExpression": "парк развлечений",
         "msExpression": "taman hiburan",
         "origin": "original_teaching_example"
@@ -4841,9 +4960,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о ботаническом саде.",
-        "ms": "Kami bercakap tentang taman botani.",
-        "ruExpression": "ботаническом саде",
+        "ru": "Ботанический сад открыт для посетителей.",
+        "ms": "Taman botani dibuka kepada pengunjung.",
+        "ruExpression": "ботанический сад",
+        "msExpression": "taman botani",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В воскресенье мы пойдём в ботанический сад.",
+        "ms": "Kami akan pergi ke taman botani pada hari Ahad.",
+        "ruExpression": "ботанический сад",
         "msExpression": "taman botani",
         "origin": "original_teaching_example"
       }
@@ -4876,8 +5002,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем национальный парк.",
-        "ms": "Kami membincangkan taman negara.",
+        "ru": "Национальный парк занимает большую территорию.",
+        "ms": "Taman negara meliputi kawasan yang luas.",
+        "ruExpression": "национальный парк",
+        "msExpression": "taman negara",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Вход в национальный парк находится у реки.",
+        "ms": "Pintu masuk ke taman negara terletak di tepi sungai.",
         "ruExpression": "национальный парк",
         "msExpression": "taman negara",
         "origin": "original_teaching_example"
@@ -4911,8 +5044,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это торговый центр.",
-        "ms": "Ini pusat beli-belah.",
+        "ru": "Торговый центр откроется через час.",
+        "ms": "Pusat beli-belah akan dibuka dalam masa sejam.",
+        "ruExpression": "торговый центр",
+        "msExpression": "pusat beli-belah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы встретились у входа в торговый центр.",
+        "ms": "Kami bertemu di pintu masuk pusat beli-belah.",
         "ruExpression": "торговый центр",
         "msExpression": "pusat beli-belah",
         "origin": "original_teaching_example"
@@ -4946,9 +5086,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается уличный торговец.",
-        "ms": "Artikel itu menyebut penjaja jalanan.",
+        "ru": "Уличный торговец продаёт свежие фрукты.",
+        "ms": "Penjaja jalanan menjual buah-buahan segar.",
         "ruExpression": "уличный торговец",
+        "msExpression": "penjaja jalanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы купили напитки у уличного торговца.",
+        "ms": "Kami membeli minuman daripada penjaja jalanan.",
+        "ruExpression": "уличного торговца",
         "msExpression": "penjaja jalanan",
         "origin": "original_teaching_example"
       }
@@ -4981,9 +5128,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о ночной ярмарке.",
-        "ms": "Kami bercakap tentang pasar malam.",
-        "ruExpression": "ночной ярмарке",
+        "ru": "Ночная ярмарка работает по пятницам.",
+        "ms": "Pasar malam dibuka pada hari Jumaat.",
+        "ruExpression": "ночная ярмарка",
+        "msExpression": "pasar malam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После ужина мы пошли на ночную ярмарку.",
+        "ms": "Selepas makan malam kami pergi ke pasar malam.",
+        "ruExpression": "ночную ярмарку",
         "msExpression": "pasar malam",
         "origin": "original_teaching_example"
       }
@@ -5016,8 +5170,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем сцену театра.",
-        "ms": "Kami membincangkan pentas teater.",
+        "ru": "Сцена театра хорошо освещена.",
+        "ms": "Pentas teater diterangi dengan baik.",
+        "ruExpression": "сцена театра",
+        "msExpression": "pentas teater",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Актёры вышли на сцену театра.",
+        "ms": "Pelakon naik ke pentas teater.",
         "ruExpression": "сцену театра",
         "msExpression": "pentas teater",
         "origin": "original_teaching_example"
@@ -5051,9 +5212,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это занавес сцены.",
-        "ms": "Ini tirai pentas.",
+        "ru": "Занавес сцены медленно поднялся.",
+        "ms": "Tirai pentas naik perlahan-lahan.",
         "ruExpression": "занавес сцены",
+        "msExpression": "tirai pentas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "За занавесом сцены слышны голоса актёров.",
+        "ms": "Suara pelakon kedengaran di belakang tirai pentas.",
+        "ruExpression": "занавесом сцены",
         "msExpression": "tirai pentas",
         "origin": "original_teaching_example"
       }
@@ -5086,8 +5254,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается перевод субтитров.",
-        "ms": "Artikel itu menyebut terjemahan sari kata.",
+        "ru": "Перевод субтитров ещё не закончен.",
+        "ms": "Terjemahan sari kata belum selesai.",
+        "ruExpression": "перевод субтитров",
+        "msExpression": "terjemahan sari kata",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор проверил перевод субтитров.",
+        "ms": "Editor menyemak terjemahan sari kata.",
         "ruExpression": "перевод субтитров",
         "msExpression": "terjemahan sari kata",
         "origin": "original_teaching_example"
@@ -5155,9 +5330,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем регистрацию участников.",
-        "ms": "Kami membincangkan pendaftaran peserta.",
-        "ruExpression": "регистрацию участников",
+        "ru": "Регистрация участников начинается утром.",
+        "ms": "Pendaftaran peserta bermula pada waktu pagi.",
+        "ruExpression": "регистрация участников",
+        "msExpression": "pendaftaran peserta",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стол регистрации участников находится у входа.",
+        "ms": "Meja pendaftaran peserta terletak berhampiran pintu masuk.",
+        "ruExpression": "регистрации участников",
         "msExpression": "pendaftaran peserta",
         "origin": "original_teaching_example"
       }
@@ -5190,8 +5372,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это гость программы.",
-        "ms": "Ini tetamu program.",
+        "ru": "Гость программы ответил на вопросы зрителей.",
+        "ms": "Tetamu program menjawab soalan penonton.",
+        "ruExpression": "гость программы",
+        "msExpression": "tetamu program",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сегодня гость программы — известный писатель.",
+        "ms": "Tetamu program hari ini ialah seorang penulis terkenal.",
         "ruExpression": "гость программы",
         "msExpression": "tetamu program",
         "origin": "original_teaching_example"
@@ -5225,9 +5414,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается программа мероприятия.",
-        "ms": "Artikel itu menyebut atur cara acara.",
+        "ru": "Программа мероприятия опубликована на сайте.",
+        "ms": "Atur cara acara diterbitkan di laman web.",
         "ruExpression": "программа мероприятия",
+        "msExpression": "atur cara acara",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы внесли изменения в программу мероприятия.",
+        "ms": "Kami membuat perubahan pada atur cara acara.",
+        "ruExpression": "программу мероприятия",
         "msExpression": "atur cara acara",
         "origin": "original_teaching_example"
       }
@@ -5260,9 +5456,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о перерыве между частями.",
-        "ms": "Kami bercakap tentang rehat antara bahagian.",
-        "ruExpression": "перерыве между частями",
+        "ru": "Перерыв между частями длится десять минут.",
+        "ms": "Rehat antara bahagian berlangsung selama sepuluh minit.",
+        "ruExpression": "перерыв между частями",
+        "msExpression": "rehat antara bahagian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Во время перерыва между частями зрители вышли в фойе.",
+        "ms": "Semasa rehat antara bahagian penonton keluar ke ruang legar.",
+        "ruExpression": "перерыва между частями",
         "msExpression": "rehat antara bahagian",
         "origin": "original_teaching_example"
       }
@@ -5295,9 +5498,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем судью матча.",
-        "ms": "Kami membincangkan pengadil perlawanan.",
-        "ruExpression": "судью матча",
+        "ru": "Судья матча остановил игру.",
+        "ms": "Pengadil perlawanan menghentikan permainan.",
+        "ruExpression": "судья матча",
+        "msExpression": "pengadil perlawanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Игрок подошёл к судье матча.",
+        "ms": "Pemain menghampiri pengadil perlawanan.",
+        "ruExpression": "судье матча",
         "msExpression": "pengadil perlawanan",
         "origin": "original_teaching_example"
       }
@@ -5330,8 +5540,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это удар по мячу.",
-        "ms": "Ini tendangan bola.",
+        "ru": "Игрок нанёс сильный удар по мячу.",
+        "ms": "Pemain membuat tendangan bola yang kuat.",
+        "ruExpression": "удар по мячу",
+        "msExpression": "tendangan bola",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Удар по мячу оказался неточным.",
+        "ms": "Tendangan bola itu tidak tepat.",
         "ruExpression": "удар по мячу",
         "msExpression": "tendangan bola",
         "origin": "original_teaching_example"
@@ -5365,9 +5582,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается защита команды.",
-        "ms": "Artikel itu menyebut pertahanan pasukan.",
+        "ru": "Защита команды сыграла надёжно.",
+        "ms": "Pertahanan pasukan bermain dengan baik.",
         "ruExpression": "защита команды",
+        "msExpression": "pertahanan pasukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Тренер доволен защитой команды.",
+        "ms": "Jurulatih berpuas hati dengan pertahanan pasukan.",
+        "ruExpression": "защитой команды",
         "msExpression": "pertahanan pasukan",
         "origin": "original_teaching_example"
       }
@@ -5400,9 +5624,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о капитане команды.",
-        "ms": "Kami bercakap tentang kapten pasukan.",
-        "ruExpression": "капитане команды",
+        "ru": "Капитан команды поблагодарил болельщиков.",
+        "ms": "Kapten pasukan mengucapkan terima kasih kepada penyokong.",
+        "ruExpression": "капитан команды",
+        "msExpression": "kapten pasukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы поговорили с капитаном команды после игры.",
+        "ms": "Kami bercakap dengan kapten pasukan selepas perlawanan.",
+        "ruExpression": "капитаном команды",
         "msExpression": "kapten pasukan",
         "origin": "original_teaching_example"
       }
@@ -5435,8 +5666,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем форму команды.",
-        "ms": "Kami membincangkan jersi pasukan.",
+        "ru": "Форма команды висит в раздевалке.",
+        "ms": "Jersi pasukan digantung di bilik persalinan.",
+        "ruExpression": "форма команды",
+        "msExpression": "jersi pasukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Фанат купил форму команды в магазине.",
+        "ms": "Peminat membeli jersi pasukan di kedai.",
         "ruExpression": "форму команды",
         "msExpression": "jersi pasukan",
         "origin": "original_teaching_example"
@@ -5470,9 +5708,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это травма спортсмена.",
-        "ms": "Ini kecederaan atlet.",
+        "ru": "Травма спортсмена обсуждалась на встрече с тренером.",
+        "ms": "Kecederaan atlet dibincangkan dalam pertemuan dengan jurulatih.",
         "ruExpression": "травма спортсмена",
+        "msExpression": "kecederaan atlet",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Врач сообщил о травме спортсмена.",
+        "ms": "Doktor melaporkan kecederaan atlet.",
+        "ruExpression": "травме спортсмена",
         "msExpression": "kecederaan atlet",
         "origin": "original_teaching_example"
       }
@@ -5505,9 +5750,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается настольная игра.",
-        "ms": "Artikel itu menyebut permainan papan.",
+        "ru": "Эта настольная игра подходит для всей семьи.",
+        "ms": "Permainan papan ini sesuai untuk seisi keluarga.",
         "ruExpression": "настольная игра",
+        "msExpression": "permainan papan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подарили детям настольную игру.",
+        "ms": "Kami menghadiahkan permainan papan kepada kanak-kanak.",
+        "ruExpression": "настольную игру",
         "msExpression": "permainan papan",
         "origin": "original_teaching_example"
       }
@@ -5540,9 +5792,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о компьютерной игре.",
-        "ms": "Kami bercakap tentang permainan komputer.",
-        "ruExpression": "компьютерной игре",
+        "ru": "Компьютерная игра требует много памяти.",
+        "ms": "Permainan komputer memerlukan banyak memori.",
+        "ruExpression": "компьютерная игра",
+        "msExpression": "permainan komputer",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Брат установил новую компьютерную игру.",
+        "ms": "Abang memasang permainan komputer yang baharu.",
+        "ruExpression": "компьютерную игру",
         "msExpression": "permainan komputer",
         "origin": "original_teaching_example"
       }
@@ -5575,8 +5834,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем маршрут похода.",
-        "ms": "Kami membincangkan laluan kembara.",
+        "ru": "Маршрут похода проходит вдоль реки.",
+        "ms": "Laluan kembara menyusuri sungai.",
+        "ruExpression": "маршрут похода",
+        "msExpression": "laluan kembara",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перед выходом мы проверили маршрут похода.",
+        "ms": "Kami menyemak laluan kembara sebelum bertolak.",
         "ruExpression": "маршрут похода",
         "msExpression": "laluan kembara",
         "origin": "original_teaching_example"
@@ -5610,9 +5876,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это подножие горы.",
-        "ms": "Ini kaki gunung.",
-        "ruExpression": "подножие горы",
+        "ru": "Деревня расположена у подножия горы.",
+        "ms": "Kampung itu terletak di kaki gunung.",
+        "ruExpression": "подножия горы",
+        "msExpression": "kaki gunung",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "У подножия горы есть небольшое озеро.",
+        "ms": "Terdapat sebuah tasik kecil di kaki gunung.",
+        "ruExpression": "подножия горы",
         "msExpression": "kaki gunung",
         "origin": "original_teaching_example"
       }
@@ -5645,9 +5918,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается маска для плавания.",
-        "ms": "Artikel itu menyebut topeng renang.",
+        "ru": "Моя маска для плавания осталась в сумке.",
+        "ms": "Topeng renang saya tertinggal di dalam beg.",
         "ruExpression": "маска для плавания",
+        "msExpression": "topeng renang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перед поездкой мы купили маску для плавания.",
+        "ms": "Kami membeli topeng renang sebelum perjalanan.",
+        "ruExpression": "маску для плавания",
         "msExpression": "topeng renang",
         "origin": "original_teaching_example"
       }
@@ -5680,9 +5960,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о спасательном жилете.",
-        "ms": "Kami bercakap tentang jaket keselamatan.",
-        "ruExpression": "спасательном жилете",
+        "ru": "В лодке есть спасательный жилет.",
+        "ms": "Terdapat jaket keselamatan di dalam bot.",
+        "ruExpression": "спасательный жилет",
+        "msExpression": "jaket keselamatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник выдал пассажиру спасательный жилет.",
+        "ms": "Petugas memberikan jaket keselamatan kepada penumpang.",
+        "ruExpression": "спасательный жилет",
         "msExpression": "jaket keselamatan",
         "origin": "original_teaching_example"
       }
@@ -5716,9 +6003,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем нижнее бельё.",
-        "ms": "Kami membincangkan pakaian dalam.",
-        "ruExpression": "нижнее бельё",
+        "ru": "Нижнее белье хранится в верхнем ящике.",
+        "ms": "Pakaian dalam disimpan di dalam laci atas.",
+        "ruExpression": "нижнее белье",
+        "msExpression": "pakaian dalam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я положил нижнее белье в чемодан.",
+        "ms": "Saya memasukkan pakaian dalam ke dalam beg pakaian.",
+        "ruExpression": "нижнее белье",
         "msExpression": "pakaian dalam",
         "origin": "original_teaching_example"
       }
@@ -5751,8 +6045,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это размер обуви.",
-        "ms": "Ini saiz kasut.",
+        "ru": "Укажите размер обуви в заказе.",
+        "ms": "Nyatakan saiz kasut dalam pesanan.",
+        "ruExpression": "размер обуви",
+        "msExpression": "saiz kasut",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я не помню размер обуви ребёнка.",
+        "ms": "Saya tidak ingat saiz kasut anak itu.",
         "ruExpression": "размер обуви",
         "msExpression": "saiz kasut",
         "origin": "original_teaching_example"
@@ -5786,8 +6087,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается гладкий материал.",
-        "ms": "Artikel itu menyebut bahan licin.",
+        "ru": "Для этой модели выбран гладкий материал.",
+        "ms": "Bahan licin dipilih untuk model ini.",
+        "ruExpression": "гладкий материал",
+        "msExpression": "bahan licin",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Продавец показал нам гладкий материал.",
+        "ms": "Penjual menunjukkan bahan licin kepada kami.",
         "ruExpression": "гладкий материал",
         "msExpression": "bahan licin",
         "origin": "original_teaching_example"
@@ -5820,9 +6128,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о мягкой ткани.",
-        "ms": "Kami bercakap tentang kain lembut.",
-        "ruExpression": "мягкой ткани",
+        "ru": "Для платья нужна мягкая ткань.",
+        "ms": "Kain lembut diperlukan untuk gaun itu.",
+        "ruExpression": "мягкая ткань",
+        "msExpression": "kain lembut",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Эта мягкая ткань приятна на ощупь.",
+        "ms": "Kain lembut ini selesa disentuh.",
+        "ruExpression": "мягкая ткань",
         "msExpression": "kain lembut",
         "origin": "original_teaching_example"
       }
@@ -5855,8 +6170,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем тёплую одежду.",
-        "ms": "Kami membincangkan pakaian hangat.",
+        "ru": "Для поездки в горы нужна теплая одежда.",
+        "ms": "Pakaian hangat diperlukan untuk perjalanan ke kawasan pergunungan.",
+        "ruExpression": "теплая одежда",
+        "msExpression": "pakaian hangat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы взяли теплую одежду с собой.",
+        "ms": "Kami membawa pakaian hangat bersama kami.",
         "ruExpression": "тёплую одежду",
         "msExpression": "pakaian hangat",
         "origin": "original_teaching_example"
@@ -5890,9 +6212,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это легкая одежда.",
-        "ms": "Ini pakaian ringan.",
+        "ru": "Летом удобнее легкая одежда.",
+        "ms": "Pakaian ringan lebih selesa pada musim panas.",
         "ruExpression": "легкая одежда",
+        "msExpression": "pakaian ringan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я упаковал легкую одежду для поездки.",
+        "ms": "Saya mengemas pakaian ringan untuk perjalanan.",
+        "ruExpression": "лёгкую одежду",
         "msExpression": "pakaian ringan",
         "origin": "original_teaching_example"
       }
@@ -5925,8 +6254,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается официальная одежда.",
-        "ms": "Artikel itu menyebut pakaian rasmi.",
+        "ru": "Для встречи требуется официальная одежда.",
+        "ms": "Pakaian rasmi diperlukan untuk pertemuan itu.",
+        "ruExpression": "официальная одежда",
+        "msExpression": "pakaian rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приглашении указана официальная одежда.",
+        "ms": "Pakaian rasmi dinyatakan dalam jemputan.",
         "ruExpression": "официальная одежда",
         "msExpression": "pakaian rasmi",
         "origin": "original_teaching_example"
@@ -5960,9 +6296,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о рабочей одежде.",
-        "ms": "Kami bercakap tentang pakaian kerja.",
-        "ruExpression": "рабочей одежде",
+        "ru": "Рабочая одежда висит в отдельном шкафу.",
+        "ms": "Pakaian kerja digantung di dalam almari berasingan.",
+        "ruExpression": "рабочая одежда",
+        "msExpression": "pakaian kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Компания выдала сотруднику рабочую одежду.",
+        "ms": "Syarikat memberikan pakaian kerja kepada pekerja.",
+        "ruExpression": "рабочую одежду",
         "msExpression": "pakaian kerja",
         "origin": "original_teaching_example"
       }
@@ -5995,9 +6338,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем военную форму.",
-        "ms": "Kami membincangkan uniform tentera.",
-        "ruExpression": "военную форму",
+        "ru": "Военная форма выставлена в музее.",
+        "ms": "Uniform tentera dipamerkan di muzium.",
+        "ruExpression": "военная форма",
+        "msExpression": "uniform tentera",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На фотографии видна военная форма.",
+        "ms": "Uniform tentera kelihatan dalam gambar itu.",
+        "ruExpression": "военная форма",
         "msExpression": "uniform tentera",
         "origin": "original_teaching_example"
       }
@@ -6065,8 +6415,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается кухонный нож.",
-        "ms": "Artikel itu menyebut pisau dapur.",
+        "ru": "Кухонный нож лежит на столе.",
+        "ms": "Pisau dapur terletak di atas meja.",
+        "ruExpression": "кухонный нож",
+        "msExpression": "pisau dapur",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Повар взял кухонный нож.",
+        "ms": "Tukang masak mengambil pisau dapur.",
         "ruExpression": "кухонный нож",
         "msExpression": "pisau dapur",
         "origin": "original_teaching_example"
@@ -6100,9 +6457,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о разделочной доске.",
-        "ms": "Kami bercakap tentang papan pemotong.",
-        "ruExpression": "разделочной доске",
+        "ru": "Разделочная доска сделана из дерева.",
+        "ms": "Papan pemotong diperbuat daripada kayu.",
+        "ruExpression": "разделочная доска",
+        "msExpression": "papan pemotong",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После готовки я вымыл разделочную доску.",
+        "ms": "Saya membasuh papan pemotong selepas memasak.",
+        "ruExpression": "разделочную доску",
         "msExpression": "papan pemotong",
         "origin": "original_teaching_example"
       }
@@ -6135,8 +6499,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем плоскую тарелку.",
-        "ms": "Kami membincangkan pinggan leper.",
+        "ru": "На полке стоит плоская тарелка.",
+        "ms": "Pinggan leper ada di atas rak.",
+        "ruExpression": "плоская тарелка",
+        "msExpression": "pinggan leper",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Официант принёс плоскую тарелку.",
+        "ms": "Pelayan membawa pinggan leper.",
         "ruExpression": "плоскую тарелку",
         "msExpression": "pinggan leper",
         "origin": "original_teaching_example"
@@ -6170,9 +6541,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это грязная посуда.",
-        "ms": "Ini pinggan kotor.",
+        "ru": "Грязная посуда осталась в раковине.",
+        "ms": "Pinggan kotor masih ada di dalam sinki.",
         "ruExpression": "грязная посуда",
+        "msExpression": "pinggan kotor",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Официант убрал грязную посуду со стола.",
+        "ms": "Pelayan mengangkat pinggan kotor dari meja.",
+        "ruExpression": "грязную посуду",
         "msExpression": "pinggan kotor",
         "origin": "original_teaching_example"
       }
@@ -6205,9 +6583,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается чистая посуда.",
-        "ms": "Artikel itu menyebut pinggan bersih.",
+        "ru": "Чистая посуда стоит в шкафу.",
+        "ms": "Pinggan bersih ada di dalam almari.",
         "ruExpression": "чистая посуда",
+        "msExpression": "pinggan bersih",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Поставьте чистую посуду на стол.",
+        "ms": "Letakkan pinggan bersih di atas meja.",
+        "ruExpression": "чистую посуду",
         "msExpression": "pinggan bersih",
         "origin": "original_teaching_example"
       }
@@ -6240,9 +6625,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о рыбном соусе.",
-        "ms": "Kami bercakap tentang sos ikan.",
-        "ruExpression": "рыбном соусе",
+        "ru": "Рыбный соус подают отдельно.",
+        "ms": "Sos ikan dihidangkan secara berasingan.",
+        "ruExpression": "рыбный соус",
+        "msExpression": "sos ikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Вы добавляете рыбный соус в это блюдо?",
+        "ms": "Adakah anda menambah sos ikan ke dalam hidangan ini?",
+        "ruExpression": "рыбный соус",
         "msExpression": "sos ikan",
         "origin": "original_teaching_example"
       }
@@ -6275,9 +6667,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем горячую еду.",
-        "ms": "Kami membincangkan makanan panas.",
-        "ruExpression": "горячую еду",
+        "ru": "Горячая еда уже на столе.",
+        "ms": "Makanan panas sudah ada di atas meja.",
+        "ruExpression": "горячая еда",
+        "msExpression": "makanan panas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В этом кафе продаётся горячая еда.",
+        "ms": "Makanan panas dijual di kafe ini.",
+        "ruExpression": "горячая еда",
         "msExpression": "makanan panas",
         "origin": "original_teaching_example"
       }
@@ -6310,8 +6709,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это холодная еда.",
-        "ms": "Ini makanan sejuk.",
+        "ru": "Холодная еда хранится в холодильнике.",
+        "ms": "Makanan sejuk disimpan di dalam peti sejuk.",
+        "ruExpression": "холодная еда",
+        "msExpression": "makanan sejuk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На столе осталась только холодная еда.",
+        "ms": "Hanya makanan sejuk yang tinggal di atas meja.",
         "ruExpression": "холодная еда",
         "msExpression": "makanan sejuk",
         "origin": "original_teaching_example"
@@ -6380,9 +6786,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об уличной еде.",
-        "ms": "Kami bercakap tentang makanan jalanan.",
-        "ruExpression": "уличной еде",
+        "ru": "Уличная еда привлекает туристов.",
+        "ms": "Makanan jalanan menarik minat pelancong.",
+        "ruExpression": "уличная еда",
+        "msExpression": "makanan jalanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На рынке можно попробовать уличную еду.",
+        "ms": "Makanan jalanan boleh dicuba di pasar.",
+        "ruExpression": "уличную еду",
         "msExpression": "makanan jalanan",
         "origin": "original_teaching_example"
       }
@@ -6415,9 +6828,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем национальную кухню.",
-        "ms": "Kami membincangkan masakan kebangsaan.",
-        "ruExpression": "национальную кухню",
+        "ru": "На выставке представлена национальная кухня.",
+        "ms": "Masakan kebangsaan diperkenalkan dalam pameran itu.",
+        "ruExpression": "национальная кухня",
+        "msExpression": "masakan kebangsaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Посетители знакомятся с национальной кухней.",
+        "ms": "Pengunjung mengenali masakan kebangsaan.",
+        "ruExpression": "национальной кухней",
         "msExpression": "masakan kebangsaan",
         "origin": "original_teaching_example"
       }
@@ -6450,9 +6870,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это малайская кухня.",
-        "ms": "Ini masakan Melayu.",
+        "ru": "В этом ресторане представлена малайская кухня.",
+        "ms": "Masakan Melayu disajikan di restoran ini.",
         "ruExpression": "малайская кухня",
+        "msExpression": "masakan Melayu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я хочу больше узнать о малайской кухне.",
+        "ms": "Saya ingin mengetahui lebih lanjut tentang masakan Melayu.",
+        "ruExpression": "малайской кухне",
         "msExpression": "masakan Melayu",
         "origin": "original_teaching_example"
       }
@@ -6485,9 +6912,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается рисовая каша.",
-        "ms": "Artikel itu menyebut bubur nasi.",
+        "ru": "Рисовая каша уже готова.",
+        "ms": "Bubur nasi sudah siap.",
         "ruExpression": "рисовая каша",
+        "msExpression": "bubur nasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На завтрак я заказал рисовую кашу.",
+        "ms": "Saya memesan bubur nasi untuk sarapan.",
+        "ruExpression": "рисовую кашу",
         "msExpression": "bubur nasi",
         "origin": "original_teaching_example"
       }
@@ -6520,9 +6954,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о курином супе.",
-        "ms": "Kami bercakap tentang sup ayam.",
-        "ruExpression": "курином супе",
+        "ru": "Куриный суп стоит в меню первым.",
+        "ms": "Sup ayam disenaraikan dahulu dalam menu.",
+        "ruExpression": "куриный суп",
+        "msExpression": "sup ayam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы заказали куриный суп без перца.",
+        "ms": "Kami memesan sup ayam tanpa lada.",
+        "ruExpression": "куриный суп",
         "msExpression": "sup ayam",
         "origin": "original_teaching_example"
       }
@@ -6555,8 +6996,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем овощной суп.",
-        "ms": "Kami membincangkan sup sayur.",
+        "ru": "Овощной суп подают с хлебом.",
+        "ms": "Sup sayur dihidangkan bersama roti.",
+        "ruExpression": "овощной суп",
+        "msExpression": "sup sayur",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сегодня я приготовлю овощной суп.",
+        "ms": "Hari ini saya akan memasak sup sayur.",
         "ruExpression": "овощной суп",
         "msExpression": "sup sayur",
         "origin": "original_teaching_example"
@@ -6590,8 +7038,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это мясной суп.",
-        "ms": "Ini sup daging.",
+        "ru": "Мясной суп варится на кухне.",
+        "ms": "Sup daging sedang dimasak di dapur.",
+        "ruExpression": "мясной суп",
+        "msExpression": "sup daging",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Официант принёс мясной суп.",
+        "ms": "Pelayan membawa sup daging.",
         "ruExpression": "мясной суп",
         "msExpression": "sup daging",
         "origin": "original_teaching_example"
@@ -6625,8 +7080,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается рыбный суп.",
-        "ms": "Artikel itu menyebut sup ikan.",
+        "ru": "Рыбный суп входит в обеденное меню.",
+        "ms": "Sup ikan termasuk dalam menu makan tengah hari.",
+        "ruExpression": "рыбный суп",
+        "msExpression": "sup ikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Можно заказать рыбный суп?",
+        "ms": "Bolehkah saya memesan sup ikan?",
         "ruExpression": "рыбный суп",
         "msExpression": "sup ikan",
         "origin": "original_teaching_example"
@@ -6660,9 +7122,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о печёной рыбе.",
-        "ms": "Kami bercakap tentang ikan bakar.",
-        "ruExpression": "печёной рыбе",
+        "ru": "Печеная рыба подаётся с рисом.",
+        "ms": "Ikan bakar dihidangkan bersama nasi.",
+        "ruExpression": "печеная рыба",
+        "msExpression": "ikan bakar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Закажите печеную рыбу на двоих.",
+        "ms": "Pesan ikan bakar untuk dua orang.",
+        "ruExpression": "печёную рыбу",
         "msExpression": "ikan bakar",
         "origin": "original_teaching_example"
       }
@@ -6695,8 +7164,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем жареную курицу.",
-        "ms": "Kami membincangkan ayam goreng.",
+        "ru": "Жареная курица уже на тарелке.",
+        "ms": "Ayam goreng sudah ada di atas pinggan.",
+        "ruExpression": "жареная курица",
+        "msExpression": "ayam goreng",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы купили жареную курицу на ужин.",
+        "ms": "Kami membeli ayam goreng untuk makan malam.",
         "ruExpression": "жареную курицу",
         "msExpression": "ayam goreng",
         "origin": "original_teaching_example"
@@ -6731,8 +7207,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это прием у врача.",
-        "ms": "Ini janji temu doktor.",
+        "ru": "Прием у врача назначен на завтра.",
+        "ms": "Janji temu doktor dijadualkan esok.",
+        "ruExpression": "прием у врача",
+        "msExpression": "janji temu doktor",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мне нужно перенести прием у врача.",
+        "ms": "Saya perlu menukar tarikh janji temu doktor.",
         "ruExpression": "прием у врача",
         "msExpression": "janji temu doktor",
         "origin": "original_teaching_example"
@@ -6766,9 +7249,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается регистратор больницы.",
-        "ms": "Artikel itu menyebut petugas pendaftaran hospital.",
+        "ru": "Регистратор больницы проверил документы.",
+        "ms": "Petugas pendaftaran hospital menyemak dokumen.",
         "ruExpression": "регистратор больницы",
+        "msExpression": "petugas pendaftaran hospital",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обратитесь к регистратору больницы.",
+        "ms": "Sila berjumpa dengan petugas pendaftaran hospital.",
+        "ruExpression": "регистратору больницы",
         "msExpression": "petugas pendaftaran hospital",
         "origin": "original_teaching_example"
       }
@@ -6801,9 +7291,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о карте пациента.",
-        "ms": "Kami bercakap tentang rekod pesakit.",
-        "ruExpression": "карте пациента",
+        "ru": "Карта пациента хранится в регистратуре.",
+        "ms": "Rekod pesakit disimpan di kaunter pendaftaran.",
+        "ruExpression": "карта пациента",
+        "msExpression": "rekod pesakit",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник открыл карту пациента.",
+        "ms": "Petugas membuka rekod pesakit.",
+        "ruExpression": "карту пациента",
         "msExpression": "rekod pesakit",
         "origin": "original_teaching_example"
       }
@@ -6836,8 +7333,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем жалобу пациента.",
-        "ms": "Kami membincangkan aduan pesakit.",
+        "ru": "Жалоба пациента зарегистрирована.",
+        "ms": "Aduan pesakit telah didaftarkan.",
+        "ruExpression": "жалоба пациента",
+        "msExpression": "aduan pesakit",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Администратор записал жалобу пациента.",
+        "ms": "Pentadbir mencatat aduan pesakit.",
         "ruExpression": "жалобу пациента",
         "msExpression": "aduan pesakit",
         "origin": "original_teaching_example"
@@ -6871,8 +7375,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это побочный эффект.",
-        "ms": "Ini kesan sampingan.",
+        "ru": "Врач объяснил возможный побочный эффект.",
+        "ms": "Doktor menerangkan kesan sampingan yang mungkin berlaku.",
+        "ruExpression": "побочный эффект",
+        "msExpression": "kesan sampingan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Этот побочный эффект упомянут в инструкции.",
+        "ms": "Kesan sampingan ini dinyatakan dalam arahan penggunaan.",
         "ruExpression": "побочный эффект",
         "msExpression": "kesan sampingan",
         "origin": "original_teaching_example"
@@ -6906,8 +7417,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается игла шприца.",
-        "ms": "Artikel itu menyebut jarum suntikan.",
+        "ru": "Игла шприца находится в закрытой упаковке.",
+        "ms": "Jarum suntikan berada di dalam bungkusan tertutup.",
+        "ruExpression": "игла шприца",
+        "msExpression": "jarum suntikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На фотографии показана игла шприца.",
+        "ms": "Jarum suntikan ditunjukkan dalam gambar itu.",
         "ruExpression": "игла шприца",
         "msExpression": "jarum suntikan",
         "origin": "original_teaching_example"
@@ -6941,9 +7459,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об анализе крови.",
-        "ms": "Kami bercakap tentang ujian darah.",
-        "ruExpression": "анализе крови",
+        "ru": "Анализ крови назначен на утро.",
+        "ms": "Ujian darah dijadualkan pada waktu pagi.",
+        "ruExpression": "анализ крови",
+        "msExpression": "ujian darah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Результат анализа крови уже готов.",
+        "ms": "Keputusan ujian darah sudah siap.",
+        "ruExpression": "анализа крови",
         "msExpression": "ujian darah",
         "origin": "original_teaching_example"
       }
@@ -6976,8 +7501,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем инвалидную коляску.",
-        "ms": "Kami membincangkan kerusi roda.",
+        "ru": "Инвалидная коляска стоит у входа.",
+        "ms": "Kerusi roda ada di pintu masuk.",
+        "ruExpression": "инвалидная коляска",
+        "msExpression": "kerusi roda",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник принёс инвалидную коляску.",
+        "ms": "Petugas membawa kerusi roda.",
         "ruExpression": "инвалидную коляску",
         "msExpression": "kerusi roda",
         "origin": "original_teaching_example"
@@ -7046,8 +7578,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается пищевое отравление.",
-        "ms": "Artikel itu menyebut keracunan makanan.",
+        "ru": "В сообщении упоминается пищевое отравление.",
+        "ms": "Keracunan makanan disebut dalam laporan itu.",
+        "ruExpression": "пищевое отравление",
+        "msExpression": "keracunan makanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Врач записал диагноз «пищевое отравление».",
+        "ms": "Doktor mencatat diagnosis keracunan makanan.",
         "ruExpression": "пищевое отравление",
         "msExpression": "keracunan makanan",
         "origin": "original_teaching_example"
@@ -7081,9 +7620,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об укусе комара.",
-        "ms": "Kami bercakap tentang gigitan nyamuk.",
-        "ruExpression": "укусе комара",
+        "ru": "На руке заметен укус комара.",
+        "ms": "Gigitan nyamuk kelihatan pada tangan.",
+        "ruExpression": "укус комара",
+        "msExpression": "gigitan nyamuk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ребёнок показал врачу укус комара.",
+        "ms": "Kanak-kanak menunjukkan gigitan nyamuk kepada doktor.",
+        "ruExpression": "укус комара",
         "msExpression": "gigitan nyamuk",
         "origin": "original_teaching_example"
       }
@@ -7115,9 +7661,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем аллергическую реакцию.",
-        "ms": "Kami membincangkan reaksi alahan.",
-        "ruExpression": "аллергическую реакцию",
+        "ru": "В карте отмечена аллергическая реакция.",
+        "ms": "Reaksi alahan dicatat dalam rekod itu.",
+        "ruExpression": "аллергическая реакция",
+        "msExpression": "reaksi alahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Врач спросил, была ли аллергическая реакция.",
+        "ms": "Doktor bertanya sama ada reaksi alahan pernah berlaku.",
+        "ruExpression": "аллергическая реакция",
         "msExpression": "reaksi alahan",
         "origin": "original_teaching_example"
       }
@@ -7150,8 +7703,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это горный хребет.",
-        "ms": "Ini banjaran gunung.",
+        "ru": "Горный хребет виден из окна.",
+        "ms": "Banjaran gunung kelihatan dari tingkap.",
+        "ruExpression": "горный хребет",
+        "msExpression": "banjaran gunung",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На карте обозначен горный хребет.",
+        "ms": "Banjaran gunung ditandakan pada peta.",
         "ruExpression": "горный хребет",
         "msExpression": "banjaran gunung",
         "origin": "original_teaching_example"
@@ -7184,9 +7744,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается чайная плантация.",
-        "ms": "Artikel itu menyebut ladang teh.",
+        "ru": "Чайная плантация расположена на склоне.",
+        "ms": "Ladang teh terletak di lereng bukit.",
         "ruExpression": "чайная плантация",
+        "msExpression": "ladang teh",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Туристы посетили чайную плантацию.",
+        "ms": "Pelancong melawat ladang teh.",
+        "ruExpression": "чайную плантацию",
         "msExpression": "ladang teh",
         "origin": "original_teaching_example"
       }
@@ -7219,9 +7786,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о кофейном дереве.",
-        "ms": "Kami bercakap tentang pokok kopi.",
-        "ruExpression": "кофейном дереве",
+        "ru": "Кофейное дерево растёт возле дома.",
+        "ms": "Pokok kopi tumbuh berhampiran rumah.",
+        "ruExpression": "кофейное дерево",
+        "msExpression": "pokok kopi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Фермер посадил кофейное дерево.",
+        "ms": "Petani menanam pokok kopi.",
+        "ruExpression": "кофейное дерево",
         "msExpression": "pokok kopi",
         "origin": "original_teaching_example"
       }
@@ -7254,8 +7828,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем перечное растение.",
-        "ms": "Kami membincangkan pokok lada.",
+        "ru": "Перечное растение нуждается в опоре.",
+        "ms": "Pokok lada memerlukan sokongan.",
+        "ruExpression": "перечное растение",
+        "msExpression": "pokok lada",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На фотографии изображено перечное растение.",
+        "ms": "Pokok lada ditunjukkan dalam gambar itu.",
         "ruExpression": "перечное растение",
         "msExpression": "pokok lada",
         "origin": "original_teaching_example"
@@ -7289,8 +7870,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это домашняя птица.",
-        "ms": "Ini ayam itik.",
+        "ru": "В хозяйстве есть домашняя птица.",
+        "ms": "Terdapat ayam itik di ladang itu.",
+        "ruExpression": "домашняя птица",
+        "msExpression": "ayam itik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Домашняя птица находится во дворе.",
+        "ms": "Ayam itik berada di halaman.",
         "ruExpression": "домашняя птица",
         "msExpression": "ayam itik",
         "origin": "original_teaching_example"
@@ -7324,9 +7912,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается морская звезда.",
-        "ms": "Artikel itu menyebut tapak sulaiman.",
+        "ru": "На дне видна морская звезда.",
+        "ms": "Tapak sulaiman kelihatan di dasar laut.",
         "ruExpression": "морская звезда",
+        "msExpression": "tapak sulaiman",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ребёнок нарисовал морскую звезду.",
+        "ms": "Kanak-kanak melukis tapak sulaiman.",
+        "ruExpression": "морскую звезду",
         "msExpression": "tapak sulaiman",
         "origin": "original_teaching_example"
       }
@@ -7359,9 +7954,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о новостной программе.",
-        "ms": "Kami bercakap tentang program berita.",
-        "ruExpression": "новостной программе",
+        "ru": "Новостная программа начнётся через минуту.",
+        "ms": "Program berita akan bermula dalam masa seminit.",
+        "ruExpression": "новостная программа",
+        "msExpression": "program berita",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я смотрю новостную программу вечером.",
+        "ms": "Saya menonton program berita pada waktu malam.",
+        "ruExpression": "новостную программу",
         "msExpression": "program berita",
         "origin": "original_teaching_example"
       }
@@ -7392,8 +7994,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем запись эфира.",
-        "ms": "Kami membincangkan rakaman siaran.",
+        "ru": "Запись эфира сохранена в архиве.",
+        "ms": "Rakaman siaran disimpan dalam arkib.",
+        "ruExpression": "запись эфира",
+        "msExpression": "rakaman siaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор прослушал запись эфира.",
+        "ms": "Editor mendengar rakaman siaran.",
         "ruExpression": "запись эфира",
         "msExpression": "rakaman siaran",
         "origin": "original_teaching_example"
@@ -7427,9 +8036,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это папка с файлами.",
-        "ms": "Ini folder fail.",
+        "ru": "Папка с файлами находится на рабочем столе.",
+        "ms": "Folder fail terdapat pada desktop.",
         "ruExpression": "папка с файлами",
+        "msExpression": "folder fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я скопировал папку с файлами на другой диск.",
+        "ms": "Saya menyalin folder fail ke cakera lain.",
+        "ruExpression": "папку с файлами",
         "msExpression": "folder fail",
         "origin": "original_teaching_example"
       }
@@ -7466,6 +8082,13 @@ export const contextCorpus = [
         "ruExpression": "резервная копия",
         "msExpression": "salinan sandaran",
         "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перед обновлением создана резервная копия.",
+        "ms": "Salinan sandaran dibuat sebelum kemas kini.",
+        "ruExpression": "резервная копия",
+        "msExpression": "salinan sandaran",
+        "origin": "original_teaching_example"
       }
     ]
   },
@@ -7496,9 +8119,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о ключевом слове.",
-        "ms": "Kami bercakap tentang kata kunci.",
-        "ruExpression": "ключевом слове",
+        "ru": "Введите ключевое слово в строку поиска.",
+        "ms": "Masukkan kata kunci dalam ruang carian.",
+        "ruExpression": "ключевое слово",
+        "msExpression": "kata kunci",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Это ключевое слово встречается в заголовке.",
+        "ms": "Kata kunci ini terdapat dalam tajuk.",
+        "ruExpression": "ключевое слово",
         "msExpression": "kata kunci",
         "origin": "original_teaching_example"
       }
@@ -7531,8 +8161,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем результат поиска.",
-        "ms": "Kami membincangkan hasil carian.",
+        "ru": "Первый результат поиска оказался полезным.",
+        "ms": "Hasil carian pertama berguna.",
+        "ruExpression": "результат поиска",
+        "msExpression": "hasil carian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я сохранил результат поиска.",
+        "ms": "Saya menyimpan hasil carian.",
         "ruExpression": "результат поиска",
         "msExpression": "hasil carian",
         "origin": "original_teaching_example"
@@ -7565,9 +8202,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это история поиска.",
-        "ms": "Ini sejarah carian.",
+        "ru": "История поиска доступна в настройках.",
+        "ms": "Sejarah carian tersedia dalam tetapan.",
         "ruExpression": "история поиска",
+        "msExpression": "sejarah carian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пользователь очистил историю поиска.",
+        "ms": "Pengguna memadamkan sejarah carian.",
+        "ruExpression": "историю поиска",
         "msExpression": "sejarah carian",
         "origin": "original_teaching_example"
       }
@@ -7600,8 +8244,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается подключение к интернету.",
-        "ms": "Artikel itu menyebut sambungan internet.",
+        "ru": "Подключение к интернету прервалось.",
+        "ms": "Sambungan internet terputus.",
+        "ruExpression": "подключение к интернету",
+        "msExpression": "sambungan internet",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте подключение к интернету.",
+        "ms": "Semak sambungan internet.",
         "ruExpression": "подключение к интернету",
         "msExpression": "sambungan internet",
         "origin": "original_teaching_example"
@@ -7635,9 +8286,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о мобильном интернете.",
-        "ms": "Kami bercakap tentang internet mudah alih.",
-        "ruExpression": "мобильном интернете",
+        "ru": "Мобильный интернет здесь работает медленно.",
+        "ms": "Internet mudah alih berfungsi dengan perlahan di sini.",
+        "ruExpression": "мобильный интернет",
+        "msExpression": "internet mudah alih",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я использую мобильный интернет в поездках.",
+        "ms": "Saya menggunakan internet mudah alih semasa perjalanan.",
+        "ruExpression": "мобильный интернет",
         "msExpression": "internet mudah alih",
         "origin": "original_teaching_example"
       }
@@ -7670,8 +8328,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем домашний интернет.",
-        "ms": "Kami membincangkan internet rumah.",
+        "ru": "Домашний интернет не работает со вчерашнего дня.",
+        "ms": "Internet rumah tidak berfungsi sejak semalam.",
+        "ruExpression": "домашний интернет",
+        "msExpression": "internet rumah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подключили домашний интернет на прошлой неделе.",
+        "ms": "Kami memasang internet rumah pada minggu lalu.",
         "ruExpression": "домашний интернет",
         "msExpression": "internet rumah",
         "origin": "original_teaching_example"
@@ -7703,8 +8368,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это скорость загрузки.",
-        "ms": "Ini kelajuan muat turun.",
+        "ru": "Скорость загрузки зависит от соединения.",
+        "ms": "Kelajuan muat turun bergantung pada sambungan.",
+        "ruExpression": "скорость загрузки",
+        "msExpression": "kelajuan muat turun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Приложение показывает скорость загрузки.",
+        "ms": "Aplikasi itu memaparkan kelajuan muat turun.",
         "ruExpression": "скорость загрузки",
         "msExpression": "kelajuan muat turun",
         "origin": "original_teaching_example"
@@ -7738,8 +8410,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается облачное хранилище.",
-        "ms": "Artikel itu menyebut storan awan.",
+        "ru": "Облачное хранилище заполнено.",
+        "ms": "Storan awan sudah penuh.",
+        "ruExpression": "облачное хранилище",
+        "msExpression": "storan awan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы перенесли фотографии в облачное хранилище.",
+        "ms": "Kami memindahkan gambar ke storan awan.",
         "ruExpression": "облачное хранилище",
         "msExpression": "storan awan",
         "origin": "original_teaching_example"
@@ -7773,9 +8452,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о кассовом аппарате.",
-        "ms": "Kami bercakap tentang mesin daftar tunai.",
-        "ruExpression": "кассовом аппарате",
+        "ru": "Кассовый аппарат не печатает чек.",
+        "ms": "Mesin daftar tunai tidak mencetak resit.",
+        "ruExpression": "кассовый аппарат",
+        "msExpression": "mesin daftar tunai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Продавец включил кассовый аппарат.",
+        "ms": "Penjual menghidupkan mesin daftar tunai.",
+        "ruExpression": "кассовый аппарат",
         "msExpression": "mesin daftar tunai",
         "origin": "original_teaching_example"
       }
@@ -7808,9 +8494,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем оплату наличными.",
-        "ms": "Kami membincangkan bayaran tunai.",
-        "ruExpression": "оплату наличными",
+        "ru": "Оплата наличными доступна при получении.",
+        "ms": "Bayaran tunai boleh dibuat semasa menerima barang.",
+        "ruExpression": "оплата наличными",
+        "msExpression": "bayaran tunai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В этом магазине принимается оплата наличными.",
+        "ms": "Bayaran tunai diterima di kedai ini.",
+        "ruExpression": "оплата наличными",
         "msExpression": "bayaran tunai",
         "origin": "original_teaching_example"
       }
@@ -7843,8 +8536,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это оплата онлайн.",
-        "ms": "Ini bayaran dalam talian.",
+        "ru": "Оплата онлайн занимает несколько минут.",
+        "ms": "Bayaran dalam talian mengambil masa beberapa minit.",
+        "ruExpression": "оплата онлайн",
+        "msExpression": "bayaran dalam talian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После выбора товара доступна оплата онлайн.",
+        "ms": "Bayaran dalam talian boleh dibuat selepas memilih barang.",
         "ruExpression": "оплата онлайн",
         "msExpression": "bayaran dalam talian",
         "origin": "original_teaching_example"

@@ -1536,7 +1536,7 @@ function renderBestAnswer() {
         const example = document.createElement("p");
         example.className = "sense-example";
         example.innerHTML = hit._context
-          ? highlightContext(sense.example, hit._context.examples[index][`${hit._contextLanguage}Expression`])
+          ? highlightContext(sense.example, hit._context.examples[sense.contextExampleIndex ?? index][`${hit._contextLanguage}Expression`])
           : highlightText(sense.example, query);
         senseItem.append(example);
       }
@@ -1544,7 +1544,7 @@ function renderBestAnswer() {
         const exampleTranslation = document.createElement("p");
         exampleTranslation.className = "sense-example-translation";
         exampleTranslation.innerHTML = hit._context
-          ? highlightContext(sense.exampleTranslation, hit._context.examples[index][`${hit._contextLanguage === "ru" ? "ms" : "ru"}Expression`])
+          ? highlightContext(sense.exampleTranslation, hit._context.examples[sense.contextExampleIndex ?? index][`${hit._contextLanguage === "ru" ? "ms" : "ru"}Expression`])
           : highlightText(sense.exampleTranslation, query);
         senseItem.append(exampleTranslation);
       }
@@ -1646,14 +1646,15 @@ function renderResults() {
 
     item.append(title, desc, type);
     if (result._context) {
-      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение", "выражение со словом"][result._contextKind]}`;
+      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение", "выражение со словом", "совпадение в примере"][result._contextKind]}`;
       const context = document.createElement("div");
       context.className = "parallel-context";
-      for (const example of result._context.examples) {
+      for (const exampleIndex of result._contextExampleIndexes) {
+        const example = result._context.examples[exampleIndex];
         for (const lang of [result._contextLanguage, result._contextLanguage === "ru" ? "ms" : "ru"]) {
           const sentence = document.createElement("p");
           sentence.lang = lang;
-          sentence.innerHTML = highlightContext(example[lang], example[`${lang}Expression`]);
+          sentence.innerHTML = highlightContext(example[lang], example[`${lang}Expression`], result._contextKind === 4 ? query : "");
           context.append(sentence);
         }
       }
@@ -1743,7 +1744,7 @@ function initializeContextFilters() {
 
 function renderContextSummary(contextHits) {
   const examples = contextHits.reduce((total, hit) => total + hit._context.examples.length, 0);
-  ui.contextSummary.textContent = !state.activeQuery ? "Ищите выражение или отдельное слово: вода → горячая вода, питьевая вода."
+  ui.contextSummary.textContent = !state.activeQuery ? "Ищите выражение, отдельное слово или фрагмент примера: вода → горячая вода; застрял → замочная скважина."
     : contextHits.length ? `Выражений с примерами: ${contextHits.length} · параллельных примеров: ${examples}`
     : "В корпусе нет примеров для этого запроса и выбранной темы.";
   if (ui.contextMode.value === "context") ui.contextSummary.textContent += " Точный словарный ответ выше сохраняется.";

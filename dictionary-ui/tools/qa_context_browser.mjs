@@ -63,6 +63,36 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='air');
  assert.ok((await page.locator('#resultList').textContent()).includes('air panas'));
  results.push({viewport,scenario:'related-malay-word',passed:true});
+ for (const [exampleQuery,expectedTitle] of [['застрял','замочная скважина'],['tersangkut','lubang kunci']]) {
+  await page.locator('#searchInput').fill(exampleQuery);
+  await page.locator('#searchButton').click();
+  await page.waitForFunction(expected=>Array.from(document.querySelectorAll('#resultList .result-headword')).some(element=>element.textContent===expected),expectedTitle);
+  const exampleResult=page.locator('#resultList > li').filter({has:page.locator('.result-headword',{hasText:expectedTitle})}).first();
+  assert.ok((await exampleResult.locator('.result-type').textContent()).includes('совпадение в примере'));
+  assert.ok((await exampleResult.locator('.parallel-context mark').allTextContents()).some(text=>text.toLowerCase()===exampleQuery));
+  assert.ok(await exampleResult.locator('.parallel-context mark').count()>=3);
+  results.push({viewport,scenario:'example-search-'+exampleQuery,passed:true});
+ }
+ await page.locator('#searchInput').fill('Я забыл номер комнаты.');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='номер комнаты');
+ assert.equal(await page.locator('#answerDetails .sense-example').first().textContent(),'Я забыл номер комнаты.');
+ assert.equal(await page.locator('#answerDetails .sense-example mark').first().textContent(),'номер комнаты');
+ assert.equal(await page.locator('#answerDetails .sense-example-translation').first().textContent(),'Saya terlupa nombor bilik.');
+ results.push({viewport,scenario:'matching-example-ordered-first',passed:true});
+ await page.locator('#searchInput').fill('станция пересадки');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='станция пересадки');
+ assert.equal(await page.locator('#answerDetails mark').count(),4);
+ results.push({viewport,scenario:'new-batch-contexts',passed:true});
+ await page.locator('#searchInput').fill('tersangkut');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#resultList .result-headword')?.textContent==='lubang kunci');
+ await page.locator('.context-filters').scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Horizontal overflow in example results');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-example-search.png`,fullPage:false});
+ await page.locator('#resultList > li').first().scrollIntoViewIfNeeded();
+ await page.screenshot({path:`${outputDir}/${viewport.width}-example-detail.png`,fullPage:false});
  await page.locator('#resetContextFilters').click();
  await page.locator('#searchInput').fill('номер комнаты');
  await page.locator('#searchButton').click();
@@ -101,6 +131,10 @@ for(const profile of ['','-Lite']) {
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');
  assert.ok((await page.locator('#resultList').textContent()).includes('горячая вода'));
+ await page.locator('#searchInput').fill('застрял');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#resultList .result-headword')?.textContent==='замочная скважина');
+ assert.ok((await page.locator('#resultList .parallel-context mark').allTextContents()).includes('застрял'));
  results.push({offline:profile||'Full',passed:true});
  await page.close();
 }
