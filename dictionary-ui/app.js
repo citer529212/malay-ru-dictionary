@@ -1,5 +1,5 @@
 import { contextCorpus } from './data/context-corpus.js';
-import { searchContextCorpus, mergeContextResults, highlightContext } from './context-core.js';
+import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites } from './context-core.js';
 import {
   detectQueryScript,
   directionForQuery,
@@ -29,6 +29,11 @@ const ui = {
   contextMode: document.getElementById("contextMode"),
   contextTopic: document.getElementById("contextTopic"),
   contextSummary: document.getElementById("contextSummary"),
+  savedContextOption: document.getElementById("savedContextOption"),
+  exportContextFavorites: document.getElementById("exportContextFavorites"),
+  contextFavoriteStatus: document.getElementById("contextFavoriteStatus"),
+  shownResultCount: document.getElementById("shownResultCount"),
+  showMoreResults: document.getElementById("showMoreResults"),
   resetContextFilters: document.getElementById("resetContextFilters"),
   statusText: document.getElementById("statusText"),
   progressBar: document.getElementById("progressBar"),
@@ -63,6 +68,8 @@ const BUNDLED_DICTIONARY_URLS = {
 };
 const TARGET_AUTONOMOUS_ENTRIES = 10_000;
 const MAX_RESULTS = 300;
+const RESULT_PAGE_SIZE = 24;
+const CONTEXT_FAVORITES_KEY = "dictionary-shell:corpus-favorites:v1";
 const MAX_HISTORY_ITEMS = 8;
 const DICTIONARY_DATA_VERSION = "2026-10-21-v6-18";
 
@@ -71,6 +78,9 @@ const state = {
   lines: [],
   pageTexts: [],
   results: [],
+  visibleResultCount: RESULT_PAGE_SIZE,
+  resetResultScroll: false,
+  contextFavorites: new Set(),
   selectedResultId: null,
   bestAnswer: null,
   searchMode: "entries",
@@ -89,6 +99,49 @@ const state = {
   dictionaryCache: new Map(),
   lastLoadFromCache: false,
 };
+
+function loadContextFavorites() {
+  try {
+    state.contextFavorites = new Set(normalizeContextFavorites(JSON.parse(localStorage.getItem(CONTEXT_FAVORITES_KEY) || "[]"), contextCorpus));
+  } catch {
+    state.contextFavorites = new Set();
+  }
+  updateContextFavoritesControls();
+}
+
+function updateContextFavoritesControls() {
+  ui.savedContextOption.textContent = `Сохранённые (${state.contextFavorites.size})`;
+  ui.exportContextFavorites.disabled = state.contextFavorites.size === 0;
+}
+
+function toggleContextFavorite(id, button) {
+  const next = new Set(state.contextFavorites);
+  if (next.has(id)) next.delete(id); else next.add(id);
+  try {
+    localStorage.setItem(CONTEXT_FAVORITES_KEY, JSON.stringify([...next]));
+  } catch {
+    ui.contextFavoriteStatus.textContent = "Браузер не разрешил сохранить подборку. Проверьте доступ к локальному хранилищу.";
+    return;
+  }
+  state.contextFavorites = next;
+  updateContextFavoritesControls();
+  const saved = next.has(id);
+  button.setAttribute("aria-pressed", String(saved));
+  button.textContent = saved ? "В подборке ✓" : "Сохранить выражение";
+  ui.contextFavoriteStatus.textContent = saved ? "Выражение сохранено на этом устройстве." : "Выражение убрано из подборки.";
+  if (ui.contextMode.value === "saved") runSearch(false);
+}
+
+function exportContextFavorites() {
+  if (!state.contextFavorites.size) return;
+  const content = serializeContextFavorites([...state.contextFavorites], contextCorpus);
+  const url = URL.createObjectURL(new Blob([content], {type:"application/json;charset=utf-8"}));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "dictionary-context-selection.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
 
 function loadMissingQueries() {
   try {
@@ -1605,12 +1658,21 @@ function renderBestAnswer() {
 }
 
 function renderResults() {
+  const openDetails = new Set([...ui.resultList.querySelectorAll("li:has(details[open])")].map(item => item.dataset.resultId));
+  const scrollTop = state.resetResultScroll ? 0 : ui.resultList.scrollTop;
+  state.resetResultScroll = false;
   ui.resultList.innerHTML = "";
+  const visibleCount = Math.min(state.visibleResultCount, state.results.length);
+  ui.shownResultCount.textContent = `Показано ${visibleCount} из ${state.results.length}`;
+  ui.showMoreResults.hidden = visibleCount >= state.results.length;
+  ui.showMoreResults.textContent = `Показать ещё ${Math.min(RESULT_PAGE_SIZE, state.results.length - visibleCount)}`;
 
   if (!state.results.length) {
     const emptyItem = document.createElement("li");
     emptyItem.className = "result-item";
-    emptyItem.textContent = ui.contextMode.value === "context" && state.activeQuery
+    emptyItem.textContent = ui.contextMode.value === "saved"
+      ? state.contextFavorites.size ? "В подборке нет выражений по выбранным условиям. Измените запрос или тему." : "Подборка пока пуста. Сохраните выражение из каталога или поиска."
+      : ui.contextMode.value === "context" && state.activeQuery
       ? "Нет примеров по выбранным условиям. Сбросьте фильтры или измените запрос."
       : "Совпадений пока нет.";
     ui.resultList.append(emptyItem);
@@ -1621,9 +1683,10 @@ function renderResults() {
   const query = state.activeQuery;
   ui.resultCount.textContent = String(state.results.length);
 
-  for (const result of state.results) {
+  for (const result of state.results.slice(0, state.visibleResultCount)) {
     const item = document.createElement("li");
     item.className = "result-item";
+    item.dataset.resultId = result.id;
     if (result.id === state.selectedResultId) {
       item.classList.add("active");
     }
@@ -1646,7 +1709,17 @@ function renderResults() {
 
     item.append(title, desc, type);
     if (result._context) {
-      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение", "выражение со словом", "совпадение в примере"][result._contextKind]}`;
+      type.textContent = `verified · ${result.domain} · ${["точная фраза", "словоформа", "длинное совпадение", "выражение со словом", "совпадение в примере", "каталог"][result._contextKind]}`;
+      const saveButton = document.createElement("button");
+      saveButton.type = "button";
+      saveButton.className = "context-save";
+      saveButton.setAttribute("aria-pressed", String(state.contextFavorites.has(result.id)));
+      saveButton.textContent = state.contextFavorites.has(result.id) ? "В подборке ✓" : "Сохранить выражение";
+      saveButton.addEventListener("click", event => {
+        event.stopPropagation();
+        toggleContextFavorite(result.id, saveButton);
+      });
+      item.append(saveButton);
       const context = document.createElement("div");
       context.className = "parallel-context";
       for (const exampleIndex of result._contextExampleIndexes) {
@@ -1664,6 +1737,7 @@ function renderResults() {
       item.append(context);
       const details = document.createElement("details");
       details.className = "context-details";
+      details.open = openDetails.has(result.id);
       const summary = document.createElement("summary");
       summary.textContent = "Словоформы и источник перевода";
       details.append(summary);
@@ -1692,6 +1766,7 @@ function renderResults() {
 
     ui.resultList.append(item);
   }
+  ui.resultList.scrollTop = scrollTop;
 }
 
 function renderSuggestions(query) {
@@ -1719,6 +1794,11 @@ function renderSuggestions(query) {
 }
 
 function initializeContextFilters() {
+  ui.exportContextFavorites.addEventListener("click", exportContextFavorites);
+  ui.showMoreResults.addEventListener("click", () => {
+    state.visibleResultCount += RESULT_PAGE_SIZE;
+    renderResults();
+  });
   const topics = [...new Set(contextCorpus.filter(row => row.verified).map(row => row.topic))]
     .sort((a, b) => a.localeCompare(b, "ru"));
   for (const topic of topics) {
@@ -1732,7 +1812,7 @@ function initializeContextFilters() {
     runSearch();
   });
   ui.contextTopic.addEventListener("change", () => {
-    if (ui.contextTopic.value) ui.contextMode.value = "context";
+    if (ui.contextTopic.value && ui.contextMode.value === "all") ui.contextMode.value = "context";
     runSearch();
   });
   ui.resetContextFilters.addEventListener("click", () => {
@@ -1744,26 +1824,31 @@ function initializeContextFilters() {
 
 function renderContextSummary(contextHits) {
   const examples = contextHits.reduce((total, hit) => total + hit._context.examples.length, 0);
-  ui.contextSummary.textContent = !state.activeQuery ? "Ищите выражение, отдельное слово или фрагмент примера: вода → горячая вода; застрял → замочная скважина."
+  ui.contextSummary.textContent = !state.activeQuery && ui.contextMode.value === "all"
+    ? "Введите запрос или выберите «Только с примерами», чтобы открыть каталог всех выражений."
     : contextHits.length ? `Выражений с примерами: ${contextHits.length} · параллельных примеров: ${examples}`
     : "В корпусе нет примеров для этого запроса и выбранной темы.";
-  if (ui.contextMode.value === "context") ui.contextSummary.textContent += " Точный словарный ответ выше сохраняется.";
+  if (ui.contextMode.value !== "all" && state.activeQuery) ui.contextSummary.textContent += " Точный словарный ответ выше сохраняется.";
   ui.resetContextFilters.hidden = ui.contextMode.value === "all" && !ui.contextTopic.value;
 }
 
-function runSearch() {
+function runSearch(resetVisible = true) {
+  if (resetVisible) {
+    state.visibleResultCount = RESULT_PAGE_SIZE;
+    state.resetResultScroll = true;
+  }
   const query = ui.searchInput.value.trim();
   state.activeQuery = query;
   const groupedEntries = query ? groupEntryResults(searchEntries(query), query) : [];
-  const allContextHits = searchContextCorpus(contextCorpus, query, state.direction);
-  const contextHits = ui.contextTopic.value
-    ? allContextHits.filter(hit => hit.domain === ui.contextTopic.value) : allContextHits;
-  const mergedResults = mergeContextResults(query, allContextHits, mergeResults(query, groupedEntries));
+  const allContextHits = query ? searchContextCorpus(contextCorpus, query, state.direction)
+    : ui.contextMode.value !== "all" ? browseContextCorpus(contextCorpus, state.direction) : [];
+  const contextHits = allContextHits.filter(hit => (!ui.contextTopic.value || hit.domain === ui.contextTopic.value) &&
+    (ui.contextMode.value !== "saved" || state.contextFavorites.has(hit.id)));
+  const mergedResults = query ? mergeContextResults(query, allContextHits, mergeResults(query, groupedEntries)) : [];
   // The exact dictionary answer remains independent of discovery filters.
   const first = mergedResults[0];
   state.bestAnswer = first?._context && first._contextKind < 3 ? first : computeBestAnswer(query, groupedEntries);
-  state.results = query.length < 2 ? [] : ui.contextMode.value === "context"
-    ? contextHits.slice(0, MAX_RESULTS) : mergedResults.slice(0, MAX_RESULTS);
+  state.results = query.length === 1 ? [] : ui.contextMode.value !== "all" ? contextHits : mergedResults.slice(0, MAX_RESULTS);
   renderContextSummary(contextHits);
   ui.resultList.dataset.candidateCount = String(state.lastCandidateCount);
 
@@ -1780,6 +1865,7 @@ function runSearch() {
   renderSuggestions(query);
 }
 
+loadContextFavorites();
 initializeContextFilters();
 loadHistory();
 loadMissingQueries();

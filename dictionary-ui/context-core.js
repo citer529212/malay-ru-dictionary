@@ -24,19 +24,20 @@ function contextIndex(corpus, lang) {
 
 // Only explicit, reviewed forms are accepted; heuristic stemming cannot invent a phrase.
 export function searchContextCorpus(corpus, query, direction = directionForQuery(query), options = {}) {
-  if (!['ru-ms', 'ms-ru'].includes(direction) || !key(query)) return [];
+  if (!['ru-ms', 'ms-ru'].includes(direction) || (!key(query) && !options.browse)) return [];
   const lang = direction === 'ru-ms' ? 'ru' : 'ms';
   const other = lang === 'ru' ? 'ms' : 'ru';
   const q = key(query);
+  const browsing = !q && options.browse === true;
   return contextIndex(corpus, lang).flatMap(({entry, head, forms, examples}) => {
     if (!entry.verified || (options.topic && entry.topic !== options.topic)) return [];
     const matches = forms.filter(form => contained(q, form.normalized));
     const related = !matches.length && options.includeRelated !== false && forms.some(form => contained(form.normalized, q));
     const matchedExamples = options.includeExamples !== false && q.replaceAll(' ', '').length >= 3
       ? examples.filter(example => contained(example.normalized, q)).map(example => example.index) : [];
-    if (!matches.length && !related && !matchedExamples.length) return [];
+    if (!browsing && !matches.length && !related && !matchedExamples.length) return [];
     const matched = matches[0]?.text || entry[lang];
-    const matchKind = q === head ? 0 : matches.some(form => form.normalized === q) ? 1 : matches.length ? 2 : related ? 3 : 4;
+    const matchKind = browsing ? 5 : q === head ? 0 : matches.some(form => form.normalized === q) ? 1 : matches.length ? 2 : related ? 3 : 4;
     const exampleIndexes = [...matchedExamples, ...examples.map(example => example.index).filter(index => !matchedExamples.includes(index))];
     return [{
       id: entry.id, type: 'entry', title: entry[lang], body: entry[other],
@@ -52,7 +53,8 @@ export function searchContextCorpus(corpus, query, direction = directionForQuery
         contextExampleIndex: index,
       })),
     }];
-  }).sort((a, b) => a._contextKind - b._contextKind || b._contextWords - a._contextWords || b._contextMatch.length - a._contextMatch.length || a.id.localeCompare(b.id));
+  }).sort((a, b) => a._contextKind - b._contextKind ||
+    (browsing ? a.title.localeCompare(b.title, lang) : b._contextWords - a._contextWords || b._contextMatch.length - a._contextMatch.length) || a.id.localeCompare(b.id));
 }
 
 export function mergeContextResults(query, contextHits, dictionaryHits) {
@@ -89,4 +91,21 @@ export function highlightContext(text, expression, query = '') {
     last = match.index + match[0].length;
   }
   return html + escapeContext(String(text).slice(last));
+}
+
+// Catalogue records use the same source data and rendering shape as search hits.
+export function browseContextCorpus(corpus, direction = 'ru-ms', options = {}) {
+  return searchContextCorpus(corpus, '', direction, {...options, browse:true});
+}
+
+export function normalizeContextFavorites(value, corpus) {
+  if (!Array.isArray(value)) return [];
+  const allowed = new Set(corpus.filter(row => row.verified).map(row => row.id));
+  return [...new Set(value.filter(id => typeof id === 'string' && allowed.has(id)))];
+}
+
+export function serializeContextFavorites(ids, corpus) {
+  const selected = new Set(normalizeContextFavorites(ids, corpus));
+  return JSON.stringify({schemaVersion:1, source:'dictionary-context-corpus',
+    entries:corpus.filter(row => selected.has(row.id))}, null, 2);
 }

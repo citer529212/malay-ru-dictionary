@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { contextCorpus } from '../data/context-corpus.js';
-import { searchContextCorpus, mergeContextResults, highlightContext } from '../context-core.js';
+import { searchContextCorpus, mergeContextResults, highlightContext, browseContextCorpus, normalizeContextFavorites, serializeContextFavorites } from '../context-core.js';
 import { directionForQuery, normalizeHeadwordLoose as key } from '../search-core.js';
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const gold = read('../data/dictionary_ru_ms_gold.json').entries;
@@ -82,6 +82,34 @@ assert.equal(mergeContextResults('вода',waterResults,[waterGold])[0].id,wate
 const waterForm = {...waterGold, _exactRuKey:true};
 assert.equal(mergeContextResults('воды',searchContextCorpus(contextCorpus,'воды'),[waterForm])[0].id,waterForm.id);
 
+for (const direction of ['ru-ms','ms-ru']) {
+  const catalogue = browseContextCorpus(contextCorpus, direction);
+  assert.equal(catalogue.length, 500);
+  assert.equal(new Set(catalogue.map(hit => hit.id)).size, 500);
+  assert.ok(catalogue.every(hit => hit._contextKind === 5 && hit.verified));
+  assert.equal(catalogue.reduce((sum,hit) => sum + hit.senses.length,0),700);
+  const food = browseContextCorpus(contextCorpus, direction, {topic:'еда'});
+  assert.ok(food.length > 0 && food.length < 500);
+  assert.ok(food.every(hit => hit.domain === 'еда'));
+  assert.deepEqual(browseContextCorpus(contextCorpus, direction, {topic:'unknown-topic'}),[]);
+}
+assert.deepEqual(browseContextCorpus(contextCorpus,'invalid'),[]);
+const favoriteIds = ['context-0005','context-0015'];
+assert.deepEqual(normalizeContextFavorites([...favoriteIds,'unknown',null,12,'__proto__',favoriteIds[0]],contextCorpus),favoriteIds);
+assert.deepEqual(normalizeContextFavorites({ids:favoriteIds},contextCorpus),[]);
+assert.deepEqual(normalizeContextFavorites(['private'],[{...contextCorpus[0],id:'private',verified:false}]),[]);
+const unchangedCorpus = JSON.stringify(contextCorpus);
+const exportedSelection = JSON.parse(serializeContextFavorites([...favoriteIds,'unknown'],contextCorpus));
+assert.equal(exportedSelection.schemaVersion,1);
+assert.equal(exportedSelection.source,'dictionary-context-corpus');
+assert.deepEqual(exportedSelection.entries.map(row=>row.id),favoriteIds);
+assert.equal(exportedSelection.entries[0].ru,'номер комнаты');
+assert.equal(exportedSelection.entries[0].ms,'nombor bilik');
+assert.equal(exportedSelection.entries[0].examples.length,2);
+assert.ok(exportedSelection.entries.every(row=>row.verification.sourceEntryId));
+assert.deepEqual(JSON.parse(serializeContextFavorites([],contextCorpus)).entries,[]);
+assert.equal(JSON.stringify(contextCorpus),unchangedCorpus);
+
 const exampleSearches = [
   ['застрял', 'замочная скважина'], ['tersangkut', 'lubang kunci'],
   ['прошлой неделе', 'домашний интернет'], ['sejak semalam', 'internet rumah'],
@@ -140,4 +168,4 @@ assert.equal(searchContextCorpus(contextCorpus,' НОМЕР, КОМНАТЫ! ')[
 assert.equal(highlightContext('berus gigitan','berus gigi'),'berus gigitan');
 assert.equal(highlightContext('<script>x</script> air mineral','air mineral'),'&lt;script&gt;x&lt;/script&gt; <mark>air mineral</mark>');
 assert.equal(highlightContext('Зубная щётка','зубная щетка'),'<mark>Зубная щётка</mark>');
-console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,relatedFixturesPerDirection:fixtures.length,protectedFiles,enrichedExpressions:enriched.length,relatedSearchAndTopics:'passed',exampleSearchAndOrdering:'passed',rankingAndSafety:'passed'},null,2));
+console.log(JSON.stringify({expressions:contextCorpus.length,examples:contextCorpus.reduce((n,r)=>n+r.examples.length,0),exact,forms,contexts,fixedFixturesPerDirection:fixtures.length,relatedFixturesPerDirection:fixtures.length,protectedFiles,enrichedExpressions:enriched.length,relatedSearchAndTopics:'passed',exampleSearchAndOrdering:'passed',catalogueAndFavorites:'passed',rankingAndSafety:'passed'},null,2));

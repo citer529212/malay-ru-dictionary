@@ -20,7 +20,7 @@
       <header class="hero card">
         <div class="hero-kicker">
           <p class="eyebrow">Kamus elektronik · Электронный словарь</p>
-          <p class="build-version">Версия 2026.10.21 · 500 выражений · 700 примеров</p>
+          <p class="build-version">Версия 2026.10.22 · 500 выражений · 700 примеров</p>
         </div>
         <h1>Малайско-русский и русско-малайский электронный словарь</h1>
         <p class="hero-text">
@@ -93,6 +93,7 @@
               <select id="contextMode">
                 <option value="all">Весь словарь</option>
                 <option value="context">Только с примерами</option>
+                <option value="saved" id="savedContextOption">Сохранённые (0)</option>
               </select>
             </label>
             <label for="contextTopic">Тема примеров
@@ -100,8 +101,16 @@
             </label>
             <button id="resetContextFilters" type="button" class="context-reset" hidden>Сбросить фильтры</button>
           </div>
+          <div class="context-library-tools">
+            <button id="exportContextFavorites" type="button" disabled>Скачать подборку JSON</button>
+            <span id="contextFavoriteStatus" role="status">Сохранённые выражения остаются на этом устройстве.</span>
+          </div>
           <p id="contextSummary" class="context-summary" aria-live="polite"></p>
           <ul id="resultList" class="result-list"></ul>
+          <div class="result-paging">
+            <span id="shownResultCount"></span>
+            <button id="showMoreResults" type="button" hidden>Показать ещё</button>
+          </div>
         </div>
       </section>
 
@@ -135,6 +144,6 @@
       </section>
     </main>
 
-    <script type="module" src="./app.js?v=context-3"></script>
+    <script type="module" src="./app.js?v=context-4"></script>
   </body>
 </html>

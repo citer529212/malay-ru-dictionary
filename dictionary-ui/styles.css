@@ -139,3 +139,11 @@ mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; 
 .context-details { margin-top: .8rem; font-size: .85rem; line-height: 1.6; overflow-wrap: anywhere; }
 .context-details summary { cursor: pointer; color: #245a46; font-weight: 600; }
 .context-details p { margin: .6rem 0; }
+
+.context-library-tools, .result-paging { display:flex; flex-wrap:wrap; align-items:center; gap:.7rem; padding:1rem; }
+.context-library-tools span, .result-paging span { color:#52645b; font-size:.85rem; line-height:1.5; }
+.context-library-tools button, .context-save, .result-paging button { padding:.6rem .8rem; min-height:42px; border:1px solid #b8c9c1; border-radius:.65rem; background:#e5eee8; color:#173c30; font:inherit; cursor:pointer; }
+.context-save { display:block; margin-top:.7rem; font-size:.85rem; }
+.context-save[aria-pressed="true"] { background:#20553f; color:#fffef8; }
+.context-library-tools button:disabled { cursor:default; opacity:.55; }
+.result-paging { justify-content:space-between; border-top:1px solid var(--line); }
