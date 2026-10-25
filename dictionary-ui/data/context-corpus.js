@@ -30784,5 +30784,1063 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0776",
+    "ru": "адрес доставки",
+    "ms": "alamat penghantaran",
+    "forms": {
+      "ru": [
+        "адрес доставки",
+        "адреса доставки",
+        "адресу доставки",
+        "адресом доставки",
+        "адресе доставки"
+      ],
+      "ms": [
+        "alamat penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3741",
+      "sourceTitle": "адрес доставки",
+      "sourceTranslation": "alamat penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Адрес доставки указан в заказе.",
+        "ms": "Alamat penghantaran dinyatakan dalam pesanan.",
+        "ruExpression": "адрес доставки",
+        "msExpression": "alamat penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте правильность адреса доставки.",
+        "ms": "Semak ketepatan alamat penghantaran.",
+        "ruExpression": "адреса доставки",
+        "msExpression": "alamat penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0777",
+    "ru": "статус заказа",
+    "ms": "status pesanan",
+    "forms": {
+      "ru": [
+        "статус заказа",
+        "статуса заказа",
+        "статусу заказа",
+        "статусом заказа",
+        "статусе заказа"
+      ],
+      "ms": [
+        "status pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4119",
+      "sourceTitle": "статус заказа",
+      "sourceTranslation": "status pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Статус заказа обновляется в приложении.",
+        "ms": "Status pesanan dikemas kini dalam aplikasi.",
+        "ruExpression": "статус заказа",
+        "msExpression": "status pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о статусе заказа доступна на сайте.",
+        "ms": "Maklumat tentang status pesanan tersedia di laman web.",
+        "ruExpression": "статусе заказа",
+        "msExpression": "status pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0778",
+    "ru": "оплата доставки",
+    "ms": "bayaran penghantaran",
+    "forms": {
+      "ru": [
+        "оплата доставки",
+        "оплаты доставки",
+        "оплате доставки",
+        "оплату доставки",
+        "оплатой доставки"
+      ],
+      "ms": [
+        "bayaran penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6443",
+      "sourceTitle": "оплата доставки",
+      "sourceTranslation": "bayaran penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Оплата доставки включена в общую сумму.",
+        "ms": "Bayaran penghantaran termasuk dalam jumlah keseluruhan.",
+        "ruExpression": "оплата доставки",
+        "msExpression": "bayaran penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Квитанция об оплате доставки сохранена в приложении.",
+        "ms": "Resit bayaran penghantaran disimpan dalam aplikasi.",
+        "ruExpression": "оплате доставки",
+        "msExpression": "bayaran penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0779",
+    "ru": "жалоба на доставку",
+    "ms": "aduan tentang penghantaran",
+    "forms": {
+      "ru": [
+        "жалоба на доставку",
+        "жалобы на доставку",
+        "жалобе на доставку",
+        "жалобу на доставку",
+        "жалобой на доставку"
+      ],
+      "ms": [
+        "aduan tentang penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6737",
+      "sourceTitle": "жалоба на доставку",
+      "sourceTranslation": "aduan tentang penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Жалоба на доставку передана в службу поддержки.",
+        "ms": "Aduan tentang penghantaran diserahkan kepada khidmat sokongan.",
+        "ruExpression": "жалоба на доставку",
+        "msExpression": "aduan tentang penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К жалобе на доставку приложены фотографии.",
+        "ms": "Gambar dilampirkan pada aduan tentang penghantaran.",
+        "ruExpression": "жалобе на доставку",
+        "msExpression": "aduan tentang penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0780",
+    "ru": "оформить заказ",
+    "ms": "membuat pesanan",
+    "forms": {
+      "ru": [
+        "оформить заказ",
+        "оформил заказ",
+        "оформила заказ",
+        "оформили заказ",
+        "оформим заказ",
+        "оформите заказ"
+      ],
+      "ms": [
+        "membuat pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6949",
+      "sourceTitle": "оформить заказ",
+      "sourceTranslation": "membuat pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Вы можете оформить заказ на сайте.",
+        "ms": "Anda boleh membuat pesanan di laman web.",
+        "ruExpression": "оформить заказ",
+        "msExpression": "membuat pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оформила заказ после проверки цены.",
+        "ms": "Dia telah membuat pesanan selepas menyemak harga.",
+        "ruExpression": "оформила заказ",
+        "msExpression": "membuat pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0781",
+    "ru": "подтвердить заказ",
+    "ms": "mengesahkan pesanan",
+    "forms": {
+      "ru": [
+        "подтвердить заказ",
+        "подтвердил заказ",
+        "подтвердила заказ",
+        "подтвердили заказ",
+        "подтвердим заказ",
+        "подтвердите заказ"
+      ],
+      "ms": [
+        "mengesahkan pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6952",
+      "sourceTitle": "подтвердить заказ",
+      "sourceTranslation": "mengesahkan pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Продавец должен подтвердить заказ сегодня.",
+        "ms": "Penjual perlu mengesahkan pesanan hari ini.",
+        "ruExpression": "подтвердить заказ",
+        "msExpression": "mengesahkan pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник подтвердил заказ по телефону.",
+        "ms": "Kakitangan itu telah mengesahkan pesanan melalui telefon.",
+        "ruExpression": "подтвердил заказ",
+        "msExpression": "mengesahkan pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0782",
+    "ru": "отменить заказ",
+    "ms": "membatalkan pesanan",
+    "forms": {
+      "ru": [
+        "отменить заказ",
+        "отменил заказ",
+        "отменила заказ",
+        "отменили заказ",
+        "отменим заказ",
+        "отмените заказ"
+      ],
+      "ms": [
+        "membatalkan pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6953",
+      "sourceTitle": "отменить заказ",
+      "sourceTranslation": "membatalkan pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Покупатель решил отменить заказ до отправки.",
+        "ms": "Pembeli memutuskan untuk membatalkan pesanan sebelum penghantaran.",
+        "ruExpression": "отменить заказ",
+        "msExpression": "membatalkan pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отменила заказ из-за неверного адреса.",
+        "ms": "Dia telah membatalkan pesanan kerana alamat yang salah.",
+        "ruExpression": "отменила заказ",
+        "msExpression": "membatalkan pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0783",
+    "ru": "изменить заказ",
+    "ms": "menukar pesanan",
+    "forms": {
+      "ru": [
+        "изменить заказ",
+        "изменил заказ",
+        "изменила заказ",
+        "изменили заказ",
+        "изменим заказ",
+        "измените заказ"
+      ],
+      "ms": [
+        "menukar pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6954",
+      "sourceTitle": "изменить заказ",
+      "sourceTranslation": "menukar pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Можно изменить заказ до начала сборки.",
+        "ms": "Anda boleh menukar pesanan sebelum penyediaannya bermula.",
+        "ruExpression": "изменить заказ",
+        "msExpression": "menukar pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она изменила заказ после разговора с продавцом.",
+        "ms": "Dia telah menukar pesanan selepas bercakap dengan penjual.",
+        "ruExpression": "изменила заказ",
+        "msExpression": "menukar pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0784",
+    "ru": "написать продавцу",
+    "ms": "menulis kepada penjual",
+    "forms": {
+      "ru": [
+        "написать продавцу",
+        "написал продавцу",
+        "написала продавцу",
+        "написали продавцу",
+        "напишем продавцу",
+        "напишите продавцу"
+      ],
+      "ms": [
+        "menulis kepada penjual"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6972",
+      "sourceTitle": "написать продавцу",
+      "sourceTranslation": "menulis kepada penjual"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно написать продавцу о повреждении.",
+        "ms": "Saya perlu menulis kepada penjual tentang kerosakan.",
+        "ruExpression": "написать продавцу",
+        "msExpression": "menulis kepada penjual",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она написала продавцу после получения посылки.",
+        "ms": "Dia telah menulis kepada penjual selepas menerima bungkusan.",
+        "ruExpression": "написала продавцу",
+        "msExpression": "menulis kepada penjual",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0785",
+    "ru": "спор с продавцом",
+    "ms": "pertikaian dengan penjual",
+    "forms": {
+      "ru": [
+        "спор с продавцом",
+        "спора с продавцом",
+        "спору с продавцом",
+        "спором с продавцом",
+        "споре с продавцом"
+      ],
+      "ms": [
+        "pertikaian dengan penjual"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6974",
+      "sourceTitle": "спор с продавцом",
+      "sourceTranslation": "pertikaian dengan penjual"
+    },
+    "examples": [
+      {
+        "ru": "Спор с продавцом касается качества товара.",
+        "ms": "Pertikaian dengan penjual berkaitan dengan kualiti barang.",
+        "ruExpression": "спор с продавцом",
+        "msExpression": "pertikaian dengan penjual",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для рассмотрения спора с продавцом нужны фотографии.",
+        "ms": "Gambar diperlukan untuk mempertimbangkan pertikaian dengan penjual.",
+        "ruExpression": "спора с продавцом",
+        "msExpression": "pertikaian dengan penjual",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0786",
+    "ru": "адрес отправителя",
+    "ms": "alamat pengirim",
+    "forms": {
+      "ru": [
+        "адрес отправителя",
+        "адреса отправителя",
+        "адресу отправителя",
+        "адресом отправителя",
+        "адресе отправителя"
+      ],
+      "ms": [
+        "alamat pengirim"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9584",
+      "sourceTitle": "адрес отправителя",
+      "sourceTranslation": "alamat pengirim"
+    },
+    "examples": [
+      {
+        "ru": "Адрес отправителя указан на конверте.",
+        "ms": "Alamat pengirim dinyatakan pada sampul surat.",
+        "ruExpression": "адрес отправителя",
+        "msExpression": "alamat pengirim",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В адресе отправителя обнаружена ошибка.",
+        "ms": "Kesilapan dikesan dalam alamat pengirim.",
+        "ruExpression": "адресе отправителя",
+        "msExpression": "alamat pengirim",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0787",
+    "ru": "адрес получателя",
+    "ms": "alamat penerima",
+    "forms": {
+      "ru": [
+        "адрес получателя",
+        "адреса получателя",
+        "адресу получателя",
+        "адресом получателя",
+        "адресе получателя"
+      ],
+      "ms": [
+        "alamat penerima"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9585",
+      "sourceTitle": "адрес получателя",
+      "sourceTranslation": "alamat penerima"
+    },
+    "examples": [
+      {
+        "ru": "Адрес получателя напечатан на этикетке.",
+        "ms": "Alamat penerima dicetak pada label.",
+        "ruExpression": "адрес получателя",
+        "msExpression": "alamat penerima",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте индекс в адресе получателя.",
+        "ms": "Semak poskod dalam alamat penerima.",
+        "ruExpression": "адресе получателя",
+        "msExpression": "alamat penerima",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0788",
+    "ru": "содержимое посылки",
+    "ms": "kandungan bungkusan",
+    "forms": {
+      "ru": [
+        "содержимое посылки",
+        "содержимого посылки",
+        "содержимому посылки",
+        "содержимым посылки",
+        "содержимом посылки"
+      ],
+      "ms": [
+        "kandungan bungkusan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9595",
+      "sourceTitle": "содержимое посылки",
+      "sourceTranslation": "kandungan bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Содержимое посылки указано в декларации.",
+        "ms": "Kandungan bungkusan dinyatakan dalam pengisytiharan.",
+        "ruExpression": "содержимое посылки",
+        "msExpression": "kandungan bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Описание содержимого посылки приложено к заявлению.",
+        "ms": "Penerangan kandungan bungkusan dilampirkan pada permohonan.",
+        "ruExpression": "содержимого посылки",
+        "msExpression": "kandungan bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0789",
+    "ru": "уведомление о посылке",
+    "ms": "notis bungkusan",
+    "forms": {
+      "ru": [
+        "уведомление о посылке",
+        "уведомления о посылке",
+        "уведомлению о посылке",
+        "уведомлением о посылке",
+        "уведомлении о посылке"
+      ],
+      "ms": [
+        "notis bungkusan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9598",
+      "sourceTitle": "уведомление о посылке",
+      "sourceTranslation": "notis bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Уведомление о посылке пришло утром.",
+        "ms": "Notis bungkusan diterima pada waktu pagi.",
+        "ruExpression": "уведомление о посылке",
+        "msExpression": "notis bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В уведомлении о посылке указан адрес пункта выдачи.",
+        "ms": "Alamat tempat pengambilan dinyatakan dalam notis bungkusan.",
+        "ruExpression": "уведомлении о посылке",
+        "msExpression": "notis bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0790",
+    "ru": "код получения",
+    "ms": "kod pengambilan",
+    "forms": {
+      "ru": [
+        "код получения",
+        "кода получения",
+        "коду получения",
+        "кодом получения",
+        "коде получения"
+      ],
+      "ms": [
+        "kod pengambilan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9602",
+      "sourceTitle": "код получения",
+      "sourceTranslation": "kod pengambilan"
+    },
+    "examples": [
+      {
+        "ru": "Код получения находится в приложении.",
+        "ms": "Kod pengambilan terdapat dalam aplikasi.",
+        "ruExpression": "код получения",
+        "msExpression": "kod pengambilan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Без кода получения сотрудник не смог найти заказ.",
+        "ms": "Tanpa kod pengambilan, kakitangan itu tidak dapat mencari pesanan.",
+        "ruExpression": "кода получения",
+        "msExpression": "kod pengambilan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0791",
+    "ru": "доставка до двери",
+    "ms": "penghantaran ke pintu",
+    "forms": {
+      "ru": [
+        "доставка до двери",
+        "доставки до двери",
+        "доставке до двери",
+        "доставку до двери",
+        "доставкой до двери"
+      ],
+      "ms": [
+        "penghantaran ke pintu"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9609",
+      "sourceTitle": "доставка до двери",
+      "sourceTranslation": "penghantaran ke pintu"
+    },
+    "examples": [
+      {
+        "ru": "Доставка до двери доступна в этом районе.",
+        "ms": "Penghantaran ke pintu tersedia di kawasan ini.",
+        "ruExpression": "доставка до двери",
+        "msExpression": "penghantaran ke pintu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стоимость доставки до двери указана в заказе.",
+        "ms": "Kos penghantaran ke pintu dinyatakan dalam pesanan.",
+        "ruExpression": "доставки до двери",
+        "msExpression": "penghantaran ke pintu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0792",
+    "ru": "доставка в пункт выдачи",
+    "ms": "penghantaran ke tempat pengambilan",
+    "forms": {
+      "ru": [
+        "доставка в пункт выдачи",
+        "доставки в пункт выдачи",
+        "доставке в пункт выдачи",
+        "доставку в пункт выдачи",
+        "доставкой в пункт выдачи"
+      ],
+      "ms": [
+        "penghantaran ke tempat pengambilan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9610",
+      "sourceTitle": "доставка в пункт выдачи",
+      "sourceTranslation": "penghantaran ke tempat pengambilan"
+    },
+    "examples": [
+      {
+        "ru": "Доставка в пункт выдачи займёт два дня.",
+        "ms": "Penghantaran ke tempat pengambilan akan mengambil masa dua hari.",
+        "ruExpression": "доставка в пункт выдачи",
+        "msExpression": "penghantaran ke tempat pengambilan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Покупатель выбрал доставку в пункт выдачи.",
+        "ms": "Pembeli memilih penghantaran ke tempat pengambilan.",
+        "ruExpression": "доставку в пункт выдачи",
+        "msExpression": "penghantaran ke tempat pengambilan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0793",
+    "ru": "платная доставка",
+    "ms": "penghantaran berbayar",
+    "forms": {
+      "ru": [
+        "платная доставка",
+        "платной доставки",
+        "платной доставке",
+        "платную доставку",
+        "платной доставкой"
+      ],
+      "ms": [
+        "penghantaran berbayar"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9611",
+      "sourceTitle": "платная доставка",
+      "sourceTranslation": "penghantaran berbayar"
+    },
+    "examples": [
+      {
+        "ru": "Платная доставка доступна для этого заказа.",
+        "ms": "Penghantaran berbayar tersedia untuk pesanan ini.",
+        "ruExpression": "платная доставка",
+        "msExpression": "penghantaran berbayar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стоимость платной доставки показана перед оплатой.",
+        "ms": "Kos penghantaran berbayar dipaparkan sebelum bayaran dibuat.",
+        "ruExpression": "платной доставки",
+        "msExpression": "penghantaran berbayar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0794",
+    "ru": "срочная доставка",
+    "ms": "penghantaran segera",
+    "forms": {
+      "ru": [
+        "срочная доставка",
+        "срочной доставки",
+        "срочной доставке",
+        "срочную доставку",
+        "срочной доставкой"
+      ],
+      "ms": [
+        "penghantaran segera"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9612",
+      "sourceTitle": "срочная доставка",
+      "sourceTranslation": "penghantaran segera"
+    },
+    "examples": [
+      {
+        "ru": "Срочная доставка доступна до полудня.",
+        "ms": "Penghantaran segera tersedia sehingga tengah hari.",
+        "ruExpression": "срочная доставка",
+        "msExpression": "penghantaran segera",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы воспользовались срочной доставкой для этих документов.",
+        "ms": "Kami menggunakan penghantaran segera untuk dokumen ini.",
+        "ruExpression": "срочной доставкой",
+        "msExpression": "penghantaran segera",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0795",
+    "ru": "время доставки",
+    "ms": "masa penghantaran",
+    "forms": {
+      "ru": [
+        "время доставки",
+        "времени доставки",
+        "временем доставки"
+      ],
+      "ms": [
+        "masa penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9613",
+      "sourceTitle": "время доставки",
+      "sourceTranslation": "masa penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Время доставки указано в сообщении.",
+        "ms": "Masa penghantaran dinyatakan dalam mesej.",
+        "ruExpression": "время доставки",
+        "msExpression": "masa penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Курьер сообщил об изменении времени доставки.",
+        "ms": "Kurier memaklumkan perubahan masa penghantaran.",
+        "ruExpression": "времени доставки",
+        "msExpression": "masa penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0796",
+    "ru": "изменить время доставки",
+    "ms": "menukar masa penghantaran",
+    "forms": {
+      "ru": [
+        "изменить время доставки",
+        "изменил время доставки",
+        "изменила время доставки",
+        "изменили время доставки",
+        "изменим время доставки",
+        "измените время доставки"
+      ],
+      "ms": [
+        "menukar masa penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9614",
+      "sourceTitle": "изменить время доставки",
+      "sourceTranslation": "menukar masa penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Нужно изменить время доставки на вечер.",
+        "ms": "Kita perlu menukar masa penghantaran ke waktu petang.",
+        "ruExpression": "изменить время доставки",
+        "msExpression": "menukar masa penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она изменила время доставки в приложении.",
+        "ms": "Dia telah menukar masa penghantaran dalam aplikasi.",
+        "ruExpression": "изменила время доставки",
+        "msExpression": "menukar masa penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0797",
+    "ru": "отменить доставку",
+    "ms": "membatalkan penghantaran",
+    "forms": {
+      "ru": [
+        "отменить доставку",
+        "отменил доставку",
+        "отменила доставку",
+        "отменили доставку",
+        "отменим доставку",
+        "отмените доставку"
+      ],
+      "ms": [
+        "membatalkan penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9615",
+      "sourceTitle": "отменить доставку",
+      "sourceTranslation": "membatalkan penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Покупатель попросил отменить доставку.",
+        "ms": "Pembeli meminta kami membatalkan penghantaran.",
+        "ruExpression": "отменить доставку",
+        "msExpression": "membatalkan penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Компания отменила доставку из-за закрытой дороги.",
+        "ms": "Syarikat telah membatalkan penghantaran kerana jalan ditutup.",
+        "ruExpression": "отменила доставку",
+        "msExpression": "membatalkan penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0798",
+    "ru": "перенести доставку",
+    "ms": "menjadualkan semula penghantaran",
+    "forms": {
+      "ru": [
+        "перенести доставку",
+        "перенёс доставку",
+        "перенесла доставку",
+        "перенесли доставку",
+        "перенесём доставку",
+        "перенесите доставку"
+      ],
+      "ms": [
+        "menjadualkan semula penghantaran"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9616",
+      "sourceTitle": "перенести доставку",
+      "sourceTranslation": "menjadualkan semula penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Нужно перенести доставку на завтра.",
+        "ms": "Kita perlu menjadualkan semula penghantaran ke hari esok.",
+        "ruExpression": "перенести доставку",
+        "msExpression": "menjadualkan semula penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она перенесла доставку на пятницу.",
+        "ms": "Dia telah menjadualkan semula penghantaran ke hari Jumaat.",
+        "ruExpression": "перенесла доставку",
+        "msExpression": "menjadualkan semula penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0799",
+    "ru": "вернуть заказ",
+    "ms": "memulangkan pesanan",
+    "forms": {
+      "ru": [
+        "вернуть заказ",
+        "вернул заказ",
+        "вернула заказ",
+        "вернули заказ",
+        "вернём заказ",
+        "верните заказ"
+      ],
+      "ms": [
+        "memulangkan pesanan"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9638",
+      "sourceTitle": "вернуть заказ",
+      "sourceTranslation": "memulangkan pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Покупатель решил вернуть заказ продавцу.",
+        "ms": "Pembeli memutuskan untuk memulangkan pesanan kepada penjual.",
+        "ruExpression": "вернуть заказ",
+        "msExpression": "memulangkan pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она вернула заказ после обнаружения повреждения.",
+        "ms": "Dia telah memulangkan pesanan selepas mengesan kerosakan.",
+        "ruExpression": "вернула заказ",
+        "msExpression": "memulangkan pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0800",
+    "ru": "связаться с продавцом",
+    "ms": "menghubungi penjual",
+    "forms": {
+      "ru": [
+        "связаться с продавцом",
+        "связался с продавцом",
+        "связалась с продавцом",
+        "связались с продавцом",
+        "свяжемся с продавцом",
+        "свяжитесь с продавцом"
+      ],
+      "ms": [
+        "menghubungi penjual"
+      ]
+    },
+    "topic": "заказы и доставка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9644",
+      "sourceTitle": "связаться с продавцом",
+      "sourceTranslation": "menghubungi penjual"
+    },
+    "examples": [
+      {
+        "ru": "Вы можете связаться с продавцом через приложение.",
+        "ms": "Anda boleh menghubungi penjual melalui aplikasi.",
+        "ruExpression": "связаться с продавцом",
+        "msExpression": "menghubungi penjual",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она связалась с продавцом по телефону.",
+        "ms": "Dia telah menghubungi penjual melalui telefon.",
+        "ruExpression": "связалась с продавцом",
+        "msExpression": "menghubungi penjual",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

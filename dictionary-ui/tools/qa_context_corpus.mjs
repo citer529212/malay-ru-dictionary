@@ -61,6 +61,9 @@ for (const [query,title] of [
  ['данных исследования','данные исследования'], ['результатами исследования','результаты исследования'],
  ['ключевых слов статьи','ключевые слова статьи'], ['подтверждала гипотезу','подтверждать гипотезу'],
  ['перенёс данные','перенести данные'], ['неподтверждённую информацию','неподтвержденная информация'],
+ ['отменила заказ','отменить заказ'], ['перенесла доставку','перенести доставку'],
+ ['вернула заказ','вернуть заказ'], ['связалась с продавцом','связаться с продавцом'],
+ ['содержимого посылки','содержимое посылки'], ['срочной доставкой','срочная доставка'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -111,6 +114,18 @@ for (const [query,direction,title] of [
  ['kesimpulan kajian','ms-ru','kesimpulan kajian'],
 ]) {
  assert.equal(searchContextCorpus(contextCorpus,query,direction)[0]?.title,title,`Research distinction: ${query}`);
+}
+for (const [query,direction,title,translation] of [
+ ['Она отменила заказ вчера.','ru-ms','отменить заказ','membatalkan pesanan'],
+ ['Она вернула заказ вчера.','ru-ms','вернуть заказ','memulangkan pesanan'],
+ ['membatalkan pesanan','ms-ru','membatalkan pesanan','отменить заказ'],
+ ['memulangkan pesanan','ms-ru','memulangkan pesanan','вернуть заказ'],
+ ['membatalkan penghantaran','ms-ru','membatalkan penghantaran','отменить доставку'],
+ ['menjadualkan semula penghantaran','ms-ru','menjadualkan semula penghantaran','перенести доставку'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Order action distinction: ${query}`);
+ assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {

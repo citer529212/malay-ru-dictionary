@@ -1898,5 +1898,105 @@
   [
     "неподтвержденная информация",
     "maklumat yang belum disahkan"
+  ],
+  [
+    "адрес доставки",
+    "alamat penghantaran"
+  ],
+  [
+    "статус заказа",
+    "status pesanan"
+  ],
+  [
+    "оплата доставки",
+    "bayaran penghantaran"
+  ],
+  [
+    "жалоба на доставку",
+    "aduan tentang penghantaran"
+  ],
+  [
+    "оформить заказ",
+    "membuat pesanan"
+  ],
+  [
+    "подтвердить заказ",
+    "mengesahkan pesanan"
+  ],
+  [
+    "отменить заказ",
+    "membatalkan pesanan"
+  ],
+  [
+    "изменить заказ",
+    "menukar pesanan"
+  ],
+  [
+    "написать продавцу",
+    "menulis kepada penjual"
+  ],
+  [
+    "спор с продавцом",
+    "pertikaian dengan penjual"
+  ],
+  [
+    "адрес отправителя",
+    "alamat pengirim"
+  ],
+  [
+    "адрес получателя",
+    "alamat penerima"
+  ],
+  [
+    "содержимое посылки",
+    "kandungan bungkusan"
+  ],
+  [
+    "уведомление о посылке",
+    "notis bungkusan"
+  ],
+  [
+    "код получения",
+    "kod pengambilan"
+  ],
+  [
+    "доставка до двери",
+    "penghantaran ke pintu"
+  ],
+  [
+    "доставка в пункт выдачи",
+    "penghantaran ke tempat pengambilan"
+  ],
+  [
+    "платная доставка",
+    "penghantaran berbayar"
+  ],
+  [
+    "срочная доставка",
+    "penghantaran segera"
+  ],
+  [
+    "время доставки",
+    "masa penghantaran"
+  ],
+  [
+    "изменить время доставки",
+    "menukar masa penghantaran"
+  ],
+  [
+    "отменить доставку",
+    "membatalkan penghantaran"
+  ],
+  [
+    "перенести доставку",
+    "menjadualkan semula penghantaran"
+  ],
+  [
+    "вернуть заказ",
+    "memulangkan pesanan"
+  ],
+  [
+    "связаться с продавцом",
+    "menghubungi penjual"
   ]
 ]
