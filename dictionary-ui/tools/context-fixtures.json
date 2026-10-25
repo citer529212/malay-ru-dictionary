@@ -2298,5 +2298,105 @@
   [
     "распечатать посадочный талон",
     "mencetak pas masuk pesawat"
+  ],
+  [
+    "доступ к системе",
+    "akses kepada sistem"
+  ],
+  [
+    "дать доступ",
+    "memberi akses"
+  ],
+  [
+    "закрыть доступ",
+    "menutup akses"
+  ],
+  [
+    "резервная копия телефона",
+    "sandaran telefon"
+  ],
+  [
+    "восстановить из резервной копии",
+    "memulihkan daripada sandaran"
+  ],
+  [
+    "сделать копию",
+    "membuat salinan"
+  ],
+  [
+    "загрузить фотографию",
+    "memuat naik gambar"
+  ],
+  [
+    "уменьшить размер файла",
+    "mengecilkan saiz fail"
+  ],
+  [
+    "увеличить размер файла",
+    "membesarkan saiz fail"
+  ],
+  [
+    "сжать файл",
+    "memampatkan fail"
+  ],
+  [
+    "заменить файл",
+    "menggantikan fail"
+  ],
+  [
+    "удалить старый файл",
+    "memadam fail lama"
+  ],
+  [
+    "новая версия файла",
+    "versi fail baharu"
+  ],
+  [
+    "старая версия файла",
+    "versi fail lama"
+  ],
+  [
+    "название файла",
+    "nama fail"
+  ],
+  [
+    "переименовать файл",
+    "menamakan semula fail"
+  ],
+  [
+    "сохранить документ",
+    "menyimpan dokumen"
+  ],
+  [
+    "восстановить файл",
+    "memulihkan fail"
+  ],
+  [
+    "резервная копия файла",
+    "salinan sandaran fail"
+  ],
+  [
+    "мобильное приложение",
+    "aplikasi mudah alih"
+  ],
+  [
+    "настройки аккаунта",
+    "tetapan akaun"
+  ],
+  [
+    "удалить аккаунт",
+    "memadam akaun"
+  ],
+  [
+    "двухфакторная аутентификация",
+    "pengesahan dua faktor"
+  ],
+  [
+    "версия приложения",
+    "versi aplikasi"
+  ],
+  [
+    "операционная система",
+    "sistem operasi"
   ]
 ]

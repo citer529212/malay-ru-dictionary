@@ -35014,5 +35014,1064 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0876",
+    "ru": "доступ к системе",
+    "ms": "akses kepada sistem",
+    "forms": {
+      "ru": [
+        "доступ к системе",
+        "доступа к системе",
+        "доступу к системе",
+        "доступом к системе",
+        "доступе к системе"
+      ],
+      "ms": [
+        "akses kepada sistem"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6408",
+      "sourceTitle": "доступ к системе",
+      "sourceTranslation": "akses kepada sistem"
+    },
+    "examples": [
+      {
+        "ru": "Доступ к системе открыт для сотрудников.",
+        "ms": "Akses kepada sistem dibuka kepada kakitangan.",
+        "ruExpression": "доступ к системе",
+        "msExpression": "akses kepada sistem",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Вопрос о доступе к системе передан администратору.",
+        "ms": "Soalan tentang akses kepada sistem diserahkan kepada pentadbir.",
+        "ruExpression": "доступе к системе",
+        "msExpression": "akses kepada sistem",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0877",
+    "ru": "дать доступ",
+    "ms": "memberi akses",
+    "forms": {
+      "ru": [
+        "дать доступ",
+        "дал доступ",
+        "дала доступ",
+        "дали доступ",
+        "дадим доступ",
+        "дайте доступ"
+      ],
+      "ms": [
+        "memberi akses"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6410",
+      "sourceTitle": "дать доступ",
+      "sourceTranslation": "memberi akses"
+    },
+    "examples": [
+      {
+        "ru": "Администратор должен дать доступ новому сотруднику.",
+        "ms": "Pentadbir perlu memberi akses kepada pekerja baharu.",
+        "ruExpression": "дать доступ",
+        "msExpression": "memberi akses",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она дала доступ к общей папке.",
+        "ms": "Dia telah memberi akses kepada folder bersama.",
+        "ruExpression": "дала доступ",
+        "msExpression": "memberi akses",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0878",
+    "ru": "закрыть доступ",
+    "ms": "menutup akses",
+    "forms": {
+      "ru": [
+        "закрыть доступ",
+        "закрыл доступ",
+        "закрыла доступ",
+        "закрыли доступ",
+        "закроем доступ",
+        "закройте доступ"
+      ],
+      "ms": [
+        "menutup akses"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6411",
+      "sourceTitle": "закрыть доступ",
+      "sourceTranslation": "menutup akses"
+    },
+    "examples": [
+      {
+        "ru": "Нужно закрыть доступ к старой учётной записи.",
+        "ms": "Kita perlu menutup akses kepada akaun lama.",
+        "ruExpression": "закрыть доступ",
+        "msExpression": "menutup akses",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Администратор закрыл доступ после проверки.",
+        "ms": "Pentadbir telah menutup akses selepas semakan.",
+        "ruExpression": "закрыл доступ",
+        "msExpression": "menutup akses",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0879",
+    "ru": "резервная копия телефона",
+    "ms": "sandaran telefon",
+    "forms": {
+      "ru": [
+        "резервная копия телефона",
+        "резервной копии телефона",
+        "резервную копию телефона",
+        "резервной копией телефона"
+      ],
+      "ms": [
+        "sandaran telefon"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7435",
+      "sourceTitle": "резервная копия телефона",
+      "sourceTranslation": "sandaran telefon"
+    },
+    "examples": [
+      {
+        "ru": "Резервная копия телефона сохранена отдельно.",
+        "ms": "Sandaran telefon disimpan secara berasingan.",
+        "ruExpression": "резервная копия телефона",
+        "msExpression": "sandaran telefon",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дата резервной копии телефона указана в настройках.",
+        "ms": "Tarikh sandaran telefon dinyatakan dalam tetapan.",
+        "ruExpression": "резервной копии телефона",
+        "msExpression": "sandaran telefon",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0880",
+    "ru": "восстановить из резервной копии",
+    "ms": "memulihkan daripada sandaran",
+    "forms": {
+      "ru": [
+        "восстановить из резервной копии",
+        "восстановил из резервной копии",
+        "восстановила из резервной копии",
+        "восстановили из резервной копии",
+        "восстановим из резервной копии",
+        "восстановите из резервной копии"
+      ],
+      "ms": [
+        "memulihkan daripada sandaran",
+        "dipulihkan daripada sandaran"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7436",
+      "sourceTitle": "восстановить из резервной копии",
+      "sourceTranslation": "memulihkan daripada sandaran"
+    },
+    "examples": [
+      {
+        "ru": "Данные можно восстановить из резервной копии.",
+        "ms": "Data boleh dipulihkan daripada sandaran.",
+        "ruExpression": "восстановить из резервной копии",
+        "msExpression": "dipulihkan daripada sandaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Файлы восстановили из резервной копии.",
+        "ms": "Fail telah dipulihkan daripada sandaran.",
+        "ruExpression": "восстановили из резервной копии",
+        "msExpression": "dipulihkan daripada sandaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0881",
+    "ru": "сделать копию",
+    "ms": "membuat salinan",
+    "forms": {
+      "ru": [
+        "сделать копию",
+        "сделал копию",
+        "сделала копию",
+        "сделали копию",
+        "сделаем копию",
+        "сделайте копию"
+      ],
+      "ms": [
+        "membuat salinan"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7452",
+      "sourceTitle": "сделать копию",
+      "sourceTranslation": "membuat salinan"
+    },
+    "examples": [
+      {
+        "ru": "Перед редактированием нужно сделать копию файла.",
+        "ms": "Kita perlu membuat salinan fail sebelum menyuntingnya.",
+        "ruExpression": "сделать копию",
+        "msExpression": "membuat salinan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сделала копию документа.",
+        "ms": "Dia telah membuat salinan dokumen.",
+        "ruExpression": "сделала копию",
+        "msExpression": "membuat salinan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0882",
+    "ru": "загрузить фотографию",
+    "ms": "memuat naik gambar",
+    "forms": {
+      "ru": [
+        "загрузить фотографию",
+        "загрузил фотографию",
+        "загрузила фотографию",
+        "загрузили фотографию",
+        "загрузим фотографию",
+        "загрузите фотографию"
+      ],
+      "ms": [
+        "memuat naik gambar"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7466",
+      "sourceTitle": "загрузить фотографию",
+      "sourceTranslation": "memuat naik gambar"
+    },
+    "examples": [
+      {
+        "ru": "Можно загрузить фотографию через приложение.",
+        "ms": "Anda boleh memuat naik gambar melalui aplikasi.",
+        "ruExpression": "загрузить фотографию",
+        "msExpression": "memuat naik gambar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она загрузила фотографию в личный кабинет.",
+        "ms": "Dia telah memuat naik gambar ke akaun peribadinya.",
+        "ruExpression": "загрузила фотографию",
+        "msExpression": "memuat naik gambar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0883",
+    "ru": "уменьшить размер файла",
+    "ms": "mengecilkan saiz fail",
+    "forms": {
+      "ru": [
+        "уменьшить размер файла",
+        "уменьшил размер файла",
+        "уменьшила размер файла",
+        "уменьшили размер файла",
+        "уменьшим размер файла",
+        "уменьшите размер файла"
+      ],
+      "ms": [
+        "mengecilkan saiz fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7474",
+      "sourceTitle": "уменьшить размер файла",
+      "sourceTranslation": "mengecilkan saiz fail"
+    },
+    "examples": [
+      {
+        "ru": "Перед отправкой нужно уменьшить размер файла.",
+        "ms": "Kita perlu mengecilkan saiz fail sebelum penghantaran.",
+        "ruExpression": "уменьшить размер файла",
+        "msExpression": "mengecilkan saiz fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она уменьшила размер файла перед загрузкой.",
+        "ms": "Dia telah mengecilkan saiz fail sebelum memuat naiknya.",
+        "ruExpression": "уменьшила размер файла",
+        "msExpression": "mengecilkan saiz fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0884",
+    "ru": "увеличить размер файла",
+    "ms": "membesarkan saiz fail",
+    "forms": {
+      "ru": [
+        "увеличить размер файла",
+        "увеличил размер файла",
+        "увеличила размер файла",
+        "увеличили размер файла",
+        "увеличим размер файла",
+        "увеличьте размер файла"
+      ],
+      "ms": [
+        "membesarkan saiz fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7475",
+      "sourceTitle": "увеличить размер файла",
+      "sourceTranslation": "membesarkan saiz fail"
+    },
+    "examples": [
+      {
+        "ru": "Дополнительные изображения могут увеличить размер файла.",
+        "ms": "Imej tambahan boleh membesarkan saiz fail.",
+        "ruExpression": "увеличить размер файла",
+        "msExpression": "membesarkan saiz fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор увеличил размер файла, добавив фотографии.",
+        "ms": "Editor telah membesarkan saiz fail dengan menambahkan gambar.",
+        "ruExpression": "увеличил размер файла",
+        "msExpression": "membesarkan saiz fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0885",
+    "ru": "сжать файл",
+    "ms": "memampatkan fail",
+    "forms": {
+      "ru": [
+        "сжать файл",
+        "сжал файл",
+        "сжала файл",
+        "сжали файл",
+        "сожмём файл",
+        "сожмите файл"
+      ],
+      "ms": [
+        "memampatkan fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7476",
+      "sourceTitle": "сжать файл",
+      "sourceTranslation": "memampatkan fail"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно сжать файл перед отправкой.",
+        "ms": "Saya perlu memampatkan fail sebelum penghantaran.",
+        "ruExpression": "сжать файл",
+        "msExpression": "memampatkan fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сжала файл с изображениями.",
+        "ms": "Dia telah memampatkan fail yang mengandungi imej.",
+        "ruExpression": "сжала файл",
+        "msExpression": "memampatkan fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0886",
+    "ru": "заменить файл",
+    "ms": "menggantikan fail",
+    "forms": {
+      "ru": [
+        "заменить файл",
+        "заменил файл",
+        "заменила файл",
+        "заменили файл",
+        "заменим файл",
+        "замените файл"
+      ],
+      "ms": [
+        "menggantikan fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7490",
+      "sourceTitle": "заменить файл",
+      "sourceTranslation": "menggantikan fail"
+    },
+    "examples": [
+      {
+        "ru": "Нужно заменить файл с ошибкой.",
+        "ms": "Kita perlu menggantikan fail yang mempunyai kesilapan.",
+        "ruExpression": "заменить файл",
+        "msExpression": "menggantikan fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она заменила файл после проверки.",
+        "ms": "Dia telah menggantikan fail selepas semakan.",
+        "ruExpression": "заменила файл",
+        "msExpression": "menggantikan fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0887",
+    "ru": "удалить старый файл",
+    "ms": "memadam fail lama",
+    "forms": {
+      "ru": [
+        "удалить старый файл",
+        "удалил старый файл",
+        "удалила старый файл",
+        "удалили старый файл",
+        "удалим старый файл",
+        "удалите старый файл"
+      ],
+      "ms": [
+        "memadam fail lama"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7491",
+      "sourceTitle": "удалить старый файл",
+      "sourceTranslation": "memadam fail lama"
+    },
+    "examples": [
+      {
+        "ru": "Администратор решил удалить старый файл.",
+        "ms": "Pentadbir memutuskan untuk memadam fail lama.",
+        "ruExpression": "удалить старый файл",
+        "msExpression": "memadam fail lama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она удалила старый файл после сохранения копии.",
+        "ms": "Dia telah memadam fail lama selepas menyimpan salinan.",
+        "ruExpression": "удалила старый файл",
+        "msExpression": "memadam fail lama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0888",
+    "ru": "новая версия файла",
+    "ms": "versi fail baharu",
+    "forms": {
+      "ru": [
+        "новая версия файла",
+        "новой версии файла",
+        "новую версию файла",
+        "новой версией файла"
+      ],
+      "ms": [
+        "versi fail baharu"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7492",
+      "sourceTitle": "новая версия файла",
+      "sourceTranslation": "versi fail baharu"
+    },
+    "examples": [
+      {
+        "ru": "Новая версия файла содержит исправления.",
+        "ms": "Versi fail baharu mengandungi pembetulan.",
+        "ruExpression": "новая версия файла",
+        "msExpression": "versi fail baharu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В новой версии файла добавлена таблица.",
+        "ms": "Jadual ditambahkan dalam versi fail baharu.",
+        "ruExpression": "новой версии файла",
+        "msExpression": "versi fail baharu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0889",
+    "ru": "старая версия файла",
+    "ms": "versi fail lama",
+    "forms": {
+      "ru": [
+        "старая версия файла",
+        "старой версии файла",
+        "старую версию файла",
+        "старой версией файла"
+      ],
+      "ms": [
+        "versi fail lama"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7493",
+      "sourceTitle": "старая версия файла",
+      "sourceTranslation": "versi fail lama"
+    },
+    "examples": [
+      {
+        "ru": "Старая версия файла хранится в архиве.",
+        "ms": "Versi fail lama disimpan dalam arkib.",
+        "ruExpression": "старая версия файла",
+        "msExpression": "versi fail lama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В старой версии файла нет этой таблицы.",
+        "ms": "Jadual ini tiada dalam versi fail lama.",
+        "ruExpression": "старой версии файла",
+        "msExpression": "versi fail lama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0890",
+    "ru": "название файла",
+    "ms": "nama fail",
+    "forms": {
+      "ru": [
+        "название файла",
+        "названия файла",
+        "названию файла",
+        "названием файла",
+        "названии файла"
+      ],
+      "ms": [
+        "nama fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7494",
+      "sourceTitle": "название файла",
+      "sourceTranslation": "nama fail"
+    },
+    "examples": [
+      {
+        "ru": "Название файла указано в письме.",
+        "ms": "Nama fail dinyatakan dalam surat.",
+        "ruExpression": "название файла",
+        "msExpression": "nama fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В названии файла обнаружена опечатка.",
+        "ms": "Kesilapan taip dikesan dalam nama fail.",
+        "ruExpression": "названии файла",
+        "msExpression": "nama fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0891",
+    "ru": "переименовать файл",
+    "ms": "menamakan semula fail",
+    "forms": {
+      "ru": [
+        "переименовать файл",
+        "переименовал файл",
+        "переименовала файл",
+        "переименовали файл",
+        "переименуем файл",
+        "переименуйте файл"
+      ],
+      "ms": [
+        "menamakan semula fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7495",
+      "sourceTitle": "переименовать файл",
+      "sourceTranslation": "menamakan semula fail"
+    },
+    "examples": [
+      {
+        "ru": "Нужно переименовать файл перед публикацией.",
+        "ms": "Kita perlu menamakan semula fail sebelum penerbitan.",
+        "ruExpression": "переименовать файл",
+        "msExpression": "menamakan semula fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она переименовала файл после исправления даты.",
+        "ms": "Dia telah menamakan semula fail selepas membetulkan tarikh.",
+        "ruExpression": "переименовала файл",
+        "msExpression": "menamakan semula fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0892",
+    "ru": "сохранить документ",
+    "ms": "menyimpan dokumen",
+    "forms": {
+      "ru": [
+        "сохранить документ",
+        "сохранил документ",
+        "сохранила документ",
+        "сохранили документ",
+        "сохраним документ",
+        "сохраните документ"
+      ],
+      "ms": [
+        "menyimpan dokumen"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7497",
+      "sourceTitle": "сохранить документ",
+      "sourceTranslation": "menyimpan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Не забудьте сохранить документ перед закрытием.",
+        "ms": "Jangan lupa menyimpan dokumen sebelum menutupnya.",
+        "ruExpression": "сохранить документ",
+        "msExpression": "menyimpan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сохранила документ в отдельной папке.",
+        "ms": "Dia telah menyimpan dokumen dalam folder berasingan.",
+        "ruExpression": "сохранила документ",
+        "msExpression": "menyimpan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0893",
+    "ru": "восстановить файл",
+    "ms": "memulihkan fail",
+    "forms": {
+      "ru": [
+        "восстановить файл",
+        "восстановил файл",
+        "восстановила файл",
+        "восстановили файл",
+        "восстановим файл",
+        "восстановите файл"
+      ],
+      "ms": [
+        "memulihkan fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7501",
+      "sourceTitle": "восстановить файл",
+      "sourceTranslation": "memulihkan fail"
+    },
+    "examples": [
+      {
+        "ru": "Специалист поможет восстановить файл после сбоя.",
+        "ms": "Pakar akan membantu memulihkan fail selepas gangguan sistem.",
+        "ruExpression": "восстановить файл",
+        "msExpression": "memulihkan fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она восстановила файл из архива.",
+        "ms": "Dia telah memulihkan fail daripada arkib.",
+        "ruExpression": "восстановила файл",
+        "msExpression": "memulihkan fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0894",
+    "ru": "резервная копия файла",
+    "ms": "salinan sandaran fail",
+    "forms": {
+      "ru": [
+        "резервная копия файла",
+        "резервной копии файла",
+        "резервную копию файла",
+        "резервной копией файла"
+      ],
+      "ms": [
+        "salinan sandaran fail"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7502",
+      "sourceTitle": "резервная копия файла",
+      "sourceTranslation": "salinan sandaran fail"
+    },
+    "examples": [
+      {
+        "ru": "Резервная копия файла создана вчера.",
+        "ms": "Salinan sandaran fail dibuat semalam.",
+        "ruExpression": "резервная копия файла",
+        "msExpression": "salinan sandaran fail",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дата резервной копии файла указана в журнале.",
+        "ms": "Tarikh salinan sandaran fail dinyatakan dalam log.",
+        "ruExpression": "резервной копии файла",
+        "msExpression": "salinan sandaran fail",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0895",
+    "ru": "мобильное приложение",
+    "ms": "aplikasi mudah alih",
+    "forms": {
+      "ru": [
+        "мобильное приложение",
+        "мобильного приложения",
+        "мобильному приложению",
+        "мобильным приложением",
+        "мобильном приложении"
+      ],
+      "ms": [
+        "aplikasi mudah alih"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8957",
+      "sourceTitle": "мобильное приложение",
+      "sourceTranslation": "aplikasi mudah alih"
+    },
+    "examples": [
+      {
+        "ru": "Мобильное приложение показывает статус заявки.",
+        "ms": "Aplikasi mudah alih memaparkan status permohonan.",
+        "ruExpression": "мобильное приложение",
+        "msExpression": "aplikasi mudah alih",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В мобильном приложении появилась новая функция.",
+        "ms": "Fungsi baharu muncul dalam aplikasi mudah alih.",
+        "ruExpression": "мобильном приложении",
+        "msExpression": "aplikasi mudah alih",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0896",
+    "ru": "настройки аккаунта",
+    "ms": "tetapan akaun",
+    "forms": {
+      "ru": [
+        "настройки аккаунта",
+        "настроек аккаунта",
+        "настройкам аккаунта",
+        "настройками аккаунта",
+        "настройках аккаунта"
+      ],
+      "ms": [
+        "tetapan akaun"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8964",
+      "sourceTitle": "настройки аккаунта",
+      "sourceTranslation": "tetapan akaun"
+    },
+    "examples": [
+      {
+        "ru": "Настройки аккаунта доступны после входа.",
+        "ms": "Tetapan akaun boleh diakses selepas log masuk.",
+        "ruExpression": "настройки аккаунта",
+        "msExpression": "tetapan akaun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В настройках аккаунта можно изменить адрес почты.",
+        "ms": "Alamat e-mel boleh diubah dalam tetapan akaun.",
+        "ruExpression": "настройках аккаунта",
+        "msExpression": "tetapan akaun",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0897",
+    "ru": "удалить аккаунт",
+    "ms": "memadam akaun",
+    "forms": {
+      "ru": [
+        "удалить аккаунт",
+        "удалил аккаунт",
+        "удалила аккаунт",
+        "удалили аккаунт",
+        "удалим аккаунт",
+        "удалите аккаунт"
+      ],
+      "ms": [
+        "memadam akaun"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8966",
+      "sourceTitle": "удалить аккаунт",
+      "sourceTranslation": "memadam akaun"
+    },
+    "examples": [
+      {
+        "ru": "Пользователь решил удалить аккаунт.",
+        "ms": "Pengguna memutuskan untuk memadam akaun.",
+        "ruExpression": "удалить аккаунт",
+        "msExpression": "memadam akaun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она удалила аккаунт после сохранения данных.",
+        "ms": "Dia telah memadam akaun selepas menyimpan data.",
+        "ruExpression": "удалила аккаунт",
+        "msExpression": "memadam akaun",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0898",
+    "ru": "двухфакторная аутентификация",
+    "ms": "pengesahan dua faktor",
+    "forms": {
+      "ru": [
+        "двухфакторная аутентификация",
+        "двухфакторной аутентификации",
+        "двухфакторную аутентификацию",
+        "двухфакторной аутентификацией"
+      ],
+      "ms": [
+        "pengesahan dua faktor"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8969",
+      "sourceTitle": "двухфакторная аутентификация",
+      "sourceTranslation": "pengesahan dua faktor"
+    },
+    "examples": [
+      {
+        "ru": "Двухфакторная аутентификация включена в настройках.",
+        "ms": "Pengesahan dua faktor diaktifkan dalam tetapan.",
+        "ruExpression": "двухфакторная аутентификация",
+        "msExpression": "pengesahan dua faktor",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для двухфакторной аутентификации используется приложение.",
+        "ms": "Aplikasi digunakan untuk pengesahan dua faktor.",
+        "ruExpression": "двухфакторной аутентификации",
+        "msExpression": "pengesahan dua faktor",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0899",
+    "ru": "версия приложения",
+    "ms": "versi aplikasi",
+    "forms": {
+      "ru": [
+        "версия приложения",
+        "версии приложения",
+        "версию приложения",
+        "версией приложения"
+      ],
+      "ms": [
+        "versi aplikasi"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8986",
+      "sourceTitle": "версия приложения",
+      "sourceTranslation": "versi aplikasi"
+    },
+    "examples": [
+      {
+        "ru": "Версия приложения указана в настройках.",
+        "ms": "Versi aplikasi dinyatakan dalam tetapan.",
+        "ruExpression": "версия приложения",
+        "msExpression": "versi aplikasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер версии приложения нужен службе поддержки.",
+        "ms": "Nombor versi aplikasi diperlukan oleh khidmat sokongan.",
+        "ruExpression": "версии приложения",
+        "msExpression": "versi aplikasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0900",
+    "ru": "операционная система",
+    "ms": "sistem operasi",
+    "forms": {
+      "ru": [
+        "операционная система",
+        "операционной системы",
+        "операционной системе",
+        "операционную систему",
+        "операционной системой"
+      ],
+      "ms": [
+        "sistem operasi"
+      ]
+    },
+    "topic": "файлы и цифровые сервисы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8987",
+      "sourceTitle": "операционная система",
+      "sourceTranslation": "sistem operasi"
+    },
+    "examples": [
+      {
+        "ru": "Операционная система обновлена вчера.",
+        "ms": "Sistem operasi dikemas kini semalam.",
+        "ruExpression": "операционная система",
+        "msExpression": "sistem operasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Название операционной системы указано в отчёте.",
+        "ms": "Nama sistem operasi dinyatakan dalam laporan.",
+        "ruExpression": "операционной системы",
+        "msExpression": "sistem operasi",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

@@ -76,6 +76,9 @@ for (const [query,title] of [
  ['подтвердила бронь','подтвердить бронь'], ['отменила бронь','отменить бронь'],
  ['купила билет онлайн','купить билет онлайн'], ['обменяла билет','обменять билет'],
  ['сдала багаж','сдать багаж'], ['брони отеля для визы','бронь отеля для визы'],
+ ['уменьшила размер файла','уменьшить размер файла'], ['увеличил размер файла','увеличить размер файла'],
+ ['сжала файл','сжать файл'], ['восстановили из резервной копии','восстановить из резервной копии'],
+ ['резервной копии файла','резервная копия файла'], ['удалила аккаунт','удалить аккаунт'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -179,6 +182,22 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Travel distinction: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['Она уменьшила размер файла вчера.','ru-ms','уменьшить размер файла','mengecilkan saiz fail'],
+ ['Она увеличила размер файла вчера.','ru-ms','увеличить размер файла','membesarkan saiz fail'],
+ ['mengecilkan saiz fail','ms-ru','mengecilkan saiz fail','уменьшить размер файла'],
+ ['membesarkan saiz fail','ms-ru','membesarkan saiz fail','увеличить размер файла'],
+ ['Она дала доступ вчера.','ru-ms','дать доступ','memberi akses'],
+ ['Она закрыла доступ вчера.','ru-ms','закрыть доступ','menutup akses'],
+ ['memberi akses','ms-ru','memberi akses','дать доступ'],
+ ['menutup akses','ms-ru','menutup akses','закрыть доступ'],
+ ['dipulihkan daripada sandaran','ms-ru','memulihkan daripada sandaran','восстановить из резервной копии'],
+ ['Data telah dipulihkan daripada sandaran.','ms-ru','memulihkan daripada sandaran','восстановить из резервной копии'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Digital distinction/form: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
