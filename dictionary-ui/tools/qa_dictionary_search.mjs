@@ -470,7 +470,7 @@ function validateModernInterface() {
   assert.match(html, /Дополнительная специализированная база/);
   assert.match(html, /4 683 статьи/);
   assert.match(html, /5 582 обратных заголовка/);
-  assert.doesNotMatch(html, /type="file"|Выбрать PDF|pdfCanvas/);
+  assert.doesNotMatch(html, /accept="[^"]*pdf|Выбрать PDF|pdfCanvas/i);
   assert.doesNotMatch(appSource, /pdfjsLib|loadPdfFile|renderCurrentPage/);
   assert.match(appSource, /function renderSuggestions\(query\)/);
   assert.match(appSource, /MISSING_QUERIES_KEY/);

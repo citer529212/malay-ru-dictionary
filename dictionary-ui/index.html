@@ -30,6 +30,13 @@
         <p class="developers">Разработчики: <strong>Чернобаев Б.Д.</strong> и <strong>Михина А.А.</strong></p>
       </header>
 
+      <nav class="product-tabs card" aria-label="Разделы приложения">
+        <button class="product-tab active" type="button" data-product-tab="dictionary">Словарь</button>
+        <button class="product-tab" type="button" data-product-tab="memory">Память переводов</button>
+      </nav>
+
+      <div id="dictionaryPanel" class="product-panel">
+
       <section class="controls card">
         <p class="search-label">Поиск перевода</p>
         <div class="search-row">
@@ -120,8 +127,78 @@
           </article>
         </div>
       </section>
+      </div>
+
+      <section id="memoryPanel" class="product-panel tm-panel card" hidden>
+        <div class="tm-heading">
+          <div>
+            <p class="section-kicker">Локальная CAT-система</p>
+            <h2>Память переводов политических, культурных, религиозных и военных текстов</h2>
+          </div>
+          <span id="tmCount" class="tm-count">0 сегментов</span>
+        </div>
+
+        <div class="tm-toolbar">
+          <label>Тематика
+            <select id="tmDomainFilter">
+              <option value="all">Все тематики</option>
+              <option value="politics">Политика и дипломатия</option>
+              <option value="culture">Культура</option>
+              <option value="religion">Религия</option>
+              <option value="military">Военная тематика</option>
+            </select>
+          </label>
+          <label class="tm-search-label">Поиск по памяти
+            <input id="tmSearch" type="search" placeholder="Введите предложение или словосочетание" />
+          </label>
+        </div>
+
+        <div class="tm-editor">
+          <label>Русский оригинал
+            <textarea id="tmSource" rows="5" placeholder="Вставьте сегмент исходного текста"></textarea>
+          </label>
+          <label>Малайский перевод
+            <textarea id="tmTarget" rows="5" placeholder="Введите или проверьте перевод"></textarea>
+          </label>
+        </div>
+
+        <div class="tm-editor-actions">
+          <label>Тематика
+            <select id="tmDomain">
+              <option value="politics">Политика и дипломатия</option>
+              <option value="culture">Культура</option>
+              <option value="religion">Религия</option>
+              <option value="military">Военная тематика</option>
+            </select>
+          </label>
+          <label>Статус
+            <select id="tmStatus">
+              <option value="machine">Машинный перевод</option>
+              <option value="reviewed">Проверено редактором</option>
+              <option value="verified">Подтверждено</option>
+            </select>
+          </label>
+          <button id="tmSave" type="button">Сохранить сегмент</button>
+          <button id="tmClear" type="button" class="secondary-button">Очистить</button>
+        </div>
+
+        <div class="tm-import card-inset">
+          <div>
+            <strong>Импорт будущего корпуса</strong>
+            <p>JSON или CSV. Переводы Google импортируются как машинные и не считаются проверенными.</p>
+          </div>
+          <input id="tmImportFile" type="file" accept=".json,.csv,application/json,text/csv" />
+          <button id="tmExportJson" type="button" class="secondary-button">Экспорт JSON</button>
+          <button id="tmExportTmx" type="button" class="secondary-button">Экспорт TMX</button>
+        </div>
+
+        <p id="tmStatusText" class="tm-status" aria-live="polite">Память хранится только на этом устройстве.</p>
+        <div id="tmSuggestions" class="tm-suggestions"></div>
+        <div id="tmList" class="tm-list"></div>
+      </section>
     </main>
 
     <script type="module" src="./app.js?v=search-v6-18"></script>
+    <script type="module" src="./translation-memory.js?v=1"></script>
   </body>
 </html>

@@ -54,6 +54,14 @@ let html = read("index.html");
 const css = read("styles.css");
 const searchCore = read("search-core.js").replace(/\bexport\s+(?=function\s)/g, "");
 const app = read("app.js").replace(/^import\s*\{[\s\S]*?\}\s*from\s*"\.\/search-core\.js\?v=\d+";\s*/u, "");
+const translationMemoryCore = read("translation-memory-core.js").replace(
+  /\bexport\s+(?=(?:const|function)\s)/g,
+  ""
+);
+const translationMemoryApp = read("translation-memory.js").replace(
+  /^import\s*\{[\s\S]*?\}\s*from\s*"\.\/translation-memory-core\.js";\s*/u,
+  ""
+);
 
 const dataPayloads = new Map(
   dataFiles
@@ -139,6 +147,10 @@ function buildProfile(profile) {
     .replace(
       /<script type="module" src="\.\/app\.js\?v=[^"]+"><\/script>/u,
       () => `${embeddedData}\n<script>\n${searchCore}\n${offlineApp}\n</script>`
+    )
+    .replace(
+      /<script type="module" src="\.\/translation-memory\.js\?v=[^"]+"><\/script>/u,
+      () => `<script>\n(() => {\n${translationMemoryCore}\n${translationMemoryApp}\n})();\n</script>`
     )
     .replace(
       "Версия 2026.10.21 · одежда и еда v6.18",
