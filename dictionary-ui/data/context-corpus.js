@@ -31842,5 +31842,1062 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0801",
+    "ru": "результат собеседования",
+    "ms": "keputusan temu duga",
+    "forms": {
+      "ru": [
+        "результат собеседования",
+        "результата собеседования",
+        "результату собеседования",
+        "результатом собеседования",
+        "результате собеседования"
+      ],
+      "ms": [
+        "keputusan temu duga"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6386",
+      "sourceTitle": "результат собеседования",
+      "sourceTranslation": "keputusan temu duga"
+    },
+    "examples": [
+      {
+        "ru": "Результат собеседования сообщат по электронной почте.",
+        "ms": "Keputusan temu duga akan dimaklumkan melalui e-mel.",
+        "ruExpression": "результат собеседования",
+        "msExpression": "keputusan temu duga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кандидат спросил о результате собеседования.",
+        "ms": "Calon bertanya tentang keputusan temu duga.",
+        "ruExpression": "результате собеседования",
+        "msExpression": "keputusan temu duga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0802",
+    "ru": "размер зарплаты",
+    "ms": "jumlah gaji",
+    "forms": {
+      "ru": [
+        "размер зарплаты",
+        "размера зарплаты",
+        "размеру зарплаты",
+        "размером зарплаты",
+        "размере зарплаты"
+      ],
+      "ms": [
+        "jumlah gaji"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6387",
+      "sourceTitle": "размер зарплаты",
+      "sourceTranslation": "jumlah gaji"
+    },
+    "examples": [
+      {
+        "ru": "Размер зарплаты указан в предложении о работе.",
+        "ms": "Jumlah gaji dinyatakan dalam tawaran kerja.",
+        "ruExpression": "размер зарплаты",
+        "msExpression": "jumlah gaji",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кандидат задал вопрос о размере зарплаты.",
+        "ms": "Calon mengemukakan soalan tentang jumlah gaji.",
+        "ruExpression": "размере зарплаты",
+        "msExpression": "jumlah gaji",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0803",
+    "ru": "задержка зарплаты",
+    "ms": "kelewatan gaji",
+    "forms": {
+      "ru": [
+        "задержка зарплаты",
+        "задержки зарплаты",
+        "задержке зарплаты",
+        "задержку зарплаты",
+        "задержкой зарплаты"
+      ],
+      "ms": [
+        "kelewatan gaji"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6389",
+      "sourceTitle": "задержка зарплаты",
+      "sourceTranslation": "kelewatan gaji"
+    },
+    "examples": [
+      {
+        "ru": "Задержка зарплаты связана с ошибкой в реквизитах.",
+        "ms": "Kelewatan gaji berkaitan dengan kesilapan dalam butiran bank.",
+        "ruExpression": "задержка зарплаты",
+        "msExpression": "kelewatan gaji",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудникам сообщили о задержке зарплаты.",
+        "ms": "Kakitangan dimaklumkan tentang kelewatan gaji.",
+        "ruExpression": "задержке зарплаты",
+        "msExpression": "kelewatan gaji",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0804",
+    "ru": "взять отпуск",
+    "ms": "mengambil cuti",
+    "forms": {
+      "ru": [
+        "взять отпуск",
+        "взял отпуск",
+        "взяла отпуск",
+        "взяли отпуск",
+        "возьмём отпуск",
+        "возьмите отпуск"
+      ],
+      "ms": [
+        "mengambil cuti"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6392",
+      "sourceTitle": "взять отпуск",
+      "sourceTranslation": "mengambil cuti"
+    },
+    "examples": [
+      {
+        "ru": "Я планирую взять отпуск в июне.",
+        "ms": "Saya merancang untuk mengambil cuti pada bulan Jun.",
+        "ruExpression": "взять отпуск",
+        "msExpression": "mengambil cuti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она взяла отпуск на неделю.",
+        "ms": "Dia telah mengambil cuti selama seminggu.",
+        "ruExpression": "взяла отпуск",
+        "msExpression": "mengambil cuti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0805",
+    "ru": "подписать трудовой договор",
+    "ms": "menandatangani kontrak kerja",
+    "forms": {
+      "ru": [
+        "подписать трудовой договор",
+        "подписал трудовой договор",
+        "подписала трудовой договор",
+        "подписали трудовой договор",
+        "подпишем трудовой договор",
+        "подпишите трудовой договор"
+      ],
+      "ms": [
+        "menandatangani kontrak kerja"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6395",
+      "sourceTitle": "подписать трудовой договор",
+      "sourceTranslation": "menandatangani kontrak kerja"
+    },
+    "examples": [
+      {
+        "ru": "Кандидат готов подписать трудовой договор.",
+        "ms": "Calon bersedia untuk menandatangani kontrak kerja.",
+        "ruExpression": "подписать трудовой договор",
+        "msExpression": "menandatangani kontrak kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она подписала трудовой договор вчера.",
+        "ms": "Dia telah menandatangani kontrak kerja semalam.",
+        "ruExpression": "подписала трудовой договор",
+        "msExpression": "menandatangani kontrak kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0806",
+    "ru": "заявление на отпуск",
+    "ms": "permohonan cuti",
+    "forms": {
+      "ru": [
+        "заявление на отпуск",
+        "заявления на отпуск",
+        "заявлению на отпуск",
+        "заявлением на отпуск",
+        "заявлении на отпуск"
+      ],
+      "ms": [
+        "permohonan cuti"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6418",
+      "sourceTitle": "заявление на отпуск",
+      "sourceTranslation": "permohonan cuti"
+    },
+    "examples": [
+      {
+        "ru": "Заявление на отпуск передано руководителю.",
+        "ms": "Permohonan cuti diserahkan kepada pengurus.",
+        "ruExpression": "заявление на отпуск",
+        "msExpression": "permohonan cuti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В заявлении на отпуск указаны даты.",
+        "ms": "Tarikh dinyatakan dalam permohonan cuti.",
+        "ruExpression": "заявлении на отпуск",
+        "msExpression": "permohonan cuti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0807",
+    "ru": "заявление об увольнении",
+    "ms": "surat peletakan jawatan",
+    "forms": {
+      "ru": [
+        "заявление об увольнении",
+        "заявления об увольнении",
+        "заявлению об увольнении",
+        "заявлением об увольнении",
+        "заявлении об увольнении"
+      ],
+      "ms": [
+        "surat peletakan jawatan"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6419",
+      "sourceTitle": "заявление об увольнении",
+      "sourceTranslation": "surat peletakan jawatan"
+    },
+    "examples": [
+      {
+        "ru": "Заявление об увольнении подписано сотрудником.",
+        "ms": "Surat peletakan jawatan ditandatangani oleh pekerja.",
+        "ruExpression": "заявление об увольнении",
+        "msExpression": "surat peletakan jawatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия заявления об увольнении хранится в отделе кадров.",
+        "ms": "Salinan surat peletakan jawatan disimpan di jabatan sumber manusia.",
+        "ruExpression": "заявления об увольнении",
+        "msExpression": "surat peletakan jawatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0808",
+    "ru": "подать заявление об увольнении",
+    "ms": "menghantar surat peletakan jawatan",
+    "forms": {
+      "ru": [
+        "подать заявление об увольнении",
+        "подал заявление об увольнении",
+        "подала заявление об увольнении",
+        "подали заявление об увольнении",
+        "подадим заявление об увольнении",
+        "подайте заявление об увольнении"
+      ],
+      "ms": [
+        "menghantar surat peletakan jawatan"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6420",
+      "sourceTitle": "подать заявление об увольнении",
+      "sourceTranslation": "menghantar surat peletakan jawatan"
+    },
+    "examples": [
+      {
+        "ru": "Сотрудник решил подать заявление об увольнении.",
+        "ms": "Pekerja memutuskan untuk menghantar surat peletakan jawatan.",
+        "ruExpression": "подать заявление об увольнении",
+        "msExpression": "menghantar surat peletakan jawatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она подала заявление об увольнении в понедельник.",
+        "ms": "Dia telah menghantar surat peletakan jawatan pada hari Isnin.",
+        "ruExpression": "подала заявление об увольнении",
+        "msExpression": "menghantar surat peletakan jawatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0809",
+    "ru": "приглашение на собеседование",
+    "ms": "jemputan temu duga",
+    "forms": {
+      "ru": [
+        "приглашение на собеседование",
+        "приглашения на собеседование",
+        "приглашению на собеседование",
+        "приглашением на собеседование",
+        "приглашении на собеседование"
+      ],
+      "ms": [
+        "jemputan temu duga"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8301",
+      "sourceTitle": "приглашение на собеседование",
+      "sourceTranslation": "jemputan temu duga"
+    },
+    "examples": [
+      {
+        "ru": "Приглашение на собеседование отправлено кандидату.",
+        "ms": "Jemputan temu duga dihantar kepada calon.",
+        "ruExpression": "приглашение на собеседование",
+        "msExpression": "jemputan temu duga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приглашении на собеседование указан адрес офиса.",
+        "ms": "Alamat pejabat dinyatakan dalam jemputan temu duga.",
+        "ruExpression": "приглашении на собеседование",
+        "msExpression": "jemputan temu duga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0810",
+    "ru": "перенести собеседование",
+    "ms": "menukar masa temu duga",
+    "forms": {
+      "ru": [
+        "перенести собеседование",
+        "перенёс собеседование",
+        "перенесла собеседование",
+        "перенесли собеседование",
+        "перенесём собеседование",
+        "перенесите собеседование"
+      ],
+      "ms": [
+        "menukar masa temu duga"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8304",
+      "sourceTitle": "перенести собеседование",
+      "sourceTranslation": "menukar masa temu duga"
+    },
+    "examples": [
+      {
+        "ru": "Кандидат попросил перенести собеседование на завтра.",
+        "ms": "Calon meminta kami menukar masa temu duga ke hari esok.",
+        "ruExpression": "перенести собеседование",
+        "msExpression": "menukar masa temu duga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она перенесла собеседование на пятницу.",
+        "ms": "Dia telah menukar masa temu duga ke hari Jumaat.",
+        "ruExpression": "перенесла собеседование",
+        "msExpression": "menukar masa temu duga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0811",
+    "ru": "отменить собеседование",
+    "ms": "membatalkan temu duga",
+    "forms": {
+      "ru": [
+        "отменить собеседование",
+        "отменил собеседование",
+        "отменила собеседование",
+        "отменили собеседование",
+        "отменим собеседование",
+        "отмените собеседование"
+      ],
+      "ms": [
+        "membatalkan temu duga"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8305",
+      "sourceTitle": "отменить собеседование",
+      "sourceTranslation": "membatalkan temu duga"
+    },
+    "examples": [
+      {
+        "ru": "Компания решила отменить собеседование.",
+        "ms": "Syarikat memutuskan untuk membatalkan temu duga.",
+        "ruExpression": "отменить собеседование",
+        "msExpression": "membatalkan temu duga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отменила собеседование по телефону.",
+        "ms": "Dia telah membatalkan temu duga melalui telefon.",
+        "ruExpression": "отменила собеседование",
+        "msExpression": "membatalkan temu duga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0812",
+    "ru": "подтвердить собеседование",
+    "ms": "mengesahkan temu duga",
+    "forms": {
+      "ru": [
+        "подтвердить собеседование",
+        "подтвердил собеседование",
+        "подтвердила собеседование",
+        "подтвердили собеседование",
+        "подтвердим собеседование",
+        "подтвердите собеседование"
+      ],
+      "ms": [
+        "mengesahkan temu duga"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8306",
+      "sourceTitle": "подтвердить собеседование",
+      "sourceTranslation": "mengesahkan temu duga"
+    },
+    "examples": [
+      {
+        "ru": "Просим подтвердить собеседование по электронной почте.",
+        "ms": "Kami meminta anda mengesahkan temu duga melalui e-mel.",
+        "ruExpression": "подтвердить собеседование",
+        "msExpression": "mengesahkan temu duga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кандидат подтвердил собеседование утром.",
+        "ms": "Calon telah mengesahkan temu duga pada waktu pagi.",
+        "ruExpression": "подтвердил собеседование",
+        "msExpression": "mengesahkan temu duga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0813",
+    "ru": "сопроводительное письмо",
+    "ms": "surat iringan",
+    "forms": {
+      "ru": [
+        "сопроводительное письмо",
+        "сопроводительного письма",
+        "сопроводительному письму",
+        "сопроводительным письмом",
+        "сопроводительном письме"
+      ],
+      "ms": [
+        "surat iringan"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8310",
+      "sourceTitle": "сопроводительное письмо",
+      "sourceTranslation": "surat iringan"
+    },
+    "examples": [
+      {
+        "ru": "Сопроводительное письмо приложено к резюме.",
+        "ms": "Surat iringan dilampirkan pada resume.",
+        "ruExpression": "сопроводительное письмо",
+        "msExpression": "surat iringan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В сопроводительном письме описан опыт работы.",
+        "ms": "Pengalaman kerja diterangkan dalam surat iringan.",
+        "ruExpression": "сопроводительном письме",
+        "msExpression": "surat iringan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0814",
+    "ru": "условия работы",
+    "ms": "syarat kerja",
+    "forms": {
+      "ru": [
+        "условия работы",
+        "условий работы",
+        "условиям работы",
+        "условиями работы",
+        "условиях работы"
+      ],
+      "ms": [
+        "syarat kerja"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8315",
+      "sourceTitle": "условия работы",
+      "sourceTranslation": "syarat kerja"
+    },
+    "examples": [
+      {
+        "ru": "Условия работы обсуждаются на собеседовании.",
+        "ms": "Syarat kerja dibincangkan semasa temu duga.",
+        "ruExpression": "условия работы",
+        "msExpression": "syarat kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кандидат ознакомился с условиями работы.",
+        "ms": "Calon telah membaca syarat kerja.",
+        "ruExpression": "условиями работы",
+        "msExpression": "syarat kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0815",
+    "ru": "оплачиваемый отпуск",
+    "ms": "cuti berbayar",
+    "forms": {
+      "ru": [
+        "оплачиваемый отпуск",
+        "оплачиваемого отпуска",
+        "оплачиваемому отпуску",
+        "оплачиваемым отпуском",
+        "оплачиваемом отпуске"
+      ],
+      "ms": [
+        "cuti berbayar"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8322",
+      "sourceTitle": "оплачиваемый отпуск",
+      "sourceTranslation": "cuti berbayar"
+    },
+    "examples": [
+      {
+        "ru": "Оплачиваемый отпуск указан в графике.",
+        "ms": "Cuti berbayar dinyatakan dalam jadual.",
+        "ruExpression": "оплачиваемый отпуск",
+        "msExpression": "cuti berbayar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Даты оплачиваемого отпуска согласованы с руководителем.",
+        "ms": "Tarikh cuti berbayar dipersetujui bersama pengurus.",
+        "ruExpression": "оплачиваемого отпуска",
+        "msExpression": "cuti berbayar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0816",
+    "ru": "неоплачиваемый отпуск",
+    "ms": "cuti tanpa gaji",
+    "forms": {
+      "ru": [
+        "неоплачиваемый отпуск",
+        "неоплачиваемого отпуска",
+        "неоплачиваемому отпуску",
+        "неоплачиваемым отпуском",
+        "неоплачиваемом отпуске"
+      ],
+      "ms": [
+        "cuti tanpa gaji"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8323",
+      "sourceTitle": "неоплачиваемый отпуск",
+      "sourceTranslation": "cuti tanpa gaji"
+    },
+    "examples": [
+      {
+        "ru": "Неоплачиваемый отпуск согласован на три дня.",
+        "ms": "Cuti tanpa gaji telah dipersetujui selama tiga hari.",
+        "ruExpression": "неоплачиваемый отпуск",
+        "msExpression": "cuti tanpa gaji",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В заявлении указаны даты неоплачиваемого отпуска.",
+        "ms": "Tarikh cuti tanpa gaji dinyatakan dalam permohonan.",
+        "ruExpression": "неоплачиваемого отпуска",
+        "msExpression": "cuti tanpa gaji",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0817",
+    "ru": "оплата переработки",
+    "ms": "bayaran kerja lebih masa",
+    "forms": {
+      "ru": [
+        "оплата переработки",
+        "оплаты переработки",
+        "оплате переработки",
+        "оплату переработки",
+        "оплатой переработки"
+      ],
+      "ms": [
+        "bayaran kerja lebih masa"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8325",
+      "sourceTitle": "оплата переработки",
+      "sourceTranslation": "bayaran kerja lebih masa"
+    },
+    "examples": [
+      {
+        "ru": "Оплата переработки указана в расчётном листе.",
+        "ms": "Bayaran kerja lebih masa dinyatakan dalam slip gaji.",
+        "ruExpression": "оплата переработки",
+        "msExpression": "bayaran kerja lebih masa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник задал вопрос об оплате переработки.",
+        "ms": "Pekerja mengemukakan soalan tentang bayaran kerja lebih masa.",
+        "ruExpression": "оплате переработки",
+        "msExpression": "bayaran kerja lebih masa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0818",
+    "ru": "зарплата после налогов",
+    "ms": "gaji selepas cukai",
+    "forms": {
+      "ru": [
+        "зарплата после налогов",
+        "зарплаты после налогов",
+        "зарплате после налогов",
+        "зарплату после налогов",
+        "зарплатой после налогов"
+      ],
+      "ms": [
+        "gaji selepas cukai"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8332",
+      "sourceTitle": "зарплата после налогов",
+      "sourceTranslation": "gaji selepas cukai"
+    },
+    "examples": [
+      {
+        "ru": "Зарплата после налогов указана в расчётном листе.",
+        "ms": "Gaji selepas cukai dinyatakan dalam slip gaji.",
+        "ruExpression": "зарплата после налогов",
+        "msExpression": "gaji selepas cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Кандидат спросил о зарплате после налогов.",
+        "ms": "Calon bertanya tentang gaji selepas cukai.",
+        "ruExpression": "зарплате после налогов",
+        "msExpression": "gaji selepas cukai",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0819",
+    "ru": "зарплата до налогов",
+    "ms": "gaji sebelum cukai",
+    "forms": {
+      "ru": [
+        "зарплата до налогов",
+        "зарплаты до налогов",
+        "зарплате до налогов",
+        "зарплату до налогов",
+        "зарплатой до налогов"
+      ],
+      "ms": [
+        "gaji sebelum cukai"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8333",
+      "sourceTitle": "зарплата до налогов",
+      "sourceTranslation": "gaji sebelum cukai"
+    },
+    "examples": [
+      {
+        "ru": "Зарплата до налогов указана в предложении о работе.",
+        "ms": "Gaji sebelum cukai dinyatakan dalam tawaran kerja.",
+        "ruExpression": "зарплата до налогов",
+        "msExpression": "gaji sebelum cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В договоре есть пункт о зарплате до налогов.",
+        "ms": "Kontrak itu mengandungi perkara tentang gaji sebelum cukai.",
+        "ruExpression": "зарплате до налогов",
+        "msExpression": "gaji sebelum cukai",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0820",
+    "ru": "расчетный лист",
+    "ms": "slip gaji",
+    "forms": {
+      "ru": [
+        "расчетный лист",
+        "расчётного листа",
+        "расчётному листу",
+        "расчётный лист",
+        "расчётным листом",
+        "расчётном листе"
+      ],
+      "ms": [
+        "slip gaji"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8334",
+      "sourceTitle": "расчетный лист",
+      "sourceTranslation": "slip gaji"
+    },
+    "examples": [
+      {
+        "ru": "Расчетный лист доступен в личном кабинете.",
+        "ms": "Slip gaji tersedia dalam akaun peribadi.",
+        "ruExpression": "расчетный лист",
+        "msExpression": "slip gaji",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия расчётного листа нужна для проверки.",
+        "ms": "Salinan slip gaji diperlukan untuk semakan.",
+        "ruExpression": "расчётного листа",
+        "msExpression": "slip gaji",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0821",
+    "ru": "должностная инструкция",
+    "ms": "deskripsi tugas",
+    "forms": {
+      "ru": [
+        "должностная инструкция",
+        "должностной инструкции",
+        "должностную инструкцию",
+        "должностной инструкцией"
+      ],
+      "ms": [
+        "deskripsi tugas"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8344",
+      "sourceTitle": "должностная инструкция",
+      "sourceTranslation": "deskripsi tugas"
+    },
+    "examples": [
+      {
+        "ru": "Должностная инструкция содержит список обязанностей.",
+        "ms": "Deskripsi tugas mengandungi senarai tanggungjawab.",
+        "ruExpression": "должностная инструкция",
+        "msExpression": "deskripsi tugas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник подписал должностную инструкцию.",
+        "ms": "Pekerja menandatangani deskripsi tugas.",
+        "ruExpression": "должностную инструкцию",
+        "msExpression": "deskripsi tugas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0822",
+    "ru": "профессиональные навыки",
+    "ms": "kemahiran profesional",
+    "forms": {
+      "ru": [
+        "профессиональные навыки",
+        "профессиональных навыков",
+        "профессиональным навыкам",
+        "профессиональными навыками",
+        "профессиональных навыках"
+      ],
+      "ms": [
+        "kemahiran profesional"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8349",
+      "sourceTitle": "профессиональные навыки",
+      "sourceTranslation": "kemahiran profesional"
+    },
+    "examples": [
+      {
+        "ru": "Профессиональные навыки перечислены в резюме.",
+        "ms": "Kemahiran profesional disenaraikan dalam resume.",
+        "ruExpression": "профессиональные навыки",
+        "msExpression": "kemahiran profesional",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На собеседовании обсудили развитие профессиональных навыков.",
+        "ms": "Pembangunan kemahiran profesional dibincangkan semasa temu duga.",
+        "ruExpression": "профессиональных навыков",
+        "msExpression": "kemahiran profesional",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0823",
+    "ru": "дата выхода на работу",
+    "ms": "tarikh mula bekerja",
+    "forms": {
+      "ru": [
+        "дата выхода на работу",
+        "даты выхода на работу",
+        "дате выхода на работу",
+        "дату выхода на работу",
+        "датой выхода на работу"
+      ],
+      "ms": [
+        "tarikh mula bekerja"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8357",
+      "sourceTitle": "дата выхода на работу",
+      "sourceTranslation": "tarikh mula bekerja"
+    },
+    "examples": [
+      {
+        "ru": "Дата выхода на работу указана в договоре.",
+        "ms": "Tarikh mula bekerja dinyatakan dalam kontrak.",
+        "ruExpression": "дата выхода на работу",
+        "msExpression": "tarikh mula bekerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об изменении даты выхода на работу.",
+        "ms": "Maklumkan perubahan tarikh mula bekerja.",
+        "ruExpression": "даты выхода на работу",
+        "msExpression": "tarikh mula bekerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0824",
+    "ru": "последний рабочий день",
+    "ms": "hari terakhir bekerja",
+    "forms": {
+      "ru": [
+        "последний рабочий день",
+        "последнего рабочего дня",
+        "последнему рабочему дню",
+        "последним рабочим днём",
+        "последнем рабочем дне"
+      ],
+      "ms": [
+        "hari terakhir bekerja"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8367",
+      "sourceTitle": "последний рабочий день",
+      "sourceTranslation": "hari terakhir bekerja"
+    },
+    "examples": [
+      {
+        "ru": "Последний рабочий день указан в заявлении.",
+        "ms": "Hari terakhir bekerja dinyatakan dalam surat itu.",
+        "ruExpression": "последний рабочий день",
+        "msExpression": "hari terakhir bekerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Передача документов завершена до последнего рабочего дня.",
+        "ms": "Penyerahan dokumen selesai sebelum hari terakhir bekerja.",
+        "ruExpression": "последнего рабочего дня",
+        "msExpression": "hari terakhir bekerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0825",
+    "ru": "передать дела",
+    "ms": "menyerahkan tugas",
+    "forms": {
+      "ru": [
+        "передать дела",
+        "передал дела",
+        "передала дела",
+        "передали дела",
+        "передадим дела",
+        "передайте дела"
+      ],
+      "ms": [
+        "menyerahkan tugas"
+      ]
+    },
+    "topic": "работа и кадровые документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8368",
+      "sourceTitle": "передать дела",
+      "sourceTranslation": "menyerahkan tugas"
+    },
+    "examples": [
+      {
+        "ru": "Нужно передать дела коллеге до отпуска.",
+        "ms": "Kita perlu menyerahkan tugas kepada rakan sekerja sebelum bercuti.",
+        "ruExpression": "передать дела",
+        "msExpression": "menyerahkan tugas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она передала дела новому сотруднику.",
+        "ms": "Dia telah menyerahkan tugas kepada pekerja baharu.",
+        "ruExpression": "передала дела",
+        "msExpression": "menyerahkan tugas",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

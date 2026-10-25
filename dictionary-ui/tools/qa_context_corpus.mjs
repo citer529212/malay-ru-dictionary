@@ -64,6 +64,11 @@ for (const [query,title] of [
  ['отменила заказ','отменить заказ'], ['перенесла доставку','перенести доставку'],
  ['вернула заказ','вернуть заказ'], ['связалась с продавцом','связаться с продавцом'],
  ['содержимого посылки','содержимое посылки'], ['срочной доставкой','срочная доставка'],
+ ['подписала трудовой договор','подписать трудовой договор'],
+ ['подала заявление об увольнении','подать заявление об увольнении'],
+ ['зарплате после налогов','зарплата после налогов'],
+ ['неоплачиваемого отпуска','неоплачиваемый отпуск'],
+ ['должностную инструкцию','должностная инструкция'], ['передала дела','передать дела'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -125,6 +130,20 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Order action distinction: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['зарплата до налогов','ru-ms','зарплата до налогов','gaji sebelum cukai'],
+ ['зарплата после налогов','ru-ms','зарплата после налогов','gaji selepas cukai'],
+ ['gaji sebelum cukai','ms-ru','gaji sebelum cukai','зарплата до налогов'],
+ ['gaji selepas cukai','ms-ru','gaji selepas cukai','зарплата после налогов'],
+ ['Указан неоплачиваемый отпуск.','ru-ms','неоплачиваемый отпуск','cuti tanpa gaji'],
+ ['Указан оплачиваемый отпуск.','ru-ms','оплачиваемый отпуск','cuti berbayar'],
+ ['Cuti tanpa gaji dinyatakan dalam permohonan.','ms-ru','cuti tanpa gaji','неоплачиваемый отпуск'],
+ ['Cuti berbayar dinyatakan dalam permohonan.','ms-ru','cuti berbayar','оплачиваемый отпуск'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Employment distinction: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
