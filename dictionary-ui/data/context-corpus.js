@@ -27586,5 +27586,1081 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0701",
+    "ru": "приложить документ",
+    "ms": "melampirkan dokumen",
+    "forms": {
+      "ru": [
+        "приложить документ",
+        "приложил документ",
+        "приложила документ",
+        "приложили документ",
+        "приложим документ",
+        "приложите документ"
+      ],
+      "ms": [
+        "melampirkan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4991",
+      "sourceTitle": "приложить документ",
+      "sourceTranslation": "melampirkan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Не забудьте приложить документ к заявлению.",
+        "ms": "Jangan lupa melampirkan dokumen pada permohonan.",
+        "ruExpression": "приложить документ",
+        "msExpression": "melampirkan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь приложила документ к письму.",
+        "ms": "Setiausaha telah melampirkan dokumen pada surat.",
+        "ruExpression": "приложила документ",
+        "msExpression": "melampirkan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0702",
+    "ru": "добавить документ",
+    "ms": "menambah dokumen",
+    "forms": {
+      "ru": [
+        "добавить документ",
+        "добавил документ",
+        "добавила документ",
+        "добавили документ",
+        "добавим документ",
+        "добавьте документ"
+      ],
+      "ms": [
+        "menambah dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4992",
+      "sourceTitle": "добавить документ",
+      "sourceTranslation": "menambah dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Можно добавить документ после сохранения заявления.",
+        "ms": "Anda boleh menambah dokumen selepas menyimpan permohonan.",
+        "ruExpression": "добавить документ",
+        "msExpression": "menambah dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник добавил документ в общую папку.",
+        "ms": "Kakitangan itu telah menambah dokumen ke dalam folder bersama.",
+        "ruExpression": "добавил документ",
+        "msExpression": "menambah dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0703",
+    "ru": "заменить документ",
+    "ms": "mengganti dokumen",
+    "forms": {
+      "ru": [
+        "заменить документ",
+        "заменил документ",
+        "заменила документ",
+        "заменили документ",
+        "заменим документ",
+        "замените документ"
+      ],
+      "ms": [
+        "mengganti dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4993",
+      "sourceTitle": "заменить документ",
+      "sourceTranslation": "mengganti dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Нужно заменить документ с ошибкой.",
+        "ms": "Kita perlu mengganti dokumen yang mempunyai kesilapan.",
+        "ruExpression": "заменить документ",
+        "msExpression": "mengganti dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она заменила документ после проверки.",
+        "ms": "Dia telah mengganti dokumen selepas semakan.",
+        "ruExpression": "заменила документ",
+        "msExpression": "mengganti dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0704",
+    "ru": "исправить документ",
+    "ms": "membetulkan dokumen",
+    "forms": {
+      "ru": [
+        "исправить документ",
+        "исправил документ",
+        "исправила документ",
+        "исправили документ",
+        "исправим документ",
+        "исправьте документ"
+      ],
+      "ms": [
+        "membetulkan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4994",
+      "sourceTitle": "исправить документ",
+      "sourceTranslation": "membetulkan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Нужно исправить документ до отправки.",
+        "ms": "Kita perlu membetulkan dokumen sebelum penghantaran.",
+        "ruExpression": "исправить документ",
+        "msExpression": "membetulkan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник исправил документ после замечаний.",
+        "ms": "Kakitangan itu telah membetulkan dokumen selepas menerima ulasan.",
+        "ruExpression": "исправил документ",
+        "msExpression": "membetulkan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0705",
+    "ru": "сканировать документ",
+    "ms": "mengimbas dokumen",
+    "forms": {
+      "ru": [
+        "сканировать документ",
+        "сканировал документ",
+        "сканировала документ",
+        "сканировали документ",
+        "сканируем документ",
+        "сканируйте документ"
+      ],
+      "ms": [
+        "mengimbas dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4995",
+      "sourceTitle": "сканировать документ",
+      "sourceTranslation": "mengimbas dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Оператор начал сканировать документ.",
+        "ms": "Pengendali mula mengimbas dokumen.",
+        "ruExpression": "сканировать документ",
+        "msExpression": "mengimbas dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь сканировала документ перед отправкой.",
+        "ms": "Setiausaha mengimbas dokumen sebelum menghantarnya.",
+        "ruExpression": "сканировала документ",
+        "msExpression": "mengimbas dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0706",
+    "ru": "распечатать документ",
+    "ms": "mencetak dokumen",
+    "forms": {
+      "ru": [
+        "распечатать документ",
+        "распечатал документ",
+        "распечатала документ",
+        "распечатали документ",
+        "распечатаем документ",
+        "распечатайте документ"
+      ],
+      "ms": [
+        "mencetak dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4996",
+      "sourceTitle": "распечатать документ",
+      "sourceTranslation": "mencetak dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно распечатать документ для встречи.",
+        "ms": "Saya perlu mencetak dokumen untuk mesyuarat.",
+        "ruExpression": "распечатать документ",
+        "msExpression": "mencetak dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы распечатали документ в двух экземплярах.",
+        "ms": "Kami telah mencetak dokumen dalam dua salinan.",
+        "ruExpression": "распечатали документ",
+        "msExpression": "mencetak dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0707",
+    "ru": "загрузить документ",
+    "ms": "memuat naik dokumen",
+    "forms": {
+      "ru": [
+        "загрузить документ",
+        "загрузил документ",
+        "загрузила документ",
+        "загрузили документ",
+        "загрузим документ",
+        "загрузите документ"
+      ],
+      "ms": [
+        "memuat naik dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4997",
+      "sourceTitle": "загрузить документ",
+      "sourceTranslation": "memuat naik dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Перед отправкой заявления нужно загрузить документ.",
+        "ms": "Anda perlu memuat naik dokumen sebelum menghantar permohonan.",
+        "ruExpression": "загрузить документ",
+        "msExpression": "memuat naik dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она загрузила документ через личный кабинет.",
+        "ms": "Dia telah memuat naik dokumen melalui akaun peribadinya.",
+        "ruExpression": "загрузила документ",
+        "msExpression": "memuat naik dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0708",
+    "ru": "скачать документ",
+    "ms": "memuat turun dokumen",
+    "forms": {
+      "ru": [
+        "скачать документ",
+        "скачал документ",
+        "скачала документ",
+        "скачали документ",
+        "скачаем документ",
+        "скачайте документ"
+      ],
+      "ms": [
+        "memuat turun dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4998",
+      "sourceTitle": "скачать документ",
+      "sourceTranslation": "memuat turun dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Вы можете скачать документ по этой ссылке.",
+        "ms": "Anda boleh memuat turun dokumen melalui pautan ini.",
+        "ruExpression": "скачать документ",
+        "msExpression": "memuat turun dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы скачали документ с сайта компании.",
+        "ms": "Kami telah memuat turun dokumen dari laman web syarikat.",
+        "ruExpression": "скачали документ",
+        "msExpression": "memuat turun dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0709",
+    "ru": "отправить документ",
+    "ms": "menghantar dokumen",
+    "forms": {
+      "ru": [
+        "отправить документ",
+        "отправил документ",
+        "отправила документ",
+        "отправили документ",
+        "отправим документ",
+        "отправьте документ"
+      ],
+      "ms": [
+        "menghantar dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4999",
+      "sourceTitle": "отправить документ",
+      "sourceTranslation": "menghantar dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Нужно отправить документ до конца дня.",
+        "ms": "Kita perlu menghantar dokumen sebelum akhir hari.",
+        "ruExpression": "отправить документ",
+        "msExpression": "menghantar dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отправила документ по электронной почте.",
+        "ms": "Dia telah menghantar dokumen melalui e-mel.",
+        "ruExpression": "отправила документ",
+        "msExpression": "menghantar dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0710",
+    "ru": "получить документ",
+    "ms": "menerima dokumen",
+    "forms": {
+      "ru": [
+        "получить документ",
+        "получил документ",
+        "получила документ",
+        "получили документ",
+        "получим документ",
+        "получите документ"
+      ],
+      "ms": [
+        "menerima dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5000",
+      "sourceTitle": "получить документ",
+      "sourceTranslation": "menerima dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Мы рассчитываем получить документ завтра.",
+        "ms": "Kami menjangkakan akan menerima dokumen esok.",
+        "ruExpression": "получить документ",
+        "msExpression": "menerima dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он получил документ от секретаря.",
+        "ms": "Dia telah menerima dokumen daripada setiausaha.",
+        "ruExpression": "получил документ",
+        "msExpression": "menerima dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0711",
+    "ru": "заверить документ",
+    "ms": "mengesahkan dokumen",
+    "forms": {
+      "ru": [
+        "заверить документ",
+        "заверил документ",
+        "заверила документ",
+        "заверили документ",
+        "заверим документ",
+        "заверьте документ"
+      ],
+      "ms": [
+        "mengesahkan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5008",
+      "sourceTitle": "заверить документ",
+      "sourceTranslation": "mengesahkan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Перед подачей нужно заверить документ.",
+        "ms": "Kita perlu mengesahkan dokumen sebelum mengemukakan permohonan.",
+        "ruExpression": "заверить документ",
+        "msExpression": "mengesahkan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Уполномоченный сотрудник заверил документ.",
+        "ms": "Pegawai yang diberi kuasa telah mengesahkan dokumen.",
+        "ruExpression": "заверил документ",
+        "msExpression": "mengesahkan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0712",
+    "ru": "подать документы",
+    "ms": "mengemukakan dokumen",
+    "forms": {
+      "ru": [
+        "подать документы",
+        "подал документы",
+        "подала документы",
+        "подали документы",
+        "подадим документы",
+        "подайте документы"
+      ],
+      "ms": [
+        "mengemukakan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5014",
+      "sourceTitle": "подать документы",
+      "sourceTranslation": "mengemukakan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Заявитель планирует подать документы завтра.",
+        "ms": "Pemohon merancang untuk mengemukakan dokumen esok.",
+        "ruExpression": "подать документы",
+        "msExpression": "mengemukakan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она подала документы через сайт.",
+        "ms": "Dia telah mengemukakan dokumen melalui laman web.",
+        "ruExpression": "подала документы",
+        "msExpression": "mengemukakan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0713",
+    "ru": "оставить документы",
+    "ms": "meninggalkan dokumen",
+    "forms": {
+      "ru": [
+        "оставить документы",
+        "оставил документы",
+        "оставила документы",
+        "оставили документы",
+        "оставим документы",
+        "оставьте документы"
+      ],
+      "ms": [
+        "meninggalkan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5015",
+      "sourceTitle": "оставить документы",
+      "sourceTranslation": "meninggalkan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Можно оставить документы на стойке регистрации.",
+        "ms": "Anda boleh meninggalkan dokumen di kaunter pendaftaran.",
+        "ruExpression": "оставить документы",
+        "msExpression": "meninggalkan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он оставил документы у секретаря.",
+        "ms": "Dia telah meninggalkan dokumen dengan setiausaha.",
+        "ruExpression": "оставил документы",
+        "msExpression": "meninggalkan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0714",
+    "ru": "продлить документ",
+    "ms": "memperbaharui dokumen",
+    "forms": {
+      "ru": [
+        "продлить документ",
+        "продлил документ",
+        "продлила документ",
+        "продлили документ",
+        "продлим документ",
+        "продлите документ"
+      ],
+      "ms": [
+        "memperbaharui dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5025",
+      "sourceTitle": "продлить документ",
+      "sourceTranslation": "memperbaharui dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Нужно продлить документ до истечения срока действия.",
+        "ms": "Kita perlu memperbaharui dokumen sebelum tempoh sahnya tamat.",
+        "ruExpression": "продлить документ",
+        "msExpression": "memperbaharui dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она продлила документ в прошлом месяце.",
+        "ms": "Dia telah memperbaharui dokumen pada bulan lalu.",
+        "ruExpression": "продлила документ",
+        "msExpression": "memperbaharui dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0715",
+    "ru": "перевести документ",
+    "ms": "menterjemahkan dokumen",
+    "forms": {
+      "ru": [
+        "перевести документ",
+        "перевёл документ",
+        "перевела документ",
+        "перевели документ",
+        "переведём документ",
+        "переведите документ"
+      ],
+      "ms": [
+        "menterjemahkan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9715",
+      "sourceTitle": "перевести документ",
+      "sourceTranslation": "menterjemahkan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Нужно перевести документ на малайский язык.",
+        "ms": "Kita perlu menterjemahkan dokumen ke dalam bahasa Melayu.",
+        "ruExpression": "перевести документ",
+        "msExpression": "menterjemahkan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Переводчик перевёл документ на русский язык.",
+        "ms": "Penterjemah telah menterjemahkan dokumen ke dalam bahasa Rusia.",
+        "ruExpression": "перевёл документ",
+        "msExpression": "menterjemahkan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0716",
+    "ru": "проверить статус заявления",
+    "ms": "menyemak status permohonan",
+    "forms": {
+      "ru": [
+        "проверить статус заявления",
+        "проверил статус заявления",
+        "проверила статус заявления",
+        "проверили статус заявления",
+        "проверим статус заявления",
+        "проверьте статус заявления"
+      ],
+      "ms": [
+        "menyemak status permohonan"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9720",
+      "sourceTitle": "проверить статус заявления",
+      "sourceTranslation": "menyemak status permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Вы можете проверить статус заявления на сайте.",
+        "ms": "Anda boleh menyemak status permohonan di laman web.",
+        "ruExpression": "проверить статус заявления",
+        "msExpression": "menyemak status permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она проверила статус заявления утром.",
+        "ms": "Dia telah menyemak status permohonan pada waktu pagi.",
+        "ruExpression": "проверила статус заявления",
+        "msExpression": "menyemak status permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0717",
+    "ru": "обжаловать решение",
+    "ms": "membuat rayuan terhadap keputusan",
+    "forms": {
+      "ru": [
+        "обжаловать решение",
+        "обжаловал решение",
+        "обжаловала решение",
+        "обжаловали решение",
+        "обжалуем решение",
+        "обжалуйте решение"
+      ],
+      "ms": [
+        "membuat rayuan terhadap keputusan"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9729",
+      "sourceTitle": "обжаловать решение",
+      "sourceTranslation": "membuat rayuan terhadap keputusan"
+    },
+    "examples": [
+      {
+        "ru": "Заявитель решил обжаловать решение комиссии.",
+        "ms": "Pemohon memutuskan untuk membuat rayuan terhadap keputusan jawatankuasa.",
+        "ruExpression": "обжаловать решение",
+        "msExpression": "membuat rayuan terhadap keputusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он обжаловал решение в письменном виде.",
+        "ms": "Dia telah membuat rayuan terhadap keputusan secara bertulis.",
+        "ruExpression": "обжаловал решение",
+        "msExpression": "membuat rayuan terhadap keputusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0718",
+    "ru": "получить документ лично",
+    "ms": "mengambil dokumen sendiri",
+    "forms": {
+      "ru": [
+        "получить документ лично",
+        "получил документ лично",
+        "получила документ лично",
+        "получили документ лично",
+        "получим документ лично",
+        "получите документ лично"
+      ],
+      "ms": [
+        "mengambil dokumen sendiri"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9734",
+      "sourceTitle": "получить документ лично",
+      "sourceTranslation": "mengambil dokumen sendiri"
+    },
+    "examples": [
+      {
+        "ru": "Заявитель хочет получить документ лично.",
+        "ms": "Pemohon mahu mengambil dokumen sendiri.",
+        "ruExpression": "получить документ лично",
+        "msExpression": "mengambil dokumen sendiri",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она получила документ лично в офисе.",
+        "ms": "Dia telah mengambil dokumen sendiri di pejabat.",
+        "ruExpression": "получила документ лично",
+        "msExpression": "mengambil dokumen sendiri",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0719",
+    "ru": "получить документ по почте",
+    "ms": "menerima dokumen melalui pos",
+    "forms": {
+      "ru": [
+        "получить документ по почте",
+        "получил документ по почте",
+        "получила документ по почте",
+        "получили документ по почте",
+        "получим документ по почте",
+        "получите документ по почте"
+      ],
+      "ms": [
+        "menerima dokumen melalui pos"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9735",
+      "sourceTitle": "получить документ по почте",
+      "sourceTranslation": "menerima dokumen melalui pos"
+    },
+    "examples": [
+      {
+        "ru": "Можно получить документ по почте.",
+        "ms": "Anda boleh menerima dokumen melalui pos.",
+        "ruExpression": "получить документ по почте",
+        "msExpression": "menerima dokumen melalui pos",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он получил документ по почте на прошлой неделе.",
+        "ms": "Dia telah menerima dokumen melalui pos pada minggu lalu.",
+        "ruExpression": "получил документ по почте",
+        "msExpression": "menerima dokumen melalui pos",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0720",
+    "ru": "согласовать документ",
+    "ms": "meluluskan dokumen",
+    "forms": {
+      "ru": [
+        "согласовать документ",
+        "согласовал документ",
+        "согласовала документ",
+        "согласовали документ",
+        "согласуем документ",
+        "согласуйте документ"
+      ],
+      "ms": [
+        "meluluskan dokumen"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9751",
+      "sourceTitle": "согласовать документ",
+      "sourceTranslation": "meluluskan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Руководитель должен согласовать документ до отправки.",
+        "ms": "Pengurus perlu meluluskan dokumen sebelum penghantaran.",
+        "ruExpression": "согласовать документ",
+        "msExpression": "meluluskan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она согласовала документ после проверки.",
+        "ms": "Dia telah meluluskan dokumen selepas semakan.",
+        "ruExpression": "согласовала документ",
+        "msExpression": "meluluskan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0721",
+    "ru": "отправить на согласование",
+    "ms": "menghantar untuk kelulusan",
+    "forms": {
+      "ru": [
+        "отправить на согласование",
+        "отправил на согласование",
+        "отправила на согласование",
+        "отправили на согласование",
+        "отправим на согласование",
+        "отправьте на согласование"
+      ],
+      "ms": [
+        "menghantar untuk kelulusan",
+        "dihantar untuk kelulusan"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9754",
+      "sourceTitle": "отправить на согласование",
+      "sourceTranslation": "menghantar untuk kelulusan"
+    },
+    "examples": [
+      {
+        "ru": "Документ нужно отправить на согласование руководителю.",
+        "ms": "Dokumen perlu dihantar untuk kelulusan pengurus.",
+        "ruExpression": "отправить на согласование",
+        "msExpression": "dihantar untuk kelulusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь отправила на согласование новую версию.",
+        "ms": "Versi baharu telah dihantar untuk kelulusan oleh setiausaha.",
+        "ruExpression": "отправила на согласование",
+        "msExpression": "dihantar untuk kelulusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0722",
+    "ru": "внести изменения",
+    "ms": "membuat perubahan",
+    "forms": {
+      "ru": [
+        "внести изменения",
+        "внёс изменения",
+        "внесла изменения",
+        "внесли изменения",
+        "внесём изменения",
+        "внесите изменения"
+      ],
+      "ms": [
+        "membuat perubahan"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9755",
+      "sourceTitle": "внести изменения",
+      "sourceTranslation": "membuat perubahan"
+    },
+    "examples": [
+      {
+        "ru": "Заказчик попросил внести изменения в договор.",
+        "ms": "Pelanggan meminta kami membuat perubahan pada kontrak.",
+        "ruExpression": "внести изменения",
+        "msExpression": "membuat perubahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы внесли изменения после обсуждения.",
+        "ms": "Kami telah membuat perubahan selepas perbincangan.",
+        "ruExpression": "внесли изменения",
+        "msExpression": "membuat perubahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0723",
+    "ru": "отправить подписанный документ",
+    "ms": "menghantar dokumen yang ditandatangani",
+    "forms": {
+      "ru": [
+        "отправить подписанный документ",
+        "отправил подписанный документ",
+        "отправила подписанный документ",
+        "отправили подписанный документ",
+        "отправим подписанный документ",
+        "отправьте подписанный документ"
+      ],
+      "ms": [
+        "menghantar dokumen yang ditandatangani"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9763",
+      "sourceTitle": "отправить подписанный документ",
+      "sourceTranslation": "menghantar dokumen yang ditandatangani"
+    },
+    "examples": [
+      {
+        "ru": "Просим отправить подписанный документ по электронной почте.",
+        "ms": "Kami meminta anda menghantar dokumen yang ditandatangani melalui e-mel.",
+        "ruExpression": "отправить подписанный документ",
+        "msExpression": "menghantar dokumen yang ditandatangani",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отправила подписанный документ заказчику.",
+        "ms": "Dia telah menghantar dokumen yang ditandatangani kepada pelanggan.",
+        "ruExpression": "отправила подписанный документ",
+        "msExpression": "menghantar dokumen yang ditandatangani",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0724",
+    "ru": "ожидать решения",
+    "ms": "menunggu keputusan",
+    "forms": {
+      "ru": [
+        "ожидать решения",
+        "ожидает решения",
+        "ожидают решения",
+        "ожидал решения",
+        "ожидала решения",
+        "ожидали решения"
+      ],
+      "ms": [
+        "menunggu keputusan"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9719",
+      "sourceTitle": "ожидать решения",
+      "sourceTranslation": "menunggu keputusan"
+    },
+    "examples": [
+      {
+        "ru": "Заявитель продолжает ожидать решения.",
+        "ms": "Pemohon terus menunggu keputusan.",
+        "ruExpression": "ожидать решения",
+        "msExpression": "menunggu keputusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она ожидала решения в течение недели.",
+        "ms": "Dia menunggu keputusan selama seminggu.",
+        "ruExpression": "ожидала решения",
+        "msExpression": "menunggu keputusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0725",
+    "ru": "перенести прием",
+    "ms": "menjadualkan semula janji temu",
+    "forms": {
+      "ru": [
+        "перенести прием",
+        "перенёс приём",
+        "перенесла приём",
+        "перенесли приём",
+        "перенесём приём",
+        "перенесите приём"
+      ],
+      "ms": [
+        "menjadualkan semula janji temu"
+      ]
+    },
+    "topic": "действия с документами",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9721",
+      "sourceTitle": "перенести прием",
+      "sourceTranslation": "menjadualkan semula janji temu"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно перенести прием на следующую неделю.",
+        "ms": "Saya perlu menjadualkan semula janji temu ke minggu hadapan.",
+        "ruExpression": "перенести прием",
+        "msExpression": "menjadualkan semula janji temu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она перенесла приём на пятницу.",
+        "ms": "Dia telah menjadualkan semula janji temu ke hari Jumaat.",
+        "ruExpression": "перенесла приём",
+        "msExpression": "menjadualkan semula janji temu",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

@@ -1598,5 +1598,105 @@
   [
     "отклонить предложение о работе",
     "menolak tawaran kerja"
+  ],
+  [
+    "приложить документ",
+    "melampirkan dokumen"
+  ],
+  [
+    "добавить документ",
+    "menambah dokumen"
+  ],
+  [
+    "заменить документ",
+    "mengganti dokumen"
+  ],
+  [
+    "исправить документ",
+    "membetulkan dokumen"
+  ],
+  [
+    "сканировать документ",
+    "mengimbas dokumen"
+  ],
+  [
+    "распечатать документ",
+    "mencetak dokumen"
+  ],
+  [
+    "загрузить документ",
+    "memuat naik dokumen"
+  ],
+  [
+    "скачать документ",
+    "memuat turun dokumen"
+  ],
+  [
+    "отправить документ",
+    "menghantar dokumen"
+  ],
+  [
+    "получить документ",
+    "menerima dokumen"
+  ],
+  [
+    "заверить документ",
+    "mengesahkan dokumen"
+  ],
+  [
+    "подать документы",
+    "mengemukakan dokumen"
+  ],
+  [
+    "оставить документы",
+    "meninggalkan dokumen"
+  ],
+  [
+    "продлить документ",
+    "memperbaharui dokumen"
+  ],
+  [
+    "перевести документ",
+    "menterjemahkan dokumen"
+  ],
+  [
+    "проверить статус заявления",
+    "menyemak status permohonan"
+  ],
+  [
+    "обжаловать решение",
+    "membuat rayuan terhadap keputusan"
+  ],
+  [
+    "получить документ лично",
+    "mengambil dokumen sendiri"
+  ],
+  [
+    "получить документ по почте",
+    "menerima dokumen melalui pos"
+  ],
+  [
+    "согласовать документ",
+    "meluluskan dokumen"
+  ],
+  [
+    "отправить на согласование",
+    "menghantar untuk kelulusan"
+  ],
+  [
+    "внести изменения",
+    "membuat perubahan"
+  ],
+  [
+    "отправить подписанный документ",
+    "menghantar dokumen yang ditandatangani"
+  ],
+  [
+    "ожидать решения",
+    "menunggu keputusan"
+  ],
+  [
+    "перенести прием",
+    "menjadualkan semula janji temu"
   ]
 ]

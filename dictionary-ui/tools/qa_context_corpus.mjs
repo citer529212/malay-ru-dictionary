@@ -50,6 +50,10 @@ for (const [query,title] of [
  ['начнём сотрудничество','начать сотрудничество'], ['изменила требования','изменить требования'],
  ['приняла предложение о работе','принять предложение о работе'],
  ['отклонила предложение о работе','отклонить предложение о работе'],
+ ['приложила документ','приложить документ'], ['внёс изменения','внести изменения'],
+ ['перевёл документ','перевести документ'], ['перенесла приём','перенести прием'],
+ ['получил документ по почте','получить документ по почте'],
+ ['отправила подписанный документ','отправить подписанный документ'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -70,13 +74,25 @@ for (const [query,direction,title] of [
 ]) {
  assert.equal(searchContextCorpus(contextCorpus,query,direction)[0]?.title,title,`Negation/nested phrase: ${query}`);
 }
+for (const [query,direction,title] of [
+ ['Мне нужно получить документ по почте.','ru-ms','получить документ по почте'],
+ ['Dia telah menerima dokumen melalui pos semalam.','ms-ru','menerima dokumen melalui pos'],
+ ['dihantar untuk kelulusan','ms-ru','menghantar untuk kelulusan'],
+ ['Dokumen ini dihantar untuk kelulusan pengurus.','ms-ru','menghantar untuk kelulusan'],
+ ['Мы отправили подписанный документ вчера.','ru-ms','отправить подписанный документ'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Document action/form: ${query}`);
+}
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
   assert.equal(row.verified, true);
   assert.ok(row.topic);
   assert.ok(row.ru.split(' ').length >= 2);
   assert.ok(row.forms.ru.length >= 3);
-  assert.deepEqual(row.forms.ms, [row.ms]); // Preserve the supplied Malay citation phrase; tense is conveyed in context.
+  assert.equal(row.forms.ms[0],row.ms); // Preserve the supplied citation phrase before derived context forms.
+  assert.equal(new Set(row.forms.ms).size,row.forms.ms.length);
+  assert.ok(row.forms.ms.every(form=>typeof form==='string' && form.trim()===form && form.length>0));
   const original = gold.find(g => g.id === row.verification.sourceEntryId);
   assert.ok(original?.verified);
   assert.equal(row.ru, original.title);
