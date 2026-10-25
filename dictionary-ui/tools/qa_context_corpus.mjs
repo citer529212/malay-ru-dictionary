@@ -22,16 +22,21 @@ assert.equal(contextCorpus.length, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => r.id)).size, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => key(r.ru))).size, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => key(r.ms))).size, expected.expressions);
-// Independent accusative fixtures catch adjective agreement mistakes in new nominal forms.
+// Independent case fixtures catch agreement and plural-declension mistakes.
 for (const [query,title] of [
  ['деловую переписку','деловая переписка'], ['скрытую копию','скрытая копия'],
  ['обновлённую версию','обновленная версия'], ['последнюю версию','последняя версия'],
  ['предыдущую версию','предыдущая версия'], ['финальную версию','финальная версия'],
  ['рабочую встречу','рабочая встреча'], ['текущую задачу','текущая задача'],
  ['новую задачу','новая задача'],
+ ['условиями оплаты','условия оплаты'], ['сторон договора','стороны договора'],
+ ['должностных обязанностей','должностные обязанности'],
+ ['письменного согласия','письменное согласие'],
+ ['подписанного договора','подписанный договор'],
+ ['крайнего срока','крайний срок'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
- assert.equal(hit?.title,title,`Accusative agreement: ${query}`);
+ assert.equal(hit?.title,title,`Case agreement: ${query}`);
  assert.equal(hit?._contextKind,1);
 }
 let exact = 0, forms = 0, contexts = 0;

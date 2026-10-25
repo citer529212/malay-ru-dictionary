@@ -31,7 +31,7 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
   } else assert.ok((await page.locator('#answerDetails').textContent()).includes('storan awan'));
   results.push({viewport,query,passed:true});
  }
- for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis']]) {
+ for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis'],['условиями оплаты','условия оплаты'],['syarat kontrak','syarat kontrak']]) {
   await page.locator('#searchInput').fill(newQuery);
   await page.locator('#searchButton').click();
   await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,newTitle);
@@ -56,6 +56,15 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.screenshot({path:`${outputDir}/${viewport.width}-business-topic.png`,fullPage:false});
  await page.locator('#resetContextFilters').click();
  results.push({viewport,scenario:'business-correspondence-topic',passed:true});
+ await page.locator('#contextTopic').selectOption('условия и обязательства');
+ assert.equal(await page.locator('#resultCount').textContent(),'20');
+ assert.ok((await page.locator('#resultList').textContent()).includes('условия договора'));
+ assert.equal(await page.locator('#resultList .parallel-context mark').count(),80);
+ await page.locator('#resultList > li').first().scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Contract topic overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-contract-topic.png`,fullPage:false});
+ await page.locator('#resetContextFilters').click();
+ results.push({viewport,scenario:'contract-terms-topic',passed:true});
  await page.locator('#searchInput').fill('вода');
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');
@@ -345,6 +354,11 @@ for(const profile of ['','-Lite']) {
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='tandatangan digital');
  assert.equal(await page.locator('#answerDetails mark').count(),4);
+ await page.locator('#searchInput').fill('persetujuan bertulis');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='persetujuan bertulis');
+ assert.equal(await page.locator('#answerDetails mark').count(),4);
+ assert.ok((await page.locator('#answerDetails').textContent()).includes('письменного согласия'));
  results.push({offline:profile||'Full',passed:true});
  await page.close();
 }

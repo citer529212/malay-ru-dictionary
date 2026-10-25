@@ -22543,5 +22543,845 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0581",
+    "ru": "условия оплаты",
+    "ms": "syarat pembayaran",
+    "forms": {
+      "ru": [
+        "условия оплаты",
+        "условий оплаты",
+        "условиям оплаты",
+        "условиями оплаты",
+        "условиях оплаты"
+      ],
+      "ms": [
+        "syarat pembayaran"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3189",
+      "sourceTitle": "условия оплаты",
+      "sourceTranslation": "syarat pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Условия оплаты указаны в счёте.",
+        "ms": "Syarat pembayaran dinyatakan dalam invois.",
+        "ruExpression": "условия оплаты",
+        "msExpression": "syarat pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обсудим изменение условий оплаты.",
+        "ms": "Mari kita bincangkan perubahan syarat pembayaran.",
+        "ruExpression": "условий оплаты",
+        "msExpression": "syarat pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0582",
+    "ru": "условия договора",
+    "ms": "syarat kontrak",
+    "forms": {
+      "ru": [
+        "условия договора",
+        "условий договора",
+        "условиям договора",
+        "условиями договора",
+        "условиях договора"
+      ],
+      "ms": [
+        "syarat kontrak"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3190",
+      "sourceTitle": "условия договора",
+      "sourceTranslation": "syarat kontrak"
+    },
+    "examples": [
+      {
+        "ru": "Условия договора действуют до конца года.",
+        "ms": "Syarat kontrak berkuat kuasa sehingga akhir tahun.",
+        "ruExpression": "условия договора",
+        "msExpression": "syarat kontrak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Изменение условий договора требует письменного согласия.",
+        "ms": "Perubahan syarat kontrak memerlukan persetujuan bertulis.",
+        "ruExpression": "условий договора",
+        "msExpression": "syarat kontrak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0583",
+    "ru": "нарушение договора",
+    "ms": "pelanggaran kontrak",
+    "forms": {
+      "ru": [
+        "нарушение договора",
+        "нарушения договора",
+        "нарушению договора",
+        "нарушением договора",
+        "нарушении договора"
+      ],
+      "ms": [
+        "pelanggaran kontrak"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3191",
+      "sourceTitle": "нарушение договора",
+      "sourceTranslation": "pelanggaran kontrak"
+    },
+    "examples": [
+      {
+        "ru": "Нарушение договора может привести к убыткам.",
+        "ms": "Pelanggaran kontrak boleh menyebabkan kerugian.",
+        "ruExpression": "нарушение договора",
+        "msExpression": "pelanggaran kontrak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме сообщается о нарушении договора.",
+        "ms": "Surat itu memaklumkan tentang pelanggaran kontrak.",
+        "ruExpression": "нарушении договора",
+        "msExpression": "pelanggaran kontrak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0584",
+    "ru": "подписанный договор",
+    "ms": "kontrak yang ditandatangani",
+    "forms": {
+      "ru": [
+        "подписанный договор",
+        "подписанного договора",
+        "подписанному договору",
+        "подписанным договором",
+        "подписанном договоре"
+      ],
+      "ms": [
+        "kontrak yang ditandatangani"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3194",
+      "sourceTitle": "подписанный договор",
+      "sourceTranslation": "kontrak yang ditandatangani"
+    },
+    "examples": [
+      {
+        "ru": "Подписанный договор хранится в архиве.",
+        "ms": "Kontrak yang ditandatangani disimpan dalam arkib.",
+        "ruExpression": "подписанный договор",
+        "msExpression": "kontrak yang ditandatangani",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия подписанного договора приложена к письму.",
+        "ms": "Salinan kontrak yang ditandatangani dilampirkan pada surat.",
+        "ruExpression": "подписанного договора",
+        "msExpression": "kontrak yang ditandatangani",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0585",
+    "ru": "крайний срок",
+    "ms": "tarikh akhir",
+    "forms": {
+      "ru": [
+        "крайний срок",
+        "крайнего срока",
+        "крайнему сроку",
+        "крайним сроком",
+        "крайнем сроке"
+      ],
+      "ms": [
+        "tarikh akhir"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4344",
+      "sourceTitle": "крайний срок",
+      "sourceTranslation": "tarikh akhir"
+    },
+    "examples": [
+      {
+        "ru": "Крайний срок подачи заявки — пятница.",
+        "ms": "Tarikh akhir permohonan ialah hari Jumaat.",
+        "ruExpression": "крайний срок",
+        "msExpression": "tarikh akhir",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Осталось два дня до крайнего срока.",
+        "ms": "Tinggal dua hari lagi sebelum tarikh akhir.",
+        "ruExpression": "крайнего срока",
+        "msExpression": "tarikh akhir",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0586",
+    "ru": "официальное уведомление",
+    "ms": "notis rasmi",
+    "forms": {
+      "ru": [
+        "официальное уведомление",
+        "официального уведомления",
+        "официальному уведомлению",
+        "официальным уведомлением",
+        "официальном уведомлении"
+      ],
+      "ms": [
+        "notis rasmi"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5440",
+      "sourceTitle": "официальное уведомление",
+      "sourceTranslation": "notis rasmi"
+    },
+    "examples": [
+      {
+        "ru": "Официальное уведомление отправлено по почте.",
+        "ms": "Notis rasmi telah dihantar melalui pos.",
+        "ruExpression": "официальное уведомление",
+        "msExpression": "notis rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните копию официального уведомления.",
+        "ms": "Simpan salinan notis rasmi.",
+        "ruExpression": "официального уведомления",
+        "msExpression": "notis rasmi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0587",
+    "ru": "условия возврата",
+    "ms": "syarat pemulangan",
+    "forms": {
+      "ru": [
+        "условия возврата",
+        "условий возврата",
+        "условиям возврата",
+        "условиями возврата",
+        "условиях возврата"
+      ],
+      "ms": [
+        "syarat pemulangan"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5475",
+      "sourceTitle": "условия возврата",
+      "sourceTranslation": "syarat pemulangan"
+    },
+    "examples": [
+      {
+        "ru": "Условия возврата опубликованы на сайте магазина.",
+        "ms": "Syarat pemulangan diterbitkan di laman web kedai.",
+        "ruExpression": "условия возврата",
+        "msExpression": "syarat pemulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ознакомьтесь с условиями возврата до покупки.",
+        "ms": "Baca syarat pemulangan sebelum membeli.",
+        "ruExpression": "условиями возврата",
+        "msExpression": "syarat pemulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0588",
+    "ru": "условия использования",
+    "ms": "syarat penggunaan",
+    "forms": {
+      "ru": [
+        "условия использования",
+        "условий использования",
+        "условиям использования",
+        "условиями использования",
+        "условиях использования"
+      ],
+      "ms": [
+        "syarat penggunaan"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5476",
+      "sourceTitle": "условия использования",
+      "sourceTranslation": "syarat penggunaan"
+    },
+    "examples": [
+      {
+        "ru": "Условия использования обновлены сегодня.",
+        "ms": "Syarat penggunaan dikemas kini hari ini.",
+        "ruExpression": "условия использования",
+        "msExpression": "syarat penggunaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Прочитайте раздел об условиях использования.",
+        "ms": "Baca bahagian tentang syarat penggunaan.",
+        "ruExpression": "условиях использования",
+        "msExpression": "syarat penggunaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0589",
+    "ru": "письменное согласие",
+    "ms": "persetujuan bertulis",
+    "forms": {
+      "ru": [
+        "письменное согласие",
+        "письменного согласия",
+        "письменному согласию",
+        "письменным согласием",
+        "письменном согласии"
+      ],
+      "ms": [
+        "persetujuan bertulis"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7918",
+      "sourceTitle": "письменное согласие",
+      "sourceTranslation": "persetujuan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Письменное согласие требуется до начала работы.",
+        "ms": "Persetujuan bertulis diperlukan sebelum kerja bermula.",
+        "ruExpression": "письменное согласие",
+        "msExpression": "persetujuan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Без письменного согласия мы не можем изменить заказ.",
+        "ms": "Tanpa persetujuan bertulis, kami tidak boleh mengubah pesanan.",
+        "ruExpression": "письменного согласия",
+        "msExpression": "persetujuan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0590",
+    "ru": "стороны договора",
+    "ms": "pihak-pihak dalam perjanjian",
+    "forms": {
+      "ru": [
+        "стороны договора",
+        "сторон договора",
+        "сторонам договора",
+        "сторонами договора",
+        "сторонах договора"
+      ],
+      "ms": [
+        "pihak-pihak dalam perjanjian"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8411",
+      "sourceTitle": "стороны договора",
+      "sourceTranslation": "pihak-pihak dalam perjanjian"
+    },
+    "examples": [
+      {
+        "ru": "Стороны договора подписали приложение.",
+        "ms": "Pihak-pihak dalam perjanjian menandatangani lampiran.",
+        "ruExpression": "стороны договора",
+        "msExpression": "pihak-pihak dalam perjanjian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Названия сторон договора указаны на первой странице.",
+        "ms": "Nama pihak-pihak dalam perjanjian dinyatakan pada halaman pertama.",
+        "ruExpression": "сторон договора",
+        "msExpression": "pihak-pihak dalam perjanjian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0591",
+    "ru": "требования проекта",
+    "ms": "keperluan projek",
+    "forms": {
+      "ru": [
+        "требования проекта",
+        "требований проекта",
+        "требованиям проекта",
+        "требованиями проекта",
+        "требованиях проекта"
+      ],
+      "ms": [
+        "keperluan projek"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9841",
+      "sourceTitle": "требования проекта",
+      "sourceTranslation": "keperluan projek"
+    },
+    "examples": [
+      {
+        "ru": "Требования проекта описаны в приложении.",
+        "ms": "Keperluan projek diterangkan dalam lampiran.",
+        "ruExpression": "требования проекта",
+        "msExpression": "keperluan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обсудим изменение требований проекта.",
+        "ms": "Mari kita bincangkan perubahan keperluan projek.",
+        "ruExpression": "требований проекта",
+        "msExpression": "keperluan projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0592",
+    "ru": "условия сотрудничества",
+    "ms": "syarat kerjasama",
+    "forms": {
+      "ru": [
+        "условия сотрудничества",
+        "условий сотрудничества",
+        "условиям сотрудничества",
+        "условиями сотрудничества",
+        "условиях сотрудничества"
+      ],
+      "ms": [
+        "syarat kerjasama"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9845",
+      "sourceTitle": "условия сотрудничества",
+      "sourceTranslation": "syarat kerjasama"
+    },
+    "examples": [
+      {
+        "ru": "Условия сотрудничества согласованы обеими компаниями.",
+        "ms": "Syarat kerjasama telah dipersetujui oleh kedua-dua syarikat.",
+        "ruExpression": "условия сотрудничества",
+        "msExpression": "syarat kerjasama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подготовили предложение об условиях сотрудничества.",
+        "ms": "Kami menyediakan cadangan tentang syarat kerjasama.",
+        "ruExpression": "условиях сотрудничества",
+        "msExpression": "syarat kerjasama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0593",
+    "ru": "срок поставки",
+    "ms": "tempoh penghantaran",
+    "forms": {
+      "ru": [
+        "срок поставки",
+        "срока поставки",
+        "сроку поставки",
+        "сроком поставки",
+        "сроке поставки"
+      ],
+      "ms": [
+        "tempoh penghantaran"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3188",
+      "sourceTitle": "срок поставки",
+      "sourceTranslation": "tempoh penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Срок поставки составляет две недели.",
+        "ms": "Tempoh penghantaran ialah dua minggu.",
+        "ruExpression": "срок поставки",
+        "msExpression": "tempoh penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об изменении срока поставки.",
+        "ms": "Maklumkan perubahan tempoh penghantaran.",
+        "ruExpression": "срока поставки",
+        "msExpression": "tempoh penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0594",
+    "ru": "трудовой договор",
+    "ms": "kontrak kerja",
+    "forms": {
+      "ru": [
+        "трудовой договор",
+        "трудового договора",
+        "трудовому договору",
+        "трудовым договором",
+        "трудовом договоре"
+      ],
+      "ms": [
+        "kontrak kerja"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-1749",
+      "sourceTitle": "трудовой договор",
+      "sourceTranslation": "kontrak kerja"
+    },
+    "examples": [
+      {
+        "ru": "Трудовой договор содержит описание обязанностей.",
+        "ms": "Kontrak kerja mengandungi penerangan tanggungjawab.",
+        "ruExpression": "трудовой договор",
+        "msExpression": "kontrak kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Прочитайте все разделы трудового договора.",
+        "ms": "Baca semua bahagian kontrak kerja.",
+        "ruExpression": "трудового договора",
+        "msExpression": "kontrak kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0595",
+    "ru": "договор с подрядчиком",
+    "ms": "kontrak dengan kontraktor",
+    "forms": {
+      "ru": [
+        "договор с подрядчиком",
+        "договора с подрядчиком",
+        "договору с подрядчиком",
+        "договором с подрядчиком",
+        "договоре с подрядчиком"
+      ],
+      "ms": [
+        "kontrak dengan kontraktor"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9844",
+      "sourceTitle": "договор с подрядчиком",
+      "sourceTranslation": "kontrak dengan kontraktor"
+    },
+    "examples": [
+      {
+        "ru": "Договор с подрядчиком подписан вчера.",
+        "ms": "Kontrak dengan kontraktor ditandatangani semalam.",
+        "ruExpression": "договор с подрядчиком",
+        "msExpression": "kontrak dengan kontraktor",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия договора с подрядчиком хранится у руководителя.",
+        "ms": "Salinan kontrak dengan kontraktor disimpan oleh pengurus.",
+        "ruExpression": "договора с подрядчиком",
+        "msExpression": "kontrak dengan kontraktor",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0596",
+    "ru": "срок ответа",
+    "ms": "tempoh jawapan",
+    "forms": {
+      "ru": [
+        "срок ответа",
+        "срока ответа",
+        "сроку ответа",
+        "сроком ответа",
+        "сроке ответа"
+      ],
+      "ms": [
+        "tempoh jawapan"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7949",
+      "sourceTitle": "срок ответа",
+      "sourceTranslation": "tempoh jawapan"
+    },
+    "examples": [
+      {
+        "ru": "Срок ответа составляет пять рабочих дней.",
+        "ms": "Tempoh jawapan ialah lima hari bekerja.",
+        "ruExpression": "срок ответа",
+        "msExpression": "tempoh jawapan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Уточните дату окончания срока ответа.",
+        "ms": "Sila pastikan tarikh tamat tempoh jawapan.",
+        "ruExpression": "срока ответа",
+        "msExpression": "tempoh jawapan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0597",
+    "ru": "срок предупреждения",
+    "ms": "tempoh notis",
+    "forms": {
+      "ru": [
+        "срок предупреждения",
+        "срока предупреждения",
+        "сроку предупреждения",
+        "сроком предупреждения",
+        "сроке предупреждения"
+      ],
+      "ms": [
+        "tempoh notis"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8363",
+      "sourceTitle": "срок предупреждения",
+      "sourceTranslation": "tempoh notis"
+    },
+    "examples": [
+      {
+        "ru": "Срок предупреждения указан в трудовом договоре.",
+        "ms": "Tempoh notis dinyatakan dalam kontrak kerja.",
+        "ruExpression": "срок предупреждения",
+        "msExpression": "tempoh notis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Продолжительность срока предупреждения составляет один месяц.",
+        "ms": "Panjang tempoh notis ialah satu bulan.",
+        "ruExpression": "срока предупреждения",
+        "msExpression": "tempoh notis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0598",
+    "ru": "обязанности арендатора",
+    "ms": "tanggungjawab penyewa",
+    "forms": {
+      "ru": [
+        "обязанности арендатора",
+        "обязанностей арендатора",
+        "обязанностям арендатора",
+        "обязанностями арендатора",
+        "обязанностях арендатора"
+      ],
+      "ms": [
+        "tanggungjawab penyewa"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6158",
+      "sourceTitle": "обязанности арендатора",
+      "sourceTranslation": "tanggungjawab penyewa"
+    },
+    "examples": [
+      {
+        "ru": "Обязанности арендатора перечислены в договоре.",
+        "ms": "Tanggungjawab penyewa disenaraikan dalam kontrak.",
+        "ruExpression": "обязанности арендатора",
+        "msExpression": "tanggungjawab penyewa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ознакомьтесь с обязанностями арендатора до подписания договора.",
+        "ms": "Baca tanggungjawab penyewa sebelum menandatangani kontrak.",
+        "ruExpression": "обязанностями арендатора",
+        "msExpression": "tanggungjawab penyewa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0599",
+    "ru": "обязанности арендодателя",
+    "ms": "tanggungjawab tuan rumah",
+    "forms": {
+      "ru": [
+        "обязанности арендодателя",
+        "обязанностей арендодателя",
+        "обязанностям арендодателя",
+        "обязанностями арендодателя",
+        "обязанностях арендодателя"
+      ],
+      "ms": [
+        "tanggungjawab tuan rumah"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6159",
+      "sourceTitle": "обязанности арендодателя",
+      "sourceTranslation": "tanggungjawab tuan rumah"
+    },
+    "examples": [
+      {
+        "ru": "Обязанности арендодателя включают ремонт крыши.",
+        "ms": "Tanggungjawab tuan rumah termasuk membaiki bumbung.",
+        "ruExpression": "обязанности арендодателя",
+        "msExpression": "tanggungjawab tuan rumah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В договоре есть раздел об обязанностях арендодателя.",
+        "ms": "Kontrak itu mempunyai bahagian tentang tanggungjawab tuan rumah.",
+        "ruExpression": "обязанностях арендодателя",
+        "msExpression": "tanggungjawab tuan rumah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0600",
+    "ru": "должностные обязанности",
+    "ms": "tanggungjawab jawatan",
+    "forms": {
+      "ru": [
+        "должностные обязанности",
+        "должностных обязанностей",
+        "должностным обязанностям",
+        "должностными обязанностями",
+        "должностных обязанностях"
+      ],
+      "ms": [
+        "tanggungjawab jawatan"
+      ]
+    },
+    "topic": "условия и обязательства",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6396",
+      "sourceTitle": "должностные обязанности",
+      "sourceTranslation": "tanggungjawab jawatan"
+    },
+    "examples": [
+      {
+        "ru": "Должностные обязанности обсуждаются на собеседовании.",
+        "ms": "Tanggungjawab jawatan dibincangkan semasa temu duga.",
+        "ruExpression": "должностные обязанности",
+        "msExpression": "tanggungjawab jawatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Список должностных обязанностей приложен к договору.",
+        "ms": "Senarai tanggungjawab jawatan dilampirkan pada kontrak.",
+        "ruExpression": "должностных обязанностей",
+        "msExpression": "tanggungjawab jawatan",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];
