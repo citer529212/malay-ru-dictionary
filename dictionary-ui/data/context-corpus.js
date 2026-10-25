@@ -26527,5 +26527,1064 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0676",
+    "ru": "предложение улучшения",
+    "ms": "cadangan penambahbaikan",
+    "forms": {
+      "ru": [
+        "предложение улучшения",
+        "предложения улучшения",
+        "предложению улучшения",
+        "предложением улучшения",
+        "предложении улучшения"
+      ],
+      "ms": [
+        "cadangan penambahbaikan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2137",
+      "sourceTitle": "предложение улучшения",
+      "sourceTranslation": "cadangan penambahbaikan"
+    },
+    "examples": [
+      {
+        "ru": "Предложение улучшения касается проверки данных.",
+        "ms": "Cadangan penambahbaikan berkaitan dengan semakan data.",
+        "ruExpression": "предложение улучшения",
+        "msExpression": "cadangan penambahbaikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В предложении улучшения описан новый порядок проверки.",
+        "ms": "Prosedur semakan baharu diterangkan dalam cadangan penambahbaikan.",
+        "ruExpression": "предложении улучшения",
+        "msExpression": "cadangan penambahbaikan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0677",
+    "ru": "качество товара",
+    "ms": "kualiti barang",
+    "forms": {
+      "ru": [
+        "качество товара",
+        "качества товара",
+        "качеству товара",
+        "качеством товара",
+        "качестве товара"
+      ],
+      "ms": [
+        "kualiti barang"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2272",
+      "sourceTitle": "качество товара",
+      "sourceTranslation": "kualiti barang"
+    },
+    "examples": [
+      {
+        "ru": "Качество товара проверяют перед отправкой.",
+        "ms": "Kualiti barang diperiksa sebelum penghantaran.",
+        "ruExpression": "качество товара",
+        "msExpression": "kualiti barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Покупатель доволен качеством товара.",
+        "ms": "Pembeli berpuas hati dengan kualiti barang.",
+        "ruExpression": "качеством товара",
+        "msExpression": "kualiti barang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0678",
+    "ru": "коммерческое предложение",
+    "ms": "cadangan perniagaan",
+    "forms": {
+      "ru": [
+        "коммерческое предложение",
+        "коммерческого предложения",
+        "коммерческому предложению",
+        "коммерческим предложением",
+        "коммерческом предложении"
+      ],
+      "ms": [
+        "cadangan perniagaan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3181",
+      "sourceTitle": "коммерческое предложение",
+      "sourceTranslation": "cadangan perniagaan"
+    },
+    "examples": [
+      {
+        "ru": "Коммерческое предложение содержит цены и условия оплаты.",
+        "ms": "Cadangan perniagaan mengandungi harga dan syarat pembayaran.",
+        "ruExpression": "коммерческое предложение",
+        "msExpression": "cadangan perniagaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия коммерческого предложения отправлена заказчику.",
+        "ms": "Salinan cadangan perniagaan dihantar kepada pelanggan.",
+        "ruExpression": "коммерческого предложения",
+        "msExpression": "cadangan perniagaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0679",
+    "ru": "хорошее качество",
+    "ms": "kualiti baik",
+    "forms": {
+      "ru": [
+        "хорошее качество",
+        "хорошего качества",
+        "хорошему качеству",
+        "хорошим качеством",
+        "хорошем качестве"
+      ],
+      "ms": [
+        "kualiti baik"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4080",
+      "sourceTitle": "хорошее качество",
+      "sourceTranslation": "kualiti baik"
+    },
+    "examples": [
+      {
+        "ru": "Хорошее качество печати важно для этого документа.",
+        "ms": "Kualiti baik dalam percetakan penting untuk dokumen ini.",
+        "ruExpression": "хорошее качество",
+        "msExpression": "kualiti baik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для отчёта нужны фотографии хорошего качества.",
+        "ms": "Foto dengan kualiti baik diperlukan untuk laporan.",
+        "ruExpression": "хорошего качества",
+        "msExpression": "kualiti baik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0680",
+    "ru": "плохое качество",
+    "ms": "kualiti buruk",
+    "forms": {
+      "ru": [
+        "плохое качество",
+        "плохого качества",
+        "плохому качеству",
+        "плохим качеством",
+        "плохом качестве"
+      ],
+      "ms": [
+        "kualiti buruk"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4081",
+      "sourceTitle": "плохое качество",
+      "sourceTranslation": "kualiti buruk"
+    },
+    "examples": [
+      {
+        "ru": "Плохое качество изображения затрудняет чтение.",
+        "ms": "Kualiti buruk pada imej menyukarkan pembacaan.",
+        "ruExpression": "плохое качество",
+        "msExpression": "kualiti buruk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы получили жалобу на скан плохого качества.",
+        "ms": "Kami menerima aduan tentang imbasan dengan kualiti buruk.",
+        "ruExpression": "плохого качества",
+        "msExpression": "kualiti buruk",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0681",
+    "ru": "качество обслуживания",
+    "ms": "kualiti perkhidmatan",
+    "forms": {
+      "ru": [
+        "качество обслуживания",
+        "качества обслуживания",
+        "качеству обслуживания",
+        "качеством обслуживания",
+        "качестве обслуживания"
+      ],
+      "ms": [
+        "kualiti perkhidmatan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5278",
+      "sourceTitle": "качество обслуживания",
+      "sourceTranslation": "kualiti perkhidmatan"
+    },
+    "examples": [
+      {
+        "ru": "Качество обслуживания оценивают по отзывам клиентов.",
+        "ms": "Kualiti perkhidmatan dinilai berdasarkan maklum balas pelanggan.",
+        "ruExpression": "качество обслуживания",
+        "msExpression": "kualiti perkhidmatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В анкете есть вопрос о качестве обслуживания.",
+        "ms": "Borang soal selidik mengandungi soalan tentang kualiti perkhidmatan.",
+        "ruExpression": "качестве обслуживания",
+        "msExpression": "kualiti perkhidmatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0682",
+    "ru": "качество изображения",
+    "ms": "kualiti imej",
+    "forms": {
+      "ru": [
+        "качество изображения",
+        "качества изображения",
+        "качеству изображения",
+        "качеством изображения",
+        "качестве изображения"
+      ],
+      "ms": [
+        "kualiti imej"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5987",
+      "sourceTitle": "качество изображения",
+      "sourceTranslation": "kualiti imej"
+    },
+    "examples": [
+      {
+        "ru": "Качество изображения зависит от освещения.",
+        "ms": "Kualiti imej bergantung pada pencahayaan.",
+        "ruExpression": "качество изображения",
+        "msExpression": "kualiti imej",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Увеличение размера файла не всегда улучшает качество изображения.",
+        "ms": "Pembesaran saiz fail tidak semestinya meningkatkan kualiti imej.",
+        "ruExpression": "качество изображения",
+        "msExpression": "kualiti imej",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0683",
+    "ru": "служба контроля качества",
+    "ms": "jabatan kawalan kualiti",
+    "forms": {
+      "ru": [
+        "служба контроля качества",
+        "службы контроля качества",
+        "службе контроля качества",
+        "службу контроля качества",
+        "службой контроля качества"
+      ],
+      "ms": [
+        "jabatan kawalan kualiti"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6787",
+      "sourceTitle": "служба контроля качества",
+      "sourceTranslation": "jabatan kawalan kualiti"
+    },
+    "examples": [
+      {
+        "ru": "Служба контроля качества проверяет образцы.",
+        "ms": "Jabatan kawalan kualiti memeriksa sampel.",
+        "ruExpression": "служба контроля качества",
+        "msExpression": "jabatan kawalan kualiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Передайте результаты проверки службе контроля качества.",
+        "ms": "Serahkan hasil pemeriksaan kepada jabatan kawalan kualiti.",
+        "ruExpression": "службе контроля качества",
+        "msExpression": "jabatan kawalan kualiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0684",
+    "ru": "некачественная услуга",
+    "ms": "perkhidmatan tidak berkualiti",
+    "forms": {
+      "ru": [
+        "некачественная услуга",
+        "некачественной услуги",
+        "некачественной услуге",
+        "некачественную услугу",
+        "некачественной услугой"
+      ],
+      "ms": [
+        "perkhidmatan tidak berkualiti"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6746",
+      "sourceTitle": "некачественная услуга",
+      "sourceTranslation": "perkhidmatan tidak berkualiti"
+    },
+    "examples": [
+      {
+        "ru": "Некачественная услуга стала причиной жалобы.",
+        "ms": "Perkhidmatan tidak berkualiti menjadi sebab aduan.",
+        "ruExpression": "некачественная услуга",
+        "msExpression": "perkhidmatan tidak berkualiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Клиент требует возврата денег за некачественную услугу.",
+        "ms": "Pelanggan menuntut bayaran balik bagi perkhidmatan tidak berkualiti.",
+        "ruExpression": "некачественную услугу",
+        "msExpression": "perkhidmatan tidak berkualiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0685",
+    "ru": "некачественный товар",
+    "ms": "barang tidak berkualiti",
+    "forms": {
+      "ru": [
+        "некачественный товар",
+        "некачественного товара",
+        "некачественному товару",
+        "некачественным товаром",
+        "некачественном товаре"
+      ],
+      "ms": [
+        "barang tidak berkualiti"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6747",
+      "sourceTitle": "некачественный товар",
+      "sourceTranslation": "barang tidak berkualiti"
+    },
+    "examples": [
+      {
+        "ru": "Некачественный товар вернули продавцу.",
+        "ms": "Barang tidak berkualiti dipulangkan kepada penjual.",
+        "ruExpression": "некачественный товар",
+        "msExpression": "barang tidak berkualiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К жалобе приложена фотография некачественного товара.",
+        "ms": "Gambar barang tidak berkualiti dilampirkan pada aduan.",
+        "ruExpression": "некачественного товара",
+        "msExpression": "barang tidak berkualiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0686",
+    "ru": "предложение о работе",
+    "ms": "tawaran kerja",
+    "forms": {
+      "ru": [
+        "предложение о работе",
+        "предложения о работе",
+        "предложению о работе",
+        "предложением о работе",
+        "предложении о работе"
+      ],
+      "ms": [
+        "tawaran kerja"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8354",
+      "sourceTitle": "предложение о работе",
+      "sourceTranslation": "tawaran kerja"
+    },
+    "examples": [
+      {
+        "ru": "Предложение о работе содержит дату начала работы.",
+        "ms": "Tawaran kerja mengandungi tarikh mula bekerja.",
+        "ruExpression": "предложение о работе",
+        "msExpression": "tawaran kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Условия предложения о работе нужно внимательно прочитать.",
+        "ms": "Syarat tawaran kerja perlu dibaca dengan teliti.",
+        "ruExpression": "предложения о работе",
+        "msExpression": "tawaran kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0687",
+    "ru": "требования к кандидату",
+    "ms": "syarat calon",
+    "forms": {
+      "ru": [
+        "требования к кандидату",
+        "требований к кандидату",
+        "требованиям к кандидату",
+        "требованиями к кандидату",
+        "требованиях к кандидату"
+      ],
+      "ms": [
+        "syarat calon"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8347",
+      "sourceTitle": "требования к кандидату",
+      "sourceTranslation": "syarat calon"
+    },
+    "examples": [
+      {
+        "ru": "Требования к кандидату указаны в объявлении.",
+        "ms": "Syarat calon dinyatakan dalam iklan.",
+        "ruExpression": "требования к кандидату",
+        "msExpression": "syarat calon",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В описании требований к кандидату есть пункт об опыте работы.",
+        "ms": "Penerangan syarat calon merangkumi pengalaman kerja.",
+        "ruExpression": "требований к кандидату",
+        "msExpression": "syarat calon",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0688",
+    "ru": "проверка рекомендаций",
+    "ms": "semakan rujukan",
+    "forms": {
+      "ru": [
+        "проверка рекомендаций",
+        "проверки рекомендаций",
+        "проверке рекомендаций",
+        "проверку рекомендаций",
+        "проверкой рекомендаций"
+      ],
+      "ms": [
+        "semakan rujukan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8351",
+      "sourceTitle": "проверка рекомендаций",
+      "sourceTranslation": "semakan rujukan"
+    },
+    "examples": [
+      {
+        "ru": "Проверка рекомендаций проводится после собеседования.",
+        "ms": "Semakan rujukan dijalankan selepas temu duga.",
+        "ruExpression": "проверка рекомендаций",
+        "msExpression": "semakan rujukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для проверки рекомендаций нужны контактные данные.",
+        "ms": "Maklumat hubungan diperlukan untuk semakan rujukan.",
+        "ruExpression": "проверки рекомендаций",
+        "msExpression": "semakan rujukan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0689",
+    "ru": "рабочий процесс",
+    "ms": "proses kerja",
+    "forms": {
+      "ru": [
+        "рабочий процесс",
+        "рабочего процесса",
+        "рабочему процессу",
+        "рабочим процессом",
+        "рабочем процессе"
+      ],
+      "ms": [
+        "proses kerja"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9831",
+      "sourceTitle": "рабочий процесс",
+      "sourceTranslation": "proses kerja"
+    },
+    "examples": [
+      {
+        "ru": "Рабочий процесс описан в инструкции.",
+        "ms": "Proses kerja diterangkan dalam panduan.",
+        "ruExpression": "рабочий процесс",
+        "msExpression": "proses kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Изменение рабочего процесса сократило время проверки.",
+        "ms": "Perubahan proses kerja memendekkan masa semakan.",
+        "ruExpression": "рабочего процесса",
+        "msExpression": "proses kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0690",
+    "ru": "проверка качества",
+    "ms": "pemeriksaan kualiti",
+    "forms": {
+      "ru": [
+        "проверка качества",
+        "проверки качества",
+        "проверке качества",
+        "проверку качества",
+        "проверкой качества"
+      ],
+      "ms": [
+        "pemeriksaan kualiti"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9837",
+      "sourceTitle": "проверка качества",
+      "sourceTranslation": "pemeriksaan kualiti"
+    },
+    "examples": [
+      {
+        "ru": "Проверка качества проводится перед упаковкой.",
+        "ms": "Pemeriksaan kualiti dijalankan sebelum pembungkusan.",
+        "ruExpression": "проверка качества",
+        "msExpression": "pemeriksaan kualiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Результаты проверки качества внесены в отчёт.",
+        "ms": "Hasil pemeriksaan kualiti dimasukkan dalam laporan.",
+        "ruExpression": "проверки качества",
+        "msExpression": "pemeriksaan kualiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0691",
+    "ru": "запрос предложения",
+    "ms": "permintaan cadangan",
+    "forms": {
+      "ru": [
+        "запрос предложения",
+        "запроса предложения",
+        "запросу предложения",
+        "запросом предложения",
+        "запросе предложения"
+      ],
+      "ms": [
+        "permintaan cadangan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9843",
+      "sourceTitle": "запрос предложения",
+      "sourceTranslation": "permintaan cadangan"
+    },
+    "examples": [
+      {
+        "ru": "Запрос предложения отправлен трём поставщикам.",
+        "ms": "Permintaan cadangan dihantar kepada tiga pembekal.",
+        "ruExpression": "запрос предложения",
+        "msExpression": "permintaan cadangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К запросу предложения приложены требования проекта.",
+        "ms": "Keperluan projek dilampirkan pada permintaan cadangan.",
+        "ruExpression": "запросу предложения",
+        "msExpression": "permintaan cadangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0692",
+    "ru": "улучшить процесс",
+    "ms": "menambah baik proses",
+    "forms": {
+      "ru": [
+        "улучшить процесс",
+        "улучшил процесс",
+        "улучшила процесс",
+        "улучшили процесс",
+        "улучшим процесс",
+        "улучшите процесс"
+      ],
+      "ms": [
+        "menambah baik proses"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9832",
+      "sourceTitle": "улучшить процесс",
+      "sourceTranslation": "menambah baik proses"
+    },
+    "examples": [
+      {
+        "ru": "Новый инструмент поможет улучшить процесс проверки.",
+        "ms": "Alat baharu akan membantu menambah baik proses semakan.",
+        "ruExpression": "улучшить процесс",
+        "msExpression": "menambah baik proses",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Отдел улучшил процесс обработки заявлений.",
+        "ms": "Jabatan itu telah menambah baik proses pemprosesan permohonan.",
+        "ruExpression": "улучшил процесс",
+        "msExpression": "menambah baik proses",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0693",
+    "ru": "автоматизировать процесс",
+    "ms": "mengautomasikan proses",
+    "forms": {
+      "ru": [
+        "автоматизировать процесс",
+        "автоматизировал процесс",
+        "автоматизировала процесс",
+        "автоматизировали процесс",
+        "автоматизируем процесс",
+        "автоматизируйте процесс"
+      ],
+      "ms": [
+        "mengautomasikan proses"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9833",
+      "sourceTitle": "автоматизировать процесс",
+      "sourceTranslation": "mengautomasikan proses"
+    },
+    "examples": [
+      {
+        "ru": "Компания планирует автоматизировать процесс подготовки отчётов.",
+        "ms": "Syarikat merancang untuk mengautomasikan proses penyediaan laporan.",
+        "ruExpression": "автоматизировать процесс",
+        "msExpression": "mengautomasikan proses",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы автоматизировали процесс проверки данных.",
+        "ms": "Kami telah mengautomasikan proses semakan data.",
+        "ruExpression": "автоматизировали процесс",
+        "msExpression": "mengautomasikan proses",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0694",
+    "ru": "соответствует требованиям",
+    "ms": "memenuhi keperluan",
+    "forms": {
+      "ru": [
+        "соответствует требованиям",
+        "соответствуют требованиям",
+        "соответствовал требованиям",
+        "соответствовала требованиям",
+        "соответствовали требованиям",
+        "соответствовать требованиям"
+      ],
+      "ms": [
+        "memenuhi keperluan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9838",
+      "sourceTitle": "соответствует требованиям",
+      "sourceTranslation": "memenuhi keperluan"
+    },
+    "examples": [
+      {
+        "ru": "Новая версия соответствует требованиям заказчика.",
+        "ms": "Versi baharu memenuhi keperluan pelanggan.",
+        "ruExpression": "соответствует требованиям",
+        "msExpression": "memenuhi keperluan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Предыдущая версия соответствовала требованиям проекта.",
+        "ms": "Versi sebelumnya memenuhi keperluan projek.",
+        "ruExpression": "соответствовала требованиям",
+        "msExpression": "memenuhi keperluan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0695",
+    "ru": "не соответствует требованиям",
+    "ms": "tidak memenuhi keperluan",
+    "forms": {
+      "ru": [
+        "не соответствует требованиям",
+        "не соответствуют требованиям",
+        "не соответствовал требованиям",
+        "не соответствовала требованиям",
+        "не соответствовали требованиям",
+        "не соответствовать требованиям"
+      ],
+      "ms": [
+        "tidak memenuhi keperluan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9839",
+      "sourceTitle": "не соответствует требованиям",
+      "sourceTranslation": "tidak memenuhi keperluan"
+    },
+    "examples": [
+      {
+        "ru": "Этот образец не соответствует требованиям качества.",
+        "ms": "Sampel ini tidak memenuhi keperluan kualiti.",
+        "ruExpression": "не соответствует требованиям",
+        "msExpression": "tidak memenuhi keperluan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Предыдущая версия не соответствовала требованиям заказчика.",
+        "ms": "Versi sebelumnya tidak memenuhi keperluan pelanggan.",
+        "ruExpression": "не соответствовала требованиям",
+        "msExpression": "tidak memenuhi keperluan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0696",
+    "ru": "изменить требования",
+    "ms": "mengubah keperluan",
+    "forms": {
+      "ru": [
+        "изменить требования",
+        "изменил требования",
+        "изменила требования",
+        "изменили требования",
+        "изменим требования",
+        "измените требования"
+      ],
+      "ms": [
+        "mengubah keperluan"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9842",
+      "sourceTitle": "изменить требования",
+      "sourceTranslation": "mengubah keperluan"
+    },
+    "examples": [
+      {
+        "ru": "Заказчик попросил изменить требования к системе.",
+        "ms": "Pelanggan meminta kami mengubah keperluan sistem.",
+        "ruExpression": "изменить требования",
+        "msExpression": "mengubah keperluan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Компания изменила требования к упаковке.",
+        "ms": "Syarikat telah mengubah keperluan pembungkusan.",
+        "ruExpression": "изменила требования",
+        "msExpression": "mengubah keperluan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0697",
+    "ru": "начать сотрудничество",
+    "ms": "memulakan kerjasama",
+    "forms": {
+      "ru": [
+        "начать сотрудничество",
+        "начал сотрудничество",
+        "начала сотрудничество",
+        "начали сотрудничество",
+        "начнём сотрудничество",
+        "начните сотрудничество"
+      ],
+      "ms": [
+        "memulakan kerjasama"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9846",
+      "sourceTitle": "начать сотрудничество",
+      "sourceTranslation": "memulakan kerjasama"
+    },
+    "examples": [
+      {
+        "ru": "Компания планирует начать сотрудничество с новым поставщиком.",
+        "ms": "Syarikat merancang untuk memulakan kerjasama dengan pembekal baharu.",
+        "ruExpression": "начать сотрудничество",
+        "msExpression": "memulakan kerjasama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы начали сотрудничество в прошлом году.",
+        "ms": "Kami telah memulakan kerjasama pada tahun lalu.",
+        "ruExpression": "начали сотрудничество",
+        "msExpression": "memulakan kerjasama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0698",
+    "ru": "прекратить сотрудничество",
+    "ms": "menamatkan kerjasama",
+    "forms": {
+      "ru": [
+        "прекратить сотрудничество",
+        "прекратил сотрудничество",
+        "прекратила сотрудничество",
+        "прекратили сотрудничество",
+        "прекратим сотрудничество",
+        "прекратите сотрудничество"
+      ],
+      "ms": [
+        "menamatkan kerjasama"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9847",
+      "sourceTitle": "прекратить сотрудничество",
+      "sourceTranslation": "menamatkan kerjasama"
+    },
+    "examples": [
+      {
+        "ru": "Компания решила прекратить сотрудничество с поставщиком.",
+        "ms": "Syarikat memutuskan untuk menamatkan kerjasama dengan pembekal.",
+        "ruExpression": "прекратить сотрудничество",
+        "msExpression": "menamatkan kerjasama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы прекратили сотрудничество после завершения проекта.",
+        "ms": "Kami telah menamatkan kerjasama selepas projek selesai.",
+        "ruExpression": "прекратили сотрудничество",
+        "msExpression": "menamatkan kerjasama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0699",
+    "ru": "принять предложение о работе",
+    "ms": "menerima tawaran kerja",
+    "forms": {
+      "ru": [
+        "принять предложение о работе",
+        "принял предложение о работе",
+        "приняла предложение о работе",
+        "приняли предложение о работе",
+        "примем предложение о работе",
+        "примите предложение о работе"
+      ],
+      "ms": [
+        "menerima tawaran kerja"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8355",
+      "sourceTitle": "принять предложение о работе",
+      "sourceTranslation": "menerima tawaran kerja"
+    },
+    "examples": [
+      {
+        "ru": "Кандидат решил принять предложение о работе.",
+        "ms": "Calon itu memutuskan untuk menerima tawaran kerja.",
+        "ruExpression": "принять предложение о работе",
+        "msExpression": "menerima tawaran kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она приняла предложение о работе после собеседования.",
+        "ms": "Dia telah menerima tawaran kerja selepas temu duga.",
+        "ruExpression": "приняла предложение о работе",
+        "msExpression": "menerima tawaran kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0700",
+    "ru": "отклонить предложение о работе",
+    "ms": "menolak tawaran kerja",
+    "forms": {
+      "ru": [
+        "отклонить предложение о работе",
+        "отклонил предложение о работе",
+        "отклонила предложение о работе",
+        "отклонили предложение о работе",
+        "отклоним предложение о работе",
+        "отклоните предложение о работе"
+      ],
+      "ms": [
+        "menolak tawaran kerja"
+      ]
+    },
+    "topic": "качество и сотрудничество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8356",
+      "sourceTitle": "отклонить предложение о работе",
+      "sourceTranslation": "menolak tawaran kerja"
+    },
+    "examples": [
+      {
+        "ru": "Кандидат решил отклонить предложение о работе.",
+        "ms": "Calon itu memutuskan untuk menolak tawaran kerja.",
+        "ruExpression": "отклонить предложение о работе",
+        "msExpression": "menolak tawaran kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отклонила предложение о работе из-за графика.",
+        "ms": "Dia telah menolak tawaran kerja kerana jadual kerja.",
+        "ruExpression": "отклонила предложение о работе",
+        "msExpression": "menolak tawaran kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

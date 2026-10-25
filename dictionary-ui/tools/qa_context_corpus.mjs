@@ -46,10 +46,29 @@ for (const [query,title] of [
  ['следующими шагами','следующие шаги'], ['ответственным лицом','ответственное лицо'],
  ['данных отчёта','данные отчета'], ['ключевому показателю','ключевой показатель'],
  ['участнику проекта','участник проекта'], ['годовом отчёте','годовой отчет'],
+ ['улучшили процесс','улучшить процесс'], ['автоматизировали процесс','автоматизировать процесс'],
+ ['начнём сотрудничество','начать сотрудничество'], ['изменила требования','изменить требования'],
+ ['приняла предложение о работе','принять предложение о работе'],
+ ['отклонила предложение о работе','отклонить предложение о работе'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
  assert.equal(hit?._contextKind,1);
+}
+// Negation and nested verb/noun phrases must retain the longest meaningful match.
+for (const [query,direction,title] of [
+ ['соответствует требованиям','ru-ms','соответствует требованиям'],
+ ['не соответствует требованиям','ru-ms','не соответствует требованиям'],
+ ['Изделие соответствует требованиям безопасности.','ru-ms','соответствует требованиям'],
+ ['Изделие не соответствует требованиям безопасности.','ru-ms','не соответствует требованиям'],
+ ['memenuhi keperluan','ms-ru','memenuhi keperluan'],
+ ['tidak memenuhi keperluan','ms-ru','tidak memenuhi keperluan'],
+ ['Produk ini memenuhi keperluan keselamatan.','ms-ru','memenuhi keperluan'],
+ ['Produk ini tidak memenuhi keperluan keselamatan.','ms-ru','tidak memenuhi keperluan'],
+ ['Мы приняли предложение о работе вчера.','ru-ms','принять предложение о работе'],
+ ['Dia telah menolak tawaran kerja.','ms-ru','menolak tawaran kerja'],
+]) {
+ assert.equal(searchContextCorpus(contextCorpus,query,direction)[0]?.title,title,`Negation/nested phrase: ${query}`);
 }
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
@@ -57,7 +76,7 @@ for (const row of contextCorpus) {
   assert.ok(row.topic);
   assert.ok(row.ru.split(' ').length >= 2);
   assert.ok(row.forms.ru.length >= 3);
-  assert.deepEqual(row.forms.ms, [row.ms]); // Malay nominals are invariant in case.
+  assert.deepEqual(row.forms.ms, [row.ms]); // Preserve the supplied Malay citation phrase; tense is conveyed in context.
   const original = gold.find(g => g.id === row.verification.sourceEntryId);
   assert.ok(original?.verified);
   assert.equal(row.ru, original.title);
