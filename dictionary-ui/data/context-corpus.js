@@ -36073,5 +36073,1051 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0901",
+    "ru": "жалоба на услугу",
+    "ms": "aduan tentang perkhidmatan",
+    "forms": {
+      "ru": [
+        "жалоба на услугу",
+        "жалобы на услугу",
+        "жалобе на услугу",
+        "жалобу на услугу",
+        "жалобой на услугу"
+      ],
+      "ms": [
+        "aduan tentang perkhidmatan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6735",
+      "sourceTitle": "жалоба на услугу",
+      "sourceTranslation": "aduan tentang perkhidmatan"
+    },
+    "examples": [
+      {
+        "ru": "Жалоба на услугу передана руководителю.",
+        "ms": "Aduan tentang perkhidmatan diserahkan kepada pengurus.",
+        "ruExpression": "жалоба на услугу",
+        "msExpression": "aduan tentang perkhidmatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В жалобе на услугу указана дата обращения.",
+        "ms": "Tarikh aduan dinyatakan dalam aduan tentang perkhidmatan.",
+        "ruExpression": "жалобе на услугу",
+        "msExpression": "aduan tentang perkhidmatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0902",
+    "ru": "жалоба на товар",
+    "ms": "aduan tentang barang",
+    "forms": {
+      "ru": [
+        "жалоба на товар",
+        "жалобы на товар",
+        "жалобе на товар",
+        "жалобу на товар",
+        "жалобой на товар"
+      ],
+      "ms": [
+        "aduan tentang barang"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6736",
+      "sourceTitle": "жалоба на товар",
+      "sourceTranslation": "aduan tentang barang"
+    },
+    "examples": [
+      {
+        "ru": "Жалоба на товар содержит описание повреждения.",
+        "ms": "Aduan tentang barang mengandungi penerangan kerosakan.",
+        "ruExpression": "жалоба на товар",
+        "msExpression": "aduan tentang barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К жалобе на товар приложена фотография.",
+        "ms": "Gambar dilampirkan pada aduan tentang barang.",
+        "ruExpression": "жалобе на товар",
+        "msExpression": "aduan tentang barang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0903",
+    "ru": "письменная претензия",
+    "ms": "tuntutan bertulis",
+    "forms": {
+      "ru": [
+        "письменная претензия",
+        "письменной претензии",
+        "письменную претензию",
+        "письменной претензией"
+      ],
+      "ms": [
+        "tuntutan bertulis"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6741",
+      "sourceTitle": "письменная претензия",
+      "sourceTranslation": "tuntutan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Письменная претензия отправлена продавцу.",
+        "ms": "Tuntutan bertulis dihantar kepada penjual.",
+        "ruExpression": "письменная претензия",
+        "msExpression": "tuntutan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия письменной претензии сохранена в папке.",
+        "ms": "Salinan tuntutan bertulis disimpan dalam folder.",
+        "ruExpression": "письменной претензии",
+        "msExpression": "tuntutan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0904",
+    "ru": "официальная претензия",
+    "ms": "tuntutan rasmi",
+    "forms": {
+      "ru": [
+        "официальная претензия",
+        "официальной претензии",
+        "официальную претензию",
+        "официальной претензией"
+      ],
+      "ms": [
+        "tuntutan rasmi"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6742",
+      "sourceTitle": "официальная претензия",
+      "sourceTranslation": "tuntutan rasmi"
+    },
+    "examples": [
+      {
+        "ru": "Официальная претензия зарегистрирована сегодня.",
+        "ms": "Tuntutan rasmi didaftarkan hari ini.",
+        "ruExpression": "официальная претензия",
+        "msExpression": "tuntutan rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В официальной претензии указан номер договора.",
+        "ms": "Nombor kontrak dinyatakan dalam tuntutan rasmi.",
+        "ruExpression": "официальной претензии",
+        "msExpression": "tuntutan rasmi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0905",
+    "ru": "ответ на претензию",
+    "ms": "jawapan kepada tuntutan",
+    "forms": {
+      "ru": [
+        "ответ на претензию",
+        "ответа на претензию",
+        "ответу на претензию",
+        "ответом на претензию",
+        "ответе на претензию"
+      ],
+      "ms": [
+        "jawapan kepada tuntutan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6743",
+      "sourceTitle": "ответ на претензию",
+      "sourceTranslation": "jawapan kepada tuntutan"
+    },
+    "examples": [
+      {
+        "ru": "Ответ на претензию отправлен по электронной почте.",
+        "ms": "Jawapan kepada tuntutan dihantar melalui e-mel.",
+        "ruExpression": "ответ на претензию",
+        "msExpression": "jawapan kepada tuntutan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В ответе на претензию предложен обмен товара.",
+        "ms": "Pertukaran barang dicadangkan dalam jawapan kepada tuntutan.",
+        "ruExpression": "ответе на претензию",
+        "msExpression": "jawapan kepada tuntutan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0906",
+    "ru": "частичная компенсация",
+    "ms": "pampasan separa",
+    "forms": {
+      "ru": [
+        "частичная компенсация",
+        "частичной компенсации",
+        "частичную компенсацию",
+        "частичной компенсацией"
+      ],
+      "ms": [
+        "pampasan separa"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6764",
+      "sourceTitle": "частичная компенсация",
+      "sourceTranslation": "pampasan separa"
+    },
+    "examples": [
+      {
+        "ru": "Частичная компенсация предложена покупателю.",
+        "ms": "Pampasan separa ditawarkan kepada pembeli.",
+        "ruExpression": "частичная компенсация",
+        "msExpression": "pampasan separa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сумма частичной компенсации указана в письме.",
+        "ms": "Amaun pampasan separa dinyatakan dalam surat.",
+        "ruExpression": "частичной компенсации",
+        "msExpression": "pampasan separa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0907",
+    "ru": "полная компенсация",
+    "ms": "pampasan penuh",
+    "forms": {
+      "ru": [
+        "полная компенсация",
+        "полной компенсации",
+        "полную компенсацию",
+        "полной компенсацией"
+      ],
+      "ms": [
+        "pampasan penuh"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6765",
+      "sourceTitle": "полная компенсация",
+      "sourceTranslation": "pampasan penuh"
+    },
+    "examples": [
+      {
+        "ru": "Полная компенсация согласована с клиентом.",
+        "ms": "Pampasan penuh dipersetujui bersama pelanggan.",
+        "ruExpression": "полная компенсация",
+        "msExpression": "pampasan penuh",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме есть информация о полной компенсации.",
+        "ms": "Surat itu mengandungi maklumat tentang pampasan penuh.",
+        "ruExpression": "полной компенсации",
+        "msExpression": "pampasan penuh",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0908",
+    "ru": "срок возврата денег",
+    "ms": "tempoh pemulangan wang",
+    "forms": {
+      "ru": [
+        "срок возврата денег",
+        "срока возврата денег",
+        "сроку возврата денег",
+        "сроком возврата денег",
+        "сроке возврата денег"
+      ],
+      "ms": [
+        "tempoh pemulangan wang"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6771",
+      "sourceTitle": "срок возврата денег",
+      "sourceTranslation": "tempoh pemulangan wang"
+    },
+    "examples": [
+      {
+        "ru": "Срок возврата денег указан в ответе поддержки.",
+        "ms": "Tempoh pemulangan wang dinyatakan dalam jawapan khidmat sokongan.",
+        "ruExpression": "срок возврата денег",
+        "msExpression": "tempoh pemulangan wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Клиент спросил об изменении срока возврата денег.",
+        "ms": "Pelanggan bertanya tentang perubahan tempoh pemulangan wang.",
+        "ruExpression": "срока возврата денег",
+        "msExpression": "tempoh pemulangan wang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0909",
+    "ru": "повторное обращение",
+    "ms": "aduan susulan",
+    "forms": {
+      "ru": [
+        "повторное обращение",
+        "повторного обращения",
+        "повторному обращению",
+        "повторным обращением",
+        "повторном обращении"
+      ],
+      "ms": [
+        "aduan susulan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6789",
+      "sourceTitle": "повторное обращение",
+      "sourceTranslation": "aduan susulan"
+    },
+    "examples": [
+      {
+        "ru": "Повторное обращение содержит номер первой жалобы.",
+        "ms": "Aduan susulan mengandungi nombor aduan pertama.",
+        "ruExpression": "повторное обращение",
+        "msExpression": "aduan susulan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К повторному обращению приложены новые фотографии.",
+        "ms": "Gambar baharu dilampirkan pada aduan susulan.",
+        "ruExpression": "повторному обращению",
+        "msExpression": "aduan susulan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0910",
+    "ru": "причина задержки",
+    "ms": "sebab kelewatan",
+    "forms": {
+      "ru": [
+        "причина задержки",
+        "причины задержки",
+        "причине задержки",
+        "причину задержки",
+        "причиной задержки"
+      ],
+      "ms": [
+        "sebab kelewatan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6794",
+      "sourceTitle": "причина задержки",
+      "sourceTranslation": "sebab kelewatan"
+    },
+    "examples": [
+      {
+        "ru": "Причина задержки объяснена в письме.",
+        "ms": "Sebab kelewatan dijelaskan dalam surat.",
+        "ruExpression": "причина задержки",
+        "msExpression": "sebab kelewatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Клиент попросил уточнить причину задержки.",
+        "ms": "Pelanggan meminta penjelasan lanjut tentang sebab kelewatan.",
+        "ruExpression": "причину задержки",
+        "msExpression": "sebab kelewatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0911",
+    "ru": "доказательство оплаты",
+    "ms": "bukti pembayaran",
+    "forms": {
+      "ru": [
+        "доказательство оплаты",
+        "доказательства оплаты",
+        "доказательству оплаты",
+        "доказательством оплаты",
+        "доказательстве оплаты"
+      ],
+      "ms": [
+        "bukti pembayaran"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6796",
+      "sourceTitle": "доказательство оплаты",
+      "sourceTranslation": "bukti pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Доказательство оплаты приложено к заявлению.",
+        "ms": "Bukti pembayaran dilampirkan pada permohonan.",
+        "ruExpression": "доказательство оплаты",
+        "msExpression": "bukti pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия доказательства оплаты сохранена в приложении.",
+        "ms": "Salinan bukti pembayaran disimpan dalam aplikasi.",
+        "ruExpression": "доказательства оплаты",
+        "msExpression": "bukti pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0912",
+    "ru": "доказательство доставки",
+    "ms": "bukti penghantaran",
+    "forms": {
+      "ru": [
+        "доказательство доставки",
+        "доказательства доставки",
+        "доказательству доставки",
+        "доказательством доставки",
+        "доказательстве доставки"
+      ],
+      "ms": [
+        "bukti penghantaran"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6797",
+      "sourceTitle": "доказательство доставки",
+      "sourceTranslation": "bukti penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Доказательство доставки содержит подпись получателя.",
+        "ms": "Bukti penghantaran mengandungi tandatangan penerima.",
+        "ruExpression": "доказательство доставки",
+        "msExpression": "bukti penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия доказательства доставки отправлена клиенту.",
+        "ms": "Salinan bukti penghantaran dihantar kepada pelanggan.",
+        "ruExpression": "доказательства доставки",
+        "msExpression": "bukti penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0913",
+    "ru": "доказательство покупки",
+    "ms": "bukti pembelian",
+    "forms": {
+      "ru": [
+        "доказательство покупки",
+        "доказательства покупки",
+        "доказательству покупки",
+        "доказательством покупки",
+        "доказательстве покупки"
+      ],
+      "ms": [
+        "bukti pembelian"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6798",
+      "sourceTitle": "доказательство покупки",
+      "sourceTranslation": "bukti pembelian"
+    },
+    "examples": [
+      {
+        "ru": "Доказательство покупки сохранено в личном кабинете.",
+        "ms": "Bukti pembelian disimpan dalam akaun peribadi.",
+        "ruExpression": "доказательство покупки",
+        "msExpression": "bukti pembelian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для проверки доказательства покупки нужен номер заказа.",
+        "ms": "Nombor pesanan diperlukan untuk menyemak bukti pembelian.",
+        "ruExpression": "доказательства покупки",
+        "msExpression": "bukti pembelian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0914",
+    "ru": "серийный номер",
+    "ms": "nombor siri",
+    "forms": {
+      "ru": [
+        "серийный номер",
+        "серийного номера",
+        "серийному номеру",
+        "серийным номером",
+        "серийном номере"
+      ],
+      "ms": [
+        "nombor siri"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6987",
+      "sourceTitle": "серийный номер",
+      "sourceTranslation": "nombor siri"
+    },
+    "examples": [
+      {
+        "ru": "Серийный номер указан на коробке.",
+        "ms": "Nombor siri dinyatakan pada kotak.",
+        "ruExpression": "серийный номер",
+        "msExpression": "nombor siri",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В серийном номере обнаружена опечатка.",
+        "ms": "Kesilapan taip dikesan dalam nombor siri.",
+        "ruExpression": "серийном номере",
+        "msExpression": "nombor siri",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0915",
+    "ru": "проверить серийный номер",
+    "ms": "menyemak nombor siri",
+    "forms": {
+      "ru": [
+        "проверить серийный номер",
+        "проверил серийный номер",
+        "проверила серийный номер",
+        "проверили серийный номер",
+        "проверим серийный номер",
+        "проверьте серийный номер"
+      ],
+      "ms": [
+        "menyemak nombor siri"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6988",
+      "sourceTitle": "проверить серийный номер",
+      "sourceTranslation": "menyemak nombor siri"
+    },
+    "examples": [
+      {
+        "ru": "Сотрудник попросил проверить серийный номер.",
+        "ms": "Kakitangan meminta kami menyemak nombor siri.",
+        "ruExpression": "проверить серийный номер",
+        "msExpression": "menyemak nombor siri",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она проверила серийный номер перед отправкой.",
+        "ms": "Dia telah menyemak nombor siri sebelum penghantaran.",
+        "ruExpression": "проверила серийный номер",
+        "msExpression": "menyemak nombor siri",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0916",
+    "ru": "описание товара",
+    "ms": "penerangan barang",
+    "forms": {
+      "ru": [
+        "описание товара",
+        "описания товара",
+        "описанию товара",
+        "описанием товара",
+        "описании товара"
+      ],
+      "ms": [
+        "penerangan barang"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6991",
+      "sourceTitle": "описание товара",
+      "sourceTranslation": "penerangan barang"
+    },
+    "examples": [
+      {
+        "ru": "Описание товара содержит размеры и материал.",
+        "ms": "Penerangan barang mengandungi ukuran dan bahan.",
+        "ruExpression": "описание товара",
+        "msExpression": "penerangan barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В описании товара указана другая модель.",
+        "ms": "Model yang berbeza dinyatakan dalam penerangan barang.",
+        "ruExpression": "описании товара",
+        "msExpression": "penerangan barang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0917",
+    "ru": "отзыв о товаре",
+    "ms": "ulasan barang",
+    "forms": {
+      "ru": [
+        "отзыв о товаре",
+        "отзыва о товаре",
+        "отзыву о товаре",
+        "отзывом о товаре",
+        "отзыве о товаре"
+      ],
+      "ms": [
+        "ulasan barang"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6993",
+      "sourceTitle": "отзыв о товаре",
+      "sourceTranslation": "ulasan barang"
+    },
+    "examples": [
+      {
+        "ru": "Отзыв о товаре опубликован после проверки.",
+        "ms": "Ulasan barang diterbitkan selepas semakan.",
+        "ruExpression": "отзыв о товаре",
+        "msExpression": "ulasan barang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В отзыве о товаре есть фотография упаковки.",
+        "ms": "Ulasan barang mengandungi gambar bungkusan.",
+        "ruExpression": "отзыве о товаре",
+        "msExpression": "ulasan barang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0918",
+    "ru": "плохой отзыв",
+    "ms": "ulasan buruk",
+    "forms": {
+      "ru": [
+        "плохой отзыв",
+        "плохого отзыва",
+        "плохому отзыву",
+        "плохим отзывом",
+        "плохом отзыве"
+      ],
+      "ms": [
+        "ulasan buruk"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6994",
+      "sourceTitle": "плохой отзыв",
+      "sourceTranslation": "ulasan buruk"
+    },
+    "examples": [
+      {
+        "ru": "Плохой отзыв касается качества обслуживания.",
+        "ms": "Ulasan buruk berkaitan dengan kualiti perkhidmatan.",
+        "ruExpression": "плохой отзыв",
+        "msExpression": "ulasan buruk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Продавец ответил на замечания в плохом отзыве.",
+        "ms": "Penjual menjawab komen dalam ulasan buruk.",
+        "ruExpression": "плохом отзыве",
+        "msExpression": "ulasan buruk",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0919",
+    "ru": "хороший отзыв",
+    "ms": "ulasan baik",
+    "forms": {
+      "ru": [
+        "хороший отзыв",
+        "хорошего отзыва",
+        "хорошему отзыву",
+        "хорошим отзывом",
+        "хорошем отзыве"
+      ],
+      "ms": [
+        "ulasan baik"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6995",
+      "sourceTitle": "хороший отзыв",
+      "sourceTranslation": "ulasan baik"
+    },
+    "examples": [
+      {
+        "ru": "Хороший отзыв содержит подробное описание товара.",
+        "ms": "Ulasan baik mengandungi penerangan barang yang terperinci.",
+        "ruExpression": "хороший отзыв",
+        "msExpression": "ulasan baik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В хорошем отзыве покупатель отметил быструю доставку.",
+        "ms": "Pembeli menyebut penghantaran pantas dalam ulasan baik.",
+        "ruExpression": "хорошем отзыве",
+        "msExpression": "ulasan baik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0920",
+    "ru": "бесплатный возврат",
+    "ms": "pemulangan percuma",
+    "forms": {
+      "ru": [
+        "бесплатный возврат",
+        "бесплатного возврата",
+        "бесплатному возврату",
+        "бесплатным возвратом",
+        "бесплатном возврате"
+      ],
+      "ms": [
+        "pemulangan percuma"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6999",
+      "sourceTitle": "бесплатный возврат",
+      "sourceTranslation": "pemulangan percuma"
+    },
+    "examples": [
+      {
+        "ru": "Бесплатный возврат указан в условиях заказа.",
+        "ms": "Pemulangan percuma dinyatakan dalam syarat pesanan.",
+        "ruExpression": "бесплатный возврат",
+        "msExpression": "pemulangan percuma",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Условия бесплатного возврата опубликованы на сайте.",
+        "ms": "Syarat pemulangan percuma diterbitkan di laman web.",
+        "ruExpression": "бесплатного возврата",
+        "msExpression": "pemulangan percuma",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0921",
+    "ru": "платный возврат",
+    "ms": "pemulangan berbayar",
+    "forms": {
+      "ru": [
+        "платный возврат",
+        "платного возврата",
+        "платному возврату",
+        "платным возвратом",
+        "платном возврате"
+      ],
+      "ms": [
+        "pemulangan berbayar"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7000",
+      "sourceTitle": "платный возврат",
+      "sourceTranslation": "pemulangan berbayar"
+    },
+    "examples": [
+      {
+        "ru": "Платный возврат указан в предложении продавца.",
+        "ms": "Pemulangan berbayar dinyatakan dalam tawaran penjual.",
+        "ruExpression": "платный возврат",
+        "msExpression": "pemulangan berbayar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стоимость платного возврата показана в приложении.",
+        "ms": "Kos pemulangan berbayar dipaparkan dalam aplikasi.",
+        "ruExpression": "платного возврата",
+        "msExpression": "pemulangan berbayar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0922",
+    "ru": "оформить возврат",
+    "ms": "membuat pemulangan",
+    "forms": {
+      "ru": [
+        "оформить возврат",
+        "оформил возврат",
+        "оформила возврат",
+        "оформили возврат",
+        "оформим возврат",
+        "оформите возврат"
+      ],
+      "ms": [
+        "membuat pemulangan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7001",
+      "sourceTitle": "оформить возврат",
+      "sourceTranslation": "membuat pemulangan"
+    },
+    "examples": [
+      {
+        "ru": "Покупатель решил оформить возврат через приложение.",
+        "ms": "Pembeli memutuskan untuk membuat pemulangan melalui aplikasi.",
+        "ruExpression": "оформить возврат",
+        "msExpression": "membuat pemulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оформила возврат после разговора с продавцом.",
+        "ms": "Dia telah membuat pemulangan selepas bercakap dengan penjual.",
+        "ruExpression": "оформила возврат",
+        "msExpression": "membuat pemulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0923",
+    "ru": "гарантия продавца",
+    "ms": "jaminan penjual",
+    "forms": {
+      "ru": [
+        "гарантия продавца",
+        "гарантии продавца",
+        "гарантию продавца",
+        "гарантией продавца"
+      ],
+      "ms": [
+        "jaminan penjual"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7008",
+      "sourceTitle": "гарантия продавца",
+      "sourceTranslation": "jaminan penjual"
+    },
+    "examples": [
+      {
+        "ru": "Гарантия продавца описана в документах к товару.",
+        "ms": "Jaminan penjual diterangkan dalam dokumen barang.",
+        "ruExpression": "гарантия продавца",
+        "msExpression": "jaminan penjual",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Условия гарантии продавца приложены к заказу.",
+        "ms": "Syarat jaminan penjual dilampirkan pada pesanan.",
+        "ruExpression": "гарантии продавца",
+        "msExpression": "jaminan penjual",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0924",
+    "ru": "срок хранения заказа",
+    "ms": "tempoh penyimpanan pesanan",
+    "forms": {
+      "ru": [
+        "срок хранения заказа",
+        "срока хранения заказа",
+        "сроку хранения заказа",
+        "сроком хранения заказа",
+        "сроке хранения заказа"
+      ],
+      "ms": [
+        "tempoh penyimpanan pesanan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7013",
+      "sourceTitle": "срок хранения заказа",
+      "sourceTranslation": "tempoh penyimpanan pesanan"
+    },
+    "examples": [
+      {
+        "ru": "Срок хранения заказа указан в уведомлении.",
+        "ms": "Tempoh penyimpanan pesanan dinyatakan dalam notis.",
+        "ruExpression": "срок хранения заказа",
+        "msExpression": "tempoh penyimpanan pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщение об изменении срока хранения заказа пришло утром.",
+        "ms": "Mesej tentang perubahan tempoh penyimpanan pesanan diterima pada waktu pagi.",
+        "ruExpression": "срока хранения заказа",
+        "msExpression": "tempoh penyimpanan pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0925",
+    "ru": "история заказов",
+    "ms": "sejarah pesanan",
+    "forms": {
+      "ru": [
+        "история заказов",
+        "истории заказов",
+        "историю заказов",
+        "историей заказов"
+      ],
+      "ms": [
+        "sejarah pesanan"
+      ]
+    },
+    "topic": "обращения и возвраты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9029",
+      "sourceTitle": "история заказов",
+      "sourceTranslation": "sejarah pesanan"
+    },
+    "examples": [
+      {
+        "ru": "История заказов доступна в личном кабинете.",
+        "ms": "Sejarah pesanan tersedia dalam akaun peribadi.",
+        "ruExpression": "история заказов",
+        "msExpression": "sejarah pesanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер покупки можно найти в истории заказов.",
+        "ms": "Nombor pembelian boleh dicari dalam sejarah pesanan.",
+        "ruExpression": "истории заказов",
+        "msExpression": "sejarah pesanan",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

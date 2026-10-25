@@ -79,6 +79,9 @@ for (const [query,title] of [
  ['уменьшила размер файла','уменьшить размер файла'], ['увеличил размер файла','увеличить размер файла'],
  ['сжала файл','сжать файл'], ['восстановили из резервной копии','восстановить из резервной копии'],
  ['резервной копии файла','резервная копия файла'], ['удалила аккаунт','удалить аккаунт'],
+ ['письменной претензии','письменная претензия'], ['ответе на претензию','ответ на претензию'],
+ ['частичной компенсации','частичная компенсация'], ['бесплатного возврата','бесплатный возврат'],
+ ['оформила возврат','оформить возврат'], ['проверила серийный номер','проверить серийный номер'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -198,6 +201,20 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Digital distinction/form: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['частичная компенсация','ru-ms','частичная компенсация','pampasan separa'],
+ ['полная компенсация','ru-ms','полная компенсация','pampasan penuh'],
+ ['pampasan separa','ms-ru','pampasan separa','частичная компенсация'],
+ ['pampasan penuh','ms-ru','pampasan penuh','полная компенсация'],
+ ['бесплатный возврат','ru-ms','бесплатный возврат','pemulangan percuma'],
+ ['платный возврат','ru-ms','платный возврат','pemulangan berbayar'],
+ ['pemulangan percuma','ms-ru','pemulangan percuma','бесплатный возврат'],
+ ['pemulangan berbayar','ms-ru','pemulangan berbayar','платный возврат'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Customer distinction: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
