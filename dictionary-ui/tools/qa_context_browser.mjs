@@ -1,6 +1,7 @@
 const { chromium } = await import(process.env.CONTEXT_PLAYWRIGHT_MODULE || 'playwright');
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+const expected = JSON.parse(fs.readFileSync(new URL('./context-corpus-manifest.json',import.meta.url),'utf8'));
 const browser = await chromium.launch({headless:true, ...(process.env.CONTEXT_CHROMIUM_PATH ? {executablePath:process.env.CONTEXT_CHROMIUM_PATH} : {})});
 const outputDir = process.env.CONTEXT_QA_OUTPUT || '/tmp/context-browser-qa';
 fs.mkdirSync(outputDir,{recursive:true});
@@ -30,6 +31,23 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
   } else assert.ok((await page.locator('#answerDetails').textContent()).includes('storan awan'));
   results.push({viewport,query,passed:true});
  }
+ for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda']]) {
+  await page.locator('#searchInput').fill(newQuery);
+  await page.locator('#searchButton').click();
+  await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,newTitle);
+  assert.equal(await page.locator('#answerDetails mark').count(),4);
+  results.push({viewport,scenario:'new-corpus-expression-'+newTitle,passed:true});
+ }
+ await page.locator('#searchInput').fill('');
+ await page.locator('#searchButton').click();
+ await page.locator('#contextTopic').selectOption('язык и перевод');
+ assert.equal(await page.locator('#resultCount').textContent(),'22');
+ assert.ok((await page.locator('#resultList .result-type').allTextContents()).every(text=>text.includes('язык и перевод')));
+ await page.locator('.context-filters').scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Language topic overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-new-topic.png`,fullPage:false});
+ await page.locator('#resetContextFilters').click();
+ results.push({viewport,scenario:'new-language-topic',passed:true});
  await page.locator('#searchInput').fill('вода');
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');
@@ -118,7 +136,7 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.locator('#searchInput').fill('');
  await page.locator('#searchButton').click();
  await page.locator('#contextMode').selectOption('context');
- assert.equal(await page.locator('#resultCount').textContent(),'500');
+ assert.equal(await page.locator('#resultCount').textContent(),String(expected.expressions));
  assert.equal(await page.locator('#resultList > li').count(),24);
  const initialIds=await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId));
  await page.locator('#resultList > li').first().locator('details summary').click();
@@ -128,19 +146,19 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  assert.equal(await page.locator('#resultList > li').count(),48);
  assert.ok(await page.locator('#resultList > li').first().locator('details').evaluate(element=>element.open));
  assert.deepEqual((await page.locator('#resultList > li').evaluateAll(items=>items.map(item=>item.dataset.resultId))).slice(0,24),initialIds);
- for(let batch=0;batch<19;batch++) await page.locator('#showMoreResults').click();
- assert.equal(await page.locator('#resultList > li').count(),500);
+ for(let batch=2;batch<Math.ceil(expected.expressions/24);batch++) await page.locator('#showMoreResults').click();
+ assert.equal(await page.locator('#resultList > li').count(),expected.expressions);
  assert.equal(await page.locator('#showMoreResults').isVisible(),false);
- assert.equal(await page.locator('#shownResultCount').textContent(),'Показано 500 из 500');
- results.push({viewport,scenario:'catalogue-all-500-and-pagination',passed:true});
+ assert.equal(await page.locator('#shownResultCount').textContent(),`Показано ${expected.expressions} из ${expected.expressions}`);
+ results.push({viewport,scenario:'full-catalogue-and-pagination',passed:true});
  await page.locator('#contextTopic').selectOption('еда');
  assert.ok(Number(await page.locator('#resultCount').textContent())>0);
- assert.ok(Number(await page.locator('#resultCount').textContent())<500);
+ assert.ok(Number(await page.locator('#resultCount').textContent())<expected.expressions);
  assert.ok((await page.locator('#resultList .result-type').allTextContents()).every(text=>text.includes('еда')));
  await page.locator('#contextTopic').selectOption('');
  await page.locator('#directionSwitch button[data-direction="ru-ms"]').click();
  await page.waitForFunction(()=>document.querySelector('#directionSwitch .active').dataset.direction==='ru-ms');
- assert.equal(await page.locator('#resultCount').textContent(),'500');
+ assert.equal(await page.locator('#resultCount').textContent(),String(expected.expressions));
  assert.match(await page.locator('#resultList .result-headword').first().textContent(),/[а-я]/i);
  results.push({viewport,scenario:'catalogue-topic-and-direction',passed:true});
  const savedId=await page.locator('#resultList > li').first().getAttribute('data-result-id');
@@ -293,7 +311,7 @@ for(const profile of ['','-Lite']) {
  assert.ok((await page.locator('#resultList .parallel-context mark').allTextContents()).includes('застрял'));
  await page.locator('#searchInput').fill('');
  await page.locator('#searchButton').click();
- assert.equal(await page.locator('#resultCount').textContent(),'500');
+ assert.equal(await page.locator('#resultCount').textContent(),String(expected.expressions));
  assert.equal(await page.locator('#resultList > li').count(),24);
  await page.locator('.context-save').first().click();
  await page.locator('#contextMode').selectOption('saved');
@@ -314,6 +332,11 @@ for(const profile of ['','-Lite']) {
  await page.locator('#applyContextImport').click();
  assert.equal(await page.locator('#resultCount').textContent(),'1');
  assert.equal(await page.locator('#resultList > li').first().getAttribute('data-result-id'),offlineSavedId);
+ await page.locator('#resetContextFilters').click();
+ await page.locator('#searchInput').fill('tandatangan digital');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='tandatangan digital');
+ assert.equal(await page.locator('#answerDetails mark').count(),4);
  results.push({offline:profile||'Full',passed:true});
  await page.close();
 }

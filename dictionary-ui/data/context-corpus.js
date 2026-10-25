@@ -8578,8 +8578,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается подтверждение оплаты.",
-        "ms": "Artikel itu menyebut pengesahan bayaran.",
+        "ru": "Подтверждение оплаты отправлено по электронной почте.",
+        "ms": "Pengesahan bayaran dihantar melalui e-mel.",
+        "ruExpression": "подтверждение оплаты",
+        "msExpression": "pengesahan bayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните подтверждение оплаты.",
+        "ms": "Simpan pengesahan bayaran.",
         "ruExpression": "подтверждение оплаты",
         "msExpression": "pengesahan bayaran",
         "origin": "original_teaching_example"
@@ -8614,9 +8621,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о платёжном поручении.",
-        "ms": "Kami bercakap tentang arahan pembayaran.",
-        "ruExpression": "платёжном поручении",
+        "ru": "Платежное поручение подписано руководителем.",
+        "ms": "Arahan pembayaran ditandatangani oleh ketua.",
+        "ruExpression": "платежное поручение",
+        "msExpression": "arahan pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Бухгалтер проверил платежное поручение.",
+        "ms": "Akauntan menyemak arahan pembayaran.",
+        "ruExpression": "платежное поручение",
         "msExpression": "arahan pembayaran",
         "origin": "original_teaching_example"
       }
@@ -8649,9 +8663,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем процентную ставку.",
-        "ms": "Kami membincangkan kadar faedah.",
-        "ruExpression": "процентную ставку",
+        "ru": "Процентная ставка указана в договоре.",
+        "ms": "Kadar faedah dinyatakan dalam kontrak.",
+        "ruExpression": "процентная ставка",
+        "msExpression": "kadar faedah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник объяснил, как меняется процентная ставка.",
+        "ms": "Petugas menerangkan cara kadar faedah berubah.",
+        "ruExpression": "процентная ставка",
         "msExpression": "kadar faedah",
         "origin": "original_teaching_example"
       }
@@ -8683,9 +8704,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это комиссия банка.",
-        "ms": "Ini caj bank.",
+        "ru": "Комиссия банка отображается на экране.",
+        "ms": "Caj bank dipaparkan pada skrin.",
         "ruExpression": "комиссия банка",
+        "msExpression": "caj bank",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я уточнил размер комиссии банка.",
+        "ms": "Saya bertanya tentang jumlah caj bank.",
+        "ruExpression": "комиссии банка",
         "msExpression": "caj bank",
         "origin": "original_teaching_example"
       }
@@ -8718,8 +8746,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается банковский перевод.",
-        "ms": "Artikel itu menyebut pindahan bank.",
+        "ru": "Банковский перевод ещё не поступил.",
+        "ms": "Pindahan bank belum diterima.",
+        "ruExpression": "банковский перевод",
+        "msExpression": "pindahan bank",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы выбрали банковский перевод для оплаты.",
+        "ms": "Kami memilih pindahan bank untuk bayaran.",
         "ruExpression": "банковский перевод",
         "msExpression": "pindahan bank",
         "origin": "original_teaching_example"
@@ -8753,9 +8788,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о международном переводе.",
-        "ms": "Kami bercakap tentang pindahan antarabangsa.",
-        "ruExpression": "международном переводе",
+        "ru": "Международный перевод отправлен вчера.",
+        "ms": "Pindahan antarabangsa dihantar semalam.",
+        "ruExpression": "международный перевод",
+        "msExpression": "pindahan antarabangsa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Банк подтвердил международный перевод.",
+        "ms": "Bank mengesahkan pindahan antarabangsa.",
+        "ruExpression": "международный перевод",
         "msExpression": "pindahan antarabangsa",
         "origin": "original_teaching_example"
       }
@@ -8788,8 +8830,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем номер счета.",
-        "ms": "Kami membincangkan nombor akaun.",
+        "ru": "Номер счета указан в письме.",
+        "ms": "Nombor akaun dinyatakan dalam surat.",
+        "ruExpression": "номер счета",
+        "msExpression": "nombor akaun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте номер счета перед отправкой.",
+        "ms": "Semak nombor akaun sebelum menghantar wang.",
         "ruExpression": "номер счета",
         "msExpression": "nombor akaun",
         "origin": "original_teaching_example"
@@ -8823,9 +8872,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это владелец счета.",
-        "ms": "Ini pemilik akaun.",
+        "ru": "Владелец счета должен подписать заявление.",
+        "ms": "Pemilik akaun perlu menandatangani permohonan.",
         "ruExpression": "владелец счета",
+        "msExpression": "pemilik akaun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник связался с владельцем счета.",
+        "ms": "Petugas menghubungi pemilik akaun.",
+        "ruExpression": "владельцем счета",
         "msExpression": "pemilik akaun",
         "origin": "original_teaching_example"
       }
@@ -8858,9 +8914,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается выписка банка.",
-        "ms": "Artikel itu menyebut penyata bank.",
+        "ru": "Выписка банка содержит все операции за месяц.",
+        "ms": "Penyata bank mengandungi semua urus niaga bagi bulan itu.",
         "ruExpression": "выписка банка",
+        "msExpression": "penyata bank",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я скачал выписку банка из приложения.",
+        "ms": "Saya memuat turun penyata bank daripada aplikasi.",
+        "ruExpression": "выписку банка",
         "msExpression": "penyata bank",
         "origin": "original_teaching_example"
       }
@@ -8893,9 +8956,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о подтверждении дохода.",
-        "ms": "Kami bercakap tentang pengesahan pendapatan.",
-        "ruExpression": "подтверждении дохода",
+        "ru": "Подтверждение дохода приложено к заявлению.",
+        "ms": "Pengesahan pendapatan dilampirkan pada permohonan.",
+        "ruExpression": "подтверждение дохода",
+        "msExpression": "pengesahan pendapatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник запросил подтверждение дохода.",
+        "ms": "Petugas meminta pengesahan pendapatan.",
+        "ruExpression": "подтверждение дохода",
         "msExpression": "pengesahan pendapatan",
         "origin": "original_teaching_example"
       }
@@ -8928,8 +8998,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем справку о доходах.",
-        "ms": "Kami membincangkan penyata pendapatan.",
+        "ru": "Справка о доходах уже готова.",
+        "ms": "Penyata pendapatan sudah siap.",
+        "ruExpression": "справка о доходах",
+        "msExpression": "penyata pendapatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Бухгалтер выдал справку о доходах.",
+        "ms": "Akauntan mengeluarkan penyata pendapatan.",
         "ruExpression": "справку о доходах",
         "msExpression": "penyata pendapatan",
         "origin": "original_teaching_example"
@@ -8962,9 +9039,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это налоговая декларация.",
-        "ms": "Ini penyata cukai.",
+        "ru": "Налоговая декларация заполнена не полностью.",
+        "ms": "Penyata cukai belum diisi dengan lengkap.",
         "ruExpression": "налоговая декларация",
+        "msExpression": "penyata cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Бухгалтер проверяет налоговую декларацию.",
+        "ms": "Akauntan sedang menyemak penyata cukai.",
+        "ruExpression": "налоговую декларацию",
         "msExpression": "penyata cukai",
         "origin": "original_teaching_example"
       }
@@ -8997,9 +9081,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается налоговая служба.",
-        "ms": "Artikel itu menyebut jabatan cukai.",
+        "ru": "Налоговая служба ответила на письмо.",
+        "ms": "Jabatan cukai menjawab surat itu.",
         "ruExpression": "налоговая служба",
+        "msExpression": "jabatan cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы направили запрос в налоговую службу.",
+        "ms": "Kami menghantar pertanyaan kepada jabatan cukai.",
+        "ruExpression": "налоговую службу",
         "msExpression": "jabatan cukai",
         "origin": "original_teaching_example"
       }
@@ -9032,9 +9123,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о плательщике налогов.",
-        "ms": "Kami bercakap tentang pembayar cukai.",
-        "ruExpression": "плательщике налогов",
+        "ru": "Плательщик налогов получил уведомление.",
+        "ms": "Pembayar cukai menerima pemberitahuan.",
+        "ruExpression": "плательщик налогов",
+        "msExpression": "pembayar cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер плательщика налогов указан в документе.",
+        "ms": "Nombor pembayar cukai dinyatakan dalam dokumen.",
+        "ruExpression": "плательщика налогов",
         "msExpression": "pembayar cukai",
         "origin": "original_teaching_example"
       }
@@ -9067,9 +9165,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем освобождение от налога.",
-        "ms": "Kami membincangkan pengecualian cukai.",
+        "ru": "В письме обсуждается освобождение от налога.",
+        "ms": "Pengecualian cukai dibincangkan dalam surat itu.",
         "ruExpression": "освобождение от налога",
+        "msExpression": "pengecualian cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Бухгалтер подготовил запрос об освобождении от налога.",
+        "ms": "Akauntan menyediakan pertanyaan tentang pengecualian cukai.",
+        "ruExpression": "освобождении от налога",
         "msExpression": "pengecualian cukai",
         "origin": "original_teaching_example"
       }
@@ -9102,9 +9207,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это налоговая льгота.",
-        "ms": "Ini pelepasan cukai.",
+        "ru": "Эта налоговая льгота упомянута в отчёте.",
+        "ms": "Pelepasan cukai ini disebut dalam laporan.",
         "ruExpression": "налоговая льгота",
+        "msExpression": "pelepasan cukai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Консультант объяснил значение налоговой льготы.",
+        "ms": "Perunding menerangkan maksud pelepasan cukai.",
+        "ruExpression": "налоговой льготы",
         "msExpression": "pelepasan cukai",
         "origin": "original_teaching_example"
       }
@@ -9137,8 +9249,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается страховой полис.",
-        "ms": "Artikel itu menyebut polisi insurans.",
+        "ru": "Страховой полис хранится в папке.",
+        "ms": "Polisi insurans disimpan di dalam folder.",
+        "ruExpression": "страховой полис",
+        "msExpression": "polisi insurans",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я взял страховой полис с собой.",
+        "ms": "Saya membawa polisi insurans bersama saya.",
         "ruExpression": "страховой полис",
         "msExpression": "polisi insurans",
         "origin": "original_teaching_example"
@@ -9172,9 +9291,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о страховом случае.",
-        "ms": "Kami bercakap tentang kes insurans.",
-        "ruExpression": "страховом случае",
+        "ru": "Страховой случай зарегистрирован компанией.",
+        "ms": "Kes insurans didaftarkan oleh syarikat.",
+        "ruExpression": "страховой случай",
+        "msExpression": "kes insurans",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник проверил документы по страховому случаю.",
+        "ms": "Petugas menyemak dokumen berkaitan kes insurans.",
+        "ruExpression": "страховому случаю",
         "msExpression": "kes insurans",
         "origin": "original_teaching_example"
       }
@@ -9207,9 +9333,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем страховую выплату.",
-        "ms": "Kami membincangkan bayaran insurans.",
-        "ruExpression": "страховую выплату",
+        "ru": "Страховая выплата поступила на счёт.",
+        "ms": "Bayaran insurans diterima dalam akaun.",
+        "ruExpression": "страховая выплата",
+        "msExpression": "bayaran insurans",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме указана сумма страховой выплаты.",
+        "ms": "Jumlah bayaran insurans dinyatakan dalam surat.",
+        "ruExpression": "страховой выплаты",
         "msExpression": "bayaran insurans",
         "origin": "original_teaching_example"
       }
@@ -9242,9 +9375,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это оценка ущерба.",
-        "ms": "Ini penilaian kerugian.",
+        "ru": "Оценка ущерба ещё не завершена.",
+        "ms": "Penilaian kerugian belum selesai.",
         "ruExpression": "оценка ущерба",
+        "msExpression": "penilaian kerugian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Специалист подготовил отчёт об оценке ущерба.",
+        "ms": "Pakar menyediakan laporan tentang penilaian kerugian.",
+        "ruExpression": "оценке ущерба",
         "msExpression": "penilaian kerugian",
         "origin": "original_teaching_example"
       }
@@ -9276,9 +9416,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается акция компании.",
-        "ms": "Artikel itu menyebut saham syarikat.",
+        "ru": "Акция компании упомянута в финансовом отчёте.",
+        "ms": "Saham syarikat disebut dalam laporan kewangan.",
         "ruExpression": "акция компании",
+        "msExpression": "saham syarikat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Аналитик сравнил цену акции компании с прошлогодней.",
+        "ms": "Penganalisis membandingkan harga saham syarikat dengan harga tahun lalu.",
+        "ruExpression": "акции компании",
         "msExpression": "saham syarikat",
         "origin": "original_teaching_example"
       }
@@ -9311,9 +9458,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о курсе валюты.",
-        "ms": "Kami bercakap tentang kadar pertukaran mata wang.",
-        "ruExpression": "курсе валюты",
+        "ru": "Курс валюты отображается на табло.",
+        "ms": "Kadar pertukaran mata wang dipaparkan pada papan maklumat.",
+        "ruExpression": "курс валюты",
+        "msExpression": "kadar pertukaran mata wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы уточнили курс валюты в банке.",
+        "ms": "Kami bertanya tentang kadar pertukaran mata wang di bank.",
+        "ruExpression": "курс валюты",
         "msExpression": "kadar pertukaran mata wang",
         "origin": "original_teaching_example"
       }
@@ -9346,9 +9500,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем деловую встречу.",
-        "ms": "Kami membincangkan mesyuarat perniagaan.",
-        "ruExpression": "деловую встречу",
+        "ru": "Деловая встреча назначена на утро.",
+        "ms": "Mesyuarat perniagaan dijadualkan pada waktu pagi.",
+        "ruExpression": "деловая встреча",
+        "msExpression": "mesyuarat perniagaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я подготовил документы для деловой встречи.",
+        "ms": "Saya menyediakan dokumen untuk mesyuarat perniagaan.",
+        "ruExpression": "деловой встречи",
         "msExpression": "mesyuarat perniagaan",
         "origin": "original_teaching_example"
       }
@@ -9381,9 +9542,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это заказчик проекта.",
-        "ms": "Ini pelanggan projek.",
+        "ru": "Заказчик проекта согласовал сроки.",
+        "ms": "Pelanggan projek bersetuju dengan jadual itu.",
         "ruExpression": "заказчик проекта",
+        "msExpression": "pelanggan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы отправили отчёт заказчику проекта.",
+        "ms": "Kami menghantar laporan kepada pelanggan projek.",
+        "ruExpression": "заказчику проекта",
         "msExpression": "pelanggan projek",
         "origin": "original_teaching_example"
       }
@@ -9415,9 +9583,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается копия договора.",
-        "ms": "Artikel itu menyebut salinan kontrak.",
+        "ru": "Копия договора хранится у секретаря.",
+        "ms": "Salinan kontrak disimpan oleh setiausaha.",
         "ruExpression": "копия договора",
+        "msExpression": "salinan kontrak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пришлите копию договора по электронной почте.",
+        "ms": "Hantar salinan kontrak melalui e-mel.",
+        "ruExpression": "копию договора",
         "msExpression": "salinan kontrak",
         "origin": "original_teaching_example"
       }
@@ -9450,9 +9625,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об оригинале договора.",
-        "ms": "Kami bercakap tentang kontrak asal.",
-        "ruExpression": "оригинале договора",
+        "ru": "Оригинал договора находится в архиве.",
+        "ms": "Kontrak asal disimpan dalam arkib.",
+        "ruExpression": "оригинал договора",
+        "msExpression": "kontrak asal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник попросил оригинал договора.",
+        "ms": "Petugas meminta kontrak asal.",
+        "ruExpression": "оригинал договора",
         "msExpression": "kontrak asal",
         "origin": "original_teaching_example"
       }
@@ -9484,9 +9666,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем деловую репутацию.",
-        "ms": "Kami membincangkan reputasi perniagaan.",
-        "ruExpression": "деловую репутацию",
+        "ru": "Деловая репутация важна для компании.",
+        "ms": "Reputasi perniagaan penting bagi syarikat.",
+        "ruExpression": "деловая репутация",
+        "msExpression": "reputasi perniagaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В статье говорится о деловой репутации компании.",
+        "ms": "Artikel itu membincangkan reputasi perniagaan syarikat.",
+        "ruExpression": "деловой репутации",
         "msExpression": "reputasi perniagaan",
         "origin": "original_teaching_example"
       }
@@ -9519,9 +9708,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это зачетная книжка.",
-        "ms": "Ini buku rekod pelajar.",
+        "ru": "Зачетная книжка лежит в сумке студента.",
+        "ms": "Buku rekod pelajar ada di dalam beg pelajar.",
         "ruExpression": "зачетная книжка",
+        "msExpression": "buku rekod pelajar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Преподаватель попросил зачетную книжку.",
+        "ms": "Pensyarah meminta buku rekod pelajar.",
+        "ruExpression": "зачётную книжку",
         "msExpression": "buku rekod pelajar",
         "origin": "original_teaching_example"
       }
@@ -9554,8 +9750,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается номер студента.",
-        "ms": "Artikel itu menyebut nombor pelajar.",
+        "ru": "Номер студента указан на карточке.",
+        "ms": "Nombor pelajar dinyatakan pada kad.",
+        "ruExpression": "номер студента",
+        "msExpression": "nombor pelajar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Введите номер студента в форму.",
+        "ms": "Masukkan nombor pelajar dalam borang.",
         "ruExpression": "номер студента",
         "msExpression": "nombor pelajar",
         "origin": "original_teaching_example"
@@ -9589,8 +9792,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об учебной группе.",
-        "ms": "Kami bercakap tentang kumpulan pelajar.",
+        "ru": "Учебная группа собралась в библиотеке.",
+        "ms": "Kumpulan pelajar berkumpul di perpustakaan.",
+        "ruExpression": "учебная группа",
+        "msExpression": "kumpulan pelajar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Преподаватель дал задание учебной группе.",
+        "ms": "Pensyarah memberikan tugasan kepada kumpulan pelajar.",
         "ruExpression": "учебной группе",
         "msExpression": "kumpulan pelajar",
         "origin": "original_teaching_example"
@@ -9623,8 +9833,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем аудиторию университета.",
-        "ms": "Kami membincangkan bilik kuliah.",
+        "ru": "Аудитория университета находится на третьем этаже.",
+        "ms": "Bilik kuliah terletak di tingkat tiga.",
+        "ruExpression": "аудитория университета",
+        "msExpression": "bilik kuliah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Занятие перенесли в другую аудиторию университета.",
+        "ms": "Kelas dipindahkan ke bilik kuliah yang lain.",
         "ruExpression": "аудиторию университета",
         "msExpression": "bilik kuliah",
         "origin": "original_teaching_example"
@@ -9658,9 +9875,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это лабораторная работа.",
-        "ms": "Ini kerja makmal.",
+        "ru": "Лабораторная работа выполняется в парах.",
+        "ms": "Kerja makmal dilakukan secara berpasangan.",
         "ruExpression": "лабораторная работа",
+        "msExpression": "kerja makmal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студент сдал лабораторную работу вовремя.",
+        "ms": "Pelajar menyerahkan kerja makmal tepat pada masanya.",
+        "ruExpression": "лабораторную работу",
         "msExpression": "kerja makmal",
         "origin": "original_teaching_example"
       }
@@ -9693,9 +9917,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается практическое занятие.",
-        "ms": "Artikel itu menyebut kelas praktikal.",
+        "ru": "Практическое занятие начинается после лекции.",
+        "ms": "Kelas praktikal bermula selepas kuliah.",
         "ruExpression": "практическое занятие",
+        "msExpression": "kelas praktikal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подготовились к практическому занятию.",
+        "ms": "Kami bersedia untuk kelas praktikal.",
+        "ruExpression": "практическому занятию",
         "msExpression": "kelas praktikal",
         "origin": "original_teaching_example"
       }
@@ -9728,8 +9959,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о семинарском занятии.",
-        "ms": "Kami bercakap tentang kelas seminar.",
+        "ru": "Семинарское занятие проходит в небольшой группе.",
+        "ms": "Kelas seminar diadakan dalam kumpulan kecil.",
+        "ruExpression": "семинарское занятие",
+        "msExpression": "kelas seminar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На семинарском занятии обсуждали статью.",
+        "ms": "Artikel itu dibincangkan dalam kelas seminar.",
         "ruExpression": "семинарском занятии",
         "msExpression": "kelas seminar",
         "origin": "original_teaching_example"
@@ -9763,8 +10001,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем курсовую работу.",
-        "ms": "Kami membincangkan kerja kursus.",
+        "ru": "Курсовая работа уже сдана.",
+        "ms": "Kerja kursus sudah diserahkan.",
+        "ruExpression": "курсовая работа",
+        "msExpression": "kerja kursus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я закончил курсовую работу на прошлой неделе.",
+        "ms": "Saya menyiapkan kerja kursus pada minggu lalu.",
         "ruExpression": "курсовую работу",
         "msExpression": "kerja kursus",
         "origin": "original_teaching_example"
@@ -9798,9 +10043,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это научный руководитель.",
-        "ms": "Ini penyelia akademik.",
+        "ru": "Научный руководитель прочитал первую главу.",
+        "ms": "Penyelia akademik membaca bab pertama.",
         "ruExpression": "научный руководитель",
+        "msExpression": "penyelia akademik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студент обсудил план с научным руководителем.",
+        "ms": "Pelajar membincangkan rancangan dengan penyelia akademik.",
+        "ruExpression": "научным руководителем",
         "msExpression": "penyelia akademik",
         "origin": "original_teaching_example"
       }
@@ -9833,8 +10085,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается источник литературы.",
-        "ms": "Artikel itu menyebut sumber rujukan.",
+        "ru": "Этот источник литературы указан в конце статьи.",
+        "ms": "Sumber rujukan ini disenaraikan pada akhir artikel.",
+        "ruExpression": "источник литературы",
+        "msExpression": "sumber rujukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте источник литературы перед цитированием.",
+        "ms": "Semak sumber rujukan sebelum membuat petikan.",
         "ruExpression": "источник литературы",
         "msExpression": "sumber rujukan",
         "origin": "original_teaching_example"
@@ -9868,9 +10127,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о научной статье.",
-        "ms": "Kami bercakap tentang artikel ilmiah.",
-        "ruExpression": "научной статье",
+        "ru": "Научная статья опубликована в журнале.",
+        "ms": "Artikel ilmiah diterbitkan dalam jurnal.",
+        "ruExpression": "научная статья",
+        "msExpression": "artikel ilmiah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы прочитали научную статью перед занятием.",
+        "ms": "Kami membaca artikel ilmiah sebelum kelas.",
+        "ruExpression": "научную статью",
         "msExpression": "artikel ilmiah",
         "origin": "original_teaching_example"
       }
@@ -9903,8 +10169,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем опросник исследования.",
-        "ms": "Kami membincangkan soal selidik kajian.",
+        "ru": "Опросник исследования содержит десять вопросов.",
+        "ms": "Soal selidik kajian mengandungi sepuluh soalan.",
+        "ruExpression": "опросник исследования",
+        "msExpression": "soal selidik kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Участник заполнил опросник исследования.",
+        "ms": "Peserta mengisi soal selidik kajian.",
         "ruExpression": "опросник исследования",
         "msExpression": "soal selidik kajian",
         "origin": "original_teaching_example"
@@ -9938,9 +10211,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это обработка данных.",
-        "ms": "Ini pemprosesan data.",
+        "ru": "Обработка данных заняла два дня.",
+        "ms": "Pemprosesan data mengambil masa dua hari.",
         "ruExpression": "обработка данных",
+        "msExpression": "pemprosesan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После обработки данных исследователь составил таблицу.",
+        "ms": "Selepas pemprosesan data penyelidik menyediakan jadual.",
+        "ruExpression": "обработки данных",
         "msExpression": "pemprosesan data",
         "origin": "original_teaching_example"
       }
@@ -9973,9 +10253,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается таблица данных.",
-        "ms": "Artikel itu menyebut jadual data.",
+        "ru": "Таблица данных находится в приложении.",
+        "ms": "Jadual data terdapat dalam lampiran.",
         "ruExpression": "таблица данных",
+        "msExpression": "jadual data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы обновили таблицу данных.",
+        "ms": "Kami mengemas kini jadual data.",
+        "ruExpression": "таблицу данных",
         "msExpression": "jadual data",
         "origin": "original_teaching_example"
       }
@@ -10008,9 +10295,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об обзоре литературы.",
-        "ms": "Kami bercakap tentang tinjauan literatur.",
-        "ruExpression": "обзоре литературы",
+        "ru": "Обзор литературы включён в первую главу.",
+        "ms": "Tinjauan literatur dimasukkan dalam bab pertama.",
+        "ruExpression": "обзор литературы",
+        "msExpression": "tinjauan literatur",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студент подготовил обзор литературы.",
+        "ms": "Pelajar menyediakan tinjauan literatur.",
+        "ruExpression": "обзор литературы",
         "msExpression": "tinjauan literatur",
         "origin": "original_teaching_example"
       }
@@ -10042,8 +10336,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем основную часть.",
-        "ms": "Kami membincangkan bahagian utama.",
+        "ru": "Основная часть текста состоит из трёх разделов.",
+        "ms": "Bahagian utama teks terdiri daripada tiga bahagian.",
+        "ruExpression": "основная часть",
+        "msExpression": "bahagian utama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор сократил основную часть статьи.",
+        "ms": "Editor memendekkan bahagian utama artikel.",
         "ruExpression": "основную часть",
         "msExpression": "bahagian utama",
         "origin": "original_teaching_example"
@@ -10076,9 +10377,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это заключительная часть.",
-        "ms": "Ini bahagian penutup.",
+        "ru": "Заключительная часть содержит выводы.",
+        "ms": "Bahagian penutup mengandungi kesimpulan.",
         "ruExpression": "заключительная часть",
+        "msExpression": "bahagian penutup",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы переписали заключительную часть доклада.",
+        "ms": "Kami menulis semula bahagian penutup laporan.",
+        "ruExpression": "заключительную часть",
         "msExpression": "bahagian penutup",
         "origin": "original_teaching_example"
       }
@@ -10109,8 +10417,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается цель исследования.",
-        "ms": "Artikel itu menyebut objektif kajian.",
+        "ru": "Цель исследования указана во введении.",
+        "ms": "Objektif kajian dinyatakan dalam pengenalan.",
+        "ruExpression": "цель исследования",
+        "msExpression": "objektif kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Автор уточнил цель исследования.",
+        "ms": "Penulis memperjelas objektif kajian.",
         "ruExpression": "цель исследования",
         "msExpression": "objektif kajian",
         "origin": "original_teaching_example"
@@ -10144,9 +10459,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим об обсуждении результатов.",
-        "ms": "Kami bercakap tentang perbincangan hasil.",
-        "ruExpression": "обсуждении результатов",
+        "ru": "Обсуждение результатов началось после доклада.",
+        "ms": "Perbincangan hasil bermula selepas pembentangan.",
+        "ruExpression": "обсуждение результатов",
+        "msExpression": "perbincangan hasil",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Участники вернулись к обсуждению результатов.",
+        "ms": "Peserta kembali kepada perbincangan hasil.",
+        "ruExpression": "обсуждению результатов",
         "msExpression": "perbincangan hasil",
         "origin": "original_teaching_example"
       }
@@ -10179,9 +10501,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы обсуждаем ограничение исследования.",
-        "ms": "Kami membincangkan batasan kajian.",
+        "ru": "Это ограничение исследования отмечено автором.",
+        "ms": "Batasan kajian ini dinyatakan oleh penulis.",
         "ruExpression": "ограничение исследования",
+        "msExpression": "batasan kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В заключении говорится об ограничении исследования.",
+        "ms": "Batasan kajian dibincangkan dalam kesimpulan.",
+        "ruExpression": "ограничении исследования",
         "msExpression": "batasan kajian",
         "origin": "original_teaching_example"
       }
@@ -10214,9 +10543,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Это учебная нагрузка.",
-        "ms": "Ini beban pengajian.",
+        "ru": "Учебная нагрузка распределена по семестрам.",
+        "ms": "Beban pengajian dibahagikan mengikut semester.",
         "ruExpression": "учебная нагрузка",
+        "msExpression": "beban pengajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студент обсудил учебную нагрузку с преподавателем.",
+        "ms": "Pelajar membincangkan beban pengajian dengan pensyarah.",
+        "ruExpression": "учебную нагрузку",
         "msExpression": "beban pengajian",
         "origin": "original_teaching_example"
       }
@@ -10249,8 +10585,15 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "В статье упоминается оценочный лист.",
-        "ms": "Artikel itu menyebut borang penilaian.",
+        "ru": "Оценочный лист заполнен преподавателем.",
+        "ms": "Borang penilaian diisi oleh pensyarah.",
+        "ruExpression": "оценочный лист",
+        "msExpression": "borang penilaian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Экзаменатор подписал оценочный лист.",
+        "ms": "Pemeriksa menandatangani borang penilaian.",
         "ruExpression": "оценочный лист",
         "msExpression": "borang penilaian",
         "origin": "original_teaching_example"
@@ -10284,9 +10627,16 @@ export const contextCorpus = [
     },
     "examples": [
       {
-        "ru": "Мы говорим о восстановлении студента.",
-        "ms": "Kami bercakap tentang pemulihan status pelajar.",
-        "ruExpression": "восстановлении студента",
+        "ru": "Восстановление студента оформлено приказом.",
+        "ms": "Pemulihan status pelajar disahkan melalui arahan rasmi.",
+        "ruExpression": "восстановление студента",
+        "msExpression": "pemulihan status pelajar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме рассматривается восстановление студента.",
+        "ms": "Pemulihan status pelajar dibincangkan dalam surat itu.",
+        "ruExpression": "восстановление студента",
         "msExpression": "pemulihan status pelajar",
         "origin": "original_teaching_example"
       }
@@ -18839,6 +19189,2103 @@ export const contextCorpus = [
         "ms": "Kami membincangkan set dokumen.",
         "ruExpression": "комплект документов",
         "msExpression": "set dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0501",
+    "ru": "прием документов",
+    "ms": "penerimaan dokumen",
+    "forms": {
+      "ru": [
+        "прием документов",
+        "приёма документов",
+        "приёму документов",
+        "приём документов",
+        "приёмом документов",
+        "приёме документов"
+      ],
+      "ms": [
+        "penerimaan dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5016",
+      "sourceTitle": "прием документов",
+      "sourceTranslation": "penerimaan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Прием документов начинается в девять утра.",
+        "ms": "Penerimaan dokumen bermula pada pukul sembilan pagi.",
+        "ruExpression": "прием документов",
+        "msExpression": "penerimaan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сегодня прием документов проводится в другом кабинете.",
+        "ms": "Penerimaan dokumen dijalankan di bilik lain hari ini.",
+        "ruExpression": "прием документов",
+        "msExpression": "penerimaan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0502",
+    "ru": "выдача документов",
+    "ms": "pengeluaran dokumen",
+    "forms": {
+      "ru": [
+        "выдача документов",
+        "выдачи документов",
+        "выдаче документов",
+        "выдачу документов",
+        "выдачей документов"
+      ],
+      "ms": [
+        "pengeluaran dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5017",
+      "sourceTitle": "выдача документов",
+      "sourceTranslation": "pengeluaran dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Выдача документов начинается после обеда.",
+        "ms": "Pengeluaran dokumen bermula selepas makan tengah hari.",
+        "ruExpression": "выдача документов",
+        "msExpression": "pengeluaran dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стойка выдачи документов находится у входа.",
+        "ms": "Kaunter pengeluaran dokumen terletak berhampiran pintu masuk.",
+        "ruExpression": "выдачи документов",
+        "msExpression": "pengeluaran dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0503",
+    "ru": "входящий номер",
+    "ms": "nombor rujukan masuk",
+    "forms": {
+      "ru": [
+        "входящий номер",
+        "входящего номера",
+        "входящему номеру",
+        "входящим номером",
+        "входящем номере"
+      ],
+      "ms": [
+        "nombor rujukan masuk"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5018",
+      "sourceTitle": "входящий номер",
+      "sourceTranslation": "nombor rujukan masuk"
+    },
+    "examples": [
+      {
+        "ru": "Укажите входящий номер письма.",
+        "ms": "Nyatakan nombor rujukan masuk surat itu.",
+        "ruExpression": "входящий номер",
+        "msExpression": "nombor rujukan masuk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Входящий номер записан в журнале.",
+        "ms": "Nombor rujukan masuk dicatat dalam buku daftar.",
+        "ruExpression": "входящий номер",
+        "msExpression": "nombor rujukan masuk",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0504",
+    "ru": "исходящий номер",
+    "ms": "nombor rujukan keluar",
+    "forms": {
+      "ru": [
+        "исходящий номер",
+        "исходящего номера",
+        "исходящему номеру",
+        "исходящим номером",
+        "исходящем номере"
+      ],
+      "ms": [
+        "nombor rujukan keluar"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5019",
+      "sourceTitle": "исходящий номер",
+      "sourceTranslation": "nombor rujukan keluar"
+    },
+    "examples": [
+      {
+        "ru": "Исходящий номер указан в верхней части письма.",
+        "ms": "Nombor rujukan keluar dinyatakan di bahagian atas surat.",
+        "ruExpression": "исходящий номер",
+        "msExpression": "nombor rujukan keluar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь проверил исходящий номер.",
+        "ms": "Setiausaha menyemak nombor rujukan keluar.",
+        "ruExpression": "исходящий номер",
+        "msExpression": "nombor rujukan keluar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0505",
+    "ru": "номер справки",
+    "ms": "nombor sijil",
+    "forms": {
+      "ru": [
+        "номер справки",
+        "номера справки",
+        "номеру справки",
+        "номером справки",
+        "номере справки"
+      ],
+      "ms": [
+        "nombor sijil"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5020",
+      "sourceTitle": "номер справки",
+      "sourceTranslation": "nombor sijil"
+    },
+    "examples": [
+      {
+        "ru": "Номер справки напечатан внизу страницы.",
+        "ms": "Nombor sijil dicetak di bahagian bawah halaman.",
+        "ruExpression": "номер справки",
+        "msExpression": "nombor sijil",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я записал номер справки в анкету.",
+        "ms": "Saya mencatat nombor sijil dalam borang.",
+        "ruExpression": "номер справки",
+        "msExpression": "nombor sijil",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0506",
+    "ru": "срок действия документа",
+    "ms": "tempoh sah dokumen",
+    "forms": {
+      "ru": [
+        "срок действия документа",
+        "срока действия документа",
+        "сроку действия документа",
+        "сроком действия документа",
+        "сроке действия документа"
+      ],
+      "ms": [
+        "tempoh sah dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5024",
+      "sourceTitle": "срок действия документа",
+      "sourceTranslation": "tempoh sah dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Проверьте срок действия документа.",
+        "ms": "Semak tempoh sah dokumen.",
+        "ruExpression": "срок действия документа",
+        "msExpression": "tempoh sah dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Срок действия документа указан на первой странице.",
+        "ms": "Tempoh sah dokumen dinyatakan pada halaman pertama.",
+        "ruExpression": "срок действия документа",
+        "msExpression": "tempoh sah dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0507",
+    "ru": "замена документа",
+    "ms": "penggantian dokumen",
+    "forms": {
+      "ru": [
+        "замена документа",
+        "замены документа",
+        "замене документа",
+        "замену документа",
+        "заменой документа"
+      ],
+      "ms": [
+        "penggantian dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5026",
+      "sourceTitle": "замена документа",
+      "sourceTranslation": "penggantian dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Замена документа займёт несколько дней.",
+        "ms": "Penggantian dokumen akan mengambil masa beberapa hari.",
+        "ruExpression": "замена документа",
+        "msExpression": "penggantian dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник объяснил порядок замены документа.",
+        "ms": "Petugas menerangkan prosedur penggantian dokumen.",
+        "ruExpression": "замены документа",
+        "msExpression": "penggantian dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0508",
+    "ru": "утеря документа",
+    "ms": "kehilangan dokumen",
+    "forms": {
+      "ru": [
+        "утеря документа",
+        "утери документа",
+        "утере документа",
+        "утерю документа",
+        "утерей документа"
+      ],
+      "ms": [
+        "kehilangan dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5027",
+      "sourceTitle": "утеря документа",
+      "sourceTranslation": "kehilangan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Утеря документа отмечена в заявлении.",
+        "ms": "Kehilangan dokumen dicatat dalam permohonan.",
+        "ruExpression": "утеря документа",
+        "msExpression": "kehilangan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я сообщил об утере документа.",
+        "ms": "Saya melaporkan kehilangan dokumen.",
+        "ruExpression": "утере документа",
+        "msExpression": "kehilangan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0509",
+    "ru": "повреждение документа",
+    "ms": "kerosakan dokumen",
+    "forms": {
+      "ru": [
+        "повреждение документа",
+        "повреждения документа",
+        "повреждению документа",
+        "повреждением документа",
+        "повреждении документа"
+      ],
+      "ms": [
+        "kerosakan dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5028",
+      "sourceTitle": "повреждение документа",
+      "sourceTranslation": "kerosakan dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Повреждение документа заметно на фотографии.",
+        "ms": "Kerosakan dokumen kelihatan dalam gambar.",
+        "ruExpression": "повреждение документа",
+        "msExpression": "kerosakan dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник составил отчёт о повреждении документа.",
+        "ms": "Petugas menyediakan laporan tentang kerosakan dokumen.",
+        "ruExpression": "повреждении документа",
+        "msExpression": "kerosakan dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0510",
+    "ru": "заявление на замену",
+    "ms": "permohonan penggantian",
+    "forms": {
+      "ru": [
+        "заявление на замену",
+        "заявления на замену",
+        "заявлению на замену",
+        "заявлением на замену",
+        "заявлении на замену"
+      ],
+      "ms": [
+        "permohonan penggantian"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5029",
+      "sourceTitle": "заявление на замену",
+      "sourceTranslation": "permohonan penggantian"
+    },
+    "examples": [
+      {
+        "ru": "Заявление на замену уже зарегистрировано.",
+        "ms": "Permohonan penggantian sudah didaftarkan.",
+        "ruExpression": "заявление на замену",
+        "msExpression": "permohonan penggantian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я подал заявление на замену.",
+        "ms": "Saya mengemukakan permohonan penggantian.",
+        "ruExpression": "заявление на замену",
+        "msExpression": "permohonan penggantian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0511",
+    "ru": "заявление на продление",
+    "ms": "permohonan pembaharuan",
+    "forms": {
+      "ru": [
+        "заявление на продление",
+        "заявления на продление",
+        "заявлению на продление",
+        "заявлением на продление",
+        "заявлении на продление"
+      ],
+      "ms": [
+        "permohonan pembaharuan"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5030",
+      "sourceTitle": "заявление на продление",
+      "sourceTranslation": "permohonan pembaharuan"
+    },
+    "examples": [
+      {
+        "ru": "Заявление на продление отправлено вчера.",
+        "ms": "Permohonan pembaharuan dihantar semalam.",
+        "ruExpression": "заявление на продление",
+        "msExpression": "permohonan pembaharuan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник проверяет заявление на продление.",
+        "ms": "Petugas sedang menyemak permohonan pembaharuan.",
+        "ruExpression": "заявление на продление",
+        "msExpression": "permohonan pembaharuan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0512",
+    "ru": "образец заявления",
+    "ms": "contoh permohonan",
+    "forms": {
+      "ru": [
+        "образец заявления",
+        "образца заявления",
+        "образцу заявления",
+        "образцом заявления",
+        "образце заявления"
+      ],
+      "ms": [
+        "contoh permohonan"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5032",
+      "sourceTitle": "образец заявления",
+      "sourceTranslation": "contoh permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Образец заявления размещён на сайте.",
+        "ms": "Contoh permohonan disediakan di laman web.",
+        "ruExpression": "образец заявления",
+        "msExpression": "contoh permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мне показали образец заявления.",
+        "ms": "Saya ditunjukkan contoh permohonan.",
+        "ruExpression": "образец заявления",
+        "msExpression": "contoh permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0513",
+    "ru": "пустой бланк",
+    "ms": "borang kosong",
+    "forms": {
+      "ru": [
+        "пустой бланк",
+        "пустого бланка",
+        "пустому бланку",
+        "пустым бланком",
+        "пустом бланке"
+      ],
+      "ms": [
+        "borang kosong"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5034",
+      "sourceTitle": "пустой бланк",
+      "sourceTranslation": "borang kosong"
+    },
+    "examples": [
+      {
+        "ru": "Пустой бланк лежит на столе.",
+        "ms": "Borang kosong ada di atas meja.",
+        "ruExpression": "пустой бланк",
+        "msExpression": "borang kosong",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник дал мне пустой бланк.",
+        "ms": "Petugas memberikan borang kosong kepada saya.",
+        "ruExpression": "пустой бланк",
+        "msExpression": "borang kosong",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0514",
+    "ru": "подпись заявителя",
+    "ms": "tandatangan pemohon",
+    "forms": {
+      "ru": [
+        "подпись заявителя",
+        "подписи заявителя",
+        "подписью заявителя"
+      ],
+      "ms": [
+        "tandatangan pemohon"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5039",
+      "sourceTitle": "подпись заявителя",
+      "sourceTranslation": "tandatangan pemohon"
+    },
+    "examples": [
+      {
+        "ru": "На последней странице нужна подпись заявителя.",
+        "ms": "Tandatangan pemohon diperlukan pada halaman terakhir.",
+        "ruExpression": "подпись заявителя",
+        "msExpression": "tandatangan pemohon",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Подпись заявителя отсутствует.",
+        "ms": "Tandatangan pemohon tiada.",
+        "ruExpression": "подпись заявителя",
+        "msExpression": "tandatangan pemohon",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0515",
+    "ru": "список приложений",
+    "ms": "senarai lampiran",
+    "forms": {
+      "ru": [
+        "список приложений",
+        "списка приложений",
+        "списку приложений",
+        "списком приложений",
+        "списке приложений"
+      ],
+      "ms": [
+        "senarai lampiran"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5043",
+      "sourceTitle": "список приложений",
+      "sourceTranslation": "senarai lampiran"
+    },
+    "examples": [
+      {
+        "ru": "Список приложений находится в конце письма.",
+        "ms": "Senarai lampiran terdapat di hujung surat.",
+        "ruExpression": "список приложений",
+        "msExpression": "senarai lampiran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте список приложений перед отправкой.",
+        "ms": "Semak senarai lampiran sebelum menghantar surat.",
+        "ruExpression": "список приложений",
+        "msExpression": "senarai lampiran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0516",
+    "ru": "страница документа",
+    "ms": "halaman dokumen",
+    "forms": {
+      "ru": [
+        "страница документа",
+        "страницы документа",
+        "странице документа",
+        "страницу документа",
+        "страницей документа"
+      ],
+      "ms": [
+        "halaman dokumen"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5044",
+      "sourceTitle": "страница документа",
+      "sourceTranslation": "halaman dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Эта страница документа плохо отсканирована.",
+        "ms": "Halaman dokumen ini diimbas dengan kurang jelas.",
+        "ruExpression": "страница документа",
+        "msExpression": "halaman dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я распечатал страницу документа.",
+        "ms": "Saya mencetak halaman dokumen.",
+        "ruExpression": "страницу документа",
+        "msExpression": "halaman dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0517",
+    "ru": "электронная подпись",
+    "ms": "tandatangan elektronik",
+    "forms": {
+      "ru": [
+        "электронная подпись",
+        "электронной подписи",
+        "электронную подпись",
+        "электронной подписью"
+      ],
+      "ms": [
+        "tandatangan elektronik"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5049",
+      "sourceTitle": "электронная подпись",
+      "sourceTranslation": "tandatangan elektronik"
+    },
+    "examples": [
+      {
+        "ru": "Электронная подпись добавлена к файлу.",
+        "ms": "Tandatangan elektronik ditambahkan pada fail.",
+        "ruExpression": "электронная подпись",
+        "msExpression": "tandatangan elektronik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Система проверяет электронную подпись.",
+        "ms": "Sistem sedang menyemak tandatangan elektronik.",
+        "ruExpression": "электронную подпись",
+        "msExpression": "tandatangan elektronik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0518",
+    "ru": "цифровая подпись",
+    "ms": "tandatangan digital",
+    "forms": {
+      "ru": [
+        "цифровая подпись",
+        "цифровой подписи",
+        "цифровую подпись",
+        "цифровой подписью"
+      ],
+      "ms": [
+        "tandatangan digital"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5050",
+      "sourceTitle": "цифровая подпись",
+      "sourceTranslation": "tandatangan digital"
+    },
+    "examples": [
+      {
+        "ru": "Цифровая подпись подтверждена системой.",
+        "ms": "Tandatangan digital disahkan oleh sistem.",
+        "ruExpression": "цифровая подпись",
+        "msExpression": "tandatangan digital",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Программа проверяет цифровую подпись файла.",
+        "ms": "Program menyemak tandatangan digital fail.",
+        "ruExpression": "цифровую подпись",
+        "msExpression": "tandatangan digital",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0519",
+    "ru": "проверка личности",
+    "ms": "pengesahan identiti",
+    "forms": {
+      "ru": [
+        "проверка личности",
+        "проверки личности",
+        "проверке личности",
+        "проверку личности",
+        "проверкой личности"
+      ],
+      "ms": [
+        "pengesahan identiti"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5052",
+      "sourceTitle": "проверка личности",
+      "sourceTranslation": "pengesahan identiti"
+    },
+    "examples": [
+      {
+        "ru": "Проверка личности ещё не завершена.",
+        "ms": "Pengesahan identiti belum selesai.",
+        "ruExpression": "проверка личности",
+        "msExpression": "pengesahan identiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После проверки личности сотрудник открыл заявление.",
+        "ms": "Selepas pengesahan identiti petugas membuka permohonan itu.",
+        "ruExpression": "проверки личности",
+        "msExpression": "pengesahan identiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0520",
+    "ru": "идентификационный номер",
+    "ms": "nombor pengenalan",
+    "forms": {
+      "ru": [
+        "идентификационный номер",
+        "идентификационного номера",
+        "идентификационному номеру",
+        "идентификационным номером",
+        "идентификационном номере"
+      ],
+      "ms": [
+        "nombor pengenalan"
+      ]
+    },
+    "topic": "документы и общество",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5053",
+      "sourceTitle": "идентификационный номер",
+      "sourceTranslation": "nombor pengenalan"
+    },
+    "examples": [
+      {
+        "ru": "Введите идентификационный номер.",
+        "ms": "Masukkan nombor pengenalan.",
+        "ruExpression": "идентификационный номер",
+        "msExpression": "nombor pengenalan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Идентификационный номер указан в анкете.",
+        "ms": "Nombor pengenalan dinyatakan dalam borang.",
+        "ruExpression": "идентификационный номер",
+        "msExpression": "nombor pengenalan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0521",
+    "ru": "родной язык",
+    "ms": "bahasa ibunda",
+    "forms": {
+      "ru": [
+        "родной язык",
+        "родного языка",
+        "родному языку",
+        "родным языком",
+        "родном языке"
+      ],
+      "ms": [
+        "bahasa ibunda"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5057",
+      "sourceTitle": "родной язык",
+      "sourceTranslation": "bahasa ibunda"
+    },
+    "examples": [
+      {
+        "ru": "Мой родной язык — русский.",
+        "ms": "Bahasa ibunda saya ialah bahasa Rusia.",
+        "ruExpression": "родной язык",
+        "msExpression": "bahasa ibunda",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она преподаёт свой родной язык.",
+        "ms": "Dia mengajar bahasa ibunda sendiri.",
+        "ruExpression": "родной язык",
+        "msExpression": "bahasa ibunda",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0522",
+    "ru": "иностранный язык",
+    "ms": "bahasa asing",
+    "forms": {
+      "ru": [
+        "иностранный язык",
+        "иностранного языка",
+        "иностранному языку",
+        "иностранным языком",
+        "иностранном языке"
+      ],
+      "ms": [
+        "bahasa asing"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5058",
+      "sourceTitle": "иностранный язык",
+      "sourceTranslation": "bahasa asing"
+    },
+    "examples": [
+      {
+        "ru": "В школе мы изучаем иностранный язык.",
+        "ms": "Kami belajar bahasa asing di sekolah.",
+        "ruExpression": "иностранный язык",
+        "msExpression": "bahasa asing",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Этот иностранный язык используется на конференции.",
+        "ms": "Bahasa asing ini digunakan dalam persidangan.",
+        "ruExpression": "иностранный язык",
+        "msExpression": "bahasa asing",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0523",
+    "ru": "малайский язык",
+    "ms": "bahasa Melayu",
+    "forms": {
+      "ru": [
+        "малайский язык",
+        "малайского языка",
+        "малайскому языку",
+        "малайским языком",
+        "малайском языке"
+      ],
+      "ms": [
+        "bahasa Melayu"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5059",
+      "sourceTitle": "малайский язык",
+      "sourceTranslation": "bahasa Melayu"
+    },
+    "examples": [
+      {
+        "ru": "Я изучаю малайский язык в университете.",
+        "ms": "Saya belajar bahasa Melayu di universiti.",
+        "ruExpression": "малайский язык",
+        "msExpression": "bahasa Melayu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Малайский язык используется в этом письме.",
+        "ms": "Bahasa Melayu digunakan dalam surat ini.",
+        "ruExpression": "малайский язык",
+        "msExpression": "bahasa Melayu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0524",
+    "ru": "русский язык",
+    "ms": "bahasa Rusia",
+    "forms": {
+      "ru": [
+        "русский язык",
+        "русского языка",
+        "русскому языку",
+        "русским языком",
+        "русском языке"
+      ],
+      "ms": [
+        "bahasa Rusia"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5060",
+      "sourceTitle": "русский язык",
+      "sourceTranslation": "bahasa Rusia"
+    },
+    "examples": [
+      {
+        "ru": "Мой друг изучает русский язык.",
+        "ms": "Kawan saya belajar bahasa Rusia.",
+        "ruExpression": "русский язык",
+        "msExpression": "bahasa Rusia",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Русский язык стал темой нашего разговора.",
+        "ms": "Bahasa Rusia menjadi topik perbualan kami.",
+        "ruExpression": "русский язык",
+        "msExpression": "bahasa Rusia",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0525",
+    "ru": "английский язык",
+    "ms": "bahasa Inggeris",
+    "forms": {
+      "ru": [
+        "английский язык",
+        "английского языка",
+        "английскому языку",
+        "английским языком",
+        "английском языке"
+      ],
+      "ms": [
+        "bahasa Inggeris"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5061",
+      "sourceTitle": "английский язык",
+      "sourceTranslation": "bahasa Inggeris"
+    },
+    "examples": [
+      {
+        "ru": "Для этой работы нужен английский язык.",
+        "ms": "Bahasa Inggeris diperlukan untuk kerja ini.",
+        "ruExpression": "английский язык",
+        "msExpression": "bahasa Inggeris",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он перевёл письмо на английский язык.",
+        "ms": "Dia menterjemahkan surat itu ke dalam bahasa Inggeris.",
+        "ruExpression": "английский язык",
+        "msExpression": "bahasa Inggeris",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0526",
+    "ru": "значение слова",
+    "ms": "maksud perkataan",
+    "forms": {
+      "ru": [
+        "значение слова",
+        "значения слова",
+        "значению слова",
+        "значением слова",
+        "значении слова"
+      ],
+      "ms": [
+        "maksud perkataan"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5072",
+      "sourceTitle": "значение слова",
+      "sourceTranslation": "maksud perkataan"
+    },
+    "examples": [
+      {
+        "ru": "Учитель объяснил значение слова.",
+        "ms": "Guru menerangkan maksud perkataan.",
+        "ruExpression": "значение слова",
+        "msExpression": "maksud perkataan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Значение слова зависит от контекста.",
+        "ms": "Maksud perkataan bergantung pada konteks.",
+        "ruExpression": "значение слова",
+        "msExpression": "maksud perkataan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0527",
+    "ru": "правило грамматики",
+    "ms": "peraturan tatabahasa",
+    "forms": {
+      "ru": [
+        "правило грамматики",
+        "правила грамматики",
+        "правилу грамматики",
+        "правилом грамматики",
+        "правиле грамматики"
+      ],
+      "ms": [
+        "peraturan tatabahasa"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5079",
+      "sourceTitle": "правило грамматики",
+      "sourceTranslation": "peraturan tatabahasa"
+    },
+    "examples": [
+      {
+        "ru": "Это правило грамматики объясняется в учебнике.",
+        "ms": "Peraturan tatabahasa ini diterangkan dalam buku teks.",
+        "ruExpression": "правило грамматики",
+        "msExpression": "peraturan tatabahasa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы повторили правило грамматики перед занятием.",
+        "ms": "Kami mengulang kaji peraturan tatabahasa sebelum kelas.",
+        "ruExpression": "правило грамматики",
+        "msExpression": "peraturan tatabahasa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0528",
+    "ru": "единственное число",
+    "ms": "bentuk tunggal",
+    "forms": {
+      "ru": [
+        "единственное число",
+        "единственного числа",
+        "единственному числу",
+        "единственным числом",
+        "единственном числе"
+      ],
+      "ms": [
+        "bentuk tunggal"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5086",
+      "sourceTitle": "единственное число",
+      "sourceTranslation": "bentuk tunggal"
+    },
+    "examples": [
+      {
+        "ru": "В этом примере используется единственное число.",
+        "ms": "Bentuk tunggal digunakan dalam contoh ini.",
+        "ruExpression": "единственное число",
+        "msExpression": "bentuk tunggal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ученик записал существительное в единственном числе.",
+        "ms": "Pelajar menulis kata nama dalam bentuk tunggal.",
+        "ruExpression": "единственном числе",
+        "msExpression": "bentuk tunggal",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0529",
+    "ru": "множественное число",
+    "ms": "bentuk jamak",
+    "forms": {
+      "ru": [
+        "множественное число",
+        "множественного числа",
+        "множественному числу",
+        "множественным числом",
+        "множественном числе"
+      ],
+      "ms": [
+        "bentuk jamak"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5087",
+      "sourceTitle": "множественное число",
+      "sourceTranslation": "bentuk jamak"
+    },
+    "examples": [
+      {
+        "ru": "В этом предложении используется множественное число.",
+        "ms": "Bentuk jamak digunakan dalam ayat ini.",
+        "ruExpression": "множественное число",
+        "msExpression": "bentuk jamak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Преподаватель показал пример множественного числа.",
+        "ms": "Pensyarah menunjukkan contoh bentuk jamak.",
+        "ruExpression": "множественного числа",
+        "msExpression": "bentuk jamak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0530",
+    "ru": "прошедшее время",
+    "ms": "masa lampau",
+    "forms": {
+      "ru": [
+        "прошедшее время",
+        "прошедшего времени",
+        "прошедшему времени",
+        "прошедшим временем",
+        "прошедшем времени"
+      ],
+      "ms": [
+        "masa lampau"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5088",
+      "sourceTitle": "прошедшее время",
+      "sourceTranslation": "masa lampau"
+    },
+    "examples": [
+      {
+        "ru": "В этом упражнении используется прошедшее время.",
+        "ms": "Masa lampau digunakan dalam latihan ini.",
+        "ruExpression": "прошедшее время",
+        "msExpression": "masa lampau",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Учитель объяснил употребление прошедшего времени.",
+        "ms": "Guru menerangkan penggunaan masa lampau.",
+        "ruExpression": "прошедшего времени",
+        "msExpression": "masa lampau",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0531",
+    "ru": "настоящее время",
+    "ms": "masa kini",
+    "forms": {
+      "ru": [
+        "настоящее время",
+        "настоящего времени",
+        "настоящему времени",
+        "настоящим временем",
+        "настоящем времени"
+      ],
+      "ms": [
+        "masa kini"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5089",
+      "sourceTitle": "настоящее время",
+      "sourceTranslation": "masa kini"
+    },
+    "examples": [
+      {
+        "ru": "В этом тексте используется настоящее время.",
+        "ms": "Masa kini digunakan dalam teks ini.",
+        "ruExpression": "настоящее время",
+        "msExpression": "masa kini",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы сравнили употребление настоящего времени в двух языках.",
+        "ms": "Kami membandingkan penggunaan masa kini dalam dua bahasa.",
+        "ruExpression": "настоящего времени",
+        "msExpression": "masa kini",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0532",
+    "ru": "дословный перевод",
+    "ms": "terjemahan harfiah",
+    "forms": {
+      "ru": [
+        "дословный перевод",
+        "дословного перевода",
+        "дословному переводу",
+        "дословным переводом",
+        "дословном переводе"
+      ],
+      "ms": [
+        "terjemahan harfiah"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5095",
+      "sourceTitle": "дословный перевод",
+      "sourceTranslation": "terjemahan harfiah"
+    },
+    "examples": [
+      {
+        "ru": "Дословный перевод здесь звучит неестественно.",
+        "ms": "Terjemahan harfiah kedengaran tidak semula jadi di sini.",
+        "ruExpression": "дословный перевод",
+        "msExpression": "terjemahan harfiah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студент предложил дословный перевод фразы.",
+        "ms": "Pelajar mencadangkan terjemahan harfiah frasa itu.",
+        "ruExpression": "дословный перевод",
+        "msExpression": "terjemahan harfiah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0533",
+    "ru": "свободный перевод",
+    "ms": "terjemahan bebas",
+    "forms": {
+      "ru": [
+        "свободный перевод",
+        "свободного перевода",
+        "свободному переводу",
+        "свободным переводом",
+        "свободном переводе"
+      ],
+      "ms": [
+        "terjemahan bebas"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5096",
+      "sourceTitle": "свободный перевод",
+      "sourceTranslation": "terjemahan bebas"
+    },
+    "examples": [
+      {
+        "ru": "Редактор предпочёл свободный перевод.",
+        "ms": "Editor memilih terjemahan bebas.",
+        "ruExpression": "свободный перевод",
+        "msExpression": "terjemahan bebas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Свободный перевод сохраняет основную мысль текста.",
+        "ms": "Terjemahan bebas mengekalkan idea utama teks.",
+        "ruExpression": "свободный перевод",
+        "msExpression": "terjemahan bebas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0534",
+    "ru": "точный перевод",
+    "ms": "terjemahan tepat",
+    "forms": {
+      "ru": [
+        "точный перевод",
+        "точного перевода",
+        "точному переводу",
+        "точным переводом",
+        "точном переводе"
+      ],
+      "ms": [
+        "terjemahan tepat"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5097",
+      "sourceTitle": "точный перевод",
+      "sourceTranslation": "terjemahan tepat"
+    },
+    "examples": [
+      {
+        "ru": "Нам нужен точный перевод этого термина.",
+        "ms": "Kami memerlukan terjemahan tepat bagi istilah ini.",
+        "ruExpression": "точный перевод",
+        "msExpression": "terjemahan tepat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Точный перевод указан в словаре.",
+        "ms": "Terjemahan tepat dinyatakan dalam kamus.",
+        "ruExpression": "точный перевод",
+        "msExpression": "terjemahan tepat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0535",
+    "ru": "неточный перевод",
+    "ms": "terjemahan tidak tepat",
+    "forms": {
+      "ru": [
+        "неточный перевод",
+        "неточного перевода",
+        "неточному переводу",
+        "неточным переводом",
+        "неточном переводе"
+      ],
+      "ms": [
+        "terjemahan tidak tepat"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5098",
+      "sourceTitle": "неточный перевод",
+      "sourceTranslation": "terjemahan tidak tepat"
+    },
+    "examples": [
+      {
+        "ru": "Редактор заметил неточный перевод.",
+        "ms": "Editor menyedari terjemahan tidak tepat.",
+        "ruExpression": "неточный перевод",
+        "msExpression": "terjemahan tidak tepat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Неточный перевод изменил смысл предложения.",
+        "ms": "Terjemahan tidak tepat mengubah maksud ayat.",
+        "ruExpression": "неточный перевод",
+        "msExpression": "terjemahan tidak tepat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0536",
+    "ru": "ошибка в переводе",
+    "ms": "kesilapan dalam terjemahan",
+    "forms": {
+      "ru": [
+        "ошибка в переводе",
+        "ошибки в переводе",
+        "ошибке в переводе",
+        "ошибку в переводе",
+        "ошибкой в переводе"
+      ],
+      "ms": [
+        "kesilapan dalam terjemahan"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5099",
+      "sourceTitle": "ошибка в переводе",
+      "sourceTranslation": "kesilapan dalam terjemahan"
+    },
+    "examples": [
+      {
+        "ru": "В письме обнаружена ошибка в переводе.",
+        "ms": "Kesilapan dalam terjemahan ditemukan dalam surat itu.",
+        "ruExpression": "ошибка в переводе",
+        "msExpression": "kesilapan dalam terjemahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы исправили ошибку в переводе.",
+        "ms": "Kami membetulkan kesilapan dalam terjemahan.",
+        "ruExpression": "ошибку в переводе",
+        "msExpression": "kesilapan dalam terjemahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0537",
+    "ru": "машинный перевод",
+    "ms": "terjemahan mesin",
+    "forms": {
+      "ru": [
+        "машинный перевод",
+        "машинного перевода",
+        "машинному переводу",
+        "машинным переводом",
+        "машинном переводе"
+      ],
+      "ms": [
+        "terjemahan mesin"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5102",
+      "sourceTitle": "машинный перевод",
+      "sourceTranslation": "terjemahan mesin"
+    },
+    "examples": [
+      {
+        "ru": "Машинный перевод требует проверки редактором.",
+        "ms": "Terjemahan mesin memerlukan semakan editor.",
+        "ruExpression": "машинный перевод",
+        "msExpression": "terjemahan mesin",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я сравнил машинный перевод с оригиналом.",
+        "ms": "Saya membandingkan terjemahan mesin dengan teks asal.",
+        "ruExpression": "машинный перевод",
+        "msExpression": "terjemahan mesin",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0538",
+    "ru": "устный перевод",
+    "ms": "terjemahan lisan",
+    "forms": {
+      "ru": [
+        "устный перевод",
+        "устного перевода",
+        "устному переводу",
+        "устным переводом",
+        "устном переводе"
+      ],
+      "ms": [
+        "terjemahan lisan"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5103",
+      "sourceTitle": "устный перевод",
+      "sourceTranslation": "terjemahan lisan"
+    },
+    "examples": [
+      {
+        "ru": "На встрече нужен устный перевод.",
+        "ms": "Terjemahan lisan diperlukan dalam pertemuan itu.",
+        "ruExpression": "устный перевод",
+        "msExpression": "terjemahan lisan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она изучает устный перевод в университете.",
+        "ms": "Dia mempelajari terjemahan lisan di universiti.",
+        "ruExpression": "устный перевод",
+        "msExpression": "terjemahan lisan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0539",
+    "ru": "письменный перевод",
+    "ms": "terjemahan bertulis",
+    "forms": {
+      "ru": [
+        "письменный перевод",
+        "письменного перевода",
+        "письменному переводу",
+        "письменным переводом",
+        "письменном переводе"
+      ],
+      "ms": [
+        "terjemahan bertulis"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5104",
+      "sourceTitle": "письменный перевод",
+      "sourceTranslation": "terjemahan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Письменный перевод будет готов завтра.",
+        "ms": "Terjemahan bertulis akan siap esok.",
+        "ruExpression": "письменный перевод",
+        "msExpression": "terjemahan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы заказали письменный перевод документа.",
+        "ms": "Kami menempah terjemahan bertulis dokumen itu.",
+        "ruExpression": "письменный перевод",
+        "msExpression": "terjemahan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0540",
+    "ru": "синхронный перевод",
+    "ms": "terjemahan serentak",
+    "forms": {
+      "ru": [
+        "синхронный перевод",
+        "синхронного перевода",
+        "синхронному переводу",
+        "синхронным переводом",
+        "синхронном переводе"
+      ],
+      "ms": [
+        "terjemahan serentak"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5105",
+      "sourceTitle": "синхронный перевод",
+      "sourceTranslation": "terjemahan serentak"
+    },
+    "examples": [
+      {
+        "ru": "На конференции организован синхронный перевод.",
+        "ms": "Terjemahan serentak disediakan dalam persidangan itu.",
+        "ruExpression": "синхронный перевод",
+        "msExpression": "terjemahan serentak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для синхронного перевода подготовили отдельную кабину.",
+        "ms": "Sebuah bilik khas disediakan untuk terjemahan serentak.",
+        "ruExpression": "синхронного перевода",
+        "msExpression": "terjemahan serentak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0541",
+    "ru": "словарная статья",
+    "ms": "entri kamus",
+    "forms": {
+      "ru": [
+        "словарная статья",
+        "словарной статьи",
+        "словарной статье",
+        "словарную статью",
+        "словарной статьёй"
+      ],
+      "ms": [
+        "entri kamus"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5107",
+      "sourceTitle": "словарная статья",
+      "sourceTranslation": "entri kamus"
+    },
+    "examples": [
+      {
+        "ru": "Эта словарная статья содержит два значения.",
+        "ms": "Entri kamus ini mengandungi dua makna.",
+        "ruExpression": "словарная статья",
+        "msExpression": "entri kamus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор обновил словарную статью.",
+        "ms": "Editor mengemas kini entri kamus.",
+        "ruExpression": "словарную статью",
+        "msExpression": "entri kamus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0542",
+    "ru": "бумажный словарь",
+    "ms": "kamus bercetak",
+    "forms": {
+      "ru": [
+        "бумажный словарь",
+        "бумажного словаря",
+        "бумажному словарю",
+        "бумажным словарём",
+        "бумажном словаре"
+      ],
+      "ms": [
+        "kamus bercetak"
+      ]
+    },
+    "topic": "язык и перевод",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5109",
+      "sourceTitle": "бумажный словарь",
+      "sourceTranslation": "kamus bercetak"
+    },
+    "examples": [
+      {
+        "ru": "Бумажный словарь лежит на полке.",
+        "ms": "Kamus bercetak terletak di atas rak.",
+        "ruExpression": "бумажный словарь",
+        "msExpression": "kamus bercetak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я нашёл слово в бумажном словаре.",
+        "ms": "Saya menemukan perkataan itu dalam kamus bercetak.",
+        "ruExpression": "бумажном словаре",
+        "msExpression": "kamus bercetak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0543",
+    "ru": "языковой курс",
+    "ms": "kursus bahasa",
+    "forms": {
+      "ru": [
+        "языковой курс",
+        "языкового курса",
+        "языковому курсу",
+        "языковым курсом",
+        "языковом курсе"
+      ],
+      "ms": [
+        "kursus bahasa"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5120",
+      "sourceTitle": "языковой курс",
+      "sourceTranslation": "kursus bahasa"
+    },
+    "examples": [
+      {
+        "ru": "Языковой курс начинается в понедельник.",
+        "ms": "Kursus bahasa bermula pada hari Isnin.",
+        "ruExpression": "языковой курс",
+        "msExpression": "kursus bahasa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы записались на языковой курс.",
+        "ms": "Kami mendaftar untuk kursus bahasa.",
+        "ruExpression": "языковой курс",
+        "msExpression": "kursus bahasa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0544",
+    "ru": "начальный уровень",
+    "ms": "tahap permulaan",
+    "forms": {
+      "ru": [
+        "начальный уровень",
+        "начального уровня",
+        "начальному уровню",
+        "начальным уровнем",
+        "начальном уровне"
+      ],
+      "ms": [
+        "tahap permulaan"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5122",
+      "sourceTitle": "начальный уровень",
+      "sourceTranslation": "tahap permulaan"
+    },
+    "examples": [
+      {
+        "ru": "Этот учебник рассчитан на начальный уровень.",
+        "ms": "Buku teks ini sesuai untuk tahap permulaan.",
+        "ruExpression": "начальный уровень",
+        "msExpression": "tahap permulaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Начальный уровень указан в описании курса.",
+        "ms": "Tahap permulaan dinyatakan dalam penerangan kursus.",
+        "ruExpression": "начальный уровень",
+        "msExpression": "tahap permulaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0545",
+    "ru": "средний уровень",
+    "ms": "tahap pertengahan",
+    "forms": {
+      "ru": [
+        "средний уровень",
+        "среднего уровня",
+        "среднему уровню",
+        "средним уровнем",
+        "среднем уровне"
+      ],
+      "ms": [
+        "tahap pertengahan"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5123",
+      "sourceTitle": "средний уровень",
+      "sourceTranslation": "tahap pertengahan"
+    },
+    "examples": [
+      {
+        "ru": "Эта группа рассчитана на средний уровень.",
+        "ms": "Kumpulan ini sesuai untuk tahap pertengahan.",
+        "ruExpression": "средний уровень",
+        "msExpression": "tahap pertengahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Средний уровень указан в программе обучения.",
+        "ms": "Tahap pertengahan dinyatakan dalam program pengajian.",
+        "ruExpression": "средний уровень",
+        "msExpression": "tahap pertengahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0546",
+    "ru": "продвинутый уровень",
+    "ms": "tahap lanjutan",
+    "forms": {
+      "ru": [
+        "продвинутый уровень",
+        "продвинутого уровня",
+        "продвинутому уровню",
+        "продвинутым уровнем",
+        "продвинутом уровне"
+      ],
+      "ms": [
+        "tahap lanjutan"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5124",
+      "sourceTitle": "продвинутый уровень",
+      "sourceTranslation": "tahap lanjutan"
+    },
+    "examples": [
+      {
+        "ru": "Этот курс рассчитан на продвинутый уровень.",
+        "ms": "Kursus ini sesuai untuk tahap lanjutan.",
+        "ruExpression": "продвинутый уровень",
+        "msExpression": "tahap lanjutan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Продвинутый уровень требует хорошего знания языка.",
+        "ms": "Tahap lanjutan memerlukan penguasaan bahasa yang baik.",
+        "ruExpression": "продвинутый уровень",
+        "msExpression": "tahap lanjutan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0547",
+    "ru": "письменный экзамен",
+    "ms": "peperiksaan bertulis",
+    "forms": {
+      "ru": [
+        "письменный экзамен",
+        "письменного экзамена",
+        "письменному экзамену",
+        "письменным экзаменом",
+        "письменном экзамене"
+      ],
+      "ms": [
+        "peperiksaan bertulis"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5126",
+      "sourceTitle": "письменный экзамен",
+      "sourceTranslation": "peperiksaan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Письменный экзамен начнётся в десять.",
+        "ms": "Peperiksaan bertulis akan bermula pada pukul sepuluh.",
+        "ruExpression": "письменный экзамен",
+        "msExpression": "peperiksaan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Студенты готовятся к письменному экзамену.",
+        "ms": "Pelajar sedang bersedia untuk peperiksaan bertulis.",
+        "ruExpression": "письменному экзамену",
+        "msExpression": "peperiksaan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0548",
+    "ru": "устный экзамен",
+    "ms": "peperiksaan lisan",
+    "forms": {
+      "ru": [
+        "устный экзамен",
+        "устного экзамена",
+        "устному экзамену",
+        "устным экзаменом",
+        "устном экзамене"
+      ],
+      "ms": [
+        "peperiksaan lisan"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5127",
+      "sourceTitle": "устный экзамен",
+      "sourceTranslation": "peperiksaan lisan"
+    },
+    "examples": [
+      {
+        "ru": "Устный экзамен проходит в другом кабинете.",
+        "ms": "Peperiksaan lisan diadakan di bilik lain.",
+        "ruExpression": "устный экзамен",
+        "msExpression": "peperiksaan lisan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Преподаватель объяснил порядок устного экзамена.",
+        "ms": "Pensyarah menerangkan prosedur peperiksaan lisan.",
+        "ruExpression": "устного экзамена",
+        "msExpression": "peperiksaan lisan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0549",
+    "ru": "результат экзамена",
+    "ms": "keputusan peperiksaan",
+    "forms": {
+      "ru": [
+        "результат экзамена",
+        "результата экзамена",
+        "результату экзамена",
+        "результатом экзамена",
+        "результате экзамена"
+      ],
+      "ms": [
+        "keputusan peperiksaan"
+      ]
+    },
+    "topic": "образование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5132",
+      "sourceTitle": "результат экзамена",
+      "sourceTranslation": "keputusan peperiksaan"
+    },
+    "examples": [
+      {
+        "ru": "Результат экзамена уже опубликован.",
+        "ms": "Keputusan peperiksaan sudah diumumkan.",
+        "ruExpression": "результат экзамена",
+        "msExpression": "keputusan peperiksaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Я проверил результат экзамена на сайте.",
+        "ms": "Saya menyemak keputusan peperiksaan di laman web.",
+        "ruExpression": "результат экзамена",
+        "msExpression": "keputusan peperiksaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0550",
+    "ru": "план поездки",
+    "ms": "rancangan perjalanan",
+    "forms": {
+      "ru": [
+        "план поездки",
+        "плана поездки",
+        "плану поездки",
+        "планом поездки",
+        "плане поездки"
+      ],
+      "ms": [
+        "rancangan perjalanan"
+      ]
+    },
+    "topic": "путешествия",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5141",
+      "sourceTitle": "план поездки",
+      "sourceTranslation": "rancangan perjalanan"
+    },
+    "examples": [
+      {
+        "ru": "План поездки изменился из-за погоды.",
+        "ms": "Rancangan perjalanan berubah kerana cuaca.",
+        "ruExpression": "план поездки",
+        "msExpression": "rancangan perjalanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы обсудили план поездки вечером.",
+        "ms": "Kami membincangkan rancangan perjalanan pada waktu malam.",
+        "ruExpression": "план поездки",
+        "msExpression": "rancangan perjalanan",
         "origin": "original_teaching_example"
       }
     ]

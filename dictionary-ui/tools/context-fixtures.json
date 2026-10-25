@@ -798,5 +798,205 @@
   [
     "оплата онлайн",
     "bayaran dalam talian"
+  ],
+  [
+    "прием документов",
+    "penerimaan dokumen"
+  ],
+  [
+    "выдача документов",
+    "pengeluaran dokumen"
+  ],
+  [
+    "входящий номер",
+    "nombor rujukan masuk"
+  ],
+  [
+    "исходящий номер",
+    "nombor rujukan keluar"
+  ],
+  [
+    "номер справки",
+    "nombor sijil"
+  ],
+  [
+    "срок действия документа",
+    "tempoh sah dokumen"
+  ],
+  [
+    "замена документа",
+    "penggantian dokumen"
+  ],
+  [
+    "утеря документа",
+    "kehilangan dokumen"
+  ],
+  [
+    "повреждение документа",
+    "kerosakan dokumen"
+  ],
+  [
+    "заявление на замену",
+    "permohonan penggantian"
+  ],
+  [
+    "заявление на продление",
+    "permohonan pembaharuan"
+  ],
+  [
+    "образец заявления",
+    "contoh permohonan"
+  ],
+  [
+    "пустой бланк",
+    "borang kosong"
+  ],
+  [
+    "подпись заявителя",
+    "tandatangan pemohon"
+  ],
+  [
+    "список приложений",
+    "senarai lampiran"
+  ],
+  [
+    "страница документа",
+    "halaman dokumen"
+  ],
+  [
+    "электронная подпись",
+    "tandatangan elektronik"
+  ],
+  [
+    "цифровая подпись",
+    "tandatangan digital"
+  ],
+  [
+    "проверка личности",
+    "pengesahan identiti"
+  ],
+  [
+    "идентификационный номер",
+    "nombor pengenalan"
+  ],
+  [
+    "родной язык",
+    "bahasa ibunda"
+  ],
+  [
+    "иностранный язык",
+    "bahasa asing"
+  ],
+  [
+    "малайский язык",
+    "bahasa Melayu"
+  ],
+  [
+    "русский язык",
+    "bahasa Rusia"
+  ],
+  [
+    "английский язык",
+    "bahasa Inggeris"
+  ],
+  [
+    "значение слова",
+    "maksud perkataan"
+  ],
+  [
+    "правило грамматики",
+    "peraturan tatabahasa"
+  ],
+  [
+    "единственное число",
+    "bentuk tunggal"
+  ],
+  [
+    "множественное число",
+    "bentuk jamak"
+  ],
+  [
+    "прошедшее время",
+    "masa lampau"
+  ],
+  [
+    "настоящее время",
+    "masa kini"
+  ],
+  [
+    "дословный перевод",
+    "terjemahan harfiah"
+  ],
+  [
+    "свободный перевод",
+    "terjemahan bebas"
+  ],
+  [
+    "точный перевод",
+    "terjemahan tepat"
+  ],
+  [
+    "неточный перевод",
+    "terjemahan tidak tepat"
+  ],
+  [
+    "ошибка в переводе",
+    "kesilapan dalam terjemahan"
+  ],
+  [
+    "машинный перевод",
+    "terjemahan mesin"
+  ],
+  [
+    "устный перевод",
+    "terjemahan lisan"
+  ],
+  [
+    "письменный перевод",
+    "terjemahan bertulis"
+  ],
+  [
+    "синхронный перевод",
+    "terjemahan serentak"
+  ],
+  [
+    "словарная статья",
+    "entri kamus"
+  ],
+  [
+    "бумажный словарь",
+    "kamus bercetak"
+  ],
+  [
+    "языковой курс",
+    "kursus bahasa"
+  ],
+  [
+    "начальный уровень",
+    "tahap permulaan"
+  ],
+  [
+    "средний уровень",
+    "tahap pertengahan"
+  ],
+  [
+    "продвинутый уровень",
+    "tahap lanjutan"
+  ],
+  [
+    "письменный экзамен",
+    "peperiksaan bertulis"
+  ],
+  [
+    "устный экзамен",
+    "peperiksaan lisan"
+  ],
+  [
+    "результат экзамена",
+    "keputusan peperiksaan"
+  ],
+  [
+    "план поездки",
+    "rancangan perjalanan"
   ]
 ]

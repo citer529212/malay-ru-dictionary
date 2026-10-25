@@ -7,16 +7,21 @@ import { directionForQuery, normalizeHeadwordLoose as key } from '../search-core
 const read = name => JSON.parse(fs.readFileSync(new URL(name, import.meta.url), 'utf8'));
 const gold = read('../data/dictionary_ru_ms_gold.json').entries;
 const baseline = read('./context-baseline.json');
+const expected = read('./context-corpus-manifest.json');
+const previous = contextCorpus.slice(0, expected.protectedPreviousEntries).map(row => Object.fromEntries(Object.entries(row).filter(([field]) => field !== 'examples')));
+assert.equal(crypto.createHash('sha256').update(JSON.stringify(previous)).digest('hex'), expected.previousEntriesSha256, 'Previous corpus pairs, forms, topics or provenance changed');
+const unchangedExamples = contextCorpus.slice(0,expected.protectedPreviousEntries).filter(row=>!expected.enrichedExistingIds.includes(row.id)).map(row=>({id:row.id,examples:row.examples}));
+assert.equal(crypto.createHash('sha256').update(JSON.stringify(unchangedExamples)).digest('hex'),expected.unchangedPreviousExamplesSha256,'Unselected previous examples changed');
 let protectedFiles = 0;
 for (const [file, hash] of Object.entries(baseline)) {
   if (!file.startsWith('data/')) continue;
   assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../'+file, import.meta.url))).digest('hex'), hash, `Existing database changed: ${file}`);
   protectedFiles++;
 }
-assert.equal(contextCorpus.length, 500);
-assert.equal(new Set(contextCorpus.map(r => r.id)).size, 500);
-assert.equal(new Set(contextCorpus.map(r => key(r.ru))).size, 500);
-assert.equal(new Set(contextCorpus.map(r => key(r.ms))).size, 500);
+assert.equal(contextCorpus.length, expected.expressions);
+assert.equal(new Set(contextCorpus.map(r => r.id)).size, expected.expressions);
+assert.equal(new Set(contextCorpus.map(r => key(r.ru))).size, expected.expressions);
+assert.equal(new Set(contextCorpus.map(r => key(r.ms))).size, expected.expressions);
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
   assert.equal(row.verified, true);
@@ -53,9 +58,9 @@ for (const row of contextCorpus) {
     }
   }
 }
-assert.equal(contextCorpus.reduce((sum, row) => sum + row.examples.length, 0), 700);
+assert.equal(contextCorpus.reduce((sum, row) => sum + row.examples.length, 0), expected.examples);
 const enriched = contextCorpus.filter(row => row.examples.length >= 2);
-assert.equal(enriched.length, 200);
+assert.equal(enriched.length, expected.enrichedExpressions);
 for (const row of enriched) {
   assert.equal(new Set(row.examples.map(example => key(example.ru))).size, row.examples.length);
   assert.equal(new Set(row.examples.map(example => key(example.ms))).size, row.examples.length);
@@ -84,12 +89,12 @@ assert.equal(mergeContextResults('воды',searchContextCorpus(contextCorpus,'�
 
 for (const direction of ['ru-ms','ms-ru']) {
   const catalogue = browseContextCorpus(contextCorpus, direction);
-  assert.equal(catalogue.length, 500);
-  assert.equal(new Set(catalogue.map(hit => hit.id)).size, 500);
+  assert.equal(catalogue.length, expected.expressions);
+  assert.equal(new Set(catalogue.map(hit => hit.id)).size, expected.expressions);
   assert.ok(catalogue.every(hit => hit._contextKind === 5 && hit.verified));
-  assert.equal(catalogue.reduce((sum,hit) => sum + hit.senses.length,0),700);
+  assert.equal(catalogue.reduce((sum,hit) => sum + hit.senses.length,0),expected.examples);
   const food = browseContextCorpus(contextCorpus, direction, {topic:'еда'});
-  assert.ok(food.length > 0 && food.length < 500);
+  assert.ok(food.length > 0 && food.length < expected.expressions);
   assert.ok(food.every(hit => hit.domain === 'еда'));
   assert.deepEqual(browseContextCorpus(contextCorpus, direction, {topic:'unknown-topic'}),[]);
 }
@@ -111,7 +116,7 @@ assert.deepEqual(JSON.parse(serializeContextFavorites([],contextCorpus)).entries
 assert.equal(JSON.stringify(contextCorpus),unchangedCorpus);
 
 const fullSelectionText = serializeContextFavorites(contextCorpus.map(row=>row.id),contextCorpus);
-assert.equal(planContextFavoritesImport(fullSelectionText,contextCorpus).acceptedIds.length,500);
+assert.equal(planContextFavoritesImport(fullSelectionText,contextCorpus).acceptedIds.length,expected.expressions);
 const selectionText = serializeContextFavorites(['context-0005','context-0015'],contextCorpus);
 const selectionPayload = JSON.parse(selectionText);
 const importPlan = planContextFavoritesImport(selectionText,contextCorpus,['context-0005','context-0001']);
@@ -146,6 +151,12 @@ for(const changed of [{verified:false},{ru:'<img src=x>'},{verification:{sourceE
  assert.equal(rejected.conflictCount,1);
 }
 
+assert.equal(contextCorpus.find(row=>row.ru==='электронная подпись').topic,'документы и общество');
+assert.equal(contextCorpus.find(row=>row.ru==='родной язык').topic,'язык и перевод');
+assert.equal(searchContextCorpus(contextCorpus,'электронной подписи')[0].body,'tandatangan elektronik');
+assert.equal(searchContextCorpus(contextCorpus,'tandatangan digital')[0].body,'цифровая подпись');
+assert.equal(searchContextCorpus(contextCorpus,'Bentuk tunggal')[0].body,'единственное число');
+assert.equal(searchContextCorpus(contextCorpus,'tahap lanjutan')[0].body,'продвинутый уровень');
 const exampleSearches = [
   ['застрял', 'замочная скважина'], ['tersangkut', 'lubang kunci'],
   ['прошлой неделе', 'домашний интернет'], ['sejak semalam', 'internet rumah'],
@@ -171,7 +182,7 @@ assert.equal(highlightContext('air mineral','air mineral','air'),'<mark>air mine
 assert.equal(highlightContext('airborne','air','borne'),'airborne');
 
 const fixtures = read('./context-fixtures.json');
-assert.equal(fixtures.length, 200);
+assert.equal(fixtures.length, expected.fixturesPerDirection);
 for (const [ru, ms] of fixtures) {
   assert.equal(searchContextCorpus(contextCorpus, ru)[0].body, ms);
   assert.equal(searchContextCorpus(contextCorpus, ms)[0].body, ru);
