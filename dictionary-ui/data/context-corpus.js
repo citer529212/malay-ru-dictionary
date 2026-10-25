@@ -28662,5 +28662,1072 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0726",
+    "ru": "деловое письмо",
+    "ms": "surat rasmi perniagaan",
+    "forms": {
+      "ru": [
+        "деловое письмо",
+        "делового письма",
+        "деловому письму",
+        "деловым письмом",
+        "деловом письме"
+      ],
+      "ms": [
+        "surat rasmi perniagaan"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3180",
+      "sourceTitle": "деловое письмо",
+      "sourceTranslation": "surat rasmi perniagaan"
+    },
+    "examples": [
+      {
+        "ru": "Деловое письмо содержит условия сотрудничества.",
+        "ms": "Surat rasmi perniagaan mengandungi syarat kerjasama.",
+        "ruExpression": "деловое письмо",
+        "msExpression": "surat rasmi perniagaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В деловом письме нужно указать контактные данные.",
+        "ms": "Maklumat hubungan perlu dinyatakan dalam surat rasmi perniagaan.",
+        "ruExpression": "деловом письме",
+        "msExpression": "surat rasmi perniagaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0727",
+    "ru": "отправить письмо",
+    "ms": "menghantar surat",
+    "forms": {
+      "ru": [
+        "отправить письмо",
+        "отправил письмо",
+        "отправила письмо",
+        "отправили письмо",
+        "отправим письмо",
+        "отправьте письмо"
+      ],
+      "ms": [
+        "menghantar surat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3733",
+      "sourceTitle": "отправить письмо",
+      "sourceTranslation": "menghantar surat"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно отправить письмо по почте.",
+        "ms": "Saya perlu menghantar surat melalui pos.",
+        "ruExpression": "отправить письмо",
+        "msExpression": "menghantar surat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отправила письмо заказчику вчера.",
+        "ms": "Dia telah menghantar surat kepada pelanggan semalam.",
+        "ruExpression": "отправила письмо",
+        "msExpression": "menghantar surat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0728",
+    "ru": "получить письмо",
+    "ms": "menerima surat",
+    "forms": {
+      "ru": [
+        "получить письмо",
+        "получил письмо",
+        "получила письмо",
+        "получили письмо",
+        "получим письмо",
+        "получите письмо"
+      ],
+      "ms": [
+        "menerima surat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3734",
+      "sourceTitle": "получить письмо",
+      "sourceTranslation": "menerima surat"
+    },
+    "examples": [
+      {
+        "ru": "Мы рассчитываем получить письмо на этой неделе.",
+        "ms": "Kami menjangkakan akan menerima surat pada minggu ini.",
+        "ruExpression": "получить письмо",
+        "msExpression": "menerima surat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он получил письмо от компании.",
+        "ms": "Dia telah menerima surat daripada syarikat.",
+        "ruExpression": "получил письмо",
+        "msExpression": "menerima surat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0729",
+    "ru": "протокол встречи",
+    "ms": "minit mesyuarat",
+    "forms": {
+      "ru": [
+        "протокол встречи",
+        "протокола встречи",
+        "протоколу встречи",
+        "протоколом встречи",
+        "протоколе встречи"
+      ],
+      "ms": [
+        "minit mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4153",
+      "sourceTitle": "протокол встречи",
+      "sourceTranslation": "minit mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Протокол встречи содержит принятые решения.",
+        "ms": "Minit mesyuarat mengandungi keputusan yang dibuat.",
+        "ruExpression": "протокол встречи",
+        "msExpression": "minit mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия протокола встречи отправлена участникам.",
+        "ms": "Salinan minit mesyuarat dihantar kepada para peserta.",
+        "ruExpression": "протокола встречи",
+        "msExpression": "minit mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0730",
+    "ru": "ответить на письмо",
+    "ms": "membalas e-mel",
+    "forms": {
+      "ru": [
+        "ответить на письмо",
+        "ответил на письмо",
+        "ответила на письмо",
+        "ответили на письмо",
+        "ответим на письмо",
+        "ответьте на письмо"
+      ],
+      "ms": [
+        "membalas e-mel"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4154",
+      "sourceTitle": "ответить на письмо",
+      "sourceTranslation": "membalas e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Нужно ответить на письмо до конца дня.",
+        "ms": "Kita perlu membalas e-mel sebelum akhir hari.",
+        "ruExpression": "ответить на письмо",
+        "msExpression": "membalas e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она ответила на письмо после встречи.",
+        "ms": "Dia telah membalas e-mel selepas mesyuarat.",
+        "ruExpression": "ответила на письмо",
+        "msExpression": "membalas e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0731",
+    "ru": "переслать письмо",
+    "ms": "memajukan e-mel",
+    "forms": {
+      "ru": [
+        "переслать письмо",
+        "переслал письмо",
+        "переслала письмо",
+        "переслали письмо",
+        "перешлём письмо",
+        "перешлите письмо"
+      ],
+      "ms": [
+        "memajukan e-mel"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4155",
+      "sourceTitle": "переслать письмо",
+      "sourceTranslation": "memajukan e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Прошу переслать письмо руководителю.",
+        "ms": "Saya meminta anda memajukan e-mel kepada pengurus.",
+        "ruExpression": "переслать письмо",
+        "msExpression": "memajukan e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь переслала письмо в другой отдел.",
+        "ms": "Setiausaha telah memajukan e-mel kepada jabatan lain.",
+        "ruExpression": "переслала письмо",
+        "msExpression": "memajukan e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0732",
+    "ru": "срочное письмо",
+    "ms": "e-mel segera",
+    "forms": {
+      "ru": [
+        "срочное письмо",
+        "срочного письма",
+        "срочному письму",
+        "срочным письмом",
+        "срочном письме"
+      ],
+      "ms": [
+        "e-mel segera"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4156",
+      "sourceTitle": "срочное письмо",
+      "sourceTranslation": "e-mel segera"
+    },
+    "examples": [
+      {
+        "ru": "Срочное письмо требует ответа сегодня.",
+        "ms": "E-mel segera memerlukan jawapan hari ini.",
+        "ruExpression": "срочное письмо",
+        "msExpression": "e-mel segera",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В срочном письме указана новая дата встречи.",
+        "ms": "Tarikh mesyuarat yang baharu dinyatakan dalam e-mel segera.",
+        "ruExpression": "срочном письме",
+        "msExpression": "e-mel segera",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0733",
+    "ru": "ответить на вопрос",
+    "ms": "menjawab soalan",
+    "forms": {
+      "ru": [
+        "ответить на вопрос",
+        "ответил на вопрос",
+        "ответила на вопрос",
+        "ответили на вопрос",
+        "ответим на вопрос",
+        "ответьте на вопрос"
+      ],
+      "ms": [
+        "menjawab soalan"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4173",
+      "sourceTitle": "ответить на вопрос",
+      "sourceTranslation": "menjawab soalan"
+    },
+    "examples": [
+      {
+        "ru": "Специалист поможет ответить на вопрос о переводе.",
+        "ms": "Pakar akan membantu menjawab soalan tentang terjemahan.",
+        "ruExpression": "ответить на вопрос",
+        "msExpression": "menjawab soalan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она ответила на вопрос участника встречи.",
+        "ms": "Dia telah menjawab soalan peserta mesyuarat.",
+        "ruExpression": "ответила на вопрос",
+        "msExpression": "menjawab soalan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0734",
+    "ru": "подтвердить время",
+    "ms": "mengesahkan masa",
+    "forms": {
+      "ru": [
+        "подтвердить время",
+        "подтвердил время",
+        "подтвердила время",
+        "подтвердили время",
+        "подтвердим время",
+        "подтвердите время"
+      ],
+      "ms": [
+        "mengesahkan masa"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4359",
+      "sourceTitle": "подтвердить время",
+      "sourceTranslation": "mengesahkan masa"
+    },
+    "examples": [
+      {
+        "ru": "Нужно подтвердить время встречи.",
+        "ms": "Kita perlu mengesahkan masa mesyuarat.",
+        "ruExpression": "подтвердить время",
+        "msExpression": "mengesahkan masa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Организатор подтвердил время по телефону.",
+        "ms": "Penganjur telah mengesahkan masa melalui telefon.",
+        "ruExpression": "подтвердил время",
+        "msExpression": "mengesahkan masa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0735",
+    "ru": "место встречи",
+    "ms": "tempat pertemuan",
+    "forms": {
+      "ru": [
+        "место встречи",
+        "места встречи",
+        "месту встречи",
+        "местом встречи",
+        "месте встречи"
+      ],
+      "ms": [
+        "tempat pertemuan"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5407",
+      "sourceTitle": "место встречи",
+      "sourceTranslation": "tempat pertemuan"
+    },
+    "examples": [
+      {
+        "ru": "Место встречи указано в приглашении.",
+        "ms": "Tempat pertemuan dinyatakan dalam jemputan.",
+        "ruExpression": "место встречи",
+        "msExpression": "tempat pertemuan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об изменении места встречи.",
+        "ms": "Maklumkan perubahan tempat pertemuan.",
+        "ruExpression": "места встречи",
+        "msExpression": "tempat pertemuan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0736",
+    "ru": "официальное письмо",
+    "ms": "surat rasmi",
+    "forms": {
+      "ru": [
+        "официальное письмо",
+        "официального письма",
+        "официальному письму",
+        "официальным письмом",
+        "официальном письме"
+      ],
+      "ms": [
+        "surat rasmi"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5439",
+      "sourceTitle": "официальное письмо",
+      "sourceTranslation": "surat rasmi"
+    },
+    "examples": [
+      {
+        "ru": "Официальное письмо подписано руководителем.",
+        "ms": "Surat rasmi ditandatangani oleh pengurus.",
+        "ruExpression": "официальное письмо",
+        "msExpression": "surat rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия официального письма хранится в архиве.",
+        "ms": "Salinan surat rasmi disimpan dalam arkib.",
+        "ruExpression": "официального письма",
+        "msExpression": "surat rasmi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0737",
+    "ru": "онлайн встреча",
+    "ms": "mesyuarat dalam talian",
+    "forms": {
+      "ru": [
+        "онлайн встреча",
+        "онлайн встречи",
+        "онлайн встрече",
+        "онлайн встречу",
+        "онлайн встречей",
+        "онлайн-встреча",
+        "онлайн-встречи",
+        "онлайн-встрече",
+        "онлайн-встречу",
+        "онлайн-встречей"
+      ],
+      "ms": [
+        "mesyuarat dalam talian"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5664",
+      "sourceTitle": "онлайн встреча",
+      "sourceTranslation": "mesyuarat dalam talian"
+    },
+    "examples": [
+      {
+        "ru": "Онлайн-встреча начнётся в десять часов.",
+        "ms": "Mesyuarat dalam talian akan bermula pada pukul sepuluh.",
+        "ruExpression": "онлайн-встреча",
+        "msExpression": "mesyuarat dalam talian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Приглашение на онлайн-встречу уже отправлено.",
+        "ms": "Jemputan ke mesyuarat dalam talian telah dihantar.",
+        "ruExpression": "онлайн-встречу",
+        "msExpression": "mesyuarat dalam talian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0738",
+    "ru": "присоединиться к встрече",
+    "ms": "menyertai mesyuarat",
+    "forms": {
+      "ru": [
+        "присоединиться к встрече",
+        "присоединился к встрече",
+        "присоединилась к встрече",
+        "присоединились к встрече",
+        "присоединимся к встрече",
+        "присоединитесь к встрече"
+      ],
+      "ms": [
+        "menyertai mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5666",
+      "sourceTitle": "присоединиться к встрече",
+      "sourceTranslation": "menyertai mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Вы можете присоединиться к встрече по ссылке.",
+        "ms": "Anda boleh menyertai mesyuarat melalui pautan.",
+        "ruExpression": "присоединиться к встрече",
+        "msExpression": "menyertai mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она присоединилась к встрече из офиса.",
+        "ms": "Dia telah menyertai mesyuarat dari pejabat.",
+        "ruExpression": "присоединилась к встрече",
+        "msExpression": "menyertai mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0739",
+    "ru": "ссылка на встречу",
+    "ms": "pautan mesyuarat",
+    "forms": {
+      "ru": [
+        "ссылка на встречу",
+        "ссылки на встречу",
+        "ссылке на встречу",
+        "ссылку на встречу",
+        "ссылкой на встречу"
+      ],
+      "ms": [
+        "pautan mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5667",
+      "sourceTitle": "ссылка на встречу",
+      "sourceTranslation": "pautan mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Ссылка на встречу находится в письме.",
+        "ms": "Pautan mesyuarat terdapat dalam e-mel.",
+        "ruExpression": "ссылка на встречу",
+        "msExpression": "pautan mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пришлите ссылку на встречу ещё раз.",
+        "ms": "Hantar pautan mesyuarat sekali lagi.",
+        "ruExpression": "ссылку на встречу",
+        "msExpression": "pautan mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0740",
+    "ru": "входящее письмо",
+    "ms": "e-mel masuk",
+    "forms": {
+      "ru": [
+        "входящее письмо",
+        "входящего письма",
+        "входящему письму",
+        "входящим письмом",
+        "входящем письме"
+      ],
+      "ms": [
+        "e-mel masuk"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5979",
+      "sourceTitle": "входящее письмо",
+      "sourceTranslation": "e-mel masuk"
+    },
+    "examples": [
+      {
+        "ru": "Входящее письмо содержит запрос документов.",
+        "ms": "E-mel masuk mengandungi permintaan dokumen.",
+        "ruExpression": "входящее письмо",
+        "msExpression": "e-mel masuk",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Во входящем письме указан номер заявки.",
+        "ms": "Nombor permohonan dinyatakan dalam e-mel masuk.",
+        "ruExpression": "входящем письме",
+        "msExpression": "e-mel masuk",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0741",
+    "ru": "письмо коллегам",
+    "ms": "e-mel kepada rakan sekerja",
+    "forms": {
+      "ru": [
+        "письмо коллегам",
+        "письма коллегам",
+        "письму коллегам",
+        "письмом коллегам",
+        "письме коллегам"
+      ],
+      "ms": [
+        "e-mel kepada rakan sekerja"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6404",
+      "sourceTitle": "письмо коллегам",
+      "sourceTranslation": "e-mel kepada rakan sekerja"
+    },
+    "examples": [
+      {
+        "ru": "Письмо коллегам содержит итоги встречи.",
+        "ms": "E-mel kepada rakan sekerja mengandungi hasil mesyuarat.",
+        "ruExpression": "письмо коллегам",
+        "msExpression": "e-mel kepada rakan sekerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме коллегам нужно указать следующие шаги.",
+        "ms": "Langkah seterusnya perlu dinyatakan dalam e-mel kepada rakan sekerja.",
+        "ruExpression": "письме коллегам",
+        "msExpression": "e-mel kepada rakan sekerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0742",
+    "ru": "служебное письмо",
+    "ms": "e-mel rasmi",
+    "forms": {
+      "ru": [
+        "служебное письмо",
+        "служебного письма",
+        "служебному письму",
+        "служебным письмом",
+        "служебном письме"
+      ],
+      "ms": [
+        "e-mel rasmi"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6405",
+      "sourceTitle": "служебное письмо",
+      "sourceTranslation": "e-mel rasmi"
+    },
+    "examples": [
+      {
+        "ru": "Служебное письмо отправлено всем отделам.",
+        "ms": "E-mel rasmi dihantar kepada semua jabatan.",
+        "ruExpression": "служебное письмо",
+        "msExpression": "e-mel rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В служебном письме сообщается об изменении графика.",
+        "ms": "Perubahan jadual dimaklumkan dalam e-mel rasmi.",
+        "ruExpression": "служебном письме",
+        "msExpression": "e-mel rasmi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0743",
+    "ru": "написать сообщение",
+    "ms": "menulis mesej",
+    "forms": {
+      "ru": [
+        "написать сообщение",
+        "написал сообщение",
+        "написала сообщение",
+        "написали сообщение",
+        "напишем сообщение",
+        "напишите сообщение"
+      ],
+      "ms": [
+        "menulis mesej"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6663",
+      "sourceTitle": "написать сообщение",
+      "sourceTranslation": "menulis mesej"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно написать сообщение организатору.",
+        "ms": "Saya perlu menulis mesej kepada penganjur.",
+        "ruExpression": "написать сообщение",
+        "msExpression": "menulis mesej",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она написала сообщение с новым адресом.",
+        "ms": "Dia telah menulis mesej yang mengandungi alamat baharu.",
+        "ruExpression": "написала сообщение",
+        "msExpression": "menulis mesej",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0744",
+    "ru": "прочитать сообщение",
+    "ms": "membaca mesej",
+    "forms": {
+      "ru": [
+        "прочитать сообщение",
+        "прочитал сообщение",
+        "прочитала сообщение",
+        "прочитали сообщение",
+        "прочитаем сообщение",
+        "прочитайте сообщение"
+      ],
+      "ms": [
+        "membaca mesej"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6666",
+      "sourceTitle": "прочитать сообщение",
+      "sourceTranslation": "membaca mesej"
+    },
+    "examples": [
+      {
+        "ru": "Не забудьте прочитать сообщение перед встречей.",
+        "ms": "Jangan lupa membaca mesej sebelum mesyuarat.",
+        "ruExpression": "прочитать сообщение",
+        "msExpression": "membaca mesej",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он прочитал сообщение утром.",
+        "ms": "Dia telah membaca mesej pada waktu pagi.",
+        "ruExpression": "прочитал сообщение",
+        "msExpression": "membaca mesej",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0745",
+    "ru": "ответить на сообщение",
+    "ms": "membalas mesej",
+    "forms": {
+      "ru": [
+        "ответить на сообщение",
+        "ответил на сообщение",
+        "ответила на сообщение",
+        "ответили на сообщение",
+        "ответим на сообщение",
+        "ответьте на сообщение"
+      ],
+      "ms": [
+        "membalas mesej"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6668",
+      "sourceTitle": "ответить на сообщение",
+      "sourceTranslation": "membalas mesej"
+    },
+    "examples": [
+      {
+        "ru": "Руководитель попросил ответить на сообщение сегодня.",
+        "ms": "Pengurus meminta kami membalas mesej hari ini.",
+        "ruExpression": "ответить на сообщение",
+        "msExpression": "membalas mesej",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она ответила на сообщение после обеда.",
+        "ms": "Dia telah membalas mesej selepas makan tengah hari.",
+        "ruExpression": "ответила на сообщение",
+        "msExpression": "membalas mesej",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0746",
+    "ru": "приложение к письму",
+    "ms": "lampiran e-mel",
+    "forms": {
+      "ru": [
+        "приложение к письму",
+        "приложения к письму",
+        "приложению к письму",
+        "приложением к письму",
+        "приложении к письму"
+      ],
+      "ms": [
+        "lampiran e-mel"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7480",
+      "sourceTitle": "приложение к письму",
+      "sourceTranslation": "lampiran e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Приложение к письму содержит список участников.",
+        "ms": "Lampiran e-mel mengandungi senarai peserta.",
+        "ruExpression": "приложение к письму",
+        "msExpression": "lampiran e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приложении к письму есть обновлённый план.",
+        "ms": "Lampiran e-mel mengandungi rancangan yang dikemas kini.",
+        "ruExpression": "приложении к письму",
+        "msExpression": "lampiran e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0747",
+    "ru": "приглашение на встречу",
+    "ms": "jemputan mesyuarat",
+    "forms": {
+      "ru": [
+        "приглашение на встречу",
+        "приглашения на встречу",
+        "приглашению на встречу",
+        "приглашением на встречу",
+        "приглашении на встречу"
+      ],
+      "ms": [
+        "jemputan mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9440",
+      "sourceTitle": "приглашение на встречу",
+      "sourceTranslation": "jemputan mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Приглашение на встречу отправлено по электронной почте.",
+        "ms": "Jemputan mesyuarat dihantar melalui e-mel.",
+        "ruExpression": "приглашение на встречу",
+        "msExpression": "jemputan mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приглашении на встречу указаны дата и время.",
+        "ms": "Tarikh dan masa dinyatakan dalam jemputan mesyuarat.",
+        "ruExpression": "приглашении на встречу",
+        "msExpression": "jemputan mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0748",
+    "ru": "очная встреча",
+    "ms": "mesyuarat bersemuka",
+    "forms": {
+      "ru": [
+        "очная встреча",
+        "очной встречи",
+        "очной встрече",
+        "очную встречу",
+        "очной встречей"
+      ],
+      "ms": [
+        "mesyuarat bersemuka"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9441",
+      "sourceTitle": "очная встреча",
+      "sourceTranslation": "mesyuarat bersemuka"
+    },
+    "examples": [
+      {
+        "ru": "Очная встреча состоится в главном офисе.",
+        "ms": "Mesyuarat bersemuka akan diadakan di pejabat utama.",
+        "ruExpression": "очная встреча",
+        "msExpression": "mesyuarat bersemuka",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подготовили документы для очной встречи.",
+        "ms": "Kami menyediakan dokumen untuk mesyuarat bersemuka.",
+        "ruExpression": "очной встречи",
+        "msExpression": "mesyuarat bersemuka",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0749",
+    "ru": "открыть встречу",
+    "ms": "memulakan mesyuarat",
+    "forms": {
+      "ru": [
+        "открыть встречу",
+        "открыл встречу",
+        "открыла встречу",
+        "открыли встречу",
+        "откроем встречу",
+        "откройте встречу"
+      ],
+      "ms": [
+        "memulakan mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9769",
+      "sourceTitle": "открыть встречу",
+      "sourceTranslation": "memulakan mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Председатель должен открыть встречу в девять часов.",
+        "ms": "Pengerusi perlu memulakan mesyuarat pada pukul sembilan.",
+        "ruExpression": "открыть встречу",
+        "msExpression": "memulakan mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она открыла встречу кратким приветствием.",
+        "ms": "Dia telah memulakan mesyuarat dengan ucapan ringkas.",
+        "ruExpression": "открыла встречу",
+        "msExpression": "memulakan mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0750",
+    "ru": "закрыть встречу",
+    "ms": "menamatkan mesyuarat",
+    "forms": {
+      "ru": [
+        "закрыть встречу",
+        "закрыл встречу",
+        "закрыла встречу",
+        "закрыли встречу",
+        "закроем встречу",
+        "закройте встречу"
+      ],
+      "ms": [
+        "menamatkan mesyuarat"
+      ]
+    },
+    "topic": "переписка и встречи",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9770",
+      "sourceTitle": "закрыть встречу",
+      "sourceTranslation": "menamatkan mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Председатель решил закрыть встречу после обсуждения.",
+        "ms": "Pengerusi memutuskan untuk menamatkan mesyuarat selepas perbincangan.",
+        "ruExpression": "закрыть встречу",
+        "msExpression": "menamatkan mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он закрыл встречу в полдень.",
+        "ms": "Dia telah menamatkan mesyuarat pada tengah hari.",
+        "ruExpression": "закрыл встречу",
+        "msExpression": "menamatkan mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

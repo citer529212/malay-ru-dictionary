@@ -54,6 +54,10 @@ for (const [query,title] of [
  ['перевёл документ','перевести документ'], ['перенесла приём','перенести прием'],
  ['получил документ по почте','получить документ по почте'],
  ['отправила подписанный документ','отправить подписанный документ'],
+ ['ответила на письмо','ответить на письмо'], ['ответила на сообщение','ответить на сообщение'],
+ ['присоединилась к встрече','присоединиться к встрече'],
+ ['протокола встречи','протокол встречи'], ['приложении к письму','приложение к письму'],
+ ['онлайн-встрече','онлайн встреча'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -83,6 +87,17 @@ for (const [query,direction,title] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Document action/form: ${query}`);
+}
+for (const [query,direction,title,translation] of [
+ ['ответить на письмо','ru-ms','ответить на письмо','membalas e-mel'],
+ ['ответить на сообщение','ru-ms','ответить на сообщение','membalas mesej'],
+ ['Dia telah membalas e-mel semalam.','ms-ru','membalas e-mel','ответить на письмо'],
+ ['Dia telah membalas mesej semalam.','ms-ru','membalas mesej','ответить на сообщение'],
+ ['Онлайн-встреча начнётся завтра.','ru-ms','онлайн встреча','mesyuarat dalam talian'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Correspondence distinction: ${query}`);
+ assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
