@@ -29729,5 +29729,1060 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0751",
+    "ru": "готовить данные",
+    "ms": "menyediakan data",
+    "forms": {
+      "ru": [
+        "готовить данные",
+        "готовит данные",
+        "готовят данные",
+        "готовил данные",
+        "готовила данные",
+        "готовили данные"
+      ],
+      "ms": [
+        "menyediakan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-1421",
+      "sourceTitle": "готовить данные",
+      "sourceTranslation": "menyediakan data"
+    },
+    "examples": [
+      {
+        "ru": "Аналитик начал готовить данные для отчёта.",
+        "ms": "Penganalisis mula menyediakan data untuk laporan.",
+        "ruExpression": "готовить данные",
+        "msExpression": "menyediakan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она готовила данные для презентации.",
+        "ms": "Dia menyediakan data untuk pembentangan.",
+        "ruExpression": "готовила данные",
+        "msExpression": "menyediakan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0752",
+    "ru": "ссылка на источник",
+    "ms": "rujukan sumber",
+    "forms": {
+      "ru": [
+        "ссылка на источник",
+        "ссылки на источник",
+        "ссылке на источник",
+        "ссылку на источник",
+        "ссылкой на источник"
+      ],
+      "ms": [
+        "rujukan sumber"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-1943",
+      "sourceTitle": "ссылка на источник",
+      "sourceTranslation": "rujukan sumber"
+    },
+    "examples": [
+      {
+        "ru": "Ссылка на источник указана под таблицей.",
+        "ms": "Rujukan sumber dinyatakan di bawah jadual.",
+        "ruExpression": "ссылка на источник",
+        "msExpression": "rujukan sumber",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Добавьте ссылку на источник в конце абзаца.",
+        "ms": "Tambahkan rujukan sumber pada akhir perenggan.",
+        "ruExpression": "ссылку на источник",
+        "msExpression": "rujukan sumber",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0753",
+    "ru": "средства массовой информации",
+    "ms": "media massa",
+    "forms": {
+      "ru": [
+        "средства массовой информации",
+        "средств массовой информации",
+        "средствам массовой информации",
+        "средствами массовой информации",
+        "средствах массовой информации"
+      ],
+      "ms": [
+        "media massa"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3039",
+      "sourceTitle": "средства массовой информации",
+      "sourceTranslation": "media massa"
+    },
+    "examples": [
+      {
+        "ru": "Средства массовой информации сообщили о конференции.",
+        "ms": "Media massa melaporkan tentang persidangan itu.",
+        "ruExpression": "средства массовой информации",
+        "msExpression": "media massa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В средствах массовой информации обсуждают результаты опроса.",
+        "ms": "Hasil tinjauan dibincangkan dalam media massa.",
+        "ruExpression": "средствах массовой информации",
+        "msExpression": "media massa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0754",
+    "ru": "конференционный доклад",
+    "ms": "kertas persidangan",
+    "forms": {
+      "ru": [
+        "конференционный доклад",
+        "конференционного доклада",
+        "конференционному докладу",
+        "конференционным докладом",
+        "конференционном докладе"
+      ],
+      "ms": [
+        "kertas persidangan"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3231",
+      "sourceTitle": "конференционный доклад",
+      "sourceTranslation": "kertas persidangan"
+    },
+    "examples": [
+      {
+        "ru": "Конференционный доклад посвящён переводу терминов.",
+        "ms": "Kertas persidangan membincangkan terjemahan istilah.",
+        "ruExpression": "конференционный доклад",
+        "msExpression": "kertas persidangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В конференционном докладе представлены новые данные.",
+        "ms": "Data baharu dibentangkan dalam kertas persidangan.",
+        "ruExpression": "конференционном докладе",
+        "msExpression": "kertas persidangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0755",
+    "ru": "тезисы доклада",
+    "ms": "abstrak persidangan",
+    "forms": {
+      "ru": [
+        "тезисы доклада",
+        "тезисов доклада",
+        "тезисам доклада",
+        "тезисами доклада",
+        "тезисах доклада"
+      ],
+      "ms": [
+        "abstrak persidangan"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3232",
+      "sourceTitle": "тезисы доклада",
+      "sourceTranslation": "abstrak persidangan"
+    },
+    "examples": [
+      {
+        "ru": "Тезисы доклада опубликованы на сайте конференции.",
+        "ms": "Abstrak persidangan diterbitkan di laman web persidangan.",
+        "ruExpression": "тезисы доклада",
+        "msExpression": "abstrak persidangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор проверил текст тезисов доклада.",
+        "ms": "Editor menyemak teks abstrak persidangan.",
+        "ruExpression": "тезисов доклада",
+        "msExpression": "abstrak persidangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0756",
+    "ru": "ключевые слова статьи",
+    "ms": "kata kunci artikel",
+    "forms": {
+      "ru": [
+        "ключевые слова статьи",
+        "ключевых слов статьи",
+        "ключевым словам статьи",
+        "ключевыми словами статьи",
+        "ключевых словах статьи"
+      ],
+      "ms": [
+        "kata kunci artikel"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3234",
+      "sourceTitle": "ключевые слова статьи",
+      "sourceTranslation": "kata kunci artikel"
+    },
+    "examples": [
+      {
+        "ru": "Ключевые слова статьи указаны после аннотации.",
+        "ms": "Kata kunci artikel dinyatakan selepas abstrak.",
+        "ruExpression": "ключевые слова статьи",
+        "msExpression": "kata kunci artikel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перевод ключевых слов статьи проверен редактором.",
+        "ms": "Terjemahan kata kunci artikel disemak oleh editor.",
+        "ruExpression": "ключевых слов статьи",
+        "msExpression": "kata kunci artikel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0757",
+    "ru": "данные исследования",
+    "ms": "data kajian",
+    "forms": {
+      "ru": [
+        "данные исследования",
+        "данных исследования",
+        "данным исследования",
+        "данными исследования"
+      ],
+      "ms": [
+        "data kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3240",
+      "sourceTitle": "данные исследования",
+      "sourceTranslation": "data kajian"
+    },
+    "examples": [
+      {
+        "ru": "Данные исследования представлены в таблице.",
+        "ms": "Data kajian dibentangkan dalam jadual.",
+        "ruExpression": "данные исследования",
+        "msExpression": "data kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Анализ данных исследования занял две недели.",
+        "ms": "Analisis data kajian mengambil masa dua minggu.",
+        "ruExpression": "данных исследования",
+        "msExpression": "data kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0758",
+    "ru": "приложение к работе",
+    "ms": "lampiran tesis",
+    "forms": {
+      "ru": [
+        "приложение к работе",
+        "приложения к работе",
+        "приложению к работе",
+        "приложением к работе",
+        "приложении к работе"
+      ],
+      "ms": [
+        "lampiran tesis"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3246",
+      "sourceTitle": "приложение к работе",
+      "sourceTranslation": "lampiran tesis"
+    },
+    "examples": [
+      {
+        "ru": "Приложение к работе содержит образец анкеты.",
+        "ms": "Lampiran tesis mengandungi contoh borang soal selidik.",
+        "ruExpression": "приложение к работе",
+        "msExpression": "lampiran tesis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приложении к работе приведены дополнительные таблицы.",
+        "ms": "Jadual tambahan disertakan dalam lampiran tesis.",
+        "ruExpression": "приложении к работе",
+        "msExpression": "lampiran tesis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0759",
+    "ru": "информационный центр",
+    "ms": "pusat maklumat",
+    "forms": {
+      "ru": [
+        "информационный центр",
+        "информационного центра",
+        "информационному центру",
+        "информационным центром",
+        "информационном центре"
+      ],
+      "ms": [
+        "pusat maklumat"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5148",
+      "sourceTitle": "информационный центр",
+      "sourceTranslation": "pusat maklumat"
+    },
+    "examples": [
+      {
+        "ru": "Информационный центр работает с девяти часов.",
+        "ms": "Pusat maklumat dibuka pada pukul sembilan.",
+        "ruExpression": "информационный центр",
+        "msExpression": "pusat maklumat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник информационного центра ответил на вопрос.",
+        "ms": "Kakitangan pusat maklumat menjawab soalan.",
+        "ruExpression": "информационного центра",
+        "msExpression": "pusat maklumat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0760",
+    "ru": "задачи исследования",
+    "ms": "tugas kajian",
+    "forms": {
+      "ru": [
+        "задачи исследования",
+        "задач исследования",
+        "задачам исследования",
+        "задачами исследования",
+        "задачах исследования"
+      ],
+      "ms": [
+        "tugas kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3255",
+      "sourceTitle": "задачи исследования",
+      "sourceTranslation": "tugas kajian"
+    },
+    "examples": [
+      {
+        "ru": "Задачи исследования перечислены во введении.",
+        "ms": "Tugas kajian disenaraikan dalam pengenalan.",
+        "ruExpression": "задачи исследования",
+        "msExpression": "tugas kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Список задач исследования согласован с руководителем.",
+        "ms": "Senarai tugas kajian dipersetujui bersama penyelia.",
+        "ruExpression": "задач исследования",
+        "msExpression": "tugas kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0761",
+    "ru": "объект исследования",
+    "ms": "objek kajian",
+    "forms": {
+      "ru": [
+        "объект исследования",
+        "объекта исследования",
+        "объекту исследования",
+        "объектом исследования",
+        "объекте исследования"
+      ],
+      "ms": [
+        "objek kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3256",
+      "sourceTitle": "объект исследования",
+      "sourceTranslation": "objek kajian"
+    },
+    "examples": [
+      {
+        "ru": "Объект исследования описан в первом разделе.",
+        "ms": "Objek kajian diterangkan dalam bahagian pertama.",
+        "ruExpression": "объект исследования",
+        "msExpression": "objek kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Выбор объекта исследования объясняется во введении.",
+        "ms": "Pemilihan objek kajian dijelaskan dalam pengenalan.",
+        "ruExpression": "объекта исследования",
+        "msExpression": "objek kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0762",
+    "ru": "предмет исследования",
+    "ms": "subjek kajian",
+    "forms": {
+      "ru": [
+        "предмет исследования",
+        "предмета исследования",
+        "предмету исследования",
+        "предметом исследования",
+        "предмете исследования"
+      ],
+      "ms": [
+        "subjek kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3257",
+      "sourceTitle": "предмет исследования",
+      "sourceTranslation": "subjek kajian"
+    },
+    "examples": [
+      {
+        "ru": "Предмет исследования связан с переводом терминов.",
+        "ms": "Subjek kajian berkaitan dengan terjemahan istilah.",
+        "ruExpression": "предмет исследования",
+        "msExpression": "subjek kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Описание предмета исследования включено во введение.",
+        "ms": "Penerangan subjek kajian dimasukkan dalam pengenalan.",
+        "ruExpression": "предмета исследования",
+        "msExpression": "subjek kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0763",
+    "ru": "результаты исследования",
+    "ms": "hasil kajian",
+    "forms": {
+      "ru": [
+        "результаты исследования",
+        "результатов исследования",
+        "результатам исследования",
+        "результатами исследования",
+        "результатах исследования"
+      ],
+      "ms": [
+        "hasil kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3258",
+      "sourceTitle": "результаты исследования",
+      "sourceTranslation": "hasil kajian"
+    },
+    "examples": [
+      {
+        "ru": "Результаты исследования представлены на конференции.",
+        "ms": "Hasil kajian dibentangkan dalam persidangan.",
+        "ruExpression": "результаты исследования",
+        "msExpression": "hasil kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обсуждение результатов исследования заняло час.",
+        "ms": "Perbincangan hasil kajian mengambil masa sejam.",
+        "ruExpression": "результатов исследования",
+        "msExpression": "hasil kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0764",
+    "ru": "выводы исследования",
+    "ms": "kesimpulan kajian",
+    "forms": {
+      "ru": [
+        "выводы исследования",
+        "выводов исследования",
+        "выводам исследования",
+        "выводами исследования",
+        "выводах исследования"
+      ],
+      "ms": [
+        "kesimpulan kajian"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3260",
+      "sourceTitle": "выводы исследования",
+      "sourceTranslation": "kesimpulan kajian"
+    },
+    "examples": [
+      {
+        "ru": "Выводы исследования приведены в конце статьи.",
+        "ms": "Kesimpulan kajian dinyatakan pada akhir artikel.",
+        "ruExpression": "выводы исследования",
+        "msExpression": "kesimpulan kajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В отчёте есть краткое изложение выводов исследования.",
+        "ms": "Laporan itu mengandungi ringkasan kesimpulan kajian.",
+        "ruExpression": "выводов исследования",
+        "msExpression": "kesimpulan kajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0765",
+    "ru": "подтверждать гипотезу",
+    "ms": "mengesahkan hipotesis",
+    "forms": {
+      "ru": [
+        "подтверждать гипотезу",
+        "подтверждает гипотезу",
+        "подтверждают гипотезу",
+        "подтверждал гипотезу",
+        "подтверждала гипотезу",
+        "подтверждали гипотезу"
+      ],
+      "ms": [
+        "mengesahkan hipotesis"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3266",
+      "sourceTitle": "подтверждать гипотезу",
+      "sourceTranslation": "mengesahkan hipotesis"
+    },
+    "examples": [
+      {
+        "ru": "Результаты могут подтверждать гипотезу автора.",
+        "ms": "Hasilnya boleh mengesahkan hipotesis penulis.",
+        "ruExpression": "подтверждать гипотезу",
+        "msExpression": "mengesahkan hipotesis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Этот результат подтверждал гипотезу исследования.",
+        "ms": "Hasil ini mengesahkan hipotesis kajian.",
+        "ruExpression": "подтверждал гипотезу",
+        "msExpression": "mengesahkan hipotesis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0766",
+    "ru": "обновить данные",
+    "ms": "mengemas kini data",
+    "forms": {
+      "ru": [
+        "обновить данные",
+        "обновил данные",
+        "обновила данные",
+        "обновили данные",
+        "обновим данные",
+        "обновите данные"
+      ],
+      "ms": [
+        "mengemas kini data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3783",
+      "sourceTitle": "обновить данные",
+      "sourceTranslation": "mengemas kini data"
+    },
+    "examples": [
+      {
+        "ru": "Перед подготовкой отчёта нужно обновить данные.",
+        "ms": "Kita perlu mengemas kini data sebelum menyediakan laporan.",
+        "ruExpression": "обновить данные",
+        "msExpression": "mengemas kini data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она обновила данные в таблице.",
+        "ms": "Dia telah mengemas kini data dalam jadual.",
+        "ruExpression": "обновила данные",
+        "msExpression": "mengemas kini data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0767",
+    "ru": "удалить данные",
+    "ms": "memadam data",
+    "forms": {
+      "ru": [
+        "удалить данные",
+        "удалил данные",
+        "удалила данные",
+        "удалили данные",
+        "удалим данные",
+        "удалите данные"
+      ],
+      "ms": [
+        "memadam data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5466",
+      "sourceTitle": "удалить данные",
+      "sourceTranslation": "memadam data"
+    },
+    "examples": [
+      {
+        "ru": "Пользователь решил удалить данные из приложения.",
+        "ms": "Pengguna memutuskan untuk memadam data daripada aplikasi.",
+        "ruExpression": "удалить данные",
+        "msExpression": "memadam data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Администратор удалил данные тестовой записи.",
+        "ms": "Pentadbir telah memadam data rekod ujian.",
+        "ruExpression": "удалил данные",
+        "msExpression": "memadam data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0768",
+    "ru": "исправить данные",
+    "ms": "membetulkan data",
+    "forms": {
+      "ru": [
+        "исправить данные",
+        "исправил данные",
+        "исправила данные",
+        "исправили данные",
+        "исправим данные",
+        "исправьте данные"
+      ],
+      "ms": [
+        "membetulkan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5467",
+      "sourceTitle": "исправить данные",
+      "sourceTranslation": "membetulkan data"
+    },
+    "examples": [
+      {
+        "ru": "Нужно исправить данные до публикации отчёта.",
+        "ms": "Kita perlu membetulkan data sebelum laporan diterbitkan.",
+        "ruExpression": "исправить данные",
+        "msExpression": "membetulkan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она исправила данные после проверки.",
+        "ms": "Dia telah membetulkan data selepas semakan.",
+        "ruExpression": "исправила данные",
+        "msExpression": "membetulkan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0769",
+    "ru": "подтвердить данные",
+    "ms": "mengesahkan data",
+    "forms": {
+      "ru": [
+        "подтвердить данные",
+        "подтвердил данные",
+        "подтвердила данные",
+        "подтвердили данные",
+        "подтвердим данные",
+        "подтвердите данные"
+      ],
+      "ms": [
+        "mengesahkan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5468",
+      "sourceTitle": "подтвердить данные",
+      "sourceTranslation": "mengesahkan data"
+    },
+    "examples": [
+      {
+        "ru": "Организатор попросил подтвердить данные участника.",
+        "ms": "Penganjur meminta kami mengesahkan data peserta.",
+        "ruExpression": "подтвердить данные",
+        "msExpression": "mengesahkan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник подтвердил данные по телефону.",
+        "ms": "Kakitangan itu telah mengesahkan data melalui telefon.",
+        "ruExpression": "подтвердил данные",
+        "msExpression": "mengesahkan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0770",
+    "ru": "сохранить данные",
+    "ms": "menyimpan data",
+    "forms": {
+      "ru": [
+        "сохранить данные",
+        "сохранил данные",
+        "сохранила данные",
+        "сохранили данные",
+        "сохраним данные",
+        "сохраните данные"
+      ],
+      "ms": [
+        "menyimpan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6647",
+      "sourceTitle": "сохранить данные",
+      "sourceTranslation": "menyimpan data"
+    },
+    "examples": [
+      {
+        "ru": "Не забудьте сохранить данные перед закрытием программы.",
+        "ms": "Jangan lupa menyimpan data sebelum menutup program.",
+        "ruExpression": "сохранить данные",
+        "msExpression": "menyimpan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сохранила данные в отдельном файле.",
+        "ms": "Dia telah menyimpan data dalam fail berasingan.",
+        "ruExpression": "сохранила данные",
+        "msExpression": "menyimpan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0771",
+    "ru": "восстановить данные",
+    "ms": "memulihkan data",
+    "forms": {
+      "ru": [
+        "восстановить данные",
+        "восстановил данные",
+        "восстановила данные",
+        "восстановили данные",
+        "восстановим данные",
+        "восстановите данные"
+      ],
+      "ms": [
+        "memulihkan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6648",
+      "sourceTitle": "восстановить данные",
+      "sourceTranslation": "memulihkan data"
+    },
+    "examples": [
+      {
+        "ru": "Из резервной копии можно восстановить данные.",
+        "ms": "Kita boleh memulihkan data daripada salinan sandaran.",
+        "ruExpression": "восстановить данные",
+        "msExpression": "memulihkan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Специалист восстановил данные после сбоя.",
+        "ms": "Pakar telah memulihkan data selepas gangguan sistem.",
+        "ruExpression": "восстановил данные",
+        "msExpression": "memulihkan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0772",
+    "ru": "перенести данные",
+    "ms": "memindahkan data",
+    "forms": {
+      "ru": [
+        "перенести данные",
+        "перенёс данные",
+        "перенесла данные",
+        "перенесли данные",
+        "перенесём данные",
+        "перенесите данные"
+      ],
+      "ms": [
+        "memindahkan data"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7437",
+      "sourceTitle": "перенести данные",
+      "sourceTranslation": "memindahkan data"
+    },
+    "examples": [
+      {
+        "ru": "Нужно перенести данные на новый компьютер.",
+        "ms": "Kita perlu memindahkan data ke komputer baharu.",
+        "ruExpression": "перенести данные",
+        "msExpression": "memindahkan data",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она перенесла данные в другую таблицу.",
+        "ms": "Dia telah memindahkan data ke jadual lain.",
+        "ruExpression": "перенесла данные",
+        "msExpression": "memindahkan data",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0773",
+    "ru": "персональные данные",
+    "ms": "data peribadi",
+    "forms": {
+      "ru": [
+        "персональные данные",
+        "персональных данных",
+        "персональным данным",
+        "персональными данными"
+      ],
+      "ms": [
+        "data peribadi"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5054",
+      "sourceTitle": "персональные данные",
+      "sourceTranslation": "data peribadi"
+    },
+    "examples": [
+      {
+        "ru": "Персональные данные хранятся в закрытой папке.",
+        "ms": "Data peribadi disimpan dalam folder yang aksesnya terhad.",
+        "ruExpression": "персональные данные",
+        "msExpression": "data peribadi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Доступ к персональным данным есть только у администратора.",
+        "ms": "Hanya pentadbir mempunyai akses kepada data peribadi.",
+        "ruExpression": "персональным данным",
+        "msExpression": "data peribadi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0774",
+    "ru": "проверенная информация",
+    "ms": "maklumat yang disahkan",
+    "forms": {
+      "ru": [
+        "проверенная информация",
+        "проверенной информации",
+        "проверенную информацию",
+        "проверенной информацией"
+      ],
+      "ms": [
+        "maklumat yang disahkan"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10190",
+      "sourceTitle": "проверенная информация",
+      "sourceTranslation": "maklumat yang disahkan"
+    },
+    "examples": [
+      {
+        "ru": "Проверенная информация включена в отчёт.",
+        "ms": "Maklumat yang disahkan dimasukkan dalam laporan.",
+        "ruExpression": "проверенная информация",
+        "msExpression": "maklumat yang disahkan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор использует только проверенную информацию.",
+        "ms": "Editor hanya menggunakan maklumat yang disahkan.",
+        "ruExpression": "проверенную информацию",
+        "msExpression": "maklumat yang disahkan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0775",
+    "ru": "неподтвержденная информация",
+    "ms": "maklumat yang belum disahkan",
+    "forms": {
+      "ru": [
+        "неподтвержденная информация",
+        "неподтверждённой информации",
+        "неподтверждённую информацию",
+        "неподтверждённой информацией"
+      ],
+      "ms": [
+        "maklumat yang belum disahkan"
+      ]
+    },
+    "topic": "данные и исследования",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10191",
+      "sourceTitle": "неподтвержденная информация",
+      "sourceTranslation": "maklumat yang belum disahkan"
+    },
+    "examples": [
+      {
+        "ru": "Неподтвержденная информация отмечена отдельно.",
+        "ms": "Maklumat yang belum disahkan ditandakan secara berasingan.",
+        "ruExpression": "неподтвержденная информация",
+        "msExpression": "maklumat yang belum disahkan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Редактор попросил проверить неподтверждённую информацию.",
+        "ms": "Editor meminta kami menyemak maklumat yang belum disahkan.",
+        "ruExpression": "неподтверждённую информацию",
+        "msExpression": "maklumat yang belum disahkan",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

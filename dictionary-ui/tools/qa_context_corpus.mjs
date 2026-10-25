@@ -58,6 +58,9 @@ for (const [query,title] of [
  ['присоединилась к встрече','присоединиться к встрече'],
  ['протокола встречи','протокол встречи'], ['приложении к письму','приложение к письму'],
  ['онлайн-встрече','онлайн встреча'],
+ ['данных исследования','данные исследования'], ['результатами исследования','результаты исследования'],
+ ['ключевых слов статьи','ключевые слова статьи'], ['подтверждала гипотезу','подтверждать гипотезу'],
+ ['перенёс данные','перенести данные'], ['неподтверждённую информацию','неподтвержденная информация'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -98,6 +101,16 @@ for (const [query,direction,title,translation] of [
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Correspondence distinction: ${query}`);
  assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title] of [
+ ['проверенная информация','ru-ms','проверенная информация'],
+ ['неподтверждённая информация','ru-ms','неподтвержденная информация'],
+ ['Maklumat yang disahkan dimasukkan dalam laporan.','ms-ru','maklumat yang disahkan'],
+ ['Maklumat yang belum disahkan ditandakan secara berasingan.','ms-ru','maklumat yang belum disahkan'],
+ ['результаты исследования','ru-ms','результаты исследования'],
+ ['kesimpulan kajian','ms-ru','kesimpulan kajian'],
+]) {
+ assert.equal(searchContextCorpus(contextCorpus,query,direction)[0]?.title,title,`Research distinction: ${query}`);
 }
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
