@@ -69,6 +69,10 @@ for (const [query,title] of [
  ['зарплате после налогов','зарплата после налогов'],
  ['неоплачиваемого отпуска','неоплачиваемый отпуск'],
  ['должностную инструкцию','должностная инструкция'], ['передала дела','передать дела'],
+ ['сдала зачёт','сдать зачет'], ['не сдала зачёт','не сдать зачет'],
+ ['записалась на пересдачу','записаться на пересдачу'],
+ ['оплатила обучение онлайн','оплатить обучение онлайн'],
+ ['академической справки','академическая справка'], ['номера студенческого билета','номер студенческого билета'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -144,6 +148,20 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Employment distinction: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['Она сдала зачёт вчера.','ru-ms','сдать зачет','lulus ujian'],
+ ['Она не сдала зачёт вчера.','ru-ms','не сдать зачет','tidak lulus ujian'],
+ ['Dia lulus ujian semalam.','ms-ru','lulus ujian','сдать зачет'],
+ ['Dia tidak lulus ujian semalam.','ms-ru','tidak lulus ujian','не сдать зачет'],
+ ['Она оплатила обучение онлайн вчера.','ru-ms','оплатить обучение онлайн','membayar yuran pengajian dalam talian'],
+ ['Dia membayar yuran pengajian dalam talian semalam.','ms-ru','membayar yuran pengajian dalam talian','оплатить обучение онлайн'],
+ ['Она взяла академический отпуск вчера.','ru-ms','взять академический отпуск','mengambil cuti akademik'],
+ ['Dia mengambil cuti akademik semalam.','ms-ru','mengambil cuti akademik','взять академический отпуск'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Education distinction: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;

@@ -32899,5 +32899,1061 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0826",
+    "ru": "записаться на курс",
+    "ms": "mendaftar untuk kursus",
+    "forms": {
+      "ru": [
+        "записаться на курс",
+        "записался на курс",
+        "записалась на курс",
+        "записались на курс",
+        "запишемся на курс",
+        "запишитесь на курс"
+      ],
+      "ms": [
+        "mendaftar untuk kursus"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6563",
+      "sourceTitle": "записаться на курс",
+      "sourceTranslation": "mendaftar untuk kursus"
+    },
+    "examples": [
+      {
+        "ru": "Я хочу записаться на курс перевода.",
+        "ms": "Saya mahu mendaftar untuk kursus terjemahan.",
+        "ruExpression": "записаться на курс",
+        "msExpression": "mendaftar untuk kursus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она записалась на курс в прошлом месяце.",
+        "ms": "Dia telah mendaftar untuk kursus pada bulan lalu.",
+        "ruExpression": "записалась на курс",
+        "msExpression": "mendaftar untuk kursus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0827",
+    "ru": "программа курса",
+    "ms": "program kursus",
+    "forms": {
+      "ru": [
+        "программа курса",
+        "программы курса",
+        "программе курса",
+        "программу курса",
+        "программой курса"
+      ],
+      "ms": [
+        "program kursus"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6567",
+      "sourceTitle": "программа курса",
+      "sourceTranslation": "program kursus"
+    },
+    "examples": [
+      {
+        "ru": "Программа курса опубликована на сайте.",
+        "ms": "Program kursus diterbitkan di laman web.",
+        "ruExpression": "программа курса",
+        "msExpression": "program kursus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В программе курса есть раздел об устном переводе.",
+        "ms": "Program kursus mengandungi bahagian tentang terjemahan lisan.",
+        "ruExpression": "программе курса",
+        "msExpression": "program kursus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0828",
+    "ru": "расписание курса",
+    "ms": "jadual kursus",
+    "forms": {
+      "ru": [
+        "расписание курса",
+        "расписания курса",
+        "расписанию курса",
+        "расписанием курса",
+        "расписании курса"
+      ],
+      "ms": [
+        "jadual kursus"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6568",
+      "sourceTitle": "расписание курса",
+      "sourceTranslation": "jadual kursus"
+    },
+    "examples": [
+      {
+        "ru": "Расписание курса отправлено участникам.",
+        "ms": "Jadual kursus dihantar kepada para peserta.",
+        "ruExpression": "расписание курса",
+        "msExpression": "jadual kursus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об изменении расписания курса.",
+        "ms": "Maklumkan perubahan jadual kursus.",
+        "ruExpression": "расписания курса",
+        "msExpression": "jadual kursus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0829",
+    "ru": "индивидуальное занятие",
+    "ms": "kelas individu",
+    "forms": {
+      "ru": [
+        "индивидуальное занятие",
+        "индивидуального занятия",
+        "индивидуальному занятию",
+        "индивидуальным занятием",
+        "индивидуальном занятии"
+      ],
+      "ms": [
+        "kelas individu"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6570",
+      "sourceTitle": "индивидуальное занятие",
+      "sourceTranslation": "kelas individu"
+    },
+    "examples": [
+      {
+        "ru": "Индивидуальное занятие начнётся в десять часов.",
+        "ms": "Kelas individu akan bermula pada pukul sepuluh.",
+        "ruExpression": "индивидуальное занятие",
+        "msExpression": "kelas individu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На индивидуальном занятии мы разбирали перевод письма.",
+        "ms": "Kami membincangkan terjemahan surat dalam kelas individu.",
+        "ruExpression": "индивидуальном занятии",
+        "msExpression": "kelas individu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0830",
+    "ru": "групповое занятие",
+    "ms": "kelas berkumpulan",
+    "forms": {
+      "ru": [
+        "групповое занятие",
+        "группового занятия",
+        "групповому занятию",
+        "групповым занятием",
+        "групповом занятии"
+      ],
+      "ms": [
+        "kelas berkumpulan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6571",
+      "sourceTitle": "групповое занятие",
+      "sourceTranslation": "kelas berkumpulan"
+    },
+    "examples": [
+      {
+        "ru": "Групповое занятие проходит по средам.",
+        "ms": "Kelas berkumpulan diadakan pada hari Rabu.",
+        "ruExpression": "групповое занятие",
+        "msExpression": "kelas berkumpulan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На групповом занятии студенты работают в парах.",
+        "ms": "Pelajar bekerja secara berpasangan dalam kelas berkumpulan.",
+        "ruExpression": "групповом занятии",
+        "msExpression": "kelas berkumpulan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0831",
+    "ru": "сертификат об окончании",
+    "ms": "sijil tamat kursus",
+    "forms": {
+      "ru": [
+        "сертификат об окончании",
+        "сертификата об окончании",
+        "сертификату об окончании",
+        "сертификатом об окончании",
+        "сертификате об окончании"
+      ],
+      "ms": [
+        "sijil tamat kursus"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6575",
+      "sourceTitle": "сертификат об окончании",
+      "sourceTranslation": "sijil tamat kursus"
+    },
+    "examples": [
+      {
+        "ru": "Сертификат об окончании курса отправлен участнику.",
+        "ms": "Sijil tamat kursus dihantar kepada peserta.",
+        "ruExpression": "сертификат об окончании",
+        "msExpression": "sijil tamat kursus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия сертификата об окончании курса приложена к резюме.",
+        "ms": "Salinan sijil tamat kursus dilampirkan pada resume.",
+        "ruExpression": "сертификата об окончании",
+        "msExpression": "sijil tamat kursus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0832",
+    "ru": "пересдать экзамен",
+    "ms": "mengulang peperiksaan",
+    "forms": {
+      "ru": [
+        "пересдать экзамен",
+        "пересдал экзамен",
+        "пересдала экзамен",
+        "пересдали экзамен",
+        "пересдадим экзамен",
+        "пересдайте экзамен"
+      ],
+      "ms": [
+        "mengulang peperiksaan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6580",
+      "sourceTitle": "пересдать экзамен",
+      "sourceTranslation": "mengulang peperiksaan"
+    },
+    "examples": [
+      {
+        "ru": "Студент планирует пересдать экзамен в июне.",
+        "ms": "Pelajar merancang untuk mengulang peperiksaan pada bulan Jun.",
+        "ruExpression": "пересдать экзамен",
+        "msExpression": "mengulang peperiksaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она пересдала экзамен на прошлой неделе.",
+        "ms": "Dia telah mengulang peperiksaan pada minggu lalu.",
+        "ruExpression": "пересдала экзамен",
+        "msExpression": "mengulang peperiksaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0833",
+    "ru": "дата экзамена",
+    "ms": "tarikh peperiksaan",
+    "forms": {
+      "ru": [
+        "дата экзамена",
+        "даты экзамена",
+        "дате экзамена",
+        "дату экзамена",
+        "датой экзамена"
+      ],
+      "ms": [
+        "tarikh peperiksaan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6581",
+      "sourceTitle": "дата экзамена",
+      "sourceTranslation": "tarikh peperiksaan"
+    },
+    "examples": [
+      {
+        "ru": "Дата экзамена указана в расписании.",
+        "ms": "Tarikh peperiksaan dinyatakan dalam jadual.",
+        "ruExpression": "дата экзамена",
+        "msExpression": "tarikh peperiksaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об изменении даты экзамена.",
+        "ms": "Maklumkan perubahan tarikh peperiksaan.",
+        "ruExpression": "даты экзамена",
+        "msExpression": "tarikh peperiksaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0834",
+    "ru": "проходной балл",
+    "ms": "markah lulus",
+    "forms": {
+      "ru": [
+        "проходной балл",
+        "проходного балла",
+        "проходному баллу",
+        "проходным баллом",
+        "проходном балле"
+      ],
+      "ms": [
+        "markah lulus"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6583",
+      "sourceTitle": "проходной балл",
+      "sourceTranslation": "markah lulus"
+    },
+    "examples": [
+      {
+        "ru": "Проходной балл указан в описании экзамена.",
+        "ms": "Markah lulus dinyatakan dalam penerangan peperiksaan.",
+        "ruExpression": "проходной балл",
+        "msExpression": "markah lulus",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о проходном балле доступна на сайте.",
+        "ms": "Maklumat tentang markah lulus tersedia di laman web.",
+        "ruExpression": "проходном балле",
+        "msExpression": "markah lulus",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0835",
+    "ru": "академическая справка",
+    "ms": "transkrip akademik",
+    "forms": {
+      "ru": [
+        "академическая справка",
+        "академической справки",
+        "академической справке",
+        "академическую справку",
+        "академической справкой"
+      ],
+      "ms": [
+        "transkrip akademik"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6587",
+      "sourceTitle": "академическая справка",
+      "sourceTranslation": "transkrip akademik"
+    },
+    "examples": [
+      {
+        "ru": "Академическая справка содержит список изученных дисциплин.",
+        "ms": "Transkrip akademik mengandungi senarai kursus yang telah dipelajari.",
+        "ruExpression": "академическая справка",
+        "msExpression": "transkrip akademik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия академической справки приложена к заявлению.",
+        "ms": "Salinan transkrip akademik dilampirkan pada permohonan.",
+        "ruExpression": "академической справки",
+        "msExpression": "transkrip akademik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0836",
+    "ru": "сдать зачет",
+    "ms": "lulus ujian",
+    "forms": {
+      "ru": [
+        "сдать зачет",
+        "сдал зачёт",
+        "сдала зачёт",
+        "сдали зачёт",
+        "сдадим зачёт",
+        "сдайте зачёт"
+      ],
+      "ms": [
+        "lulus ujian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6589",
+      "sourceTitle": "сдать зачет",
+      "sourceTranslation": "lulus ujian"
+    },
+    "examples": [
+      {
+        "ru": "Студент рассчитывает сдать зачет по языку.",
+        "ms": "Pelajar berharap dapat lulus ujian bahasa.",
+        "ruExpression": "сдать зачет",
+        "msExpression": "lulus ujian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сдала зачёт в пятницу.",
+        "ms": "Dia telah lulus ujian pada hari Jumaat.",
+        "ruExpression": "сдала зачёт",
+        "msExpression": "lulus ujian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0837",
+    "ru": "не сдать зачет",
+    "ms": "tidak lulus ujian",
+    "forms": {
+      "ru": [
+        "не сдать зачет",
+        "не сдал зачёт",
+        "не сдала зачёт",
+        "не сдали зачёт",
+        "не сдадим зачёт"
+      ],
+      "ms": [
+        "tidak lulus ujian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6590",
+      "sourceTitle": "не сдать зачет",
+      "sourceTranslation": "tidak lulus ujian"
+    },
+    "examples": [
+      {
+        "ru": "Он боялся не сдать зачет по языку.",
+        "ms": "Dia bimbang tidak lulus ujian bahasa.",
+        "ruExpression": "не сдать зачет",
+        "msExpression": "tidak lulus ujian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она не сдала зачёт в пятницу.",
+        "ms": "Dia tidak lulus ujian pada hari Jumaat.",
+        "ruExpression": "не сдала зачёт",
+        "msExpression": "tidak lulus ujian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0838",
+    "ru": "дипломная работа",
+    "ms": "tesis sarjana muda",
+    "forms": {
+      "ru": [
+        "дипломная работа",
+        "дипломной работы",
+        "дипломной работе",
+        "дипломную работу",
+        "дипломной работой"
+      ],
+      "ms": [
+        "tesis sarjana muda"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6599",
+      "sourceTitle": "дипломная работа",
+      "sourceTranslation": "tesis sarjana muda"
+    },
+    "examples": [
+      {
+        "ru": "Дипломная работа посвящена переводу терминов.",
+        "ms": "Tesis sarjana muda membincangkan terjemahan istilah.",
+        "ruExpression": "дипломная работа",
+        "msExpression": "tesis sarjana muda",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В дипломной работе приведены параллельные примеры.",
+        "ms": "Contoh selari diberikan dalam tesis sarjana muda.",
+        "ruExpression": "дипломной работе",
+        "msExpression": "tesis sarjana muda",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0839",
+    "ru": "справка об обучении",
+    "ms": "surat pengesahan pengajian",
+    "forms": {
+      "ru": [
+        "справка об обучении",
+        "справки об обучении",
+        "справке об обучении",
+        "справку об обучении",
+        "справкой об обучении"
+      ],
+      "ms": [
+        "surat pengesahan pengajian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8824",
+      "sourceTitle": "справка об обучении",
+      "sourceTranslation": "surat pengesahan pengajian"
+    },
+    "examples": [
+      {
+        "ru": "Справка об обучении готова к выдаче.",
+        "ms": "Surat pengesahan pengajian sedia untuk diambil.",
+        "ruExpression": "справка об обучении",
+        "msExpression": "surat pengesahan pengajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия справки об обучении нужна для заявления.",
+        "ms": "Salinan surat pengesahan pengajian diperlukan untuk permohonan.",
+        "ruExpression": "справки об обучении",
+        "msExpression": "surat pengesahan pengajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0840",
+    "ru": "выписка оценок",
+    "ms": "transkrip keputusan",
+    "forms": {
+      "ru": [
+        "выписка оценок",
+        "выписки оценок",
+        "выписке оценок",
+        "выписку оценок",
+        "выпиской оценок"
+      ],
+      "ms": [
+        "transkrip keputusan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8826",
+      "sourceTitle": "выписка оценок",
+      "sourceTranslation": "transkrip keputusan"
+    },
+    "examples": [
+      {
+        "ru": "Выписка оценок доступна в личном кабинете.",
+        "ms": "Transkrip keputusan tersedia dalam akaun peribadi.",
+        "ruExpression": "выписка оценок",
+        "msExpression": "transkrip keputusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В выписке оценок обнаружена ошибка.",
+        "ms": "Kesilapan dikesan dalam transkrip keputusan.",
+        "ruExpression": "выписке оценок",
+        "msExpression": "transkrip keputusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0841",
+    "ru": "учебный год",
+    "ms": "tahun akademik",
+    "forms": {
+      "ru": [
+        "учебный год",
+        "учебного года",
+        "учебному году",
+        "учебным годом",
+        "учебном году"
+      ],
+      "ms": [
+        "tahun akademik"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8845",
+      "sourceTitle": "учебный год",
+      "sourceTranslation": "tahun akademik"
+    },
+    "examples": [
+      {
+        "ru": "Учебный год начинается в сентябре в этом университете.",
+        "ms": "Tahun akademik bermula pada bulan September di universiti ini.",
+        "ruExpression": "учебный год",
+        "msExpression": "tahun akademik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Расписание на следующий учебный год уже опубликовано.",
+        "ms": "Jadual untuk tahun akademik seterusnya telah diterbitkan.",
+        "ruExpression": "учебный год",
+        "msExpression": "tahun akademik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0842",
+    "ru": "вступительный экзамен",
+    "ms": "peperiksaan kemasukan",
+    "forms": {
+      "ru": [
+        "вступительный экзамен",
+        "вступительного экзамена",
+        "вступительному экзамену",
+        "вступительным экзаменом",
+        "вступительном экзамене"
+      ],
+      "ms": [
+        "peperiksaan kemasukan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8849",
+      "sourceTitle": "вступительный экзамен",
+      "sourceTranslation": "peperiksaan kemasukan"
+    },
+    "examples": [
+      {
+        "ru": "Вступительный экзамен состоится в июле.",
+        "ms": "Peperiksaan kemasukan akan diadakan pada bulan Julai.",
+        "ruExpression": "вступительный экзамен",
+        "msExpression": "peperiksaan kemasukan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дата вступительного экзамена указана в приглашении.",
+        "ms": "Tarikh peperiksaan kemasukan dinyatakan dalam jemputan.",
+        "ruExpression": "вступительного экзамена",
+        "msExpression": "peperiksaan kemasukan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0843",
+    "ru": "стоимость обучения",
+    "ms": "yuran pengajian",
+    "forms": {
+      "ru": [
+        "стоимость обучения",
+        "стоимости обучения",
+        "стоимостью обучения"
+      ],
+      "ms": [
+        "yuran pengajian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8852",
+      "sourceTitle": "стоимость обучения",
+      "sourceTranslation": "yuran pengajian"
+    },
+    "examples": [
+      {
+        "ru": "Стоимость обучения указана в договоре.",
+        "ms": "Yuran pengajian dinyatakan dalam kontrak.",
+        "ruExpression": "стоимость обучения",
+        "msExpression": "yuran pengajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о стоимости обучения доступна на сайте.",
+        "ms": "Maklumat tentang yuran pengajian tersedia di laman web.",
+        "ruExpression": "стоимости обучения",
+        "msExpression": "yuran pengajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0844",
+    "ru": "оплатить обучение",
+    "ms": "membayar yuran pengajian",
+    "forms": {
+      "ru": [
+        "оплатить обучение",
+        "оплатил обучение",
+        "оплатила обучение",
+        "оплатили обучение",
+        "оплатим обучение",
+        "оплатите обучение"
+      ],
+      "ms": [
+        "membayar yuran pengajian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8853",
+      "sourceTitle": "оплатить обучение",
+      "sourceTranslation": "membayar yuran pengajian"
+    },
+    "examples": [
+      {
+        "ru": "Студент планирует оплатить обучение завтра.",
+        "ms": "Pelajar merancang untuk membayar yuran pengajian esok.",
+        "ruExpression": "оплатить обучение",
+        "msExpression": "membayar yuran pengajian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оплатила обучение в начале месяца.",
+        "ms": "Dia telah membayar yuran pengajian pada awal bulan.",
+        "ruExpression": "оплатила обучение",
+        "msExpression": "membayar yuran pengajian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0845",
+    "ru": "получать стипендию",
+    "ms": "menerima biasiswa",
+    "forms": {
+      "ru": [
+        "получать стипендию",
+        "получает стипендию",
+        "получают стипендию",
+        "получал стипендию",
+        "получала стипендию",
+        "получали стипендию"
+      ],
+      "ms": [
+        "menerima biasiswa"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8854",
+      "sourceTitle": "получать стипендию",
+      "sourceTranslation": "menerima biasiswa"
+    },
+    "examples": [
+      {
+        "ru": "Она продолжает получать стипендию.",
+        "ms": "Dia terus menerima biasiswa.",
+        "ruExpression": "получать стипендию",
+        "msExpression": "menerima biasiswa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Он получал стипендию во время учёбы.",
+        "ms": "Dia menerima biasiswa semasa pengajian.",
+        "ruExpression": "получал стипендию",
+        "msExpression": "menerima biasiswa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0846",
+    "ru": "язык обучения",
+    "ms": "bahasa pengantar",
+    "forms": {
+      "ru": [
+        "язык обучения",
+        "языка обучения",
+        "языку обучения",
+        "языком обучения",
+        "языке обучения"
+      ],
+      "ms": [
+        "bahasa pengantar"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8856",
+      "sourceTitle": "язык обучения",
+      "sourceTranslation": "bahasa pengantar"
+    },
+    "examples": [
+      {
+        "ru": "Язык обучения указан в описании программы.",
+        "ms": "Bahasa pengantar dinyatakan dalam penerangan program.",
+        "ruExpression": "язык обучения",
+        "msExpression": "bahasa pengantar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о языке обучения есть на сайте факультета.",
+        "ms": "Maklumat tentang bahasa pengantar terdapat di laman web fakulti.",
+        "ruExpression": "языке обучения",
+        "msExpression": "bahasa pengantar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0847",
+    "ru": "записаться на пересдачу",
+    "ms": "mendaftar untuk peperiksaan ulangan",
+    "forms": {
+      "ru": [
+        "записаться на пересдачу",
+        "записался на пересдачу",
+        "записалась на пересдачу",
+        "записались на пересдачу",
+        "запишемся на пересдачу",
+        "запишитесь на пересдачу"
+      ],
+      "ms": [
+        "mendaftar untuk peperiksaan ulangan"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8892",
+      "sourceTitle": "записаться на пересдачу",
+      "sourceTranslation": "mendaftar untuk peperiksaan ulangan"
+    },
+    "examples": [
+      {
+        "ru": "Студент хочет записаться на пересдачу.",
+        "ms": "Pelajar mahu mendaftar untuk peperiksaan ulangan.",
+        "ruExpression": "записаться на пересдачу",
+        "msExpression": "mendaftar untuk peperiksaan ulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она записалась на пересдачу через сайт.",
+        "ms": "Dia telah mendaftar untuk peperiksaan ulangan melalui laman web.",
+        "ruExpression": "записалась на пересдачу",
+        "msExpression": "mendaftar untuk peperiksaan ulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0848",
+    "ru": "взять академический отпуск",
+    "ms": "mengambil cuti akademik",
+    "forms": {
+      "ru": [
+        "взять академический отпуск",
+        "взял академический отпуск",
+        "взяла академический отпуск",
+        "взяли академический отпуск",
+        "возьмём академический отпуск",
+        "возьмите академический отпуск"
+      ],
+      "ms": [
+        "mengambil cuti akademik"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8897",
+      "sourceTitle": "взять академический отпуск",
+      "sourceTranslation": "mengambil cuti akademik"
+    },
+    "examples": [
+      {
+        "ru": "Студент решил взять академический отпуск.",
+        "ms": "Pelajar memutuskan untuk mengambil cuti akademik.",
+        "ruExpression": "взять академический отпуск",
+        "msExpression": "mengambil cuti akademik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она взяла академический отпуск на семестр.",
+        "ms": "Dia telah mengambil cuti akademik selama satu semester.",
+        "ruExpression": "взяла академический отпуск",
+        "msExpression": "mengambil cuti akademik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0849",
+    "ru": "номер студенческого билета",
+    "ms": "nombor kad pelajar",
+    "forms": {
+      "ru": [
+        "номер студенческого билета",
+        "номера студенческого билета",
+        "номеру студенческого билета",
+        "номером студенческого билета",
+        "номере студенческого билета"
+      ],
+      "ms": [
+        "nombor kad pelajar"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8905",
+      "sourceTitle": "номер студенческого билета",
+      "sourceTranslation": "nombor kad pelajar"
+    },
+    "examples": [
+      {
+        "ru": "Номер студенческого билета указан в заявлении.",
+        "ms": "Nombor kad pelajar dinyatakan dalam permohonan.",
+        "ruExpression": "номер студенческого билета",
+        "msExpression": "nombor kad pelajar",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте правильность номера студенческого билета.",
+        "ms": "Semak ketepatan nombor kad pelajar.",
+        "ruExpression": "номера студенческого билета",
+        "msExpression": "nombor kad pelajar",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0850",
+    "ru": "оплатить обучение онлайн",
+    "ms": "membayar yuran pengajian dalam talian",
+    "forms": {
+      "ru": [
+        "оплатить обучение онлайн",
+        "оплатил обучение онлайн",
+        "оплатила обучение онлайн",
+        "оплатили обучение онлайн",
+        "оплатим обучение онлайн",
+        "оплатите обучение онлайн"
+      ],
+      "ms": [
+        "membayar yuran pengajian dalam talian"
+      ]
+    },
+    "topic": "обучение и учебные документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8914",
+      "sourceTitle": "оплатить обучение онлайн",
+      "sourceTranslation": "membayar yuran pengajian dalam talian"
+    },
+    "examples": [
+      {
+        "ru": "Можно оплатить обучение онлайн.",
+        "ms": "Anda boleh membayar yuran pengajian dalam talian.",
+        "ruExpression": "оплатить обучение онлайн",
+        "msExpression": "membayar yuran pengajian dalam talian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оплатила обучение онлайн вчера.",
+        "ms": "Dia telah membayar yuran pengajian dalam talian semalam.",
+        "ruExpression": "оплатила обучение онлайн",
+        "msExpression": "membayar yuran pengajian dalam talian",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];
