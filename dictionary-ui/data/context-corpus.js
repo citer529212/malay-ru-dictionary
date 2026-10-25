@@ -33955,5 +33955,1064 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0851",
+    "ru": "подтвердить бронь",
+    "ms": "mengesahkan tempahan",
+    "forms": {
+      "ru": [
+        "подтвердить бронь",
+        "подтвердил бронь",
+        "подтвердила бронь",
+        "подтвердили бронь",
+        "подтвердим бронь",
+        "подтвердите бронь"
+      ],
+      "ms": [
+        "mengesahkan tempahan"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2321",
+      "sourceTitle": "подтвердить бронь",
+      "sourceTranslation": "mengesahkan tempahan"
+    },
+    "examples": [
+      {
+        "ru": "Отель попросил подтвердить бронь по электронной почте.",
+        "ms": "Hotel meminta kami mengesahkan tempahan melalui e-mel.",
+        "ruExpression": "подтвердить бронь",
+        "msExpression": "mengesahkan tempahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она подтвердила бронь утром.",
+        "ms": "Dia telah mengesahkan tempahan pada waktu pagi.",
+        "ruExpression": "подтвердила бронь",
+        "msExpression": "mengesahkan tempahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0852",
+    "ru": "отменить бронь",
+    "ms": "membatalkan tempahan",
+    "forms": {
+      "ru": [
+        "отменить бронь",
+        "отменил бронь",
+        "отменила бронь",
+        "отменили бронь",
+        "отменим бронь",
+        "отмените бронь"
+      ],
+      "ms": [
+        "membatalkan tempahan"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2322",
+      "sourceTitle": "отменить бронь",
+      "sourceTranslation": "membatalkan tempahan"
+    },
+    "examples": [
+      {
+        "ru": "Гость решил отменить бронь до поездки.",
+        "ms": "Tetamu memutuskan untuk membatalkan tempahan sebelum perjalanan.",
+        "ruExpression": "отменить бронь",
+        "msExpression": "membatalkan tempahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она отменила бронь через приложение.",
+        "ms": "Dia telah membatalkan tempahan melalui aplikasi.",
+        "ruExpression": "отменила бронь",
+        "msExpression": "membatalkan tempahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0853",
+    "ru": "сдать багаж",
+    "ms": "mendaftar masuk bagasi",
+    "forms": {
+      "ru": [
+        "сдать багаж",
+        "сдал багаж",
+        "сдала багаж",
+        "сдали багаж",
+        "сдадим багаж",
+        "сдайте багаж"
+      ],
+      "ms": [
+        "mendaftar masuk bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2411",
+      "sourceTitle": "сдать багаж",
+      "sourceTranslation": "mendaftar masuk bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно сдать багаж перед вылетом.",
+        "ms": "Saya perlu mendaftar masuk bagasi sebelum berlepas.",
+        "ruExpression": "сдать багаж",
+        "msExpression": "mendaftar masuk bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сдала багаж на стойке регистрации.",
+        "ms": "Dia telah mendaftar masuk bagasi di kaunter daftar masuk.",
+        "ruExpression": "сдала багаж",
+        "msExpression": "mendaftar masuk bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0854",
+    "ru": "получить багаж",
+    "ms": "mengambil bagasi",
+    "forms": {
+      "ru": [
+        "получить багаж",
+        "получил багаж",
+        "получила багаж",
+        "получили багаж",
+        "получим багаж",
+        "получите багаж"
+      ],
+      "ms": [
+        "mengambil bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2412",
+      "sourceTitle": "получить багаж",
+      "sourceTranslation": "mengambil bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Пассажиры ждут, чтобы получить багаж.",
+        "ms": "Penumpang menunggu untuk mengambil bagasi.",
+        "ruExpression": "получить багаж",
+        "msExpression": "mengambil bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она получила багаж после прилёта.",
+        "ms": "Dia telah mengambil bagasi selepas tiba.",
+        "ruExpression": "получила багаж",
+        "msExpression": "mengambil bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0855",
+    "ru": "потерянный багаж",
+    "ms": "bagasi hilang",
+    "forms": {
+      "ru": [
+        "потерянный багаж",
+        "потерянного багажа",
+        "потерянному багажу",
+        "потерянным багажом",
+        "потерянном багаже"
+      ],
+      "ms": [
+        "bagasi hilang"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2414",
+      "sourceTitle": "потерянный багаж",
+      "sourceTranslation": "bagasi hilang"
+    },
+    "examples": [
+      {
+        "ru": "Потерянный багаж нашли в другом терминале.",
+        "ms": "Bagasi hilang ditemukan di terminal lain.",
+        "ruExpression": "потерянный багаж",
+        "msExpression": "bagasi hilang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пассажир заполнил заявление о потерянном багаже.",
+        "ms": "Penumpang mengisi borang tentang bagasi hilang.",
+        "ruExpression": "потерянном багаже",
+        "msExpression": "bagasi hilang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0856",
+    "ru": "подтверждение брони",
+    "ms": "pengesahan tempahan",
+    "forms": {
+      "ru": [
+        "подтверждение брони",
+        "подтверждения брони",
+        "подтверждению брони",
+        "подтверждением брони",
+        "подтверждении брони"
+      ],
+      "ms": [
+        "pengesahan tempahan"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8231",
+      "sourceTitle": "подтверждение брони",
+      "sourceTranslation": "pengesahan tempahan"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение брони отправлено по электронной почте.",
+        "ms": "Pengesahan tempahan dihantar melalui e-mel.",
+        "ruExpression": "подтверждение брони",
+        "msExpression": "pengesahan tempahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия подтверждения брони сохранена в приложении.",
+        "ms": "Salinan pengesahan tempahan disimpan dalam aplikasi.",
+        "ruExpression": "подтверждения брони",
+        "msExpression": "pengesahan tempahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0857",
+    "ru": "электронный билет",
+    "ms": "tiket elektronik",
+    "forms": {
+      "ru": [
+        "электронный билет",
+        "электронного билета",
+        "электронному билету",
+        "электронным билетом",
+        "электронном билете"
+      ],
+      "ms": [
+        "tiket elektronik"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-2428",
+      "sourceTitle": "электронный билет",
+      "sourceTranslation": "tiket elektronik"
+    },
+    "examples": [
+      {
+        "ru": "Электронный билет сохранён в приложении.",
+        "ms": "Tiket elektronik disimpan dalam aplikasi.",
+        "ruExpression": "электронный билет",
+        "msExpression": "tiket elektronik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте имя в электронном билете.",
+        "ms": "Semak nama dalam tiket elektronik.",
+        "ruExpression": "электронном билете",
+        "msExpression": "tiket elektronik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0858",
+    "ru": "бронь отеля",
+    "ms": "tempahan hotel",
+    "forms": {
+      "ru": [
+        "бронь отеля",
+        "брони отеля",
+        "бронью отеля"
+      ],
+      "ms": [
+        "tempahan hotel"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3538",
+      "sourceTitle": "бронь отеля",
+      "sourceTranslation": "tempahan hotel"
+    },
+    "examples": [
+      {
+        "ru": "Бронь отеля содержит даты проживания.",
+        "ms": "Tempahan hotel mengandungi tarikh penginapan.",
+        "ruExpression": "бронь отеля",
+        "msExpression": "tempahan hotel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия брони отеля приложена к письму.",
+        "ms": "Salinan tempahan hotel dilampirkan pada surat.",
+        "ruExpression": "брони отеля",
+        "msExpression": "tempahan hotel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0859",
+    "ru": "обратный билет",
+    "ms": "tiket pulang",
+    "forms": {
+      "ru": [
+        "обратный билет",
+        "обратного билета",
+        "обратному билету",
+        "обратным билетом",
+        "обратном билете"
+      ],
+      "ms": [
+        "tiket pulang"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3539",
+      "sourceTitle": "обратный билет",
+      "sourceTranslation": "tiket pulang"
+    },
+    "examples": [
+      {
+        "ru": "Обратный билет куплен на воскресенье.",
+        "ms": "Tiket pulang dibeli untuk hari Ahad.",
+        "ruExpression": "обратный билет",
+        "msExpression": "tiket pulang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В обратном билете указана другая дата.",
+        "ms": "Tarikh yang berbeza dinyatakan dalam tiket pulang.",
+        "ruExpression": "обратном билете",
+        "msExpression": "tiket pulang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0860",
+    "ru": "билет на автобус",
+    "ms": "tiket bas",
+    "forms": {
+      "ru": [
+        "билет на автобус",
+        "билета на автобус",
+        "билету на автобус",
+        "билетом на автобус",
+        "билете на автобус"
+      ],
+      "ms": [
+        "tiket bas"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4001",
+      "sourceTitle": "билет на автобус",
+      "sourceTranslation": "tiket bas"
+    },
+    "examples": [
+      {
+        "ru": "Билет на автобус можно купить в кассе.",
+        "ms": "Tiket bas boleh dibeli di kaunter tiket.",
+        "ruExpression": "билет на автобус",
+        "msExpression": "tiket bas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В билете на автобус указан номер места.",
+        "ms": "Nombor tempat duduk dinyatakan dalam tiket bas.",
+        "ruExpression": "билете на автобус",
+        "msExpression": "tiket bas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0861",
+    "ru": "купить билет",
+    "ms": "membeli tiket",
+    "forms": {
+      "ru": [
+        "купить билет",
+        "купил билет",
+        "купила билет",
+        "купили билет",
+        "купим билет",
+        "купите билет"
+      ],
+      "ms": [
+        "membeli tiket"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4002",
+      "sourceTitle": "купить билет",
+      "sourceTranslation": "membeli tiket"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно купить билет на завтра.",
+        "ms": "Saya perlu membeli tiket untuk esok.",
+        "ruExpression": "купить билет",
+        "msExpression": "membeli tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она купила билет в кассе.",
+        "ms": "Dia telah membeli tiket di kaunter tiket.",
+        "ruExpression": "купила билет",
+        "msExpression": "membeli tiket",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0862",
+    "ru": "купить билет онлайн",
+    "ms": "membeli tiket dalam talian",
+    "forms": {
+      "ru": [
+        "купить билет онлайн",
+        "купил билет онлайн",
+        "купила билет онлайн",
+        "купили билет онлайн",
+        "купим билет онлайн",
+        "купите билет онлайн"
+      ],
+      "ms": [
+        "membeli tiket dalam talian"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4003",
+      "sourceTitle": "купить билет онлайн",
+      "sourceTranslation": "membeli tiket dalam talian"
+    },
+    "examples": [
+      {
+        "ru": "Можно купить билет онлайн.",
+        "ms": "Anda boleh membeli tiket dalam talian.",
+        "ruExpression": "купить билет онлайн",
+        "msExpression": "membeli tiket dalam talian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она купила билет онлайн вчера.",
+        "ms": "Dia telah membeli tiket dalam talian semalam.",
+        "ruExpression": "купила билет онлайн",
+        "msExpression": "membeli tiket dalam talian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0863",
+    "ru": "бумажный билет",
+    "ms": "tiket kertas",
+    "forms": {
+      "ru": [
+        "бумажный билет",
+        "бумажного билета",
+        "бумажному билету",
+        "бумажным билетом",
+        "бумажном билете"
+      ],
+      "ms": [
+        "tiket kertas"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4004",
+      "sourceTitle": "бумажный билет",
+      "sourceTranslation": "tiket kertas"
+    },
+    "examples": [
+      {
+        "ru": "Бумажный билет лежит в папке с документами.",
+        "ms": "Tiket kertas berada dalam folder dokumen.",
+        "ruExpression": "бумажный билет",
+        "msExpression": "tiket kertas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На бумажном билете напечатан код.",
+        "ms": "Kod dicetak pada tiket kertas.",
+        "ruExpression": "бумажном билете",
+        "msExpression": "tiket kertas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0864",
+    "ru": "билет туда и обратно",
+    "ms": "tiket pergi balik",
+    "forms": {
+      "ru": [
+        "билет туда и обратно",
+        "билета туда и обратно",
+        "билету туда и обратно",
+        "билетом туда и обратно",
+        "билете туда и обратно"
+      ],
+      "ms": [
+        "tiket pergi balik"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4007",
+      "sourceTitle": "билет туда и обратно",
+      "sourceTranslation": "tiket pergi balik"
+    },
+    "examples": [
+      {
+        "ru": "Билет туда и обратно уже оплачен.",
+        "ms": "Tiket pergi balik telah dibayar.",
+        "ruExpression": "билет туда и обратно",
+        "msExpression": "tiket pergi balik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В билете туда и обратно указаны обе даты.",
+        "ms": "Kedua-dua tarikh dinyatakan dalam tiket pergi balik.",
+        "ruExpression": "билете туда и обратно",
+        "msExpression": "tiket pergi balik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0865",
+    "ru": "билет в одну сторону",
+    "ms": "tiket sehala",
+    "forms": {
+      "ru": [
+        "билет в одну сторону",
+        "билета в одну сторону",
+        "билету в одну сторону",
+        "билетом в одну сторону",
+        "билете в одну сторону"
+      ],
+      "ms": [
+        "tiket sehala"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4008",
+      "sourceTitle": "билет в одну сторону",
+      "sourceTranslation": "tiket sehala"
+    },
+    "examples": [
+      {
+        "ru": "Билет в одну сторону куплен на пятницу.",
+        "ms": "Tiket sehala dibeli untuk hari Jumaat.",
+        "ruExpression": "билет в одну сторону",
+        "msExpression": "tiket sehala",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В билете в одну сторону указано время отправления.",
+        "ms": "Masa bertolak dinyatakan dalam tiket sehala.",
+        "ruExpression": "билете в одну сторону",
+        "msExpression": "tiket sehala",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0866",
+    "ru": "сделать пересадку",
+    "ms": "bertukar kenderaan",
+    "forms": {
+      "ru": [
+        "сделать пересадку",
+        "сделал пересадку",
+        "сделала пересадку",
+        "сделали пересадку",
+        "сделаем пересадку",
+        "сделайте пересадку"
+      ],
+      "ms": [
+        "bertukar kenderaan"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4016",
+      "sourceTitle": "сделать пересадку",
+      "sourceTranslation": "bertukar kenderaan"
+    },
+    "examples": [
+      {
+        "ru": "Нужно сделать пересадку на центральной станции.",
+        "ms": "Kita perlu bertukar kenderaan di stesen pusat.",
+        "ruExpression": "сделать пересадку",
+        "msExpression": "bertukar kenderaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сделала пересадку с автобуса на поезд.",
+        "ms": "Dia telah bertukar kenderaan daripada bas kepada kereta api.",
+        "ruExpression": "сделала пересадку",
+        "msExpression": "bertukar kenderaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0867",
+    "ru": "оставить багаж",
+    "ms": "meninggalkan bagasi",
+    "forms": {
+      "ru": [
+        "оставить багаж",
+        "оставил багаж",
+        "оставила багаж",
+        "оставили багаж",
+        "оставим багаж",
+        "оставьте багаж"
+      ],
+      "ms": [
+        "meninggalkan bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6345",
+      "sourceTitle": "оставить багаж",
+      "sourceTranslation": "meninggalkan bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Можно оставить багаж в гостинице.",
+        "ms": "Anda boleh meninggalkan bagasi di hotel.",
+        "ruExpression": "оставить багаж",
+        "msExpression": "meninggalkan bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оставила багаж у стойки регистрации.",
+        "ms": "Dia telah meninggalkan bagasi di kaunter daftar masuk.",
+        "ruExpression": "оставила багаж",
+        "msExpression": "meninggalkan bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0868",
+    "ru": "билет на поезд",
+    "ms": "tiket kereta api",
+    "forms": {
+      "ru": [
+        "билет на поезд",
+        "билета на поезд",
+        "билету на поезд",
+        "билетом на поезд",
+        "билете на поезд"
+      ],
+      "ms": [
+        "tiket kereta api"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6357",
+      "sourceTitle": "билет на поезд",
+      "sourceTranslation": "tiket kereta api"
+    },
+    "examples": [
+      {
+        "ru": "Билет на поезд отправлен по электронной почте.",
+        "ms": "Tiket kereta api dihantar melalui e-mel.",
+        "ruExpression": "билет на поезд",
+        "msExpression": "tiket kereta api",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В билете на поезд указан номер вагона.",
+        "ms": "Nombor gerabak dinyatakan dalam tiket kereta api.",
+        "ruExpression": "билете на поезд",
+        "msExpression": "tiket kereta api",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0869",
+    "ru": "бронь отеля для визы",
+    "ms": "tempahan hotel untuk visa",
+    "forms": {
+      "ru": [
+        "бронь отеля для визы",
+        "брони отеля для визы",
+        "бронью отеля для визы"
+      ],
+      "ms": [
+        "tempahan hotel untuk visa"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6496",
+      "sourceTitle": "бронь отеля для визы",
+      "sourceTranslation": "tempahan hotel untuk visa"
+    },
+    "examples": [
+      {
+        "ru": "Бронь отеля для визы сохранена в отдельном файле.",
+        "ms": "Tempahan hotel untuk visa disimpan dalam fail berasingan.",
+        "ruExpression": "бронь отеля для визы",
+        "msExpression": "tempahan hotel untuk visa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия брони отеля для визы приложена к заявлению.",
+        "ms": "Salinan tempahan hotel untuk visa dilampirkan pada permohonan.",
+        "ruExpression": "брони отеля для визы",
+        "msExpression": "tempahan hotel untuk visa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0870",
+    "ru": "камера хранения багажа",
+    "ms": "tempat simpan bagasi",
+    "forms": {
+      "ru": [
+        "камера хранения багажа",
+        "камеры хранения багажа",
+        "камере хранения багажа",
+        "камеру хранения багажа",
+        "камерой хранения багажа"
+      ],
+      "ms": [
+        "tempat simpan bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8224",
+      "sourceTitle": "камера хранения багажа",
+      "sourceTranslation": "tempat simpan bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Камера хранения багажа находится рядом со входом.",
+        "ms": "Tempat simpan bagasi terletak berhampiran pintu masuk.",
+        "ruExpression": "камера хранения багажа",
+        "msExpression": "tempat simpan bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы оставили чемодан в камере хранения багажа.",
+        "ms": "Kami meninggalkan beg pakaian di tempat simpan bagasi.",
+        "ruExpression": "камере хранения багажа",
+        "msExpression": "tempat simpan bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0871",
+    "ru": "вернуть билет",
+    "ms": "memulangkan tiket",
+    "forms": {
+      "ru": [
+        "вернуть билет",
+        "вернул билет",
+        "вернула билет",
+        "вернули билет",
+        "вернём билет",
+        "верните билет"
+      ],
+      "ms": [
+        "memulangkan tiket"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8253",
+      "sourceTitle": "вернуть билет",
+      "sourceTranslation": "memulangkan tiket"
+    },
+    "examples": [
+      {
+        "ru": "Пассажир решил вернуть билет после отмены поездки.",
+        "ms": "Penumpang memutuskan untuk memulangkan tiket selepas perjalanan dibatalkan.",
+        "ruExpression": "вернуть билет",
+        "msExpression": "memulangkan tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она вернула билет в кассу.",
+        "ms": "Dia telah memulangkan tiket di kaunter tiket.",
+        "ruExpression": "вернула билет",
+        "msExpression": "memulangkan tiket",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0872",
+    "ru": "обменять билет",
+    "ms": "menukar tiket",
+    "forms": {
+      "ru": [
+        "обменять билет",
+        "обменял билет",
+        "обменяла билет",
+        "обменяли билет",
+        "обменяем билет",
+        "обменяйте билет"
+      ],
+      "ms": [
+        "menukar tiket"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8254",
+      "sourceTitle": "обменять билет",
+      "sourceTranslation": "menukar tiket"
+    },
+    "examples": [
+      {
+        "ru": "Пассажир хочет обменять билет на другую дату.",
+        "ms": "Penumpang mahu menukar tiket ke tarikh lain.",
+        "ruExpression": "обменять билет",
+        "msExpression": "menukar tiket",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она обменяла билет утром.",
+        "ms": "Dia telah menukar tiket pada waktu pagi.",
+        "ruExpression": "обменяла билет",
+        "msExpression": "menukar tiket",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0873",
+    "ru": "добавить багаж",
+    "ms": "menambah bagasi",
+    "forms": {
+      "ru": [
+        "добавить багаж",
+        "добавил багаж",
+        "добавила багаж",
+        "добавили багаж",
+        "добавим багаж",
+        "добавьте багаж"
+      ],
+      "ms": [
+        "menambah bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8789",
+      "sourceTitle": "добавить багаж",
+      "sourceTranslation": "menambah bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Можно добавить багаж через приложение.",
+        "ms": "Anda boleh menambah bagasi melalui aplikasi.",
+        "ruExpression": "добавить багаж",
+        "msExpression": "menambah bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она добавила багаж к бронированию.",
+        "ms": "Dia telah menambah bagasi pada tempahan.",
+        "ruExpression": "добавила багаж",
+        "msExpression": "menambah bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0874",
+    "ru": "оплатить багаж",
+    "ms": "membayar bagasi",
+    "forms": {
+      "ru": [
+        "оплатить багаж",
+        "оплатил багаж",
+        "оплатила багаж",
+        "оплатили багаж",
+        "оплатим багаж",
+        "оплатите багаж"
+      ],
+      "ms": [
+        "membayar bagasi"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8790",
+      "sourceTitle": "оплатить багаж",
+      "sourceTranslation": "membayar bagasi"
+    },
+    "examples": [
+      {
+        "ru": "Пассажир планирует оплатить багаж заранее.",
+        "ms": "Penumpang merancang untuk membayar bagasi lebih awal.",
+        "ruExpression": "оплатить багаж",
+        "msExpression": "membayar bagasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оплатила багаж на сайте.",
+        "ms": "Dia telah membayar bagasi di laman web.",
+        "ruExpression": "оплатила багаж",
+        "msExpression": "membayar bagasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0875",
+    "ru": "распечатать посадочный талон",
+    "ms": "mencetak pas masuk pesawat",
+    "forms": {
+      "ru": [
+        "распечатать посадочный талон",
+        "распечатал посадочный талон",
+        "распечатала посадочный талон",
+        "распечатали посадочный талон",
+        "распечатаем посадочный талон",
+        "распечатайте посадочный талон"
+      ],
+      "ms": [
+        "mencetak pas masuk pesawat"
+      ]
+    },
+    "topic": "поездки и бронирование",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8792",
+      "sourceTitle": "распечатать посадочный талон",
+      "sourceTranslation": "mencetak pas masuk pesawat"
+    },
+    "examples": [
+      {
+        "ru": "Мне нужно распечатать посадочный талон.",
+        "ms": "Saya perlu mencetak pas masuk pesawat.",
+        "ruExpression": "распечатать посадочный талон",
+        "msExpression": "mencetak pas masuk pesawat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она распечатала посадочный талон в аэропорту.",
+        "ms": "Dia telah mencetak pas masuk pesawat di lapangan terbang.",
+        "ruExpression": "распечатала посадочный талон",
+        "msExpression": "mencetak pas masuk pesawat",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

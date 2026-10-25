@@ -73,6 +73,9 @@ for (const [query,title] of [
  ['записалась на пересдачу','записаться на пересдачу'],
  ['оплатила обучение онлайн','оплатить обучение онлайн'],
  ['академической справки','академическая справка'], ['номера студенческого билета','номер студенческого билета'],
+ ['подтвердила бронь','подтвердить бронь'], ['отменила бронь','отменить бронь'],
+ ['купила билет онлайн','купить билет онлайн'], ['обменяла билет','обменять билет'],
+ ['сдала багаж','сдать багаж'], ['брони отеля для визы','бронь отеля для визы'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -162,6 +165,20 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Education distinction: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['Она подтвердила бронь вчера.','ru-ms','подтвердить бронь','mengesahkan tempahan'],
+ ['Она отменила бронь вчера.','ru-ms','отменить бронь','membatalkan tempahan'],
+ ['mengesahkan tempahan','ms-ru','mengesahkan tempahan','подтвердить бронь'],
+ ['membatalkan tempahan','ms-ru','membatalkan tempahan','отменить бронь'],
+ ['menukar tiket','ms-ru','menukar tiket','обменять билет'],
+ ['memulangkan tiket','ms-ru','memulangkan tiket','вернуть билет'],
+ ['Она купила билет онлайн вчера.','ru-ms','купить билет онлайн','membeli tiket dalam talian'],
+ ['Dia membeli tiket dalam talian semalam.','ms-ru','membeli tiket dalam talian','купить билет онлайн'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Travel distinction: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
