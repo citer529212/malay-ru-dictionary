@@ -117,14 +117,18 @@ mark { padding: 0 2px; border-radius: 3px; background: #ffe17c; color: inherit; 
 .tm-count { padding: 7px 12px; border-radius: 999px; background: var(--forest); color: var(--sun-soft); font-weight: 700; }
 .tm-toolbar label, .tm-editor label, .tm-editor-actions label { display: grid; gap: 7px; color: var(--forest); font-size: 0.82rem; font-weight: 700; }
 .tm-search-label { flex: 1; min-width: 280px; }
-.tm-toolbar input, .tm-toolbar select, .tm-editor textarea, .tm-editor-actions select { width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 11px 13px; background: #fff; color: var(--ink); font: inherit; }
+.tm-toolbar input, .tm-toolbar select, .tm-editor textarea, .tm-editor-actions select, .tm-editor-actions input { width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 11px 13px; background: #fff; color: var(--ink); font: inherit; }
 .tm-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .tm-editor textarea { min-height: 150px; resize: vertical; line-height: 1.5; }
 .tm-editor-actions button, .tm-import button { min-height: 44px; border: 1px solid var(--forest); border-radius: 12px; padding: 9px 15px; background: var(--forest); color: #fffbea; font: inherit; font-weight: 700; cursor: pointer; }
 .tm-editor-actions .secondary-button, .tm-import .secondary-button { background: transparent; color: var(--forest); }
+.tm-editor-actions .danger-button { border-color: #9b3a2f; background: transparent; color: #9b3a2f; }
+.tm-editor-actions button:disabled { opacity: 0.45; cursor: not-allowed; }
 .card-inset { padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: #fffef8; }
 .tm-import p, .tm-status { margin: 4px 0 0; color: var(--muted); font-size: 0.86rem; }
 .tm-suggestions, .tm-list { display: grid; gap: 10px; }
+.tm-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.tm-stat { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper-strong); color: var(--forest); font-size: 0.8rem; font-weight: 700; }
 .tm-suggestions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .tm-match { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; padding: 13px; text-align: left; border: 1px solid var(--line); border-radius: 13px; background: var(--paper-strong); color: var(--ink); cursor: pointer; }
 .tm-match strong { grid-row: span 3; align-self: start; padding: 5px; border-radius: 8px; background: var(--sun-soft); color: var(--forest); }

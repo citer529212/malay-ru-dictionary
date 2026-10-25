@@ -151,6 +151,14 @@
           <label class="tm-search-label">Поиск по памяти
             <input id="tmSearch" type="search" placeholder="Введите предложение или словосочетание" />
           </label>
+          <label>Качество
+            <select id="tmStatusFilter">
+              <option value="all">Все статусы</option>
+              <option value="verified">Подтверждено</option>
+              <option value="reviewed">Проверено</option>
+              <option value="machine">Машинный перевод</option>
+            </select>
+          </label>
         </div>
 
         <div class="tm-editor">
@@ -178,7 +186,11 @@
               <option value="verified">Подтверждено</option>
             </select>
           </label>
+          <label>Документ / источник
+            <input id="tmDocument" type="text" placeholder="Название документа или корпуса" />
+          </label>
           <button id="tmSave" type="button">Сохранить сегмент</button>
+          <button id="tmDelete" type="button" class="danger-button" disabled>Удалить выбранный</button>
           <button id="tmClear" type="button" class="secondary-button">Очистить</button>
         </div>
 
@@ -189,10 +201,12 @@
           </div>
           <input id="tmImportFile" type="file" accept=".json,.csv,application/json,text/csv" />
           <button id="tmExportJson" type="button" class="secondary-button">Экспорт JSON</button>
+          <button id="tmExportCsv" type="button" class="secondary-button">Экспорт CSV</button>
           <button id="tmExportTmx" type="button" class="secondary-button">Экспорт TMX</button>
         </div>
 
         <p id="tmStatusText" class="tm-status" aria-live="polite">Память хранится только на этом устройстве.</p>
+        <div id="tmStats" class="tm-stats" aria-label="Статистика памяти переводов"></div>
         <div id="tmSuggestions" class="tm-suggestions"></div>
         <div id="tmList" class="tm-list"></div>
       </section>

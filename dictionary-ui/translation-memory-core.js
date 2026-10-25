@@ -14,6 +14,23 @@ export function segmentSimilarity(left, right) {
   return Math.round((shared / Math.max(a.size, b.size)) * 100);
 }
 
+function characterSimilarity(left, right) {
+  const a = normalizeSegment(left).replace(/\s+/g, " ");
+  const b = normalizeSegment(right).replace(/\s+/g, " ");
+  if (!a || !b) return 0;
+  if (a === b) return 100;
+  const grams = (value) => {
+    const result = new Map();
+    for (let i = 0; i < value.length - 1; i += 1) result.set(value.slice(i, i + 2), (result.get(value.slice(i, i + 2)) || 0) + 1);
+    return result;
+  };
+  const leftGrams = grams(a);
+  const rightGrams = grams(b);
+  let shared = 0;
+  for (const [gram, count] of leftGrams) shared += Math.min(count, rightGrams.get(gram) || 0);
+  return Math.round((2 * shared * 100) / Math.max(1, [...leftGrams.values()].reduce((sum, n) => sum + n, 0) + [...rightGrams.values()].reduce((sum, n) => sum + n, 0)));
+}
+
 export function sanitizeSegment(row, index = 0) {
   const source = String(row?.source || row?.ru || "").trim();
   const target = String(row?.target || row?.ms || "").trim();
@@ -30,14 +47,47 @@ export function sanitizeSegment(row, index = 0) {
   };
 }
 
-export function rankSegments(query, segments, domain = "all") {
+export function rankSegments(query, segments, domain = "all", status = "all") {
   const normalized = normalizeSegment(query);
   if (!normalized) return [];
   return segments
-    .filter((row) => domain === "all" || row.domain === domain)
-    .map((row) => ({ ...row, score: normalizeSegment(row.source) === normalized ? 100 : segmentSimilarity(query, row.source) }))
+    .filter((row) => (domain === "all" || row.domain === domain) && (status === "all" || row.status === status))
+    .map((row) => {
+      const exactSource = normalizeSegment(row.source) === normalized;
+      const exactTarget = normalizeSegment(row.target) === normalized;
+      const sourceScore = exactSource ? 100 : Math.max(segmentSimilarity(query, row.source), characterSimilarity(query, row.source));
+      const targetScore = exactTarget ? 100 : Math.max(segmentSimilarity(query, row.target), characterSimilarity(query, row.target));
+      return { ...row, score: Math.max(sourceScore, targetScore), matchedField: targetScore > sourceScore ? "target" : "source" };
+    })
     .filter((row) => row.score >= 30)
     .sort((a, b) => b.score - a.score || statusWeight(b.status) - statusWeight(a.status));
+}
+
+export function mergeSegments(current, imported) {
+  const result = [...current];
+  let added = 0;
+  let updated = 0;
+  for (const row of imported) {
+    const keySource = normalizeSegment(row.source);
+    const keyTarget = normalizeSegment(row.target);
+    const index = result.findIndex((item) => normalizeSegment(item.source) === keySource && normalizeSegment(item.target) === keyTarget);
+    if (index < 0) { result.push(row); added += 1; continue; }
+    const existing = result[index];
+    if (statusWeight(row.status) > statusWeight(existing.status) || (!existing.document && row.document)) {
+      result[index] = { ...existing, ...row, id: existing.id, createdAt: existing.createdAt };
+      updated += 1;
+    }
+  }
+  return { segments: result, added, updated, skipped: imported.length - added - updated };
+}
+
+export function memoryStats(segments) {
+  const stats = { total: segments.length, machine: 0, reviewed: 0, verified: 0, domains: {} };
+  for (const row of segments) {
+    stats[row.status] = (stats[row.status] || 0) + 1;
+    stats.domains[row.domain] = (stats.domains[row.domain] || 0) + 1;
+  }
+  return stats;
 }
 
 function statusWeight(status) {
@@ -71,6 +121,12 @@ function parseCsvLine(line) {
   }
   values.push(value);
   return values;
+}
+
+export function toCsv(segments) {
+  const quote = (value) => `"${String(value ?? "").replace(/"/g, '""')}"`;
+  const headers = ["source", "target", "domain", "status", "document", "author", "createdAt"];
+  return [headers.join(","), ...segments.map((row) => headers.map((key) => quote(row[key])).join(","))].join("\n");
 }
 
 export function toTmx(segments) {
