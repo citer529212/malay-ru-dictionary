@@ -1298,5 +1298,105 @@
   [
     "подтверждение занятости",
     "pengesahan pekerjaan"
+  ],
+  [
+    "заверенная копия",
+    "salinan disahkan"
+  ],
+  [
+    "дополнительные документы",
+    "dokumen tambahan"
+  ],
+  [
+    "недостающий документ",
+    "dokumen yang kurang"
+  ],
+  [
+    "подлинный документ",
+    "dokumen asli"
+  ],
+  [
+    "фальшивый документ",
+    "dokumen palsu"
+  ],
+  [
+    "заявление на выдачу",
+    "permohonan pengeluaran"
+  ],
+  [
+    "приложение к заявлению",
+    "lampiran permohonan"
+  ],
+  [
+    "рассмотрение заявления",
+    "pertimbangan permohonan"
+  ],
+  [
+    "срок рассмотрения заявления",
+    "tempoh pertimbangan permohonan"
+  ],
+  [
+    "повторная подача",
+    "permohonan semula"
+  ],
+  [
+    "срок подачи",
+    "tarikh akhir permohonan"
+  ],
+  [
+    "дата подачи",
+    "tarikh permohonan"
+  ],
+  [
+    "полный комплект документов",
+    "dokumen lengkap"
+  ],
+  [
+    "причина отклонения документа",
+    "sebab dokumen ditolak"
+  ],
+  [
+    "ошибка в документе",
+    "kesilapan dalam dokumen"
+  ],
+  [
+    "опечатка в документе",
+    "kesilapan taip dalam dokumen"
+  ],
+  [
+    "заявление от руки",
+    "permohonan bertulis tangan"
+  ],
+  [
+    "заявление в свободной форме",
+    "permohonan dalam bentuk bebas"
+  ],
+  [
+    "дата регистрации документа",
+    "tarikh pendaftaran dokumen"
+  ],
+  [
+    "уведомление о получении",
+    "pemberitahuan penerimaan"
+  ],
+  [
+    "нотариально заверенная копия",
+    "salinan yang disahkan oleh notari"
+  ],
+  [
+    "подтверждение записи",
+    "pengesahan janji temu"
+  ],
+  [
+    "государственная пошлина",
+    "fi kerajaan"
+  ],
+  [
+    "квитанция об оплате пошлины",
+    "resit pembayaran fi kerajaan"
+  ],
+  [
+    "письменное решение",
+    "keputusan bertulis"
   ]
 ]

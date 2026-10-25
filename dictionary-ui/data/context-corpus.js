@@ -24430,5 +24430,1052 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0626",
+    "ru": "заверенная копия",
+    "ms": "salinan disahkan",
+    "forms": {
+      "ru": [
+        "заверенная копия",
+        "заверенной копии",
+        "заверенную копию",
+        "заверенной копией"
+      ],
+      "ms": [
+        "salinan disahkan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3547",
+      "sourceTitle": "заверенная копия",
+      "sourceTranslation": "salinan disahkan"
+    },
+    "examples": [
+      {
+        "ru": "Заверенная копия нужна для подачи заявления.",
+        "ms": "Salinan disahkan diperlukan untuk mengemukakan permohonan.",
+        "ruExpression": "заверенная копия",
+        "msExpression": "salinan disahkan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Список документов включает заверенную копию диплома.",
+        "ms": "Senarai dokumen merangkumi salinan disahkan bagi diploma.",
+        "ruExpression": "заверенную копию",
+        "msExpression": "salinan disahkan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0627",
+    "ru": "дополнительные документы",
+    "ms": "dokumen tambahan",
+    "forms": {
+      "ru": [
+        "дополнительные документы",
+        "дополнительных документов",
+        "дополнительным документам",
+        "дополнительными документами",
+        "дополнительных документах"
+      ],
+      "ms": [
+        "dokumen tambahan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3779",
+      "sourceTitle": "дополнительные документы",
+      "sourceTranslation": "dokumen tambahan"
+    },
+    "examples": [
+      {
+        "ru": "Дополнительные документы можно отправить по почте.",
+        "ms": "Dokumen tambahan boleh dihantar melalui pos.",
+        "ruExpression": "дополнительные документы",
+        "msExpression": "dokumen tambahan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В письме есть список дополнительных документов.",
+        "ms": "Surat itu mengandungi senarai dokumen tambahan.",
+        "ruExpression": "дополнительных документов",
+        "msExpression": "dokumen tambahan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0628",
+    "ru": "недостающий документ",
+    "ms": "dokumen yang kurang",
+    "forms": {
+      "ru": [
+        "недостающий документ",
+        "недостающего документа",
+        "недостающему документу",
+        "недостающим документом",
+        "недостающем документе"
+      ],
+      "ms": [
+        "dokumen yang kurang"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4990",
+      "sourceTitle": "недостающий документ",
+      "sourceTranslation": "dokumen yang kurang"
+    },
+    "examples": [
+      {
+        "ru": "Недостающий документ нужно предоставить до пятницы.",
+        "ms": "Dokumen yang kurang perlu diserahkan sebelum hari Jumaat.",
+        "ruExpression": "недостающий документ",
+        "msExpression": "dokumen yang kurang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Заявление рассмотрят после получения недостающего документа.",
+        "ms": "Permohonan akan dipertimbangkan selepas dokumen yang kurang diterima.",
+        "ruExpression": "недостающего документа",
+        "msExpression": "dokumen yang kurang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0629",
+    "ru": "подлинный документ",
+    "ms": "dokumen asli",
+    "forms": {
+      "ru": [
+        "подлинный документ",
+        "подлинного документа",
+        "подлинному документу",
+        "подлинным документом",
+        "подлинном документе"
+      ],
+      "ms": [
+        "dokumen asli"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5006",
+      "sourceTitle": "подлинный документ",
+      "sourceTranslation": "dokumen asli"
+    },
+    "examples": [
+      {
+        "ru": "Подлинный документ хранится у владельца.",
+        "ms": "Dokumen asli disimpan oleh pemiliknya.",
+        "ruExpression": "подлинный документ",
+        "msExpression": "dokumen asli",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для проверки нужен скан подлинного документа.",
+        "ms": "Imbasan dokumen asli diperlukan untuk semakan.",
+        "ruExpression": "подлинного документа",
+        "msExpression": "dokumen asli",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0630",
+    "ru": "фальшивый документ",
+    "ms": "dokumen palsu",
+    "forms": {
+      "ru": [
+        "фальшивый документ",
+        "фальшивого документа",
+        "фальшивому документу",
+        "фальшивым документом",
+        "фальшивом документе"
+      ],
+      "ms": [
+        "dokumen palsu"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5007",
+      "sourceTitle": "фальшивый документ",
+      "sourceTranslation": "dokumen palsu"
+    },
+    "examples": [
+      {
+        "ru": "Фальшивый документ обнаружен во время проверки.",
+        "ms": "Dokumen palsu dikesan semasa semakan.",
+        "ruExpression": "фальшивый документ",
+        "msExpression": "dokumen palsu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В отчёте говорится об обнаружении фальшивого документа.",
+        "ms": "Laporan itu menyatakan bahawa dokumen palsu telah dikesan.",
+        "ruExpression": "фальшивого документа",
+        "msExpression": "dokumen palsu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0631",
+    "ru": "заявление на выдачу",
+    "ms": "permohonan pengeluaran",
+    "forms": {
+      "ru": [
+        "заявление на выдачу",
+        "заявления на выдачу",
+        "заявлению на выдачу",
+        "заявлением на выдачу",
+        "заявлении на выдачу"
+      ],
+      "ms": [
+        "permohonan pengeluaran"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5031",
+      "sourceTitle": "заявление на выдачу",
+      "sourceTranslation": "permohonan pengeluaran"
+    },
+    "examples": [
+      {
+        "ru": "Заявление на выдачу карты подают в этом окне.",
+        "ms": "Permohonan pengeluaran kad dikemukakan di kaunter ini.",
+        "ruExpression": "заявление на выдачу",
+        "msExpression": "permohonan pengeluaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Бланк заявления на выдачу карты доступен на сайте.",
+        "ms": "Borang permohonan pengeluaran kad tersedia di laman web.",
+        "ruExpression": "заявления на выдачу",
+        "msExpression": "permohonan pengeluaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0632",
+    "ru": "приложение к заявлению",
+    "ms": "lampiran permohonan",
+    "forms": {
+      "ru": [
+        "приложение к заявлению",
+        "приложения к заявлению",
+        "приложению к заявлению",
+        "приложением к заявлению",
+        "приложении к заявлению"
+      ],
+      "ms": [
+        "lampiran permohonan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5042",
+      "sourceTitle": "приложение к заявлению",
+      "sourceTranslation": "lampiran permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Приложение к заявлению содержит копию паспорта.",
+        "ms": "Lampiran permohonan mengandungi salinan pasport.",
+        "ruExpression": "приложение к заявлению",
+        "msExpression": "lampiran permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте список файлов в приложении к заявлению.",
+        "ms": "Semak senarai fail dalam lampiran permohonan.",
+        "ruExpression": "приложении к заявлению",
+        "msExpression": "lampiran permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0633",
+    "ru": "рассмотрение заявления",
+    "ms": "pertimbangan permohonan",
+    "forms": {
+      "ru": [
+        "рассмотрение заявления",
+        "рассмотрения заявления",
+        "рассмотрению заявления",
+        "рассмотрением заявления",
+        "рассмотрении заявления"
+      ],
+      "ms": [
+        "pertimbangan permohonan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5437",
+      "sourceTitle": "рассмотрение заявления",
+      "sourceTranslation": "pertimbangan permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Рассмотрение заявления займёт пять рабочих дней.",
+        "ms": "Pertimbangan permohonan akan mengambil masa lima hari bekerja.",
+        "ruExpression": "рассмотрение заявления",
+        "msExpression": "pertimbangan permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "О результатах рассмотрения заявления сообщат письменно.",
+        "ms": "Keputusan pertimbangan permohonan akan dimaklumkan secara bertulis.",
+        "ruExpression": "рассмотрения заявления",
+        "msExpression": "pertimbangan permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0634",
+    "ru": "срок рассмотрения заявления",
+    "ms": "tempoh pertimbangan permohonan",
+    "forms": {
+      "ru": [
+        "срок рассмотрения заявления",
+        "срока рассмотрения заявления",
+        "сроку рассмотрения заявления",
+        "сроком рассмотрения заявления",
+        "сроке рассмотрения заявления"
+      ],
+      "ms": [
+        "tempoh pertimbangan permohonan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5438",
+      "sourceTitle": "срок рассмотрения заявления",
+      "sourceTranslation": "tempoh pertimbangan permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Срок рассмотрения заявления указан в уведомлении.",
+        "ms": "Tempoh pertimbangan permohonan dinyatakan dalam notis.",
+        "ruExpression": "срок рассмотрения заявления",
+        "msExpression": "tempoh pertimbangan permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Об изменении срока рассмотрения заявления сообщат по почте.",
+        "ms": "Perubahan tempoh pertimbangan permohonan akan dimaklumkan melalui pos.",
+        "ruExpression": "срока рассмотрения заявления",
+        "msExpression": "tempoh pertimbangan permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0635",
+    "ru": "повторная подача",
+    "ms": "permohonan semula",
+    "forms": {
+      "ru": [
+        "повторная подача",
+        "повторной подачи",
+        "повторной подаче",
+        "повторную подачу",
+        "повторной подачей"
+      ],
+      "ms": [
+        "permohonan semula"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5992",
+      "sourceTitle": "повторная подача",
+      "sourceTranslation": "permohonan semula"
+    },
+    "examples": [
+      {
+        "ru": "Повторная подача возможна после исправления ошибки.",
+        "ms": "Permohonan semula boleh dibuat selepas kesilapan dibetulkan.",
+        "ruExpression": "повторная подача",
+        "msExpression": "permohonan semula",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для повторной подачи нужен новый бланк.",
+        "ms": "Borang baharu diperlukan untuk permohonan semula.",
+        "ruExpression": "повторной подачи",
+        "msExpression": "permohonan semula",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0636",
+    "ru": "срок подачи",
+    "ms": "tarikh akhir permohonan",
+    "forms": {
+      "ru": [
+        "срок подачи",
+        "срока подачи",
+        "сроку подачи",
+        "сроком подачи",
+        "сроке подачи"
+      ],
+      "ms": [
+        "tarikh akhir permohonan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5993",
+      "sourceTitle": "срок подачи",
+      "sourceTranslation": "tarikh akhir permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Срок подачи указан в объявлении.",
+        "ms": "Tarikh akhir permohonan dinyatakan dalam pengumuman.",
+        "ruExpression": "срок подачи",
+        "msExpression": "tarikh akhir permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Заявления после срока подачи не принимаются.",
+        "ms": "Permohonan selepas tarikh akhir permohonan tidak diterima.",
+        "ruExpression": "срока подачи",
+        "msExpression": "tarikh akhir permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0637",
+    "ru": "дата подачи",
+    "ms": "tarikh permohonan",
+    "forms": {
+      "ru": [
+        "дата подачи",
+        "даты подачи",
+        "дате подачи",
+        "дату подачи",
+        "датой подачи"
+      ],
+      "ms": [
+        "tarikh permohonan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5994",
+      "sourceTitle": "дата подачи",
+      "sourceTranslation": "tarikh permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Дата подачи указана в квитанции.",
+        "ms": "Tarikh permohonan dinyatakan dalam resit.",
+        "ruExpression": "дата подачи",
+        "msExpression": "tarikh permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Срок отсчитывается от даты подачи заявления.",
+        "ms": "Tempoh dikira dari tarikh permohonan dikemukakan.",
+        "ruExpression": "даты подачи",
+        "msExpression": "tarikh permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0638",
+    "ru": "полный комплект документов",
+    "ms": "dokumen lengkap",
+    "forms": {
+      "ru": [
+        "полный комплект документов",
+        "полного комплекта документов",
+        "полному комплекту документов",
+        "полным комплектом документов",
+        "полном комплекте документов"
+      ],
+      "ms": [
+        "dokumen lengkap"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6482",
+      "sourceTitle": "полный комплект документов",
+      "sourceTranslation": "dokumen lengkap"
+    },
+    "examples": [
+      {
+        "ru": "Полный комплект документов уже передан сотруднику.",
+        "ms": "Dokumen lengkap telah diserahkan kepada pegawai.",
+        "ruExpression": "полный комплект документов",
+        "msExpression": "dokumen lengkap",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Подготовка полного комплекта документов займёт два дня.",
+        "ms": "Penyediaan dokumen lengkap akan mengambil masa dua hari.",
+        "ruExpression": "полного комплекта документов",
+        "msExpression": "dokumen lengkap",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0639",
+    "ru": "причина отклонения документа",
+    "ms": "sebab dokumen ditolak",
+    "forms": {
+      "ru": [
+        "причина отклонения документа",
+        "причины отклонения документа",
+        "причине отклонения документа",
+        "причину отклонения документа",
+        "причиной отклонения документа"
+      ],
+      "ms": [
+        "sebab dokumen ditolak"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7901",
+      "sourceTitle": "причина отклонения документа",
+      "sourceTranslation": "sebab dokumen ditolak"
+    },
+    "examples": [
+      {
+        "ru": "Причина отклонения документа указана в ответе.",
+        "ms": "Sebab dokumen ditolak dinyatakan dalam jawapan.",
+        "ruExpression": "причина отклонения документа",
+        "msExpression": "sebab dokumen ditolak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В уведомлении нет объяснения причины отклонения документа.",
+        "ms": "Notis itu tidak menjelaskan sebab dokumen ditolak.",
+        "ruExpression": "причины отклонения документа",
+        "msExpression": "sebab dokumen ditolak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0640",
+    "ru": "ошибка в документе",
+    "ms": "kesilapan dalam dokumen",
+    "forms": {
+      "ru": [
+        "ошибка в документе",
+        "ошибки в документе",
+        "ошибке в документе",
+        "ошибку в документе",
+        "ошибкой в документе"
+      ],
+      "ms": [
+        "kesilapan dalam dokumen"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7902",
+      "sourceTitle": "ошибка в документе",
+      "sourceTranslation": "kesilapan dalam dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Ошибка в документе касается даты рождения.",
+        "ms": "Kesilapan dalam dokumen berkaitan dengan tarikh lahir.",
+        "ruExpression": "ошибка в документе",
+        "msExpression": "kesilapan dalam dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите об ошибке в документе до подписания.",
+        "ms": "Maklumkan kesilapan dalam dokumen sebelum menandatangani.",
+        "ruExpression": "ошибке в документе",
+        "msExpression": "kesilapan dalam dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0641",
+    "ru": "опечатка в документе",
+    "ms": "kesilapan taip dalam dokumen",
+    "forms": {
+      "ru": [
+        "опечатка в документе",
+        "опечатки в документе",
+        "опечатке в документе",
+        "опечатку в документе",
+        "опечаткой в документе"
+      ],
+      "ms": [
+        "kesilapan taip dalam dokumen"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7903",
+      "sourceTitle": "опечатка в документе",
+      "sourceTranslation": "kesilapan taip dalam dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Опечатка в документе исправлена.",
+        "ms": "Kesilapan taip dalam dokumen telah dibetulkan.",
+        "ruExpression": "опечатка в документе",
+        "msExpression": "kesilapan taip dalam dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы обнаружили опечатку в документе при проверке имени.",
+        "ms": "Kami mengesan kesilapan taip dalam dokumen semasa menyemak nama.",
+        "ruExpression": "опечатку в документе",
+        "msExpression": "kesilapan taip dalam dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0642",
+    "ru": "заявление от руки",
+    "ms": "permohonan bertulis tangan",
+    "forms": {
+      "ru": [
+        "заявление от руки",
+        "заявления от руки",
+        "заявлению от руки",
+        "заявлением от руки",
+        "заявлении от руки"
+      ],
+      "ms": [
+        "permohonan bertulis tangan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7908",
+      "sourceTitle": "заявление от руки",
+      "sourceTranslation": "permohonan bertulis tangan"
+    },
+    "examples": [
+      {
+        "ru": "Заявление от руки должно быть разборчивым.",
+        "ms": "Permohonan bertulis tangan mestilah jelas dibaca.",
+        "ruExpression": "заявление от руки",
+        "msExpression": "permohonan bertulis tangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Скан заявления от руки приложен к письму.",
+        "ms": "Imbasan permohonan bertulis tangan dilampirkan pada surat.",
+        "ruExpression": "заявления от руки",
+        "msExpression": "permohonan bertulis tangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0643",
+    "ru": "заявление в свободной форме",
+    "ms": "permohonan dalam bentuk bebas",
+    "forms": {
+      "ru": [
+        "заявление в свободной форме",
+        "заявления в свободной форме",
+        "заявлению в свободной форме",
+        "заявлением в свободной форме",
+        "заявлении в свободной форме"
+      ],
+      "ms": [
+        "permohonan dalam bentuk bebas"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7909",
+      "sourceTitle": "заявление в свободной форме",
+      "sourceTranslation": "permohonan dalam bentuk bebas"
+    },
+    "examples": [
+      {
+        "ru": "Заявление в свободной форме должно содержать ваши контактные данные.",
+        "ms": "Permohonan dalam bentuk bebas mesti mengandungi maklumat hubungan anda.",
+        "ruExpression": "заявление в свободной форме",
+        "msExpression": "permohonan dalam bentuk bebas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В заявлении в свободной форме укажите причину обращения.",
+        "ms": "Nyatakan sebab permohonan dalam bentuk bebas itu dikemukakan.",
+        "ruExpression": "заявлении в свободной форме",
+        "msExpression": "permohonan dalam bentuk bebas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0644",
+    "ru": "дата регистрации документа",
+    "ms": "tarikh pendaftaran dokumen",
+    "forms": {
+      "ru": [
+        "дата регистрации документа",
+        "даты регистрации документа",
+        "дате регистрации документа",
+        "дату регистрации документа",
+        "датой регистрации документа"
+      ],
+      "ms": [
+        "tarikh pendaftaran dokumen"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7948",
+      "sourceTitle": "дата регистрации документа",
+      "sourceTranslation": "tarikh pendaftaran dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Дата регистрации документа внесена в журнал.",
+        "ms": "Tarikh pendaftaran dokumen dicatat dalam daftar.",
+        "ruExpression": "дата регистрации документа",
+        "msExpression": "tarikh pendaftaran dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте дату регистрации документа в системе.",
+        "ms": "Semak tarikh pendaftaran dokumen dalam sistem.",
+        "ruExpression": "дату регистрации документа",
+        "msExpression": "tarikh pendaftaran dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0645",
+    "ru": "уведомление о получении",
+    "ms": "pemberitahuan penerimaan",
+    "forms": {
+      "ru": [
+        "уведомление о получении",
+        "уведомления о получении",
+        "уведомлению о получении",
+        "уведомлением о получении",
+        "уведомлении о получении"
+      ],
+      "ms": [
+        "pemberitahuan penerimaan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7954",
+      "sourceTitle": "уведомление о получении",
+      "sourceTranslation": "pemberitahuan penerimaan"
+    },
+    "examples": [
+      {
+        "ru": "Уведомление о получении пришло утром.",
+        "ms": "Pemberitahuan penerimaan diterima pada waktu pagi.",
+        "ruExpression": "уведомление о получении",
+        "msExpression": "pemberitahuan penerimaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дождитесь уведомления о получении документов.",
+        "ms": "Tunggu pemberitahuan penerimaan dokumen.",
+        "ruExpression": "уведомления о получении",
+        "msExpression": "pemberitahuan penerimaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0646",
+    "ru": "нотариально заверенная копия",
+    "ms": "salinan yang disahkan oleh notari",
+    "forms": {
+      "ru": [
+        "нотариально заверенная копия",
+        "нотариально заверенной копии",
+        "нотариально заверенную копию",
+        "нотариально заверенной копией"
+      ],
+      "ms": [
+        "salinan yang disahkan oleh notari"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9714",
+      "sourceTitle": "нотариально заверенная копия",
+      "sourceTranslation": "salinan yang disahkan oleh notari"
+    },
+    "examples": [
+      {
+        "ru": "Нотариально заверенная копия приложена к заявлению.",
+        "ms": "Salinan yang disahkan oleh notari dilampirkan pada permohonan.",
+        "ruExpression": "нотариально заверенная копия",
+        "msExpression": "salinan yang disahkan oleh notari",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пришлите нотариально заверенную копию свидетельства.",
+        "ms": "Hantar salinan yang disahkan oleh notari bagi sijil itu.",
+        "ruExpression": "нотариально заверенную копию",
+        "msExpression": "salinan yang disahkan oleh notari",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0647",
+    "ru": "подтверждение записи",
+    "ms": "pengesahan janji temu",
+    "forms": {
+      "ru": [
+        "подтверждение записи",
+        "подтверждения записи",
+        "подтверждению записи",
+        "подтверждением записи",
+        "подтверждении записи"
+      ],
+      "ms": [
+        "pengesahan janji temu"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9723",
+      "sourceTitle": "подтверждение записи",
+      "sourceTranslation": "pengesahan janji temu"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение записи содержит время приёма.",
+        "ms": "Pengesahan janji temu mengandungi masa janji temu.",
+        "ruExpression": "подтверждение записи",
+        "msExpression": "pengesahan janji temu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Распечатайте копию подтверждения записи.",
+        "ms": "Cetak salinan pengesahan janji temu.",
+        "ruExpression": "подтверждения записи",
+        "msExpression": "pengesahan janji temu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0648",
+    "ru": "государственная пошлина",
+    "ms": "fi kerajaan",
+    "forms": {
+      "ru": [
+        "государственная пошлина",
+        "государственной пошлины",
+        "государственной пошлине",
+        "государственную пошлину",
+        "государственной пошлиной"
+      ],
+      "ms": [
+        "fi kerajaan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9727",
+      "sourceTitle": "государственная пошлина",
+      "sourceTranslation": "fi kerajaan"
+    },
+    "examples": [
+      {
+        "ru": "Государственная пошлина оплачивается отдельно.",
+        "ms": "Fi kerajaan dibayar secara berasingan.",
+        "ruExpression": "государственная пошлина",
+        "msExpression": "fi kerajaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Размер государственной пошлины указан на сайте.",
+        "ms": "Amaun fi kerajaan dinyatakan di laman web.",
+        "ruExpression": "государственной пошлины",
+        "msExpression": "fi kerajaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0649",
+    "ru": "квитанция об оплате пошлины",
+    "ms": "resit pembayaran fi kerajaan",
+    "forms": {
+      "ru": [
+        "квитанция об оплате пошлины",
+        "квитанции об оплате пошлины",
+        "квитанцию об оплате пошлины",
+        "квитанцией об оплате пошлины"
+      ],
+      "ms": [
+        "resit pembayaran fi kerajaan"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9728",
+      "sourceTitle": "квитанция об оплате пошлины",
+      "sourceTranslation": "resit pembayaran fi kerajaan"
+    },
+    "examples": [
+      {
+        "ru": "Квитанция об оплате пошлины нужна для подачи документов.",
+        "ms": "Resit pembayaran fi kerajaan diperlukan untuk mengemukakan dokumen.",
+        "ruExpression": "квитанция об оплате пошлины",
+        "msExpression": "resit pembayaran fi kerajaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните квитанцию об оплате пошлины.",
+        "ms": "Simpan resit pembayaran fi kerajaan.",
+        "ruExpression": "квитанцию об оплате пошлины",
+        "msExpression": "resit pembayaran fi kerajaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0650",
+    "ru": "письменное решение",
+    "ms": "keputusan bertulis",
+    "forms": {
+      "ru": [
+        "письменное решение",
+        "письменного решения",
+        "письменному решению",
+        "письменным решением",
+        "письменном решении"
+      ],
+      "ms": [
+        "keputusan bertulis"
+      ]
+    },
+    "topic": "заявления и документы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9733",
+      "sourceTitle": "письменное решение",
+      "sourceTranslation": "keputusan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Письменное решение будет отправлено по почте.",
+        "ms": "Keputusan bertulis akan dihantar melalui pos.",
+        "ruExpression": "письменное решение",
+        "msExpression": "keputusan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия письменного решения хранится в архиве.",
+        "ms": "Salinan keputusan bertulis disimpan dalam arkib.",
+        "ruExpression": "письменного решения",
+        "msExpression": "keputusan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

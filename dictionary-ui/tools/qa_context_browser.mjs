@@ -31,7 +31,7 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
   } else assert.ok((await page.locator('#answerDetails').textContent()).includes('storan awan'));
   results.push({viewport,query,passed:true});
  }
- for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis'],['условиями оплаты','условия оплаты'],['syarat kontrak','syarat kontrak'],['банковскими реквизитами','банковские реквизиты'],['tujuan pembayaran','tujuan pembayaran']]) {
+ for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis'],['условиями оплаты','условия оплаты'],['syarat kontrak','syarat kontrak'],['банковскими реквизитами','банковские реквизиты'],['tujuan pembayaran','tujuan pembayaran'],['срока рассмотрения заявления','срок рассмотрения заявления'],['salinan yang disahkan oleh notari','salinan yang disahkan oleh notari']]) {
   await page.locator('#searchInput').fill(newQuery);
   await page.locator('#searchButton').click();
   await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,newTitle);
@@ -77,6 +77,18 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.screenshot({path:`${outputDir}/${viewport.width}-payment-topic.png`,fullPage:false});
  await page.locator('#resetContextFilters').click();
  results.push({viewport,scenario:'payment-topic-and-pagination',passed:true});
+ await page.locator('#contextTopic').selectOption('заявления и документы');
+ assert.equal(await page.locator('#resultCount').textContent(),'25');
+ assert.equal(await page.locator('#resultList > li').count(),24);
+ await page.locator('#showMoreResults').click();
+ assert.equal(await page.locator('#resultList > li').count(),25);
+ assert.equal(await page.locator('#resultList .parallel-context mark').count(),100);
+ assert.equal(await page.locator('#showMoreResults').isVisible(),false);
+ await page.locator('#resultList > li').first().scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Application topic overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-application-topic.png`,fullPage:false});
+ await page.locator('#resetContextFilters').click();
+ results.push({viewport,scenario:'application-topic-and-pagination',passed:true});
  await page.locator('#searchInput').fill('вода');
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');
@@ -376,6 +388,11 @@ for(const profile of ['','-Lite']) {
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='tujuan pembayaran');
  assert.equal(await page.locator('#answerDetails mark').count(),4);
  assert.ok((await page.locator('#answerDetails').textContent()).includes('назначении платежа'));
+ await page.locator('#searchInput').fill('keputusan bertulis');
+ await page.locator('#searchButton').click();
+ await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='keputusan bertulis');
+ assert.equal(await page.locator('#answerDetails mark').count(),4);
+ assert.ok((await page.locator('#answerDetails').textContent()).includes('письменного решения'));
  results.push({offline:profile||'Full',passed:true});
  await page.close();
 }
