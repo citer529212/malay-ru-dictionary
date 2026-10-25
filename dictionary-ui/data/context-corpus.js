@@ -25477,5 +25477,1055 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0651",
+    "ru": "итоги встречи",
+    "ms": "hasil mesyuarat",
+    "forms": {
+      "ru": [
+        "итоги встречи",
+        "итогов встречи",
+        "итогам встречи",
+        "итогами встречи",
+        "итогах встречи"
+      ],
+      "ms": [
+        "hasil mesyuarat"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9776",
+      "sourceTitle": "итоги встречи",
+      "sourceTranslation": "hasil mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Итоги встречи будут отправлены всем участникам.",
+        "ms": "Hasil mesyuarat akan dihantar kepada semua peserta.",
+        "ruExpression": "итоги встречи",
+        "msExpression": "hasil mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В отчёте есть раздел об итогах встречи.",
+        "ms": "Laporan itu mempunyai bahagian tentang hasil mesyuarat.",
+        "ruExpression": "итогах встречи",
+        "msExpression": "hasil mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0652",
+    "ru": "следующие шаги",
+    "ms": "langkah seterusnya",
+    "forms": {
+      "ru": [
+        "следующие шаги",
+        "следующих шагов",
+        "следующим шагам",
+        "следующими шагами",
+        "следующих шагах"
+      ],
+      "ms": [
+        "langkah seterusnya"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9777",
+      "sourceTitle": "следующие шаги",
+      "sourceTranslation": "langkah seterusnya"
+    },
+    "examples": [
+      {
+        "ru": "Следующие шаги указаны в конце письма.",
+        "ms": "Langkah seterusnya dinyatakan pada akhir surat.",
+        "ruExpression": "следующие шаги",
+        "msExpression": "langkah seterusnya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы договорились о следующих шагах.",
+        "ms": "Kami telah bersetuju tentang langkah seterusnya.",
+        "ruExpression": "следующих шагах",
+        "msExpression": "langkah seterusnya",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0653",
+    "ru": "ответственное лицо",
+    "ms": "pegawai yang bertanggungjawab",
+    "forms": {
+      "ru": [
+        "ответственное лицо",
+        "ответственного лица",
+        "ответственному лицу",
+        "ответственным лицом",
+        "ответственном лице"
+      ],
+      "ms": [
+        "pegawai yang bertanggungjawab"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9778",
+      "sourceTitle": "ответственное лицо",
+      "sourceTranslation": "pegawai yang bertanggungjawab"
+    },
+    "examples": [
+      {
+        "ru": "Ответственное лицо указано в уведомлении.",
+        "ms": "Pegawai yang bertanggungjawab dinyatakan dalam notis.",
+        "ruExpression": "ответственное лицо",
+        "msExpression": "pegawai yang bertanggungjawab",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Свяжитесь с ответственным лицом перед отправкой документов.",
+        "ms": "Hubungi pegawai yang bertanggungjawab sebelum menghantar dokumen.",
+        "ruExpression": "ответственным лицом",
+        "msExpression": "pegawai yang bertanggungjawab",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0654",
+    "ru": "приоритет задачи",
+    "ms": "keutamaan tugasan",
+    "forms": {
+      "ru": [
+        "приоритет задачи",
+        "приоритета задачи",
+        "приоритету задачи",
+        "приоритетом задачи",
+        "приоритете задачи"
+      ],
+      "ms": [
+        "keutamaan tugasan"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9782",
+      "sourceTitle": "приоритет задачи",
+      "sourceTranslation": "keutamaan tugasan"
+    },
+    "examples": [
+      {
+        "ru": "Приоритет задачи изменился после обсуждения.",
+        "ms": "Keutamaan tugasan berubah selepas perbincangan.",
+        "ruExpression": "приоритет задачи",
+        "msExpression": "keutamaan tugasan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Руководитель сообщил об изменении приоритета задачи.",
+        "ms": "Pengurus memaklumkan perubahan keutamaan tugasan.",
+        "ruExpression": "приоритета задачи",
+        "msExpression": "keutamaan tugasan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0655",
+    "ru": "ход выполнения",
+    "ms": "kemajuan pelaksanaan",
+    "forms": {
+      "ru": [
+        "ход выполнения",
+        "хода выполнения",
+        "ходу выполнения",
+        "ходом выполнения",
+        "ходе выполнения"
+      ],
+      "ms": [
+        "kemajuan pelaksanaan"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9790",
+      "sourceTitle": "ход выполнения",
+      "sourceTranslation": "kemajuan pelaksanaan"
+    },
+    "examples": [
+      {
+        "ru": "Ход выполнения проекта обсуждается каждую неделю.",
+        "ms": "Kemajuan pelaksanaan projek dibincangkan setiap minggu.",
+        "ruExpression": "ход выполнения",
+        "msExpression": "kemajuan pelaksanaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Данные о ходе выполнения доступны всей команде.",
+        "ms": "Data tentang kemajuan pelaksanaan boleh diakses oleh seluruh pasukan.",
+        "ruExpression": "ходе выполнения",
+        "msExpression": "kemajuan pelaksanaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0656",
+    "ru": "процент выполнения",
+    "ms": "peratus siap",
+    "forms": {
+      "ru": [
+        "процент выполнения",
+        "процента выполнения",
+        "проценту выполнения",
+        "процентом выполнения",
+        "проценте выполнения"
+      ],
+      "ms": [
+        "peratus siap"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9791",
+      "sourceTitle": "процент выполнения",
+      "sourceTranslation": "peratus siap"
+    },
+    "examples": [
+      {
+        "ru": "Процент выполнения указан в таблице.",
+        "ms": "Peratus siap dinyatakan dalam jadual.",
+        "ruExpression": "процент выполнения",
+        "msExpression": "peratus siap",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Значение процента выполнения обновляется каждый день.",
+        "ms": "Nilai peratus siap dikemas kini setiap hari.",
+        "ruExpression": "процента выполнения",
+        "msExpression": "peratus siap",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0657",
+    "ru": "команда проекта",
+    "ms": "pasukan projek",
+    "forms": {
+      "ru": [
+        "команда проекта",
+        "команды проекта",
+        "команде проекта",
+        "команду проекта",
+        "командой проекта"
+      ],
+      "ms": [
+        "pasukan projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9797",
+      "sourceTitle": "команда проекта",
+      "sourceTranslation": "pasukan projek"
+    },
+    "examples": [
+      {
+        "ru": "Команда проекта состоит из пяти человек.",
+        "ms": "Pasukan projek terdiri daripada lima orang.",
+        "ruExpression": "команда проекта",
+        "msExpression": "pasukan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Новый сотрудник присоединился к команде проекта.",
+        "ms": "Kakitangan baharu telah menyertai pasukan projek.",
+        "ruExpression": "команде проекта",
+        "msExpression": "pasukan projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0658",
+    "ru": "участник проекта",
+    "ms": "ahli projek",
+    "forms": {
+      "ru": [
+        "участник проекта",
+        "участника проекта",
+        "участнику проекта",
+        "участником проекта",
+        "участнике проекта"
+      ],
+      "ms": [
+        "ahli projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9798",
+      "sourceTitle": "участник проекта",
+      "sourceTranslation": "ahli projek"
+    },
+    "examples": [
+      {
+        "ru": "Участник проекта подготовил презентацию.",
+        "ms": "Ahli projek menyediakan pembentangan.",
+        "ruExpression": "участник проекта",
+        "msExpression": "ahli projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Отправьте приглашение каждому участнику проекта.",
+        "ms": "Hantar jemputan kepada setiap ahli projek.",
+        "ruExpression": "участнику проекта",
+        "msExpression": "ahli projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0659",
+    "ru": "срок проекта",
+    "ms": "tempoh projek",
+    "forms": {
+      "ru": [
+        "срок проекта",
+        "срока проекта",
+        "сроку проекта",
+        "сроком проекта",
+        "сроке проекта"
+      ],
+      "ms": [
+        "tempoh projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9800",
+      "sourceTitle": "срок проекта",
+      "sourceTranslation": "tempoh projek"
+    },
+    "examples": [
+      {
+        "ru": "Срок проекта составляет шесть месяцев.",
+        "ms": "Tempoh projek ialah enam bulan.",
+        "ruExpression": "срок проекта",
+        "msExpression": "tempoh projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Изменение срока проекта нужно согласовать с заказчиком.",
+        "ms": "Perubahan tempoh projek perlu dipersetujui bersama pelanggan.",
+        "ruExpression": "срока проекта",
+        "msExpression": "tempoh projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0660",
+    "ru": "этап проекта",
+    "ms": "fasa projek",
+    "forms": {
+      "ru": [
+        "этап проекта",
+        "этапа проекта",
+        "этапу проекта",
+        "этапом проекта",
+        "этапе проекта"
+      ],
+      "ms": [
+        "fasa projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9801",
+      "sourceTitle": "этап проекта",
+      "sourceTranslation": "fasa projek"
+    },
+    "examples": [
+      {
+        "ru": "Первый этап проекта завершится в июне.",
+        "ms": "Fasa projek yang pertama akan selesai pada bulan Jun.",
+        "ruExpression": "этап проекта",
+        "msExpression": "fasa projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "На следующем этапе проекта начнётся проверка системы.",
+        "ms": "Semakan sistem akan bermula pada fasa projek yang seterusnya.",
+        "ruExpression": "этапе проекта",
+        "msExpression": "fasa projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0661",
+    "ru": "начало проекта",
+    "ms": "permulaan projek",
+    "forms": {
+      "ru": [
+        "начало проекта",
+        "начала проекта",
+        "началу проекта",
+        "началом проекта",
+        "начале проекта"
+      ],
+      "ms": [
+        "permulaan projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9802",
+      "sourceTitle": "начало проекта",
+      "sourceTranslation": "permulaan projek"
+    },
+    "examples": [
+      {
+        "ru": "Начало проекта запланировано на понедельник.",
+        "ms": "Permulaan projek dijadualkan pada hari Isnin.",
+        "ruExpression": "начало проекта",
+        "msExpression": "permulaan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "До начала проекта нужно утвердить бюджет.",
+        "ms": "Bajet perlu diluluskan sebelum permulaan projek.",
+        "ruExpression": "начала проекта",
+        "msExpression": "permulaan projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0662",
+    "ru": "завершение проекта",
+    "ms": "penyelesaian projek",
+    "forms": {
+      "ru": [
+        "завершение проекта",
+        "завершения проекта",
+        "завершению проекта",
+        "завершением проекта",
+        "завершении проекта"
+      ],
+      "ms": [
+        "penyelesaian projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9803",
+      "sourceTitle": "завершение проекта",
+      "sourceTranslation": "penyelesaian projek"
+    },
+    "examples": [
+      {
+        "ru": "Завершение проекта ожидается в декабре.",
+        "ms": "Penyelesaian projek dijangka pada bulan Disember.",
+        "ruExpression": "завершение проекта",
+        "msExpression": "penyelesaian projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "После завершения проекта будет подготовлен итоговый отчёт.",
+        "ms": "Laporan akhir akan disediakan selepas penyelesaian projek.",
+        "ruExpression": "завершения проекта",
+        "msExpression": "penyelesaian projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0663",
+    "ru": "бюджет проекта",
+    "ms": "bajet projek",
+    "forms": {
+      "ru": [
+        "бюджет проекта",
+        "бюджета проекта",
+        "бюджету проекта",
+        "бюджетом проекта",
+        "бюджете проекта"
+      ],
+      "ms": [
+        "bajet projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9807",
+      "sourceTitle": "бюджет проекта",
+      "sourceTranslation": "bajet projek"
+    },
+    "examples": [
+      {
+        "ru": "Бюджет проекта включает расходы на обучение.",
+        "ms": "Bajet projek merangkumi perbelanjaan latihan.",
+        "ruExpression": "бюджет проекта",
+        "msExpression": "bajet projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Увеличение бюджета проекта связано с покупкой оборудования.",
+        "ms": "Penambahan bajet projek berkaitan dengan pembelian peralatan.",
+        "ruExpression": "бюджета проекта",
+        "msExpression": "bajet projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0664",
+    "ru": "расходы проекта",
+    "ms": "perbelanjaan projek",
+    "forms": {
+      "ru": [
+        "расходы проекта",
+        "расходов проекта",
+        "расходам проекта",
+        "расходами проекта",
+        "расходах проекта"
+      ],
+      "ms": [
+        "perbelanjaan projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9811",
+      "sourceTitle": "расходы проекта",
+      "sourceTranslation": "perbelanjaan projek"
+    },
+    "examples": [
+      {
+        "ru": "Расходы проекта отражены в финансовом отчёте.",
+        "ms": "Perbelanjaan projek dinyatakan dalam laporan kewangan.",
+        "ruExpression": "расходы проекта",
+        "msExpression": "perbelanjaan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для проверки расходов проекта нужны квитанции.",
+        "ms": "Resit diperlukan untuk menyemak perbelanjaan projek.",
+        "ruExpression": "расходов проекта",
+        "msExpression": "perbelanjaan projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0665",
+    "ru": "результат проекта",
+    "ms": "hasil projek",
+    "forms": {
+      "ru": [
+        "результат проекта",
+        "результата проекта",
+        "результату проекта",
+        "результатом проекта",
+        "результате проекта"
+      ],
+      "ms": [
+        "hasil projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9812",
+      "sourceTitle": "результат проекта",
+      "sourceTranslation": "hasil projek"
+    },
+    "examples": [
+      {
+        "ru": "Результат проекта будет представлен заказчику.",
+        "ms": "Hasil projek akan dibentangkan kepada pelanggan.",
+        "ruExpression": "результат проекта",
+        "msExpression": "hasil projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Описание результата проекта включено в отчёт.",
+        "ms": "Penerangan hasil projek dimasukkan dalam laporan.",
+        "ruExpression": "результата проекта",
+        "msExpression": "hasil projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0666",
+    "ru": "цель проекта",
+    "ms": "matlamat projek",
+    "forms": {
+      "ru": [
+        "цель проекта",
+        "цели проекта",
+        "целью проекта"
+      ],
+      "ms": [
+        "matlamat projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9813",
+      "sourceTitle": "цель проекта",
+      "sourceTranslation": "matlamat projek"
+    },
+    "examples": [
+      {
+        "ru": "Цель проекта — сократить время обработки заявлений.",
+        "ms": "Matlamat projek adalah untuk memendekkan masa pemprosesan permohonan.",
+        "ruExpression": "цель проекта",
+        "msExpression": "matlamat projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Все участники ознакомлены с целью проекта.",
+        "ms": "Semua peserta telah dimaklumkan tentang matlamat projek.",
+        "ruExpression": "целью проекта",
+        "msExpression": "matlamat projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0667",
+    "ru": "показатель эффективности",
+    "ms": "petunjuk prestasi",
+    "forms": {
+      "ru": [
+        "показатель эффективности",
+        "показателя эффективности",
+        "показателю эффективности",
+        "показателем эффективности",
+        "показателе эффективности"
+      ],
+      "ms": [
+        "petunjuk prestasi"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9814",
+      "sourceTitle": "показатель эффективности",
+      "sourceTranslation": "petunjuk prestasi"
+    },
+    "examples": [
+      {
+        "ru": "Показатель эффективности рассчитывается каждый месяц.",
+        "ms": "Petunjuk prestasi dikira setiap bulan.",
+        "ruExpression": "показатель эффективности",
+        "msExpression": "petunjuk prestasi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В отчёте объясняется изменение показателя эффективности.",
+        "ms": "Perubahan petunjuk prestasi dijelaskan dalam laporan.",
+        "ruExpression": "показателя эффективности",
+        "msExpression": "petunjuk prestasi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0668",
+    "ru": "ключевой показатель",
+    "ms": "petunjuk utama",
+    "forms": {
+      "ru": [
+        "ключевой показатель",
+        "ключевого показателя",
+        "ключевому показателю",
+        "ключевым показателем",
+        "ключевом показателе"
+      ],
+      "ms": [
+        "petunjuk utama"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9815",
+      "sourceTitle": "ключевой показатель",
+      "sourceTranslation": "petunjuk utama"
+    },
+    "examples": [
+      {
+        "ru": "Ключевой показатель указан на первой странице отчёта.",
+        "ms": "Petunjuk utama dinyatakan pada halaman pertama laporan.",
+        "ruExpression": "ключевой показатель",
+        "msExpression": "petunjuk utama",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Значение ключевого показателя выросло за месяц.",
+        "ms": "Nilai petunjuk utama meningkat sepanjang bulan itu.",
+        "ruExpression": "ключевого показателя",
+        "msExpression": "petunjuk utama",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0669",
+    "ru": "риск проекта",
+    "ms": "risiko projek",
+    "forms": {
+      "ru": [
+        "риск проекта",
+        "риска проекта",
+        "риску проекта",
+        "риском проекта",
+        "риске проекта"
+      ],
+      "ms": [
+        "risiko projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9816",
+      "sourceTitle": "риск проекта",
+      "sourceTranslation": "risiko projek"
+    },
+    "examples": [
+      {
+        "ru": "Основной риск проекта связан с задержкой поставок.",
+        "ms": "Risiko projek yang utama berkaitan dengan kelewatan penghantaran.",
+        "ruExpression": "риск проекта",
+        "msExpression": "risiko projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы подготовили план снижения риска проекта.",
+        "ms": "Kami menyediakan rancangan untuk mengurangkan risiko projek.",
+        "ruExpression": "риска проекта",
+        "msExpression": "risiko projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0670",
+    "ru": "проблема проекта",
+    "ms": "masalah projek",
+    "forms": {
+      "ru": [
+        "проблема проекта",
+        "проблемы проекта",
+        "проблеме проекта",
+        "проблему проекта",
+        "проблемой проекта"
+      ],
+      "ms": [
+        "masalah projek"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9819",
+      "sourceTitle": "проблема проекта",
+      "sourceTranslation": "masalah projek"
+    },
+    "examples": [
+      {
+        "ru": "Проблема проекта обсуждается на рабочей встрече.",
+        "ms": "Masalah projek dibincangkan dalam mesyuarat kerja.",
+        "ruExpression": "проблема проекта",
+        "msExpression": "masalah projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Руководитель предложил решение проблемы проекта.",
+        "ms": "Pengurus mencadangkan penyelesaian masalah projek.",
+        "ruExpression": "проблемы проекта",
+        "msExpression": "masalah projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0671",
+    "ru": "рабочий отчет",
+    "ms": "laporan kerja",
+    "forms": {
+      "ru": [
+        "рабочий отчет",
+        "рабочего отчёта",
+        "рабочему отчёту",
+        "рабочий отчёт",
+        "рабочим отчётом",
+        "рабочем отчёте"
+      ],
+      "ms": [
+        "laporan kerja"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9821",
+      "sourceTitle": "рабочий отчет",
+      "sourceTranslation": "laporan kerja"
+    },
+    "examples": [
+      {
+        "ru": "Рабочий отчет содержит список выполненных задач.",
+        "ms": "Laporan kerja mengandungi senarai tugasan yang telah disiapkan.",
+        "ruExpression": "рабочий отчет",
+        "msExpression": "laporan kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В рабочем отчёте указаны даты встреч.",
+        "ms": "Tarikh mesyuarat dinyatakan dalam laporan kerja.",
+        "ruExpression": "рабочем отчёте",
+        "msExpression": "laporan kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0672",
+    "ru": "ежемесячный отчет",
+    "ms": "laporan bulanan",
+    "forms": {
+      "ru": [
+        "ежемесячный отчет",
+        "ежемесячного отчёта",
+        "ежемесячному отчёту",
+        "ежемесячный отчёт",
+        "ежемесячным отчётом",
+        "ежемесячном отчёте"
+      ],
+      "ms": [
+        "laporan bulanan"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9824",
+      "sourceTitle": "ежемесячный отчет",
+      "sourceTranslation": "laporan bulanan"
+    },
+    "examples": [
+      {
+        "ru": "Ежемесячный отчет показывает расходы отдела.",
+        "ms": "Laporan bulanan menunjukkan perbelanjaan jabatan.",
+        "ruExpression": "ежемесячный отчет",
+        "msExpression": "laporan bulanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия ежемесячного отчёта отправлена руководителю.",
+        "ms": "Salinan laporan bulanan dihantar kepada pengurus.",
+        "ruExpression": "ежемесячного отчёта",
+        "msExpression": "laporan bulanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0673",
+    "ru": "годовой отчет",
+    "ms": "laporan tahunan",
+    "forms": {
+      "ru": [
+        "годовой отчет",
+        "годового отчёта",
+        "годовому отчёту",
+        "годовой отчёт",
+        "годовым отчётом",
+        "годовом отчёте"
+      ],
+      "ms": [
+        "laporan tahunan"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9825",
+      "sourceTitle": "годовой отчет",
+      "sourceTranslation": "laporan tahunan"
+    },
+    "examples": [
+      {
+        "ru": "Годовой отчет опубликован на сайте компании.",
+        "ms": "Laporan tahunan diterbitkan di laman web syarikat.",
+        "ruExpression": "годовой отчет",
+        "msExpression": "laporan tahunan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В годовом отчёте есть раздел о новых проектах.",
+        "ms": "Laporan tahunan mempunyai bahagian tentang projek baharu.",
+        "ruExpression": "годовом отчёте",
+        "msExpression": "laporan tahunan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0674",
+    "ru": "данные отчета",
+    "ms": "data laporan",
+    "forms": {
+      "ru": [
+        "данные отчета",
+        "данных отчёта",
+        "данным отчёта",
+        "данными отчёта"
+      ],
+      "ms": [
+        "data laporan"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9829",
+      "sourceTitle": "данные отчета",
+      "sourceTranslation": "data laporan"
+    },
+    "examples": [
+      {
+        "ru": "Данные отчета проверены перед отправкой.",
+        "ms": "Data laporan telah disemak sebelum dihantar.",
+        "ruExpression": "данные отчета",
+        "msExpression": "data laporan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для проверки данных отчёта нужны исходные документы.",
+        "ms": "Dokumen asal diperlukan untuk menyemak data laporan.",
+        "ruExpression": "данных отчёта",
+        "msExpression": "data laporan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0675",
+    "ru": "зона ответственности",
+    "ms": "bidang tanggungjawab",
+    "forms": {
+      "ru": [
+        "зона ответственности",
+        "зоны ответственности",
+        "зоне ответственности",
+        "зону ответственности",
+        "зоной ответственности"
+      ],
+      "ms": [
+        "bidang tanggungjawab"
+      ]
+    },
+    "topic": "проекты и отчёты",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9835",
+      "sourceTitle": "зона ответственности",
+      "sourceTranslation": "bidang tanggungjawab"
+    },
+    "examples": [
+      {
+        "ru": "Зона ответственности каждого отдела описана в документе.",
+        "ms": "Bidang tanggungjawab setiap jabatan diterangkan dalam dokumen.",
+        "ruExpression": "зона ответственности",
+        "msExpression": "bidang tanggungjawab",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы договорились об изменении зоны ответственности.",
+        "ms": "Kami telah bersetuju tentang perubahan bidang tanggungjawab.",
+        "ruExpression": "зоны ответственности",
+        "msExpression": "bidang tanggungjawab",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

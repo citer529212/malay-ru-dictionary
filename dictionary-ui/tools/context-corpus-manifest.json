@@ -1,12 +1,12 @@
 {
-  "stage": 10,
+  "stage": 11,
   "date": "2026-10-25",
-  "expressions": 650,
-  "examples": 1050,
-  "enrichedExpressions": 400,
-  "fixturesPerDirection": 350,
-  "protectedPreviousEntries": 625,
-  "previousEntriesSha256": "bae45a6b41ef7f33d95e25343b2a368146171f86df43dc9c6baf0d11716a0729",
+  "expressions": 675,
+  "examples": 1100,
+  "enrichedExpressions": 425,
+  "fixturesPerDirection": 375,
+  "protectedPreviousEntries": 650,
+  "previousEntriesSha256": "62d6fa830cbf1fee65a52fd05855f1a1316c2cd396c5ae13737e491aead20995",
   "enrichedExistingIds": [],
-  "unchangedPreviousExamplesSha256": "d708160487fae7a16e86c1d8b70c9061cb447c183cf0a45e9adce5d6ccff9cdd"
+  "unchangedPreviousExamplesSha256": "8089d60f0dcfa4a3e70b8f8a25958d21eff282fda23c58b8ba42bc2b45855f25"
 }
