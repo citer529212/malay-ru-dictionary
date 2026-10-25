@@ -21289,5 +21289,1259 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0551",
+    "ru": "деловая переписка",
+    "ms": "surat-menyurat perniagaan",
+    "forms": {
+      "ru": [
+        "деловая переписка",
+        "деловой переписки",
+        "деловой переписке",
+        "деловую переписку",
+        "деловой перепиской"
+      ],
+      "ms": [
+        "surat-menyurat perniagaan"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9736",
+      "sourceTitle": "деловая переписка",
+      "sourceTranslation": "surat-menyurat perniagaan"
+    },
+    "examples": [
+      {
+        "ru": "Деловая переписка ведётся по электронной почте.",
+        "ms": "Surat-menyurat perniagaan dijalankan melalui e-mel.",
+        "ruExpression": "деловая переписка",
+        "msExpression": "surat-menyurat perniagaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Деловая переписка должна быть понятной.",
+        "ms": "Surat-menyurat perniagaan mestilah jelas.",
+        "ruExpression": "деловая переписка",
+        "msExpression": "surat-menyurat perniagaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0552",
+    "ru": "рабочее письмо",
+    "ms": "e-mel kerja",
+    "forms": {
+      "ru": [
+        "рабочее письмо",
+        "рабочего письма",
+        "рабочему письму",
+        "рабочим письмом",
+        "рабочем письме"
+      ],
+      "ms": [
+        "e-mel kerja"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9737",
+      "sourceTitle": "рабочее письмо",
+      "sourceTranslation": "e-mel kerja"
+    },
+    "examples": [
+      {
+        "ru": "Рабочее письмо содержит адрес встречи.",
+        "ms": "E-mel kerja mengandungi alamat tempat mesyuarat.",
+        "ruExpression": "рабочее письмо",
+        "msExpression": "e-mel kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Рабочее письмо уже отправлено.",
+        "ms": "E-mel kerja sudah dihantar.",
+        "ruExpression": "рабочее письмо",
+        "msExpression": "e-mel kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0553",
+    "ru": "получатель письма",
+    "ms": "penerima e-mel",
+    "forms": {
+      "ru": [
+        "получатель письма",
+        "получателя письма",
+        "получателю письма",
+        "получателем письма",
+        "получателе письма"
+      ],
+      "ms": [
+        "penerima e-mel"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9738",
+      "sourceTitle": "получатель письма",
+      "sourceTranslation": "penerima e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Получатель письма должен подтвердить получение.",
+        "ms": "Penerima e-mel perlu mengesahkan penerimaan.",
+        "ruExpression": "получатель письма",
+        "msExpression": "penerima e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Получатель письма работает в нашем отделе.",
+        "ms": "Penerima e-mel bekerja di jabatan kami.",
+        "ruExpression": "получатель письма",
+        "msExpression": "penerima e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0554",
+    "ru": "отправитель письма",
+    "ms": "pengirim e-mel",
+    "forms": {
+      "ru": [
+        "отправитель письма",
+        "отправителя письма",
+        "отправителю письма",
+        "отправителем письма",
+        "отправителе письма"
+      ],
+      "ms": [
+        "pengirim e-mel"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9739",
+      "sourceTitle": "отправитель письма",
+      "sourceTranslation": "pengirim e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Отправитель письма указал свой номер телефона.",
+        "ms": "Pengirim e-mel menyatakan nombor telefonnya.",
+        "ruExpression": "отправитель письма",
+        "msExpression": "pengirim e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Отправитель письма просит ответить сегодня.",
+        "ms": "Pengirim e-mel meminta jawapan hari ini.",
+        "ruExpression": "отправитель письма",
+        "msExpression": "pengirim e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0555",
+    "ru": "копия письма",
+    "ms": "salinan e-mel",
+    "forms": {
+      "ru": [
+        "копия письма",
+        "копии письма",
+        "копию письма",
+        "копией письма"
+      ],
+      "ms": [
+        "salinan e-mel"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9740",
+      "sourceTitle": "копия письма",
+      "sourceTranslation": "salinan e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Копия письма сохранена в папке.",
+        "ms": "Salinan e-mel disimpan dalam folder.",
+        "ruExpression": "копия письма",
+        "msExpression": "salinan e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия письма нужна для отчёта.",
+        "ms": "Salinan e-mel diperlukan untuk laporan.",
+        "ruExpression": "копия письма",
+        "msExpression": "salinan e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0556",
+    "ru": "скрытая копия",
+    "ms": "salinan tersembunyi",
+    "forms": {
+      "ru": [
+        "скрытая копия",
+        "скрытой копии",
+        "скрытую копию",
+        "скрытой копией"
+      ],
+      "ms": [
+        "salinan tersembunyi"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9741",
+      "sourceTitle": "скрытая копия",
+      "sourceTranslation": "salinan tersembunyi"
+    },
+    "examples": [
+      {
+        "ru": "Скрытая копия позволяет не показывать адреса другим получателям.",
+        "ms": "Salinan tersembunyi membolehkan alamat disembunyikan daripada penerima lain.",
+        "ruExpression": "скрытая копия",
+        "msExpression": "salinan tersembunyi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Скрытая копия отправлена руководителю.",
+        "ms": "Salinan tersembunyi dihantar kepada pengurus.",
+        "ruExpression": "скрытая копия",
+        "msExpression": "salinan tersembunyi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0557",
+    "ru": "обновленная версия",
+    "ms": "versi yang dikemas kini",
+    "forms": {
+      "ru": [
+        "обновленная версия",
+        "обновлённой версии",
+        "обновлённую версию",
+        "обновлённой версией"
+      ],
+      "ms": [
+        "versi yang dikemas kini"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9756",
+      "sourceTitle": "обновленная версия",
+      "sourceTranslation": "versi yang dikemas kini"
+    },
+    "examples": [
+      {
+        "ru": "Обновленная версия содержит новые данные.",
+        "ms": "Versi yang dikemas kini mengandungi data baharu.",
+        "ruExpression": "обновленная версия",
+        "msExpression": "versi yang dikemas kini",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Обновленная версия доступна на сайте.",
+        "ms": "Versi yang dikemas kini tersedia di laman web.",
+        "ruExpression": "обновленная версия",
+        "msExpression": "versi yang dikemas kini",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0558",
+    "ru": "последняя версия",
+    "ms": "versi terkini",
+    "forms": {
+      "ru": [
+        "последняя версия",
+        "последней версии",
+        "последнюю версию",
+        "последней версией"
+      ],
+      "ms": [
+        "versi terkini"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9757",
+      "sourceTitle": "последняя версия",
+      "sourceTranslation": "versi terkini"
+    },
+    "examples": [
+      {
+        "ru": "Последняя версия опубликована сегодня.",
+        "ms": "Versi terkini diterbitkan hari ini.",
+        "ruExpression": "последняя версия",
+        "msExpression": "versi terkini",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Последняя версия включает исправления.",
+        "ms": "Versi terkini merangkumi pembetulan.",
+        "ruExpression": "последняя версия",
+        "msExpression": "versi terkini",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0559",
+    "ru": "предыдущая версия",
+    "ms": "versi sebelumnya",
+    "forms": {
+      "ru": [
+        "предыдущая версия",
+        "предыдущей версии",
+        "предыдущую версию",
+        "предыдущей версией"
+      ],
+      "ms": [
+        "versi sebelumnya"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9758",
+      "sourceTitle": "предыдущая версия",
+      "sourceTranslation": "versi sebelumnya"
+    },
+    "examples": [
+      {
+        "ru": "Предыдущая версия сохранена отдельно.",
+        "ms": "Versi sebelumnya disimpan secara berasingan.",
+        "ruExpression": "предыдущая версия",
+        "msExpression": "versi sebelumnya",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Предыдущая версия содержит ошибку.",
+        "ms": "Versi sebelumnya mengandungi kesilapan.",
+        "ruExpression": "предыдущая версия",
+        "msExpression": "versi sebelumnya",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0560",
+    "ru": "черновик документа",
+    "ms": "draf dokumen",
+    "forms": {
+      "ru": [
+        "черновик документа",
+        "черновика документа",
+        "черновику документа",
+        "черновиком документа",
+        "черновике документа"
+      ],
+      "ms": [
+        "draf dokumen"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9759",
+      "sourceTitle": "черновик документа",
+      "sourceTranslation": "draf dokumen"
+    },
+    "examples": [
+      {
+        "ru": "Черновик документа готов для обсуждения.",
+        "ms": "Draf dokumen sedia untuk dibincangkan.",
+        "ruExpression": "черновик документа",
+        "msExpression": "draf dokumen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Черновик документа содержит три раздела.",
+        "ms": "Draf dokumen mengandungi tiga bahagian.",
+        "ruExpression": "черновик документа",
+        "msExpression": "draf dokumen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0561",
+    "ru": "финальная версия",
+    "ms": "versi akhir",
+    "forms": {
+      "ru": [
+        "финальная версия",
+        "финальной версии",
+        "финальную версию",
+        "финальной версией"
+      ],
+      "ms": [
+        "versi akhir"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9760",
+      "sourceTitle": "финальная версия",
+      "sourceTranslation": "versi akhir"
+    },
+    "examples": [
+      {
+        "ru": "Финальная версия отправлена заказчику.",
+        "ms": "Versi akhir telah dihantar kepada pelanggan.",
+        "ruExpression": "финальная версия",
+        "msExpression": "versi akhir",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Финальная версия будет готова завтра.",
+        "ms": "Versi akhir akan siap esok.",
+        "ruExpression": "финальная версия",
+        "msExpression": "versi akhir",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0562",
+    "ru": "печать компании",
+    "ms": "cop syarikat",
+    "forms": {
+      "ru": [
+        "печать компании",
+        "печати компании",
+        "печатью компании"
+      ],
+      "ms": [
+        "cop syarikat"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9764",
+      "sourceTitle": "печать компании",
+      "sourceTranslation": "cop syarikat"
+    },
+    "examples": [
+      {
+        "ru": "Печать компании находится у секретаря.",
+        "ms": "Cop syarikat ada pada setiausaha.",
+        "ruExpression": "печать компании",
+        "msExpression": "cop syarikat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Печать компании нужна для этого документа.",
+        "ms": "Cop syarikat diperlukan untuk dokumen ini.",
+        "ruExpression": "печать компании",
+        "msExpression": "cop syarikat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0563",
+    "ru": "рабочая встреча",
+    "ms": "mesyuarat kerja",
+    "forms": {
+      "ru": [
+        "рабочая встреча",
+        "рабочей встречи",
+        "рабочей встрече",
+        "рабочую встречу",
+        "рабочей встречей"
+      ],
+      "ms": [
+        "mesyuarat kerja"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9765",
+      "sourceTitle": "рабочая встреча",
+      "sourceTranslation": "mesyuarat kerja"
+    },
+    "examples": [
+      {
+        "ru": "Рабочая встреча начнётся в десять часов.",
+        "ms": "Mesyuarat kerja akan bermula pada pukul sepuluh.",
+        "ruExpression": "рабочая встреча",
+        "msExpression": "mesyuarat kerja",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Рабочая встреча проходит в соседнем кабинете.",
+        "ms": "Mesyuarat kerja berlangsung di bilik sebelah.",
+        "ruExpression": "рабочая встреча",
+        "msExpression": "mesyuarat kerja",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0564",
+    "ru": "участник встречи",
+    "ms": "peserta mesyuarat",
+    "forms": {
+      "ru": [
+        "участник встречи",
+        "участника встречи",
+        "участнику встречи",
+        "участником встречи",
+        "участнике встречи"
+      ],
+      "ms": [
+        "peserta mesyuarat"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9766",
+      "sourceTitle": "участник встречи",
+      "sourceTranslation": "peserta mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Участник встречи задал вопрос.",
+        "ms": "Peserta mesyuarat mengemukakan soalan.",
+        "ruExpression": "участник встречи",
+        "msExpression": "peserta mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Участник встречи получил копию отчёта.",
+        "ms": "Peserta mesyuarat menerima salinan laporan.",
+        "ruExpression": "участник встречи",
+        "msExpression": "peserta mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0565",
+    "ru": "председатель встречи",
+    "ms": "pengerusi mesyuarat",
+    "forms": {
+      "ru": [
+        "председатель встречи",
+        "председателя встречи",
+        "председателю встречи",
+        "председателем встречи",
+        "председателе встречи"
+      ],
+      "ms": [
+        "pengerusi mesyuarat"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9767",
+      "sourceTitle": "председатель встречи",
+      "sourceTranslation": "pengerusi mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Председатель встречи представил повестку дня.",
+        "ms": "Pengerusi mesyuarat membentangkan agenda.",
+        "ruExpression": "председатель встречи",
+        "msExpression": "pengerusi mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Председатель встречи поблагодарил участников.",
+        "ms": "Pengerusi mesyuarat mengucapkan terima kasih kepada para peserta.",
+        "ruExpression": "председатель встречи",
+        "msExpression": "pengerusi mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0566",
+    "ru": "секретарь встречи",
+    "ms": "setiausaha mesyuarat",
+    "forms": {
+      "ru": [
+        "секретарь встречи",
+        "секретаря встречи",
+        "секретарю встречи",
+        "секретарём встречи",
+        "секретаре встречи"
+      ],
+      "ms": [
+        "setiausaha mesyuarat"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9768",
+      "sourceTitle": "секретарь встречи",
+      "sourceTranslation": "setiausaha mesyuarat"
+    },
+    "examples": [
+      {
+        "ru": "Секретарь встречи записал решения.",
+        "ms": "Setiausaha mesyuarat mencatat keputusan.",
+        "ruExpression": "секретарь встречи",
+        "msExpression": "setiausaha mesyuarat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Секретарь встречи подготовит протокол.",
+        "ms": "Setiausaha mesyuarat akan menyediakan minit.",
+        "ruExpression": "секретарь встречи",
+        "msExpression": "setiausaha mesyuarat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0567",
+    "ru": "высокий приоритет",
+    "ms": "keutamaan tinggi",
+    "forms": {
+      "ru": [
+        "высокий приоритет",
+        "высокого приоритета",
+        "высокому приоритету",
+        "высоким приоритетом",
+        "высоком приоритете"
+      ],
+      "ms": [
+        "keutamaan tinggi"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9783",
+      "sourceTitle": "высокий приоритет",
+      "sourceTranslation": "keutamaan tinggi"
+    },
+    "examples": [
+      {
+        "ru": "Высокий приоритет означает, что задачу нужно выполнить сначала.",
+        "ms": "Keutamaan tinggi bermakna tugasan itu perlu disiapkan terlebih dahulu.",
+        "ruExpression": "высокий приоритет",
+        "msExpression": "keutamaan tinggi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Высокий приоритет присвоен этому запросу.",
+        "ms": "Keutamaan tinggi diberikan kepada permintaan ini.",
+        "ruExpression": "высокий приоритет",
+        "msExpression": "keutamaan tinggi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0568",
+    "ru": "низкий приоритет",
+    "ms": "keutamaan rendah",
+    "forms": {
+      "ru": [
+        "низкий приоритет",
+        "низкого приоритета",
+        "низкому приоритету",
+        "низким приоритетом",
+        "низком приоритете"
+      ],
+      "ms": [
+        "keutamaan rendah"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9784",
+      "sourceTitle": "низкий приоритет",
+      "sourceTranslation": "keutamaan rendah"
+    },
+    "examples": [
+      {
+        "ru": "Низкий приоритет позволяет выполнить задачу позже.",
+        "ms": "Keutamaan rendah membolehkan tugasan disiapkan kemudian.",
+        "ruExpression": "низкий приоритет",
+        "msExpression": "keutamaan rendah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Низкий приоритет указан в списке задач.",
+        "ms": "Keutamaan rendah dinyatakan dalam senarai tugasan.",
+        "ruExpression": "низкий приоритет",
+        "msExpression": "keutamaan rendah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0569",
+    "ru": "текущая задача",
+    "ms": "tugasan semasa",
+    "forms": {
+      "ru": [
+        "текущая задача",
+        "текущей задачи",
+        "текущей задаче",
+        "текущую задачу",
+        "текущей задачей"
+      ],
+      "ms": [
+        "tugasan semasa"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9785",
+      "sourceTitle": "текущая задача",
+      "sourceTranslation": "tugasan semasa"
+    },
+    "examples": [
+      {
+        "ru": "Текущая задача требует проверки данных.",
+        "ms": "Tugasan semasa memerlukan semakan data.",
+        "ruExpression": "текущая задача",
+        "msExpression": "tugasan semasa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Текущая задача будет завершена сегодня.",
+        "ms": "Tugasan semasa akan disiapkan hari ini.",
+        "ruExpression": "текущая задача",
+        "msExpression": "tugasan semasa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0570",
+    "ru": "новая задача",
+    "ms": "tugasan baharu",
+    "forms": {
+      "ru": [
+        "новая задача",
+        "новой задачи",
+        "новой задаче",
+        "новую задачу",
+        "новой задачей"
+      ],
+      "ms": [
+        "tugasan baharu"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9786",
+      "sourceTitle": "новая задача",
+      "sourceTranslation": "tugasan baharu"
+    },
+    "examples": [
+      {
+        "ru": "Новая задача появилась в списке.",
+        "ms": "Tugasan baharu muncul dalam senarai.",
+        "ruExpression": "новая задача",
+        "msExpression": "tugasan baharu",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Новая задача связана с переводом отчёта.",
+        "ms": "Tugasan baharu berkaitan dengan terjemahan laporan.",
+        "ruExpression": "новая задача",
+        "msExpression": "tugasan baharu",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0571",
+    "ru": "список задач",
+    "ms": "senarai tugasan",
+    "forms": {
+      "ru": [
+        "список задач",
+        "списка задач",
+        "списку задач",
+        "списком задач",
+        "списке задач"
+      ],
+      "ms": [
+        "senarai tugasan"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9787",
+      "sourceTitle": "список задач",
+      "sourceTranslation": "senarai tugasan"
+    },
+    "examples": [
+      {
+        "ru": "Список задач обновляется каждый день.",
+        "ms": "Senarai tugasan dikemas kini setiap hari.",
+        "ruExpression": "список задач",
+        "msExpression": "senarai tugasan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Список задач доступен всей команде.",
+        "ms": "Senarai tugasan boleh diakses oleh seluruh pasukan.",
+        "ruExpression": "список задач",
+        "msExpression": "senarai tugasan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0572",
+    "ru": "статус задачи",
+    "ms": "status tugasan",
+    "forms": {
+      "ru": [
+        "статус задачи",
+        "статуса задачи",
+        "статусу задачи",
+        "статусом задачи",
+        "статусе задачи"
+      ],
+      "ms": [
+        "status tugasan"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9788",
+      "sourceTitle": "статус задачи",
+      "sourceTranslation": "status tugasan"
+    },
+    "examples": [
+      {
+        "ru": "Статус задачи изменился после проверки.",
+        "ms": "Status tugasan berubah selepas semakan.",
+        "ruExpression": "статус задачи",
+        "msExpression": "status tugasan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Статус задачи отображается в таблице.",
+        "ms": "Status tugasan dipaparkan dalam jadual.",
+        "ruExpression": "статус задачи",
+        "msExpression": "status tugasan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0573",
+    "ru": "руководитель проекта",
+    "ms": "pengurus projek",
+    "forms": {
+      "ru": [
+        "руководитель проекта",
+        "руководителя проекта",
+        "руководителю проекта",
+        "руководителем проекта",
+        "руководителе проекта"
+      ],
+      "ms": [
+        "pengurus projek"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9796",
+      "sourceTitle": "руководитель проекта",
+      "sourceTranslation": "pengurus projek"
+    },
+    "examples": [
+      {
+        "ru": "Руководитель проекта утвердил план.",
+        "ms": "Pengurus projek meluluskan rancangan itu.",
+        "ruExpression": "руководитель проекта",
+        "msExpression": "pengurus projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Руководитель проекта ответит на ваши вопросы.",
+        "ms": "Pengurus projek akan menjawab soalan anda.",
+        "ruExpression": "руководитель проекта",
+        "msExpression": "pengurus projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0574",
+    "ru": "план проекта",
+    "ms": "rancangan projek",
+    "forms": {
+      "ru": [
+        "план проекта",
+        "плана проекта",
+        "плану проекта",
+        "планом проекта",
+        "плане проекта"
+      ],
+      "ms": [
+        "rancangan projek"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9799",
+      "sourceTitle": "план проекта",
+      "sourceTranslation": "rancangan projek"
+    },
+    "examples": [
+      {
+        "ru": "План проекта содержит основные этапы.",
+        "ms": "Rancangan projek mengandungi fasa utama.",
+        "ruExpression": "план проекта",
+        "msExpression": "rancangan projek",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "План проекта согласован с заказчиком.",
+        "ms": "Rancangan projek telah dipersetujui bersama pelanggan.",
+        "ruExpression": "план проекта",
+        "msExpression": "rancangan projek",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0575",
+    "ru": "ежедневный отчет",
+    "ms": "laporan harian",
+    "forms": {
+      "ru": [
+        "ежедневный отчет",
+        "ежедневного отчёта",
+        "ежедневному отчёту",
+        "ежедневный отчёт",
+        "ежедневным отчётом",
+        "ежедневном отчёте"
+      ],
+      "ms": [
+        "laporan harian"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9822",
+      "sourceTitle": "ежедневный отчет",
+      "sourceTranslation": "laporan harian"
+    },
+    "examples": [
+      {
+        "ru": "Ежедневный отчет содержит данные за вчерашний день.",
+        "ms": "Laporan harian mengandungi data semalam.",
+        "ruExpression": "ежедневный отчет",
+        "msExpression": "laporan harian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ежедневный отчет отправляют утром.",
+        "ms": "Laporan harian dihantar pada waktu pagi.",
+        "ruExpression": "ежедневный отчет",
+        "msExpression": "laporan harian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0576",
+    "ru": "еженедельный отчет",
+    "ms": "laporan mingguan",
+    "forms": {
+      "ru": [
+        "еженедельный отчет",
+        "еженедельного отчёта",
+        "еженедельному отчёту",
+        "еженедельный отчёт",
+        "еженедельным отчётом",
+        "еженедельном отчёте"
+      ],
+      "ms": [
+        "laporan mingguan"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9823",
+      "sourceTitle": "еженедельный отчет",
+      "sourceTranslation": "laporan mingguan"
+    },
+    "examples": [
+      {
+        "ru": "Еженедельный отчет готовят по пятницам.",
+        "ms": "Laporan mingguan disediakan pada hari Jumaat.",
+        "ruExpression": "еженедельный отчет",
+        "msExpression": "laporan mingguan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Еженедельный отчет показывает ход работы.",
+        "ms": "Laporan mingguan menunjukkan kemajuan kerja.",
+        "ruExpression": "еженедельный отчет",
+        "msExpression": "laporan mingguan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0577",
+    "ru": "контроль качества",
+    "ms": "kawalan kualiti",
+    "forms": {
+      "ru": [
+        "контроль качества",
+        "контроля качества",
+        "контролю качества",
+        "контролем качества",
+        "контроле качества"
+      ],
+      "ms": [
+        "kawalan kualiti"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9836",
+      "sourceTitle": "контроль качества",
+      "sourceTranslation": "kawalan kualiti"
+    },
+    "examples": [
+      {
+        "ru": "Контроль качества проводится перед отправкой.",
+        "ms": "Kawalan kualiti dijalankan sebelum penghantaran.",
+        "ruExpression": "контроль качества",
+        "msExpression": "kawalan kualiti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Контроль качества помогает выявить ошибки.",
+        "ms": "Kawalan kualiti membantu mengesan kesilapan.",
+        "ruExpression": "контроль качества",
+        "msExpression": "kawalan kualiti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0578",
+    "ru": "техническое задание",
+    "ms": "spesifikasi teknikal",
+    "forms": {
+      "ru": [
+        "техническое задание",
+        "технического задания",
+        "техническому заданию",
+        "техническим заданием",
+        "техническом задании"
+      ],
+      "ms": [
+        "spesifikasi teknikal"
+      ]
+    },
+    "topic": "работа",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9840",
+      "sourceTitle": "техническое задание",
+      "sourceTranslation": "spesifikasi teknikal"
+    },
+    "examples": [
+      {
+        "ru": "Техническое задание описывает требования к системе.",
+        "ms": "Spesifikasi teknikal menerangkan keperluan sistem.",
+        "ruExpression": "техническое задание",
+        "msExpression": "spesifikasi teknikal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Техническое задание приложено к договору.",
+        "ms": "Spesifikasi teknikal dilampirkan pada kontrak.",
+        "ruExpression": "техническое задание",
+        "msExpression": "spesifikasi teknikal",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0579",
+    "ru": "ответ в письменном виде",
+    "ms": "jawapan bertulis",
+    "forms": {
+      "ru": [
+        "ответ в письменном виде",
+        "ответа в письменном виде",
+        "ответу в письменном виде",
+        "ответом в письменном виде",
+        "ответе в письменном виде"
+      ],
+      "ms": [
+        "jawapan bertulis"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7950",
+      "sourceTitle": "ответ в письменном виде",
+      "sourceTranslation": "jawapan bertulis"
+    },
+    "examples": [
+      {
+        "ru": "Ответ в письменном виде нужен для архива.",
+        "ms": "Jawapan bertulis diperlukan untuk arkib.",
+        "ruExpression": "ответ в письменном виде",
+        "msExpression": "jawapan bertulis",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ответ в письменном виде будет отправлен завтра.",
+        "ms": "Jawapan bertulis akan dihantar esok.",
+        "ruExpression": "ответ в письменном виде",
+        "msExpression": "jawapan bertulis",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0580",
+    "ru": "ответ по электронной почте",
+    "ms": "jawapan melalui e-mel",
+    "forms": {
+      "ru": [
+        "ответ по электронной почте",
+        "ответа по электронной почте",
+        "ответу по электронной почте",
+        "ответом по электронной почте",
+        "ответе по электронной почте"
+      ],
+      "ms": [
+        "jawapan melalui e-mel"
+      ]
+    },
+    "topic": "деловая переписка",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7951",
+      "sourceTitle": "ответ по электронной почте",
+      "sourceTranslation": "jawapan melalui e-mel"
+    },
+    "examples": [
+      {
+        "ru": "Ответ по электронной почте придёт сегодня.",
+        "ms": "Jawapan melalui e-mel akan diterima hari ini.",
+        "ruExpression": "ответ по электронной почте",
+        "msExpression": "jawapan melalui e-mel",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Ответ по электронной почте содержит номер заявки.",
+        "ms": "Jawapan melalui e-mel mengandungi nombor permohonan.",
+        "ruExpression": "ответ по электронной почте",
+        "msExpression": "jawapan melalui e-mel",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

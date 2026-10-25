@@ -31,7 +31,7 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
   } else assert.ok((await page.locator('#answerDetails').textContent()).includes('storan awan'));
   results.push({viewport,query,passed:true});
  }
- for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda']]) {
+ for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis']]) {
   await page.locator('#searchInput').fill(newQuery);
   await page.locator('#searchButton').click();
   await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,newTitle);
@@ -48,6 +48,14 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.screenshot({path:`${outputDir}/${viewport.width}-new-topic.png`,fullPage:false});
  await page.locator('#resetContextFilters').click();
  results.push({viewport,scenario:'new-language-topic',passed:true});
+ await page.locator('#contextTopic').selectOption('деловая переписка');
+ assert.equal(await page.locator('#resultCount').textContent(),'14');
+ assert.ok((await page.locator('#resultList').textContent()).includes('черновик документа'));
+ await page.locator('.context-filters').scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Business topic overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-business-topic.png`,fullPage:false});
+ await page.locator('#resetContextFilters').click();
+ results.push({viewport,scenario:'business-correspondence-topic',passed:true});
  await page.locator('#searchInput').fill('вода');
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');

@@ -998,5 +998,125 @@
   [
     "план поездки",
     "rancangan perjalanan"
+  ],
+  [
+    "деловая переписка",
+    "surat-menyurat perniagaan"
+  ],
+  [
+    "рабочее письмо",
+    "e-mel kerja"
+  ],
+  [
+    "получатель письма",
+    "penerima e-mel"
+  ],
+  [
+    "отправитель письма",
+    "pengirim e-mel"
+  ],
+  [
+    "копия письма",
+    "salinan e-mel"
+  ],
+  [
+    "скрытая копия",
+    "salinan tersembunyi"
+  ],
+  [
+    "обновленная версия",
+    "versi yang dikemas kini"
+  ],
+  [
+    "последняя версия",
+    "versi terkini"
+  ],
+  [
+    "предыдущая версия",
+    "versi sebelumnya"
+  ],
+  [
+    "черновик документа",
+    "draf dokumen"
+  ],
+  [
+    "финальная версия",
+    "versi akhir"
+  ],
+  [
+    "печать компании",
+    "cop syarikat"
+  ],
+  [
+    "рабочая встреча",
+    "mesyuarat kerja"
+  ],
+  [
+    "участник встречи",
+    "peserta mesyuarat"
+  ],
+  [
+    "председатель встречи",
+    "pengerusi mesyuarat"
+  ],
+  [
+    "секретарь встречи",
+    "setiausaha mesyuarat"
+  ],
+  [
+    "высокий приоритет",
+    "keutamaan tinggi"
+  ],
+  [
+    "низкий приоритет",
+    "keutamaan rendah"
+  ],
+  [
+    "текущая задача",
+    "tugasan semasa"
+  ],
+  [
+    "новая задача",
+    "tugasan baharu"
+  ],
+  [
+    "список задач",
+    "senarai tugasan"
+  ],
+  [
+    "статус задачи",
+    "status tugasan"
+  ],
+  [
+    "руководитель проекта",
+    "pengurus projek"
+  ],
+  [
+    "план проекта",
+    "rancangan projek"
+  ],
+  [
+    "ежедневный отчет",
+    "laporan harian"
+  ],
+  [
+    "еженедельный отчет",
+    "laporan mingguan"
+  ],
+  [
+    "контроль качества",
+    "kawalan kualiti"
+  ],
+  [
+    "техническое задание",
+    "spesifikasi teknikal"
+  ],
+  [
+    "ответ в письменном виде",
+    "jawapan bertulis"
+  ],
+  [
+    "ответ по электронной почте",
+    "jawapan melalui e-mel"
   ]
 ]

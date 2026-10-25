@@ -22,6 +22,18 @@ assert.equal(contextCorpus.length, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => r.id)).size, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => key(r.ru))).size, expected.expressions);
 assert.equal(new Set(contextCorpus.map(r => key(r.ms))).size, expected.expressions);
+// Independent accusative fixtures catch adjective agreement mistakes in new nominal forms.
+for (const [query,title] of [
+ ['деловую переписку','деловая переписка'], ['скрытую копию','скрытая копия'],
+ ['обновлённую версию','обновленная версия'], ['последнюю версию','последняя версия'],
+ ['предыдущую версию','предыдущая версия'], ['финальную версию','финальная версия'],
+ ['рабочую встречу','рабочая встреча'], ['текущую задачу','текущая задача'],
+ ['новую задачу','новая задача'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
+ assert.equal(hit?.title,title,`Accusative agreement: ${query}`);
+ assert.equal(hit?._contextKind,1);
+}
 let exact = 0, forms = 0, contexts = 0;
 for (const row of contextCorpus) {
   assert.equal(row.verified, true);
