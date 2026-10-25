@@ -23383,5 +23383,1052 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0601",
+    "ru": "реквизиты счета",
+    "ms": "butiran akaun",
+    "forms": {
+      "ru": [
+        "реквизиты счета",
+        "реквизитов счёта",
+        "реквизитам счёта",
+        "реквизитами счёта",
+        "реквизитах счёта"
+      ],
+      "ms": [
+        "butiran akaun"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-4574",
+      "sourceTitle": "реквизиты счета",
+      "sourceTranslation": "butiran akaun"
+    },
+    "examples": [
+      {
+        "ru": "Реквизиты счета указаны в договоре.",
+        "ms": "Butiran akaun dinyatakan dalam kontrak.",
+        "ruExpression": "реквизиты счета",
+        "msExpression": "butiran akaun",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте правильность реквизитов счёта перед переводом.",
+        "ms": "Semak ketepatan butiran akaun sebelum pemindahan wang.",
+        "ruExpression": "реквизитов счёта",
+        "msExpression": "butiran akaun",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0602",
+    "ru": "банковские реквизиты",
+    "ms": "butiran bank",
+    "forms": {
+      "ru": [
+        "банковские реквизиты",
+        "банковских реквизитов",
+        "банковским реквизитам",
+        "банковскими реквизитами",
+        "банковских реквизитах"
+      ],
+      "ms": [
+        "butiran bank"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7555",
+      "sourceTitle": "банковские реквизиты",
+      "sourceTranslation": "butiran bank"
+    },
+    "examples": [
+      {
+        "ru": "Банковские реквизиты изменились в этом месяце.",
+        "ms": "Butiran bank telah berubah pada bulan ini.",
+        "ruExpression": "банковские реквизиты",
+        "msExpression": "butiran bank",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Отправьте письмо с банковскими реквизитами.",
+        "ms": "Hantar surat dengan butiran bank.",
+        "ruExpression": "банковскими реквизитами",
+        "msExpression": "butiran bank",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0603",
+    "ru": "бумажная квитанция",
+    "ms": "resit kertas",
+    "forms": {
+      "ru": [
+        "бумажная квитанция",
+        "бумажной квитанции",
+        "бумажную квитанцию",
+        "бумажной квитанцией"
+      ],
+      "ms": [
+        "resit kertas"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6212",
+      "sourceTitle": "бумажная квитанция",
+      "sourceTranslation": "resit kertas"
+    },
+    "examples": [
+      {
+        "ru": "Бумажная квитанция хранится в папке.",
+        "ms": "Resit kertas disimpan dalam folder.",
+        "ruExpression": "бумажная квитанция",
+        "msExpression": "resit kertas",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните бумажную квитанцию до завершения проверки.",
+        "ms": "Simpan resit kertas sehingga semakan selesai.",
+        "ruExpression": "бумажную квитанцию",
+        "msExpression": "resit kertas",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0604",
+    "ru": "номер квитанции",
+    "ms": "nombor resit",
+    "forms": {
+      "ru": [
+        "номер квитанции",
+        "номера квитанции",
+        "номеру квитанции",
+        "номером квитанции",
+        "номере квитанции"
+      ],
+      "ms": [
+        "nombor resit"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6213",
+      "sourceTitle": "номер квитанции",
+      "sourceTranslation": "nombor resit"
+    },
+    "examples": [
+      {
+        "ru": "Номер квитанции указан в верхней части документа.",
+        "ms": "Nombor resit dinyatakan di bahagian atas dokumen.",
+        "ruExpression": "номер квитанции",
+        "msExpression": "nombor resit",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "По номеру квитанции можно найти платёж.",
+        "ms": "Bayaran boleh dicari menggunakan nombor resit.",
+        "ruExpression": "номеру квитанции",
+        "msExpression": "nombor resit",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0605",
+    "ru": "номер платежа",
+    "ms": "nombor pembayaran",
+    "forms": {
+      "ru": [
+        "номер платежа",
+        "номера платежа",
+        "номеру платежа",
+        "номером платежа",
+        "номере платежа"
+      ],
+      "ms": [
+        "nombor pembayaran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6215",
+      "sourceTitle": "номер платежа",
+      "sourceTranslation": "nombor pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Номер платежа нужен для проверки.",
+        "ms": "Nombor pembayaran diperlukan untuk semakan.",
+        "ruExpression": "номер платежа",
+        "msExpression": "nombor pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Без номера платежа поиск займёт больше времени.",
+        "ms": "Tanpa nombor pembayaran, carian akan mengambil masa lebih lama.",
+        "ruExpression": "номера платежа",
+        "msExpression": "nombor pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0606",
+    "ru": "подтверждение операции",
+    "ms": "pengesahan transaksi",
+    "forms": {
+      "ru": [
+        "подтверждение операции",
+        "подтверждения операции",
+        "подтверждению операции",
+        "подтверждением операции",
+        "подтверждении операции"
+      ],
+      "ms": [
+        "pengesahan transaksi"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6219",
+      "sourceTitle": "подтверждение операции",
+      "sourceTranslation": "pengesahan transaksi"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение операции отправлено на вашу почту.",
+        "ms": "Pengesahan transaksi telah dihantar ke e-mel anda.",
+        "ruExpression": "подтверждение операции",
+        "msExpression": "pengesahan transaksi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дождитесь подтверждения операции перед повторной попыткой.",
+        "ms": "Tunggu pengesahan transaksi sebelum mencuba lagi.",
+        "ruExpression": "подтверждения операции",
+        "msExpression": "pengesahan transaksi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0607",
+    "ru": "подтверждение перевода",
+    "ms": "pengesahan pemindahan wang",
+    "forms": {
+      "ru": [
+        "подтверждение перевода",
+        "подтверждения перевода",
+        "подтверждению перевода",
+        "подтверждением перевода",
+        "подтверждении перевода"
+      ],
+      "ms": [
+        "pengesahan pemindahan wang"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7552",
+      "sourceTitle": "подтверждение перевода",
+      "sourceTranslation": "pengesahan pemindahan wang"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение перевода содержит данные получателя.",
+        "ms": "Pengesahan pemindahan wang mengandungi maklumat penerima.",
+        "ruExpression": "подтверждение перевода",
+        "msExpression": "pengesahan pemindahan wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пришлите копию подтверждения перевода.",
+        "ms": "Hantar salinan pengesahan pemindahan wang.",
+        "ruExpression": "подтверждения перевода",
+        "msExpression": "pengesahan pemindahan wang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0608",
+    "ru": "квитанция о переводе",
+    "ms": "resit pemindahan wang",
+    "forms": {
+      "ru": [
+        "квитанция о переводе",
+        "квитанции о переводе",
+        "квитанцию о переводе",
+        "квитанцией о переводе"
+      ],
+      "ms": [
+        "resit pemindahan wang"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7553",
+      "sourceTitle": "квитанция о переводе",
+      "sourceTranslation": "resit pemindahan wang"
+    },
+    "examples": [
+      {
+        "ru": "Квитанция о переводе доступна в приложении.",
+        "ms": "Resit pemindahan wang tersedia dalam aplikasi.",
+        "ruExpression": "квитанция о переводе",
+        "msExpression": "resit pemindahan wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Распечатайте квитанцию о переводе для отчёта.",
+        "ms": "Cetak resit pemindahan wang untuk laporan.",
+        "ruExpression": "квитанцию о переводе",
+        "msExpression": "resit pemindahan wang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0609",
+    "ru": "получатель платежа",
+    "ms": "penerima bayaran",
+    "forms": {
+      "ru": [
+        "получатель платежа",
+        "получателя платежа",
+        "получателю платежа",
+        "получателем платежа",
+        "получателе платежа"
+      ],
+      "ms": [
+        "penerima bayaran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8402",
+      "sourceTitle": "получатель платежа",
+      "sourceTranslation": "penerima bayaran"
+    },
+    "examples": [
+      {
+        "ru": "Получатель платежа подтвердил поступление денег.",
+        "ms": "Penerima bayaran mengesahkan penerimaan wang.",
+        "ruExpression": "получатель платежа",
+        "msExpression": "penerima bayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте имя получателя платежа.",
+        "ms": "Semak nama penerima bayaran.",
+        "ruExpression": "получателя платежа",
+        "msExpression": "penerima bayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0610",
+    "ru": "назначение платежа",
+    "ms": "tujuan pembayaran",
+    "forms": {
+      "ru": [
+        "назначение платежа",
+        "назначения платежа",
+        "назначению платежа",
+        "назначением платежа",
+        "назначении платежа"
+      ],
+      "ms": [
+        "tujuan pembayaran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8403",
+      "sourceTitle": "назначение платежа",
+      "sourceTranslation": "tujuan pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Назначение платежа указано в квитанции.",
+        "ms": "Tujuan pembayaran dinyatakan dalam resit.",
+        "ruExpression": "назначение платежа",
+        "msExpression": "tujuan pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В назначении платежа нужно указать номер договора.",
+        "ms": "Nombor kontrak perlu dinyatakan dalam tujuan pembayaran.",
+        "ruExpression": "назначении платежа",
+        "msExpression": "tujuan pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0611",
+    "ru": "итоговая сумма",
+    "ms": "jumlah akhir",
+    "forms": {
+      "ru": [
+        "итоговая сумма",
+        "итоговой суммы",
+        "итоговой сумме",
+        "итоговую сумму",
+        "итоговой суммой"
+      ],
+      "ms": [
+        "jumlah akhir"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-5895",
+      "sourceTitle": "итоговая сумма",
+      "sourceTranslation": "jumlah akhir"
+    },
+    "examples": [
+      {
+        "ru": "Итоговая сумма включает стоимость доставки.",
+        "ms": "Jumlah akhir termasuk kos penghantaran.",
+        "ruExpression": "итоговая сумма",
+        "msExpression": "jumlah akhir",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверьте итоговую сумму перед оплатой.",
+        "ms": "Semak jumlah akhir sebelum membuat bayaran.",
+        "ruExpression": "итоговую сумму",
+        "msExpression": "jumlah akhir",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0612",
+    "ru": "сумма задолженности",
+    "ms": "jumlah tunggakan",
+    "forms": {
+      "ru": [
+        "сумма задолженности",
+        "суммы задолженности",
+        "сумме задолженности",
+        "сумму задолженности",
+        "суммой задолженности"
+      ],
+      "ms": [
+        "jumlah tunggakan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7229",
+      "sourceTitle": "сумма задолженности",
+      "sourceTranslation": "jumlah tunggakan"
+    },
+    "examples": [
+      {
+        "ru": "Сумма задолженности указана в уведомлении.",
+        "ms": "Jumlah tunggakan dinyatakan dalam notis.",
+        "ruExpression": "сумма задолженности",
+        "msExpression": "jumlah tunggakan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Уточните дату расчёта суммы задолженности.",
+        "ms": "Sila pastikan tarikh pengiraan jumlah tunggakan.",
+        "ruExpression": "суммы задолженности",
+        "msExpression": "jumlah tunggakan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0613",
+    "ru": "ежемесячный платеж",
+    "ms": "bayaran bulanan",
+    "forms": {
+      "ru": [
+        "ежемесячный платеж",
+        "ежемесячного платежа",
+        "ежемесячному платежу",
+        "ежемесячный платёж",
+        "ежемесячным платежом",
+        "ежемесячном платеже"
+      ],
+      "ms": [
+        "bayaran bulanan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6186",
+      "sourceTitle": "ежемесячный платеж",
+      "sourceTranslation": "bayaran bulanan"
+    },
+    "examples": [
+      {
+        "ru": "Ежемесячный платеж составляет сто ринггитов.",
+        "ms": "Bayaran bulanan ialah seratus ringgit.",
+        "ruExpression": "ежемесячный платеж",
+        "msExpression": "bayaran bulanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Размер ежемесячного платежа указан в договоре.",
+        "ms": "Amaun bayaran bulanan dinyatakan dalam kontrak.",
+        "ruExpression": "ежемесячного платежа",
+        "msExpression": "bayaran bulanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0614",
+    "ru": "скрытая комиссия",
+    "ms": "caj tersembunyi",
+    "forms": {
+      "ru": [
+        "скрытая комиссия",
+        "скрытой комиссии",
+        "скрытую комиссию",
+        "скрытой комиссией"
+      ],
+      "ms": [
+        "caj tersembunyi"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7263",
+      "sourceTitle": "скрытая комиссия",
+      "sourceTranslation": "caj tersembunyi"
+    },
+    "examples": [
+      {
+        "ru": "Скрытая комиссия увеличила общую стоимость.",
+        "ms": "Caj tersembunyi meningkatkan jumlah kos.",
+        "ruExpression": "скрытая комиссия",
+        "msExpression": "caj tersembunyi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В счёте обнаружили скрытую комиссию.",
+        "ms": "Caj tersembunyi ditemukan dalam bil.",
+        "ruExpression": "скрытую комиссию",
+        "msExpression": "caj tersembunyi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0615",
+    "ru": "комиссия за перевод",
+    "ms": "caj pemindahan wang",
+    "forms": {
+      "ru": [
+        "комиссия за перевод",
+        "комиссии за перевод",
+        "комиссию за перевод",
+        "комиссией за перевод"
+      ],
+      "ms": [
+        "caj pemindahan wang"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7537",
+      "sourceTitle": "комиссия за перевод",
+      "sourceTranslation": "caj pemindahan wang"
+    },
+    "examples": [
+      {
+        "ru": "Комиссия за перевод зависит от суммы.",
+        "ms": "Caj pemindahan wang bergantung pada amaun.",
+        "ruExpression": "комиссия за перевод",
+        "msExpression": "caj pemindahan wang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Размер комиссии за перевод показан перед оплатой.",
+        "ms": "Amaun caj pemindahan wang dipaparkan sebelum bayaran dibuat.",
+        "ruExpression": "комиссии за перевод",
+        "msExpression": "caj pemindahan wang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0616",
+    "ru": "просрочка платежа",
+    "ms": "kelewatan pembayaran",
+    "forms": {
+      "ru": [
+        "просрочка платежа",
+        "просрочки платежа",
+        "просрочке платежа",
+        "просрочку платежа",
+        "просрочкой платежа"
+      ],
+      "ms": [
+        "kelewatan pembayaran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8412",
+      "sourceTitle": "просрочка платежа",
+      "sourceTranslation": "kelewatan pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Просрочка платежа отмечена в системе.",
+        "ms": "Kelewatan pembayaran direkodkan dalam sistem.",
+        "ruExpression": "просрочка платежа",
+        "msExpression": "kelewatan pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сообщите причину просрочки платежа.",
+        "ms": "Maklumkan sebab kelewatan pembayaran.",
+        "ruExpression": "просрочки платежа",
+        "msExpression": "kelewatan pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0617",
+    "ru": "отсрочка платежа",
+    "ms": "penangguhan pembayaran",
+    "forms": {
+      "ru": [
+        "отсрочка платежа",
+        "отсрочки платежа",
+        "отсрочке платежа",
+        "отсрочку платежа",
+        "отсрочкой платежа"
+      ],
+      "ms": [
+        "penangguhan pembayaran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8413",
+      "sourceTitle": "отсрочка платежа",
+      "sourceTranslation": "penangguhan pembayaran"
+    },
+    "examples": [
+      {
+        "ru": "Отсрочка платежа согласована на две недели.",
+        "ms": "Penangguhan pembayaran telah dipersetujui untuk dua minggu.",
+        "ruExpression": "отсрочка платежа",
+        "msExpression": "penangguhan pembayaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Мы просим отсрочку платежа до конца месяца.",
+        "ms": "Kami memohon penangguhan pembayaran sehingga akhir bulan.",
+        "ruExpression": "отсрочку платежа",
+        "msExpression": "penangguhan pembayaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0618",
+    "ru": "рассрочка платежа",
+    "ms": "bayaran ansuran",
+    "forms": {
+      "ru": [
+        "рассрочка платежа",
+        "рассрочки платежа",
+        "рассрочке платежа",
+        "рассрочку платежа",
+        "рассрочкой платежа"
+      ],
+      "ms": [
+        "bayaran ansuran"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-8414",
+      "sourceTitle": "рассрочка платежа",
+      "sourceTranslation": "bayaran ansuran"
+    },
+    "examples": [
+      {
+        "ru": "Рассрочка платежа доступна на шесть месяцев.",
+        "ms": "Bayaran ansuran tersedia untuk tempoh enam bulan.",
+        "ruExpression": "рассрочка платежа",
+        "msExpression": "bayaran ansuran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Условия рассрочки платежа указаны в предложении.",
+        "ms": "Syarat bayaran ansuran dinyatakan dalam tawaran.",
+        "ruExpression": "рассрочки платежа",
+        "msExpression": "bayaran ansuran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0619",
+    "ru": "заявка на возврат",
+    "ms": "permohonan pemulangan",
+    "forms": {
+      "ru": [
+        "заявка на возврат",
+        "заявки на возврат",
+        "заявке на возврат",
+        "заявку на возврат",
+        "заявкой на возврат"
+      ],
+      "ms": [
+        "permohonan pemulangan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7002",
+      "sourceTitle": "заявка на возврат",
+      "sourceTranslation": "permohonan pemulangan"
+    },
+    "examples": [
+      {
+        "ru": "Заявка на возврат поступила сегодня.",
+        "ms": "Permohonan pemulangan diterima hari ini.",
+        "ruExpression": "заявка на возврат",
+        "msExpression": "permohonan pemulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Укажите номер заказа в заявке на возврат.",
+        "ms": "Nyatakan nombor pesanan dalam permohonan pemulangan.",
+        "ruExpression": "заявке на возврат",
+        "msExpression": "permohonan pemulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0620",
+    "ru": "причина возврата",
+    "ms": "sebab pemulangan",
+    "forms": {
+      "ru": [
+        "причина возврата",
+        "причины возврата",
+        "причине возврата",
+        "причину возврата",
+        "причиной возврата"
+      ],
+      "ms": [
+        "sebab pemulangan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9639",
+      "sourceTitle": "причина возврата",
+      "sourceTranslation": "sebab pemulangan"
+    },
+    "examples": [
+      {
+        "ru": "Причина возврата указана в заявлении.",
+        "ms": "Sebab pemulangan dinyatakan dalam permohonan.",
+        "ruExpression": "причина возврата",
+        "msExpression": "sebab pemulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Пожалуйста, уточните причину возврата.",
+        "ms": "Sila jelaskan sebab pemulangan.",
+        "ruExpression": "причину возврата",
+        "msExpression": "sebab pemulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0621",
+    "ru": "этикетка возврата",
+    "ms": "label pemulangan",
+    "forms": {
+      "ru": [
+        "этикетка возврата",
+        "этикетки возврата",
+        "этикетке возврата",
+        "этикетку возврата",
+        "этикеткой возврата"
+      ],
+      "ms": [
+        "label pemulangan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9640",
+      "sourceTitle": "этикетка возврата",
+      "sourceTranslation": "label pemulangan"
+    },
+    "examples": [
+      {
+        "ru": "Этикетка возврата отправлена по электронной почте.",
+        "ms": "Label pemulangan telah dihantar melalui e-mel.",
+        "ruExpression": "этикетка возврата",
+        "msExpression": "label pemulangan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Распечатайте этикетку возврата и прикрепите её к посылке.",
+        "ms": "Cetak label pemulangan dan lekatkannya pada bungkusan.",
+        "ruExpression": "этикетку возврата",
+        "msExpression": "label pemulangan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0622",
+    "ru": "статус заявки",
+    "ms": "status permohonan",
+    "forms": {
+      "ru": [
+        "статус заявки",
+        "статуса заявки",
+        "статусу заявки",
+        "статусом заявки",
+        "статусе заявки"
+      ],
+      "ms": [
+        "status permohonan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-3772",
+      "sourceTitle": "статус заявки",
+      "sourceTranslation": "status permohonan"
+    },
+    "examples": [
+      {
+        "ru": "Статус заявки можно проверить на сайте.",
+        "ms": "Status permohonan boleh disemak di laman web.",
+        "ruExpression": "статус заявки",
+        "msExpression": "status permohonan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о статусе заявки обновляется каждый день.",
+        "ms": "Maklumat tentang status permohonan dikemas kini setiap hari.",
+        "ruExpression": "статусе заявки",
+        "msExpression": "status permohonan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0623",
+    "ru": "подтверждение доходов",
+    "ms": "bukti pendapatan",
+    "forms": {
+      "ru": [
+        "подтверждение доходов",
+        "подтверждения доходов",
+        "подтверждению доходов",
+        "подтверждением доходов",
+        "подтверждении доходов"
+      ],
+      "ms": [
+        "bukti pendapatan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9942",
+      "sourceTitle": "подтверждение доходов",
+      "sourceTranslation": "bukti pendapatan"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение доходов требуется для рассмотрения заявления.",
+        "ms": "Bukti pendapatan diperlukan untuk mempertimbangkan permohonan.",
+        "ruExpression": "подтверждение доходов",
+        "msExpression": "bukti pendapatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Приложите копию подтверждения доходов.",
+        "ms": "Lampirkan salinan bukti pendapatan.",
+        "ruExpression": "подтверждения доходов",
+        "msExpression": "bukti pendapatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0624",
+    "ru": "подтверждение расходов",
+    "ms": "bukti perbelanjaan",
+    "forms": {
+      "ru": [
+        "подтверждение расходов",
+        "подтверждения расходов",
+        "подтверждению расходов",
+        "подтверждением расходов",
+        "подтверждении расходов"
+      ],
+      "ms": [
+        "bukti perbelanjaan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9943",
+      "sourceTitle": "подтверждение расходов",
+      "sourceTranslation": "bukti perbelanjaan"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение расходов приложено к отчёту.",
+        "ms": "Bukti perbelanjaan dilampirkan pada laporan.",
+        "ruExpression": "подтверждение расходов",
+        "msExpression": "bukti perbelanjaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сохраните документы для подтверждения расходов.",
+        "ms": "Simpan dokumen sebagai bukti perbelanjaan.",
+        "ruExpression": "подтверждения расходов",
+        "msExpression": "bukti perbelanjaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0625",
+    "ru": "подтверждение занятости",
+    "ms": "pengesahan pekerjaan",
+    "forms": {
+      "ru": [
+        "подтверждение занятости",
+        "подтверждения занятости",
+        "подтверждению занятости",
+        "подтверждением занятости",
+        "подтверждении занятости"
+      ],
+      "ms": [
+        "pengesahan pekerjaan"
+      ]
+    },
+    "topic": "платежи и подтверждения",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9706",
+      "sourceTitle": "подтверждение занятости",
+      "sourceTranslation": "pengesahan pekerjaan"
+    },
+    "examples": [
+      {
+        "ru": "Подтверждение занятости выдано работодателем.",
+        "ms": "Pengesahan pekerjaan dikeluarkan oleh majikan.",
+        "ruExpression": "подтверждение занятости",
+        "msExpression": "pengesahan pekerjaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия подтверждения занятости нужна для заявления.",
+        "ms": "Salinan pengesahan pekerjaan diperlukan untuk permohonan.",
+        "ruExpression": "подтверждения занятости",
+        "msExpression": "pengesahan pekerjaan",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

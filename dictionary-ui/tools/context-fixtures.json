@@ -1198,5 +1198,105 @@
   [
     "должностные обязанности",
     "tanggungjawab jawatan"
+  ],
+  [
+    "реквизиты счета",
+    "butiran akaun"
+  ],
+  [
+    "банковские реквизиты",
+    "butiran bank"
+  ],
+  [
+    "бумажная квитанция",
+    "resit kertas"
+  ],
+  [
+    "номер квитанции",
+    "nombor resit"
+  ],
+  [
+    "номер платежа",
+    "nombor pembayaran"
+  ],
+  [
+    "подтверждение операции",
+    "pengesahan transaksi"
+  ],
+  [
+    "подтверждение перевода",
+    "pengesahan pemindahan wang"
+  ],
+  [
+    "квитанция о переводе",
+    "resit pemindahan wang"
+  ],
+  [
+    "получатель платежа",
+    "penerima bayaran"
+  ],
+  [
+    "назначение платежа",
+    "tujuan pembayaran"
+  ],
+  [
+    "итоговая сумма",
+    "jumlah akhir"
+  ],
+  [
+    "сумма задолженности",
+    "jumlah tunggakan"
+  ],
+  [
+    "ежемесячный платеж",
+    "bayaran bulanan"
+  ],
+  [
+    "скрытая комиссия",
+    "caj tersembunyi"
+  ],
+  [
+    "комиссия за перевод",
+    "caj pemindahan wang"
+  ],
+  [
+    "просрочка платежа",
+    "kelewatan pembayaran"
+  ],
+  [
+    "отсрочка платежа",
+    "penangguhan pembayaran"
+  ],
+  [
+    "рассрочка платежа",
+    "bayaran ansuran"
+  ],
+  [
+    "заявка на возврат",
+    "permohonan pemulangan"
+  ],
+  [
+    "причина возврата",
+    "sebab pemulangan"
+  ],
+  [
+    "этикетка возврата",
+    "label pemulangan"
+  ],
+  [
+    "статус заявки",
+    "status permohonan"
+  ],
+  [
+    "подтверждение доходов",
+    "bukti pendapatan"
+  ],
+  [
+    "подтверждение расходов",
+    "bukti perbelanjaan"
+  ],
+  [
+    "подтверждение занятости",
+    "pengesahan pekerjaan"
   ]
 ]
