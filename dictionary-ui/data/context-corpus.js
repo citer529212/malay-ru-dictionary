@@ -38178,5 +38178,1048 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0951",
+    "ru": "прекращение огня",
+    "ms": "gencatan senjata",
+    "forms": {
+      "ru": [
+        "прекращение огня",
+        "прекращения огня",
+        "прекращению огня",
+        "прекращением огня",
+        "прекращении огня"
+      ],
+      "ms": [
+        "gencatan senjata"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10120",
+      "sourceTitle": "прекращение огня",
+      "sourceTranslation": "gencatan senjata"
+    },
+    "examples": [
+      {
+        "ru": "Прекращение огня обсуждалось на встрече.",
+        "ms": "Gencatan senjata dibincangkan dalam pertemuan itu.",
+        "ruExpression": "прекращение огня",
+        "msExpression": "gencatan senjata",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стороны договорились о прекращении огня.",
+        "ms": "Kedua-dua pihak bersetuju mengenai gencatan senjata.",
+        "ruExpression": "прекращении огня",
+        "msExpression": "gencatan senjata",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0952",
+    "ru": "мирные переговоры",
+    "ms": "rundingan damai",
+    "forms": {
+      "ru": [
+        "мирные переговоры",
+        "мирных переговоров",
+        "мирным переговорам",
+        "мирными переговорами",
+        "мирных переговорах"
+      ],
+      "ms": [
+        "rundingan damai"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10121",
+      "sourceTitle": "мирные переговоры",
+      "sourceTranslation": "rundingan damai"
+    },
+    "examples": [
+      {
+        "ru": "Мирные переговоры продолжатся завтра.",
+        "ms": "Rundingan damai akan diteruskan esok.",
+        "ruExpression": "мирные переговоры",
+        "msExpression": "rundingan damai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дата мирных переговоров пока не определена.",
+        "ms": "Tarikh rundingan damai belum ditetapkan.",
+        "ruExpression": "мирных переговоров",
+        "msExpression": "rundingan damai",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0953",
+    "ru": "мирное соглашение",
+    "ms": "perjanjian damai",
+    "forms": {
+      "ru": [
+        "мирное соглашение",
+        "мирного соглашения",
+        "мирному соглашению",
+        "мирным соглашением",
+        "мирном соглашении"
+      ],
+      "ms": [
+        "perjanjian damai"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10122",
+      "sourceTitle": "мирное соглашение",
+      "sourceTranslation": "perjanjian damai"
+    },
+    "examples": [
+      {
+        "ru": "Мирное соглашение опубликовано на сайте.",
+        "ms": "Perjanjian damai diterbitkan di laman web.",
+        "ruExpression": "мирное соглашение",
+        "msExpression": "perjanjian damai",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия мирного соглашения передана делегации.",
+        "ms": "Salinan perjanjian damai diserahkan kepada delegasi.",
+        "ruExpression": "мирного соглашения",
+        "msExpression": "perjanjian damai",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0954",
+    "ru": "экономические санкции",
+    "ms": "sekatan ekonomi",
+    "forms": {
+      "ru": [
+        "экономические санкции",
+        "экономических санкций",
+        "экономическим санкциям",
+        "экономическими санкциями",
+        "экономических санкциях"
+      ],
+      "ms": [
+        "sekatan ekonomi"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10124",
+      "sourceTitle": "экономические санкции",
+      "sourceTranslation": "sekatan ekonomi"
+    },
+    "examples": [
+      {
+        "ru": "Экономические санкции обсуждались на заседании.",
+        "ms": "Sekatan ekonomi dibincangkan dalam mesyuarat.",
+        "ruExpression": "экономические санкции",
+        "msExpression": "sekatan ekonomi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Доклад посвящён экономическим санкциям.",
+        "ms": "Laporan itu berkaitan dengan sekatan ekonomi.",
+        "ruExpression": "экономическим санкциям",
+        "msExpression": "sekatan ekonomi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0955",
+    "ru": "международное право",
+    "ms": "undang-undang antarabangsa",
+    "forms": {
+      "ru": [
+        "международное право",
+        "международного права",
+        "международному праву",
+        "международным правом",
+        "международном праве"
+      ],
+      "ms": [
+        "undang-undang antarabangsa"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10128",
+      "sourceTitle": "международное право",
+      "sourceTranslation": "undang-undang antarabangsa"
+    },
+    "examples": [
+      {
+        "ru": "Международное право включено в учебную программу.",
+        "ms": "Undang-undang antarabangsa dimasukkan dalam kurikulum.",
+        "ruExpression": "международное право",
+        "msExpression": "undang-undang antarabangsa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Лекция по международному праву начнётся в десять часов.",
+        "ms": "Kuliah tentang undang-undang antarabangsa akan bermula pada pukul sepuluh.",
+        "ruExpression": "международному праву",
+        "msExpression": "undang-undang antarabangsa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0956",
+    "ru": "территориальная целостность",
+    "ms": "keutuhan wilayah",
+    "forms": {
+      "ru": [
+        "территориальная целостность",
+        "территориальной целостности",
+        "территориальную целостность",
+        "территориальной целостностью"
+      ],
+      "ms": [
+        "keutuhan wilayah"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10131",
+      "sourceTitle": "территориальная целостность",
+      "sourceTranslation": "keutuhan wilayah"
+    },
+    "examples": [
+      {
+        "ru": "Территориальная целостность упоминается в заявлении.",
+        "ms": "Keutuhan wilayah disebut dalam kenyataan itu.",
+        "ruExpression": "территориальная целостность",
+        "msExpression": "keutuhan wilayah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В документе говорится о территориальной целостности.",
+        "ms": "Dokumen itu menyentuh keutuhan wilayah.",
+        "ruExpression": "территориальной целостности",
+        "msExpression": "keutuhan wilayah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0957",
+    "ru": "официальное заявление",
+    "ms": "kenyataan rasmi",
+    "forms": {
+      "ru": [
+        "официальное заявление",
+        "официального заявления",
+        "официальному заявлению",
+        "официальным заявлением",
+        "официальном заявлении"
+      ],
+      "ms": [
+        "kenyataan rasmi"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10192",
+      "sourceTitle": "официальное заявление",
+      "sourceTranslation": "kenyataan rasmi"
+    },
+    "examples": [
+      {
+        "ru": "Официальное заявление опубликовано утром.",
+        "ms": "Kenyataan rasmi diterbitkan pada waktu pagi.",
+        "ruExpression": "официальное заявление",
+        "msExpression": "kenyataan rasmi",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Перевод официального заявления готов.",
+        "ms": "Terjemahan kenyataan rasmi sudah siap.",
+        "ruExpression": "официального заявления",
+        "msExpression": "kenyataan rasmi",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0958",
+    "ru": "гуманитарный коридор",
+    "ms": "koridor kemanusiaan",
+    "forms": {
+      "ru": [
+        "гуманитарный коридор",
+        "гуманитарного коридора",
+        "гуманитарному коридору",
+        "гуманитарным коридором",
+        "гуманитарном коридоре"
+      ],
+      "ms": [
+        "koridor kemanusiaan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10068",
+      "sourceTitle": "гуманитарный коридор",
+      "sourceTranslation": "koridor kemanusiaan"
+    },
+    "examples": [
+      {
+        "ru": "Гуманитарный коридор отмечен на карте.",
+        "ms": "Koridor kemanusiaan ditandakan pada peta.",
+        "ruExpression": "гуманитарный коридор",
+        "msExpression": "koridor kemanusiaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Маршрут гуманитарного коридора согласован.",
+        "ms": "Laluan koridor kemanusiaan telah dipersetujui.",
+        "ruExpression": "гуманитарного коридора",
+        "msExpression": "koridor kemanusiaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0959",
+    "ru": "гуманитарная помощь",
+    "ms": "bantuan kemanusiaan",
+    "forms": {
+      "ru": [
+        "гуманитарная помощь",
+        "гуманитарной помощи",
+        "гуманитарную помощь",
+        "гуманитарной помощью"
+      ],
+      "ms": [
+        "bantuan kemanusiaan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10069",
+      "sourceTitle": "гуманитарная помощь",
+      "sourceTranslation": "bantuan kemanusiaan"
+    },
+    "examples": [
+      {
+        "ru": "Гуманитарная помощь доставлена в посёлок.",
+        "ms": "Bantuan kemanusiaan dihantar ke kampung itu.",
+        "ruExpression": "гуманитарная помощь",
+        "msExpression": "bantuan kemanusiaan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Доставка гуманитарной помощи начнётся утром.",
+        "ms": "Penghantaran bantuan kemanusiaan akan bermula pada waktu pagi.",
+        "ruExpression": "гуманитарной помощи",
+        "msExpression": "bantuan kemanusiaan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0960",
+    "ru": "перемещенное лицо",
+    "ms": "orang yang dipindahkan",
+    "forms": {
+      "ru": [
+        "перемещенное лицо",
+        "перемещённого лица",
+        "перемещённому лицу",
+        "перемещённым лицом",
+        "перемещённом лице"
+      ],
+      "ms": [
+        "orang yang dipindahkan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10071",
+      "sourceTitle": "перемещенное лицо",
+      "sourceTranslation": "orang yang dipindahkan"
+    },
+    "examples": [
+      {
+        "ru": "Термин «перемещенное лицо» используется в анкете.",
+        "ms": "Istilah orang yang dipindahkan digunakan dalam borang itu.",
+        "ruExpression": "перемещенное лицо",
+        "msExpression": "orang yang dipindahkan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Документы перемещённого лица проверены.",
+        "ms": "Dokumen orang yang dipindahkan telah disemak.",
+        "ruExpression": "перемещённого лица",
+        "msExpression": "orang yang dipindahkan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0961",
+    "ru": "убежище для беженцев",
+    "ms": "tempat perlindungan pelarian",
+    "forms": {
+      "ru": [
+        "убежище для беженцев",
+        "убежища для беженцев",
+        "убежищу для беженцев",
+        "убежищем для беженцев"
+      ],
+      "ms": [
+        "tempat perlindungan pelarian"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10072",
+      "sourceTitle": "убежище для беженцев",
+      "sourceTranslation": "tempat perlindungan pelarian"
+    },
+    "examples": [
+      {
+        "ru": "Убежище для беженцев находится рядом со школой.",
+        "ms": "Tempat perlindungan pelarian terletak berhampiran sekolah.",
+        "ruExpression": "убежище для беженцев",
+        "msExpression": "tempat perlindungan pelarian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Адрес убежища для беженцев указан в памятке.",
+        "ms": "Alamat tempat perlindungan pelarian dinyatakan dalam risalah.",
+        "ruExpression": "убежища для беженцев",
+        "msExpression": "tempat perlindungan pelarian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0962",
+    "ru": "полевой госпиталь",
+    "ms": "hospital medan",
+    "forms": {
+      "ru": [
+        "полевой госпиталь",
+        "полевого госпиталя",
+        "полевому госпиталю",
+        "полевым госпиталем",
+        "полевом госпитале"
+      ],
+      "ms": [
+        "hospital medan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10073",
+      "sourceTitle": "полевой госпиталь",
+      "sourceTranslation": "hospital medan"
+    },
+    "examples": [
+      {
+        "ru": "Полевой госпиталь получил новое оборудование.",
+        "ms": "Hospital medan menerima peralatan baharu.",
+        "ruExpression": "полевой госпиталь",
+        "msExpression": "hospital medan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В полевом госпитале работают переводчики.",
+        "ms": "Jurubahasa bertugas di hospital medan.",
+        "ruExpression": "полевом госпитале",
+        "msExpression": "hospital medan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0963",
+    "ru": "гражданские лица",
+    "ms": "orang awam",
+    "forms": {
+      "ru": [
+        "гражданские лица",
+        "гражданских лиц",
+        "гражданским лицам",
+        "гражданскими лицами",
+        "гражданских лицах"
+      ],
+      "ms": [
+        "orang awam"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10076",
+      "sourceTitle": "гражданские лица",
+      "sourceTranslation": "orang awam"
+    },
+    "examples": [
+      {
+        "ru": "Гражданские лица ожидают транспорт.",
+        "ms": "Orang awam sedang menunggu pengangkutan.",
+        "ruExpression": "гражданские лица",
+        "msExpression": "orang awam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Организация оказывает помощь гражданским лицам.",
+        "ms": "Organisasi itu memberikan bantuan kepada orang awam.",
+        "ruExpression": "гражданским лицам",
+        "msExpression": "orang awam",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0964",
+    "ru": "мирные жители",
+    "ms": "penduduk awam",
+    "forms": {
+      "ru": [
+        "мирные жители",
+        "мирных жителей",
+        "мирным жителям",
+        "мирными жителями",
+        "мирных жителях"
+      ],
+      "ms": [
+        "penduduk awam"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10077",
+      "sourceTitle": "мирные жители",
+      "sourceTranslation": "penduduk awam"
+    },
+    "examples": [
+      {
+        "ru": "Мирные жители получили питьевую воду.",
+        "ms": "Penduduk awam menerima air minuman.",
+        "ruExpression": "мирные жители",
+        "msExpression": "penduduk awam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для мирных жителей организован транспорт.",
+        "ms": "Pengangkutan disediakan untuk penduduk awam.",
+        "ruExpression": "мирных жителей",
+        "msExpression": "penduduk awam",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0965",
+    "ru": "миротворческая миссия",
+    "ms": "misi pengaman",
+    "forms": {
+      "ru": [
+        "миротворческая миссия",
+        "миротворческой миссии",
+        "миротворческую миссию",
+        "миротворческой миссией"
+      ],
+      "ms": [
+        "misi pengaman"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10184",
+      "sourceTitle": "миротворческая миссия",
+      "sourceTranslation": "misi pengaman"
+    },
+    "examples": [
+      {
+        "ru": "Миротворческая миссия представила отчёт.",
+        "ms": "Misi pengaman membentangkan laporan.",
+        "ruExpression": "миротворческая миссия",
+        "msExpression": "misi pengaman",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Руководитель миротворческой миссии выступил на встрече.",
+        "ms": "Ketua misi pengaman berucap dalam pertemuan itu.",
+        "ruExpression": "миротворческой миссии",
+        "msExpression": "misi pengaman",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0966",
+    "ru": "приграничный район",
+    "ms": "kawasan sempadan",
+    "forms": {
+      "ru": [
+        "приграничный район",
+        "приграничного района",
+        "приграничному району",
+        "приграничным районом",
+        "приграничном районе"
+      ],
+      "ms": [
+        "kawasan sempadan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10138",
+      "sourceTitle": "приграничный район",
+      "sourceTranslation": "kawasan sempadan"
+    },
+    "examples": [
+      {
+        "ru": "Приграничный район отмечен на карте.",
+        "ms": "Kawasan sempadan ditandakan pada peta.",
+        "ruExpression": "приграничный район",
+        "msExpression": "kawasan sempadan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В приграничном районе открыт новый пункт помощи.",
+        "ms": "Pusat bantuan baharu dibuka di kawasan sempadan.",
+        "ruExpression": "приграничном районе",
+        "msExpression": "kawasan sempadan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0967",
+    "ru": "энергетическая инфраструктура",
+    "ms": "infrastruktur tenaga",
+    "forms": {
+      "ru": [
+        "энергетическая инфраструктура",
+        "энергетической инфраструктуры",
+        "энергетической инфраструктуре",
+        "энергетическую инфраструктуру",
+        "энергетической инфраструктурой"
+      ],
+      "ms": [
+        "infrastruktur tenaga"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10146",
+      "sourceTitle": "энергетическая инфраструктура",
+      "sourceTranslation": "infrastruktur tenaga"
+    },
+    "examples": [
+      {
+        "ru": "Энергетическая инфраструктура требует ремонта.",
+        "ms": "Infrastruktur tenaga memerlukan pembaikan.",
+        "ruExpression": "энергетическая инфраструктура",
+        "msExpression": "infrastruktur tenaga",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Состояние энергетической инфраструктуры описано в отчёте.",
+        "ms": "Keadaan infrastruktur tenaga diterangkan dalam laporan.",
+        "ruExpression": "энергетической инфраструктуры",
+        "msExpression": "infrastruktur tenaga",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0968",
+    "ru": "критическая инфраструктура",
+    "ms": "infrastruktur kritikal",
+    "forms": {
+      "ru": [
+        "критическая инфраструктура",
+        "критической инфраструктуры",
+        "критической инфраструктуре",
+        "критическую инфраструктуру",
+        "критической инфраструктурой"
+      ],
+      "ms": [
+        "infrastruktur kritikal"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10147",
+      "sourceTitle": "критическая инфраструктура",
+      "sourceTranslation": "infrastruktur kritikal"
+    },
+    "examples": [
+      {
+        "ru": "Критическая инфраструктура включена в план защиты.",
+        "ms": "Infrastruktur kritikal dimasukkan dalam pelan perlindungan.",
+        "ruExpression": "критическая инфраструктура",
+        "msExpression": "infrastruktur kritikal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Проверка критической инфраструктуры завершена.",
+        "ms": "Pemeriksaan infrastruktur kritikal telah selesai.",
+        "ruExpression": "критической инфраструктуры",
+        "msExpression": "infrastruktur kritikal",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0969",
+    "ru": "повреждение инфраструктуры",
+    "ms": "kerosakan infrastruktur",
+    "forms": {
+      "ru": [
+        "повреждение инфраструктуры",
+        "повреждения инфраструктуры",
+        "повреждению инфраструктуры",
+        "повреждением инфраструктуры",
+        "повреждении инфраструктуры"
+      ],
+      "ms": [
+        "kerosakan infrastruktur"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10148",
+      "sourceTitle": "повреждение инфраструктуры",
+      "sourceTranslation": "kerosakan infrastruktur"
+    },
+    "examples": [
+      {
+        "ru": "Повреждение инфраструктуры зафиксировано в отчёте.",
+        "ms": "Kerosakan infrastruktur dicatat dalam laporan.",
+        "ruExpression": "повреждение инфраструктуры",
+        "msExpression": "kerosakan infrastruktur",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Масштаб повреждения инфраструктуры ещё оценивается.",
+        "ms": "Tahap kerosakan infrastruktur masih dinilai.",
+        "ruExpression": "повреждения инфраструктуры",
+        "msExpression": "kerosakan infrastruktur",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0970",
+    "ru": "восстановление инфраструктуры",
+    "ms": "pemulihan infrastruktur",
+    "forms": {
+      "ru": [
+        "восстановление инфраструктуры",
+        "восстановления инфраструктуры",
+        "восстановлению инфраструктуры",
+        "восстановлением инфраструктуры",
+        "восстановлении инфраструктуры"
+      ],
+      "ms": [
+        "pemulihan infrastruktur"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10149",
+      "sourceTitle": "восстановление инфраструктуры",
+      "sourceTranslation": "pemulihan infrastruktur"
+    },
+    "examples": [
+      {
+        "ru": "Восстановление инфраструктуры начнётся весной.",
+        "ms": "Pemulihan infrastruktur akan bermula pada musim bunga.",
+        "ruExpression": "восстановление инфраструктуры",
+        "msExpression": "pemulihan infrastruktur",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "План восстановления инфраструктуры представлен жителям.",
+        "ms": "Pelan pemulihan infrastruktur dibentangkan kepada penduduk.",
+        "ruExpression": "восстановления инфраструктуры",
+        "msExpression": "pemulihan infrastruktur",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0971",
+    "ru": "чрезвычайное положение",
+    "ms": "keadaan darurat",
+    "forms": {
+      "ru": [
+        "чрезвычайное положение",
+        "чрезвычайного положения",
+        "чрезвычайному положению",
+        "чрезвычайным положением",
+        "чрезвычайном положении"
+      ],
+      "ms": [
+        "keadaan darurat"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10155",
+      "sourceTitle": "чрезвычайное положение",
+      "sourceTranslation": "keadaan darurat"
+    },
+    "examples": [
+      {
+        "ru": "Чрезвычайное положение упоминается в учебном тексте.",
+        "ms": "Keadaan darurat disebut dalam teks pembelajaran.",
+        "ruExpression": "чрезвычайное положение",
+        "msExpression": "keadaan darurat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В сообщении говорится о чрезвычайном положении.",
+        "ms": "Mesej itu menyentuh keadaan darurat.",
+        "ruExpression": "чрезвычайном положении",
+        "msExpression": "keadaan darurat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0972",
+    "ru": "спасательная операция",
+    "ms": "operasi menyelamat",
+    "forms": {
+      "ru": [
+        "спасательная операция",
+        "спасательной операции",
+        "спасательную операцию",
+        "спасательной операцией"
+      ],
+      "ms": [
+        "operasi menyelamat"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10164",
+      "sourceTitle": "спасательная операция",
+      "sourceTranslation": "operasi menyelamat"
+    },
+    "examples": [
+      {
+        "ru": "Спасательная операция продолжается.",
+        "ms": "Operasi menyelamat masih diteruskan.",
+        "ruExpression": "спасательная операция",
+        "msExpression": "operasi menyelamat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Участники спасательной операции получили новое оборудование.",
+        "ms": "Peserta operasi menyelamat menerima peralatan baharu.",
+        "ruExpression": "спасательной операции",
+        "msExpression": "operasi menyelamat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0973",
+    "ru": "поисково-спасательная операция",
+    "ms": "operasi mencari dan menyelamat",
+    "forms": {
+      "ru": [
+        "поисково-спасательная операция",
+        "поисково-спасательной операции",
+        "поисково-спасательную операцию",
+        "поисково-спасательной операцией"
+      ],
+      "ms": [
+        "operasi mencari dan menyelamat"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10165",
+      "sourceTitle": "поисково-спасательная операция",
+      "sourceTranslation": "operasi mencari dan menyelamat"
+    },
+    "examples": [
+      {
+        "ru": "Поисково-спасательная операция началась утром.",
+        "ms": "Operasi mencari dan menyelamat bermula pada waktu pagi.",
+        "ruExpression": "поисково-спасательная операция",
+        "msExpression": "operasi mencari dan menyelamat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "План поисково-спасательной операции утверждён.",
+        "ms": "Pelan operasi mencari dan menyelamat telah diluluskan.",
+        "ruExpression": "поисково-спасательной операции",
+        "msExpression": "operasi mencari dan menyelamat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0974",
+    "ru": "медицинская эвакуация",
+    "ms": "pemindahan perubatan",
+    "forms": {
+      "ru": [
+        "медицинская эвакуация",
+        "медицинской эвакуации",
+        "медицинскую эвакуацию",
+        "медицинской эвакуацией"
+      ],
+      "ms": [
+        "pemindahan perubatan"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10166",
+      "sourceTitle": "медицинская эвакуация",
+      "sourceTranslation": "pemindahan perubatan"
+    },
+    "examples": [
+      {
+        "ru": "Медицинская эвакуация организована больницей.",
+        "ms": "Pemindahan perubatan diatur oleh hospital.",
+        "ruExpression": "медицинская эвакуация",
+        "msExpression": "pemindahan perubatan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "План медицинской эвакуации передан координатору.",
+        "ms": "Pelan pemindahan perubatan diserahkan kepada penyelaras.",
+        "ruExpression": "медицинской эвакуации",
+        "msExpression": "pemindahan perubatan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0975",
+    "ru": "восстановление после конфликта",
+    "ms": "pemulihan selepas konflik",
+    "forms": {
+      "ru": [
+        "восстановление после конфликта",
+        "восстановления после конфликта",
+        "восстановлению после конфликта",
+        "восстановлением после конфликта",
+        "восстановлении после конфликта"
+      ],
+      "ms": [
+        "pemulihan selepas konflik"
+      ]
+    },
+    "topic": "международные отношения и гуманитарная помощь",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-10171",
+      "sourceTitle": "восстановление после конфликта",
+      "sourceTranslation": "pemulihan selepas konflik"
+    },
+    "examples": [
+      {
+        "ru": "Восстановление после конфликта требует совместных усилий.",
+        "ms": "Pemulihan selepas konflik memerlukan usaha bersama.",
+        "ruExpression": "восстановление после конфликта",
+        "msExpression": "pemulihan selepas konflik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Программа восстановления после конфликта представлена на встрече.",
+        "ms": "Program pemulihan selepas konflik dibentangkan dalam pertemuan itu.",
+        "ruExpression": "восстановления после конфликта",
+        "msExpression": "pemulihan selepas konflik",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

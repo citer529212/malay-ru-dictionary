@@ -85,6 +85,9 @@ for (const [query,title] of [
  ['арендной платой','арендная плата'], ['передала показания счётчика','передать показания счетчика'],
  ['сделала перерасчёт','сделать перерасчет'], ['номеру заявки на ремонт','номер заявки на ремонт'],
  ['акта приёма квартиры','акт приема квартиры'], ['депозита за аренду','депозит за аренду'],
+ ['мирных переговоров','мирные переговоры'], ['мирного соглашения','мирное соглашение'],
+ ['гуманитарной помощи','гуманитарная помощь'], ['официального заявления','официальное заявление'],
+ ['поисково-спасательной операции','поисково-спасательная операция'], ['международному праву','международное право'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -234,6 +237,22 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Housing distinction/nested phrase: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['спасательная операция','ru-ms','спасательная операция','operasi menyelamat'],
+ ['поисково-спасательная операция','ru-ms','поисково-спасательная операция','operasi mencari dan menyelamat'],
+ ['operasi menyelamat','ms-ru','operasi menyelamat','спасательная операция'],
+ ['operasi mencari dan menyelamat','ms-ru','operasi mencari dan menyelamat','поисково-спасательная операция'],
+ ['энергетическая инфраструктура','ru-ms','энергетическая инфраструктура','infrastruktur tenaga'],
+ ['критическая инфраструктура','ru-ms','критическая инфраструктура','infrastruktur kritikal'],
+ ['infrastruktur tenaga','ms-ru','infrastruktur tenaga','энергетическая инфраструктура'],
+ ['infrastruktur kritikal','ms-ru','infrastruktur kritikal','критическая инфраструктура'],
+ ['Копия мирного соглашения готова.','ru-ms','мирное соглашение','perjanjian damai'],
+ ['Pelan operasi mencari dan menyelamat sudah siap.','ms-ru','operasi mencari dan menyelamat','поисково-спасательная операция'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`International distinction/longest phrase: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;

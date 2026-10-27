@@ -31,7 +31,7 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
   } else assert.ok((await page.locator('#answerDetails').textContent()).includes('storan awan'));
   results.push({viewport,query,passed:true});
  }
- for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis'],['условиями оплаты','условия оплаты'],['syarat kontrak','syarat kontrak'],['банковскими реквизитами','банковские реквизиты'],['tujuan pembayaran','tujuan pembayaran'],['срока рассмотрения заявления','срок рассмотрения заявления'],['salinan yang disahkan oleh notari','salinan yang disahkan oleh notari'],['данных отчёта','данные отчета'],['matlamat projek','matlamat projek'],['улучшили процесс','улучшить процесс'],['tidak memenuhi keperluan','tidak memenuhi keperluan'],['Изделие не соответствует требованиям безопасности.','не соответствует требованиям'],['Produk ini tidak memenuhi keperluan keselamatan.','tidak memenuhi keperluan'],['получил документ по почте','получить документ по почте'],['dihantar untuk kelulusan','menghantar untuk kelulusan'],['ответила на сообщение','ответить на сообщение'],['membalas e-mel','membalas e-mel'],['онлайн-встрече','онлайн встреча'],['неподтверждённую информацию','неподтвержденная информация'],['hasil kajian','hasil kajian'],['перенесла доставку','перенести доставку'],['memulangkan pesanan','memulangkan pesanan'],['зарплате после налогов','зарплата после налогов'],['cuti tanpa gaji','cuti tanpa gaji'],['подала заявление об увольнении','подать заявление об увольнении'],['не сдала зачёт','не сдать зачет'],['membayar yuran pengajian dalam talian','membayar yuran pengajian dalam talian'],['выписке оценок','выписка оценок'],['отменила бронь','отменить бронь'],['membeli tiket dalam talian','membeli tiket dalam talian'],['брони отеля для визы','бронь отеля для визы'],['уменьшила размер файла','уменьшить размер файла'],['membesarkan saiz fail','membesarkan saiz fail'],['dipulihkan daripada sandaran','memulihkan daripada sandaran'],['частичной компенсации','частичная компенсация'],['pemulangan berbayar','pemulangan berbayar'],['проверила серийный номер','проверить серийный номер'],['передала показания счётчика','передать показания счетчика'],['meter elektrik','meter elektrik'],['номеру заявки на ремонт','номер заявки на ремонт']]) {
+ for(const [newQuery,newTitle] of [['электронной подписи','электронная подпись'],['bahasa ibunda','bahasa ibunda'],['последнюю версию','последняя версия'],['jawapan bertulis','jawapan bertulis'],['условиями оплаты','условия оплаты'],['syarat kontrak','syarat kontrak'],['банковскими реквизитами','банковские реквизиты'],['tujuan pembayaran','tujuan pembayaran'],['срока рассмотрения заявления','срок рассмотрения заявления'],['salinan yang disahkan oleh notari','salinan yang disahkan oleh notari'],['данных отчёта','данные отчета'],['matlamat projek','matlamat projek'],['улучшили процесс','улучшить процесс'],['tidak memenuhi keperluan','tidak memenuhi keperluan'],['Изделие не соответствует требованиям безопасности.','не соответствует требованиям'],['Produk ini tidak memenuhi keperluan keselamatan.','tidak memenuhi keperluan'],['получил документ по почте','получить документ по почте'],['dihantar untuk kelulusan','menghantar untuk kelulusan'],['ответила на сообщение','ответить на сообщение'],['membalas e-mel','membalas e-mel'],['онлайн-встрече','онлайн встреча'],['неподтверждённую информацию','неподтвержденная информация'],['hasil kajian','hasil kajian'],['перенесла доставку','перенести доставку'],['memulangkan pesanan','memulangkan pesanan'],['зарплате после налогов','зарплата после налогов'],['cuti tanpa gaji','cuti tanpa gaji'],['подала заявление об увольнении','подать заявление об увольнении'],['не сдала зачёт','не сдать зачет'],['membayar yuran pengajian dalam talian','membayar yuran pengajian dalam talian'],['выписке оценок','выписка оценок'],['отменила бронь','отменить бронь'],['membeli tiket dalam talian','membeli tiket dalam talian'],['брони отеля для визы','бронь отеля для визы'],['уменьшила размер файла','уменьшить размер файла'],['membesarkan saiz fail','membesarkan saiz fail'],['dipulihkan daripada sandaran','memulihkan daripada sandaran'],['частичной компенсации','частичная компенсация'],['pemulangan berbayar','pemulangan berbayar'],['проверила серийный номер','проверить серийный номер'],['передала показания счётчика','передать показания счетчика'],['meter elektrik','meter elektrik'],['номеру заявки на ремонт','номер заявки на ремонт'],['мирного соглашения','мирное соглашение'],['bantuan kemanusiaan','bantuan kemanusiaan'],['поисково-спасательной операции','поисково-спасательная операция']]) {
   await page.locator('#searchInput').fill(newQuery);
   await page.locator('#searchButton').click();
   await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,newTitle);
@@ -241,6 +241,18 @@ for (const viewport of [{width:1440,height:1100},{width:390,height:844}]) {
  await page.screenshot({path:`${outputDir}/${viewport.width}-housing-topic.png`,fullPage:false});
  await page.locator('#resetContextFilters').click();
  results.push({viewport,scenario:'housing-topic-and-pagination',passed:true});
+ await page.locator('#contextTopic').selectOption('международные отношения и гуманитарная помощь');
+ assert.equal(await page.locator('#resultCount').textContent(),'25');
+ assert.equal(await page.locator('#resultList > li').count(),24);
+ await page.locator('#showMoreResults').click();
+ assert.equal(await page.locator('#resultList > li').count(),25);
+ assert.equal(await page.locator('#resultList .parallel-context mark').count(),100);
+ assert.equal(await page.locator('#showMoreResults').isVisible(),false);
+ await page.locator('#resultList > li').first().scrollIntoViewIfNeeded();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'International topic overflow');
+ await page.screenshot({path:`${outputDir}/${viewport.width}-international-topic.png`,fullPage:false});
+ await page.locator('#resetContextFilters').click();
+ results.push({viewport,scenario:'international-topic-and-pagination',passed:true});
  await page.locator('#searchInput').fill('вода');
  await page.locator('#searchButton').click();
  await page.waitForFunction(()=>document.querySelector('#answerTitle').textContent==='вода');
@@ -605,6 +617,12 @@ for(const profile of ['','-Lite']) {
   assert.equal(await page.locator('#answerDetails mark').count(),4);
  }
  for (const query of ['meter air','meter elektrik']) {
+  await page.locator('#searchInput').fill(query);
+  await page.locator('#searchButton').click();
+  await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,query);
+  assert.equal(await page.locator('#answerDetails mark').count(),4);
+ }
+ for (const query of ['rundingan damai','operasi mencari dan menyelamat']) {
   await page.locator('#searchInput').fill(query);
   await page.locator('#searchButton').click();
   await page.waitForFunction(title=>document.querySelector('#answerTitle').textContent===title,query);
