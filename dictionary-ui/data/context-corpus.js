@@ -37119,5 +37119,1064 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0926",
+    "ru": "срок договора",
+    "ms": "tempoh perjanjian",
+    "forms": {
+      "ru": [
+        "срок договора",
+        "срока договора",
+        "сроку договора",
+        "сроком договора",
+        "сроке договора"
+      ],
+      "ms": [
+        "tempoh perjanjian"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6139",
+      "sourceTitle": "срок договора",
+      "sourceTranslation": "tempoh perjanjian"
+    },
+    "examples": [
+      {
+        "ru": "Срок договора указан на первой странице.",
+        "ms": "Tempoh perjanjian dinyatakan pada halaman pertama.",
+        "ruExpression": "срок договора",
+        "msExpression": "tempoh perjanjian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стороны обсудили продление срока договора.",
+        "ms": "Kedua-dua pihak membincangkan pelanjutan tempoh perjanjian.",
+        "ruExpression": "срока договора",
+        "msExpression": "tempoh perjanjian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0927",
+    "ru": "снять квартиру",
+    "ms": "menyewa apartmen",
+    "forms": {
+      "ru": [
+        "снять квартиру",
+        "снял квартиру",
+        "сняла квартиру",
+        "сняли квартиру",
+        "снимем квартиру",
+        "снимите квартиру"
+      ],
+      "ms": [
+        "menyewa apartmen"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6143",
+      "sourceTitle": "снять квартиру",
+      "sourceTranslation": "menyewa apartmen"
+    },
+    "examples": [
+      {
+        "ru": "Мы планируем снять квартиру рядом с работой.",
+        "ms": "Kami merancang untuk menyewa apartmen berhampiran tempat kerja.",
+        "ruExpression": "снять квартиру",
+        "msExpression": "menyewa apartmen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она сняла квартиру в прошлом месяце.",
+        "ms": "Dia telah menyewa apartmen pada bulan lalu.",
+        "ruExpression": "сняла квартиру",
+        "msExpression": "menyewa apartmen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0928",
+    "ru": "арендная плата",
+    "ms": "bayaran sewa",
+    "forms": {
+      "ru": [
+        "арендная плата",
+        "арендной платы",
+        "арендной плате",
+        "арендную плату",
+        "арендной платой"
+      ],
+      "ms": [
+        "bayaran sewa"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6145",
+      "sourceTitle": "арендная плата",
+      "sourceTranslation": "bayaran sewa"
+    },
+    "examples": [
+      {
+        "ru": "Арендная плата указана в договоре.",
+        "ms": "Bayaran sewa dinyatakan dalam kontrak.",
+        "ruExpression": "арендная плата",
+        "msExpression": "bayaran sewa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Квитанция об оплате арендной платы сохранена в папке.",
+        "ms": "Resit bayaran sewa disimpan dalam folder.",
+        "ruExpression": "арендной платы",
+        "msExpression": "bayaran sewa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0929",
+    "ru": "возмещение ущерба",
+    "ms": "pampasan kerugian",
+    "forms": {
+      "ru": [
+        "возмещение ущерба",
+        "возмещения ущерба",
+        "возмещению ущерба",
+        "возмещением ущерба",
+        "возмещении ущерба"
+      ],
+      "ms": [
+        "pampasan kerugian"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6154",
+      "sourceTitle": "возмещение ущерба",
+      "sourceTranslation": "pampasan kerugian"
+    },
+    "examples": [
+      {
+        "ru": "Возмещение ущерба обсуждалось после осмотра квартиры.",
+        "ms": "Pampasan kerugian dibincangkan selepas pemeriksaan apartmen.",
+        "ruExpression": "возмещение ущерба",
+        "msExpression": "pampasan kerugian",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сумма возмещения ущерба указана в письме.",
+        "ms": "Amaun pampasan kerugian dinyatakan dalam surat.",
+        "ruExpression": "возмещения ущерба",
+        "msExpression": "pampasan kerugian",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0930",
+    "ru": "повреждение имущества",
+    "ms": "kerosakan harta benda",
+    "forms": {
+      "ru": [
+        "повреждение имущества",
+        "повреждения имущества",
+        "повреждению имущества",
+        "повреждением имущества",
+        "повреждении имущества"
+      ],
+      "ms": [
+        "kerosakan harta benda"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6155",
+      "sourceTitle": "повреждение имущества",
+      "sourceTranslation": "kerosakan harta benda"
+    },
+    "examples": [
+      {
+        "ru": "Повреждение имущества описано в акте.",
+        "ms": "Kerosakan harta benda diterangkan dalam borang itu.",
+        "ruExpression": "повреждение имущества",
+        "msExpression": "kerosakan harta benda",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "К сообщению о повреждении имущества приложены фотографии.",
+        "ms": "Gambar dilampirkan pada mesej tentang kerosakan harta benda.",
+        "ruExpression": "повреждении имущества",
+        "msExpression": "kerosakan harta benda",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0931",
+    "ru": "депозит за аренду",
+    "ms": "deposit sewa",
+    "forms": {
+      "ru": [
+        "депозит за аренду",
+        "депозита за аренду",
+        "депозиту за аренду",
+        "депозитом за аренду",
+        "депозите за аренду"
+      ],
+      "ms": [
+        "deposit sewa"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-7722",
+      "sourceTitle": "депозит за аренду",
+      "sourceTranslation": "deposit sewa"
+    },
+    "examples": [
+      {
+        "ru": "Депозит за аренду указан в договоре.",
+        "ms": "Deposit sewa dinyatakan dalam kontrak.",
+        "ruExpression": "депозит за аренду",
+        "msExpression": "deposit sewa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Квитанция о внесении депозита за аренду сохранена.",
+        "ms": "Resit bayaran deposit sewa telah disimpan.",
+        "ruExpression": "депозита за аренду",
+        "msExpression": "deposit sewa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0932",
+    "ru": "погасить долг",
+    "ms": "menjelaskan hutang",
+    "forms": {
+      "ru": [
+        "погасить долг",
+        "погасил долг",
+        "погасила долг",
+        "погасили долг",
+        "погасим долг",
+        "погасите долг"
+      ],
+      "ms": [
+        "menjelaskan hutang"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6163",
+      "sourceTitle": "погасить долг",
+      "sourceTranslation": "menjelaskan hutang"
+    },
+    "examples": [
+      {
+        "ru": "Арендатор планирует погасить долг в пятницу.",
+        "ms": "Penyewa merancang untuk menjelaskan hutang pada hari Jumaat.",
+        "ruExpression": "погасить долг",
+        "msExpression": "menjelaskan hutang",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она погасила долг после получения счёта.",
+        "ms": "Dia telah menjelaskan hutang selepas menerima bil.",
+        "ruExpression": "погасила долг",
+        "msExpression": "menjelaskan hutang",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0933",
+    "ru": "соглашение сторон",
+    "ms": "persetujuan kedua-dua pihak",
+    "forms": {
+      "ru": [
+        "соглашение сторон",
+        "соглашения сторон",
+        "соглашению сторон",
+        "соглашением сторон",
+        "соглашении сторон"
+      ],
+      "ms": [
+        "persetujuan kedua-dua pihak"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6165",
+      "sourceTitle": "соглашение сторон",
+      "sourceTranslation": "persetujuan kedua-dua pihak"
+    },
+    "examples": [
+      {
+        "ru": "Соглашение сторон оформлено письменно.",
+        "ms": "Persetujuan kedua-dua pihak dibuat secara bertulis.",
+        "ruExpression": "соглашение сторон",
+        "msExpression": "persetujuan kedua-dua pihak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия соглашения сторон приложена к договору.",
+        "ms": "Salinan persetujuan kedua-dua pihak dilampirkan pada kontrak.",
+        "ruExpression": "соглашения сторон",
+        "msExpression": "persetujuan kedua-dua pihak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0934",
+    "ru": "уведомить заранее",
+    "ms": "memberitahu lebih awal",
+    "forms": {
+      "ru": [
+        "уведомить заранее",
+        "уведомил заранее",
+        "уведомила заранее",
+        "уведомили заранее",
+        "уведомим заранее",
+        "уведомите заранее"
+      ],
+      "ms": [
+        "memberitahu lebih awal"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6168",
+      "sourceTitle": "уведомить заранее",
+      "sourceTranslation": "memberitahu lebih awal"
+    },
+    "examples": [
+      {
+        "ru": "Руководитель должен уведомить заранее о ремонтных работах.",
+        "ms": "Pengurus perlu memberitahu lebih awal tentang kerja pembaikan.",
+        "ruExpression": "уведомить заранее",
+        "msExpression": "memberitahu lebih awal",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник уведомил заранее о проверке.",
+        "ms": "Kakitangan itu telah memberitahu lebih awal tentang pemeriksaan.",
+        "ruExpression": "уведомил заранее",
+        "msExpression": "memberitahu lebih awal",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0935",
+    "ru": "управляющая компания",
+    "ms": "syarikat pengurusan bangunan",
+    "forms": {
+      "ru": [
+        "управляющая компания",
+        "управляющей компании",
+        "управляющую компанию",
+        "управляющей компанией"
+      ],
+      "ms": [
+        "syarikat pengurusan bangunan"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6805",
+      "sourceTitle": "управляющая компания",
+      "sourceTranslation": "syarikat pengurusan bangunan"
+    },
+    "examples": [
+      {
+        "ru": "Управляющая компания ответила на обращение.",
+        "ms": "Syarikat pengurusan bangunan menjawab aduan itu.",
+        "ruExpression": "управляющая компания",
+        "msExpression": "syarikat pengurusan bangunan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Адрес управляющей компании указан в уведомлении.",
+        "ms": "Alamat syarikat pengurusan bangunan dinyatakan dalam notis.",
+        "ruExpression": "управляющей компании",
+        "msExpression": "syarikat pengurusan bangunan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0936",
+    "ru": "обслуживание дома",
+    "ms": "penyelenggaraan bangunan",
+    "forms": {
+      "ru": [
+        "обслуживание дома",
+        "обслуживания дома",
+        "обслуживанию дома",
+        "обслуживанием дома",
+        "обслуживании дома"
+      ],
+      "ms": [
+        "penyelenggaraan bangunan"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6808",
+      "sourceTitle": "обслуживание дома",
+      "sourceTranslation": "penyelenggaraan bangunan"
+    },
+    "examples": [
+      {
+        "ru": "Обслуживание дома включено в договор.",
+        "ms": "Penyelenggaraan bangunan termasuk dalam kontrak.",
+        "ruExpression": "обслуживание дома",
+        "msExpression": "penyelenggaraan bangunan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Расходы на обслуживание дома указаны в счёте.",
+        "ms": "Kos penyelenggaraan bangunan dinyatakan dalam bil.",
+        "ruExpression": "обслуживание дома",
+        "msExpression": "penyelenggaraan bangunan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0937",
+    "ru": "коммунальные платежи",
+    "ms": "bayaran utiliti",
+    "forms": {
+      "ru": [
+        "коммунальные платежи",
+        "коммунальных платежей",
+        "коммунальным платежам",
+        "коммунальными платежами",
+        "коммунальных платежах"
+      ],
+      "ms": [
+        "bayaran utiliti"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6809",
+      "sourceTitle": "коммунальные платежи",
+      "sourceTranslation": "bayaran utiliti"
+    },
+    "examples": [
+      {
+        "ru": "Коммунальные платежи перечислены в приложении к договору.",
+        "ms": "Bayaran utiliti disenaraikan dalam lampiran kontrak.",
+        "ruExpression": "коммунальные платежи",
+        "msExpression": "bayaran utiliti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сумма коммунальных платежей изменилась в этом месяце.",
+        "ms": "Jumlah bayaran utiliti berubah pada bulan ini.",
+        "ruExpression": "коммунальных платежей",
+        "msExpression": "bayaran utiliti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0938",
+    "ru": "счет за коммунальные услуги",
+    "ms": "bil utiliti",
+    "forms": {
+      "ru": [
+        "счет за коммунальные услуги",
+        "счёта за коммунальные услуги",
+        "счёту за коммунальные услуги",
+        "счёт за коммунальные услуги",
+        "счётом за коммунальные услуги",
+        "счёте за коммунальные услуги"
+      ],
+      "ms": [
+        "bil utiliti"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6810",
+      "sourceTitle": "счет за коммунальные услуги",
+      "sourceTranslation": "bil utiliti"
+    },
+    "examples": [
+      {
+        "ru": "Счет за коммунальные услуги пришёл по электронной почте.",
+        "ms": "Bil utiliti diterima melalui e-mel.",
+        "ruExpression": "счет за коммунальные услуги",
+        "msExpression": "bil utiliti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В счёте за коммунальные услуги обнаружена ошибка.",
+        "ms": "Kesilapan dikesan dalam bil utiliti.",
+        "ruExpression": "счёте за коммунальные услуги",
+        "msExpression": "bil utiliti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0939",
+    "ru": "долг за коммунальные услуги",
+    "ms": "tunggakan bil utiliti",
+    "forms": {
+      "ru": [
+        "долг за коммунальные услуги",
+        "долга за коммунальные услуги",
+        "долгу за коммунальные услуги",
+        "долгом за коммунальные услуги",
+        "долге за коммунальные услуги"
+      ],
+      "ms": [
+        "tunggakan bil utiliti"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6811",
+      "sourceTitle": "долг за коммунальные услуги",
+      "sourceTranslation": "tunggakan bil utiliti"
+    },
+    "examples": [
+      {
+        "ru": "Долг за коммунальные услуги указан в уведомлении.",
+        "ms": "Tunggakan bil utiliti dinyatakan dalam notis.",
+        "ruExpression": "долг за коммунальные услуги",
+        "msExpression": "tunggakan bil utiliti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сумма долга за коммунальные услуги проверена.",
+        "ms": "Jumlah tunggakan bil utiliti telah disemak.",
+        "ruExpression": "долга за коммунальные услуги",
+        "msExpression": "tunggakan bil utiliti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0940",
+    "ru": "показания счетчика",
+    "ms": "bacaan meter",
+    "forms": {
+      "ru": [
+        "показания счетчика",
+        "показаний счётчика",
+        "показаниям счётчика",
+        "показаниями счётчика",
+        "показаниях счётчика"
+      ],
+      "ms": [
+        "bacaan meter"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6812",
+      "sourceTitle": "показания счетчика",
+      "sourceTranslation": "bacaan meter"
+    },
+    "examples": [
+      {
+        "ru": "Показания счетчика внесены в таблицу.",
+        "ms": "Bacaan meter dimasukkan dalam jadual.",
+        "ruExpression": "показания счетчика",
+        "msExpression": "bacaan meter",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В показаниях счётчика обнаружена ошибка.",
+        "ms": "Kesilapan dikesan dalam bacaan meter.",
+        "ruExpression": "показаниях счётчика",
+        "msExpression": "bacaan meter",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0941",
+    "ru": "передать показания счетчика",
+    "ms": "menghantar bacaan meter",
+    "forms": {
+      "ru": [
+        "передать показания счетчика",
+        "передал показания счётчика",
+        "передала показания счётчика",
+        "передали показания счётчика",
+        "передадим показания счётчика",
+        "передайте показания счётчика"
+      ],
+      "ms": [
+        "menghantar bacaan meter"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6813",
+      "sourceTitle": "передать показания счетчика",
+      "sourceTranslation": "menghantar bacaan meter"
+    },
+    "examples": [
+      {
+        "ru": "Нужно передать показания счетчика через приложение.",
+        "ms": "Kita perlu menghantar bacaan meter melalui aplikasi.",
+        "ruExpression": "передать показания счетчика",
+        "msExpression": "menghantar bacaan meter",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она передала показания счётчика вчера.",
+        "ms": "Dia telah menghantar bacaan meter semalam.",
+        "ruExpression": "передала показания счётчика",
+        "msExpression": "menghantar bacaan meter",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0942",
+    "ru": "счетчик воды",
+    "ms": "meter air",
+    "forms": {
+      "ru": [
+        "счетчик воды",
+        "счётчика воды",
+        "счётчику воды",
+        "счётчик воды",
+        "счётчиком воды",
+        "счётчике воды"
+      ],
+      "ms": [
+        "meter air"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6814",
+      "sourceTitle": "счетчик воды",
+      "sourceTranslation": "meter air"
+    },
+    "examples": [
+      {
+        "ru": "Счетчик воды установлен в ванной комнате.",
+        "ms": "Meter air dipasang di bilik mandi.",
+        "ruExpression": "счетчик воды",
+        "msExpression": "meter air",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер счётчика воды указан в акте.",
+        "ms": "Nombor meter air dinyatakan dalam borang itu.",
+        "ruExpression": "счётчика воды",
+        "msExpression": "meter air",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0943",
+    "ru": "счетчик электричества",
+    "ms": "meter elektrik",
+    "forms": {
+      "ru": [
+        "счетчик электричества",
+        "счётчика электричества",
+        "счётчику электричества",
+        "счётчик электричества",
+        "счётчиком электричества",
+        "счётчике электричества"
+      ],
+      "ms": [
+        "meter elektrik"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6815",
+      "sourceTitle": "счетчик электричества",
+      "sourceTranslation": "meter elektrik"
+    },
+    "examples": [
+      {
+        "ru": "Счетчик электричества установлен у входа.",
+        "ms": "Meter elektrik dipasang berhampiran pintu masuk.",
+        "ruExpression": "счетчик электричества",
+        "msExpression": "meter elektrik",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер счётчика электричества записан в договоре.",
+        "ms": "Nombor meter elektrik dicatat dalam kontrak.",
+        "ruExpression": "счётчика электричества",
+        "msExpression": "meter elektrik",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0944",
+    "ru": "заменить счетчик",
+    "ms": "menukar meter",
+    "forms": {
+      "ru": [
+        "заменить счетчик",
+        "заменил счётчик",
+        "заменила счётчик",
+        "заменили счётчик",
+        "заменим счётчик",
+        "замените счётчик"
+      ],
+      "ms": [
+        "menukar meter"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6819",
+      "sourceTitle": "заменить счетчик",
+      "sourceTranslation": "menukar meter"
+    },
+    "examples": [
+      {
+        "ru": "Специалист планирует заменить счетчик завтра.",
+        "ms": "Pakar merancang untuk menukar meter esok.",
+        "ruExpression": "заменить счетчик",
+        "msExpression": "menukar meter",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Компания заменила счётчик после проверки.",
+        "ms": "Syarikat telah menukar meter selepas semakan.",
+        "ruExpression": "заменила счётчик",
+        "msExpression": "menukar meter",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0945",
+    "ru": "сделать перерасчет",
+    "ms": "membuat pengiraan semula",
+    "forms": {
+      "ru": [
+        "сделать перерасчет",
+        "сделал перерасчёт",
+        "сделала перерасчёт",
+        "сделали перерасчёт",
+        "сделаем перерасчёт",
+        "сделайте перерасчёт"
+      ],
+      "ms": [
+        "membuat pengiraan semula"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6821",
+      "sourceTitle": "сделать перерасчет",
+      "sourceTranslation": "membuat pengiraan semula"
+    },
+    "examples": [
+      {
+        "ru": "Клиент попросил сделать перерасчет после исправления ошибки.",
+        "ms": "Pelanggan meminta kami membuat pengiraan semula selepas kesilapan dibetulkan.",
+        "ruExpression": "сделать перерасчет",
+        "msExpression": "membuat pengiraan semula",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Компания сделала перерасчёт за прошлый месяц.",
+        "ms": "Syarikat telah membuat pengiraan semula untuk bulan lalu.",
+        "ruExpression": "сделала перерасчёт",
+        "msExpression": "membuat pengiraan semula",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0946",
+    "ru": "заявка на ремонт",
+    "ms": "permohonan pembaikan",
+    "forms": {
+      "ru": [
+        "заявка на ремонт",
+        "заявки на ремонт",
+        "заявке на ремонт",
+        "заявку на ремонт",
+        "заявкой на ремонт"
+      ],
+      "ms": [
+        "permohonan pembaikan"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6857",
+      "sourceTitle": "заявка на ремонт",
+      "sourceTranslation": "permohonan pembaikan"
+    },
+    "examples": [
+      {
+        "ru": "Заявка на ремонт передана специалисту.",
+        "ms": "Permohonan pembaikan diserahkan kepada pakar.",
+        "ruExpression": "заявка на ремонт",
+        "msExpression": "permohonan pembaikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В заявке на ремонт указан адрес квартиры.",
+        "ms": "Alamat apartmen dinyatakan dalam permohonan pembaikan.",
+        "ruExpression": "заявке на ремонт",
+        "msExpression": "permohonan pembaikan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0947",
+    "ru": "номер заявки на ремонт",
+    "ms": "nombor permohonan pembaikan",
+    "forms": {
+      "ru": [
+        "номер заявки на ремонт",
+        "номера заявки на ремонт",
+        "номеру заявки на ремонт",
+        "номером заявки на ремонт",
+        "номере заявки на ремонт"
+      ],
+      "ms": [
+        "nombor permohonan pembaikan"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6858",
+      "sourceTitle": "номер заявки на ремонт",
+      "sourceTranslation": "nombor permohonan pembaikan"
+    },
+    "examples": [
+      {
+        "ru": "Номер заявки на ремонт указан в сообщении.",
+        "ms": "Nombor permohonan pembaikan dinyatakan dalam mesej.",
+        "ruExpression": "номер заявки на ремонт",
+        "msExpression": "nombor permohonan pembaikan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "По номеру заявки на ремонт можно проверить статус.",
+        "ms": "Status boleh disemak menggunakan nombor permohonan pembaikan.",
+        "ruExpression": "номеру заявки на ремонт",
+        "msExpression": "nombor permohonan pembaikan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0948",
+    "ru": "договор аренды квартиры",
+    "ms": "perjanjian sewa apartmen",
+    "forms": {
+      "ru": [
+        "договор аренды квартиры",
+        "договора аренды квартиры",
+        "договору аренды квартиры",
+        "договором аренды квартиры",
+        "договоре аренды квартиры"
+      ],
+      "ms": [
+        "perjanjian sewa apartmen"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6863",
+      "sourceTitle": "договор аренды квартиры",
+      "sourceTranslation": "perjanjian sewa apartmen"
+    },
+    "examples": [
+      {
+        "ru": "Договор аренды квартиры подписан обеими сторонами.",
+        "ms": "Perjanjian sewa apartmen ditandatangani oleh kedua-dua pihak.",
+        "ruExpression": "договор аренды квартиры",
+        "msExpression": "perjanjian sewa apartmen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия договора аренды квартиры сохранена в папке.",
+        "ms": "Salinan perjanjian sewa apartmen disimpan dalam folder.",
+        "ruExpression": "договора аренды квартиры",
+        "msExpression": "perjanjian sewa apartmen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0949",
+    "ru": "акт приема квартиры",
+    "ms": "borang penerimaan apartmen",
+    "forms": {
+      "ru": [
+        "акт приема квартиры",
+        "акта приёма квартиры",
+        "акту приёма квартиры",
+        "акт приёма квартиры",
+        "актом приёма квартиры",
+        "акте приёма квартиры"
+      ],
+      "ms": [
+        "borang penerimaan apartmen"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6864",
+      "sourceTitle": "акт приема квартиры",
+      "sourceTranslation": "borang penerimaan apartmen"
+    },
+    "examples": [
+      {
+        "ru": "Акт приема квартиры содержит список мебели.",
+        "ms": "Borang penerimaan apartmen mengandungi senarai perabot.",
+        "ruExpression": "акт приема квартиры",
+        "msExpression": "borang penerimaan apartmen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В акте приёма квартиры указаны показания счётчиков.",
+        "ms": "Bacaan meter dinyatakan dalam borang penerimaan apartmen.",
+        "ruExpression": "акте приёма квартиры",
+        "msExpression": "borang penerimaan apartmen",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0950",
+    "ru": "акт возврата квартиры",
+    "ms": "borang pemulangan apartmen",
+    "forms": {
+      "ru": [
+        "акт возврата квартиры",
+        "акта возврата квартиры",
+        "акту возврата квартиры",
+        "актом возврата квартиры",
+        "акте возврата квартиры"
+      ],
+      "ms": [
+        "borang pemulangan apartmen"
+      ]
+    },
+    "topic": "аренда и жилищные вопросы",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6865",
+      "sourceTitle": "акт возврата квартиры",
+      "sourceTranslation": "borang pemulangan apartmen"
+    },
+    "examples": [
+      {
+        "ru": "Акт возврата квартиры подписан после осмотра.",
+        "ms": "Borang pemulangan apartmen ditandatangani selepas pemeriksaan.",
+        "ruExpression": "акт возврата квартиры",
+        "msExpression": "borang pemulangan apartmen",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия акта возврата квартиры отправлена арендатору.",
+        "ms": "Salinan borang pemulangan apartmen dihantar kepada penyewa.",
+        "ruExpression": "акта возврата квартиры",
+        "msExpression": "borang pemulangan apartmen",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

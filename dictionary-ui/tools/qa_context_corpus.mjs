@@ -82,6 +82,9 @@ for (const [query,title] of [
  ['письменной претензии','письменная претензия'], ['ответе на претензию','ответ на претензию'],
  ['частичной компенсации','частичная компенсация'], ['бесплатного возврата','бесплатный возврат'],
  ['оформила возврат','оформить возврат'], ['проверила серийный номер','проверить серийный номер'],
+ ['арендной платой','арендная плата'], ['передала показания счётчика','передать показания счетчика'],
+ ['сделала перерасчёт','сделать перерасчет'], ['номеру заявки на ремонт','номер заявки на ремонт'],
+ ['акта приёма квартиры','акт приема квартиры'], ['депозита за аренду','депозит за аренду'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -215,6 +218,22 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`Customer distinction: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['арендная плата','ru-ms','арендная плата','bayaran sewa'],
+ ['bayaran sewa','ms-ru','bayaran sewa','арендная плата'],
+ ['коммунальные платежи','ru-ms','коммунальные платежи','bayaran utiliti'],
+ ['bayaran utiliti','ms-ru','bayaran utiliti','коммунальные платежи'],
+ ['счётчик воды','ru-ms','счетчик воды','meter air'],
+ ['meter air','ms-ru','meter air','счетчик воды'],
+ ['счётчик электричества','ru-ms','счетчик электричества','meter elektrik'],
+ ['meter elektrik','ms-ru','meter elektrik','счетчик электричества'],
+ ['Проверка по номеру заявки на ремонт доступна на сайте.','ru-ms','номер заявки на ремонт','nombor permohonan pembaikan'],
+ ['Status boleh disemak melalui nombor permohonan pembaikan.','ms-ru','nombor permohonan pembaikan','номер заявки на ремонт'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Housing distinction/nested phrase: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;
