@@ -88,6 +88,9 @@ for (const [query,title] of [
  ['мирных переговоров','мирные переговоры'], ['мирного соглашения','мирное соглашение'],
  ['гуманитарной помощи','гуманитарная помощь'], ['официального заявления','официальное заявление'],
  ['поисково-спасательной операции','поисково-спасательная операция'], ['международному праву','международное право'],
+ ['изменила адрес доставки','изменить адрес доставки'], ['взвесила посылку','взвесить посылку'],
+ ['таможенной пошлины','таможенная пошлина'], ['международной посылки','международная посылка'],
+ ['телефону получателя','телефон получателя'], ['ячейки постамата','ячейка постамата'],
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,'ru-ms')[0];
  assert.equal(hit?.title,title,`Case agreement: ${query}`);
@@ -253,6 +256,22 @@ for (const [query,direction,title,translation] of [
 ]) {
  const hit=searchContextCorpus(contextCorpus,query,direction)[0];
  assert.equal(hit?.title,title,`International distinction/longest phrase: ${query}`);
+ assert.equal(hit?.body,translation);
+}
+for (const [query,direction,title,translation] of [
+ ['полный адрес','ru-ms','полный адрес','alamat lengkap'],
+ ['неверный адрес','ru-ms','неверный адрес','alamat salah'],
+ ['alamat lengkap','ms-ru','alamat lengkap','полный адрес'],
+ ['alamat salah','ms-ru','alamat salah','неверный адрес'],
+ ['имя получателя','ru-ms','имя получателя','nama penerima'],
+ ['телефон получателя','ru-ms','телефон получателя','nombor telefon penerima'],
+ ['nama penerima','ms-ru','nama penerima','имя получателя'],
+ ['nombor telefon penerima','ms-ru','nombor telefon penerima','телефон получателя'],
+ ['Номер ячейки постамата сохранён.','ru-ms','ячейка постамата','ruang loker bungkusan'],
+ ['Nombor ruang loker bungkusan sudah disimpan.','ms-ru','ruang loker bungkusan','ячейка постамата'],
+]) {
+ const hit=searchContextCorpus(contextCorpus,query,direction)[0];
+ assert.equal(hit?.title,title,`Postal distinction/longest phrase: ${query}`);
  assert.equal(hit?.body,translation);
 }
 let exact = 0, forms = 0, contexts = 0;

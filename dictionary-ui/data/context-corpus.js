@@ -39221,5 +39221,1056 @@ export const contextCorpus = [
         "origin": "original_teaching_example"
       }
     ]
+  },
+  {
+    "id": "context-0976",
+    "ru": "статус доставки",
+    "ms": "status penghantaran",
+    "forms": {
+      "ru": [
+        "статус доставки",
+        "статуса доставки",
+        "статусу доставки",
+        "статусом доставки",
+        "статусе доставки"
+      ],
+      "ms": [
+        "status penghantaran"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6427",
+      "sourceTitle": "статус доставки",
+      "sourceTranslation": "status penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Статус доставки обновляется автоматически.",
+        "ms": "Status penghantaran dikemas kini secara automatik.",
+        "ruExpression": "статус доставки",
+        "msExpression": "status penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Информация о статусе доставки доступна на сайте.",
+        "ms": "Maklumat tentang status penghantaran tersedia di laman web.",
+        "ruExpression": "статусе доставки",
+        "msExpression": "status penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0977",
+    "ru": "неверный адрес",
+    "ms": "alamat salah",
+    "forms": {
+      "ru": [
+        "неверный адрес",
+        "неверного адреса",
+        "неверному адресу",
+        "неверным адресом",
+        "неверном адресе"
+      ],
+      "ms": [
+        "alamat salah"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6434",
+      "sourceTitle": "неверный адрес",
+      "sourceTranslation": "alamat salah"
+    },
+    "examples": [
+      {
+        "ru": "Неверный адрес указан на конверте.",
+        "ms": "Alamat salah ditulis pada sampul surat.",
+        "ruExpression": "неверный адрес",
+        "msExpression": "alamat salah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Из-за неверного адреса письмо вернули.",
+        "ms": "Surat itu dipulangkan kerana alamat salah.",
+        "ruExpression": "неверного адреса",
+        "msExpression": "alamat salah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0978",
+    "ru": "изменить адрес доставки",
+    "ms": "menukar alamat penghantaran",
+    "forms": {
+      "ru": [
+        "изменить адрес доставки",
+        "изменил адрес доставки",
+        "изменила адрес доставки",
+        "изменили адрес доставки",
+        "изменим адрес доставки",
+        "измените адрес доставки"
+      ],
+      "ms": [
+        "menukar alamat penghantaran"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6435",
+      "sourceTitle": "изменить адрес доставки",
+      "sourceTranslation": "menukar alamat penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Можно изменить адрес доставки через приложение.",
+        "ms": "Anda boleh menukar alamat penghantaran melalui aplikasi.",
+        "ruExpression": "изменить адрес доставки",
+        "msExpression": "menukar alamat penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она изменила адрес доставки утром.",
+        "ms": "Dia telah menukar alamat penghantaran pada waktu pagi.",
+        "ruExpression": "изменила адрес доставки",
+        "msExpression": "menukar alamat penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0979",
+    "ru": "подтвердить адрес",
+    "ms": "mengesahkan alamat",
+    "forms": {
+      "ru": [
+        "подтвердить адрес",
+        "подтвердил адрес",
+        "подтвердила адрес",
+        "подтвердили адрес",
+        "подтвердим адрес",
+        "подтвердите адрес"
+      ],
+      "ms": [
+        "mengesahkan alamat"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6436",
+      "sourceTitle": "подтвердить адрес",
+      "sourceTranslation": "mengesahkan alamat"
+    },
+    "examples": [
+      {
+        "ru": "Нужно подтвердить адрес перед отправкой.",
+        "ms": "Kita perlu mengesahkan alamat sebelum penghantaran.",
+        "ruExpression": "подтвердить адрес",
+        "msExpression": "mengesahkan alamat",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Клиент подтвердил адрес по телефону.",
+        "ms": "Pelanggan telah mengesahkan alamat melalui telefon.",
+        "ruExpression": "подтвердил адрес",
+        "msExpression": "mengesahkan alamat",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0980",
+    "ru": "полный адрес",
+    "ms": "alamat lengkap",
+    "forms": {
+      "ru": [
+        "полный адрес",
+        "полного адреса",
+        "полному адресу",
+        "полным адресом",
+        "полном адресе"
+      ],
+      "ms": [
+        "alamat lengkap"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6437",
+      "sourceTitle": "полный адрес",
+      "sourceTranslation": "alamat lengkap"
+    },
+    "examples": [
+      {
+        "ru": "Полный адрес указан в заявке.",
+        "ms": "Alamat lengkap dinyatakan dalam permohonan.",
+        "ruExpression": "полный адрес",
+        "msExpression": "alamat lengkap",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Без полного адреса отправка невозможна.",
+        "ms": "Penghantaran tidak dapat dilakukan tanpa alamat lengkap.",
+        "ruExpression": "полного адреса",
+        "msExpression": "alamat lengkap",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0981",
+    "ru": "имя получателя",
+    "ms": "nama penerima",
+    "forms": {
+      "ru": [
+        "имя получателя",
+        "имени получателя",
+        "именем получателя"
+      ],
+      "ms": [
+        "nama penerima"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6439",
+      "sourceTitle": "имя получателя",
+      "sourceTranslation": "nama penerima"
+    },
+    "examples": [
+      {
+        "ru": "Имя получателя напечатано на наклейке.",
+        "ms": "Nama penerima dicetak pada pelekat.",
+        "ruExpression": "имя получателя",
+        "msExpression": "nama penerima",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В имени получателя обнаружена ошибка.",
+        "ms": "Kesilapan dikesan dalam nama penerima.",
+        "ruExpression": "имени получателя",
+        "msExpression": "nama penerima",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0982",
+    "ru": "телефон получателя",
+    "ms": "nombor telefon penerima",
+    "forms": {
+      "ru": [
+        "телефон получателя",
+        "телефона получателя",
+        "телефону получателя",
+        "телефоном получателя",
+        "телефоне получателя"
+      ],
+      "ms": [
+        "nombor telefon penerima"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6440",
+      "sourceTitle": "телефон получателя",
+      "sourceTranslation": "nombor telefon penerima"
+    },
+    "examples": [
+      {
+        "ru": "Телефон получателя указан в заявке.",
+        "ms": "Nombor telefon penerima dinyatakan dalam permohonan.",
+        "ruExpression": "телефон получателя",
+        "msExpression": "nombor telefon penerima",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Курьер позвонил по телефону получателя.",
+        "ms": "Kurier menelefon nombor telefon penerima.",
+        "ruExpression": "телефону получателя",
+        "msExpression": "nombor telefon penerima",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0983",
+    "ru": "подпись получателя",
+    "ms": "tandatangan penerima",
+    "forms": {
+      "ru": [
+        "подпись получателя",
+        "подписи получателя",
+        "подписью получателя"
+      ],
+      "ms": [
+        "tandatangan penerima"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6441",
+      "sourceTitle": "подпись получателя",
+      "sourceTranslation": "tandatangan penerima"
+    },
+    "examples": [
+      {
+        "ru": "Подпись получателя требуется при вручении.",
+        "ms": "Tandatangan penerima diperlukan semasa penyerahan.",
+        "ruExpression": "подпись получателя",
+        "msExpression": "tandatangan penerima",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Без подписи получателя документ не принимается.",
+        "ms": "Dokumen itu tidak diterima tanpa tandatangan penerima.",
+        "ruExpression": "подписи получателя",
+        "msExpression": "tandatangan penerima",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0984",
+    "ru": "уведомление о доставке",
+    "ms": "pemberitahuan penghantaran",
+    "forms": {
+      "ru": [
+        "уведомление о доставке",
+        "уведомления о доставке",
+        "уведомлению о доставке",
+        "уведомлением о доставке",
+        "уведомлении о доставке"
+      ],
+      "ms": [
+        "pemberitahuan penghantaran"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6442",
+      "sourceTitle": "уведомление о доставке",
+      "sourceTranslation": "pemberitahuan penghantaran"
+    },
+    "examples": [
+      {
+        "ru": "Уведомление о доставке пришло по электронной почте.",
+        "ms": "Pemberitahuan penghantaran diterima melalui e-mel.",
+        "ruExpression": "уведомление о доставке",
+        "msExpression": "pemberitahuan penghantaran",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "В уведомлении о доставке указан номер посылки.",
+        "ms": "Nombor bungkusan dinyatakan dalam pemberitahuan penghantaran.",
+        "ruExpression": "уведомлении о доставке",
+        "msExpression": "pemberitahuan penghantaran",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0985",
+    "ru": "хрупкий груз",
+    "ms": "barang mudah pecah",
+    "forms": {
+      "ru": [
+        "хрупкий груз",
+        "хрупкого груза",
+        "хрупкому грузу",
+        "хрупким грузом",
+        "хрупком грузе"
+      ],
+      "ms": [
+        "barang mudah pecah"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6444",
+      "sourceTitle": "хрупкий груз",
+      "sourceTranslation": "barang mudah pecah"
+    },
+    "examples": [
+      {
+        "ru": "Хрупкий груз требует прочной упаковки.",
+        "ms": "Barang mudah pecah memerlukan bungkusan yang kukuh.",
+        "ruExpression": "хрупкий груз",
+        "msExpression": "barang mudah pecah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Для хрупкого груза подготовили отдельную коробку.",
+        "ms": "Kotak berasingan disediakan untuk barang mudah pecah.",
+        "ruExpression": "хрупкого груза",
+        "msExpression": "barang mudah pecah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0986",
+    "ru": "упаковать посылку",
+    "ms": "membungkus bungkusan",
+    "forms": {
+      "ru": [
+        "упаковать посылку",
+        "упаковал посылку",
+        "упаковала посылку",
+        "упаковали посылку",
+        "упакуем посылку",
+        "упакуйте посылку"
+      ],
+      "ms": [
+        "membungkus bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6446",
+      "sourceTitle": "упаковать посылку",
+      "sourceTranslation": "membungkus bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Сотрудник поможет упаковать посылку.",
+        "ms": "Kakitangan akan membantu membungkus bungkusan.",
+        "ruExpression": "упаковать посылку",
+        "msExpression": "membungkus bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она упаковала посылку перед обедом.",
+        "ms": "Dia telah membungkus bungkusan sebelum makan tengah hari.",
+        "ruExpression": "упаковала посылку",
+        "msExpression": "membungkus bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0987",
+    "ru": "вскрыть посылку",
+    "ms": "membuka bungkusan",
+    "forms": {
+      "ru": [
+        "вскрыть посылку",
+        "вскрыл посылку",
+        "вскрыла посылку",
+        "вскрыли посылку",
+        "вскроем посылку",
+        "вскройте посылку"
+      ],
+      "ms": [
+        "membuka bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6447",
+      "sourceTitle": "вскрыть посылку",
+      "sourceTranslation": "membuka bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Получатель попросил вскрыть посылку при нём.",
+        "ms": "Penerima meminta kakitangan membuka bungkusan di hadapannya.",
+        "ruExpression": "вскрыть посылку",
+        "msExpression": "membuka bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сотрудник вскрыл посылку в присутствии получателя.",
+        "ms": "Kakitangan telah membuka bungkusan di hadapan penerima.",
+        "ruExpression": "вскрыл посылку",
+        "msExpression": "membuka bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0988",
+    "ru": "поврежденная посылка",
+    "ms": "bungkusan rosak",
+    "forms": {
+      "ru": [
+        "поврежденная посылка",
+        "повреждённой посылки",
+        "повреждённой посылке",
+        "повреждённую посылку",
+        "повреждённой посылкой"
+      ],
+      "ms": [
+        "bungkusan rosak"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6448",
+      "sourceTitle": "поврежденная посылка",
+      "sourceTranslation": "bungkusan rosak"
+    },
+    "examples": [
+      {
+        "ru": "Поврежденная посылка осталась в отделении.",
+        "ms": "Bungkusan rosak masih berada di cawangan itu.",
+        "ruExpression": "поврежденная посылка",
+        "msExpression": "bungkusan rosak",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Фотографии повреждённой посылки приложены к заявлению.",
+        "ms": "Gambar bungkusan rosak dilampirkan pada permohonan.",
+        "ruExpression": "повреждённой посылки",
+        "msExpression": "bungkusan rosak",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0989",
+    "ru": "акт о повреждении",
+    "ms": "laporan kerosakan",
+    "forms": {
+      "ru": [
+        "акт о повреждении",
+        "акта о повреждении",
+        "акту о повреждении",
+        "актом о повреждении",
+        "акте о повреждении"
+      ],
+      "ms": [
+        "laporan kerosakan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6449",
+      "sourceTitle": "акт о повреждении",
+      "sourceTranslation": "laporan kerosakan"
+    },
+    "examples": [
+      {
+        "ru": "Акт о повреждении составлен сотрудником.",
+        "ms": "Laporan kerosakan disediakan oleh kakitangan.",
+        "ruExpression": "акт о повреждении",
+        "msExpression": "laporan kerosakan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Копия акта о повреждении передана получателю.",
+        "ms": "Salinan laporan kerosakan diserahkan kepada penerima.",
+        "ruExpression": "акта о повреждении",
+        "msExpression": "laporan kerosakan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0990",
+    "ru": "вызвать курьера",
+    "ms": "memanggil kurier",
+    "forms": {
+      "ru": [
+        "вызвать курьера",
+        "вызвал курьера",
+        "вызвала курьера",
+        "вызвали курьера",
+        "вызовем курьера",
+        "вызовите курьера"
+      ],
+      "ms": [
+        "memanggil kurier"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9605",
+      "sourceTitle": "вызвать курьера",
+      "sourceTranslation": "memanggil kurier"
+    },
+    "examples": [
+      {
+        "ru": "Можно вызвать курьера через приложение.",
+        "ms": "Anda boleh memanggil kurier melalui aplikasi.",
+        "ruExpression": "вызвать курьера",
+        "msExpression": "memanggil kurier",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она вызвала курьера утром.",
+        "ms": "Dia telah memanggil kurier pada waktu pagi.",
+        "ruExpression": "вызвала курьера",
+        "msExpression": "memanggil kurier",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0991",
+    "ru": "пункт выдачи посылок",
+    "ms": "tempat pengambilan bungkusan",
+    "forms": {
+      "ru": [
+        "пункт выдачи посылок",
+        "пункта выдачи посылок",
+        "пункту выдачи посылок",
+        "пунктом выдачи посылок",
+        "пункте выдачи посылок"
+      ],
+      "ms": [
+        "tempat pengambilan bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6452",
+      "sourceTitle": "пункт выдачи посылок",
+      "sourceTranslation": "tempat pengambilan bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Пункт выдачи посылок находится рядом со станцией.",
+        "ms": "Tempat pengambilan bungkusan terletak berhampiran stesen.",
+        "ruExpression": "пункт выдачи посылок",
+        "msExpression": "tempat pengambilan bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Адрес пункта выдачи посылок указан в сообщении.",
+        "ms": "Alamat tempat pengambilan bungkusan dinyatakan dalam mesej.",
+        "ruExpression": "пункта выдачи посылок",
+        "msExpression": "tempat pengambilan bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0992",
+    "ru": "срок хранения",
+    "ms": "tempoh penyimpanan",
+    "forms": {
+      "ru": [
+        "срок хранения",
+        "срока хранения",
+        "сроку хранения",
+        "сроком хранения",
+        "сроке хранения"
+      ],
+      "ms": [
+        "tempoh penyimpanan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6453",
+      "sourceTitle": "срок хранения",
+      "sourceTranslation": "tempoh penyimpanan"
+    },
+    "examples": [
+      {
+        "ru": "Срок хранения указан в уведомлении.",
+        "ms": "Tempoh penyimpanan dinyatakan dalam notis.",
+        "ruExpression": "срок хранения",
+        "msExpression": "tempoh penyimpanan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Дата окончания срока хранения указана в приложении.",
+        "ms": "Tarikh tamat tempoh penyimpanan dinyatakan dalam aplikasi.",
+        "ruExpression": "срока хранения",
+        "msExpression": "tempoh penyimpanan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0993",
+    "ru": "доставка на дом",
+    "ms": "penghantaran ke rumah",
+    "forms": {
+      "ru": [
+        "доставка на дом",
+        "доставки на дом",
+        "доставке на дом",
+        "доставку на дом",
+        "доставкой на дом"
+      ],
+      "ms": [
+        "penghantaran ke rumah"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-6458",
+      "sourceTitle": "доставка на дом",
+      "sourceTranslation": "penghantaran ke rumah"
+    },
+    "examples": [
+      {
+        "ru": "Доставка на дом доступна в этом районе.",
+        "ms": "Penghantaran ke rumah tersedia di kawasan ini.",
+        "ruExpression": "доставка на дом",
+        "msExpression": "penghantaran ke rumah",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стоимость доставки на дом указана в счёте.",
+        "ms": "Kos penghantaran ke rumah dinyatakan dalam bil.",
+        "ruExpression": "доставки на дом",
+        "msExpression": "penghantaran ke rumah",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0994",
+    "ru": "обычное письмо",
+    "ms": "surat biasa",
+    "forms": {
+      "ru": [
+        "обычное письмо",
+        "обычного письма",
+        "обычному письму",
+        "обычным письмом",
+        "обычном письме"
+      ],
+      "ms": [
+        "surat biasa"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9578",
+      "sourceTitle": "обычное письмо",
+      "sourceTranslation": "surat biasa"
+    },
+    "examples": [
+      {
+        "ru": "Обычное письмо отправлено утром.",
+        "ms": "Surat biasa dihantar pada waktu pagi.",
+        "ruExpression": "обычное письмо",
+        "msExpression": "surat biasa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Стоимость обычного письма зависит от веса.",
+        "ms": "Kos surat biasa bergantung pada berat.",
+        "ruExpression": "обычного письма",
+        "msExpression": "surat biasa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0995",
+    "ru": "международная посылка",
+    "ms": "bungkusan antarabangsa",
+    "forms": {
+      "ru": [
+        "международная посылка",
+        "международной посылки",
+        "международной посылке",
+        "международную посылку",
+        "международной посылкой"
+      ],
+      "ms": [
+        "bungkusan antarabangsa"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9579",
+      "sourceTitle": "международная посылка",
+      "sourceTranslation": "bungkusan antarabangsa"
+    },
+    "examples": [
+      {
+        "ru": "Международная посылка прибыла в отделение.",
+        "ms": "Bungkusan antarabangsa telah tiba di cawangan itu.",
+        "ruExpression": "международная посылка",
+        "msExpression": "bungkusan antarabangsa",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Вес международной посылки указан на квитанции.",
+        "ms": "Berat bungkusan antarabangsa dinyatakan pada resit.",
+        "ruExpression": "международной посылки",
+        "msExpression": "bungkusan antarabangsa",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0996",
+    "ru": "взвесить посылку",
+    "ms": "menimbang bungkusan",
+    "forms": {
+      "ru": [
+        "взвесить посылку",
+        "взвесил посылку",
+        "взвесила посылку",
+        "взвесили посылку",
+        "взвесим посылку",
+        "взвесьте посылку"
+      ],
+      "ms": [
+        "menimbang bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9581",
+      "sourceTitle": "взвесить посылку",
+      "sourceTranslation": "menimbang bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Сначала нужно взвесить посылку.",
+        "ms": "Mula-mula kita perlu menimbang bungkusan.",
+        "ruExpression": "взвесить посылку",
+        "msExpression": "menimbang bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она взвесила посылку перед оплатой.",
+        "ms": "Dia telah menimbang bungkusan sebelum membuat bayaran.",
+        "ruExpression": "взвесила посылку",
+        "msExpression": "menimbang bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0997",
+    "ru": "таможенная пошлина",
+    "ms": "duti kastam",
+    "forms": {
+      "ru": [
+        "таможенная пошлина",
+        "таможенной пошлины",
+        "таможенной пошлине",
+        "таможенную пошлину",
+        "таможенной пошлиной"
+      ],
+      "ms": [
+        "duti kastam"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9593",
+      "sourceTitle": "таможенная пошлина",
+      "sourceTranslation": "duti kastam"
+    },
+    "examples": [
+      {
+        "ru": "Таможенная пошлина указана в уведомлении.",
+        "ms": "Duti kastam dinyatakan dalam notis.",
+        "ruExpression": "таможенная пошлина",
+        "msExpression": "duti kastam",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сумма таможенной пошлины требует уточнения.",
+        "ms": "Amaun duti kastam perlu disahkan.",
+        "ruExpression": "таможенной пошлины",
+        "msExpression": "duti kastam",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0998",
+    "ru": "оплатить пошлину",
+    "ms": "membayar duti",
+    "forms": {
+      "ru": [
+        "оплатить пошлину",
+        "оплатил пошлину",
+        "оплатила пошлину",
+        "оплатили пошлину",
+        "оплатим пошлину",
+        "оплатите пошлину"
+      ],
+      "ms": [
+        "membayar duti"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9594",
+      "sourceTitle": "оплатить пошлину",
+      "sourceTranslation": "membayar duti"
+    },
+    "examples": [
+      {
+        "ru": "Получатель планирует оплатить пошлину завтра.",
+        "ms": "Penerima merancang untuk membayar duti esok.",
+        "ruExpression": "оплатить пошлину",
+        "msExpression": "membayar duti",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Она оплатила пошлину после получения уведомления.",
+        "ms": "Dia telah membayar duti selepas menerima notis.",
+        "ruExpression": "оплатила пошлину",
+        "msExpression": "membayar duti",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-0999",
+    "ru": "ценность посылки",
+    "ms": "nilai bungkusan",
+    "forms": {
+      "ru": [
+        "ценность посылки",
+        "ценности посылки",
+        "ценностью посылки"
+      ],
+      "ms": [
+        "nilai bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9596",
+      "sourceTitle": "ценность посылки",
+      "sourceTranslation": "nilai bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Ценность посылки указана в декларации.",
+        "ms": "Nilai bungkusan dinyatakan dalam borang pengisytiharan.",
+        "ruExpression": "ценность посылки",
+        "msExpression": "nilai bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Сведения о ценности посылки проверены.",
+        "ms": "Maklumat tentang nilai bungkusan telah disemak.",
+        "ruExpression": "ценности посылки",
+        "msExpression": "nilai bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
+  },
+  {
+    "id": "context-1000",
+    "ru": "ячейка постамата",
+    "ms": "ruang loker bungkusan",
+    "forms": {
+      "ru": [
+        "ячейка постамата",
+        "ячейки постамата",
+        "ячейке постамата",
+        "ячейку постамата",
+        "ячейкой постамата"
+      ],
+      "ms": [
+        "ruang loker bungkusan"
+      ]
+    },
+    "topic": "почта и таможня",
+    "verified": true,
+    "verification": {
+      "basis": "provided_verified_gold",
+      "sourceFile": "dictionary_ru_ms_gold.json",
+      "sourceEntryId": "ru-gold-9601",
+      "sourceTitle": "ячейка постамата",
+      "sourceTranslation": "ruang loker bungkusan"
+    },
+    "examples": [
+      {
+        "ru": "Ячейка постамата открывается после ввода кода.",
+        "ms": "Ruang loker bungkusan terbuka selepas kod dimasukkan.",
+        "ruExpression": "ячейка постамата",
+        "msExpression": "ruang loker bungkusan",
+        "origin": "original_teaching_example"
+      },
+      {
+        "ru": "Номер ячейки постамата указан в сообщении.",
+        "ms": "Nombor ruang loker bungkusan dinyatakan dalam mesej.",
+        "ruExpression": "ячейки постамата",
+        "msExpression": "ruang loker bungkusan",
+        "origin": "original_teaching_example"
+      }
+    ]
   }
 ];

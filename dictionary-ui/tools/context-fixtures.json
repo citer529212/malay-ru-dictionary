@@ -2698,5 +2698,105 @@
   [
     "восстановление после конфликта",
     "pemulihan selepas konflik"
+  ],
+  [
+    "статус доставки",
+    "status penghantaran"
+  ],
+  [
+    "неверный адрес",
+    "alamat salah"
+  ],
+  [
+    "изменить адрес доставки",
+    "menukar alamat penghantaran"
+  ],
+  [
+    "подтвердить адрес",
+    "mengesahkan alamat"
+  ],
+  [
+    "полный адрес",
+    "alamat lengkap"
+  ],
+  [
+    "имя получателя",
+    "nama penerima"
+  ],
+  [
+    "телефон получателя",
+    "nombor telefon penerima"
+  ],
+  [
+    "подпись получателя",
+    "tandatangan penerima"
+  ],
+  [
+    "уведомление о доставке",
+    "pemberitahuan penghantaran"
+  ],
+  [
+    "хрупкий груз",
+    "barang mudah pecah"
+  ],
+  [
+    "упаковать посылку",
+    "membungkus bungkusan"
+  ],
+  [
+    "вскрыть посылку",
+    "membuka bungkusan"
+  ],
+  [
+    "поврежденная посылка",
+    "bungkusan rosak"
+  ],
+  [
+    "акт о повреждении",
+    "laporan kerosakan"
+  ],
+  [
+    "вызвать курьера",
+    "memanggil kurier"
+  ],
+  [
+    "пункт выдачи посылок",
+    "tempat pengambilan bungkusan"
+  ],
+  [
+    "срок хранения",
+    "tempoh penyimpanan"
+  ],
+  [
+    "доставка на дом",
+    "penghantaran ke rumah"
+  ],
+  [
+    "обычное письмо",
+    "surat biasa"
+  ],
+  [
+    "международная посылка",
+    "bungkusan antarabangsa"
+  ],
+  [
+    "взвесить посылку",
+    "menimbang bungkusan"
+  ],
+  [
+    "таможенная пошлина",
+    "duti kastam"
+  ],
+  [
+    "оплатить пошлину",
+    "membayar duti"
+  ],
+  [
+    "ценность посылки",
+    "nilai bungkusan"
+  ],
+  [
+    "ячейка постамата",
+    "ruang loker bungkusan"
   ]
 ]
